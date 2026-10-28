@@ -1,0 +1,96 @@
+{
+  "fuentes": [
+    {
+      "clave": "uom",
+      "nombre": "Seccionales y delegados UOM",
+      "tipo": "Carga propia",
+      "conexion": "Formulario del portal (Supabase, gratuito)",
+      "frecuencia": "Mensual y por hecho",
+      "estado": "listo",
+      "nivel": "Planta",
+      "variables": ["Dotación total", "Producción del mes y unidad", "Capacidad instalada usada (%)", "Horas trabajadas", "Suspendidos", "Contratados y eventuales", "Despidos, suspensiones, cierres y retiros (hechos con fecha y fuente)", "Conflictos y medidas de fuerza", "Observaciones de la planta"]
+    },
+    {
+      "clave": "cep-establecimientos",
+      "nombre": "CEP XXI · Distribución geográfica de los establecimientos productivos",
+      "tipo": "Datos abiertos",
+      "conexion": "Descarga automática mensual (GitHub Actions) desde cdn.produccion.gob.ar",
+      "frecuencia": "Según publicación del CEP XXI",
+      "estado": "automático",
+      "nivel": "Establecimiento georreferenciado, sin nombre de empresa",
+      "url": "https://www.datos.gob.ar/dataset/produccion-distribucion-geografica-establecimientos-productivos",
+      "variables": ["Latitud y longitud", "Actividad CLAE a 6 dígitos", "Tramo de empleo", "Provincia y departamento", "Proporción de mujeres"]
+    },
+    {
+      "clave": "indec-series",
+      "nombre": "INDEC vía API de Series de Tiempo (datos.gob.ar)",
+      "tipo": "API pública",
+      "conexion": "Consulta automática mensual a apis.datos.gob.ar/series",
+      "frecuencia": "Mensual",
+      "estado": "automático",
+      "nivel": "Nacional, por bloque industrial",
+      "url": "https://datosgobar.github.io/series-tiempo-ar-api/",
+      "variables": ["Utilización de capacidad instalada: metalmecánica, metálicas básicas, automotriz y nivel general", "Índice de producción industrial manufacturero (IPI) por rama", "Variación interanual y mensual"]
+    },
+    {
+      "clave": "cep-empleo",
+      "nombre": "CEP XXI · Empleo y salarios registrados por sector y provincia (SIPA)",
+      "tipo": "Datos abiertos",
+      "conexion": "Descarga de CSV; conector a configurar",
+      "frecuencia": "Mensual, con 4 a 6 meses de rezago",
+      "estado": "próximo",
+      "nivel": "Provincia y departamento, por rama",
+      "url": "https://www.argentina.gob.ar/produccion/cep/tableros-interactivos",
+      "variables": ["Puestos asalariados registrados por rama y provincia", "Salario medio por rama y departamento", "Cantidad de empleadores"]
+    },
+    {
+      "clave": "adimra",
+      "nombre": "ADIMRA · Informe de actividad metalúrgica",
+      "tipo": "Informe mensual (PDF)",
+      "conexion": "Carga mensual desde el formulario de indicadores",
+      "frecuencia": "Mensual",
+      "estado": "manual",
+      "nivel": "Nacional, por provincia y por cadena de valor",
+      "variables": ["Actividad metalúrgica (variación interanual y mensual)", "Capacidad instalada usada", "Empleo del sector", "Actividad por provincia (Buenos Aires, Córdoba, Santa Fe, Entre Ríos, Mendoza)", "Actividad por cadena de valor", "Expectativas de las empresas"]
+    },
+    {
+      "clave": "caa",
+      "nombre": "Cámara Argentina del Acero",
+      "tipo": "Informe mensual",
+      "conexion": "Carga mensual desde el formulario de indicadores",
+      "frecuencia": "Mensual",
+      "estado": "manual",
+      "nivel": "Nacional",
+      "variables": ["Acero crudo (t)", "Hierro primario (t)", "Laminados en caliente y en frío (t)"]
+    },
+    {
+      "clave": "comex",
+      "nombre": "INDEC · Comercio exterior por posición arancelaria",
+      "tipo": "Datos abiertos",
+      "conexion": "Conector a configurar",
+      "frecuencia": "Mensual",
+      "estado": "próximo",
+      "nivel": "Producto",
+      "variables": ["Importaciones de productos metalúrgicos que compiten con la producción local (valor y toneladas)", "Origen de las importaciones"]
+    },
+    {
+      "clave": "osm",
+      "nombre": "OpenStreetMap",
+      "tipo": "Datos abiertos",
+      "conexion": "Consulta Overpass para ubicar plantas con precisión",
+      "frecuencia": "A demanda",
+      "estado": "próximo",
+      "nivel": "Edificio o predio industrial",
+      "variables": ["Nombre y polígono de predios industriales", "Parques industriales"]
+    }
+  ],
+  "ramasClae": [
+    {"prefijo": "24", "rama": "Metales básicos (siderurgia, aluminio, fundición)"},
+    {"prefijo": "25", "rama": "Productos de metal (estructuras, forja, herramientas)"},
+    {"prefijo": "26", "rama": "Electrónica"},
+    {"prefijo": "27", "rama": "Equipo eléctrico y línea blanca"},
+    {"prefijo": "28", "rama": "Maquinaria y equipo (incluye maquinaria agrícola)"},
+    {"prefijo": "293", "rama": "Autopartes"},
+    {"prefijo": "30", "rama": "Otro equipo de transporte"}
+  ]
+}

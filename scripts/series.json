@@ -1,0 +1,36 @@
+{
+  "series": [
+    {
+      "clave": "auto-uci-general",
+      "nombre": "INDEC · Capacidad usada, nivel general (API)",
+      "unidad": "%",
+      "organismo": "INDEC",
+      "busqueda": "utilizacion capacidad instalada nivel general",
+      "debeIncluir": ["capacidad", "nivel general"]
+    },
+    {
+      "clave": "auto-uci-metalmecanica",
+      "nombre": "INDEC · Capacidad usada, metalmecánica sin automotriz (API)",
+      "unidad": "%",
+      "organismo": "INDEC",
+      "busqueda": "utilizacion capacidad instalada metalmecanica",
+      "debeIncluir": ["capacidad", "metalmec"]
+    },
+    {
+      "clave": "auto-uci-metalicas",
+      "nombre": "INDEC · Capacidad usada, metálicas básicas (API)",
+      "unidad": "%",
+      "organismo": "INDEC",
+      "busqueda": "utilizacion capacidad instalada industrias metalicas basicas",
+      "debeIncluir": ["capacidad", "met"]
+    },
+    {
+      "clave": "auto-ipi-manufacturero",
+      "nombre": "INDEC · Índice de producción industrial manufacturero (API)",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "busqueda": "indice produccion industrial manufacturero nivel general",
+      "debeIncluir": ["manufacturero"]
+    }
+  ]
+}

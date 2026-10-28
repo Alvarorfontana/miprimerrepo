@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Observatorio Metalúrgico · UOM</title>
+<meta name="description" content="Mapa nacional de la industria metalúrgica: plantas, empleo, producción, despidos y suspensiones, con informes por seccional, provincia y región.">
+<meta name="theme-color" content="#0e2a4f">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<nav class="nav gut" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e2a4f"/><path d="M7 23V12l5 4 4-7 4 7 5-4v11z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="#e05a12"/></svg>
+      Observatorio Metalúrgico
+    </a>
+    <ul>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#informes">Informes</a></li>
+      <li><a href="#sector">Sector</a></li>
+      <li><a href="#fuentes">Fuentes y datos</a></li>
+      <li><a href="#cargar">Cargar datos</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero gut" id="inicio">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Unión Obrera Metalúrgica · Observatorio de datos</div>
+      <h1>El mapa del trabajo <em>metalúrgico</em> argentino</h1>
+      <p class="lead">Cada planta, cada seccional, cada mes. Producción, capacidad, empleo, despidos y suspensiones en un solo lugar, con datos propios cruzados con las fuentes oficiales.</p>
+      <div class="cta">
+        <a class="btn pri" href="#mapa">Ver el mapa</a>
+        <a class="btn" href="#informes">Generar un informe</a>
+        <a class="btn" href="#fuentes">Qué datos usa</a>
+      </div>
+    </div>
+    <figure class="hero-map" style="margin:0">
+      <svg id="heroMap" viewBox="0 0 316 668" role="img" aria-label="Mapa de Argentina con las plantas metalúrgicas relevadas"></svg>
+      <figcaption class="tag" id="heroTag">Plantas relevadas</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="band gut" aria-label="Coyuntura del sector">
+  <div class="wrap" id="band"></div>
+</div>
+
+<section class="sec gut" id="inicio-mods">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Módulos</div><h2>Qué hace la plataforma</h2></div>
+      <p>Seis piezas que comparten una misma base de datos. Lo que carga una seccional aparece en el mapa, en los informes y en los totales nacionales.</p></div>
+    <div class="mods">
+      <a class="mod" href="#mapa"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></div><h3>Mapa nacional</h3><p>Plantas de la UOM con su estado y miles de establecimientos metalúrgicos del padrón oficial, por rama.</p><div class="src">UOM · CEP XXI</div></a>
+      <a class="mod" href="#informes"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Informes</h3><p>Reporte automático por seccional, provincia, región o país, listo para copiar, imprimir o descargar.</p><div class="src">Se arma con todos los datos</div></a>
+      <a class="mod" href="#sector"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18"/><path d="m4 15 5-5 4 3 7-7"/></svg></div><h3>Coyuntura</h3><p>Actividad, capacidad instalada y producción de acero, actualizadas cada mes desde las fuentes públicas.</p><div class="src">INDEC · ADIMRA · Cámara del Acero</div></a>
+      <a class="mod" href="#mapa"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><h3>Alerta temprana</h3><p>Cada suspensión o baja de horas tiñe la planta en el mapa antes de que llegue el despido.</p><div class="src">Reportes de delegados</div></a>
+      <a class="mod" href="#cargar"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16"/><path d="M14 4l6 6-9 9H5v-6z"/></svg></div><h3>Carga de datos</h3><p>Formularios cortos para que cada seccional informe su mes en menos de quince minutos.</p><div class="src">Seccionales y delegados</div></a>
+      <a class="mod" href="#fuentes"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div><h3>Modelo de datos</h3><p>Qué variables se miden, de dónde vienen y cómo se cruzan entre sí.</p><div class="src">Ocho fuentes, cinco entidades</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec gut" id="mapa" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Territorio</div><h2>Mapa y situación</h2></div>
+      <p>Elegí un ámbito. El mapa, las cifras y el informe se ajustan solos.</p></div>
+    <div class="filters">
+      <label class="f" for="fReg">Región<select id="fReg"></select></label>
+      <label class="f" for="fProv">Provincia<select id="fProv"></select></label>
+      <label class="f" for="fSec">Seccional UOM<select id="fSec"></select></label>
+      <label class="f" for="fRama">Rama<select id="fRama"></select></label>
+      <button class="btn" id="fClear" type="button">Todo el país</button>
+    </div>
+    <div class="kpis" id="kpis" aria-live="polite"></div>
+    <div class="grid-main">
+      <div class="card">
+        <div class="row" style="justify-content:space-between"><h3>Mapa</h3><div class="row" id="zoomPresets"></div></div>
+        <div class="row" id="capas"></div>
+        <div class="mapbox" id="mapbox">
+          <svg id="map" role="img" aria-label="Mapa de plantas metalúrgicas"></svg>
+          <div class="zoomctl"><button type="button" id="zin" aria-label="Acercar">+</button><button type="button" id="zout" aria-label="Alejar">−</button></div>
+          <div class="maplegend" id="maplegend"></div>
+        </div>
+        <div id="ficha"></div>
+      </div>
+      <div class="card" id="informes">
+        <div class="tabs" role="tablist">
+          <button role="tab" id="t-informe" aria-selected="true">Informe</button>
+          <button role="tab" id="t-plantas" aria-selected="false">Plantas</button>
+          <button role="tab" id="t-ramas" aria-selected="false">Establecimientos</button>
+        </div>
+        <div id="p-informe"></div>
+        <div id="p-plantas" hidden></div>
+        <div id="p-ramas" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gut" id="sector">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Coyuntura</div><h2>El sector, mes a mes</h2></div>
+      <p>Series nacionales. Las marcadas como automáticas se actualizan solas desde la API del INDEC; las demás se cargan cada mes con su fuente.</p></div>
+    <div class="series" id="series"></div>
+  </div>
+</section>
+
+<section class="sec gut" id="fuentes">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Modelo de datos</div><h2>Fuentes y variables</h2></div>
+      <p>La plataforma funciona como un modelo de datos: cinco entidades conectadas, alimentadas por fuentes propias y públicas.</p></div>
+    <div class="model" id="modelo"></div>
+    <h3 style="font-family:var(--display);text-transform:uppercase;font-size:26px;margin:28px 0 12px">Fuentes conectadas</h3>
+    <div class="src-grid" id="srcGrid"></div>
+  </div>
+</section>
+
+<section class="sec gut" id="cargar">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Seccionales</div><h2>Cargar datos</h2></div>
+      <p>Registrá cantidades, nunca nombres de trabajadores. Cada dato lleva fecha y fuente.</p></div>
+    <div class="card" id="p-cargar"></div>
+  </div>
+</section>
+
+<footer class="gut"><div class="wrap">
+  <p>Observatorio Metalúrgico · Unión Obrera Metalúrgica de la República Argentina. Datos de planta: seccionales y delegados. Datos públicos: INDEC, CEP XXI, ADIMRA, Cámara Argentina del Acero. Ubicaciones iniciales aproximadas por localidad.</p>
+  <p id="pieEstado" class="small"></p>
+</div></footer>
+
+<script src="js/config.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

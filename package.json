@@ -1,0 +1,12 @@
+{
+  "name": "observatorio-uom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Observatorio Metalúrgico de la UOM: mapa, informes y coyuntura de la industria metalúrgica argentina",
+  "type": "module",
+  "scripts": {
+    "actualizar": "node scripts/actualizar-indicadores.mjs && node scripts/actualizar-establecimientos.mjs",
+    "dev": "npx --yes serve ."
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,35 @@
+{
+ "actualizado": "2026-10-28",
+ "eventos": [
+  {
+   "id": "tenaris-siat-2026-06-despidos",
+   "plantaId": "tenaris-siat-valentin-alsina",
+   "tipo": "despidos",
+   "fecha": "2026-06-29",
+   "cantidad": 150,
+   "fuente": "iProfesional",
+   "url": "https://iprofesional.com/management/458612-despidos-tenaris-golpe-empleo-lanus-vaca-muerta-junio-2026",
+   "nota": "La planta venía con suspensiones desde abril. Despidos de trabajadores con más de cuatro años de antigüedad, según el delegado UOM."
+  },
+  {
+   "id": "dana-san-luis-2025-11-cierre",
+   "plantaId": "dana-san-luis",
+   "tipo": "cierre",
+   "fecha": "2025-11-20",
+   "cantidad": 50,
+   "fuente": "El Ancasti",
+   "url": "https://www.elancasti.com.ar/uom-a3920",
+   "nota": "Cierre de planta y despido de 50 empleados; la UOM denunció una decisión unilateral."
+  },
+  {
+   "id": "acindar-vc-2025-02-suspensiones",
+   "plantaId": "acindar-villa-constitucion",
+   "tipo": "suspensiones",
+   "fecha": "2025-02-12",
+   "cantidad": 200,
+   "fuente": "BAE Negocios",
+   "url": "https://www.baenegocios.com/politica/uom-acuerdo-con-acindar-por-suspensiones-en-la-planta-siderurgica-de-santa-fe-20250212-0070.html",
+   "nota": "Acuerdo UOM Villa Constitución de suspensiones rotativas para evitar despidos."
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "actualizado": "2026-10-28",
+ "series": [
+  {
+   "clave": "adimra-actividad",
+   "nombre": "ADIMRA · Actividad metalúrgica, variación interanual",
+   "unidad": "%",
+   "organismo": "ADIMRA",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-01",
+     "valor": -6.2,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-actividad-metalurgica-arranco-2026-una-caida-del-62-n10245415.html"
+    },
+    {
+     "periodo": "2026-05",
+     "valor": -5.1,
+     "fuente": "La Gaceta",
+     "url": "https://www.lagaceta.com.ar/nota/1141348/economia/metalurgia-profundiza-caida-utilizacion-capacidad-instalada-niveles-historicamente-bajos.html"
+    },
+    {
+     "periodo": "2026-06",
+     "valor": -4.6,
+     "fuente": "Misiones Online",
+     "url": "https://misionesonline.net/2026/07/23/la-industria-metalurgica-profundizo-su-retroceso-y-acumulo-una-baja-de-57-en-el-primer-semestre/"
+    },
+    {
+     "periodo": "2026-09",
+     "valor": -3.3,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-actividad-metalurgica-cayo-33-septiembre-n10287526.html"
+    }
+   ]
+  },
+  {
+   "clave": "adimra-capacidad",
+   "nombre": "ADIMRA · Capacidad instalada usada",
+   "unidad": "%",
+   "organismo": "ADIMRA",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-05",
+     "valor": 39.8,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-actividad-metalurgica-cayo-51-mayo-y-opera-capacidad-ociosa-record-n10264825.html"
+    },
+    {
+     "periodo": "2026-09",
+     "valor": 40,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-actividad-metalurgica-cayo-33-septiembre-n10287526.html"
+    }
+   ]
+  },
+  {
+   "clave": "indec-uci-metalmecanica",
+   "nombre": "INDEC · Capacidad usada, metalmecánica sin automotriz",
+   "unidad": "%",
+   "organismo": "INDEC",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-02",
+     "valor": 33.9,
+     "fuente": "La Gaceta",
+     "url": "https://www.lagaceta.com.ar/nota/1133046/economia/industria-uso-capacidad-instalada-llego-al-54porciento-primer-bimestre-2026.html"
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 40.0,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/el-uso-de-la-capacidad-instalada-de-la-industria-alcanzo-el-598-el-numero-mas-alto-desde-octubre-a40.phtml"
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 41.5,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/el-uso-de-la-capacidad-instalada-de-la-industria-alcanzo-el-591-segun-el-indec-a40.phtml"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 35.9,
+     "fuente": "El Economista",
+     "url": "https://eleconomista.com.ar/energia/un-dato-expone-grieta-industrial-refinerias-rozan-techo-metalmecanica-apenas-llega-36-n98929"
+    }
+   ]
+  },
+  {
+   "clave": "indec-uci-metalicas",
+   "nombre": "INDEC · Capacidad usada, industrias metálicas básicas",
+   "unidad": "%",
+   "organismo": "INDEC",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-02",
+     "valor": 59.7,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-industria-trabaja-al-546-su-potencial-el-nivel-mas-2002-n10254874.html"
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 73.3,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/el-uso-de-la-capacidad-instalada-de-la-industria-alcanzo-el-598-el-numero-mas-alto-desde-octubre-a40.phtml"
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 68.7,
+     "fuente": "Cronista",
+     "url": "https://www.cronista.com/economia-politica/capacidad-instalada-la-industria-opero-al-591-en-junio-y-mostro-una-leve-mejora-interanual/"
+    }
+   ]
+  },
+  {
+   "clave": "indec-uci-automotriz",
+   "nombre": "INDEC · Capacidad usada, automotriz",
+   "unidad": "%",
+   "organismo": "INDEC",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-02",
+     "valor": 38.9,
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/la-industria-trabaja-al-546-su-potencial-el-nivel-mas-2002-n10254874.html"
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 45.5,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/el-uso-de-la-capacidad-instalada-de-la-industria-alcanzo-el-591-segun-el-indec-a40.phtml"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 46.2,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/cada-vez-hay-mas-maquinas-apagadas-en-la-industria-mientras-se-asoma-el-fantasma-de-la-recesion-a40.phtml"
+    }
+   ]
+  },
+  {
+   "clave": "caa-acero-crudo",
+   "nombre": "CAA · Producción de acero crudo",
+   "unidad": "miles de t",
+   "organismo": "Cámara Argentina del Acero",
+   "origen": "carga manual desde prensa",
+   "datos": [
+    {
+     "periodo": "2026-01",
+     "valor": 351.4,
+     "fuente": "SteelOrbis",
+     "url": "https://www.steelorbis.com/steel-news/latest-news/argentinas-crude-steel-output-slumps-225-percent-in-february-amid-economic-woes-1444475.htm"
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 272.2,
+     "fuente": "SteelOrbis",
+     "url": "https://www.steelorbis.com/steel-news/latest-news/argentinas-crude-steel-output-slumps-225-percent-in-february-amid-economic-woes-1444475.htm"
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 377.5,
+     "fuente": "Prensa Mercosur",
+     "url": "https://prensamercosur.org/2026/08/30/argentina-la-produccion-de-acero-crece-pero-la-industria-enfrenta-un-mercado-interno-debilitado/"
+    }
+   ]
+  }
+ ]
+}

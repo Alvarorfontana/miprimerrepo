@@ -1,0 +1,1 @@
+{"actualizado": null, "origen": "CEP XXI · Distribución geográfica de los establecimientos productivos", "nota": "Se completa automáticamente con scripts/actualizar-establecimientos.mjs (GitHub Actions).", "campos": ["lat", "lon", "clae6", "empleo", "provincia"], "filas": []}

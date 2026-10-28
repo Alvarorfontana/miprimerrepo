@@ -1,0 +1,31 @@
+name: Actualizar datos públicos
+
+on:
+  schedule:
+    - cron: "17 12 5,20 * *"   # días 5 y 20 de cada mes, 9:17 hora argentina
+  workflow_dispatch: {}        # botón "Run workflow" para correrlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Indicadores del INDEC (API Series de Tiempo)
+        run: node scripts/actualizar-indicadores.mjs
+        continue-on-error: true
+      - name: Establecimientos metalúrgicos (CEP XXI)
+        run: node scripts/actualizar-establecimientos.mjs
+        continue-on-error: true
+      - name: Guardar cambios
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Actualización automática de datos públicos"
+          git push
