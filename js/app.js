@@ -19,7 +19,7 @@ const regionOf = p => (p.provincia === "Buenos Aires" && AMBA.includes(p.partido
 const RAMAS = ["Siderurgia", "Aluminio y no ferrosos", "Tubos", "Fundición", "Autopartes", "Maquinaria agrícola", "Bienes de capital", "Línea blanca", "Electrónica", "Carrocerías y remolques", "Otros productos metálicos"];
 const ESTADOS = { cierre: ["Cierre", "--closed"], despidos: ["Despidos", "--bad"], suspensiones: ["Suspensiones", "--warn"], normal: ["Sin conflicto", "--ok"], sin: ["Sin reporte reciente", "--nodata"] };
 const TIPOS = { despidos: "Despidos", suspensiones: "Suspensiones", cierre: "Cierre", retiros: "Retiros voluntarios", reincorporacion: "Reincorporación", conflicto: "Conflicto o medida de fuerza" };
-const RAMA_COLOR = { "24": "#1b4b8a", "25": "#2f8f9d", "26": "#8a5cc2", "27": "#c2417a", "28": "#5c8f2f", "293": "#c98a12", "30": "#6b6b6b" };
+const RAMA_COLOR = { "24": "#1b4b8a", "25": "#2f8f9d", "26": "#8a5cc2", "27": "#c2417a", "28": "#5c8f2f", "292": "#a0522d", "293": "#c98a12", "30": "#6b6b6b" };
 const PRESETS = [["País", [-73.6, -55.1, -53.6, -21.7]], ["AMBA", [-59.1, -35.05, -57.85, -34.35]], ["Litoral", [-61.3, -34.5, -58.6, -32.6]], ["Centro", [-65.2, -34, -61.3, -30.8]], ["Cuyo", [-70, -35.5, -64.5, -31]], ["Patagonia", [-72, -55.1, -63, -38]]];
 const cssv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
@@ -93,7 +93,7 @@ function stats(list) {
 const ultimo = clave => { const s = S.series.find(x => x.clave === clave); if (!s || !s.datos.length) return null; const d = s.datos.slice().sort((a, b) => a.periodo.localeCompare(b.periodo)).at(-1); return { ...d, unidad: s.unidad, nombre: s.nombre }; };
 const mesTxt = p => { const [y, m] = p.split("-"); return ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"][+m - 1] + " " + y; };
 const provDeEst = v => { if (v == null) return null; const s = String(v).padStart(2, "0"); if (PROV_COD[s]) return PROV_COD[s]; const n = norm(v); return Object.keys(REGION).find(p => norm(p) === n) || (n.includes("ciudad") ? "CABA" : null); };
-const ramaDeClae = c => { const s = String(c).padStart(6, "0"); return ["293", "24", "25", "26", "27", "28", "30"].find(p => s.startsWith(p)); };
+const ramaDeClae = c => { const s = String(c).padStart(6, "0"); return ["292", "293", "24", "25", "26", "27", "28", "30"].find(p => s.startsWith(p)); };
 
 /* ---------- portada ---------- */
 function portada() {
@@ -513,8 +513,8 @@ function asignarZonas() {
     let hb = null; if (pv === "CABA" && B.length) { const q = B.find(p => x >= p.bb[0] && x <= p.bb[2] && y >= p.bb[1] && y <= p.bb[3] && dentro(x, y, p.rs)); hb = q ? q.o.n : null; } bar.push(hb); }
   return S.zonas = { dep, bar };
 }
-function estPorZona(enAmb, campo = "dep") {
-  const Z = asignarZonas(), c = {}; (S.est.filas || []).forEach((f, i) => { if (!enAmb(provDeEst(f[4]))) return; const z = Z[campo][i] || "Sin asignar"; c[z] = c[z] || { n: 0, g: 0 }; c[z].n++; if (["d. 200-499", "e. 500+"].includes(f[3])) c[z].g++; });
+function estPorZona(enAmb, campo = "dep", conProv = false) {
+  const Z = asignarZonas(), c = {}; (S.est.filas || []).forEach((f, i) => { const pv = provDeEst(f[4]); if (!enAmb(pv)) return; const z = Z[campo][i] ? Z[campo][i] + (conProv ? ` (${pv})` : "") : "Sin asignar"; c[z] = c[z] || { n: 0, g: 0 }; c[z].n++; if (["d. 200-499", "e. 500+"].includes(f[3])) c[z].g++; });
   return Object.entries(c).sort((a, b) => b[1].n - a[1].n);
 }
 
@@ -537,16 +537,85 @@ function pedidoForm() {
   $("f-pedido").onsubmit = e => { e.preventDefault(); generarPedido(); };
   getJSON("informes/indice.json", { informes: [] }).then(ix => { $("pdfs").innerHTML = (ix.informes || []).map(i => `<a class="chip" href="${esc(i.archivo)}" target="_blank" rel="noopener">${esc(i.ambito)}</a>`).join("") || `<span class="muted small">Todavía no hay informes emitidos.</span>`; });
 }
-function hbarra(items, unidad = "", d = 0, colores) {
+function hbarra(items, unidad = "", d = 0, colores, opt = {}) {
   if (!items.length) return `<p class="muted small">Sin datos.</p>`;
-  const vals = items.map(i => i[1]), lo = Math.min(0, ...vals), hi = Math.max(0, ...vals), W = 640, lh = 26, l = 230 + (lo < 0 ? 50 : 0), r = 60, w = W - l - r, H = items.length * lh + 8;
-  const X = v => l + (v - lo) / ((hi - lo) || 1) * w;
-  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img"><line x1="${X(0)}" x2="${X(0)}" y1="0" y2="${H}" stroke="#8a95a3"/>`;
-  items.forEach(([lab, v], i) => { const y = 4 + i * lh, c = colores ? colores[i] : v < 0 ? "#c24a0a" : "#1b4b8a", [x1, x2] = [X(0), X(v)].sort((a, b) => a - b);
-    s += `<text x="${226}" y="${y + 16}" font-size="12" text-anchor="end" fill="#111a25">${esc(String(lab).length > 34 ? String(lab).slice(0, 33) + "…" : lab)}</text><rect x="${x1}" y="${y + 4}" width="${Math.max(x2 - x1, 1)}" height="16" rx="2" fill="${c}"/>`
-      + `<text x="${v < 0 ? X(v) - 5 : X(v) + 5}" y="${y + 16}" font-size="11.5" font-weight="700" fill="${c}" text-anchor="${v < 0 ? "end" : "start"}">${v > 0 && lo < 0 ? "+" : ""}${dec(v, d)}${unidad}</text>`; });
+  const vals = items.map(i => i[1]), lo = Math.min(0, ...vals), hi = Math.max(0, ...vals), tot = vals.reduce((a, b) => a + Math.max(0, b), 0);
+  const W = 680, lh = 28, bh = 14, l = 290 + (lo < 0 ? 56 : 0), r = opt.share ? 110 : 70, w = W - l - r, H = items.length * lh + 26;
+  const X = v => l + (v - lo) / ((hi - lo) || 1) * w, ticks = [lo, lo + (hi - lo) / 2, hi].map(v => Math.round(v));
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" class="vz">`;
+  for (const t of [...new Set(ticks)]) s += `<line x1="${X(t)}" x2="${X(t)}" y1="0" y2="${H - 22}" stroke="#e1e0d9"/><text x="${X(t)}" y="${H - 6}" font-size="10.5" text-anchor="middle" fill="#898781">${fmt(t)}${unidad}</text>`;
+  s += `<line x1="${X(0)}" x2="${X(0)}" y1="0" y2="${H - 22}" stroke="#c3c2b7"/>`;
+  items.forEach(([lab, v], i) => {
+    const y = 4 + i * lh + (lh - bh) / 2, c = colores ? colores[i] : (opt.neg !== false && v < 0) ? "#d95926" : "#2a78d6", x0 = X(0), x1 = X(v), len = Math.abs(x1 - x0), rr = Math.min(4, len / 2);
+    const path = v >= 0 ? `M${x0},${y}H${x1 - rr}Q${x1},${y} ${x1},${y + rr}V${y + bh - rr}Q${x1},${y + bh} ${x1 - rr},${y + bh}H${x0}Z` : `M${x0},${y}H${x1 + rr}Q${x1},${y} ${x1},${y + rr}V${y + bh - rr}Q${x1},${y + bh} ${x1 + rr},${y + bh}H${x0}Z`;
+    const txt = `${v > 0 && lo < 0 ? "+" : ""}${dec(v, d)}${unidad}${opt.share && tot ? ` · ${dec(v / tot * 100, 0)}%` : ""}`;
+    s += `<g><title>${esc(lab)}: ${txt}</title><rect x="0" y="${4 + i * lh}" width="${W}" height="${lh}" fill="transparent"/>`
+      + `<text x="${l - (lo < 0 ? 64 : 10)}" y="${y + bh - 2}" font-size="12.5" text-anchor="end" fill="#0b0b0b">${esc(String(lab).length > 42 ? String(lab).slice(0, 41) + "…" : lab)}</text>`
+      + `<path d="${len < .5 ? "" : path}" fill="${c}"/><text x="${v < 0 ? x1 - 6 : x1 + 6}" y="${y + bh - 2}" font-size="12" font-weight="600" fill="#52514e" text-anchor="${v < 0 ? "end" : "start"}">${txt}</text></g>`;
+  });
   return s + "</svg>";
 }
+// Mapa coroplético (secuencial, un solo tono): features = [{n, d, v}] con paths ya proyectados
+const SEQ = ["#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#104281"];
+const DIV = { neg: ["#e34948", "#f19a95", "#f0efec", "#9ec5f4", "#2a78d6"] };
+function mapaCoro(features, opt = {}) {
+  const fs = features.filter(f => f.d); if (!fs.length) return "";
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const f of fs) for (const m of f.d.matchAll(/(-?\d+\.?\d*),(-?\d+\.?\d*)/g)) { const x = +m[1], y = +m[2]; if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+  const pad = (x1 - x0) * .03, vw = x1 - x0 + pad * 2, vh = y1 - y0 + pad * 2;
+  const vals = fs.map(f => f.v).filter(v => v != null).sort((a, b) => a - b);
+  let cls, col, leyenda;
+  if (opt.diverge) { const C6 = ["#c43d3c", "#e98583", "#f6c8c5", "#cde2fb", "#86b6ef", "#2a78d6"], br = [-10, -5, 0, 5, 10];
+    col = v => v == null ? "#fcfcfb" : C6[br.filter(c => v > c).length];
+    leyenda = [[C6[0], "cae más de 10%"], [C6[1], "cae entre 5% y 10%"], [C6[2], "cae hasta 5%"], [C6[3], "sube hasta 5%"], [C6[4], "sube entre 5% y 10%"], [C6[5], "sube más de 10%"]];
+  } else { const q = p => vals[Math.min(vals.length - 1, Math.floor(p * vals.length))]; cls = [q(.2), q(.4), q(.6), q(.8)];
+    col = v => v == null || v === 0 ? "#ececea" : SEQ[cls.filter(c => v > c).length];
+    const bs = [vals[0], ...cls, vals.at(-1)]; leyenda = SEQ.map((c, i) => [c, `${fmt(Math.round(bs[i]))} – ${fmt(Math.round(bs[i + 1]))}`]); }
+  const k = vw / 400, top = fs.filter(f => f.v != null).sort((a, b) => (opt.diverge ? Math.abs(b.v) - Math.abs(a.v) : b.v - a.v)).slice(0, opt.etiquetas ?? 6).map(f => f.n);
+  let s = `<div class="coro"><svg viewBox="${x0 - pad} ${y0 - pad} ${vw} ${vh}" role="img" style="max-height:${opt.alto || 420}px">`;
+  for (const f of fs) s += `<path d="${f.d}" fill="${col(f.v)}" stroke="${opt.diverge ? "#c3c2b7" : "#fcfcfb"}" stroke-width="${(1.2 * k).toFixed(3)}" stroke-linejoin="round"><title>${esc(f.n)}: ${f.v == null ? "sin dato" : (opt.diverge && f.v > 0 ? "+" : "") + dec(f.v, opt.dec ?? 0) + (opt.unidad || "")}</title></path>`;
+  for (const f of fs) if (top.includes(f.n) && f.c) s += `<text x="${f.c[0]}" y="${f.c[1]}" text-anchor="middle" font-size="${(13 * k).toFixed(3)}" font-weight="600" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="${(3 * k).toFixed(3)}" paint-order="stroke" style="pointer-events:none">${esc(f.n)}</text>`;
+  s += `</svg><div class="coro-ley">${opt.titulo ? `<b>${esc(opt.titulo)}</b>` : ""}${leyenda.map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")}<span><i style="background:#fcfcfb;box-shadow:inset 0 0 0 1px #c3c2b7"></i>sin dato</span></div></div>`;
+  return s;
+}
+function tamanos(est) {
+  const T = [["a. 1-9", "1 a 9"], ["b. 10-49", "10 a 49"], ["c. 50-199", "50 a 199"], ["d. 200-499", "200 a 499"], ["e. 500+", "500 o más"]], C = ["#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#104281"];
+  const n = T.map(([k]) => est.filter(f => f[3] === k).length), tot = n.reduce((a, b) => a + b, 0) || 1; let x = 0, s = `<svg viewBox="0 0 680 34" width="100%" class="vz">`;
+  n.forEach((v, i) => { const w = v / tot * 680; if (w > 0) s += `<rect x="${x}" y="4" width="${Math.max(w - 2, .5)}" height="26" rx="3" fill="${C[i]}"><title>${T[i][1]} trabajadores: ${fmt(v)}</title></rect>`; x += w; });
+  return s + `</svg><div class="coro-ley">${T.map(([, t], i) => `<span><i style="background:${C[i]}"></i>${t}: <b>${fmt(n[i])}</b> (${dec(n[i] / tot * 100, 1)}%)</span>`).join("")}</div>`;
+}
+
+const compacto = v => Math.abs(v) >= 1e6 ? dec(v / 1e6, 1) + " M" : Math.abs(v) >= 1e4 ? dec(v / 1e3, 0) + " mil" : fmt(Math.round(v));
+function serieLinea(pts, opt = {}) {
+  if (!pts.length) return `<p class="muted small">Sin datos.</p>`;
+  const W = 680, H = opt.alto || 230, l = 64, r = 86, t = 16, b = 30, ys = pts.map(p => p.v);
+  let lo = Math.min(...ys), hi = Math.max(...ys); const pad = (hi - lo) * .12 || Math.abs(hi) * .1 || 1; lo -= pad; hi += pad; if (opt.cero && lo > 0) lo = 0;
+  const X = i => l + (pts.length === 1 ? (W - l - r) / 2 : i * (W - l - r) / (pts.length - 1)), Y = v => t + (hi - v) / (hi - lo) * (H - t - b);
+  const tk = [lo + (hi - lo) * .1, (lo + hi) / 2, hi - (hi - lo) * .1];
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" class="vz">`;
+  for (const v of tk) s += `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e1e0d9"/><text x="${l - 8}" y="${Y(v) + 4}" font-size="10.5" text-anchor="end" fill="#898781">${compacto(v)}${opt.unidad || ""}</text>`;
+  if (lo < 0 && hi > 0) s += `<line x1="${l}" x2="${W - r}" y1="${Y(0)}" y2="${Y(0)}" stroke="#c3c2b7"/>`;
+  const path = pts.map((p, i) => `${X(i)},${Y(p.v)}`).join(" "), base = Y(Math.max(lo, Math.min(0, hi)));
+  s += `<polygon points="${X(0)},${base} ${path} ${X(pts.length - 1)},${base}" fill="${opt.color || "#2a78d6"}" fill-opacity=".10"/><polyline fill="none" stroke="${opt.color || "#2a78d6"}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="${path}"/>`;
+  if (opt.ref != null && opt.ref >= 0 && opt.ref < pts.length) { const x = X(opt.ref); s += `<line x1="${x}" x2="${x}" y1="${t}" y2="${H - b}" stroke="#898781" stroke-dasharray="0" stroke-width="1"/><text x="${x + 4}" y="${t + 10}" font-size="10.5" fill="#52514e">${esc(opt.refTxt || "")}</text><circle cx="${x}" cy="${Y(pts[opt.ref].v)}" r="4" fill="#fcfcfb" stroke="#52514e" stroke-width="2"/>`; }
+  const n = pts.length, cada = Math.ceil(n / (opt.marcas || 7));
+  pts.forEach((p, i) => { if (i % cada === 0 || i === n - 1) { if (i !== n - 1 && n - 1 - i < cada * .6) return; s += `<text x="${X(i)}" y="${H - 9}" font-size="10.5" text-anchor="middle" fill="#898781">${esc(p.e)}</text>`; }
+    s += `<circle cx="${X(i)}" cy="${Y(p.v)}" r="9" fill="transparent"><title>${esc(p.e)}: ${dec(p.v, opt.dec ?? 0)}${opt.unidad || ""}</title></circle>`; });
+  const u = pts.at(-1), p0 = pts[opt.ref ?? 0]; s += `<circle cx="${X(n - 1)}" cy="${Y(u.v)}" r="5" fill="${opt.color || "#2a78d6"}" stroke="#fcfcfb" stroke-width="2"/><text x="${X(n - 1) + 9}" y="${Y(u.v) + 4}" font-size="12.5" font-weight="700" fill="#0b0b0b">${compacto(u.v)}${opt.unidad || ""}</text>`;
+  if (opt.cambio !== false && p0 && p0.v) { const c = (u.v / p0.v - 1) * 100; s += `<text x="${X(n - 1) + 9}" y="${Y(u.v) + 19}" font-size="11" fill="#52514e">${c > 0 ? "+" : ""}${dec(c, 1)}%</text>`; }
+  return s + "</svg>";
+}
+function columnasT(items, opt = {}) {
+  const W = 680, H = opt.alto || 210, l = 40, r = 10, t = 18, b = 26, max = Math.max(...items.map(i => i[1]), 1), gw = (W - l - r) / items.length, bw = Math.min(24, gw * .6);
+  const Y = v => t + (1 - v / max) * (H - t - b); let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" class="vz">`;
+  for (const v of [max / 2, max].map(Math.round)) s += `<line x1="${l}" x2="${W - r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e1e0d9"/><text x="${l - 6}" y="${Y(v) + 4}" font-size="10.5" text-anchor="end" fill="#898781">${fmt(v)}</text>`;
+  s += `<line x1="${l}" x2="${W - r}" y1="${Y(0)}" y2="${Y(0)}" stroke="#c3c2b7"/>`;
+  items.forEach(([e, v], i) => { const x = l + i * gw + (gw - bw) / 2, y = Y(v), h = Y(0) - y, rr = Math.min(4, h / 2), c = i === items.length - 1 ? (opt.ultimo || "#d95926") : (opt.color || "#2a78d6");
+    s += `<g><title>${esc(e)}: ${fmt(v)}${opt.nota && i === items.length - 1 ? " (" + opt.nota + ")" : ""}</title><path d="M${x},${Y(0)}V${y + rr}Q${x},${y} ${x + rr},${y}H${x + bw - rr}Q${x + bw},${y} ${x + bw},${y + rr}V${Y(0)}Z" fill="${c}"/>`
+      + `<text x="${x + bw / 2}" y="${y - 5}" font-size="10.5" font-weight="600" text-anchor="middle" fill="#52514e">${fmt(v)}</text><text x="${x + bw / 2}" y="${H - 8}" font-size="10.5" text-anchor="middle" fill="#898781">${esc(e)}</text></g>`; });
+  return s + "</svg>";
+}
+
 function generarPedido() {
   const amb = $("pAmb").value, cmp = $("pCmp").value, sel = new Set([...$("pVars").querySelectorAll("input:checked")].map(i => i.value));
   if (!sel.size) { toast("Elegí al menos una variable"); return; }
@@ -571,27 +640,37 @@ function generarPedido() {
     if (sel.has("est_total")) { R.push(`<b>${fmt(est.length)}</b> establecimientos metalúrgicos, <b>${grandes}</b> con 200 o más trabajadores.`);
       bloque("Establecimientos", `<div class="rk"><div><b>${fmt(est.length)}</b><span>establecimientos metalúrgicos</span></div><div><b>${grandes}</b><span>con 200 o más trabajadores</span></div><div><b>${plantas.length}</b><span>plantas con seguimiento propio</span></div></div>`, "CEP XXI, padrón georreferenciado de establecimientos productivos (sin nombres de empresa).") }
     if (sel.has("est_rama")) { const c = {}; est.forEach(f => { const r = ramaDeClae(f[2]); c[r] = (c[r] || 0) + 1; }); const it = S.fuentes.ramasClae.map(r => [r.rama.split(" (")[0], c[r.prefijo] || 0]).sort((a, b) => b[1] - a[1]);
-      bloque("Establecimientos por rama", hbarra(it, "", 0, it.map(([l]) => RAMA_COLOR[(S.fuentes.ramasClae.find(r => r.rama.startsWith(l)) || {}).prefijo] || "#1b4b8a")), "CEP XXI."); }
-    if (sel.has("est_zona")) { const z = estPorZona(enAmb).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
+      bloque("Establecimientos por rama", hbarra(it.filter(x => x[1]), "", 0, it.filter(x => x[1]).map(([l]) => RAMA_COLOR[(S.fuentes.ramasClae.find(r => r.rama.startsWith(l)) || {}).prefijo] || "#2a78d6"), { share: true }), "CEP XXI."); }
+    if (sel.has("est_zona")) {
+      // mapa: barrios (CABA), departamentos (una provincia) o provincias (región o país)
+      let mapa = "";
+      if (provs && provs.length === 1 && provs[0] === "CABA" && (S.barrios || []).length) { const zb = Object.fromEntries(estPorZona(p => p === "CABA", "bar")); mapa = mapaCoro(S.barrios.map(b => ({ n: b.n, d: b.d, c: b.c, v: zb[b.n] ? zb[b.n].n : 0 })), { titulo: "Establecimientos por barrio", etiquetas: 8, alto: 460 }); }
+      else if (provs && provs.length === 1) { const zd = Object.fromEntries(estPorZona(p => p === provs[0])); mapa = mapaCoro(S.deptos.filter(x => x.pv === provs[0]).map(x => ({ n: x.n, d: x.d, c: x.c, v: zd[x.n] ? zd[x.n].n : 0 })), { titulo: "Establecimientos por partido o departamento", etiquetas: 8 }); }
+      else { const cp = {}; est.forEach(f => { const p = provDeEst(f[4]); cp[p] = (cp[p] || 0) + 1; }); mapa = mapaCoro(Object.entries(S.geo.p).filter(([p]) => enAmb(p)).map(([p, d]) => ({ n: p, d, c: S.geo.c[p], v: cp[p] || 0 })), { titulo: "Establecimientos por provincia", etiquetas: 6, alto: 520 }); }
+      if (mapa) bloque("Dónde están los establecimientos", mapa, "CEP XXI, ubicados en límites del IGN y de la Ciudad. Más oscuro = más establecimientos (cada tono agrupa un quinto de las zonas).");
+      const z = estPorZona(enAmb, "dep", !(provs && provs.length === 1)).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
       bloque(provs && provs.length === 1 ? (provs[0] === "CABA" ? "Establecimientos por comuna" : "Establecimientos por partido o departamento") : "Partidos y departamentos con más establecimientos", hbarra(z.map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a límites del IGN.");
       if (provs && provs.includes("CABA") && (S.barrios || []).length) { const zb = estPorZona(p => p === "CABA", "bar").filter(([k]) => k !== "Sin asignar"); bloque("Establecimientos por barrio (CABA)", hbarra(zb.slice(0, 48).map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a los barrios de la Ciudad."); } }
     if (sel.has("est_zona") && provs && provs.includes("CABA") && S.hab && S.hab.habilitaciones.length) { const H = S.hab.habilitaciones; const c = {}; H.forEach(h => { const k = h.comuna ? "Comuna " + h.comuna : "Sin comuna"; c[k] = (c[k] || 0) + 1; });
       bloque("Fábricas y talleres metalúrgicos habilitados en la Ciudad, por comuna", hbarra(Object.entries(c).sort((a, b) => b[1] - a[1])) + `<details><summary class="small">Ver el listado (${fmt(H.length)})</summary><table><thead><tr><th>Razón social</th><th>Rubro</th><th>Domicilio</th><th>Comuna</th></tr></thead><tbody>${H.slice().sort((a, b) => (+a.comuna || 99) - (+b.comuna || 99)).map(h => `<tr><td>${esc(h.razon_social || "")}</td><td class="small">${esc(h.rubro)}</td><td>${esc(h.direccion)}</td><td>${esc(h.comuna || "")}</td></tr>`).join("")}</tbody></table></details>`, "Agencia Gubernamental de Control (GCBA), habilitaciones aprobadas, vía BA Data. Solo rubros de fabricación y talleres metalúrgicos."); }
-    if (sel.has("est_tam")) { const T = ["a. 1-9", "b. 10-49", "c. 50-199", "d. 200-499", "e. 500+"]; bloque("Establecimientos por tamaño", hbarra(T.map(t => [t.slice(3) + " trabajadores", est.filter(f => f[3] === t).length])), "CEP XXI."); }
+    if (sel.has("est_tam")) bloque("Establecimientos por cantidad de trabajadores", tamanos(est), "CEP XXI, tramos de empleo.");
   }
   if (O && (sel.has("emp_total") || sel.has("emp_trim") || sel.has("emp_rama") || sel.has("emp_hist"))) {
     const ult = sumQ(UOM, n - 1), ref = sumQ(UOM, iRef), v = pct(ult, ref);
     if (sel.has("emp_total")) { R.push(`<b>${fmt(ult)}</b> asalariados metalúrgicos registrados (${Q[n - 1].replace("T", " T")}), <b>${sg(v)}%</b> contra ${refTxt} (${sg(ult - ref, 0)} puestos).`);
       bloque("Empleo registrado", `<div class="rk"><div><b>${fmt(ult)}</b><span>asalariados registrados · ${Q[n - 1].replace("T", " T")}</span></div><div><b class="${ult < ref ? "neg" : ""}">${sg(ult - ref, 0)}</b><span>puestos contra ${refTxt}</span></div><div><b class="${v < 0 ? "neg" : ""}">${sg(v)}%</b><span>variación</span></div></div>`, "OEDE–SIPA. Universo UOM, sin terminales automotrices."); }
-    if (sel.has("emp_trim")) bloque("Evolución trimestral del empleo", linea(Q.map((q, i) => ({ periodo: q.slice(0, 4) + "-" + String((+q.slice(5) - 1) * 3 + 1).padStart(2, "0"), valor: sumQ(UOM, i) })), ""), "OEDE–SIPA.");
+    if (sel.has("emp_total") && (!provs || provs.length > 1)) { const vp = {}; for (const [k, a] of areas) { const p = a.provincia || k; vp[p] = vp[p] || [0, 0]; vp[p][0] += UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].trim[n - 1] || 0 : 0), 0); vp[p][1] += UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].trim[iRef] || 0 : 0), 0); }
+      bloque(`Variación del empleo metalúrgico por provincia, contra ${refTxt}`, mapaCoro(Object.entries(S.geo.p).filter(([p]) => enAmb(p)).map(([p, d]) => ({ n: p, d, c: S.geo.c[p], v: vp[p] && vp[p][1] >= 300 ? (vp[p][0] / vp[p][1] - 1) * 100 : null })), { diverge: true, unidad: "%", dec: 1, titulo: "Variación del empleo (%)", etiquetas: 6, alto: 520 }), "OEDE–SIPA. Rojo: pierde empleo; azul: gana. Provincias con menos de 300 puestos, sin dato."); }
+    if (sel.has("emp_trim")) bloque("Evolución trimestral del empleo", serieLinea(Q.map((q, i) => ({ e: "T" + q.slice(5) + " " + q.slice(2, 4), v: sumQ(UOM, i) })), { ref: iRef, refTxt: cmp === "ia" ? "un año atrás" : "fines de 2023", marcas: 7 }), "OEDE–SIPA. Puestos de asalariados registrados; la marca indica el período de comparación.");
     if (sel.has("emp_rama")) { const it = UOM.map(g => [O.grupos[g].split(" (")[0], sumQ([g], n - 1) - sumQ([g], iRef)]).filter(x => x[1] || true).sort((a, b) => a[1] - b[1]);
       bloque(`Empleo por rama: cambio contra ${refTxt} (puestos)`, hbarra(it), "OEDE–SIPA."); }
-    if (sel.has("emp_hist")) bloque("Serie histórica anual del empleo", linea(O.anios.map((y, i) => ({ periodo: y + "-01", valor: sumA(UOM, i) })), ""), "OEDE–SIPA, promedio anual de puestos.");
+    if (sel.has("emp_hist")) { const ah = O.anios.map((y, i) => ({ e: String(y), v: sumA(UOM, i) })); const mx = ah.reduce((a, b) => b.v > a.v ? b : a), mn = ah.slice(0, 10).reduce((a, b) => b.v < a.v ? b : a);
+      bloque("Serie histórica anual del empleo", `<p class="small" style="margin:0 0 6px">Piso de la serie: <b>${fmt(mn.v)}</b> en ${mn.e}. Máximo: <b>${fmt(mx.v)}</b> en ${mx.e}.</p>` + serieLinea(ah, { marcas: 8, cambio: false, alto: 240 }), "OEDE–SIPA, promedio anual de puestos."); }
   }
   if (sel.has("hechos")) { const tot = k => evs.filter(e => e.tipo === k).reduce((a, e) => a + (e.cantidad || 0), 0);
     if (evs.length) R.push(`<b>${evs.length}</b> ${evs.length === 1 ? "hecho registrado" : "hechos registrados"} en plantas: ${tot("despidos")} despidos y ${tot("suspensiones")} suspendidos.`);
     bloque("Despidos, suspensiones y cierres en plantas", evs.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class="r">Trabajadores</th><th>Fuente</th></tr></thead><tbody>${evs.map(e => `<tr><td>${e.fecha}</td><td>${esc((S.plantas.find(p => p.id === e.plantaId) || {}).nombre || "")}</td><td>${esc(e.tipo)}</td><td class="r">${e.cantidad ?? ""}</td><td>${e.url ? `<a href="${esc(e.url)}">${esc(e.fuente || "")}</a>` : esc(e.fuente || "")}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin hechos registrados en este ámbito.</p>`, "Relevamiento propio del equipo (prensa, empresas y datos aportados por la UOM)."); }
-  if (sel.has("conf_desp") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = (a[y] || 0) + (r[5] || 0); }); const ys = Object.keys(a).sort().slice(-12); bloque("Conflictos con paro por despidos, por año" + nacional, hbarra(ys.map(y => [y, a[y]])), "Ministerio de Capital Humano."); }
+  if (sel.has("conf_desp") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = (a[y] || 0) + (r[5] || 0); }); const ys = Object.keys(a).sort().slice(-12); bloque("Conflictos con paro por despidos, por año" + nacional, columnasT(ys.map(y => [y, a[y]]), { nota: "año en curso" }), `Ministerio de Capital Humano. ${ys.at(-1)}: año incompleto (datos hasta ${S.conf.rows.at(-1)[0]}).`); }
   if (sel.has("capacidad")) { const ks = [["auto-uci-general", "Industria en general"], ["auto-uci-metalicas", "Metálicas básicas"], ["indec-uci-metalmecanica", "Metalmecánica sin automotriz"], ["indec-uci-automotriz", "Automotriz"], ["adimra-capacidad", "Metalúrgica (ADIMRA)"]];
     const it = ks.map(([k, l]) => { const d = ultS(k); return d ? [`${l} · ${mesTxt(d.at(-1).periodo)}`, d.at(-1).valor] : null; }).filter(Boolean);
     const mm = it.find(x => x[0].startsWith("Metalmec")); if (mm) R.push(`La metalmecánica usa <b>${dec(mm[1])}%</b> de su capacidad instalada.`);
@@ -600,13 +679,13 @@ function generarPedido() {
     const it = ks.map(([k, l]) => { const d = ultS(k); if (!d) return null; const u = d.at(-1), b = d.find(x => x.periodo === (+u.periodo.slice(0, 4) - 1) + u.periodo.slice(4)); return b ? [`${l} · ${mesTxt(u.periodo)}`, pct(u.valor, b.valor)] : null; }).filter(Boolean).sort((a, b) => a[1] - b[1]);
     if (it.length) R.push(`Producción: la mayor caída interanual es <b>${it[0][0].split(" ·")[0].toLowerCase()} (${sg(it[0][1])}%)</b>.`);
     bloque("Producción por rama, variación interanual" + nacional, hbarra(it, "%", 1), "INDEC, Índice de producción industrial manufacturero."); }
-  if (sel.has("acero")) { const d = ultS("caa-acero-crudo"); if (d) bloque("Acero crudo, miles de toneladas" + nacional, linea(d.slice(-14), ""), "Cámara Argentina del Acero."); }
-  if (sel.has("adimra")) { const d = ultS("adimra-actividad"); let c = d ? linea(d, "%") : "";
+  if (sel.has("acero")) { const d = ultS("caa-acero-crudo"); if (d) bloque("Acero crudo, miles de toneladas" + nacional, serieLinea(d.slice(-14).map(x => ({ e: mesTxt(x.periodo), v: x.valor })), { dec: 1, cambio: false }), "Cámara Argentina del Acero (meses relevados)."); }
+  if (sel.has("adimra")) { const d = ultS("adimra-actividad"); let c = d ? serieLinea(d.map(x => ({ e: mesTxt(x.periodo), v: x.valor })), { unidad: "%", dec: 1, cambio: false, color: "#d95926" }) : "";
     const ap = (S.adimraProv && S.adimraProv.datos || []).filter(x => enAmb(x.provincia)); if (provs && ap.length) { const u = {}; ap.forEach(x => { if (!u[x.provincia] || x.periodo > u[x.provincia].periodo) u[x.provincia] = x; }); c += hbarra(Object.values(u).map(x => [`${x.provincia} · ${mesTxt(x.periodo)}`, x.valor]), "%", 1); }
     if (d) R.push(`Actividad metalúrgica (ADIMRA): <b>${sg(d.at(-1).valor)}%</b> interanual en ${mesTxt(d.at(-1).periodo)}.`);
     bloque("Actividad metalúrgica, variación interanual (ADIMRA)", c || `<p class="muted small">Sin datos.</p>`, "ADIMRA, Informe de actividad metalúrgica."); }
   if (sel.has("conf") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = a[y] || [0, 0]; a[y][0] += r[1] || 0; a[y][1] += r[4] || 0; }); const ys = Object.keys(a).sort().slice(-12);
-    bloque("Conflictos laborales con paro, sector privado e industria" + nacional, hbarra(ys.map(y => [y + " · total privado", a[y][0]])) + hbarra(ys.map(y => [y + " · industria", a[y][1]]), "", 0, ys.map(() => "#e05a12")), "Ministerio de Capital Humano."); }
+    bloque("Conflictos laborales con paro" + nacional, `<p class="small" style="margin:0 0 4px"><b>Sector privado, total</b></p>` + columnasT(ys.map(y => [y, a[y][0]]), { alto: 180 }) + `<p class="small" style="margin:10px 0 4px"><b>Industria manufacturera</b></p>` + columnasT(ys.map(y => [y, a[y][1]]), { alto: 160 }), `Ministerio de Capital Humano. ${ys.at(-1)}: año incompleto.`); }
   const AL = S.alertas || {};
   if (sel.has("indice") && AL.indice) { const I = AL.indice.filter(i => enAmb(i.provincia)); const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
     if (I.length === 1) { const i = I[0]; R.push(`Índice de riesgo: <b>${i.puntaje}/100</b> (nivel ${i.nivel}).`); bloque(`Índice de riesgo: ${esc(i.area)} ${i.puntaje}/100`, hbarra(Object.entries(i.componentes).map(([c, o]) => [AL.nombres[c], o.puntos ?? 0]), "", 0, Object.values(i.componentes).map(o => col((o.puntos ?? 0) >= 60 ? "alta" : (o.puntos ?? 0) >= 40 ? "media" : "baja"))), "MIDTM, índice ponderado."); }

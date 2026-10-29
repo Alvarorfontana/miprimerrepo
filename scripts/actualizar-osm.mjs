@@ -47,7 +47,7 @@ const plantas = datos.elements.map(e => {
     tipo: t.industrial || t.product || t.man_made || t.landuse || t.building || "",
     localidad: t["addr:city"] || "", lat: +c.lat.toFixed(5), lon: +c.lon.toFixed(5),
     url: `https://www.openstreetmap.org/${e.type}/${e.id}` };
-}).filter(p => p.nombre && p.lat && !vistos.has(p.nombre.toLowerCase() + Math.round(p.lat * 100)) && vistos.add(p.nombre.toLowerCase() + Math.round(p.lat * 100)));
+}).filter(p => !/distribuid|comercial|servicio|gr[uú]as|refrigeraci|log[ií]stic|alquiler|venta|ferreter|transporte|dep[oó]sito|corral[oó]n|repuestos|lubric|neum[aá]tic|gomer|sullair|famiq|hidrogr[uú]a|pluscarga/i.test(p.nombre)).filter(p => p.nombre && p.lat && !vistos.has(p.nombre.toLowerCase() + Math.round(p.lat * 100)) && vistos.add(p.nombre.toLowerCase() + Math.round(p.lat * 100)));
 
 await writeFile(new URL("../data/osm-plantas.json", import.meta.url), JSON.stringify({
   actualizado: new Date().toISOString().slice(0, 10), fuente: "OpenStreetMap (ODbL), vía Overpass", servidor: usado,

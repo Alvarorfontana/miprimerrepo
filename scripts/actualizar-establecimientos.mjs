@@ -5,7 +5,10 @@ import { writeFile, readFile } from "node:fs/promises";
 
 const URL_CSV = process.env.CEP_ESTABLECIMIENTOS_URL ||
   "https://cdn.produccion.gob.ar/cdn-cep/establecimientos-productivos/distribucion_establecimientos_productivos_sexo.csv";
-const PREFIJOS = ["24", "25", "26", "27", "28", "293", "30"];
+const PREFIJOS = ["24", "25", "26", "27", "28", "292", "293", "30"];
+// Fuera del universo UOM aunque compartan familia CLAE: computadoras (262), instrumentos de medición y relojes (265),
+// equipo médico (266), óptica (267) y soportes magnéticos y ópticos (268).
+const EXCLUIDOS = ["262", "265", "266", "267", "268"];
 
 const fuentes = JSON.parse(await readFile(new URL("../data/fuentes.json", import.meta.url), "utf8"));
 const ramaDe = c => {
@@ -54,7 +57,7 @@ for await (const trozo of res.body) {
     total++;
     const clae = String(v[idx.clae] || "").padStart(6, "0");
     const rama = ramaDe(clae);
-    if (!rama) continue;
+    if (!rama || EXCLUIDOS.some(x => clae.startsWith(x))) continue;
     const lat = +v[idx.lat], lon = +v[idx.lon];
     if (!isFinite(lat) || !isFinite(lon) || lat === 0) continue;
     const fila = [+lat.toFixed(4), +lon.toFixed(4), clae, idx.empleo >= 0 ? v[idx.empleo] : null,

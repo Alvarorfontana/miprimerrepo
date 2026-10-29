@@ -5,16 +5,6 @@
  "nota": "Candidatas detectadas por nombre o etiqueta industrial. Hay que confirmar cuáles son plantas metalúrgicas activas y si están representadas por la UOM.",
  "plantas": [
   {
-   "id": "osm-n3203784846",
-   "nombre": "Refrigeración Comercial Martínez",
-   "operador": "",
-   "tipo": "machine_shop",
-   "localidad": "Posadas",
-   "lat": -27.39662,
-   "lon": -55.9018,
-   "url": "https://www.openstreetmap.org/node/3203784846"
-  },
-  {
    "id": "osm-w116610232",
    "nombre": "Planta Santa Isabel Renault Argentina S.A.",
    "operador": "",
@@ -33,26 +23,6 @@
    "lat": -34.15233,
    "lon": -58.97651,
    "url": "https://www.openstreetmap.org/way/176555095"
-  },
-  {
-   "id": "osm-w314328204",
-   "nombre": "Servicios Industriales Fluidodinámicos",
-   "operador": "",
-   "tipo": "machine_shop",
-   "localidad": "Posadas",
-   "lat": -27.39696,
-   "lon": -55.90193,
-   "url": "https://www.openstreetmap.org/way/314328204"
-  },
-  {
-   "id": "osm-w433127887",
-   "nombre": "Sullair Argentina",
-   "operador": "",
-   "tipo": "machinery",
-   "localidad": "Añelo",
-   "lat": -38.33985,
-   "lon": -68.82202,
-   "url": "https://www.openstreetmap.org/way/433127887"
   },
   {
    "id": "osm-w473999035",
@@ -115,16 +85,6 @@
    "url": "https://www.openstreetmap.org/way/1009754589"
   },
   {
-   "id": "osm-w1009754595",
-   "nombre": "Sullair",
-   "operador": "Sullair Argentina S.A.",
-   "tipo": "machine_shop",
-   "localidad": "Cipolletti",
-   "lat": -38.94688,
-   "lon": -68.00505,
-   "url": "https://www.openstreetmap.org/way/1009754595"
-  },
-  {
    "id": "osm-w1010017391",
    "nombre": "Secco",
    "operador": "Industrias Juan F. Secco S.A.",
@@ -153,26 +113,6 @@
    "lat": -34.16311,
    "lon": -58.98086,
    "url": "https://www.openstreetmap.org/way/1069445000"
-  },
-  {
-   "id": "osm-w1074018076",
-   "nombre": "Pluscarga",
-   "operador": "",
-   "tipo": "machine_shop",
-   "localidad": "Neuquén",
-   "lat": -38.95631,
-   "lon": -68.02893,
-   "url": "https://www.openstreetmap.org/way/1074018076"
-  },
-  {
-   "id": "osm-w1091374579",
-   "nombre": "Grúas Neuquén",
-   "operador": "",
-   "tipo": "machinery",
-   "localidad": "Neuquén",
-   "lat": -38.9611,
-   "lon": -68.07246,
-   "url": "https://www.openstreetmap.org/way/1091374579"
   },
   {
    "id": "osm-w1091374582",
@@ -225,16 +165,6 @@
    "url": "https://www.openstreetmap.org/way/1218075269"
   },
   {
-   "id": "osm-w1218991042",
-   "nombre": "Comercial Borio S.A",
-   "operador": "",
-   "tipo": "farm_machinery",
-   "localidad": "",
-   "lat": -32.91705,
-   "lon": -60.72286,
-   "url": "https://www.openstreetmap.org/way/1218991042"
-  },
-  {
    "id": "osm-w1256811773",
    "nombre": "Basculas Magris",
    "operador": "",
@@ -243,16 +173,6 @@
    "lat": -34.26106,
    "lon": -62.69296,
    "url": "https://www.openstreetmap.org/way/1256811773"
-  },
-  {
-   "id": "osm-w1256811774",
-   "nombre": "Hidrogrúas TKA",
-   "operador": "",
-   "tipo": "machinery",
-   "localidad": "Rufino",
-   "lat": -34.26091,
-   "lon": -62.69371,
-   "url": "https://www.openstreetmap.org/way/1256811774"
   },
   {
    "id": "osm-w1268051255",
@@ -275,16 +195,6 @@
    "url": "https://www.openstreetmap.org/way/1319394297"
   },
   {
-   "id": "osm-w1322949623",
-   "nombre": "Distribuidora Barsau",
-   "operador": "",
-   "tipo": "industrial_machinery",
-   "localidad": "Cipolletti",
-   "lat": -38.92258,
-   "lon": -67.96348,
-   "url": "https://www.openstreetmap.org/way/1322949623"
-  },
-  {
    "id": "osm-w1350981831",
    "nombre": "Gherardi",
    "operador": "",
@@ -293,16 +203,6 @@
    "lat": -33.06095,
    "lon": -61.167,
    "url": "https://www.openstreetmap.org/way/1350981831"
-  },
-  {
-   "id": "osm-w1372709098",
-   "nombre": "Famiq SRL",
-   "operador": "",
-   "tipo": "steelmaking",
-   "localidad": "Rosario",
-   "lat": -32.95559,
-   "lon": -60.66952,
-   "url": "https://www.openstreetmap.org/way/1372709098"
   },
   {
    "id": "osm-w1485684140",
@@ -553,16 +453,6 @@
    "lat": -34.57271,
    "lon": -58.56885,
    "url": "https://www.openstreetmap.org/node/11011445163"
-  },
-  {
-   "id": "osm-n11443690992",
-   "nombre": "PSI Metalúrgica. Servicios Integrales",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.43466,
-   "lon": -63.25915,
-   "url": "https://www.openstreetmap.org/node/11443690992"
   },
   {
    "id": "osm-n11707595493",
@@ -973,16 +863,6 @@
    "lat": -34.57271,
    "lon": -58.56885,
    "url": "https://www.openstreetmap.org/node/11011445163"
-  },
-  {
-   "id": "osm-n11443690992",
-   "nombre": "PSI Metalúrgica. Servicios Integrales",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.43466,
-   "lon": -63.25915,
-   "url": "https://www.openstreetmap.org/node/11443690992"
   },
   {
    "id": "osm-n11707595493",
@@ -1615,16 +1495,6 @@
    "url": "https://www.openstreetmap.org/way/1160297766"
   },
   {
-   "id": "osm-w1164561562",
-   "nombre": "Comercial Gerdau",
-   "operador": "",
-   "tipo": "warehouse",
-   "localidad": "",
-   "lat": -32.97464,
-   "lon": -60.72577,
-   "url": "https://www.openstreetmap.org/way/1164561562"
-  },
-  {
    "id": "osm-w1180114155",
    "nombre": "Potenza Metalurgica",
    "operador": "Potenza S.A.",
@@ -1693,16 +1563,6 @@
    "lat": -31.52001,
    "lon": -68.50592,
    "url": "https://www.openstreetmap.org/way/1316403197"
-  },
-  {
-   "id": "osm-w1324562302",
-   "nombre": "VM Servicios Metalúrgicos",
-   "operador": "",
-   "tipo": "industrial",
-   "localidad": "Cipolletti",
-   "lat": -38.91784,
-   "lon": -67.96882,
-   "url": "https://www.openstreetmap.org/way/1324562302"
   },
   {
    "id": "osm-w1330908183",

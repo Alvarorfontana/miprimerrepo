@@ -227,3 +227,10 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
 .gem{background:var(--soft,#eef2f6);border-radius:10px;padding:10px 12px;margin:6px 0 10px}.gem h4{margin:0}
 .gembars{display:flex;gap:6px;align-items:flex-end;height:70px}.gembars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
 .gembars i{display:block;width:100%;background:#1b4b8a;border-radius:3px 3px 0 0;min-height:2px}.gembars div:last-child i{background:#e05a12}.gembars span{font-size:10px;color:#5a6573;margin-top:2px}
+
+.coro{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:16px;align-items:center}.coro svg{width:100%;height:auto;display:block}
+.coro-ley{display:flex;flex-direction:column;gap:5px;font-size:12px;color:#52514e}.coro-ley b{color:#0b0b0b;font-size:12.5px;margin-bottom:2px}
+.coro-ley span{display:flex;gap:7px;align-items:center}.coro-ley i{width:14px;height:14px;border-radius:3px;flex:none;box-shadow:inset 0 0 0 1px rgba(11,11,11,.08)}
+.rb .coro-ley{flex-direction:row;flex-wrap:wrap;gap:6px 14px}.rb .coro .coro-ley{flex-direction:column}
+.vz text{font-family:var(--body)}
+@media (max-width:640px){.coro{grid-template-columns:1fr}.rb .coro .coro-ley{flex-direction:row;flex-wrap:wrap}}

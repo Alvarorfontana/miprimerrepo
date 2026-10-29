@@ -26,7 +26,7 @@
       "url": "https://www.datos.gob.ar/dataset/produccion-distribucion-geografica-establecimientos-productivos",
       "variables": [
         "Latitud y longitud",
-        "Actividad CLAE a 6 dígitos",
+        "Actividad CLAE a 6 dígitos (ramas metalúrgicas del universo UOM)",
         "Tramo de empleo",
         "Provincia y departamento"
       ]
@@ -195,7 +195,7 @@
     },
     {
       "prefijo": "26",
-      "rama": "Electrónica"
+      "rama": "Electrónica (componentes, comunicaciones, audio y TV)"
     },
     {
       "prefijo": "27",
@@ -206,6 +206,10 @@
       "rama": "Maquinaria y equipo (incluye maquinaria agrícola)"
     },
     {
+      "prefijo": "292",
+      "rama": "Carrocerías y remolques"
+    },
+    {
       "prefijo": "293",
       "rama": "Autopartes"
     },
@@ -213,5 +217,15 @@
       "prefijo": "30",
       "rama": "Otro equipo de transporte"
     }
-  ]
+  ],
+  "excluidosClae": {
+    "codigos": [
+      "262",
+      "265",
+      "266",
+      "267",
+      "268"
+    ],
+    "motivo": "Computadoras, instrumentos de medición y relojes, equipo médico, óptica y soportes: fuera del universo de la UOM."
+  }
 }
