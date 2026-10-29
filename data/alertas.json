@@ -1,11 +1,51 @@
 {
  "actualizado": "2026-10-29",
- "total": 38,
- "alta": 18,
- "media": 20,
+ "total": 68,
+ "alta": 30,
+ "media": 38,
  "alertas": [
   {
    "fecha": "2026-10-29",
+   "provincia": "Salta",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "Salta",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 74,
+   "titulo": "Salta: índice de riesgo 74/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Chubut",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "Chubut",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 71,
+   "titulo": "Chubut: índice de riesgo 71/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "San Luis",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "San Luis",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 70,
+   "titulo": "San Luis: índice de riesgo 70/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
@@ -18,6 +58,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
+   "nivel": "alta",
+   "tema": "Producción",
+   "ambito": "Nacional",
+   "variable": "Doble señal 29",
+   "periodo": "2026T1",
+   "valor": -24,
+   "titulo": "Maquinaria y equipo: cae la producción (24,0%) y el empleo (4,3%)",
+   "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
+   "fuente": "INDEC + OEDE"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
@@ -30,6 +84,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
@@ -42,6 +97,33 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
+   "nivel": "alta",
+   "tema": "Producción",
+   "ambito": "Nacional",
+   "variable": "Doble señal 31",
+   "periodo": "2026T1",
+   "valor": -11.2,
+   "titulo": "Equipo eléctrico: cae la producción (11,2%) y el empleo (2,8%)",
+   "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
+   "fuente": "INDEC + OEDE"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
+   "nivel": "alta",
+   "tema": "Producción",
+   "ambito": "Nacional",
+   "variable": "Doble señal 28",
+   "periodo": "2026T1",
+   "valor": -9.6,
+   "titulo": "Productos de metal: cae la producción (9,6%) y el empleo (3,4%)",
+   "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
+   "fuente": "INDEC + OEDE"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Capacidad instalada",
    "ambito": "Nacional",
@@ -54,6 +136,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Tierra del Fuego",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "Tierra del Fuego",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -41.8,
+   "titulo": "Tierra del Fuego: perdió el 41,8% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-3.884 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Salta",
@@ -66,6 +162,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Salta",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "Salta",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -29.9,
+   "titulo": "Salta: perdió el 29,9% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-375 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Jujuy",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Jujuy",
@@ -78,6 +188,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "San Luis",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "San Luis",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -22.5,
+   "titulo": "San Luis: perdió el 22,5% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-678 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -90,6 +214,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Tierra del Fuego",
@@ -102,6 +227,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Chubut",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "Chubut",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -17.1,
+   "titulo": "Chubut: perdió el 17,1% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-249 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -114,6 +253,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Misiones",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "Misiones",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -12.9,
+   "titulo": "Misiones: perdió el 12,9% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-121 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -126,6 +279,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -138,6 +292,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "San Luis",
@@ -150,6 +305,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -162,6 +318,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Chubut",
@@ -174,6 +331,20 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
+   "nivel": "alta",
+   "tema": "Empleo",
+   "ambito": "Partidos del GBA",
+   "variable": "Empleo acumulado",
+   "periodo": "2026T1",
+   "valor": -8.6,
+   "titulo": "Partidos del GBA: perdió el 8,6% del empleo metalúrgico desde fines de 2023",
+   "detalle": "-8.220 puestos desde el 4.º trimestre de 2023.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Tucumán",
@@ -186,6 +357,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "La Pampa",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "La Pampa",
@@ -198,6 +370,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Mendoza",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Mendoza",
@@ -210,6 +383,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Río Negro",
    "nivel": "alta",
    "tema": "Empleo",
    "ambito": "Río Negro",
@@ -222,6 +396,150 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Misiones",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Misiones",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 59,
+   "titulo": "Misiones: índice de riesgo 59/100",
+   "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Partidos del GBA",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 58,
+   "titulo": "Partidos del GBA: índice de riesgo 58/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Jujuy",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Jujuy",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 57,
+   "titulo": "Jujuy: índice de riesgo 57/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Río Negro",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Río Negro",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 56,
+   "titulo": "Río Negro: índice de riesgo 56/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Tierra del Fuego",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Tierra del Fuego",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 56,
+   "titulo": "Tierra del Fuego: índice de riesgo 56/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Resto de Buenos Aires",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 55,
+   "titulo": "Resto de Buenos Aires: índice de riesgo 55/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Córdoba",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Córdoba",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 48,
+   "titulo": "Córdoba: índice de riesgo 48/100",
+   "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y caída del empleo en el último año.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "CABA",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "CABA",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 47,
+   "titulo": "CABA: índice de riesgo 47/100",
+   "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y caída del empleo en el último año.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Mendoza",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 46,
+   "titulo": "Mendoza: índice de riesgo 46/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "La Pampa",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "La Pampa",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 45,
+   "titulo": "La Pampa: índice de riesgo 45/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Tucumán",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Tucumán",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 43,
+   "titulo": "Tucumán: índice de riesgo 43/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Producción",
    "ambito": "Nacional",
@@ -234,6 +552,46 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Córdoba",
+   "nivel": "media",
+   "tema": "Producción",
+   "ambito": "Córdoba",
+   "variable": "Actividad ADIMRA provincial",
+   "periodo": "2026-09",
+   "valor": -4.6,
+   "titulo": "Córdoba: la actividad metalúrgica cae 4,6% interanual",
+   "detalle": "",
+   "fuente": "ADIMRA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Producción",
+   "ambito": "Buenos Aires",
+   "variable": "Actividad ADIMRA provincial",
+   "periodo": "2026-09",
+   "valor": -3.7,
+   "titulo": "Buenos Aires: la actividad metalúrgica cae 3,7% interanual",
+   "detalle": "",
+   "fuente": "ADIMRA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Entre Ríos",
+   "nivel": "media",
+   "tema": "Producción",
+   "ambito": "Entre Ríos",
+   "variable": "Actividad ADIMRA provincial",
+   "periodo": "2026-09",
+   "valor": -3.7,
+   "titulo": "Entre Ríos: la actividad metalúrgica cae 3,7% interanual",
+   "detalle": "",
+   "fuente": "ADIMRA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Producción",
    "ambito": "Nacional",
@@ -246,6 +604,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
    "ambito": "Nacional",
@@ -258,6 +617,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
    "ambito": "Nacional",
@@ -270,6 +630,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -282,6 +643,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -294,6 +656,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -306,6 +669,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -318,6 +682,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -330,6 +695,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -342,6 +708,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -354,6 +721,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -366,6 +734,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -378,6 +747,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -390,6 +760,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Nacional",
@@ -402,6 +773,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Partidos del GBA",
@@ -414,6 +786,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Resto de Buenos Aires",
@@ -426,6 +799,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "CABA",
@@ -438,6 +812,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Misiones",
@@ -450,6 +825,7 @@
   },
   {
    "fecha": "2026-10-29",
+   "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empleo",
    "ambito": "Córdoba",
@@ -459,6 +835,670 @@
    "titulo": "Córdoba: el empleo metalúrgico cae 2,3% interanual",
    "detalle": "-787 puestos en un año (33.130 en 2026 T1).",
    "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Chubut",
+   "nivel": "media",
+   "tema": "Empleo",
+   "ambito": "Chubut",
+   "variable": "Caída generalizada",
+   "periodo": "2026T1",
+   "valor": 3,
+   "titulo": "Chubut: el empleo cae en todas sus ramas metalúrgicas",
+   "detalle": "3 de 3 ramas con menos puestos que hace un año.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "La Pampa",
+   "nivel": "media",
+   "tema": "Empleo",
+   "ambito": "La Pampa",
+   "variable": "Caída generalizada",
+   "periodo": "2026T1",
+   "valor": 3,
+   "titulo": "La Pampa: el empleo cae en todas sus ramas metalúrgicas",
+   "detalle": "3 de 3 ramas con menos puestos que hace un año.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "San Luis",
+   "nivel": "media",
+   "tema": "Empleo",
+   "ambito": "San Luis",
+   "variable": "Caída generalizada",
+   "periodo": "2026T1",
+   "valor": 3,
+   "titulo": "San Luis: el empleo cae en todas sus ramas metalúrgicas",
+   "detalle": "3 de 3 ramas con menos puestos que hace un año.",
+   "fuente": "OEDE–SIPA"
+  },
+  {
+   "fecha": "2026-10-29",
+   "provincia": "Tucumán",
+   "nivel": "media",
+   "tema": "Empleo",
+   "ambito": "Tucumán",
+   "variable": "Caída generalizada",
+   "periodo": "2026T1",
+   "valor": 4,
+   "titulo": "Tucumán: el empleo cae en todas sus ramas metalúrgicas",
+   "detalle": "4 de 4 ramas con menos puestos que hace un año.",
+   "fuente": "OEDE–SIPA"
   }
- ]
+ ],
+ "indice": [
+  {
+   "area": "Salta",
+   "provincia": "Salta",
+   "puntaje": 74,
+   "nivel": "alta",
+   "empleo": 878,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -35.7,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -29.9,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 7,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 8.6,
+     "puntos": 57
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Chubut",
+   "provincia": "Chubut",
+   "puntaje": 71,
+   "nivel": "alta",
+   "empleo": 1210,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -9.6,
+     "puntos": 96
+    },
+    "empleo_acumulado": {
+     "valor": -17.1,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 10,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 7.8,
+     "puntos": 52
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "San Luis",
+   "provincia": "San Luis",
+   "puntaje": 70,
+   "nivel": "alta",
+   "empleo": 2336,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -10.4,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -22.5,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 13.2,
+     "puntos": 88
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Misiones",
+   "provincia": "Misiones",
+   "puntaje": 59,
+   "nivel": "media",
+   "empleo": 818,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -2.9,
+     "puntos": 40
+    },
+    "empleo_acumulado": {
+     "valor": -12.9,
+     "puntos": 88
+    },
+    "tendencia": {
+     "valor": 3,
+     "puntos": 75
+    },
+    "exposicion_ramas": {
+     "valor": 15.5,
+     "puntos": 100
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Partidos del GBA",
+   "provincia": "Buenos Aires",
+   "puntaje": 58,
+   "nivel": "media",
+   "empleo": 87913,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -4.9,
+     "puntos": 57
+    },
+    "empleo_acumulado": {
+     "valor": -8.6,
+     "puntos": 62
+    },
+    "tendencia": {
+     "valor": 4,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 10.7,
+     "puntos": 71
+    },
+    "hechos_planta": {
+     "valor": 1,
+     "puntos": 9
+    },
+    "actividad_adimra": {
+     "valor": -3.7,
+     "puntos": 57
+    }
+   }
+  },
+  {
+   "area": "Jujuy",
+   "provincia": "Jujuy",
+   "puntaje": 57,
+   "nivel": "media",
+   "empleo": 404,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -26.4,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -10,
+     "puntos": 71
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 8.2,
+     "puntos": 55
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Río Negro",
+   "provincia": "Río Negro",
+   "puntaje": 56,
+   "nivel": "media",
+   "empleo": 820,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -5.4,
+     "puntos": 62
+    },
+    "empleo_acumulado": {
+     "valor": -6.9,
+     "puntos": 52
+    },
+    "tendencia": {
+     "valor": 6,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 10.5,
+     "puntos": 70
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Tierra del Fuego",
+   "provincia": "Tierra del Fuego",
+   "puntaje": 56,
+   "nivel": "media",
+   "empleo": 5418,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -18.5,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -41.8,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 2,
+     "puntos": 50
+    },
+    "exposicion_ramas": {
+     "valor": 0.2,
+     "puntos": 1
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Resto de Buenos Aires",
+   "provincia": "Buenos Aires",
+   "puntaje": 55,
+   "nivel": "media",
+   "empleo": 43983,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -4.8,
+     "puntos": 57
+    },
+    "empleo_acumulado": {
+     "valor": -7.4,
+     "puntos": 55
+    },
+    "tendencia": {
+     "valor": 5,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 8.4,
+     "puntos": 56
+    },
+    "hechos_planta": {
+     "valor": 1,
+     "puntos": 17
+    },
+    "actividad_adimra": {
+     "valor": -3.7,
+     "puntos": 57
+    }
+   }
+  },
+  {
+   "area": "Córdoba",
+   "provincia": "Córdoba",
+   "puntaje": 48,
+   "nivel": "media",
+   "empleo": 33130,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -2.3,
+     "puntos": 36
+    },
+    "empleo_acumulado": {
+     "valor": -7.9,
+     "puntos": 58
+    },
+    "tendencia": {
+     "valor": 2,
+     "puntos": 50
+    },
+    "exposicion_ramas": {
+     "valor": 12.3,
+     "puntos": 82
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": -4.6,
+     "puntos": 66
+    }
+   }
+  },
+  {
+   "area": "CABA",
+   "provincia": "CABA",
+   "puntaje": 47,
+   "nivel": "media",
+   "empleo": 29734,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -3.2,
+     "puntos": 43
+    },
+    "empleo_acumulado": {
+     "valor": -5.9,
+     "puntos": 47
+    },
+    "tendencia": {
+     "valor": 3,
+     "puntos": 75
+    },
+    "exposicion_ramas": {
+     "valor": 10.9,
+     "puntos": 73
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Mendoza",
+   "provincia": "Mendoza",
+   "puntaje": 46,
+   "nivel": "media",
+   "empleo": 6297,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -5.4,
+     "puntos": 62
+    },
+    "empleo_acumulado": {
+     "valor": -5.7,
+     "puntos": 45
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 13.3,
+     "puntos": 88
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": -1.1,
+     "puntos": 31
+    }
+   }
+  },
+  {
+   "area": "La Pampa",
+   "provincia": "La Pampa",
+   "puntaje": 45,
+   "nivel": "media",
+   "empleo": 571,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -6.4,
+     "puntos": 70
+    },
+    "empleo_acumulado": {
+     "valor": -4.7,
+     "puntos": 39
+    },
+    "tendencia": {
+     "valor": 2,
+     "puntos": 50
+    },
+    "exposicion_ramas": {
+     "valor": 6.8,
+     "puntos": 45
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Tucumán",
+   "provincia": "Tucumán",
+   "puntaje": 43,
+   "nivel": "media",
+   "empleo": 2486,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -7.4,
+     "puntos": 79
+    },
+    "empleo_acumulado": {
+     "valor": -4.1,
+     "puntos": 36
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 6.9,
+     "puntos": 46
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Santa Fe",
+   "provincia": "Santa Fe",
+   "puntaje": 35,
+   "nivel": "baja",
+   "empleo": 50770,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -0.9,
+     "puntos": 24
+    },
+    "empleo_acumulado": {
+     "valor": -6,
+     "puntos": 47
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 12.5,
+     "puntos": 84
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": -2.3,
+     "puntos": 43
+    }
+   }
+  },
+  {
+   "area": "Neuquén",
+   "provincia": "Neuquén",
+   "puntaje": 25,
+   "nivel": "baja",
+   "empleo": 7532,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": 0.9,
+     "puntos": 9
+    },
+    "empleo_acumulado": {
+     "valor": 13.6,
+     "puntos": 0
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 18.3,
+     "puntos": 100
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  },
+  {
+   "area": "Entre Ríos",
+   "provincia": "Entre Ríos",
+   "puntaje": 20,
+   "nivel": "baja",
+   "empleo": 3262,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": 2.6,
+     "puntos": 0
+    },
+    "empleo_acumulado": {
+     "valor": 4.5,
+     "puntos": 0
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 11.1,
+     "puntos": 74
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": -3.7,
+     "puntos": 57
+    }
+   }
+  },
+  {
+   "area": "San Juan",
+   "provincia": "San Juan",
+   "puntaje": 15,
+   "nivel": "baja",
+   "empleo": 2023,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": 4.2,
+     "puntos": 0
+    },
+    "empleo_acumulado": {
+     "valor": 7.2,
+     "puntos": 0
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 9.8,
+     "puntos": 65
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    }
+   }
+  }
+ ],
+ "pesos": {
+  "empleo_interanual": 0.3,
+  "empleo_acumulado": 0.15,
+  "tendencia": 0.1,
+  "exposicion_ramas": 0.2,
+  "hechos_planta": 0.15,
+  "actividad_adimra": 0.1
+ },
+ "nombres": {
+  "empleo_interanual": "Caída del empleo en el último año",
+  "empleo_acumulado": "Pérdida de empleo desde fines de 2023",
+  "tendencia": "Trimestres seguidos en baja",
+  "exposicion_ramas": "Peso de ramas cuya producción cae",
+  "hechos_planta": "Despidos, suspensiones y cierres en planta",
+  "actividad_adimra": "Actividad metalúrgica provincial (ADIMRA)"
+ }
 }

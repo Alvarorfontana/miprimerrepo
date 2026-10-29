@@ -1,0 +1,60 @@
+{
+ "fuente": "ADIMRA, Informe de actividad metalúrgica (vía prensa)",
+ "nota": "Variación interanual de la actividad metalúrgica por provincia. ADIMRA publica cinco provincias.",
+ "datos": [
+  {
+   "provincia": "Buenos Aires",
+   "periodo": "2026-05",
+   "valor": -5.9
+  },
+  {
+   "provincia": "Santa Fe",
+   "periodo": "2026-05",
+   "valor": -5.1
+  },
+  {
+   "provincia": "Córdoba",
+   "periodo": "2026-05",
+   "valor": -4.1
+  },
+  {
+   "provincia": "Entre Ríos",
+   "periodo": "2026-05",
+   "valor": -3.8
+  },
+  {
+   "provincia": "Mendoza",
+   "periodo": "2026-05",
+   "valor": -2.4
+  },
+  {
+   "provincia": "Buenos Aires",
+   "periodo": "2026-09",
+   "valor": -3.7
+  },
+  {
+   "provincia": "Santa Fe",
+   "periodo": "2026-09",
+   "valor": -2.3
+  },
+  {
+   "provincia": "Córdoba",
+   "periodo": "2026-09",
+   "valor": -4.6
+  },
+  {
+   "provincia": "Entre Ríos",
+   "periodo": "2026-09",
+   "valor": -3.7
+  },
+  {
+   "provincia": "Mendoza",
+   "periodo": "2026-09",
+   "valor": -1.1
+  }
+ ],
+ "urls": [
+  "https://www.iprofesional.com/negocios/457441-la-actividad-metalurgica-volvio-a-caer-y-las-fabricas-operan-a-menos-del-40",
+  "https://www.perfil.com/noticias/economia/actividad-metalurgica-cayo-33-internaual-septiembre-acumulo-una-baja-53-todo-2026-a40.phtml"
+ ]
+}

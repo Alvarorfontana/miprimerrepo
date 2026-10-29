@@ -173,9 +173,19 @@ def main():
       <h3>Lectura</h3><p>{lectura(e_ia, ipi_ia, uci, adimra)}</p>
       <div class='nota'>Cada cifra lleva su fuente y fecha en la página correspondiente. Las variaciones interanuales comparan con el mismo mes o trimestre del año anterior.</div></section>""")
 
+    # índice ponderado
+    AL = D("alertas.json", {"alertas": [], "indice": []}); IX = AL.get("indice", [])
+    if IX:
+        colx = lambda n: MOLT if n == "alta" else ("#e0a412" if n == "media" else STEEL2)
+        if not PV:
+            P.append(f"<section class='page'><div class='kick'>Índice de riesgo</div><h2>Dónde el riesgo es mayor</h2><p>Índice ponderado de 0 (sin señales) a 100 (riesgo máximo). Combina caída del empleo en el último año (30%), peso de ramas cuya producción cae (20%), pérdida desde fines de 2023 (15%), hechos en planta (15%), trimestres seguidos en baja (10%) y actividad provincial de ADIMRA (10%). 60 o más: alerta alta; 40 o más: media.</p>{barras_h([(i['area'], i['puntaje'], i['nivel']) for i in IX], dec=0, ancho_etq=200, alto_fila=27, colores=[colx(i['nivel']) for i in IX])}<p class='src'>Fuente: MIDTM, sobre OEDE–SIPA, INDEC, ADIMRA y relevamiento propio. Áreas con menos de 500 puestos metalúrgicos quedan fuera del índice.</p></section>")
+        else:
+            for i in [x for x in IX if x["provincia"] == PV]:
+                comp = [(AL["nombres"][c], o["puntos"] if o["puntos"] is not None else 0, f"peso {round(AL['pesos'][c] * 100)}% · dato: {'s/d' if o['valor'] is None else o['valor']}") for c, o in i["componentes"].items()]
+                P.append(f"<section class='page'><div class='kick'>Índice de riesgo</div><h2>{i['area']}: {i['puntaje']}/100</h2><p>Nivel <b>{i['nivel']}</b>. Así se compone el índice ponderado (cada señal de 0 a 100):</p>{barras_h(comp, dec=0, ancho_etq=330, alto_fila=40)}<p class='src'>Fuente: MIDTM.</p></section>")
     # alertas
-    ale = D("alertas.json", {"alertas": []})["alertas"]
-    ale = [x for x in ale if x["nivel"] != "info" and (not PV or x["ambito"] in ("Nacional", PV) or (PV == "Buenos Aires" and ("GBA" in x["ambito"] or "Buenos Aires" in x["ambito"])))]
+    ale = AL["alertas"]
+    ale = [x for x in ale if x["nivel"] != "info" and (not PV or x["ambito"] == "Nacional" or x.get("provincia") == PV)]
     if ale:
         filas_a = "".join(f"<tr class='{x['nivel']}'><td><span class='nv {x['nivel']}'>{x['nivel'].upper()}</span></td><td><b>{x['titulo']}</b><div class='small'>{x.get('detalle') or ''}</div></td><td class='small'>{x['tema']}<br>{x['ambito']}</td><td class='small'>{str(x['periodo']).replace('T', ' T')}<br>{x['fuente']}</td></tr>" for x in ale[:26])
         P.append(f"<section class='page'><div class='kick'>Alerta temprana</div><h2>Alertas activas</h2><p>Variables que cruzaron un umbral del modelo: {sum(1 for x in ale if x['nivel'] == 'alta')} alertas altas y {sum(1 for x in ale if x['nivel'] == 'media')} a seguir de cerca.</p><table><thead><tr><th>Nivel</th><th>Alerta</th><th>Tema</th><th>Dato</th></tr></thead><tbody>{filas_a}</tbody></table><p class='src'>Umbrales: producción −5% y −10% interanual; empleo −2% y −5% por provincia (−10% por actividad); capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días.</p></section>")

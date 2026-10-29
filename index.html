@@ -59,9 +59,20 @@
     <div class="sec-h"><div><div class="kicker">Alerta temprana</div><h2>Alertas activas</h2></div>
       <p>El modelo revisa cada variable cuando llegan datos nuevos y avisa cuando cruza un umbral: caídas de producción o de empleo, capacidad ociosa, despidos y suspensiones en planta, suba de importaciones. Si elegís una provincia en el mapa, se filtran también acá.</p></div>
     <div class="band-in" id="alertas-res"></div>
-    <div class="row" id="alertas-fil" style="margin:14px 0"></div>
-    <div class="alertas" id="alertas-lista"></div>
-    <p class="note">Umbrales: producción −5% (media) y −10% (alta) interanual; empleo −2% y −5% por provincia; capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días. Se ajustan en <code>data/alertas-reglas.json</code>.</p>
+    <div class="grid-main" style="margin-top:16px">
+      <div class="card">
+        <div class="row" style="justify-content:space-between;align-items:end"><h3>Índice de riesgo por provincia</h3>
+          <label class="f" for="aProv" style="min-width:200px">Provincia<select id="aProv"></select></label></div>
+        <p class="small muted" style="margin:4px 0 10px">De 0 (sin señales) a 100 (riesgo máximo). Pondera seis señales; tocá una provincia para ver cómo se compone.</p>
+        <div id="indice"></div>
+      </div>
+      <div class="card">
+        <h3 id="alertas-tit">Alertas</h3>
+        <div class="row" id="alertas-fil" style="margin:8px 0 12px"></div>
+        <div class="alertas" id="alertas-lista"></div>
+      </div>
+    </div>
+    <p class="note">Índice: caída del empleo en el último año 30%, peso de ramas cuya producción cae 20%, pérdida de empleo desde fines de 2023 15%, despidos y suspensiones en planta 15%, trimestres seguidos en baja 10% y actividad provincial de ADIMRA 10%; 60 o más es alerta alta y 40 o más, media. Umbrales de las demás alertas: producción −5% (media) y −10% (alta) interanual; empleo −2% y −5% por provincia; capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días. Se ajustan en <code>data/alertas-reglas.json</code>.</p>
   </div>
 </section>
 

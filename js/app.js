@@ -447,14 +447,27 @@ function irForm(f) { $("cargar").scrollIntoView({ behavior: "smooth" }); $("r_pl
 
 /* ---------- arranque ---------- */
 function alertas() {
-  const box = $("alertas-lista"); if (!box) return; const A = (S.alertas && S.alertas.alertas) || [];
+  const box = $("alertas-lista"); if (!box) return; const AL = S.alertas || {}; const A = AL.alertas || [], I = AL.indice || [];
   const pv = F().pv; const temas = [...new Set(A.map(a => a.tema))];
-  const filtro = a => (S.fAle === "todas" || (S.fAle === "alta" ? a.nivel === "alta" : a.tema === S.fAle)) && (!pv || a.ambito === "Nacional" || a.ambito === pv || (pv === "Buenos Aires" && /GBA|Buenos Aires/.test(a.ambito)));
-  const vis = A.filter(filtro);
-  $("alertas-res").innerHTML = `<div class="stat"><b class="neg">${A.filter(a => a.nivel === "alta").length}</b><span>alertas altas</span></div><div class="stat"><b>${A.filter(a => a.nivel === "media").length}</b><span>a seguir de cerca</span></div><div class="stat"><b>${S.alertas.actualizado ? mesTxt(S.alertas.actualizado.slice(0, 7)) : "—"}</b><span>último cálculo</span></div>`;
+  const enProv = a => !pv || a.provincia === pv || a.ambito === "Nacional";
+  const filtro = a => (S.fAle === "todas" || (S.fAle === "alta" ? a.nivel === "alta" : a.tema === S.fAle)) && enProv(a);
+  let vis = A.filter(filtro); const Ap = A.filter(enProv);
+  if (pv) vis = [...vis.filter(a => a.provincia === pv), ...vis.filter(a => a.provincia !== pv)];
+  $("alertas-res").innerHTML = `<div class="stat"><b class="neg">${Ap.filter(a => a.nivel === "alta").length}</b><span>alertas altas${pv ? " · " + esc(pv) + " y nacionales" : ""}</span></div><div class="stat"><b>${Ap.filter(a => a.nivel === "media").length}</b><span>a seguir de cerca</span></div><div class="stat"><b>${AL.actualizado ? mesTxt(AL.actualizado.slice(0, 7)) : "—"}</b><span>último cálculo</span></div>`;
+  // selector de provincia, sincronizado con el filtro del mapa
+  const provs = Object.keys(S.geo.p).sort((a, b) => a.localeCompare(b, "es"));
+  $("aProv").innerHTML = `<option value="">Todo el país</option>` + provs.map(p => `<option ${p === pv ? "selected" : ""}>${esc(p)}</option>`).join("");
+  $("aProv").onchange = e => { $("fProv").value = e.target.value; $("fProv").dispatchEvent(new Event("change")); };
+  // ranking
+  const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
+  const sel = I.filter(i => i.provincia === pv);
+  $("indice").innerHTML = (I.length ? I.map(i => `<button type="button" class="ix ${i.provincia === pv ? "on" : ""}" data-p="${esc(i.provincia)}"><span class="n">${esc(i.area)}</span><span class="b"><i style="width:${i.puntaje}%;background:${col(i.nivel)}"></i></span><b style="color:${col(i.nivel)}">${i.puntaje}</b></button>`).join("") : `<p class="muted">Sin datos para el índice.</p>`)
+    + sel.map(i => `<div class="ixd"><h4>${esc(i.area)} · ${i.puntaje}/100</h4>${Object.entries(i.componentes).map(([c, o]) => `<div class="ixc"><span>${esc(AL.nombres[c])} <small>(peso ${Math.round(AL.pesos[c] * 100)}%)</small></span><span class="b"><i style="width:${o.puntos ?? 0}%;background:${o.puntos == null ? "#ccd5df" : col(o.puntos >= 60 ? "alta" : o.puntos >= 40 ? "media" : "baja")}"></i></span><b>${o.puntos == null ? "s/d" : o.puntos}</b><small class="v">${o.valor == null ? "" : c.startsWith("empleo") || c === "actividad_adimra" ? (o.valor > 0 ? "+" : "") + dec(o.valor) + "%" : c === "tendencia" ? o.valor + " trim." : c === "hechos_planta" ? o.valor + " hechos" : dec(o.valor) + " pts"}</small></div>`).join("")}</div>`).join("");
+  $("indice").querySelectorAll(".ix").forEach(b => b.onclick = () => { const v = b.dataset.p === pv ? "" : b.dataset.p; $("fProv").value = v; $("fProv").dispatchEvent(new Event("change")); });
+  $("alertas-tit").textContent = pv ? `Alertas · ${pv} y nacionales` : "Alertas · todo el país";
   $("alertas-fil").innerHTML = [["todas", "Todas"], ["alta", "Solo altas"], ...temas.map(t => [t, t])].map(([k, t]) => `<button class="chip" type="button" data-f="${esc(k)}" aria-pressed="${S.fAle === k}">${esc(t)}</button>`).join("");
   $("alertas-fil").querySelectorAll("button").forEach(b => b.onclick = () => { S.fAle = b.dataset.f; alertas(); });
-  box.innerHTML = vis.length ? vis.slice(0, 60).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
+  box.innerHTML = vis.length ? vis.slice(0, 80).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
 }
 function refrescar() { alertas(); filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
 await cargar();

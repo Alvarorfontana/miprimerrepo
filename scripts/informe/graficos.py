@@ -47,14 +47,14 @@ def lineas(series, ancho=760, alto=280, unidad="", dec=0, etiquetas_x=None, cada
     return s + "</svg>"
 
 
-def barras_h(items, ancho=760, unidad="", dec=1, signo=False, alto_fila=30, ancho_etq=260):
+def barras_h(items, ancho=760, unidad="", dec=1, signo=False, alto_fila=30, ancho_etq=260, colores=None):
     """items: [(etiqueta, valor, sub)] valores positivos y/o negativos."""
     vals = [v for _, v, _ in items]; lo, hi = min(0, min(vals)), max(0, max(vals))
     l = ancho_etq + (62 if lo < 0 else 0); r = 70; w = ancho - l - r; h = len(items) * alto_fila + 10
     X = lambda v: l + (v - lo) / ((hi - lo) or 1) * w
     s = f"<svg viewBox='0 0 {ancho} {h}' width='100%' xmlns='http://www.w3.org/2000/svg'><line x1='{X(0):.1f}' x2='{X(0):.1f}' y1='0' y2='{h}' stroke='{MUT}'/>"
     for i, (lab, v, sub) in enumerate(items):
-        y = 5 + i * alto_fila; col = MOLT if v < 0 else STEEL
+        y = 5 + i * alto_fila; col = colores[i] if colores else (MOLT if v < 0 else STEEL)
         x1, x2 = sorted([X(0), X(v)])
         s += f"<text x='{ancho_etq - 10}' y='{y + alto_fila / 2 + 1}' {F} font-size='12' fill='{INK}' text-anchor='end'>{lab}</text>"
         if sub: s += f"<text x='{ancho_etq - 10}' y='{y + alto_fila / 2 + 13}' {F} font-size='9.5' fill='{MUT}' text-anchor='end'>{sub}</text>"

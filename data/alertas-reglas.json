@@ -16,11 +16,45 @@
     "dias_hecho_reciente": 120,
     "importaciones_suba_media": 20,
     "importaciones_suba_alta": 40,
-    "meses_sin_dato": 4
+    "meses_sin_dato": 4,
+    "empleo_acumulado_alta": -8
   },
   "niveles": {
     "alta": "Requiere atención inmediata: caída fuerte, despidos o cierre.",
     "media": "Tendencia negativa a seguir de cerca.",
     "info": "Aviso sobre los datos (por ejemplo, una fuente sin actualizar)."
+  },
+  "indice": {
+    "nota": "Índice de riesgo por provincia: cada componente se lleva a una escala de 0 (sin riesgo) a 100 (riesgo máximo) y se pondera. Si falta un componente, su peso se reparte entre los demás.",
+    "pesos": {
+      "empleo_interanual": 0.3,
+      "empleo_acumulado": 0.15,
+      "tendencia": 0.1,
+      "exposicion_ramas": 0.2,
+      "hechos_planta": 0.15,
+      "actividad_adimra": 0.1
+    },
+    "nombres": {
+      "empleo_interanual": "Caída del empleo en el último año",
+      "empleo_acumulado": "Pérdida de empleo desde fines de 2023",
+      "tendencia": "Trimestres seguidos en baja",
+      "exposicion_ramas": "Peso de ramas cuya producción cae",
+      "hechos_planta": "Despidos, suspensiones y cierres en planta",
+      "actividad_adimra": "Actividad metalúrgica provincial (ADIMRA)"
+    },
+    "normalizacion": {
+      "empleo_ia_bueno": 2,
+      "empleo_ia_malo": -10,
+      "empleo_ac_bueno": 2,
+      "empleo_ac_malo": -15,
+      "racha_mala": 4,
+      "exposicion_mala": 15,
+      "hechos_pct_malo": 2,
+      "adimra_bueno": 2,
+      "adimra_malo": -8
+    },
+    "dias_hechos": 180,
+    "alta": 60,
+    "media": 40
   }
 }
