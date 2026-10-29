@@ -2,37 +2,169 @@
  "actualizado": "2026-10-29",
  "series": [
   {
-   "clave": "auto-uci-metalmecanica",
-   "nombre": "INDEC · Capacidad usada, metalmecánica sin automotriz (API)",
+   "clave": "auto-uci-general",
+   "nombre": "INDEC · Capacidad usada, nivel general de la industria",
    "unidad": "%",
    "organismo": "INDEC",
    "origen": "API Series de Tiempo · datos.gob.ar",
-   "idSerie": "30.1_UMNIA_2012_A_42",
-   "descripcionOficial": "Utilización de la capacidad instalada en la industria Metalmecánica exluidos los automotores como porcentaje del total de la capacidad del sector",
-   "url": "https://apis.datos.gob.ar/series/api/series/?ids=30.1_UMNIA_2012_A_42&format=csv",
+   "idSerie": "31.3_UNG_2004_M_18",
+   "descripcionOficial": "INDEC · Capacidad usada, nivel general de la industria",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=31.3_UNG_2004_M_18&format=csv",
    "datos": [
     {
-     "periodo": "2012-01",
-     "valor": 64.65
+     "periodo": "2023-08",
+     "valor": 67.9
     },
     {
-     "periodo": "2013-01",
-     "valor": 59.51
+     "periodo": "2023-09",
+     "valor": 67.9
     },
     {
-     "periodo": "2014-01",
-     "valor": 57.83
+     "periodo": "2023-10",
+     "valor": 65.3
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 66.4
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 54.9
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 54.4
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 57.4
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 53.2
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 56.5
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 56.7
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 54.3
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 59.5
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 61.2
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 62.2
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 63
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 62.3
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 56.7
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 55
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 58.6
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 54.4
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 58.6
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 58.8
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 58.9
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 58.4
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 59.6
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 61.4
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 60.9
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 57.7
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 53.8
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 53.9
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 54.6
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 59.8
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 59.9
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 58.3
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 59.1
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 58.2
     }
    ]
   },
   {
    "clave": "auto-uci-metalicas",
-   "nombre": "INDEC · Capacidad usada, metálicas básicas (API)",
+   "nombre": "INDEC · Capacidad usada, metales básicos",
    "unidad": "%",
    "organismo": "INDEC",
    "origen": "API Series de Tiempo · datos.gob.ar",
    "idSerie": "31.3_UIMB_2004_M_33",
-   "descripcionOficial": "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total de la capacidad del sector",
+   "descripcionOficial": "INDEC · Capacidad usada, metales básicos",
    "url": "https://apis.datos.gob.ar/series/api/series/?ids=31.3_UIMB_2004_M_33&format=csv",
    "datos": [
     {
@@ -178,6 +310,942 @@
     {
      "periodo": "2026-07",
      "valor": 71.8
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-siderurgia",
+   "nombre": "INDEC · IPI industria siderúrgica",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_INDUSTRIA_ICA_0_0_21_100",
+   "descripcionOficial": "INDEC · IPI industria siderúrgica",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_INDUSTRIA_ICA_0_0_21_100&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 92.78
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 93.51
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 82.34
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 61.38
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 69.19
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 47.67
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 51.87
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 70.3
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 65.24
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 62.24
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 73.88
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 79.61
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 79.11
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 82.05
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 78.56
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 61.53
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 71.74
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 39.76
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 74.21
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 82.57
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 81.82
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 67.53
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 70.82
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 74.78
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 77.71
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 85
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 77.21
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 74.39
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 72.34
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 34.58
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 63.34
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 66.63
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 79.28
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 78.54
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 74.62
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 80.53
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-fundicion",
+   "nombre": "INDEC · IPI fundición de metales",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_FUNDICION_LES_0_0_17_29",
+   "descripcionOficial": "INDEC · IPI fundición de metales",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_FUNDICION_LES_0_0_17_29&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 129.83
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 144.22
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 130.39
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 98.26
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 107.38
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 125.14
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 114.5
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 125.28
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 112.39
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 91.27
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 109.62
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 115.81
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 95.8
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 118.28
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 114.09
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 113.09
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 86.9
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 107.36
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 101.19
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 111.41
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 118.22
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 100.16
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 106.15
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 107.29
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 89.45
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 106.29
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 94.68
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 87.2
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 74.29
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 82.82
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 90.49
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 99.57
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 92.05
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 92.59
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 90.12
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 93.01
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-productos-metal",
+   "nombre": "INDEC · IPI productos de metal",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_PRODUCTOS_TAL_0_0_15_15",
+   "descripcionOficial": "INDEC · IPI productos de metal",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_PRODUCTOS_TAL_0_0_15_15&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 116.65
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 113.63
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 111.92
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 85.11
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 90.15
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 92.03
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 87.94
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 90.12
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 98.93
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 87.01
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 101.28
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 109.59
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 103.06
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 99.79
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 97.74
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 86.04
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 86.12
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 81.56
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 81.45
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 84.97
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 85.66
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 83.53
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 92.54
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 90.13
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 90.41
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 90.39
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 81.5
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 78.89
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 79.38
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 77.13
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 89.15
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 83.71
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 84.44
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 86.58
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 84.86
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 81.49
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-maquinaria",
+   "nombre": "INDEC · IPI maquinaria y equipo",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_MAQUINARIAIPO_0_0_17_14",
+   "descripcionOficial": "INDEC · IPI maquinaria y equipo",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_MAQUINARIAIPO_0_0_17_14&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 185.85
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 184.52
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 151.11
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 116.49
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 87.39
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 103.29
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 123.8
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 143.54
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 142.31
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 127.8
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 161.41
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 160.45
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 155.64
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 169.85
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 162.98
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 156.41
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 110.6
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 138.24
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 151.57
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 173.77
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 156.91
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 150.13
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 155.69
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 147.29
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 164.54
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 166.38
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 132.58
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 132.91
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 88.98
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 98.86
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 135.24
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 143.17
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 120.35
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 123.41
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 114.98
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 111.94
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-electricos",
+   "nombre": "INDEC · IPI equipos y aparatos eléctricos",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_EQUIPOS_ELCOS_0_0_18_68",
+   "descripcionOficial": "INDEC · IPI equipos y aparatos eléctricos",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_EQUIPOS_ELCOS_0_0_18_68&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 82.15
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 81.88
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 67.33
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 62.52
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 54.05
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 62.81
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 64.85
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 62.47
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 84.39
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 66.04
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 83.14
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 102.32
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 79.4
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 79.03
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 88.61
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 89.29
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 67.49
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 77.13
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 74.13
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 72.16
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 77.83
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 92.6
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 101.81
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 92.76
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 102.25
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 100.64
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 83.64
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 83.16
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 60.19
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 68.12
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 80.44
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 75.17
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 80.17
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 81.39
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 76.6
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 82.36
+    }
+   ]
+  },
+  {
+   "clave": "auto-ipi-autopartes",
+   "nombre": "INDEC · IPI autopartes",
+   "unidad": "índice",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "453.2_AUTOPARTESTES_0_0_10_100",
+   "descripcionOficial": "INDEC · IPI autopartes",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=453.2_AUTOPARTESTES_0_0_10_100&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-09",
+     "valor": 101.19
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 86.54
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 95.28
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 78.21
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 57.33
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 77.1
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 88.58
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 83.77
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 84.36
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 71.35
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 87.63
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 94.26
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 95.56
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 92.65
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 95.64
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 89.94
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 57.56
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 85.11
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 84.49
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 83.57
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 92.9
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 83.31
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 78.33
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 85.58
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 90.06
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 85.11
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 76.35
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 74.56
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 44.54
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 66.34
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 93.31
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 80.22
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 82.5
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 87.26
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 78.57
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 82.64
     }
    ]
   }

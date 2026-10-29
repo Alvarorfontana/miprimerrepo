@@ -56,19 +56,27 @@
    "clave": "eil",
    "nombre": "Encuesta de Indicadores Laborales (EIL) · altas, bajas y expectativas por rama",
    "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
-   "archivos": [],
-   "errores": [
-    "blank:#https://www.argentina.gob.ar/sites/default/files/eil_2608_estadisticas.xlsx: fetch failed"
-   ]
+   "archivos": [
+    {
+     "archivo": "data/fuentes/eil/eil_2608_estadisticas.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/eil_2608_estadisticas.xlsx",
+     "mb": 13.87
+    }
+   ],
+   "errores": []
   },
   {
    "clave": "sipa",
    "nombre": "SIPA · Situación y evolución del trabajo registrado",
    "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/situacion-y-evolucion-del-trabajo-registrado",
-   "archivos": [],
-   "errores": [
-    "blank:#https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2607_estadisticas.xlsx: fetch failed"
-   ]
+   "archivos": [
+    {
+     "archivo": "data/fuentes/sipa/trabajoregistrado_2607_estadisticas.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2607_estadisticas.xlsx",
+     "mb": 29.44
+    }
+   ],
+   "errores": []
   }
  ]
 }
