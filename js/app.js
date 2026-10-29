@@ -203,11 +203,28 @@ function filtros() {
   opciones($("fSec"), [...new Set(S.plantas.filter(p => (!r || regionOf(p) === r) && (!$("fProv").value || p.provincia === $("fProv").value)).map(p => p.seccional).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es")), "Todas");
   opciones($("fRama"), RAMAS, "Todas");
 }
+function ambitoDatos() {
+  const f = F(); const enAmb = p => (!f.pv || p === f.pv) && (!f.r || REGION[p] === f.r || (f.r === "AMBA" && p === "Buenos Aires"));
+  const est = (S.est.filas || []).filter(r => enAmb(provDeEst(r[4])));
+  const grandes = est.filter(r => ["d. 200-499", "e. 500+"].includes(r[3])).length;
+  let emp = null, empIa = null, empQ = null;
+  if (S.oede) { const O = S.oede, n = O.trimestres.length, G = Object.keys(O.grupos).filter(g => g !== "3410");
+    const ar = Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k)); const sum = i => ar.reduce((x, [, a]) => x + G.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].trim[i] || 0 : 0), 0), 0);
+    emp = sum(n - 1); const b = sum(n - 5); empIa = b ? (emp / b - 1) * 100 : null; empQ = O.trimestres[n - 1].replace("T", " T"); }
+  const ix = (S.alertas && S.alertas.indice || []).filter(i => f.pv && i.provincia === f.pv);
+  const altas = (S.alertas && S.alertas.alertas || []).filter(a => a.nivel === "alta" && (!f.pv && !f.r ? true : a.provincia && enAmb(a.provincia))).length;
+  return { est: est.length, grandes, emp, empIa, empQ, ix, altas };
+}
 function kpis() {
-  const s = stats(filtradas());
-  $("kpis").innerHTML = [[fmt(s.n), `plantas UOM · ${s.provs} provincias`, ""], [s.conDot ? fmt(s.dot) : "—", s.conDot ? `trabajadores en ${s.conDot} plantas con reporte` : "dotación: a cargar por las seccionales", ""],
-  [fmt(s.despidos), "despidos, últimos 12 meses", "bad"], [fmt(s.susp), "suspensiones, últimos 12 meses", "warn"], [fmt(s.cierres), `cierres, últimos 12 meses${s.enCierres ? ` · ${fmt(s.enCierres)} trab.` : ""}`, "bad"],
-  [s.cap != null ? dec(s.cap) + "%" : "—", s.capN ? `capacidad usada, ${s.capN} plantas` : "capacidad: a cargar", ""]].map(([b, l, c]) => `<div class="kpi ${c}"><b>${b}</b><span>${l}</span></div>`).join("");
+  const s = stats(filtradas()), d = ambitoDatos(), cap = ultimo("indec-uci-metalmecanica");
+  const k = [
+    [fmt(d.est), `establecimientos metalúrgicos · ${fmt(d.grandes)} con 200+ trabajadores (CEP XXI)`, ""],
+    [d.emp != null ? fmt(d.emp) : "—", d.emp != null ? `empleados registrados · ${d.empQ} · ${d.empIa > 0 ? "+" : ""}${dec(d.empIa)}% interanual (OEDE)` : "empleo registrado: sin dato", d.empIa < 0 ? "bad" : ""],
+    [d.ix.length === 1 ? d.ix[0].puntaje + "/100" : fmt(d.altas), d.ix.length === 1 ? `índice de riesgo · nivel ${d.ix[0].nivel}` : "alertas altas activas en el ámbito", (d.ix.length === 1 ? d.ix[0].nivel === "alta" : d.altas) ? "bad" : "warn"],
+    [fmt(s.n), s.n ? `plantas con seguimiento propio · ${s.provs} provincias` : "plantas con seguimiento propio (sumar con la UOM)", ""],
+    [fmt(s.despidos + s.susp), `despedidos y suspendidos en plantas relevadas, últimos 12 meses${s.cierres ? ` · ${s.cierres} cierres` : ""}`, s.despidos + s.susp ? "bad" : ""],
+    [s.cap != null ? dec(s.cap) + "%" : cap ? dec(cap.valor) + "%" : "—", s.capN ? `capacidad usada, ${s.capN} plantas` : cap ? `capacidad en uso, metalmecánica nacional · ${mesTxt(cap.periodo)} (INDEC)` : "capacidad: sin dato", ""]];
+  $("kpis").innerHTML = k.map(([b, l, c]) => `<div class="kpi ${c}"><b>${b}</b><span>${l}</span></div>`).join("");
 }
 function textoInforme() {
   const L = [], s = stats(filtradas());
@@ -219,7 +236,11 @@ function textoInforme() {
   const top = s.ev.filter(e => e.tipo !== "reincorporacion").sort((a, b) => (+b.cantidad || 0) - (+a.cantidad || 0)).slice(0, 5);
   if (top.length) { L.push("Hechos de mayor impacto:"); for (const e of top) { const p = S.plantas.find(x => x.id === e.plantaId); L.push(`• ${e.fecha.split("-").reverse().join("/")} · ${p ? p.nombre : "Planta"} (${p ? p.localidad : ""}): ${TIPOS[e.tipo] || e.tipo}${e.cantidad ? `, ${e.cantidad} trabajadores` : ""}. Fuente: ${e.fuente || "s/d"}.`); } }
   const n = (S.est.filas || []).filter(r => !F().pv || provDeEst(r[4]) === F().pv).length;
-  if (n) L.push("", `Establecimientos metalúrgicos registrados en el ámbito (CEP XXI): ${fmt(n)}.`);
+  { const d = ambitoDatos();
+    if (d.est) L.push("", `Establecimientos metalúrgicos registrados en el ámbito (CEP XXI): ${fmt(d.est)}, de los cuales ${fmt(d.grandes)} tienen 200 o más trabajadores.`);
+    if (d.emp != null) L.push(`Empleo metalúrgico registrado (OEDE–SIPA, ${d.empQ}): ${fmt(d.emp)} asalariados, ${d.empIa > 0 ? "+" : ""}${dec(d.empIa)}% interanual.`);
+    if (d.ix.length === 1) L.push(`Índice de riesgo MIDTM: ${d.ix[0].puntaje}/100 (nivel ${d.ix[0].nivel}).`);
+    const f0 = F(); if (f0.pv) { const z = estPorZona(p => p === f0.pv).filter(([k]) => k !== "Sin asignar").slice(0, 6); if (z.length) L.push(`Dónde se concentran: ${z.map(([k, v]) => `${k} (${fmt(v.n)})`).join(", ")}.`); } }
   L.push("", "Contexto sectorial:");
   for (const k of ["adimra-actividad", "adimra-capacidad", "indec-uci-metalmecanica", "indec-uci-metalicas", "caa-acero-crudo"]) { const u = ultimo(k); if (u) L.push(`• ${u.nombre}: ${dec(u.valor)} ${u.unidad} (${mesTxt(u.periodo)}).`); }
   L.push("", "Fuentes: seccionales UOM, ADIMRA, INDEC, CEP XXI y Cámara Argentina del Acero.");
@@ -470,9 +491,26 @@ function alertas() {
   box.innerHTML = vis.length ? vis.slice(0, 80).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
 }
 
+
+/* ---------- asignar establecimientos a departamentos, comunas y barrios (punto en polígono) ---------- */
+function anillos(d) { return d.split("M").filter(Boolean).map(r => r.replace(/Z/g, "").split("L").map(p => p.split(",").map(Number))); }
+function dentro(x, y, rs) { let c = false; for (const r of rs) for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const [xi, yi] = r[i], [xj, yj] = r[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; }
+function poligonos(lista) { return lista.map(o => { const rs = anillos(o.d); let a = Infinity, b = Infinity, c = -Infinity, e = -Infinity; for (const r of rs) for (const [x, y] of r) { if (x < a) a = x; if (x > c) c = x; if (y < b) b = y; if (y > e) e = y; } return { o, rs, bb: [a, b, c, e] }; }); }
+function asignarZonas() {
+  if (S.zonas) return S.zonas; const D = poligonos(S.deptos || []), B = poligonos(S.barrios || []); const dep = [], bar = [];
+  for (const f of S.est.filas || []) { const [x, y] = proj(f[1], f[0]); const pv = provDeEst(f[4]);
+    const h = D.find(p => (p.o.pv === pv || !pv) && x >= p.bb[0] && x <= p.bb[2] && y >= p.bb[1] && y <= p.bb[3] && dentro(x, y, p.rs)); dep.push(h ? h.o.n : null);
+    let hb = null; if (pv === "CABA" && B.length) { const q = B.find(p => x >= p.bb[0] && x <= p.bb[2] && y >= p.bb[1] && y <= p.bb[3] && dentro(x, y, p.rs)); hb = q ? q.o.n : null; } bar.push(hb); }
+  return S.zonas = { dep, bar };
+}
+function estPorZona(enAmb, campo = "dep") {
+  const Z = asignarZonas(), c = {}; (S.est.filas || []).forEach((f, i) => { if (!enAmb(provDeEst(f[4]))) return; const z = Z[campo][i] || "Sin asignar"; c[z] = c[z] || { n: 0, g: 0 }; c[z].n++; if (["d. 200-499", "e. 500+"].includes(f[3])) c[z].g++; });
+  return Object.entries(c).sort((a, b) => b[1].n - a[1].n);
+}
+
 /* ---------- pedido de informe a medida ---------- */
 const VARS = [
-  ["Establecimientos", [["est_total", "Cantidad de establecimientos y grandes (200+)"], ["est_rama", "Establecimientos por rama"], ["est_tam", "Establecimientos por tamaño"]]],
+  ["Establecimientos", [["est_total", "Cantidad de establecimientos y grandes (200+)"], ["est_rama", "Establecimientos por rama"], ["est_tam", "Establecimientos por tamaño"], ["est_zona", "Por partido, departamento o comuna (y barrio en CABA)"]]],
   ["Empleo", [["emp_total", "Empleados registrados y variación"], ["emp_trim", "Evolución trimestral del empleo"], ["emp_rama", "Empleo por rama"], ["emp_hist", "Serie histórica anual (desde 1996)"]]],
   ["Despidos y suspensiones", [["hechos", "Despidos, suspensiones y cierres en plantas"], ["conf_desp", "Conflictos con paro por despidos (nacional)"]]],
   ["Capacidad y producción", [["capacidad", "Capacidad instalada en uso (INDEC y ADIMRA)"], ["ipi", "Producción por rama, IPI (nacional)"], ["acero", "Acero crudo (nacional)"], ["adimra", "Actividad metalúrgica ADIMRA"]]],
@@ -524,6 +562,9 @@ function generarPedido() {
       bloque("Establecimientos", `<div class="rk"><div><b>${fmt(est.length)}</b><span>establecimientos metalúrgicos</span></div><div><b>${grandes}</b><span>con 200 o más trabajadores</span></div><div><b>${plantas.length}</b><span>plantas con seguimiento propio</span></div></div>`, "CEP XXI, padrón georreferenciado de establecimientos productivos (sin nombres de empresa).") }
     if (sel.has("est_rama")) { const c = {}; est.forEach(f => { const r = ramaDeClae(f[2]); c[r] = (c[r] || 0) + 1; }); const it = S.fuentes.ramasClae.map(r => [r.rama.split(" (")[0], c[r.prefijo] || 0]).sort((a, b) => b[1] - a[1]);
       bloque("Establecimientos por rama", hbarra(it, "", 0, it.map(([l]) => RAMA_COLOR[(S.fuentes.ramasClae.find(r => r.rama.startsWith(l)) || {}).prefijo] || "#1b4b8a")), "CEP XXI."); }
+    if (sel.has("est_zona")) { const z = estPorZona(enAmb).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
+      bloque(provs && provs.length === 1 ? (provs[0] === "CABA" ? "Establecimientos por comuna" : "Establecimientos por partido o departamento") : "Partidos y departamentos con más establecimientos", hbarra(z.map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a límites del IGN.");
+      if (provs && provs.includes("CABA") && (S.barrios || []).length) { const zb = estPorZona(p => p === "CABA", "bar").filter(([k]) => k !== "Sin asignar"); bloque("Establecimientos por barrio (CABA)", hbarra(zb.slice(0, 48).map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a los barrios de la Ciudad."); } }
     if (sel.has("est_tam")) { const T = ["a. 1-9", "b. 10-49", "c. 50-199", "d. 200-499", "e. 500+"]; bloque("Establecimientos por tamaño", hbarra(T.map(t => [t.slice(3) + " trabajadores", est.filter(f => f[3] === t).length])), "CEP XXI."); }
   }
   if (O && (sel.has("emp_total") || sel.has("emp_trim") || sel.has("emp_rama") || sel.has("emp_hist"))) {

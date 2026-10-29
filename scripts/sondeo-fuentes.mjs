@@ -31,6 +31,20 @@ const ad = await get("https://www.adimra.org.ar/");
 res.adimra_home_pdfs = [...new Set((ad.texto || "").match(/https?:[^"'\s]+\.pdf/gi) || [])].slice(0, 40);
 res.adimra_home_links = [...new Set((ad.texto || "").match(/href="[^"]*(estudio|informe|coyuntura|actividad)[^"]*"/gi) || [])].slice(0, 40);
 
+// 3) Ciudad de Buenos Aires (BA Data, CKAN): datasets de industria y habilitaciones
+res.badata = {};
+for (const q of ["industria", "habilitaciones", "metal", "establecimientos"]) {
+  const r = await get(`https://data.buenosaires.gob.ar/api/3/action/package_search?q=${q}&rows=15`);
+  try { res.badata[q] = JSON.parse(r.texto).result.results.map(p => ({ id: p.name, titulo: p.title, actualizado: p.metadata_modified, recursos: (p.resources || []).map(x => ({ nombre: x.name, formato: x.format, url: x.url })).slice(0, 6) })); }
+  catch { res.badata[q] = { status: r.status, error: r.error, muestra: (r.texto || "").slice(0, 200) }; }
+}
+// muestra de columnas de habilitaciones aprobadas
+try {
+  const pk = JSON.parse((await get("https://data.buenosaires.gob.ar/api/3/action/package_show?id=habilitaciones-aprobadas")).texto).result;
+  const csv = (pk.resources || []).find(x => /csv/i.test(x.format));
+  if (csv) { const t = (await get(csv.url)).texto || ""; const ls = t.split(/\r?\n/); res.habilitaciones = { url: csv.url, filas: ls.length, cabecera: ls[0], muestra: ls.slice(1, 6), metal: ls.filter(l => /metal|herrer|torner|fundic|matric|soldad/i.test(l)).length }; }
+} catch (e) { res.habilitaciones = { error: e.message }; }
+
 await mkdir(new URL("../data/fuentes/", import.meta.url), { recursive: true });
 await writeFile(new URL("../data/fuentes/sondeo.json", import.meta.url), JSON.stringify(res, null, 1));
 console.log(JSON.stringify(res, null, 1).slice(0, 4000));
