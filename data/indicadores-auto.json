@@ -1,1 +1,185 @@
-{"actualizado": null, "series": []}
+{
+ "actualizado": "2026-10-29",
+ "series": [
+  {
+   "clave": "auto-uci-metalmecanica",
+   "nombre": "INDEC · Capacidad usada, metalmecánica sin automotriz (API)",
+   "unidad": "%",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "30.1_UMNIA_2012_A_42",
+   "descripcionOficial": "Utilización de la capacidad instalada en la industria Metalmecánica exluidos los automotores como porcentaje del total de la capacidad del sector",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=30.1_UMNIA_2012_A_42&format=csv",
+   "datos": [
+    {
+     "periodo": "2012-01",
+     "valor": 64.65
+    },
+    {
+     "periodo": "2013-01",
+     "valor": 59.51
+    },
+    {
+     "periodo": "2014-01",
+     "valor": 57.83
+    }
+   ]
+  },
+  {
+   "clave": "auto-uci-metalicas",
+   "nombre": "INDEC · Capacidad usada, metálicas básicas (API)",
+   "unidad": "%",
+   "organismo": "INDEC",
+   "origen": "API Series de Tiempo · datos.gob.ar",
+   "idSerie": "31.3_UIMB_2004_M_33",
+   "descripcionOficial": "Utilización de la capacidad instalada en la industria de metales básicos como porcentaje del total de la capacidad del sector",
+   "url": "https://apis.datos.gob.ar/series/api/series/?ids=31.3_UIMB_2004_M_33&format=csv",
+   "datos": [
+    {
+     "periodo": "2023-08",
+     "valor": 78.7
+    },
+    {
+     "periodo": "2023-09",
+     "valor": 85
+    },
+    {
+     "periodo": "2023-10",
+     "valor": 84.5
+    },
+    {
+     "periodo": "2023-11",
+     "valor": 79.4
+    },
+    {
+     "periodo": "2023-12",
+     "valor": 64.5
+    },
+    {
+     "periodo": "2024-01",
+     "valor": 76.3
+    },
+    {
+     "periodo": "2024-02",
+     "valor": 66.5
+    },
+    {
+     "periodo": "2024-03",
+     "valor": 50
+    },
+    {
+     "periodo": "2024-04",
+     "valor": 63.7
+    },
+    {
+     "periodo": "2024-05",
+     "valor": 61.3
+    },
+    {
+     "periodo": "2024-06",
+     "valor": 56.6
+    },
+    {
+     "periodo": "2024-07",
+     "valor": 61.5
+    },
+    {
+     "periodo": "2024-08",
+     "valor": 66.8
+    },
+    {
+     "periodo": "2024-09",
+     "valor": 72.4
+    },
+    {
+     "periodo": "2024-10",
+     "valor": 68.9
+    },
+    {
+     "periodo": "2024-11",
+     "valor": 67.2
+    },
+    {
+     "periodo": "2024-12",
+     "valor": 52.4
+    },
+    {
+     "periodo": "2025-01",
+     "valor": 59.3
+    },
+    {
+     "periodo": "2025-02",
+     "valor": 67.3
+    },
+    {
+     "periodo": "2025-03",
+     "valor": 64.3
+    },
+    {
+     "periodo": "2025-04",
+     "valor": 63.9
+    },
+    {
+     "periodo": "2025-05",
+     "valor": 67.4
+    },
+    {
+     "periodo": "2025-06",
+     "valor": 64.3
+    },
+    {
+     "periodo": "2025-07",
+     "valor": 63.9
+    },
+    {
+     "periodo": "2025-08",
+     "valor": 70.4
+    },
+    {
+     "periodo": "2025-09",
+     "valor": 70.4
+    },
+    {
+     "periodo": "2025-10",
+     "valor": 71.1
+    },
+    {
+     "periodo": "2025-11",
+     "valor": 73.3
+    },
+    {
+     "periodo": "2025-12",
+     "valor": 57.5
+    },
+    {
+     "periodo": "2026-01",
+     "valor": 67.6
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 59.7
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 73.3
+    },
+    {
+     "periodo": "2026-04",
+     "valor": 73.4
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 75.4
+    },
+    {
+     "periodo": "2026-06",
+     "valor": 68.7
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 71.8
+    }
+   ]
+  }
+ ]
+}

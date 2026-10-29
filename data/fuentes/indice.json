@@ -1,0 +1,74 @@
+{
+ "actualizado": "2026-10-29",
+ "fuentes": [
+  {
+   "clave": "oede-provincial",
+   "nombre": "OEDE · Empleo, remuneraciones y empresas por provincia y rama (2 y 4 dígitos)",
+   "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/oede-estadisticas-provinciales",
+   "archivos": [
+    {
+     "archivo": "data/fuentes/oede-provincial/provinciales_serie_empleo_trimestral_2dig_7.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/provinciales_serie_empleo_trimestral_2dig_7.xlsx",
+     "mb": 1.54
+    },
+    {
+     "archivo": "data/fuentes/oede-provincial/provinciales_serie_empleo_trimestral_4dig_8.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/provinciales_serie_empleo_trimestral_4dig_8.xlsx",
+     "mb": 4.44
+    },
+    {
+     "archivo": "data/fuentes/oede-provincial/provinciales_serie_remuneraciones_mensual_4dig_8.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/provinciales_serie_remuneraciones_mensual_4dig_8.xlsx",
+     "mb": 25.28
+    },
+    {
+     "archivo": "data/fuentes/oede-provincial/provinciales_serie_empresas3_2.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/provinciales_serie_empresas3_2.xlsx",
+     "mb": 1.2
+    },
+    {
+     "archivo": "data/fuentes/oede-provincial/provinciales_serie_empresas2_2.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/provinciales_serie_empresas2_2.xlsx",
+     "mb": 0.57
+    },
+    {
+     "archivo": "data/fuentes/oede-provincial/departamento_series_empleo_y_salarios_mensual_sector_1.csv",
+     "url": "https://www.argentina.gob.ar/sites/default/files/departamento_series_empleo_y_salarios_mensual_sector_1.csv",
+     "mb": 22.46
+    }
+   ],
+   "errores": []
+  },
+  {
+   "clave": "conflictividad",
+   "nombre": "Ministerio de Capital Humano · Evolución mensual de la conflictividad laboral",
+   "pagina": "https://www.argentina.gob.ar/node/142148",
+   "archivos": [
+    {
+     "archivo": "data/fuentes/conflictividad/evolucion_mensual_de_la_conflictividad_laboral._datos_a_marzo_2026_0.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/evolucion_mensual_de_la_conflictividad_laboral._datos_a_marzo_2026_0.xlsx",
+     "mb": 1.06
+    }
+   ],
+   "errores": []
+  },
+  {
+   "clave": "eil",
+   "nombre": "Encuesta de Indicadores Laborales (EIL) · altas, bajas y expectativas por rama",
+   "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
+   "archivos": [],
+   "errores": [
+    "blank:#https://www.argentina.gob.ar/sites/default/files/eil_2608_estadisticas.xlsx: fetch failed"
+   ]
+  },
+  {
+   "clave": "sipa",
+   "nombre": "SIPA · Situación y evolución del trabajo registrado",
+   "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/situacion-y-evolucion-del-trabajo-registrado",
+   "archivos": [],
+   "errores": [
+    "blank:#https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2607_estadisticas.xlsx: fetch failed"
+   ]
+  }
+ ]
+}
