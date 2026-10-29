@@ -11,6 +11,12 @@ const conf = await leer("conflictividad.json");
 const pl = (await leer("plantas.json", { plantas: [] })).plantas;
 const ev = (await leer("eventos.json", { eventos: [] })).eventos;
 const imp = await leer("importaciones.json");
+const ext = await leer("oede-extra.json", { empresas: {}, remuneraciones: {}, departamentos: {} });
+const geoProv = Object.keys((await leer("provincias.json", { p: {} })).p);
+const sinAcento = x => String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+const provDe = x => { const k = sinAcento(x); if (/40 municipios|resto de pba|^gba$|resto de buenos aires/.test(k)) return "Buenos Aires"; if (k === "caba") return "CABA"; return geoProv.find(p => sinAcento(p) === k) || x; };
+const titulo = x => String(x).toLowerCase().replace(/(^|\s)(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Del|La|Las|Los|Y)\b/g, w => w.toLowerCase());
+const IPC = (() => { const s = ["ipc-nacional", "auto-ipc"].map(k => null).find(Boolean); return null; })();
 const S = {};
 for (const f of ["acero-caa.json", "indec-series.json", "indicadores-auto.json", "indicadores.json"]) {
   for (const s of (await leer(f, { series: [] })).series || []) {
@@ -104,6 +110,41 @@ for (const s of imp?.series || []) {
 for (const [k, s] of Object.entries(S)) { const p = ultimos(s).at(-1); if (p && mesesAtras(p) > U.meses_sin_dato) add({ nivel: "info", tema: "Datos", ambito: "Nacional", variable: s.nombre, periodo: p, valor: null, titulo: `Sin dato nuevo de «${s.nombre}» desde ${p}`, detalle: "Revisar la fuente o cargarlo a mano.", fuente: "MIDTM" }); }
 
 
+// 13. Empresas metalúrgicas por provincia (cierre neto de empleadores)
+const empresasVar = {};
+for (const [area, e] of Object.entries(ext.empresas || {})) {
+  const n = e.total.length; if (n < 2 || e.total[n - 2] < 20) continue; const a = e.total[n - 1], b = e.total[n - 2], v = (a / b - 1) * 100; empresasVar[area] = v;
+  const prov = provDe(area), amb = area === "GBA" ? "Partidos del GBA" : area;
+  if (v <= U.empresas_caida_media) add({ nivel: v <= U.empresas_caida_alta ? "alta" : "media", tema: "Empresas", ambito: amb, provincia: prov, variable: "Empresas metalúrgicas", periodo: String(e.anios[n - 1]), valor: +v.toFixed(1),
+    titulo: `${amb}: ${Math.abs(a - b)} empresas metalúrgicas menos (${fmt(v)}%)`, detalle: `${a.toLocaleString("es-AR")} empleadores metalúrgicos en ${e.anios[n - 1]}, contra ${b.toLocaleString("es-AR")} en ${e.anios[n - 2]}.`, fuente: "OEDE–SIPA (empresas)" });
+}
+// 14. Salario metalúrgico contra la inflación (si hay IPC cargado)
+const ipcS = S["ipc-nacional"] || S["auto-ipc"];
+for (const [area, r] of Object.entries(ext.remuneraciones || {})) {
+  const n = r.meses.length; if (n < 13 || !r.mediana[n - 1] || !r.mediana[n - 13]) continue;
+  const v = (r.mediana[n - 1] / r.mediana[n - 13] - 1) * 100, per = r.meses[n - 1], amb = area === "GBA" ? "Partidos del GBA" : area;
+  let real = null; if (ipcS) { const pa = ipcS.datos[per], pb = ipcS.datos[r.meses[n - 13]]; if (pa && pb) real = ((1 + v / 100) / (pa / pb) - 1) * 100; }
+  if (real != null && real <= U.salario_real_media) add({ nivel: real <= U.salario_real_alta ? "alta" : "media", tema: "Salarios", ambito: amb, provincia: provDe(area), variable: "Salario real metalúrgico", periodo: per, valor: +real.toFixed(1),
+    titulo: `${amb}: el salario metalúrgico pierde ${abs(real)}% contra la inflación`, detalle: `La remuneración mediana de las ramas metalúrgicas subió ${fmt(v)}% en un año.`, fuente: "OEDE–SIPA e INDEC (IPC)" });
+}
+// 15. Ramas que se achican dentro de cada provincia
+if (oede) {
+  const T = oede.trimestres, n = T.length;
+  for (const [k, ar] of Object.entries(oede.areas)) for (const [g, d] of Object.entries(ar.grupos)) {
+    if (g === "3410") continue; const a = d.trim[n - 1], b = d.trim[n - 5]; if (!b || b < U.rama_provincia_minimo) continue; const v = (a / b - 1) * 100;
+    if (v <= U.rama_provincia_media) { const amb = ar.nombre && k !== (ar.provincia || k) ? ar.nombre : k;
+      add({ nivel: v <= U.rama_provincia_alta ? "alta" : "media", tema: "Empleo", ambito: amb, provincia: ar.provincia || k, variable: `Rama ${g}`, periodo: T[n - 1], valor: +v.toFixed(1),
+        titulo: `${amb}: ${oede.grupos[g].split(" (")[0].toLowerCase()} pierde ${abs(v)}% del empleo`, detalle: `${(a - b).toLocaleString("es-AR")} puestos en un año (${a.toLocaleString("es-AR")} hoy).`, fuente: "OEDE–SIPA" }); }
+  }
+}
+// 16. Partidos y departamentos donde cae el empleo industrial
+for (const [k, d] of Object.entries(ext.departamentos || {})) {
+  if (d.empleo_anterior < U.depto_minimo) continue; const v = (d.empleo / d.empleo_anterior - 1) * 100; if (v > U.depto_caida_media) continue;
+  const [pv, dep] = k.split("|"), prov = provDe(pv), nom = prov === "CABA" ? "Ciudad de Buenos Aires" : `${titulo(dep)} (${prov})`;
+  add({ nivel: v <= U.depto_caida_alta ? "alta" : "media", tema: "Empleo industrial por partido", ambito: prov === "CABA" ? "CABA" : titulo(dep), provincia: prov, variable: "Empleo industrial", periodo: d.periodo, valor: +v.toFixed(1),
+    titulo: `${nom}: el empleo industrial cae ${abs(v)}%`, detalle: `${(d.empleo - d.empleo_anterior).toLocaleString("es-AR")} puestos en la industria manufacturera en un año (${d.empleo.toLocaleString("es-AR")} hoy). Incluye todas las ramas industriales.`, fuente: "OEDE–SIPA (por departamento)" });
+}
+
 // 9. ÍNDICE PONDERADO DE RIESGO POR PROVINCIA (0 a 100)
 // Combina señales normalizadas con los pesos de data/alertas-reglas.json → "indice".
 const P = R.indice.pesos, N = R.indice.normalizacion;
@@ -135,7 +176,8 @@ if (oede) {
       tendencia: { valor: racha, puntos: escala(racha, 0, N.racha_mala) },
       exposicion_ramas: { valor: +expo.toFixed(1), puntos: escala(expo, 0, N.exposicion_mala) },
       hechos_planta: { valor: evs.length, puntos: evs.length ? hechos : 0 },
-      actividad_adimra: { valor: ad ? ad.valor : null, puntos: adimraV }
+      actividad_adimra: { valor: ad ? ad.valor : null, puntos: adimraV },
+      cierre_empresas: { valor: empresasVar[k] != null ? +empresasVar[k].toFixed(1) : null, puntos: empresasVar[k] != null ? escala(empresasVar[k], N.empresas_bueno, N.empresas_malo) : null }
     };
     let suma = 0, pesos = 0; for (const [c, o] of Object.entries(comp)) if (o.puntos != null) { suma += o.puntos * P[c]; pesos += P[c]; }
     const puntaje = Math.round(suma / pesos);
@@ -173,7 +215,7 @@ if (oede) {
 for (const [prov, d] of Object.entries(ultAdimra)) if (d.valor <= U.actividad_interanual_media) add({ nivel: d.valor <= U.ipi_interanual_media ? "alta" : "media", tema: "Producción", ambito: prov, provincia: prov, variable: "Actividad ADIMRA provincial", periodo: d.periodo, valor: d.valor, titulo: `${prov}: la actividad metalúrgica cae ${abs(d.valor)}% interanual`, detalle: "", fuente: "ADIMRA" });
 
 const orden = { alta: 0, media: 1, info: 2 };
-const tema = { Plantas: 0, "Índice de riesgo": 0.5, "Producción": 1, "Capacidad instalada": 2, Importaciones: 3, Conflictividad: 4, Empleo: 5, Datos: 6 };
+const tema = { Plantas: 0, "Índice de riesgo": 0.5, "Producción": 1, Empresas: 1.5, Salarios: 1.7, "Empleo industrial por partido": 5.5, "Capacidad instalada": 2, Importaciones: 3, Conflictividad: 4, Empleo: 5, Datos: 6 };
 A.sort((a, b) => orden[a.nivel] - orden[b.nivel] || tema[a.tema] - tema[b.tema] || (a.tema === "Índice de riesgo" ? b.valor - a.valor : (a.valor ?? 0) - (b.valor ?? 0)));
 await writeFile(new URL("../data/alertas.json", import.meta.url), JSON.stringify({ actualizado: hoy.toISOString().slice(0, 10), total: A.length, alta: A.filter(a => a.nivel === "alta").length, media: A.filter(a => a.nivel === "media").length, alertas: A, indice: INDICE, pesos: R.indice.pesos, nombres: R.indice.nombres }, null, 1));
 console.log(`Listo: ${A.length} alertas (${A.filter(a => a.nivel === "alta").length} altas).`);

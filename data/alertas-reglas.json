@@ -17,7 +17,17 @@
     "importaciones_suba_media": 20,
     "importaciones_suba_alta": 40,
     "meses_sin_dato": 4,
-    "empleo_acumulado_alta": -8
+    "empleo_acumulado_alta": -8,
+    "empresas_caida_media": -2,
+    "empresas_caida_alta": -5,
+    "salario_real_media": -3,
+    "salario_real_alta": -8,
+    "rama_provincia_minimo": 300,
+    "rama_provincia_media": -8,
+    "rama_provincia_alta": -15,
+    "depto_minimo": 1500,
+    "depto_caida_media": -5,
+    "depto_caida_alta": -10
   },
   "niveles": {
     "alta": "Requiere atención inmediata: caída fuerte, despidos o cierre.",
@@ -27,12 +37,13 @@
   "indice": {
     "nota": "Índice de riesgo por provincia: cada componente se lleva a una escala de 0 (sin riesgo) a 100 (riesgo máximo) y se pondera. Si falta un componente, su peso se reparte entre los demás.",
     "pesos": {
-      "empleo_interanual": 0.3,
+      "empleo_interanual": 0.25,
       "empleo_acumulado": 0.15,
       "tendencia": 0.1,
-      "exposicion_ramas": 0.2,
+      "exposicion_ramas": 0.15,
       "hechos_planta": 0.15,
-      "actividad_adimra": 0.1
+      "actividad_adimra": 0.1,
+      "cierre_empresas": 0.1
     },
     "nombres": {
       "empleo_interanual": "Caída del empleo en el último año",
@@ -40,7 +51,8 @@
       "tendencia": "Trimestres seguidos en baja",
       "exposicion_ramas": "Peso de ramas cuya producción cae",
       "hechos_planta": "Despidos, suspensiones y cierres en planta",
-      "actividad_adimra": "Actividad metalúrgica provincial (ADIMRA)"
+      "actividad_adimra": "Actividad metalúrgica provincial (ADIMRA)",
+      "cierre_empresas": "Cierre neto de empresas metalúrgicas"
     },
     "normalizacion": {
       "empleo_ia_bueno": 2,
@@ -51,7 +63,9 @@
       "exposicion_mala": 15,
       "hechos_pct_malo": 2,
       "adimra_bueno": 2,
-      "adimra_malo": -8
+      "adimra_malo": -8,
+      "empresas_bueno": 1,
+      "empresas_malo": -6
     },
     "dias_hechos": 180,
     "alta": 60,

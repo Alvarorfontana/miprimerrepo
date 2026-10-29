@@ -63,7 +63,7 @@
       <div class="card">
         <div class="row" style="justify-content:space-between;align-items:end"><h3>Índice de riesgo por provincia</h3>
           <label class="f" for="aProv" style="min-width:200px">Provincia<select id="aProv"></select></label></div>
-        <p class="small muted" style="margin:4px 0 10px">De 0 (sin señales) a 100 (riesgo máximo). Pondera seis señales; tocá una provincia para ver cómo se compone.</p>
+        <p class="small muted" style="margin:4px 0 10px">De 0 (sin señales) a 100 (riesgo máximo). Pondera siete señales; tocá una provincia para ver cómo se compone.</p>
         <div id="indice"></div>
       </div>
       <div class="card">
@@ -72,7 +72,7 @@
         <div class="alertas" id="alertas-lista"></div>
       </div>
     </div>
-    <p class="note">Índice: caída del empleo en el último año 30%, peso de ramas cuya producción cae 20%, pérdida de empleo desde fines de 2023 15%, despidos y suspensiones en planta 15%, trimestres seguidos en baja 10% y actividad provincial de ADIMRA 10%; 60 o más es alerta alta y 40 o más, media. Umbrales de las demás alertas: producción −5% (media) y −10% (alta) interanual; empleo −2% y −5% por provincia; capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días. Se ajustan en <code>data/alertas-reglas.json</code>.</p>
+    <p class="note">Índice: caída del empleo en el último año 25%, peso de ramas cuya producción cae 15%, pérdida de empleo desde fines de 2023 15%, despidos y suspensiones en planta 15%, trimestres seguidos en baja 10%, actividad provincial de ADIMRA 10% y cierre neto de empresas metalúrgicas 10%; 60 o más es alerta alta y 40 o más, media. Umbrales de las demás alertas: producción −5% (media) y −10% (alta) interanual; empleo −2% y −5% por provincia; capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días; empresas metalúrgicas −2% y −5% en el año; una rama dentro de la provincia −8% y −15%; empleo industrial de un partido −5% y −10%. Se ajustan en <code>data/alertas-reglas.json</code>.</p>
   </div>
 </section>
 

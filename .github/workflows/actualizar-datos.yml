@@ -52,6 +52,7 @@ jobs:
         run: |
           npm install --no-save xlsx@0.18.5
           node scripts/procesar-indec.mjs
+          node scripts/procesar-oede-extra.mjs
         continue-on-error: true
       - name: Calcular alertas
         run: node scripts/alertas.mjs

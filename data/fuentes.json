@@ -59,7 +59,10 @@
         "Empleo registrado por provincia y rama (2 y 4 dígitos), trimestral",
         "Remuneraciones por rama, mensual",
         "Cantidad de empresas por rama, con aperturas y cierres",
-        "Empleo y salarios en unos 500 departamentos desde 2019, por sector y tamaño de empresa"
+        "Empleo y salarios en unos 500 departamentos desde 2019, por sector y tamaño de empresa",
+        "Empresas metalúrgicas por provincia (anual, desde 1996): base de la alerta de cierre neto de empresas",
+        "Remuneración de las ramas metalúrgicas por provincia (mensual)",
+        "Empleo y salario de la industria por partido o departamento (mensual, desde 2019)"
       ]
     },
     {

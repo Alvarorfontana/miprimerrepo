@@ -213,12 +213,13 @@ function filtros() {
   opciones($("fRama"), RAMAS, "Todas");
 }
 function ambitoDatos() {
-  const f = F(); const enAmb = p => (!f.pv || p === f.pv) && (!f.r || REGION[p] === f.r || (f.r === "AMBA" && p === "Buenos Aires"));
-  const est = (S.est.filas || []).filter(r => enAmb(provDeEst(r[4])));
+  const f = F(); const amba = f.r === "AMBA" && !f.pv, ZD = amba ? asignarZonas().dep : null;
+  const enAmb = (p, i) => (!f.pv || p === f.pv) && (!f.r || REGION[p] === f.r || (f.r === "AMBA" && p === "Buenos Aires")) && (!amba || i == null || zonaOK("amba", p, ZD[i]));
+  const est = (S.est.filas || []).filter((r, i) => enAmb(provDeEst(r[4]), i));
   const grandes = est.filter(r => ["d. 200-499", "e. 500+"].includes(r[3])).length;
   let emp = null, empIa = null, empQ = null;
   if (S.oede) { const O = S.oede, n = O.trimestres.length, G = Object.keys(O.grupos).filter(g => g !== "3410");
-    const ar = Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k)); const sum = i => ar.reduce((x, [, a]) => x + G.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].trim[i] || 0 : 0), 0), 0);
+    const ar = Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k) && (!amba || areaOK("amba", k))); const sum = i => ar.reduce((x, [, a]) => x + G.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].trim[i] || 0 : 0), 0), 0);
     emp = sum(n - 1); const b = sum(n - 5); empIa = b ? (emp / b - 1) * 100 : null; empQ = O.trimestres[n - 1].replace("T", " T"); }
   const ix = (S.alertas && S.alertas.indice || []).filter(i => f.pv && i.provincia === f.pv);
   const altas = (S.alertas && S.alertas.alertas || []).filter(a => a.nivel === "alta" && (!f.pv && !f.r ? true : a.provincia && enAmb(a.provincia))).length;
@@ -372,7 +373,7 @@ function empleo() {
     rb += `<text x="${neg ? mid - w - 6 : mid - 6}" y="${y + 14}" font-size="11.5" text-anchor="end" fill="${ink}">${esc(corto(r.d))}</text>`;
     rb += `<rect x="${neg ? mid - w : mid}" y="${y + 3}" width="${w}" height="16" rx="2" fill="${c}"><title>${esc(r.d)}: ${fmt(r.a)} → ${fmt(r.b)}</title></rect>`;
     rb += `<text x="${neg ? mid + 6 : mid + w + 6}" y="${y + 15}" font-size="11.5" font-family="IBM Plex Mono,monospace" fill="${c}">${r.dif > 0 ? "+" : ""}${fmt(r.dif)} (${dec((r.b / r.a - 1) * 100)}%)</text>`; });
-  $("empRamas").innerHTML = rb + "</svg>"; $("empRamasSub").textContent = `Puestos ganados o perdidos entre el ${trimTxt(Q[iRef])} y el ${trimTxt(Q[iUlt])} · ramas con más de 300 puestos`;
+  $("empRamas").innerHTML = rb + "</svg>"; $("empRamasSub").textContent = `Puestos ganados o perdidos entre el ${trimTxt(Q[iRef])} y el ${trimTxt(Q[iUlt])} · ramas con más de 300 puestos. El número a la derecha es la diferencia de puestos y, entre paréntesis, la variación porcentual.`;
   // provincias
   const filas = Object.entries(O.areas).map(([k, a]) => ({ k, n: a.nombre, a: sumArea(a, "trim", iRef), b: sumArea(a, "trim", iUlt), sd: UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].celdas_sd : 0), 0) })).sort((x, y) => y.b - x.b);
   $("empProv").innerHTML = `<table><thead><tr><th>Provincia o área</th><th class="n">${trimTxt(Q[iRef])}</th><th class="n">${trimTxt(Q[iUlt])}</th><th class="n">Diferencia</th><th class="n">Var. %</th><th>Peso</th></tr></thead><tbody>${filas.map(f => { const v = f.a ? (f.b / f.a - 1) * 100 : 0, c = v < -0.5 ? "var(--bad)" : v > 0.5 ? "var(--ok)" : "var(--muted)"; return `<tr><td>${esc(f.n)}${f.sd >= 6 && f.b < 5000 ? ` <span class="small muted" title="Varias ramas con secreto estadístico">*</span>` : ""}</td><td class="n">${fmt(f.a)}</td><td class="n">${fmt(f.b)}</td><td class="n" style="color:${c}">${f.b - f.a > 0 ? "+" : ""}${fmt(f.b - f.a)}</td><td class="n" style="color:${c}">${dec(v)}%</td><td style="min-width:90px"><span style="display:block;height:8px;border-radius:2px;background:var(--steel);width:${(f.b / filas[0].b * 100).toFixed(1)}%"></span></td></tr>`; }).join("")}</tbody></table>`;
@@ -482,6 +483,15 @@ function formularios() {
 function irForm(f) { $("cargar").scrollIntoView({ behavior: "smooth" }); $("r_planta").value = S.sel; $("e_planta").value = S.sel; $("ftabs").querySelector(`[data-f="${f}"]`).click(); }
 
 /* ---------- arranque ---------- */
+function ambDeAlerta(a) {
+  if (/Partidos del GBA/.test(a.ambito)) return "z:conurbano";
+  if (/Resto de Buenos Aires/.test(a.ambito)) return "z:interior";
+  if (!a.provincia || a.ambito === "Nacional") return "";
+  return "p:" + a.provincia;
+}
+function informeDe(amb) {
+  pedidoForm(); $("pAmb").value = amb; $("pVars").querySelectorAll("input").forEach(i => i.checked = true); generarPedido();
+}
 function alertas() {
   const box = $("alertas-lista"); if (!box) return; const AL = S.alertas || {}; const A = AL.alertas || [], I = AL.indice || [];
   const pv = F().pv; const temas = [...new Set(A.map(a => a.tema))];
@@ -498,14 +508,30 @@ function alertas() {
   const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
   const sel = I.filter(i => i.provincia === pv);
   $("indice").innerHTML = (I.length ? I.map(i => `<button type="button" class="ix ${i.provincia === pv ? "on" : ""}" data-p="${esc(i.provincia)}"><span class="n">${esc(i.area)}</span><span class="b"><i style="width:${i.puntaje}%;background:${col(i.nivel)}"></i></span><b style="color:${col(i.nivel)}">${i.puntaje}</b></button>`).join("") : `<p class="muted">Sin datos para el índice.</p>`)
-    + sel.map(i => `<div class="ixd"><h4>${esc(i.area)} · ${i.puntaje}/100</h4>${Object.entries(i.componentes).map(([c, o]) => `<div class="ixc"><span>${esc(AL.nombres[c])} <small>(peso ${Math.round(AL.pesos[c] * 100)}%)</small></span><span class="b"><i style="width:${o.puntos ?? 0}%;background:${o.puntos == null ? "#ccd5df" : col(o.puntos >= 60 ? "alta" : o.puntos >= 40 ? "media" : "baja")}"></i></span><b>${o.puntos == null ? "s/d" : o.puntos}</b><small class="v">${o.valor == null ? "" : c.startsWith("empleo") || c === "actividad_adimra" ? (o.valor > 0 ? "+" : "") + dec(o.valor) + "%" : c === "tendencia" ? o.valor + " trim." : c === "hechos_planta" ? o.valor + " hechos" : dec(o.valor) + " pts"}</small></div>`).join("")}</div>`).join("");
+    + sel.map(i => `<div class="ixd"><h4>${esc(i.area)} · ${i.puntaje}/100</h4>${Object.entries(i.componentes).map(([c, o]) => `<div class="ixc"><span>${esc(AL.nombres[c])} <small>(peso ${Math.round(AL.pesos[c] * 100)}%)</small></span><span class="b"><i style="width:${o.puntos ?? 0}%;background:${o.puntos == null ? "#ccd5df" : col(o.puntos >= 60 ? "alta" : o.puntos >= 40 ? "media" : "baja")}"></i></span><b>${o.puntos == null ? "s/d" : o.puntos}</b><small class="v">${o.valor == null ? "" : c.startsWith("empleo") || c === "actividad_adimra" || c === "cierre_empresas" ? (o.valor > 0 ? "+" : "") + dec(o.valor) + "%" : c === "tendencia" ? o.valor + " trim." : c === "hechos_planta" ? o.valor + " hechos" : dec(o.valor) + " pts"}</small></div>`).join("")}</div>`).join("");
+  box.addEventListener("click", e => { const b = e.target.closest("button[data-amb]"); if (b) informeDe(b.dataset.amb); });
   $("indice").querySelectorAll(".ix").forEach(b => b.onclick = () => { const v = b.dataset.p === pv ? "" : b.dataset.p; $("fProv").value = v; $("fProv").dispatchEvent(new Event("change")); });
-  $("alertas-tit").textContent = pv ? `Alertas · ${pv} y nacionales` : "Alertas · todo el país";
+  $("alertas-tit").innerHTML = (pv ? `Alertas · ${esc(pv)} y nacionales` : "Alertas · todo el país") + ` <button class="chip mini" type="button" id="aInf">${pv ? "Informe completo de " + esc(pv) : "Informe nacional"}</button>`;
+  $("aInf").onclick = () => informeDe(pv ? "p:" + pv : "");
   $("alertas-fil").innerHTML = [["todas", "Todas"], ["alta", "Solo altas"], ...temas.map(t => [t, t])].map(([k, t]) => `<button class="chip" type="button" data-f="${esc(k)}" aria-pressed="${S.fAle === k}">${esc(t)}</button>`).join("");
   $("alertas-fil").querySelectorAll("button").forEach(b => b.onclick = () => { S.fAle = b.dataset.f; alertas(); });
-  box.innerHTML = vis.length ? vis.slice(0, 80).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
+  box.innerHTML = vis.length ? vis.slice(0, 80).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small><div><button class="chip mini" type="button" data-amb="${esc(ambDeAlerta(a))}">Generar informe${ambDeAlerta(a) ? "" : " nacional"}</button></div></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
 }
 
+
+
+/* ---------- Ciudad, conurbano e interior de Buenos Aires ---------- */
+const GBA24 = new Set(["Almirante Brown", "Avellaneda", "Berazategui", "Esteban Echeverria", "Ezeiza", "Florencio Varela", "General San Martin", "Hurlingham", "Ituzaingo", "Jose C Paz", "La Matanza", "Lanus", "Lomas de Zamora", "Malvinas Argentinas", "Merlo", "Moreno", "Moron", "Quilmes", "San Fernando", "San Isidro", "San Miguel", "Tigre", "Tres de Febrero", "Vicente Lopez"].map(x => norm(x)));
+const esGBA = dep => !!dep && GBA24.has(norm(dep));
+// zona: null | "conurbano" | "interior" | "amba"
+function zonaOK(zona, pv, dep) {
+  if (!zona) return true;
+  if (zona === "amba") return pv === "CABA" || (pv === "Buenos Aires" && esGBA(dep));
+  if (pv !== "Buenos Aires") return false;
+  return zona === "conurbano" ? esGBA(dep) : !esGBA(dep);
+}
+const areaOK = (zona, k) => !zona || (zona === "conurbano" ? k === "GBA" : zona === "interior" ? k === "Resto de Buenos Aires" : ["CABA", "GBA"].includes(k));
+const ambitoOK = (zona, nombre) => !zona || (zona === "conurbano" ? /GBA|conurbano/i.test(nombre) || nombre === "Nacional" : zona === "interior" ? !/GBA|conurbano|CABA/i.test(nombre) : !/Resto de Buenos Aires/i.test(nombre));
 
 /* ---------- asignar establecimientos a departamentos, comunas y barrios (punto en polígono) ---------- */
 function anillos(d) { return d.split("M").filter(Boolean).map(r => r.replace(/Z/g, "").split("L").map(p => p.split(",").map(Number))); }
@@ -519,7 +545,7 @@ function asignarZonas() {
   return S.zonas = { dep, bar };
 }
 function estPorZona(enAmb, campo = "dep", conProv = false) {
-  const Z = asignarZonas(), c = {}; (S.est.filas || []).forEach((f, i) => { const pv = provDeEst(f[4]); if (!enAmb(pv)) return; const z = Z[campo][i] ? Z[campo][i] + (conProv ? ` (${pv})` : "") : "Sin asignar"; c[z] = c[z] || { n: 0, g: 0 }; c[z].n++; if (["d. 200-499", "e. 500+"].includes(f[3])) c[z].g++; });
+  const Z = asignarZonas(), c = {}; (S.est.filas || []).forEach((f, i) => { const pv = provDeEst(f[4]); if (!enAmb(pv, i)) return; const z = Z[campo][i] ? Z[campo][i] + (conProv ? ` (${pv})` : "") : "Sin asignar"; c[z] = c[z] || { n: 0, g: 0 }; c[z].n++; if (["d. 200-499", "e. 500+"].includes(f[3])) c[z].g++; });
   return Object.entries(c).sort((a, b) => b[1].n - a[1].n);
 }
 
@@ -535,7 +561,7 @@ const VARS = [
 function pedidoForm() {
   if (!$("f-pedido") || $("pVars").childElementCount) return;
   const provs = Object.keys(S.geo.p).sort((a, b) => a.localeCompare(b, "es")), regs = [...new Set(Object.values(REGION))].sort();
-  $("pAmb").innerHTML = `<option value="">Total país</option><optgroup label="Regiones">${regs.map(r => `<option value="r:${esc(r)}">Región ${esc(r)}</option>`).join("")}</optgroup><optgroup label="Provincias">${provs.map(p => `<option value="p:${esc(p)}">${esc(p)}</option>`).join("")}</optgroup>`;
+  $("pAmb").innerHTML = `<option value="">Total país</option><optgroup label="Ciudad y provincia de Buenos Aires"><option value="p:CABA">Ciudad de Buenos Aires</option><option value="r:AMBA">AMBA (Ciudad + 24 partidos del conurbano)</option><option value="z:conurbano">Conurbano bonaerense (24 partidos)</option><option value="z:interior">Interior de la provincia de Buenos Aires</option><option value="p:Buenos Aires">Provincia de Buenos Aires (completa)</option></optgroup><optgroup label="Regiones">${regs.filter(r => !["AMBA", "Buenos Aires"].includes(r)).map(r => `<option value="r:${esc(r)}">Región ${esc(r)}</option>`).join("")}</optgroup><optgroup label="Provincias">${provs.filter(p => !["CABA", "Buenos Aires"].includes(p)).map(p => `<option value="p:${esc(p)}">${esc(p)}</option>`).join("")}</optgroup>`;
   $("pVars").innerHTML = VARS.map(([g, vs]) => `<fieldset><legend>${g}</legend>${vs.map(([k, t]) => `<label><input type="checkbox" name="v" value="${k}" checked> ${t}</label>`).join("")}</fieldset>`).join("");
   $("pTodo").onclick = () => $("pVars").querySelectorAll("input").forEach(i => i.checked = true);
   $("pNada").onclick = () => $("pVars").querySelectorAll("input").forEach(i => i.checked = false);
@@ -561,6 +587,15 @@ function hbarra(items, unidad = "", d = 0, colores, opt = {}) {
   return s + "</svg>";
 }
 // Mapa coroplético (secuencial, un solo tono): features = [{n, d, v}] con paths ya proyectados
+const AMBA_BOX = () => { const [x1, y1] = proj(-58.95, -34.35), [x2, y2] = proj(-58.15, -34.95); return [x1, y1, x2 - x1, y2 - y1].map((v, i) => i < 2 ? v : v).reduce((a, v, i) => (a.push(i < 2 ? v : a[i - 2] + v), a), []); };
+// provincias con Buenos Aires partida en conurbano e interior (la Ciudad va aparte)
+function featsProv(enProv, valor) {
+  const bsas = S.deptos.filter(x => x.pv === "Buenos Aires"), con = bsas.filter(x => esGBA(x.n)), int = bsas.filter(x => !esGBA(x.n));
+  const out = Object.entries(S.geo.p).filter(([p]) => p !== "Buenos Aires" && enProv(p)).map(([p, d]) => ({ n: p === "CABA" ? "Ciudad de Buenos Aires" : p, k: p, d, c: S.geo.c[p], v: valor(p) }));
+  if (enProv("Buenos Aires")) { out.push({ n: "Conurbano (24 partidos)", k: "conurbano", merge: true, d: con.map(x => x.d).join(""), c: (con.find(x => x.n === "La Matanza") || con[0]).c, v: valor("conurbano") });
+    out.push({ n: "Interior de Buenos Aires", k: "interior", merge: true, d: int.map(x => x.d).join(""), c: S.geo.c["Buenos Aires"], v: valor("interior") }); }
+  return out;
+}
 const SEQ = ["#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#104281"];
 const DIV = { neg: ["#e34948", "#f19a95", "#f0efec", "#9ec5f4", "#2a78d6"] };
 function mapaCoro(features, opt = {}) {
@@ -578,9 +613,12 @@ function mapaCoro(features, opt = {}) {
     const bs = [vals[0], ...cls, vals.at(-1)]; leyenda = SEQ.map((c, i) => [c, `${fmt(Math.round(bs[i]))} – ${fmt(Math.round(bs[i + 1]))}`]); }
   const k = vw / 400, top = fs.filter(f => f.v != null).sort((a, b) => (opt.diverge ? Math.abs(b.v) - Math.abs(a.v) : b.v - a.v)).slice(0, opt.etiquetas ?? 6).map(f => f.n);
   let s = `<div class="coro"><svg viewBox="${x0 - pad} ${y0 - pad} ${vw} ${vh}" role="img" style="max-height:${opt.alto || 420}px">`;
-  for (const f of fs) s += `<path d="${f.d}" fill="${col(f.v)}" stroke="${opt.diverge ? "#c3c2b7" : "#fcfcfb"}" stroke-width="${(1.2 * k).toFixed(3)}" stroke-linejoin="round"><title>${esc(f.n)}: ${f.v == null ? "sin dato" : (opt.diverge && f.v > 0 ? "+" : "") + dec(f.v, opt.dec ?? 0) + (opt.unidad || "")}</title></path>`;
-  for (const f of fs) if (top.includes(f.n) && f.c) s += `<text x="${f.c[0]}" y="${f.c[1]}" text-anchor="middle" font-size="${(13 * k).toFixed(3)}" font-weight="600" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="${(3 * k).toFixed(3)}" paint-order="stroke" style="pointer-events:none">${esc(f.n)}</text>`;
-  s += `</svg><div class="coro-ley">${opt.titulo ? `<b>${esc(opt.titulo)}</b>` : ""}${leyenda.map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")}<span><i style="background:#fcfcfb;box-shadow:inset 0 0 0 1px #c3c2b7"></i>sin dato</span></div></div>`;
+  for (const f of fs) s += `<path d="${f.d}" fill="${col(f.v)}" stroke="${f.merge ? col(f.v) : opt.diverge ? "#c3c2b7" : "#fcfcfb"}" stroke-width="${(1.2 * k).toFixed(3)}" stroke-linejoin="round"><title>${esc(f.n)}: ${f.v == null ? "sin dato" : (opt.diverge && f.v > 0 ? "+" : "") + dec(f.v, opt.dec ?? 0) + (opt.unidad || "")}</title></path>`;
+  for (const f of fs) if (top.includes(f.n) && f.c && !(opt.inset && ["CABA", "conurbano"].includes(f.k))) s += `<text x="${f.c[0]}" y="${f.c[1]}" text-anchor="middle" font-size="${(13 * k).toFixed(3)}" font-weight="600" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="${(3 * k).toFixed(3)}" paint-order="stroke" style="pointer-events:none">${esc(f.n)}</text>`;
+  let ins = ""; if (opt.inset) { const [a, b2, c2, d2] = opt.inset, kk = (c2 - a) / 400;
+    ins = `<div class="inset"><svg viewBox="${a} ${b2} ${c2 - a} ${d2 - b2}" role="img">${fs.map(f => `<path d="${f.d}" fill="${col(f.v)}" stroke="${f.merge ? col(f.v) : "#52514e"}" stroke-width="${(f.merge ? 1.5 : 2) * kk}"><title>${esc(f.n)}: ${f.v == null ? "sin dato" : (opt.diverge && f.v > 0 ? "+" : "") + dec(f.v, opt.dec ?? 0) + (opt.unidad || "")}</title></path>`).join("")}${fs.filter(f => ["CABA", "conurbano"].includes(f.k)).map(f => `<text x="${f.k === "CABA" ? (a + c2) / 2 + (c2 - a) * .1 : a + (c2 - a) * .3}" y="${f.k === "CABA" ? (b2 + d2) / 2 - (d2 - b2) * .05 : b2 + (d2 - b2) * .82}" font-size="${(13 * kk).toFixed(4)}" font-weight="600" fill="#0b0b0b" stroke="#fcfcfb" stroke-width="${(3 * kk).toFixed(4)}" paint-order="stroke" text-anchor="middle">${f.k === "CABA" ? "Ciudad" : "Conurbano"}</text>`).join("")}</svg><span>Detalle: Ciudad y alrededores</span></div>`;
+  }
+  s += `</svg>${ins}<div class="coro-ley">${opt.titulo ? `<b>${esc(opt.titulo)}</b>` : ""}${leyenda.map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")}<span><i style="background:#fcfcfb;box-shadow:inset 0 0 0 1px #c3c2b7"></i>sin dato</span></div></div>`;
   return s;
 }
 function tamanos(est) {
@@ -624,20 +662,44 @@ function columnasT(items, opt = {}) {
 function generarPedido() {
   const amb = $("pAmb").value, cmp = $("pCmp").value, sel = new Set([...$("pVars").querySelectorAll("input:checked")].map(i => i.value));
   if (!sel.size) { toast("Elegí al menos una variable"); return; }
-  const tipo = amb.slice(0, 1), val = amb.slice(2), provs = !amb ? null : tipo === "p" ? [val] : Object.keys(REGION).filter(p => REGION[p] === val || (val === "AMBA" && p === "Buenos Aires"));
-  const nombre = !amb ? "Total país" : tipo === "p" ? (val === "CABA" ? "Ciudad de Buenos Aires" : `Provincia de ${val}`) : `Región ${val}`;
-  const enAmb = p => !provs || provs.includes(p);
+  const tipo = amb.slice(0, 1), val = amb.slice(2);
+  const zona = tipo === "z" ? val : (tipo === "r" && val === "AMBA") ? "amba" : null;
+  const provs = !amb ? null : tipo === "p" ? [val] : tipo === "z" ? ["Buenos Aires"] : zona === "amba" ? ["CABA", "Buenos Aires"] : Object.keys(REGION).filter(p => REGION[p] === val);
+  const nombre = !amb ? "Total país" : tipo === "p" ? (val === "CABA" ? "Ciudad de Buenos Aires" : `Provincia de ${val}`) : zona === "conurbano" ? "Conurbano bonaerense (24 partidos)" : zona === "interior" ? "Interior de la provincia de Buenos Aires" : zona === "amba" ? "AMBA: Ciudad de Buenos Aires y conurbano" : `Región ${val}`;
+  const ZD = zona ? asignarZonas().dep : null;
+  const enAmb = (p, i) => (!provs || provs.includes(p)) && (!zona || i == null || zonaOK(zona, p, ZD[i]));
   const O = S.oede, Q = O ? O.trimestres : [], n = Q.length, iRef = cmp === "ia" ? n - 5 : Q.indexOf("2023T4"), refTxt = cmp === "ia" ? "un año atrás" : "fines de 2023";
   const UOM = O ? Object.keys(O.grupos).filter(g => g !== "3410") : [];
-  const areas = O ? Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k)) : [];
+  const areas = O ? Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k) && areaOK(zona, k)) : [];
   const sumQ = (gs, i) => areas.reduce((x, [, a]) => x + gs.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].trim[i] || 0 : 0), 0), 0);
   const sumA = (gs, i) => areas.reduce((x, [, a]) => x + gs.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].anual[i] || 0 : 0), 0), 0);
   const serie = k => S.series.find(s => s.clave === k), ultS = k => { const s = serie(k); if (!s || !s.datos.length) return null; return s.datos.slice().sort((a, b) => a.periodo.localeCompare(b.periodo)); };
   const pct = (a, b) => b ? (a / b - 1) * 100 : null, sg = (v, d = 1) => v == null ? "s/d" : (v > 0 ? "+" : "") + dec(v, d);
-  const est = (S.est.filas || []).filter(f => enAmb(provDeEst(f[4])));
-  const plantas = S.plantas.filter(p => enAmb(p.provincia)), evs = S.eventos.filter(e => plantas.some(p => p.id === e.plantaId)).sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const est = (S.est.filas || []).filter((f, i) => enAmb(provDeEst(f[4]), i));
+  const plantas = S.plantas.filter(p => enAmb(p.provincia) && (!zona || zonaOK(zona, p.provincia, p.partido))), evs = S.eventos.filter(e => plantas.some(p => p.id === e.plantaId)).sort((a, b) => b.fecha.localeCompare(a.fecha));
   const B = [], R = []; // bloques y resumen
-  const bloque = (titulo, cuerpo, fuente) => B.push(`<section class="rb"><h3>${titulo}</h3>${cuerpo}${fuente ? `<p class="rsrc">Fuente: ${fuente}</p>` : ""}</section>`);
+  const QUE = {
+    "Establecimientos por rama": "Número a la derecha: cantidad de establecimientos de la rama · porcentaje sobre el total del ámbito.",
+    "Establecimientos por comuna": "Número a la derecha: cantidad de establecimientos metalúrgicos. «Grandes»: con 200 o más trabajadores.",
+    "Establecimientos por partido": "Número a la derecha: cantidad de establecimientos metalúrgicos. «Grandes»: con 200 o más trabajadores.",
+    "Establecimientos por barrio": "Número a la derecha: cantidad de establecimientos metalúrgicos. «Grandes»: con 200 o más trabajadores.",
+    "Partidos y departamentos": "Número a la derecha: cantidad de establecimientos metalúrgicos. «Grandes»: con 200 o más trabajadores.",
+    "Dónde están": "Cada zona está pintada según su cantidad de establecimientos: cuanto más oscura, más establecimientos. La leyenda indica los rangos.",
+    "Variación del empleo metalúrgico por provincia": "Cada provincia está pintada según cuánto cambió su empleo metalúrgico, en porcentaje.",
+    "Evolución trimestral": "Número al final de la línea: puestos de trabajo en el último trimestre y, debajo, su variación porcentual contra el período marcado con la línea vertical.",
+    "Serie histórica": "Número al final de la línea: promedio de puestos de trabajo del último año completo.",
+    "Empleo por rama": "Número a la derecha: puestos de trabajo ganados (+) o perdidos (−) en cada rama.",
+    "Conflictos": "Número sobre cada columna: cantidad de conflictos con paro en el año. La última columna es el año en curso, incompleto.",
+    "Capacidad instalada": "Número a la derecha: porcentaje de la capacidad de producción que se usó en el último mes con dato. El resto es capacidad ociosa.",
+    "Producción por rama": "Número a la derecha: variación porcentual de la producción contra el mismo mes del año anterior.",
+    "Acero crudo": "Número al final de la línea: miles de toneladas producidas en el último mes con dato.",
+    "Actividad metalúrgica": "Valores: variación porcentual de la actividad contra el mismo mes del año anterior.",
+    "Importaciones": "Barras: variación porcentual de las importaciones en lo que va del año contra el mismo período del año anterior. Línea: total importado por mes, en millones de dólares.",
+    "Índice de riesgo": "Número a la derecha: puntaje de 0 (sin señales) a 100 (riesgo máximo).",
+    "Establecimientos por cantidad": "Cada tramo de la barra es la proporción de establecimientos según su cantidad de trabajadores; debajo, la cantidad y el porcentaje.",
+    "Fábricas y talleres": "Número a la derecha: cantidad de fábricas y talleres metalúrgicos habilitados en cada comuna."
+  };
+  const bloque = (titulo, cuerpo, fuente) => { const q = Object.entries(QUE).find(([k]) => titulo.startsWith(k)); B.push(`<section class="rb"><h3>${titulo}</h3>${q ? `<p class="que">${q[1]}</p>` : ""}${cuerpo}${fuente ? `<p class="rsrc">Fuente: ${fuente}</p>` : ""}</section>`); };
   const nacional = provs ? ` <span class="tag-nac">dato nacional</span>` : "";
 
   if (sel.has("est_total") || sel.has("est_rama") || sel.has("est_tam")) {
@@ -650,11 +712,13 @@ function generarPedido() {
       // mapa: barrios (CABA), departamentos (una provincia) o provincias (región o país)
       let mapa = "";
       if (provs && provs.length === 1 && provs[0] === "CABA" && (S.barrios || []).length) { const zb = Object.fromEntries(estPorZona(p => p === "CABA", "bar")); mapa = mapaCoro(S.barrios.map(b => ({ n: b.n, d: b.d, c: b.c, v: zb[b.n] ? zb[b.n].n : 0 })), { titulo: "Establecimientos por barrio", etiquetas: 8, alto: 460 }); }
+      else if (zona) { const zd = Object.fromEntries(estPorZona(enAmb)); mapa = mapaCoro(S.deptos.filter(x => provs.includes(x.pv) && zonaOK(zona, x.pv, x.n)).map(x => ({ n: x.n, d: x.d, c: x.c, v: zd[x.n] ? zd[x.n].n : 0 })), { titulo: zona === "amba" ? "Establecimientos por comuna y partido" : "Establecimientos por partido", etiquetas: 8, alto: 480 }); }
       else if (provs && provs.length === 1) { const zd = Object.fromEntries(estPorZona(p => p === provs[0])); mapa = mapaCoro(S.deptos.filter(x => x.pv === provs[0]).map(x => ({ n: x.n, d: x.d, c: x.c, v: zd[x.n] ? zd[x.n].n : 0 })), { titulo: "Establecimientos por partido o departamento", etiquetas: 8 }); }
-      else { const cp = {}; est.forEach(f => { const p = provDeEst(f[4]); cp[p] = (cp[p] || 0) + 1; }); mapa = mapaCoro(Object.entries(S.geo.p).filter(([p]) => enAmb(p)).map(([p, d]) => ({ n: p, d, c: S.geo.c[p], v: cp[p] || 0 })), { titulo: "Establecimientos por provincia", etiquetas: 6, alto: 520 }); }
+      else { const cp = {}, Zd = asignarZonas().dep; (S.est.filas || []).forEach((f, i) => { let p = provDeEst(f[4]); if (!enAmb(p, i)) return; if (p === "Buenos Aires") p = esGBA(Zd[i]) ? "conurbano" : "interior"; cp[p] = (cp[p] || 0) + 1; });
+        mapa = mapaCoro(featsProv(p => enAmb(p), p => cp[p] || 0), { titulo: "Establecimientos por provincia (Buenos Aires dividida en conurbano e interior)", etiquetas: 7, alto: 520, inset: AMBA_BOX() }); }
       if (mapa) bloque("Dónde están los establecimientos", mapa, "CEP XXI, ubicados en límites del IGN y de la Ciudad. Más oscuro = más establecimientos (cada tono agrupa un quinto de las zonas).");
-      const z = estPorZona(enAmb, "dep", !(provs && provs.length === 1)).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
-      bloque(provs && provs.length === 1 ? (provs[0] === "CABA" ? "Establecimientos por comuna" : "Establecimientos por partido o departamento") : "Partidos y departamentos con más establecimientos", hbarra(z.map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a límites del IGN.");
+      const z = estPorZona(enAmb, "dep", !(provs && provs.length === 1) && !zona).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
+      bloque(provs && provs.length === 1 && !zona ? (provs[0] === "CABA" ? "Establecimientos por comuna" : "Establecimientos por partido o departamento") : zona ? (zona === "amba" ? "Establecimientos por comuna y partido" : "Establecimientos por partido") : "Partidos y departamentos con más establecimientos", hbarra(z.map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a límites del IGN.");
       if (provs && provs.includes("CABA") && (S.barrios || []).length) { const zb = estPorZona(p => p === "CABA", "bar").filter(([k]) => k !== "Sin asignar"); bloque("Establecimientos por barrio (CABA)", hbarra(zb.slice(0, 48).map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a los barrios de la Ciudad."); } }
     if (sel.has("est_zona") && provs && provs.includes("CABA") && S.hab && S.hab.habilitaciones.length) { const H = S.hab.habilitaciones; const c = {}; H.forEach(h => { const k = h.comuna ? "Comuna " + h.comuna : "Sin comuna"; c[k] = (c[k] || 0) + 1; });
       bloque("Fábricas y talleres metalúrgicos habilitados en la Ciudad, por comuna", hbarra(Object.entries(c).sort((a, b) => b[1] - a[1])) + `<details><summary class="small">Ver el listado (${fmt(H.length)})</summary><table><thead><tr><th>Razón social</th><th>Rubro</th><th>Domicilio</th><th>Comuna</th></tr></thead><tbody>${H.slice().sort((a, b) => (+a.comuna || 99) - (+b.comuna || 99)).map(h => `<tr><td>${esc(h.razon_social || "")}</td><td class="small">${esc(h.rubro)}</td><td>${esc(h.direccion)}</td><td>${esc(h.comuna || "")}</td></tr>`).join("")}</tbody></table></details>`, "Agencia Gubernamental de Control (GCBA), habilitaciones aprobadas, vía BA Data. Solo rubros de fabricación y talleres metalúrgicos."); }
@@ -665,7 +729,7 @@ function generarPedido() {
     if (sel.has("emp_total")) { R.push(`<b>${fmt(ult)}</b> asalariados metalúrgicos registrados (${Q[n - 1].replace("T", " T")}), <b>${sg(v)}%</b> contra ${refTxt} (${sg(ult - ref, 0)} puestos).`);
       bloque("Empleo registrado", `<div class="rk"><div><b>${fmt(ult)}</b><span>asalariados registrados · ${Q[n - 1].replace("T", " T")}</span></div><div><b class="${ult < ref ? "neg" : ""}">${sg(ult - ref, 0)}</b><span>puestos contra ${refTxt}</span></div><div><b class="${v < 0 ? "neg" : ""}">${sg(v)}%</b><span>variación</span></div></div>`, "OEDE–SIPA. Universo UOM, sin terminales automotrices."); }
     if (sel.has("emp_total") && (!provs || provs.length > 1)) { const vp = {}; for (const [k, a] of areas) { const p = a.provincia || k; vp[p] = vp[p] || [0, 0]; vp[p][0] += UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].trim[n - 1] || 0 : 0), 0); vp[p][1] += UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].trim[iRef] || 0 : 0), 0); }
-      bloque(`Variación del empleo metalúrgico por provincia, contra ${refTxt}`, mapaCoro(Object.entries(S.geo.p).filter(([p]) => enAmb(p)).map(([p, d]) => ({ n: p, d, c: S.geo.c[p], v: vp[p] && vp[p][1] >= 300 ? (vp[p][0] / vp[p][1] - 1) * 100 : null })), { diverge: true, unidad: "%", dec: 1, titulo: "Variación del empleo (%)", etiquetas: 6, alto: 520 }), "OEDE–SIPA. Rojo: pierde empleo; azul: gana. Provincias con menos de 300 puestos, sin dato."); }
+      bloque(`Variación del empleo metalúrgico por provincia, contra ${refTxt}`, mapaCoro(featsProv(p => enAmb(p), p => { const ar = p === "conurbano" ? O.areas["GBA"] : p === "interior" ? O.areas["Resto de Buenos Aires"] : null; const v = ar ? [UOM.reduce((x, g) => x + (ar.grupos[g] ? ar.grupos[g].trim[n - 1] || 0 : 0), 0), UOM.reduce((x, g) => x + (ar.grupos[g] ? ar.grupos[g].trim[iRef] || 0 : 0), 0)] : vp[p]; return v && v[1] >= 300 ? (v[0] / v[1] - 1) * 100 : null; }), { diverge: true, unidad: "%", dec: 1, titulo: "Variación del empleo (%)", etiquetas: 6, alto: 520, inset: AMBA_BOX() }), "OEDE–SIPA. Rojo: pierde empleo; azul: gana. Provincias con menos de 300 puestos, sin dato."); }
     if (sel.has("emp_trim")) bloque("Evolución trimestral del empleo", serieLinea(Q.map((q, i) => ({ e: "T" + q.slice(5) + " " + q.slice(2, 4), v: sumQ(UOM, i) })), { ref: iRef, refTxt: cmp === "ia" ? "un año atrás" : "fines de 2023", marcas: 7 }), "OEDE–SIPA. Puestos de asalariados registrados; la marca indica el período de comparación.");
     if (sel.has("emp_rama")) { const it = UOM.map(g => [O.grupos[g].split(" (")[0], sumQ([g], n - 1) - sumQ([g], iRef)]).filter(x => x[1] || true).sort((a, b) => a[1] - b[1]);
       bloque(`Empleo por rama: cambio contra ${refTxt} (puestos)`, hbarra(it), "OEDE–SIPA."); }
@@ -702,10 +766,10 @@ function generarPedido() {
   if (sel.has("conf") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = a[y] || [0, 0]; a[y][0] += r[1] || 0; a[y][1] += r[4] || 0; }); const ys = Object.keys(a).sort().slice(-12);
     bloque("Conflictos laborales con paro" + nacional, `<p class="small" style="margin:0 0 4px"><b>Sector privado, total</b></p>` + columnasT(ys.map(y => [y, a[y][0]]), { alto: 180 }) + `<p class="small" style="margin:10px 0 4px"><b>Industria manufacturera</b></p>` + columnasT(ys.map(y => [y, a[y][1]]), { alto: 160 }), `Ministerio de Capital Humano. ${ys.at(-1)}: año incompleto.`); }
   const AL = S.alertas || {};
-  if (sel.has("indice") && AL.indice) { const I = AL.indice.filter(i => enAmb(i.provincia)); const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
+  if (sel.has("indice") && AL.indice) { const I = AL.indice.filter(i => enAmb(i.provincia) && ambitoOK(zona, i.area)); const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
     if (I.length === 1) { const i = I[0]; R.push(`Índice de riesgo: <b>${i.puntaje}/100</b> (nivel ${i.nivel}).`); bloque(`Índice de riesgo: ${esc(i.area)} ${i.puntaje}/100`, hbarra(Object.entries(i.componentes).map(([c, o]) => [AL.nombres[c], o.puntos ?? 0]), "", 0, Object.values(i.componentes).map(o => col((o.puntos ?? 0) >= 60 ? "alta" : (o.puntos ?? 0) >= 40 ? "media" : "baja"))), "MIDTM, índice ponderado."); }
     else if (I.length) bloque("Índice de riesgo por área (0 a 100)", hbarra(I.map(i => [i.area, i.puntaje]), "", 0, I.map(i => col(i.nivel))), "MIDTM, índice ponderado."); }
-  if (sel.has("alertas") && AL.alertas) { const A = AL.alertas.filter(a => a.nivel !== "info" && (!provs || a.ambito === "Nacional" || provs.includes(a.provincia))).sort((a, b) => (provs && provs.includes(b.provincia)) - (provs && provs.includes(a.provincia)));
+  if (sel.has("alertas") && AL.alertas) { const A = AL.alertas.filter(a => a.nivel !== "info" && (!provs || a.ambito === "Nacional" || (provs.includes(a.provincia) && ambitoOK(zona, a.ambito)))).sort((a, b) => (provs && provs.includes(b.provincia)) - (provs && provs.includes(a.provincia)));
     R.push(`<b>${A.filter(a => a.nivel === "alta").length}</b> alertas altas activas.`);
     bloque("Alertas activas", `<table><thead><tr><th>Nivel</th><th>Alerta</th><th>Dato</th></tr></thead><tbody>${A.slice(0, 30).map(a => `<tr><td><span class="nvl ${a.nivel}">${a.nivel}</span></td><td><b>${esc(a.titulo)}</b><div class="small muted">${esc(a.detalle || "")}</div></td><td class="small">${esc(String(a.periodo).replace("T", " T"))} · ${esc(a.fuente)}</td></tr>`).join("")}</tbody></table>`, "MIDTM."); }
   if (sel.has("plantas")) bloque("Plantas relevadas", plantas.length ? `<table><thead><tr><th>Planta</th><th>Rama</th><th>Localidad</th><th>Situación</th></tr></thead><tbody>${plantas.map(p => `<tr><td><b>${esc(p.nombre)}</b></td><td>${esc(p.rama || "")}</td><td>${esc(p.localidad || "")}, ${esc(p.provincia)}</td><td>${esc(ESTADOS[estado(p)][0])}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin plantas relevadas en este ámbito.</p>`, "Relevamiento propio.");
