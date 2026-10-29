@@ -34,6 +34,9 @@ jobs:
       - name: Plantas candidatas en OpenStreetMap
         run: node scripts/actualizar-osm.mjs
         continue-on-error: true
+      - name: Barrios de la Ciudad de Buenos Aires
+        run: node scripts/actualizar-barrios.mjs
+        continue-on-error: true
       - name: Archivos oficiales (OEDE, conflictividad, EIL, SIPA)
         run: node scripts/descargar-fuentes.mjs
         continue-on-error: true

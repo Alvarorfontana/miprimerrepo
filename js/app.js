@@ -24,17 +24,17 @@ const PRESETS = [["País", [-73.6, -55.1, -53.6, -21.7]], ["AMBA", [-59.1, -35.0
 const cssv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 /* ---------- estado ---------- */
-const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, osm: true, nombres: true } };
+const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, osm: true, deptos: true, barrios: true, nombres: true } };
 let sb = null; // cliente Supabase opcional
 
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm;
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || [];
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -117,7 +117,9 @@ function setVB(b) { vb = b; svg.setAttribute("viewBox", b.map(v => v.toFixed(2))
 function baseMapa() {
   svg = $("map"); vb = [0, 0, S.geo.w, S.geo.h];
   let h = `<g id="provs">`; for (const [n, d] of Object.entries(S.geo.p)) h += `<path class="prov" data-name="${esc(n)}" d="${d}"><title>${esc(n)}</title></path>`;
-  h += `</g><g id="labs"></g><g id="pts"></g>`; svg.innerHTML = h;
+  h += `</g><g id="deptos">` + S.deptos.map(d => `<path class="depto" d="${d.d}"><title>${esc(d.n)} · ${esc(d.pv)}</title></path>`).join("") + `</g>`;
+  h += `<g id="barrios">` + S.barrios.map(b => `<path class="barrio" d="${b.d}"><title>${esc(b.n)}${b.comuna ? " · Comuna " + b.comuna : ""} · CABA</title></path>`).join("") + `</g>`;
+  h += `<g id="labs"></g><g id="pts"></g>`; svg.innerHTML = h;
   canvas = document.createElement("canvas"); canvas.style.cssText = "position:absolute;inset:0;width:100%;height:100%;pointer-events:none";
   $("mapbox").insertBefore(canvas, $("mapbox").querySelector(".zoomctl")); ctx = canvas.getContext("2d");
   let drag = null;
@@ -127,7 +129,7 @@ function baseMapa() {
   svg.addEventListener("wheel", e => { e.preventDefault(); const b = svg.getBoundingClientRect(); zoom(e.deltaY < 0 ? .8 : 1.25, (e.clientX - b.left) / b.width, (e.clientY - b.top) / b.height); }, { passive: false });
   $("zin").onclick = () => zoom(.6, .5, .5); $("zout").onclick = () => zoom(1.6, .5, .5);
   $("zoomPresets").innerHTML = ""; for (const [n, b] of PRESETS) { const c = document.createElement("button"); c.className = "chip"; c.type = "button"; c.textContent = n; c.onclick = () => setVB(fitBox(...b)); $("zoomPresets").appendChild(c); }
-  const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["est", "Establecimientos CEP XXI"], ["nombres", "Nombres de provincias"]];
+  const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["est", "Establecimientos CEP XXI"], ["deptos", "Departamentos y partidos"], ["barrios", "Barrios porteños"], ["nombres", "Nombres"]];
   $("capas").innerHTML = `<span class="small muted" style="width:100%">Capas del mapa · en azul se ven, en blanco están ocultas. Tocá para cambiar.</span>` + capas.map(([k, t]) => `<button class="chip" type="button" data-c="${k}" aria-pressed="${S.capas[k]}"><span aria-hidden="true">${S.capas[k] ? "✓ " : ""}</span>${t}</button>`).join("");
   $("capas").querySelectorAll("button").forEach(b => b.onclick = () => { S.capas[b.dataset.c] = !S.capas[b.dataset.c]; b.setAttribute("aria-pressed", S.capas[b.dataset.c]); b.firstChild.textContent = S.capas[b.dataset.c] ? "✓ " : ""; dibujarPuntos(); dibujarEst(); });
   new ResizeObserver(() => { setVB(vb); }).observe($("mapbox"));
@@ -149,7 +151,13 @@ function dibujarPuntos() {
   const g = $("pts"), L = $("labs"); if (!g) return; g.innerHTML = ""; L.innerHTML = "";
   const k = vb[2] / 316, pv = F().pv;
   document.querySelectorAll(".prov").forEach(p => p.classList.toggle("sel", !!pv && p.dataset.name === pv));
-  if (S.capas.nombres) for (const [n, [x, y]] of Object.entries(S.geo.c)) { if (n === "CABA" && vb[2] > 30) continue; const t = document.createElementNS(NS, "text"); t.setAttribute("x", x); t.setAttribute("y", y); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "plab"); t.setAttribute("font-size", (6.2 * k).toFixed(2)); t.style.strokeWidth = (2.2 * k).toFixed(2) + "px"; t.textContent = n; L.appendChild(t); }
+  $("deptos").style.display = S.capas.deptos ? "" : "none";
+  $("barrios").style.display = S.capas.barrios && vb[2] < 40 ? "" : "none";
+  // con zoom, nombres de departamentos y barrios
+  const lab = (n, x, y, fs, cls) => { if (x < vb[0] || y < vb[1] || x > vb[0] + vb[2] || y > vb[1] + vb[3]) return; const t = document.createElementNS(NS, "text"); t.setAttribute("x", x); t.setAttribute("y", y); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "plab " + cls); t.setAttribute("font-size", (fs * k).toFixed(3)); t.style.strokeWidth = (fs * .35 * k).toFixed(3) + "px"; t.textContent = n; L.appendChild(t); };
+  if (S.capas.nombres && S.capas.deptos && vb[2] < 60) for (const d of S.deptos) { if (d.pv === "CABA" && S.capas.barrios && S.barrios.length && vb[2] < 12) continue; lab(d.n, d.c[0], d.c[1], vb[2] < 12 ? 3.6 : 4.4, "dlab"); }
+  if (S.capas.nombres && S.capas.barrios && vb[2] < 12) for (const b of S.barrios) lab(b.n, b.c[0], b.c[1], 3.4, "blab");
+  if (S.capas.nombres && vb[2] >= 12) for (const [n, [x, y]] of Object.entries(S.geo.c)) { if (n === "CABA" && vb[2] > 30) continue; const t = document.createElementNS(NS, "text"); t.setAttribute("x", x); t.setAttribute("y", y); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "plab"); t.setAttribute("font-size", (6.2 * k).toFixed(2)); t.style.strokeWidth = (2.2 * k).toFixed(2) + "px"; t.textContent = n; L.appendChild(t); }
   const r = Math.max(4.6 * k, .07);
   if (S.capas.osm) for (const o of (S.osm && S.osm.plantas) || []) {
     if (F().pv && !(o.lat && o.lon)) continue; const [x, y] = proj(o.lon, o.lat);

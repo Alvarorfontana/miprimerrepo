@@ -123,6 +123,12 @@ textarea{min-height:68px;resize:vertical}
 .prov{fill:var(--map-land);stroke:var(--map-edge);stroke-width:1;vector-effect:non-scaling-stroke}
 .prov:hover{fill:#f1f5f9}
 .prov.sel{fill:var(--map-sel)}
+.depto{fill:transparent;stroke:#c3cfdc;stroke-width:.6;vector-effect:non-scaling-stroke}
+.depto:hover{fill:rgba(31,95,168,.07);stroke:#7f93aa}
+.barrio{fill:transparent;stroke:#8fa3b9;stroke-width:.7;stroke-dasharray:3 2;vector-effect:non-scaling-stroke}
+.barrio:hover{fill:rgba(224,90,18,.07)}
+.plab.dlab{fill:#33475e;font-weight:600}
+.plab.blab{fill:#8a4a1c;font-weight:500}
 .plab{font-family:var(--body);fill:var(--map-label);font-weight:500;letter-spacing:.02em;pointer-events:none;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
 .pt{stroke:#fff;vector-effect:non-scaling-stroke;stroke-width:1.6;cursor:pointer}
 .pt.on{stroke:#111a25;stroke-width:3}
