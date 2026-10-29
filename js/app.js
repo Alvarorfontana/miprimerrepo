@@ -123,14 +123,26 @@ function baseMapa() {
   let drag = null;
   svg.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, vb: [...vb], mov: false }; svg.setPointerCapture(e.pointerId); });
   svg.addEventListener("pointermove", e => { if (!drag) return; const b = svg.getBoundingClientRect(); if (Math.abs(e.clientX - drag.x) + Math.abs(e.clientY - drag.y) > 4) drag.mov = true; if (drag.mov) setVB([drag.vb[0] - (e.clientX - drag.x) * vb[2] / b.width, drag.vb[1] - (e.clientY - drag.y) * vb[3] / b.height, vb[2], vb[3]]); });
-  svg.addEventListener("pointerup", e => { if (drag && !drag.mov && S.picking) { const b = svg.getBoundingClientRect(); const [lon, lat] = unproj(vb[0] + (e.clientX - b.left) / b.width * vb[2], vb[1] + (e.clientY - b.top) / b.height * vb[3]); $("np_lat").value = lat.toFixed(4); $("np_lon").value = lon.toFixed(4); S.picking = false; $("mapbox").classList.remove("picking"); toast("Ubicación marcada"); $("cargar").scrollIntoView({ behavior: "smooth" }); } drag = null; });
+  svg.addEventListener("pointerup", e => { if (drag && !drag.mov && !S.picking && S.capas.est && e.target.tagName !== "circle") fichaEst(e); if (drag && !drag.mov && S.picking) { const b = svg.getBoundingClientRect(); const [lon, lat] = unproj(vb[0] + (e.clientX - b.left) / b.width * vb[2], vb[1] + (e.clientY - b.top) / b.height * vb[3]); $("np_lat").value = lat.toFixed(4); $("np_lon").value = lon.toFixed(4); S.picking = false; $("mapbox").classList.remove("picking"); toast("Ubicación marcada"); $("cargar").scrollIntoView({ behavior: "smooth" }); } drag = null; });
   svg.addEventListener("wheel", e => { e.preventDefault(); const b = svg.getBoundingClientRect(); zoom(e.deltaY < 0 ? .8 : 1.25, (e.clientX - b.left) / b.width, (e.clientY - b.top) / b.height); }, { passive: false });
   $("zin").onclick = () => zoom(.6, .5, .5); $("zout").onclick = () => zoom(1.6, .5, .5);
   $("zoomPresets").innerHTML = ""; for (const [n, b] of PRESETS) { const c = document.createElement("button"); c.className = "chip"; c.type = "button"; c.textContent = n; c.onclick = () => setVB(fitBox(...b)); $("zoomPresets").appendChild(c); }
   const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["est", "Establecimientos CEP XXI"], ["nombres", "Nombres de provincias"]];
-  $("capas").innerHTML = capas.map(([k, t]) => `<button class="chip" type="button" data-c="${k}" aria-pressed="${S.capas[k]}">${t}</button>`).join("");
-  $("capas").querySelectorAll("button").forEach(b => b.onclick = () => { S.capas[b.dataset.c] = !S.capas[b.dataset.c]; b.setAttribute("aria-pressed", S.capas[b.dataset.c]); dibujarPuntos(); dibujarEst(); });
+  $("capas").innerHTML = `<span class="small muted" style="width:100%">Capas del mapa · en azul se ven, en blanco están ocultas. Tocá para cambiar.</span>` + capas.map(([k, t]) => `<button class="chip" type="button" data-c="${k}" aria-pressed="${S.capas[k]}"><span aria-hidden="true">${S.capas[k] ? "✓ " : ""}</span>${t}</button>`).join("");
+  $("capas").querySelectorAll("button").forEach(b => b.onclick = () => { S.capas[b.dataset.c] = !S.capas[b.dataset.c]; b.setAttribute("aria-pressed", S.capas[b.dataset.c]); b.firstChild.textContent = S.capas[b.dataset.c] ? "✓ " : ""; dibujarPuntos(); dibujarEst(); });
   new ResizeObserver(() => { setVB(vb); }).observe($("mapbox"));
+}
+function fichaEst(e) {
+  const b = svg.getBoundingClientRect(), mx = e.clientX - b.left, my = e.clientY - b.top, sx = b.width / vb[2], sy = b.height / vb[3];
+  let best = null, bd = 12;
+  for (const row of S.est.filas || []) { const [x, y] = proj(row[1], row[0]); const d = Math.hypot((x - vb[0]) * sx - mx, (y - vb[1]) * sy - my); if (d < bd) { bd = d; best = row; } }
+  if (!best) return;
+  const ram = (S.fuentes.ramasClae.find(x => x.prefijo === ramaDeClae(best[2])) || {}).rama || "";
+  const cerca = S.plantas.filter(p => Math.hypot((p.lat - best[0]) * 111, (p.lon - best[1]) * 92) < 2);
+  $("ficha").innerHTML = `<div class="ficha" style="border-left-color:${RAMA_COLOR[ramaDeClae(best[2])] || "#555"}"><h4 style="margin:0;font-size:17px">Establecimiento del padrón oficial</h4>
+   <p class="small" style="margin:4px 0">${esc(ram)} · actividad CLAE ${esc(best[2])} · <b>${esc(String(best[3] || "").slice(3))} trabajadores</b> · ${esc(provDeEst(best[4]) || "")}</p>
+   <p class="small muted" style="margin:0 0 6px">El padrón del CEP XXI no publica el nombre de la empresa (secreto estadístico). ${cerca.length ? `Está a menos de 2 km de: <b>${cerca.map(p => esc(p.nombre)).join(", ")}</b>.` : "No coincide con ninguna planta ya relevada."}</p>
+   <div class="row"><a class="chip" href="https://www.openstreetmap.org/?mlat=${best[0]}&mlon=${best[1]}#map=17/${best[0]}/${best[1]}" target="_blank" rel="noopener">Ver qué hay en este lugar</a><a class="chip" href="https://www.google.com/maps/search/industria/@${best[0]},${best[1]},17z" target="_blank" rel="noopener">Buscar empresas en la zona</a></div></div>`;
 }
 function zoom(f, fx, fy) { const nw = Math.min(Math.max(vb[2] * f, .12), S.geo.w * 1.8), nh = nw * vb[3] / vb[2]; setVB([vb[0] + (vb[2] - nw) * fx, vb[1] + (vb[3] - nh) * fy, nw, nh]); }
 function dibujarPuntos() {
@@ -267,7 +279,7 @@ function ramas() {
    ${F().pv ? "" : `<h4>Por provincia</h4><div class="tblwrap"><table><tbody>${Object.entries(porProv).sort((a, b) => b[1] - a[1]).map(([p, n]) => `<tr><td>${esc(p)}</td><td class="n">${fmt(n)}</td></tr>`).join("")}</tbody></table></div>`}`;
 }
 function ficha() {
-  const p = S.plantas.find(x => x.id === S.sel); if (!p) { $("ficha").innerHTML = `<p class="small muted">Tocá cualquier planta del mapa para ver su ficha.</p>`; return; }
+  const p = S.plantas.find(x => x.id === S.sel); if (!p) { $("ficha").innerHTML = `<p class="small muted">Tocá una planta o un punto del padrón para ver su ficha.</p>`; return; }
   const st = estado(p), reps = reportesDe(p.id).slice(0, 6), evs = eventosDe(p.id).slice(0, 6);
   $("ficha").innerHTML = `<div class="ficha"><div class="row" style="justify-content:space-between"><h4 style="margin:0;font-size:18px">${esc(p.nombre)}</h4><span class="pill" style="background:${cssv(ESTADOS[st][1])}">${ESTADOS[st][0]}</span></div>
    <p class="small muted" style="margin:3px 0 8px">${esc(p.empresa)} · ${esc(p.rama)} · ${esc([p.localidad, p.partido, p.provincia].filter(Boolean).join(", "))} · Seccional ${esc(p.seccional || "sin asignar")}${p.convenio ? " · " + esc(p.convenio) : ""}${p.ubicacion === "aproximada" ? " · ubicación aproximada" : ""}</p>
