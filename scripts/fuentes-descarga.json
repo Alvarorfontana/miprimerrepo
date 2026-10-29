@@ -5,25 +5,64 @@
       "clave": "oede-provincial",
       "nombre": "OEDE · Empleo, remuneraciones y empresas por provincia y rama (2 y 4 dígitos)",
       "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/oede-estadisticas-provinciales",
-      "patrones": ["provinciales_serie_empleo_trimestral_2dig", "provinciales_serie_empleo_trimestral_4dig", "provinciales_serie_remuneraciones_mensual_4dig", "provinciales_serie_empresas3", "provinciales_serie_empresas2", "departamento_series_empleo_y_salarios_mensual_sector"]
+      "patrones": [
+        "provinciales_serie_empleo_trimestral_2dig",
+        "provinciales_serie_empleo_trimestral_4dig",
+        "provinciales_serie_remuneraciones_mensual_4dig",
+        "provinciales_serie_empresas3",
+        "provinciales_serie_empresas2",
+        "departamento_series_empleo_y_salarios_mensual_sector"
+      ]
     },
     {
       "clave": "conflictividad",
       "nombre": "Ministerio de Capital Humano · Evolución mensual de la conflictividad laboral",
       "pagina": "https://www.argentina.gob.ar/node/142148",
-      "patrones": ["conflictividad"]
+      "patrones": [
+        "conflictividad"
+      ]
     },
     {
       "clave": "eil",
       "nombre": "Encuesta de Indicadores Laborales (EIL) · altas, bajas y expectativas por rama",
       "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
-      "patrones": ["eil", "indicadores_laborales"]
+      "patrones": [
+        "eil",
+        "indicadores_laborales"
+      ]
     },
     {
       "clave": "sipa",
       "nombre": "SIPA · Situación y evolución del trabajo registrado",
       "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/situacion-y-evolucion-del-trabajo-registrado",
-      "patrones": ["trabajoregistrado", "trabajo_registrado"]
+      "patrones": [
+        "trabajoregistrado",
+        "trabajo_registrado"
+      ]
+    },
+    {
+      "clave": "indec-capacidad",
+      "nombre": "INDEC · Utilización de la capacidad instalada por bloque (serie)",
+      "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/15",
+      "patrones": [
+        "sh_capacidad"
+      ]
+    },
+    {
+      "clave": "indec-ipi",
+      "nombre": "INDEC · Índice de producción industrial manufacturero por rama (serie)",
+      "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/14",
+      "patrones": [
+        "sh_ipi_manufacturero"
+      ]
+    },
+    {
+      "clave": "indec-maqagricola",
+      "nombre": "INDEC · Industria de maquinaria agrícola (ventas por tipo)",
+      "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/20",
+      "patrones": [
+        "maquinaria_agricola"
+      ]
     }
   ]
 }
