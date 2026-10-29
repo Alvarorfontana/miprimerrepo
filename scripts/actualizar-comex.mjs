@@ -17,7 +17,7 @@ const GRUPOS = [
   ["maquinaria-general", "Bombas, compresores, válvulas y máquinas herramienta (8413, 8414, 8481, 8456-8466)", ["8413", "8414", "8481", "8456", "8457", "8458", "8459", "8460", "8461", "8462", "8463", "8464", "8465", "8466"]],
   ["electricos", "Motores, transformadores, tableros y cables (8501-8504, 8535-8538, 8544)", ["8501", "8502", "8503", "8504", "8535", "8536", "8537", "8538", "8544"]]
 ];
-const anio = new Date().getFullYear(), anios = [anio - 3, anio - 2, anio - 1, anio];
+const anio = new Date().getFullYear(), anios = Array.from({ length: anio - 2017 }, (_, i) => 2018 + i);
 const res = {}, log = [];
 for (const a of anios) {
   for (const nombre of [`imports_${a}_M.zip`]) {
@@ -27,12 +27,12 @@ for (const a of anios) {
       await writeFile(z, Buffer.from(await r.arrayBuffer()));
       const sub = new URL(`${a}/`, dir).pathname; await mkdir(sub, { recursive: true }); execFileSync("unzip", ["-o", "-q", z, "-d", sub]);
       const fs = (await readdir(sub)).filter(f => /\.(csv|txt)$/i.test(f));
-      for (const f of fs) {
+      for (const f of fs.filter(x => !/itot/i.test(x))) {
         let t = (await readFile(sub + f)).toString("latin1"); const ls = t.split(/\r?\n/).filter(Boolean);
         const sep = [";", ",", "\t", "|"].sort((x, y) => ls[0].split(y).length - ls[0].split(x).length)[0];
         const cab = ls[0].split(sep).map(c => c.replace(/"/g, "").trim().toLowerCase());
         const ic = (...ns) => cab.findIndex(c => ns.some(n => c === n || c.includes(n)));
-        const iN = ic("ncm", "posic"), iM = ic("mes", "month"), iA = ic("año", "anio", "year"), iV = ic("cif", "valor", "fob", "u$s", "usd"), iK = ic("pnet", "peso", "kg", "kilo");
+        const iN = ic("ncm", "posic"), iM = ic("mes", "month"), iA = ic("año", "anio", "year"), iV = [ic("cif"), ic("fob"), ic("valor", "usd")].find(i => i >= 0) ?? -1, iK = ic("pnet", "peso", "kg", "kilo");
         log.push({ archivo: `${a}/${f}`, filas: ls.length, cabecera: cab, columnas: { ncm: iN, mes: iM, anio: iA, valor: iV, kg: iK }, muestra: ls.slice(1, 3) });
         if (iN < 0 || iV < 0) continue;
         for (const l of ls.slice(1)) {

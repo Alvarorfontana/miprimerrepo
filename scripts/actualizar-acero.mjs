@@ -6,10 +6,11 @@ import { execFileSync } from "node:child_process";
 const UA = { "User-Agent": "observatorio-uom/1.0 (github.com/Alvarorfontana)" };
 const dir = new URL("../data/fuentes/acero/", import.meta.url); await mkdir(dir, { recursive: true });
 const MES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
-let media = [];
-for (let pg = 1; pg <= 6; pg++) {
-  try { const r = await fetch(`https://www.acero.org.ar/wp-json/wp/v2/media?search=INFORME%20MENSUAL&per_page=100&page=${pg}&mime_type=application/pdf&orderby=date`, { headers: UA }); if (!r.ok) break; const j = await r.json(); if (!j.length) break; media.push(...j); } catch { break; }
+let media = []; const diag = [];
+for (const q of ["INFORME-MENSUAL", "INFORME MENSUAL", "informe mensual"]) for (let pg = 1; pg <= 5; pg++) {
+  try { const r = await fetch(`https://www.acero.org.ar/wp-json/wp/v2/media?search=${encodeURIComponent(q)}&per_page=50&page=${pg}`, { headers: UA }); diag.push(`${q} p${pg}: ${r.status}`); if (!r.ok) break; const j = await r.json(); if (!j.length) break; media.push(...j.filter(x => /\.pdf$/i.test(x.source_url || ""))); } catch (e) { diag.push(`${q}: ${e.message}`); break; }
 }
+media = [...new Map(media.map(m => [m.source_url, m])).values()];
 console.log(`Informes encontrados: ${media.length}`);
 let prev = {}; try { prev = JSON.parse(await readFile(new URL("../data/acero-caa.json", import.meta.url), "utf8")).meses || {}; } catch {}
 const meses = { ...prev }, muestras = [];
@@ -37,5 +38,5 @@ for (const m of media) {
   } catch (e) { muestras.push({ nombre, error: e.message }); }
 }
 await writeFile(new URL("../data/acero-caa.json", import.meta.url), JSON.stringify({ actualizado: new Date().toISOString().slice(0, 10), fuente: "Cámara Argentina del Acero, informes mensuales", unidad: "toneladas", meses }, null, 1));
-await writeFile(new URL("muestras.json", dir), JSON.stringify(muestras.slice(0, 12), null, 1));
+await writeFile(new URL("muestras.json", dir), JSON.stringify({ diag, encontrados: media.length, muestras: muestras.slice(0, 8) }, null, 1));
 console.log(`Listo: ${Object.keys(meses).length} meses. Sin leer: ${muestras.length}.`);
