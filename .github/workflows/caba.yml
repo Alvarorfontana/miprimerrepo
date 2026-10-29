@@ -1,0 +1,42 @@
+name: Datos de la Ciudad de Buenos Aires
+
+on:
+  schedule:
+    - cron: "41 13 7 * *"      # día 7 de cada mes
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/caba.yml"
+      - "scripts/actualizar-caba.mjs"
+      - "scripts/actualizar-barrios.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-caba
+  cancel-in-progress: false
+
+jobs:
+  caba:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Barrios
+        run: node scripts/actualizar-barrios.mjs
+        continue-on-error: true
+      - name: Habilitaciones metalúrgicas (AGC)
+        run: node scripts/actualizar-caba.mjs
+        continue-on-error: true
+      - name: Guardar cambios
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Datos de la Ciudad de Buenos Aires"
+          git pull --rebase -X theirs || true
+          git push
