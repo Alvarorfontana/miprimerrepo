@@ -12,7 +12,7 @@ for (const f of conf.fuentes) {
   const reg = { clave: f.clave, nombre: f.nombre, pagina: f.pagina, archivos: [], errores: [] };
   try {
     const html = await (await fetch(f.pagina, { headers: { "User-Agent": "observatorio-uom" } })).text();
-    const links = [...new Set([...html.matchAll(/href="([^"]+\.(?:xlsx|xls|csv|zip))"/gi)].map(m => new URL(m[1], f.pagina).href))]
+    const links = [...new Set([...html.matchAll(/href="([^"]+\.(?:xlsx|xls|csv|zip))"/gi)].map(m => { const h = m[1].slice(Math.max(0, m[1].lastIndexOf("http"))); return new URL(h, f.pagina).href; }))]
       .filter(u => f.patrones.some(p => u.toLowerCase().includes(p.toLowerCase())));
     if (!links.length) reg.errores.push("No se encontraron archivos que coincidan en la página");
     await mkdir(new URL(`${f.clave}/`, base), { recursive: true });

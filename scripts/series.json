@@ -1,36 +1,69 @@
 {
+  "nota": "Series fijadas por id. Las de capacidad metalmecánica, automotriz y maquinaria agropecuaria vienen vacías en la API oficial (octubre 2026): se cargan a mano desde el informe del INDEC.",
   "series": [
     {
       "clave": "auto-uci-general",
-      "nombre": "INDEC · Capacidad usada, nivel general (API)",
+      "nombre": "INDEC · Capacidad usada, nivel general de la industria",
       "unidad": "%",
       "organismo": "INDEC",
-      "busqueda": "utilizacion capacidad instalada nivel general",
-      "debeIncluir": ["capacidad", "nivel general"]
-    },
-    {
-      "clave": "auto-uci-metalmecanica",
-      "nombre": "INDEC · Capacidad usada, metalmecánica sin automotriz (API)",
-      "unidad": "%",
-      "organismo": "INDEC",
-      "busqueda": "utilizacion capacidad instalada metalmecanica",
-      "debeIncluir": ["capacidad", "metalmec"]
+      "id": "31.3_UNG_2004_M_18",
+      "ultimos": 36
     },
     {
       "clave": "auto-uci-metalicas",
-      "nombre": "INDEC · Capacidad usada, metálicas básicas (API)",
+      "nombre": "INDEC · Capacidad usada, metales básicos",
       "unidad": "%",
       "organismo": "INDEC",
-      "busqueda": "utilizacion capacidad instalada industrias metalicas basicas",
-      "debeIncluir": ["capacidad", "met"]
+      "id": "31.3_UIMB_2004_M_33",
+      "ultimos": 36
     },
     {
-      "clave": "auto-ipi-manufacturero",
-      "nombre": "INDEC · Índice de producción industrial manufacturero (API)",
+      "clave": "auto-ipi-siderurgia",
+      "nombre": "INDEC · IPI industria siderúrgica",
       "unidad": "índice",
       "organismo": "INDEC",
-      "busqueda": "indice produccion industrial manufacturero nivel general",
-      "debeIncluir": ["manufacturero"]
+      "id": "453.2_INDUSTRIA_ICA_0_0_21_100",
+      "ultimos": 36
+    },
+    {
+      "clave": "auto-ipi-fundicion",
+      "nombre": "INDEC · IPI fundición de metales",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "id": "453.2_FUNDICION_LES_0_0_17_29",
+      "ultimos": 36
+    },
+    {
+      "clave": "auto-ipi-productos-metal",
+      "nombre": "INDEC · IPI productos de metal",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "id": "453.2_PRODUCTOS_TAL_0_0_15_15",
+      "ultimos": 36
+    },
+    {
+      "clave": "auto-ipi-maquinaria",
+      "nombre": "INDEC · IPI maquinaria y equipo",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "id": "453.2_MAQUINARIAIPO_0_0_17_14",
+      "ultimos": 36
+    },
+    {
+      "clave": "auto-ipi-electricos",
+      "nombre": "INDEC · IPI equipos y aparatos eléctricos",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "id": "453.2_EQUIPOS_ELCOS_0_0_18_68",
+      "ultimos": 36
+    },
+    {
+      "clave": "auto-ipi-autopartes",
+      "nombre": "INDEC · IPI autopartes",
+      "unidad": "índice",
+      "organismo": "INDEC",
+      "id": "453.2_AUTOPARTESTES_0_0_10_100",
+      "ultimos": 36
     }
   ]
 }

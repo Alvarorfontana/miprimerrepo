@@ -29,7 +29,7 @@ const res = await fetch(URL_CSV);
 if (!res.ok) throw new Error(`No se pudo descargar: HTTP ${res.status}`);
 
 const dec = new TextDecoder("utf-8");
-let resto = "", cab = null, idx = {}, filas = [], total = 0;
+let resto = "", cab = null, idx = {}, filas = [], total = 0; const vistos = new Set();
 const buscar = (nombres) => cab.findIndex(c => nombres.some(n => c.toLowerCase().trim() === n));
 
 for await (const trozo of res.body) {
@@ -57,8 +57,9 @@ for await (const trozo of res.body) {
     if (!rama) continue;
     const lat = +v[idx.lat], lon = +v[idx.lon];
     if (!isFinite(lat) || !isFinite(lon) || lat === 0) continue;
-    filas.push([+lat.toFixed(4), +lon.toFixed(4), clae, idx.empleo >= 0 ? v[idx.empleo] : null,
-      idx.prov >= 0 ? v[idx.prov] : null, idx.depto >= 0 ? v[idx.depto] : null]);
+    const fila = [+lat.toFixed(4), +lon.toFixed(4), clae, idx.empleo >= 0 ? v[idx.empleo] : null,
+      idx.prov >= 0 ? v[idx.prov] : null, idx.depto >= 0 ? v[idx.depto] : null];
+    const k = fila.join("|"); if (vistos.has(k)) continue; vistos.add(k); filas.push(fila);
   }
 }
 

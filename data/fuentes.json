@@ -2,22 +2,17 @@
   "fuentes": [
     {
       "clave": "uom",
-      "nombre": "Seccionales y delegados UOM",
-      "tipo": "Carga propia",
-      "conexion": "Formulario del portal (Supabase, gratuito)",
+      "nombre": "Equipo del observatorio",
+      "tipo": "Producción propia",
+      "conexion": "Relevamiento de prensa, informes de empresas y datos aportados por la UOM",
       "frecuencia": "Mensual y por hecho",
       "estado": "listo",
       "nivel": "Planta",
       "variables": [
-        "Dotación total",
-        "Producción del mes y unidad",
-        "Capacidad instalada usada (%)",
-        "Horas trabajadas",
-        "Suspendidos",
-        "Contratados y eventuales",
-        "Despidos, suspensiones, cierres y retiros (hechos con fecha y fuente)",
+        "Despidos, suspensiones, cierres y retiros, con fecha y fuente",
+        "Dotación, capacidad y producción por planta cuando hay dato",
         "Conflictos y medidas de fuerza",
-        "Observaciones de la planta"
+        "Datos que la UOM aporte en planillas"
       ]
     },
     {
@@ -33,8 +28,7 @@
         "Latitud y longitud",
         "Actividad CLAE a 6 dígitos",
         "Tramo de empleo",
-        "Provincia y departamento",
-        "Proporción de mujeres"
+        "Provincia y departamento"
       ]
     },
     {
@@ -148,9 +142,9 @@
       "clave": "osm",
       "nombre": "OpenStreetMap",
       "tipo": "Datos abiertos",
-      "conexion": "Consulta Overpass para ubicar plantas con precisión",
-      "frecuencia": "A demanda",
-      "estado": "próximo",
+      "conexion": "Consulta automática a Overpass (GitHub Actions)",
+      "frecuencia": "Dos veces por mes",
+      "estado": "automático",
       "nivel": "Edificio o predio industrial",
       "variables": [
         "Nombre y polígono de predios industriales",
