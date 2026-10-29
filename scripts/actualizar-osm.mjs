@@ -5,24 +5,40 @@ import { writeFile } from "node:fs/promises";
 
 const SERVIDORES = ["https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter", "https://overpass.private.coffee/api/interpreter"];
 const CLAVES = "metal|acer[oí]a|sider|fundic|tubos|forja|autopart|matricer|Acindar|Ternium|Tenaris|Siderca|Aluar|Gerdau|Pauny|Metalfor|Agrometal|Whirlpool|Newsan|Mirgor|IMPSA|Sidersa|laminad|galvaniz|carrocer|acoplad|maquinaria agr";
-const q = `[out:json][timeout:180];area["ISO3166-1"="AR"][admin_level=2]->.a;(
-nwr["industrial"~"steel|metal|foundry|machine|automotive|machinery"](area.a);
-nwr["man_made"="works"]["product"~"steel|metal|alumin|pipe|tube|machin|vehicle|auto",i](area.a);
-nwr["man_made"="works"]["name"~"${CLAVES}",i](area.a);
-nwr["landuse"="industrial"]["name"~"${CLAVES}",i](area.a);
-nwr["building"="industrial"]["name"~"${CLAVES}",i](area.a);
-);out center tags;`;
+const AREA = `area["ISO3166-1"="AR"][admin_level=2]->.a;`;
+const PARTES = [
+  `nwr["industrial"~"steel|metal|foundry|machine|automotive|machinery"](area.a);`,
+  `nwr["man_made"="works"]["product"~"steel|metal|alumin|pipe|tube|machin|vehicle|auto",i](area.a);`,
+  `nwr["man_made"="works"]["name"~"${CLAVES}",i](area.a);`,
+  `nwr["landuse"="industrial"]["name"~"${CLAVES}",i](area.a);`,
+  `nwr["building"="industrial"]["name"~"${CLAVES}",i](area.a);`
+];
+const espera = ms => new Promise(r => setTimeout(r, ms));
 
-let datos = null, usado = null;
-for (const url of SERVIDORES) {
-  try {
-    const r = await fetch(url, { method: "POST", body: new URLSearchParams({ data: q }),
-      headers: { "User-Agent": "observatorio-uom/1.0 (github.com/Alvarorfontana)", "Accept": "application/json" } });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    datos = await r.json(); usado = url; break;
-  } catch (e) { console.warn(`Falló ${url}: ${e.message}`); }
+async function consultar(parte) {
+  const q = `[out:json][timeout:240];${AREA}(${parte});out center tags;`;
+  for (const url of SERVIDORES) {
+    try {
+      const r = await fetch(url, { method: "POST", body: new URLSearchParams({ data: q }),
+        headers: { "User-Agent": "observatorio-uom/1.0 (github.com/Alvarorfontana)", "Accept": "application/json" } });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const d = await r.json();
+      if (d.remark && /error|timed out|runtime/i.test(d.remark)) throw new Error(d.remark.slice(0, 120));
+      console.log(`${url}: ${d.elements.length} elementos`);
+      return { elementos: d.elements, url };
+    } catch (e) { console.warn(`Falló ${url}: ${e.message}`); await espera(5000); }
+  }
+  return null;
 }
-if (!datos) { console.log("Ningún servidor de Overpass respondió; se mantiene el archivo anterior."); process.exit(0); }
+
+const elementos = [], usados = new Set();
+for (const parte of PARTES) {
+  const r = await consultar(parte);
+  if (r) { elementos.push(...r.elementos); usados.add(r.url); }
+  await espera(3000);
+}
+if (!elementos.length) { console.log("Overpass no devolvió resultados; se mantiene el archivo anterior."); process.exit(0); }
+const datos = { elements: elementos }, usado = [...usados].join(", ");
 
 const vistos = new Set();
 const plantas = datos.elements.map(e => {
