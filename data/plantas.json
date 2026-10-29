@@ -1,6 +1,6 @@
 {
  "actualizado": "2026-10-28",
- "nota": "Plantas de referencia. Ubicación aproximada por localidad; seccional a confirmar por la UOM.",
+ "nota": "Plantas de referencia. Ubicación aproximada por localidad; seccional y convenio a confirmar por la UOM.",
  "plantas": [
   {
    "id": "ternium-san-nicolas",
@@ -13,9 +13,10 @@
    "seccional": "San Nicolás",
    "lat": -33.33,
    "lon": -60.21,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "ternium-ensenada",
@@ -28,9 +29,10 @@
    "seccional": "La Plata",
    "lat": -34.86,
    "lon": -57.91,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "ternium-canning",
@@ -43,9 +45,10 @@
    "seccional": "Lomas de Zamora",
    "lat": -34.86,
    "lon": -58.5,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "acindar-villa-constitucion",
@@ -58,9 +61,10 @@
    "seccional": "Villa Constitución",
    "lat": -33.23,
    "lon": -60.33,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "acindar-la-tablada",
@@ -73,9 +77,10 @@
    "seccional": "La Matanza",
    "lat": -34.69,
    "lon": -58.53,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "acindar-villa-mercedes",
@@ -88,9 +93,10 @@
    "seccional": "Villa Mercedes",
    "lat": -33.67,
    "lon": -65.46,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "tenaris-siderca-campana",
@@ -103,9 +109,10 @@
    "seccional": "Campana",
    "lat": -34.17,
    "lon": -58.96,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "tenaris-siat-valentin-alsina",
@@ -118,9 +125,10 @@
    "seccional": "Avellaneda",
    "lat": -34.67,
    "lon": -58.41,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "gerdau-perez",
@@ -133,9 +141,10 @@
    "seccional": "Rosario",
    "lat": -33.0,
    "lon": -60.77,
-   "convenio": "CCT 260/75",
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "aluar-puerto-madryn",
@@ -148,9 +157,10 @@
    "seccional": "Puerto Madryn",
    "lat": -42.77,
    "lon": -65.04,
-   "convenio": "CCT 260/75",
+   "convenio": "A confirmar",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "impsa-mendoza",
@@ -163,9 +173,10 @@
    "seccional": "Mendoza",
    "lat": -32.93,
    "lon": -68.85,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "pauny-las-varillas",
@@ -178,9 +189,10 @@
    "seccional": "San Francisco",
    "lat": -31.87,
    "lon": -62.72,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "metalfor-marcos-juarez",
@@ -193,9 +205,10 @@
    "seccional": "Marcos Juárez",
    "lat": -32.7,
    "lon": -62.1,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "agrometal-monte-maiz",
@@ -208,9 +221,10 @@
    "seccional": "Marcos Juárez",
    "lat": -33.21,
    "lon": -62.6,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "whirlpool-pilar",
@@ -223,9 +237,10 @@
    "seccional": "Campana",
    "lat": -34.45,
    "lon": -58.91,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "newsan-ushuaia",
@@ -238,9 +253,10 @@
    "seccional": "Ushuaia",
    "lat": -54.8,
    "lon": -68.3,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "mirgor-rio-grande",
@@ -253,9 +269,10 @@
    "seccional": "Río Grande",
    "lat": -53.79,
    "lon": -67.7,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   },
   {
    "id": "dana-san-luis",
@@ -268,9 +285,10 @@
    "seccional": "San Luis",
    "lat": -33.3,
    "lon": -66.34,
-   "convenio": "CCT 260/75",
+   "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
-   "seccional_confirmada": false
+   "seccional_confirmada": false,
+   "convenio_confirmado": false
   }
  ]
 }
