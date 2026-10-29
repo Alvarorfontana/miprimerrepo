@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 12 5,20 * *"   # días 5 y 20 de cada mes, 9:17 hora argentina
   workflow_dispatch: {}        # botón "Run workflow" para correrlo a mano
+  push:                        # también corre cuando cambian el robot o sus scripts
+    branches: [main]
+    paths:
+      - ".github/workflows/actualizar-datos.yml"
+      - "scripts/**"
 
 permissions:
   contents: write
