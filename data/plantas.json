@@ -4,7 +4,7 @@
  "plantas": [
   {
    "id": "ternium-san-nicolas",
-   "nombre": "Ternium · Planta General Savio",
+   "nombre": "Ternium · Planta General Savio (Ramallo)",
    "empresa": "Ternium Argentina",
    "rama": "Siderurgia",
    "provincia": "Buenos Aires",
@@ -16,7 +16,18 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "procesos": "Dos altos hornos, acería y laminación en caliente",
+   "referencias": [
+    {
+     "variable": "Procesos",
+     "valor": "Acero en caliente a partir de dos altos hornos; funcionan también Sidercrom y Serviacero III",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+    }
+   ]
   },
   {
    "id": "ternium-ensenada",
@@ -32,7 +43,18 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "procesos": "Laminación en frío, con insumos de la planta de Ramallo",
+   "referencias": [
+    {
+     "variable": "Procesos",
+     "valor": "Elabora acero laminado en frío para mercado interno y exportación",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+    }
+   ]
   },
   {
    "id": "ternium-canning",
@@ -48,7 +70,17 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Centro productivo",
+     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+    }
+   ]
   },
   {
    "id": "acindar-villa-constitucion",
@@ -112,7 +144,18 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "procesos": "Acería eléctrica y fabricación de tubos sin costura",
+   "referencias": [
+    {
+     "variable": "Energía",
+     "valor": "Dos parques eólicos abastecen casi toda la energía de la acería eléctrica de Campana",
+     "unidad": "",
+     "periodo": "2025",
+     "fuente": "Tenaris, Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
+    }
+   ]
   },
   {
    "id": "tenaris-siat-valentin-alsina",
@@ -128,7 +171,34 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "procesos": "Fabricación de tubos con costura",
+   "referencias": [
+    {
+     "variable": "Dotación antes del recorte",
+     "valor": 350,
+     "unidad": "operarios",
+     "periodo": "2026-06",
+     "fuente": "El Cronista",
+     "url": "https://www.cronista.com/negocios/tenaris-reestructura-su-planta-de-valentin-alsina-recorta-43-del-personal/"
+    },
+    {
+     "variable": "Despidos",
+     "valor": 150,
+     "unidad": "operarios, 43% de la dotación",
+     "periodo": "2026-06",
+     "fuente": "El Cronista",
+     "url": "https://www.cronista.com/negocios/tenaris-reestructura-su-planta-de-valentin-alsina-recorta-43-del-personal/"
+    },
+    {
+     "variable": "Contexto",
+     "valor": "Funcionaba con suspensiones desde abril; perdió la licitación del gasoducto de GNL de Southern Energy, adjudicada a Welspun",
+     "unidad": "",
+     "periodo": "2026-06",
+     "fuente": "El Cronista",
+     "url": "https://www.cronista.com/negocios/tenaris-reestructura-su-planta-de-valentin-alsina-recorta-43-del-personal/"
+    }
+   ]
   },
   {
    "id": "gerdau-perez",
@@ -289,6 +359,58 @@
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
    "convenio_confirmado": false
+  },
+  {
+   "id": "ternium-haedo",
+   "nombre": "Ternium · Haedo",
+   "empresa": "Ternium Argentina",
+   "rama": "Siderurgia",
+   "provincia": "Buenos Aires",
+   "partido": "Morón",
+   "localidad": "Haedo",
+   "seccional": "",
+   "lat": -34.645,
+   "lon": -58.593,
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false,
+   "referencias": [
+    {
+     "variable": "Centro productivo",
+     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+    }
+   ]
+  },
+  {
+   "id": "ternium-bosques",
+   "nombre": "Ternium · Bosques",
+   "empresa": "Ternium Argentina",
+   "rama": "Siderurgia",
+   "provincia": "Buenos Aires",
+   "partido": "Florencio Varela",
+   "localidad": "Bosques",
+   "seccional": "",
+   "lat": -34.818,
+   "lon": -58.223,
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false,
+   "referencias": [
+    {
+     "variable": "Centro productivo",
+     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+    }
+   ]
   }
  ]
 }

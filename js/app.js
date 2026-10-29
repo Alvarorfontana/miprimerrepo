@@ -30,11 +30,11 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu;
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || [];
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -258,6 +258,9 @@ function ficha() {
   const st = estado(p), reps = reportesDe(p.id).slice(0, 6), evs = eventosDe(p.id).slice(0, 6);
   $("ficha").innerHTML = `<div class="ficha"><div class="row" style="justify-content:space-between"><h4 style="margin:0;font-size:18px">${esc(p.nombre)}</h4><span class="pill" style="background:${cssv(ESTADOS[st][1])}">${ESTADOS[st][0]}</span></div>
    <p class="small muted" style="margin:3px 0 8px">${esc(p.empresa)} · ${esc(p.rama)} · ${esc([p.localidad, p.partido, p.provincia].filter(Boolean).join(", "))} · Seccional ${esc(p.seccional || "sin asignar")}${p.convenio ? " · " + esc(p.convenio) : ""}${p.ubicacion === "aproximada" ? " · ubicación aproximada" : ""}</p>
+   ${p.procesos ? `<p class="small" style="margin:0 0 6px"><b>Procesos:</b> ${esc(p.procesos)}</p>` : ""}
+   ${(p.referencias || []).length ? `<h4>Datos de referencia</h4><ul class="small" style="margin:4px 0 8px;padding-left:18px">${p.referencias.map(r => `<li><b>${esc(r.variable)}:</b> ${typeof r.valor === "number" ? fmt(r.valor) : esc(r.valor)} ${esc(r.unidad || "")} <span class="muted">(${esc(r.periodo)} · <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.fuente)}</a>)</span></li>`).join("")}</ul>` : ""}
+   ${(() => { const e = (S.empresas || []).find(e => e.plantas.includes(p.id)); return e ? `<details class="small" style="margin-bottom:8px"><summary><b>Datos de la empresa: ${esc(e.nombre)}</b></summary><ul style="margin:4px 0;padding-left:18px">${e.datos.map(r => `<li>${esc(r.variable)}: ${typeof r.valor === "number" ? dec(r.valor, r.valor % 1 ? 1 : 0) : esc(r.valor)} ${esc(r.unidad || "")} <span class="muted">(${esc(r.periodo)} · <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.fuente)}</a>)</span></li>`).join("")}</ul></details>` : ""; })()}
    ${reps.length ? `<div class="tblwrap"><table><thead><tr><th>Mes</th><th class="n">Dotación</th><th class="n">Cap.</th><th class="n">Susp.</th><th class="n">Producción</th></tr></thead><tbody>${reps.map(r => `<tr><td class="n">${esc(r.periodo)}</td><td class="n">${fmt(r.dotacion)}</td><td class="n">${r.capacidad != null ? r.capacidad + "%" : "—"}</td><td class="n">${fmt(r.suspendidos)}</td><td class="n">${r.produccion != null ? fmt(r.produccion) + " " + esc(r.unidad || "") : "—"}</td></tr>`).join("")}</tbody></table></div>` : `<p class="small muted">Sin reportes mensuales todavía.</p>`}
    ${evs.length ? `<h4>Hechos</h4><ul class="small" style="margin:4px 0;padding-left:18px">${evs.map(e => `<li><span class="muted">${esc(e.fecha.split("-").reverse().join("/"))}</span> · ${esc(TIPOS[e.tipo] || e.tipo)}${e.cantidad ? ` · ${fmt(e.cantidad)} trab.` : ""}${e.url ? ` · <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.fuente)}</a>` : ""}${e.nota ? `<div class="muted">${esc(e.nota)}</div>` : ""}</li>`).join("")}</ul>` : ""}
    <div class="row" style="margin-top:8px"><button class="chip" type="button" id="irRep">Cargar reporte de esta planta</button><button class="chip" type="button" id="irEv">Cargar hecho</button></div></div>`;
