@@ -20,6 +20,7 @@ Sitio estático (HTML, CSS y JavaScript sin compilación) más dos scripts que a
 | `data/indicadores.json` | Series ADIMRA, INDEC y Cámara del Acero cargadas con su fuente | Formulario del portal |
 | `data/indicadores-auto.json` | Series del INDEC desde la API de Series de Tiempo | Automático (GitHub Actions) |
 | `data/establecimientos.json` | Establecimientos metalúrgicos georreferenciados del CEP XXI | Automático (GitHub Actions) |
+| `data/fuentes/` | Excel y CSV oficiales sin modificar (OEDE, conflictividad, EIL, SIPA) | Automático (GitHub Actions) |
 | `data/fuentes.json` | Catálogo de fuentes y variables del modelo de datos | Manual |
 
 El modelo de datos completo está en [`docs/modelo-de-datos.md`](docs/modelo-de-datos.md).

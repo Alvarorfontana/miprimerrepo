@@ -1,0 +1,29 @@
+{
+  "nota": "Páginas oficiales de las que el robot descarga los archivos (Excel y CSV) que coinciden con cada patrón. Se buscan los enlaces en la página para no depender de nombres de archivo que cambian.",
+  "fuentes": [
+    {
+      "clave": "oede-provincial",
+      "nombre": "OEDE · Empleo, remuneraciones y empresas por provincia y rama (2 y 4 dígitos)",
+      "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/oede-estadisticas-provinciales",
+      "patrones": ["provinciales_serie_empleo_trimestral_2dig", "provinciales_serie_empleo_trimestral_4dig", "provinciales_serie_remuneraciones_mensual_4dig", "provinciales_serie_empresas3", "provinciales_serie_empresas2", "departamento_series_empleo_y_salarios_mensual_sector"]
+    },
+    {
+      "clave": "conflictividad",
+      "nombre": "Ministerio de Capital Humano · Evolución mensual de la conflictividad laboral",
+      "pagina": "https://www.argentina.gob.ar/node/142148",
+      "patrones": ["conflictividad"]
+    },
+    {
+      "clave": "eil",
+      "nombre": "Encuesta de Indicadores Laborales (EIL) · altas, bajas y expectativas por rama",
+      "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
+      "patrones": ["eil", "indicadores_laborales"]
+    },
+    {
+      "clave": "sipa",
+      "nombre": "SIPA · Situación y evolución del trabajo registrado",
+      "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/situacion-y-evolucion-del-trabajo-registrado",
+      "patrones": ["trabajoregistrado", "trabajo_registrado"]
+    }
+  ]
+}

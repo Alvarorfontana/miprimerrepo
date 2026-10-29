@@ -8,7 +8,17 @@
       "frecuencia": "Mensual y por hecho",
       "estado": "listo",
       "nivel": "Planta",
-      "variables": ["Dotación total", "Producción del mes y unidad", "Capacidad instalada usada (%)", "Horas trabajadas", "Suspendidos", "Contratados y eventuales", "Despidos, suspensiones, cierres y retiros (hechos con fecha y fuente)", "Conflictos y medidas de fuerza", "Observaciones de la planta"]
+      "variables": [
+        "Dotación total",
+        "Producción del mes y unidad",
+        "Capacidad instalada usada (%)",
+        "Horas trabajadas",
+        "Suspendidos",
+        "Contratados y eventuales",
+        "Despidos, suspensiones, cierres y retiros (hechos con fecha y fuente)",
+        "Conflictos y medidas de fuerza",
+        "Observaciones de la planta"
+      ]
     },
     {
       "clave": "cep-establecimientos",
@@ -19,7 +29,13 @@
       "estado": "automático",
       "nivel": "Establecimiento georreferenciado, sin nombre de empresa",
       "url": "https://www.datos.gob.ar/dataset/produccion-distribucion-geografica-establecimientos-productivos",
-      "variables": ["Latitud y longitud", "Actividad CLAE a 6 dígitos", "Tramo de empleo", "Provincia y departamento", "Proporción de mujeres"]
+      "variables": [
+        "Latitud y longitud",
+        "Actividad CLAE a 6 dígitos",
+        "Tramo de empleo",
+        "Provincia y departamento",
+        "Proporción de mujeres"
+      ]
     },
     {
       "clave": "indec-series",
@@ -30,18 +46,59 @@
       "estado": "automático",
       "nivel": "Nacional, por bloque industrial",
       "url": "https://datosgobar.github.io/series-tiempo-ar-api/",
-      "variables": ["Utilización de capacidad instalada: metalmecánica, metálicas básicas, automotriz y nivel general", "Índice de producción industrial manufacturero (IPI) por rama", "Variación interanual y mensual"]
+      "variables": [
+        "Utilización de capacidad instalada: metalmecánica, metálicas básicas, automotriz y nivel general",
+        "Índice de producción industrial manufacturero (IPI) por rama",
+        "Variación interanual y mensual"
+      ]
     },
     {
-      "clave": "cep-empleo",
-      "nombre": "CEP XXI · Empleo y salarios registrados por sector y provincia (SIPA)",
+      "clave": "oede",
+      "nombre": "OEDE · Observatorio de Empleo y Dinámica Empresarial (Ministerio de Trabajo)",
       "tipo": "Datos abiertos",
-      "conexion": "Descarga de CSV; conector a configurar",
-      "frecuencia": "Mensual, con 4 a 6 meses de rezago",
-      "estado": "próximo",
-      "nivel": "Provincia y departamento, por rama",
-      "url": "https://www.argentina.gob.ar/produccion/cep/tableros-interactivos",
-      "variables": ["Puestos asalariados registrados por rama y provincia", "Salario medio por rama y departamento", "Cantidad de empleadores"]
+      "conexion": "Descarga automática de Excel y CSV oficiales (GitHub Actions)",
+      "frecuencia": "Trimestral, mensual y anual según la serie",
+      "estado": "automático",
+      "nivel": "Provincia, departamento y rama a 4 dígitos",
+      "url": "https://www.argentina.gob.ar/trabajo/estadisticas/oede-estadisticas-provinciales",
+      "variables": [
+        "Empleo registrado por provincia y rama (2 y 4 dígitos), trimestral",
+        "Remuneraciones por rama, mensual",
+        "Cantidad de empresas por rama, con aperturas y cierres",
+        "Empleo y salarios en unos 500 departamentos desde 2019, por sector y tamaño de empresa"
+      ]
+    },
+    {
+      "clave": "conflictividad",
+      "nombre": "Ministerio de Capital Humano · Conflictividad laboral",
+      "tipo": "Datos abiertos",
+      "conexion": "Descarga automática del Excel oficial (GitHub Actions)",
+      "frecuencia": "Mensual",
+      "estado": "automático",
+      "nivel": "Nacional, sector público y privado, por rama",
+      "url": "https://www.argentina.gob.ar/node/142148",
+      "variables": [
+        "Conflictos con paro",
+        "Huelguistas",
+        "Jornadas individuales no trabajadas",
+        "Apertura por sector y rama de actividad"
+      ]
+    },
+    {
+      "clave": "eil",
+      "nombre": "Encuesta de Indicadores Laborales (EIL)",
+      "tipo": "Encuesta mensual oficial",
+      "conexion": "Descarga automática (GitHub Actions)",
+      "frecuencia": "Mensual",
+      "estado": "automático",
+      "nivel": "Aglomerados urbanos, por rama",
+      "url": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
+      "variables": [
+        "Altas y bajas de personal",
+        "Tasa de rotación",
+        "Expectativas de las empresas sobre su dotación",
+        "Apertura de la industria manufacturera"
+      ]
     },
     {
       "clave": "adimra",
@@ -51,7 +108,14 @@
       "frecuencia": "Mensual",
       "estado": "manual",
       "nivel": "Nacional, por provincia y por cadena de valor",
-      "variables": ["Actividad metalúrgica (variación interanual y mensual)", "Capacidad instalada usada", "Empleo del sector", "Actividad por provincia (Buenos Aires, Córdoba, Santa Fe, Entre Ríos, Mendoza)", "Actividad por cadena de valor", "Expectativas de las empresas"]
+      "variables": [
+        "Actividad metalúrgica (variación interanual y mensual)",
+        "Capacidad instalada usada",
+        "Empleo del sector",
+        "Actividad por provincia (Buenos Aires, Córdoba, Santa Fe, Entre Ríos, Mendoza)",
+        "Actividad por cadena de valor",
+        "Expectativas de las empresas"
+      ]
     },
     {
       "clave": "caa",
@@ -61,7 +125,11 @@
       "frecuencia": "Mensual",
       "estado": "manual",
       "nivel": "Nacional",
-      "variables": ["Acero crudo (t)", "Hierro primario (t)", "Laminados en caliente y en frío (t)"]
+      "variables": [
+        "Acero crudo (t)",
+        "Hierro primario (t)",
+        "Laminados en caliente y en frío (t)"
+      ]
     },
     {
       "clave": "comex",
@@ -71,7 +139,10 @@
       "frecuencia": "Mensual",
       "estado": "próximo",
       "nivel": "Producto",
-      "variables": ["Importaciones de productos metalúrgicos que compiten con la producción local (valor y toneladas)", "Origen de las importaciones"]
+      "variables": [
+        "Importaciones de productos metalúrgicos que compiten con la producción local (valor y toneladas)",
+        "Origen de las importaciones"
+      ]
     },
     {
       "clave": "osm",
@@ -81,16 +152,40 @@
       "frecuencia": "A demanda",
       "estado": "próximo",
       "nivel": "Edificio o predio industrial",
-      "variables": ["Nombre y polígono de predios industriales", "Parques industriales"]
+      "variables": [
+        "Nombre y polígono de predios industriales",
+        "Parques industriales"
+      ]
     }
   ],
   "ramasClae": [
-    {"prefijo": "24", "rama": "Metales básicos (siderurgia, aluminio, fundición)"},
-    {"prefijo": "25", "rama": "Productos de metal (estructuras, forja, herramientas)"},
-    {"prefijo": "26", "rama": "Electrónica"},
-    {"prefijo": "27", "rama": "Equipo eléctrico y línea blanca"},
-    {"prefijo": "28", "rama": "Maquinaria y equipo (incluye maquinaria agrícola)"},
-    {"prefijo": "293", "rama": "Autopartes"},
-    {"prefijo": "30", "rama": "Otro equipo de transporte"}
+    {
+      "prefijo": "24",
+      "rama": "Metales básicos (siderurgia, aluminio, fundición)"
+    },
+    {
+      "prefijo": "25",
+      "rama": "Productos de metal (estructuras, forja, herramientas)"
+    },
+    {
+      "prefijo": "26",
+      "rama": "Electrónica"
+    },
+    {
+      "prefijo": "27",
+      "rama": "Equipo eléctrico y línea blanca"
+    },
+    {
+      "prefijo": "28",
+      "rama": "Maquinaria y equipo (incluye maquinaria agrícola)"
+    },
+    {
+      "prefijo": "293",
+      "rama": "Autopartes"
+    },
+    {
+      "prefijo": "30",
+      "rama": "Otro equipo de transporte"
+    }
   ]
 }

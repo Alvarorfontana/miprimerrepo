@@ -22,6 +22,9 @@ jobs:
       - name: Establecimientos metalúrgicos (CEP XXI)
         run: node scripts/actualizar-establecimientos.mjs
         continue-on-error: true
+      - name: Archivos oficiales (OEDE, conflictividad, EIL, SIPA)
+        run: node scripts/descargar-fuentes.mjs
+        continue-on-error: true
       - name: Guardar cambios
         run: |
           git config user.name "observatorio-bot"
