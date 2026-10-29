@@ -17,15 +17,71 @@
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
    "convenio_confirmado": false,
-   "procesos": "Dos altos hornos, acería y laminación en caliente",
+   "procesos": "Planta integrada: alto horno y acería al oxígeno, sinterización, coquería, planta de coproductos y central eléctrica. Produce planchones, laminados en caliente y en frío y hojalata",
    "referencias": [
     {
-     "variable": "Procesos",
-     "valor": "Acero en caliente a partir de dos altos hornos; funcionan también Sidercrom y Serviacero III",
+     "variable": "Capacidad de altos hornos",
+     "valor": 2210,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de acería (convertidores al oxígeno)",
+     "valor": 3500,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de colada continua de planchones",
+     "valor": 2300,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de laminación en caliente",
+     "valor": 2890,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de coquería",
+     "valor": 1040,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de sinterización",
+     "valor": 1480,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de hojalata (electro-estañado)",
+     "valor": 160,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    },
+    {
+     "variable": "Abastecimiento",
+     "valor": "Importa todo el carbón y el mineral de hierro, que llegan a su propio puerto sobre el Paraná",
      "unidad": "",
-     "periodo": "2026",
-     "fuente": "iProfesional",
-     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
     }
    ]
   },
@@ -44,15 +100,15 @@
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
    "convenio_confirmado": false,
-   "procesos": "Laminación en frío, con insumos de la planta de Ramallo",
+   "procesos": "Laminación en frío, a partir de bobinas en caliente de San Nicolás",
    "referencias": [
     {
-     "variable": "Procesos",
-     "valor": "Elabora acero laminado en frío para mercado interno y exportación",
+     "variable": "Productos",
+     "valor": "Bobinas laminadas en frío para construcción e industria",
      "unidad": "",
-     "periodo": "2026",
-     "fuente": "iProfesional",
-     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
     }
    ]
   },
@@ -73,14 +129,15 @@
    "convenio_confirmado": false,
    "referencias": [
     {
-     "variable": "Centro productivo",
-     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "variable": "Productos",
+     "valor": "Chapa galvanizada y prepintada, perfiles y productos conformados para construcción y línea blanca",
      "unidad": "",
-     "periodo": "2026",
-     "fuente": "iProfesional",
-     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
     }
-   ]
+   ],
+   "procesos": "Galvanizado, prepintado, corte y perfilado"
   },
   {
    "id": "acindar-villa-constitucion",
@@ -145,14 +202,30 @@
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
    "convenio_confirmado": false,
-   "procesos": "Acería eléctrica y fabricación de tubos sin costura",
+   "procesos": "Planta integrada: reducción directa, acería eléctrica con dos líneas y dos laminadores de tubos sin costura",
    "referencias": [
     {
+     "variable": "Capacidad de tubos sin costura",
+     "valor": 794,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Tenaris S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
+    },
+    {
+     "variable": "Capacidad de barras de acero",
+     "valor": 1300,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Tenaris S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
+    },
+    {
      "variable": "Energía",
-     "valor": "Dos parques eólicos abastecen casi toda la energía de la acería eléctrica de Campana",
+     "valor": "Dos parques eólicos de cerca de 200 MW y una central propia de 35 MW",
      "unidad": "",
      "periodo": "2025",
-     "fuente": "Tenaris, Form 20-F 2025",
+     "fuente": "Tenaris S.A., Form 20-F 2025",
      "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
     }
    ]
@@ -172,8 +245,16 @@
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
    "convenio_confirmado": false,
-   "procesos": "Fabricación de tubos con costura",
+   "procesos": "Tubos con costura ERW y SAW (línea espiral) y revestimiento, de 4,5 a 80 pulgadas",
    "referencias": [
+    {
+     "variable": "Capacidad de tubos con costura",
+     "valor": 620,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Tenaris S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
+    },
     {
      "variable": "Dotación antes del recorte",
      "valor": 350,
@@ -377,23 +458,24 @@
    "seccional_confirmada": false,
    "referencias": [
     {
-     "variable": "Centro productivo",
-     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "variable": "Productos",
+     "valor": "Chapa galvanizada, perfiles y productos conformados para construcción y línea blanca",
      "unidad": "",
-     "periodo": "2026",
-     "fuente": "iProfesional",
-     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
     }
-   ]
+   ],
+   "procesos": "Galvanizado, corte y perfilado"
   },
   {
    "id": "ternium-bosques",
-   "nombre": "Ternium · Bosques",
+   "nombre": "Ternium · Florencio Varela",
    "empresa": "Ternium Argentina",
    "rama": "Siderurgia",
    "provincia": "Buenos Aires",
    "partido": "Florencio Varela",
-   "localidad": "Bosques",
+   "localidad": "Florencio Varela",
    "seccional": "",
    "lat": -34.818,
    "lon": -58.223,
@@ -403,14 +485,123 @@
    "seccional_confirmada": false,
    "referencias": [
     {
-     "variable": "Centro productivo",
-     "valor": "Figura entre los centros productivos de Ternium Argentina",
+     "variable": "Productos",
+     "valor": "Chapa electrogalvanizada y blanks para la industria automotriz y la construcción",
+     "unidad": "",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    }
+   ],
+   "procesos": "Electrogalvanizado, blanks y corte"
+  },
+  {
+   "id": "tenaris-villa-constitucion",
+   "nombre": "Tenaris · Villa Constitución",
+   "empresa": "Tenaris",
+   "rama": "Tubos",
+   "provincia": "Santa Fe",
+   "partido": "Constitución",
+   "localidad": "Villa Constitución",
+   "seccional": "Villa Constitución",
+   "lat": -33.235,
+   "lon": -60.345,
+   "procesos": "Tubos con costura de 1 a 8 pulgadas",
+   "referencias": [
+    {
+     "variable": "Capacidad de tubos con costura",
+     "valor": 123,
+     "unidad": "miles de t/año",
+     "periodo": "2025",
+     "fuente": "Tenaris S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001190723/000155485526000490/ts-20251231.htm"
+    }
+   ],
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false
+  },
+  {
+   "id": "ternium-rosario",
+   "nombre": "Ternium · Rosario",
+   "empresa": "Ternium Argentina",
+   "rama": "Tubos",
+   "provincia": "Santa Fe",
+   "partido": "Rosario",
+   "localidad": "Rosario",
+   "seccional": "Rosario",
+   "lat": -32.95,
+   "lon": -60.68,
+   "procesos": "Centro de servicios: tubos para la construcción",
+   "referencias": [
+    {
+     "variable": "Productos",
+     "valor": "Tubos para la construcción, a partir de bobinas en caliente de San Nicolás",
+     "unidad": "",
+     "periodo": "2025",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    }
+   ],
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false
+  },
+  {
+   "id": "ternium-el-talar",
+   "nombre": "Ternium · El Talar (ex Tubos Argentinos)",
+   "empresa": "Ternium Argentina",
+   "rama": "Tubos",
+   "provincia": "Buenos Aires",
+   "partido": "Tigre",
+   "localidad": "El Talar",
+   "seccional": "",
+   "lat": -34.47,
+   "lon": -58.66,
+   "procesos": "Tubos con costura para petróleo, gas y construcción",
+   "referencias": [
+    {
+     "variable": "Hecho",
+     "valor": "Comprada por Ternium Argentina en el primer trimestre de 2026",
      "unidad": "",
      "periodo": "2026",
-     "fuente": "iProfesional",
-     "url": "https://www.iprofesional.com/negocios/448424-cuales-son-planes-de-ternium-argentina-principal-empresa-grupo-techint"
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
     }
-   ]
+   ],
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false
+  },
+  {
+   "id": "ternium-justo-daract",
+   "nombre": "Ternium · Justo Daract (ex Tubos Argentinos)",
+   "empresa": "Ternium Argentina",
+   "rama": "Tubos",
+   "provincia": "San Luis",
+   "partido": "General Pedernera",
+   "localidad": "Justo Daract",
+   "seccional": "Villa Mercedes",
+   "lat": -33.86,
+   "lon": -65.18,
+   "procesos": "Tubos con costura para petróleo, gas y construcción",
+   "referencias": [
+    {
+     "variable": "Hecho",
+     "valor": "Comprada por Ternium Argentina en el primer trimestre de 2026",
+     "unidad": "",
+     "periodo": "2026",
+     "fuente": "Ternium S.A., Form 20-F 2025",
+     "url": "https://www.sec.gov/Archives/edgar/data/1342874/000134287426000020/tx-20251231.htm"
+    }
+   ],
+   "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
+   "convenio_confirmado": false,
+   "ubicacion": "aproximada",
+   "seccional_confirmada": false
   }
  ]
 }
