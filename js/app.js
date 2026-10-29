@@ -167,7 +167,9 @@ function dibujarEst() {
     const rama = ramaDeClae(row[2]); if (f.pv && provDeEst(row[4]) !== f.pv) continue;
     const [x, y] = proj(row[1], row[0]); const px = (x - vb[0]) * sx, py = (y - vb[1]) * sy;
     if (px < -4 || py < -4 || px > b.width + 4 || py > b.height + 4) continue;
-    ctx.fillStyle = RAMA_COLOR[rama] || "#555"; ctx.globalAlpha = .55; ctx.beginPath(); ctx.arc(px, py, rad, 0, 6.283); ctx.fill();
+    const big = row[3] === "e. 500+" ? 2.4 : row[3] === "d. 200-499" ? 1.8 : row[3] === "c. 50-199" ? 1.3 : 1;
+    ctx.fillStyle = RAMA_COLOR[rama] || "#555"; ctx.globalAlpha = big > 1.5 ? .85 : .5; ctx.beginPath(); ctx.arc(px, py, rad * big, 0, 6.283); ctx.fill();
+    if (big > 1.5) { ctx.globalAlpha = 1; ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke(); }
   }
   ctx.globalAlpha = 1;
 }
@@ -257,6 +259,11 @@ function ramas() {
   const max = Math.max(...Object.values(porRama));
   $("p-ramas").innerHTML = `<p class="small muted">${fmt(filas.length)} establecimientos metalúrgicos registrados · ${esc(F().pv || "todo el país")} · CEP XXI, actualizado ${esc(S.actualizado.est || "")}</p>
    ${S.fuentes.ramasClae.map(r => `<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,2fr) 60px;gap:8px;align-items:center;font-size:13px"><span>${esc(r.rama)}</span><span style="background:var(--soft);border-radius:3px;height:14px"><span style="display:block;height:14px;border-radius:3px;width:${(porRama[r.prefijo] || 0) / max * 100}%;background:${RAMA_COLOR[r.prefijo]}"></span></span><span class="n" style="font-family:var(--mono);text-align:right">${fmt(porRama[r.prefijo] || 0)}</span></div>`).join("")}
+   ${(() => { const km = (a, b, c, d) => Math.hypot((a - c) * 111, (b - d) * 111 * Math.cos(a * Math.PI / 180));
+      const g = filas.filter(r => r[3] === "e. 500+" || r[3] === "d. 200-499"), sin = g.filter(r => !S.plantas.some(p => km(r[0], r[1], p.lat, p.lon) < 6));
+      const ram = Object.fromEntries(S.fuentes.ramasClae.map(x => [x.prefijo, x.rama.split(" (")[0]]));
+      return `<h4>Grandes establecimientos por identificar</h4><p class="small muted" style="margin:0 0 6px">${g.length} establecimientos con más de 200 trabajadores en este ámbito; ${g.length - sin.length} están cerca de una planta ya relevada y <b>${sin.length} todavía no tienen nombre</b> en el observatorio. Abrí cada uno en el mapa para identificarlo y sumarlo como planta.</p>
+      <div class="tblwrap" style="max-height:340px;overflow:auto"><table><thead><tr><th>Provincia</th><th>Rama</th><th>Trabajadores</th><th>Ubicación</th></tr></thead><tbody>${sin.sort((a, b) => (b[3] > a[3]) - (b[3] < a[3])).map(r => `<tr><td>${esc(provDeEst(r[4]) || "")}</td><td>${esc(ram[ramaDeClae(r[2])] || "")}<div class="small muted">CLAE ${esc(r[2])}</div></td><td>${esc(r[3].slice(3))}</td><td><a href="https://www.openstreetmap.org/?mlat=${r[0]}&mlon=${r[1]}#map=16/${r[0]}/${r[1]}" target="_blank" rel="noopener">Ver en el mapa</a></td></tr>`).join("")}</tbody></table></div>`; })()}
    ${F().pv ? "" : `<h4>Por provincia</h4><div class="tblwrap"><table><tbody>${Object.entries(porProv).sort((a, b) => b[1] - a[1]).map(([p, n]) => `<tr><td>${esc(p)}</td><td class="n">${fmt(n)}</td></tr>`).join("")}</tbody></table></div>`}`;
 }
 function ficha() {
