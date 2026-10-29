@@ -30,11 +30,11 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null)]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede;
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null)]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf;
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -313,6 +313,26 @@ function empleo() {
   $("empNota").innerHTML = `* Provincias con varias ramas bajo secreto estadístico: la cifra es un piso y la variación puede no reflejar cambios reales. Fuente: <a href="${esc(O.url)}" target="_blank" rel="noopener">OEDE, Ministerio de Capital Humano</a>, sobre registros del SIPA. Actualizado ${esc(O.actualizado)}.`;
 }
 
+
+function conflictividad() {
+  const C = S.conf; if (!C) return;
+  const an = {}; for (const [m, c, h, j, ci, cd] of C.rows) { const y = +m.slice(0, 4), a = an[y] ??= { c: 0, ci: 0, cd: 0, n: 0 }; a.c += c; a.ci += ci; a.cd += cd; a.n++; }
+  const ys = Object.keys(an).map(Number).filter(y => an[y].n === 12), W = 760, H = 250, l = 46, r = 20, t = 16, b = 30, mx = Math.ceil(Math.max(...ys.map(y => an[y].c)) / 100) * 100;
+  const X = i => l + i * (W - l - r) / ys.length, bw = (W - l - r) / ys.length, Yv = v => t + (1 - v / mx) * (H - t - b);
+  const mut = cssv("--muted"), line = cssv("--line");
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Conflictos con paro en el sector privado por año">`;
+  for (const v of [0, mx / 2, mx]) s += `<line x1="${l}" x2="${W - r}" y1="${Yv(v)}" y2="${Yv(v)}" stroke="${line}"/><text x="${l - 6}" y="${Yv(v) + 4}" font-size="11" text-anchor="end" fill="${mut}">${v}</text>`;
+  ys.forEach((y, i) => { const a = an[y];
+    s += `<rect x="${X(i) + 2}" y="${Yv(a.c)}" width="${bw - 4}" height="${Yv(0) - Yv(a.c)}" fill="${cssv("--steel")}" fill-opacity=".35"><title>${y}: ${a.c} conflictos con paro en el sector privado</title></rect>`;
+    s += `<rect x="${X(i) + 2}" y="${Yv(a.ci)}" width="${bw - 4}" height="${Yv(0) - Yv(a.ci)}" fill="${cssv("--steel")}"><title>${y}: ${a.ci} en la industria</title></rect>`;
+    s += `<circle cx="${X(i) + bw / 2}" cy="${Yv(a.cd)}" r="4" fill="${cssv("--molten")}"><title>${y}: ${a.cd} por despidos</title></circle>`;
+    if (y % 3 === 0 || y === ys.at(-1)) s += `<text x="${X(i) + bw / 2}" y="${H - 10}" font-size="11" text-anchor="middle" fill="${mut}">${y}</text>`; });
+  s += `<polyline fill="none" stroke="${cssv("--molten")}" stroke-width="1.6" points="${ys.map((y, i) => `${X(i) + bw / 2},${Yv(an[y].cd)}`).join(" ")}"/>`;
+  $("confChart").innerHTML = s + `</svg><div class="legend"><span><i style="background:var(--steel);opacity:.35"></i>Sector privado, total</span><span><i style="background:var(--steel)"></i>Industria manufacturera</span><span><i style="background:var(--molten);border-radius:50%"></i>Reclamo principal: despidos</span></div>`;
+  const u = ys.at(-1), pk = ys.reduce((m, y) => an[y].c > an[m].c ? y : m, ys[0]);
+  $("confNota").innerHTML = `En ${u} hubo ${an[u].c} conflictos con paro en el sector privado, el menor número de la serie que empieza en ${ys[0]} (el máximo fue ${an[pk].c}, en ${pk}). La fuente no abre la industria por rama, así que el dato industrial incluye todas las ramas. Fuente: <a href="${esc(C.url)}" target="_blank" rel="noopener">Ministerio de Capital Humano, conflictividad laboral</a>.`;
+}
+
 /* ---------- sector ---------- */
 function linea(pts, unidad) {
   const W = 540, H = 190, l = 46, r = 18, t = 18, b = 30; const ys = pts.map(p => +p.valor);
@@ -393,7 +413,7 @@ function formularios() {
 function irForm(f) { $("cargar").scrollIntoView({ behavior: "smooth" }); $("r_planta").value = S.sel; $("e_planta").value = S.sel; $("ftabs").querySelector(`[data-f="${f}"]`).click(); }
 
 /* ---------- arranque ---------- */
-function refrescar() { filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); }
+function refrescar() { filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
 await cargar();
 portada(); baseMapa(); filtros(); fuentes(); formularios();
 for (const n of ["informe", "plantas", "ramas"]) $("t-" + n).onclick = () => tab(n);
