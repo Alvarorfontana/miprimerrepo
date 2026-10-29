@@ -1,0 +1,44 @@
+name: Acero e importaciones
+
+on:
+  schedule:
+    - cron: "23 14 2,16 * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sector.yml"
+      - "scripts/actualizar-acero.mjs"
+      - "scripts/actualizar-comex.mjs"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-sector
+  cancel-in-progress: false
+
+jobs:
+  sector:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Herramientas
+        run: sudo apt-get install -y -qq poppler-utils unzip >/dev/null
+      - name: Cámara Argentina del Acero
+        run: node scripts/actualizar-acero.mjs
+        continue-on-error: true
+      - name: Importaciones metalúrgicas (INDEC comex)
+        run: node scripts/actualizar-comex.mjs
+        continue-on-error: true
+      - name: Guardar cambios
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/acero-caa.json data/importaciones.json data/fuentes/acero/muestras.json data/fuentes/comex/diagnostico.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Acero e importaciones metalúrgicas"
+          git pull --rebase -X theirs || true
+          git push

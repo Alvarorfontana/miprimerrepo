@@ -48,6 +48,11 @@ jobs:
           npm install --no-save xlsx@0.18.5
           node scripts/procesar-oede.mjs
         continue-on-error: true
+      - name: Procesar series del INDEC (capacidad, IPI por rama, maquinaria agrícola)
+        run: |
+          npm install --no-save xlsx@0.18.5
+          node scripts/procesar-indec.mjs
+        continue-on-error: true
       - name: Calcular alertas
         run: node scripts/alertas.mjs
         continue-on-error: true

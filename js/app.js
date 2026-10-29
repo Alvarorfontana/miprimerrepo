@@ -30,11 +30,12 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp, gem, hab] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp, gem, hab, ixs] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] }), getJSON("data/gem-acerias.json", { acerias: [] }), getJSON("data/caba-habilitaciones-metal.json", { habilitaciones: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.gem = gem; S.hab = hab; S.fAle = "todas";
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] }), getJSON("data/gem-acerias.json", { acerias: [] }), getJSON("data/caba-habilitaciones-metal.json", { habilitaciones: [] }), getJSON("data/indec-series.json", { series: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.gem = gem; S.hab = hab;
+  for (const x of (ixs.series || [])) if (!S.series.some(y => y.clave === x.clave)) S.series.push({ ...x, auto: true, historica: true }); S.fAle = "todas";
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -414,12 +415,14 @@ function linea(pts, unidad) {
   return s + "</svg>";
 }
 function sector() {
-  const ord = ["adimra-actividad", "adimra-capacidad", "indec-uci-metalmecanica", "indec-uci-metalicas", "indec-uci-automotriz", "caa-acero-crudo"];
-  const ss = S.series.filter(s => s.datos && s.datos.length).sort((a, b) => ((ord.indexOf(a.clave) + 1) || 99) - ((ord.indexOf(b.clave) + 1) || 99));
+  const ord = ["adimra-actividad", "adimra-capacidad", "uci-metalmecanica", "uci-metalicas", "uci-automotriz", "ipi-maquinaria-agropecuaria", "ipi-carrocerias-remolques", "ipi-linea-blanca", "ipi-estructuras-metalicas", "caa-acero-crudo"];
+  const hist = new Set(ord.filter(k => k.startsWith("uci-") || k.startsWith("ipi-")));
+  const reemplazadas = new Set(S.series.some(x => x.clave === "uci-metalmecanica") ? ["indec-uci-metalmecanica", "indec-uci-metalicas", "indec-uci-automotriz", "auto-uci-metalicas", "auto-uci-general"] : []);
+  const ss = S.series.filter(s => s.datos && s.datos.length && !reemplazadas.has(s.clave) && (!s.historica || hist.has(s.clave))).sort((a, b) => ((ord.indexOf(a.clave) + 1) || 99) - ((ord.indexOf(b.clave) + 1) || 99));
   $("series").innerHTML = ss.map(s => { const d = s.datos.slice().sort((a, b) => a.periodo.localeCompare(b.periodo)), u = d.at(-1); const fts = [...new Map(d.filter(x => x.url).map(x => [x.url, x])).values()].slice(-3);
     return `<div class="card serie"><div class="row" style="justify-content:space-between"><span class="badge ${s.auto ? "auto" : "manual"}">${s.auto ? "automática" : "carga mensual"}</span><span class="small muted">${esc(s.organismo || "")}</span></div>
     <h4 style="font-size:16px;margin:0">${esc(s.nombre)}</h4><div class="row" style="gap:10px;align-items:baseline"><span class="big">${dec(u.valor)}${s.unidad === "%" ? "%" : ""}</span><span class="small muted">${s.unidad !== "%" ? esc(s.unidad) + " · " : ""}${mesTxt(u.periodo)}</span></div>
-    ${linea(d.slice(-24), s.unidad)}<p class="small muted" style="margin:0">Fuente: ${s.auto ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">API Series de Tiempo, serie ${esc(s.idSerie)}</a>` : fts.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.fuente)} (${mesTxt(x.periodo)})</a>`).join(" · ")}</p></div>`; }).join("") || `<div class="empty">Sin series cargadas.</div>`;
+    ${linea(d.slice(-24), s.unidad)}<p class="small muted" style="margin:0">Fuente: ${s.historica ? `<a href="${esc(s.url || "https://www.indec.gob.ar")}" target="_blank" rel="noopener">INDEC, cuadros estadísticos (serie desde ${esc(d[0].periodo.slice(0, 4))})</a>` : s.auto ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">API Series de Tiempo, serie ${esc(s.idSerie)}</a>` : fts.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.fuente)} (${mesTxt(x.periodo)})</a>`).join(" · ")}</p></div>`; }).join("") || `<div class="empty">Sin series cargadas.</div>`;
 }
 
 /* ---------- fuentes y modelo ---------- */
