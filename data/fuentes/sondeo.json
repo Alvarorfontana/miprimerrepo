@@ -1,5 +1,5 @@
 {
- "fecha": "2026-10-29T15:22:30.461Z",
+ "fecha": "2026-10-29T15:57:06.929Z",
  "comex_home": {
   "status": 200
  },
@@ -50,14 +50,45 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::xxj49-1793287356759-efff054cce8e"
+  "muestra": "Forbidden\n\nForbidden\ncle1::tfrfs-1793289434115-502d77052550"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::97r4c-1793287357138-689d07c0cc90"
+  "muestra": "Forbidden\n\nForbidden\ncle1::tvbns-1793289434597-54970b540d09"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
   "href=\"/informes-y-comunicados\""
- ]
+ ],
+ "badata": {
+  "industria": {
+   "status": 200,
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <16384543592252718747><br><br><a href='javasc"
+  },
+  "habilitaciones": {
+   "status": 200,
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <16384543592332549785><br><br><a href='javasc"
+  },
+  "metal": {
+   "status": 200,
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <2594453323623603784><br><br><a href='javascr"
+  },
+  "establecimientos": {
+   "status": 200,
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <16384543592252731851><br><br><a href='javasc"
+  }
+ },
+ "habilitaciones": {
+  "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.csv",
+  "filas": 8639,
+  "cabecera": "Solicitud;TipoTramite;TipoExpediente;SubTipoExpediente;Superficie;FechaHabilitacion;HoraHabilitacion;NumeroExp;CodigoRubro;DescripcionRubro;CodigoSubRubro;DescripcionSubRubro;UnidadFuncional;Seccion;Manzana;Parcela;Partida_Matriz;PartidaHorizontal;Calles;Titulares;Cuits",
+  "muestra": [
+   "348374;Habilitaci�n;simple;con planos;600;14/11/2024;17:25:29;EX-2017-21751300-   -MGEYA-DGHP;602020;CAF� BAR;;;;35;63;7;404886;;NICARAGUA 6048;ORLANDO BRENNAN MARIA LUZ TRINCAVELLI AGUSTINA;30715644130",
+   "348374;Habilitaci�n;simple;con planos;600;14/11/2024;17:25:29;EX-2017-21751300-   -MGEYA-DGHP;602030;DESPACHO DE BEBIDAS,WISQUERIA, CERVECERIA;;;;35;63;7;404886;;NICARAGUA 6048;ORLANDO BRENNAN MARIA LUZ TRINCAVELLI AGUSTINA;30715644130",
+   "417920;Habilitaci�n;simple;con planos;280;19/12/2024;13:52:22;EX-2024-47690876-   -GCABA-DGHP;2.1.1;Espacio cultural independiente;;;1;67;80;40;248761;2803829;ARTIGAS, JOSE GERVASIO, GRAL. 1850;GUTIERREZ, DIEGO FEDERICO;20268445642",
+   "418987;Habilitaci�n;simple;con planos;148;29/11/2024;16:05:28;EX-2024-45093670-   -GCABA-DGHP;5.2.2;Consultorio profesional;;;8;15;26;1;444521;3553170;BERUTI 3208;SALUD Y DEPORTES S.R.L.;30716542056",
+   "428918;Habilitaci�n;simple;con planos;149;27/12/2024;14:36:30;EX-2024-42014526-   -GCABA-DGHP;1.8;Comercio minorista excluido comestibles como uso principal;22;COMERCIO MINORISTA VENTA DE ARTICULOS PARA ANIMALES DOMESTICOS Y VENTA DE FARMACOS VETERINARIOS;;81;55;8;308577;;\"CHIVILCOY 2299;SANTO TOME 4090\";SERVICIOS INTEGRALES VETERINARIOS S.R.L.;30716809761"
+  ],
+  "metal": 22
+ }
 }
