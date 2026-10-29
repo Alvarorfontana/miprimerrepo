@@ -9,228 +9,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 87.91,
+     "toneladas": 91005
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 132.26,
+     "toneladas": 161568
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 80.32,
+     "toneladas": 75001
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 113.88,
+     "toneladas": 109323
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 138.23,
+     "toneladas": 120874
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 92.25,
+     "toneladas": 84626
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 93.25,
+     "toneladas": 80327
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 99.19,
+     "toneladas": 99343
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 84.2,
+     "toneladas": 76489
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 74.14,
+     "toneladas": 63471
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 59.9,
+     "toneladas": 52204
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 56.29,
+     "toneladas": 47127
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 76.57,
+     "toneladas": 63723
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 63.49,
+     "toneladas": 53925
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 59.03,
+     "toneladas": 58922
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 56.35,
+     "toneladas": 53829
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 53.76,
+     "toneladas": 47060
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 48.16,
+     "toneladas": 44169
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 65.11,
+     "toneladas": 50565
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 69.81,
+     "toneladas": 63746
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 60.21,
+     "toneladas": 53637
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 68.69,
+     "toneladas": 69757
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 44.58,
+     "toneladas": 40698
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 33.62,
+     "toneladas": 27219
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 47.52,
+     "toneladas": 42055
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 34.02,
+     "toneladas": 30468
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 39.84,
+     "toneladas": 37927
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 36.3,
+     "toneladas": 36629
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 28.87,
+     "toneladas": 28237
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 38,
+     "toneladas": 35423
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 33.71,
+     "toneladas": 26657
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 51.33,
+     "toneladas": 58482
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 70.17,
+     "toneladas": 87875
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 87.04,
+     "toneladas": 115694
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 102.37,
+     "toneladas": 135983
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 80.17,
+     "toneladas": 98193
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 137.49,
+     "toneladas": 178072
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 120.37,
+     "toneladas": 159896
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 156.59,
+     "toneladas": 174117
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 92.7,
+     "toneladas": 81307
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 151.75,
+     "toneladas": 158746
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 179.5,
+     "toneladas": 165646
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 170.98,
+     "toneladas": 149159
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 168.79,
+     "toneladas": 152005
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 175.53,
+     "toneladas": 146230
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 141.06,
+     "toneladas": 118839
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 155.08,
+     "toneladas": 126986
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 187.23,
+     "toneladas": 152618
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 180.69,
+     "toneladas": 157560
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 153.82,
+     "toneladas": 128028
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 168.84,
+     "toneladas": 127238
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 176.87,
+     "toneladas": 124706
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 107.42,
+     "toneladas": 71977
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 155.59,
+     "toneladas": 94749
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 194.59,
+     "toneladas": 121721
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 191.21,
+     "toneladas": 118180
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 178.75,
+     "toneladas": 115068
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 144.35,
+     "toneladas": 94845
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 126.33,
+     "toneladas": 72247
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 131.32,
+     "toneladas": 86763
+    },
+    {
      "periodo": "2023-01",
-     "valor": 182.17,
+     "valor": 194.59,
      "toneladas": 119164
     },
     {
      "periodo": "2023-02",
-     "valor": 103.7,
+     "valor": 111.49,
      "toneladas": 75364
     },
     {
      "periodo": "2023-03",
-     "valor": 177.65,
+     "valor": 184.61,
      "toneladas": 142776
     },
     {
      "periodo": "2023-04",
-     "valor": 125.29,
+     "valor": 130.74,
      "toneladas": 94968
     },
     {
      "periodo": "2023-05",
-     "valor": 133.16,
+     "valor": 139.44,
      "toneladas": 96466
     },
     {
      "periodo": "2023-06",
-     "valor": 128.5,
+     "valor": 134.91,
      "toneladas": 92678
     },
     {
      "periodo": "2023-07",
-     "valor": 163.32,
+     "valor": 170.3,
      "toneladas": 132990
     },
     {
      "periodo": "2023-08",
-     "valor": 147.15,
+     "valor": 155.83,
      "toneladas": 120768
     },
     {
      "periodo": "2023-09",
-     "valor": 114.7,
+     "valor": 121.91,
      "toneladas": 91550
     },
     {
      "periodo": "2023-10",
-     "valor": 111.93,
+     "valor": 116.81,
      "toneladas": 66582
     },
     {
      "periodo": "2023-11",
-     "valor": 136.62,
+     "valor": 143.52,
      "toneladas": 83670
     },
     {
      "periodo": "2023-12",
-     "valor": 88.05,
+     "valor": 92.18,
      "toneladas": 57558
     },
     {
      "periodo": "2024-01",
-     "valor": 94.59,
+     "valor": 99.94,
      "toneladas": 59843
     },
     {
      "periodo": "2024-02",
-     "valor": 64.84,
+     "valor": 69.11,
      "toneladas": 38706
     },
     {
      "periodo": "2024-03",
-     "valor": 94.29,
+     "valor": 99.74,
      "toneladas": 65338
     },
     {
      "periodo": "2024-04",
-     "valor": 56.12,
+     "valor": 59.29,
      "toneladas": 29945
     },
     {
      "periodo": "2024-05",
-     "valor": 87.49,
+     "valor": 92.86,
      "toneladas": 53646
     },
     {
      "periodo": "2024-06",
-     "valor": 61.6,
+     "valor": 65.51,
      "toneladas": 45513
     },
     {
      "periodo": "2024-07",
-     "valor": 76.27,
+     "valor": 80.71,
      "toneladas": 48641
     },
     {
      "periodo": "2024-08",
-     "valor": 50.06,
+     "valor": 54.01,
      "toneladas": 32361
     },
     {
      "periodo": "2024-09",
-     "valor": 111.2,
+     "valor": 117.92,
      "toneladas": 90724
     },
     {
      "periodo": "2024-10",
-     "valor": 118.76,
+     "valor": 126.8,
      "toneladas": 121675
     },
     {
      "periodo": "2024-11",
-     "valor": 90.25,
+     "valor": 96.9,
      "toneladas": 82784
     },
     {
      "periodo": "2024-12",
-     "valor": 57.8,
+     "valor": 62.13,
      "toneladas": 42010
     },
     {
      "periodo": "2025-01",
-     "valor": 87.21,
+     "valor": 93.46,
      "toneladas": 63360
     },
     {
      "periodo": "2025-02",
-     "valor": 69.11,
+     "valor": 74.2,
      "toneladas": 53842
     },
     {
      "periodo": "2025-03",
-     "valor": 108.63,
+     "valor": 115.82,
      "toneladas": 114157
     },
     {
      "periodo": "2025-04",
-     "valor": 87.04,
+     "valor": 92.56,
      "toneladas": 69208
     },
     {
      "periodo": "2025-05",
-     "valor": 79.7,
+     "valor": 85.14,
      "toneladas": 66760
     },
     {
      "periodo": "2025-06",
-     "valor": 87.71,
+     "valor": 91.9,
      "toneladas": 84207
     },
     {
      "periodo": "2025-07",
-     "valor": 85.71,
+     "valor": 90.68,
      "toneladas": 84972
     },
     {
      "periodo": "2025-08",
-     "valor": 101.63,
+     "valor": 106.41,
      "toneladas": 112538
     },
     {
      "periodo": "2025-09",
-     "valor": 96.61,
+     "valor": 104.23,
      "toneladas": 96202
     },
     {
      "periodo": "2025-10",
-     "valor": 127.63,
+     "valor": 136.02,
      "toneladas": 163749
     },
     {
      "periodo": "2025-11",
-     "valor": 100.59,
+     "valor": 106.73,
      "toneladas": 111593
     },
     {
      "periodo": "2025-12",
-     "valor": 75.78,
+     "valor": 80.34,
      "toneladas": 81665
     },
     {
      "periodo": "2026-01",
-     "valor": 70.72,
+     "valor": 75.11,
      "toneladas": 62958
     },
     {
      "periodo": "2026-02",
-     "valor": 69.26,
+     "valor": 73.92,
      "toneladas": 62947
     },
     {
      "periodo": "2026-03",
-     "valor": 80.54,
+     "valor": 85.26,
      "toneladas": 67469
     },
     {
      "periodo": "2026-04",
-     "valor": 61.17,
+     "valor": 65.06,
      "toneladas": 47940
     },
     {
      "periodo": "2026-05",
-     "valor": 60.27,
+     "valor": 63.8,
      "toneladas": 49721
     },
     {
      "periodo": "2026-06",
-     "valor": 76.25,
+     "valor": 81.8,
      "toneladas": 60641
     },
     {
      "periodo": "2026-07",
-     "valor": 56.16,
+     "valor": 60.35,
      "toneladas": 40789
     },
     {
      "periodo": "2026-08",
-     "valor": 60.32,
+     "valor": 64.96,
      "toneladas": 48236
     },
     {
      "periodo": "2026-09",
-     "valor": 74.08,
+     "valor": 80.18,
      "toneladas": 55888
     }
    ]
@@ -241,228 +541,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 90.86,
+     "toneladas": 29145
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 71.16,
+     "toneladas": 19725
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 80.71,
+     "toneladas": 23255
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 79.26,
+     "toneladas": 22181
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 83.8,
+     "toneladas": 22837
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 80.64,
+     "toneladas": 27585
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 93.68,
+     "toneladas": 26202
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 99.24,
+     "toneladas": 28407
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 74.53,
+     "toneladas": 19433
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 85.29,
+     "toneladas": 24448
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 66.34,
+     "toneladas": 17536
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 72.97,
+     "toneladas": 22038
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 90.15,
+     "toneladas": 28014
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 75.73,
+     "toneladas": 19738
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 72.95,
+     "toneladas": 18112
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 71.49,
+     "toneladas": 18980
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 78.38,
+     "toneladas": 20971
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 76.97,
+     "toneladas": 19955
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 97.08,
+     "toneladas": 27638
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 89.96,
+     "toneladas": 26226
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 76.93,
+     "toneladas": 18926
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 78.38,
+     "toneladas": 22428
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 60.77,
+     "toneladas": 15347
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 59.92,
+     "toneladas": 17251
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 61.95,
+     "toneladas": 17239
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 48.06,
+     "toneladas": 13032
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 45.05,
+     "toneladas": 11950
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 53.39,
+     "toneladas": 15859
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 52.14,
+     "toneladas": 13087
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 46.67,
+     "toneladas": 11502
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 41.72,
+     "toneladas": 10997
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 38.53,
+     "toneladas": 12067
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 49.16,
+     "toneladas": 13889
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 59.08,
+     "toneladas": 16627
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 58.42,
+     "toneladas": 15405
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 57.08,
+     "toneladas": 15743
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 55.92,
+     "toneladas": 15673
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 56.34,
+     "toneladas": 15327
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 78.52,
+     "toneladas": 21289
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 66.79,
+     "toneladas": 16756
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 62.67,
+     "toneladas": 15871
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 73.83,
+     "toneladas": 19877
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 75.38,
+     "toneladas": 21471
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 74.63,
+     "toneladas": 18968
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 81.61,
+     "toneladas": 19878
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 78.6,
+     "toneladas": 21117
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 82.22,
+     "toneladas": 19053
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 94.55,
+     "toneladas": 22614
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 90.69,
+     "toneladas": 20629
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 78.52,
+     "toneladas": 16106
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 110.85,
+     "toneladas": 27027
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 95.36,
+     "toneladas": 19251
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 92.57,
+     "toneladas": 22684
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 102.78,
+     "toneladas": 20755
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 87.93,
+     "toneladas": 18327
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 103.51,
+     "toneladas": 21531
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 102.78,
+     "toneladas": 20590
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 79.46,
+     "toneladas": 15521
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 111.44,
+     "toneladas": 25730
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 117.24,
+     "toneladas": 29874
+    },
+    {
      "periodo": "2023-01",
-     "valor": 127.52,
+     "valor": 135.68,
      "toneladas": 34520
     },
     {
      "periodo": "2023-02",
-     "valor": 108.28,
+     "valor": 115.02,
      "toneladas": 27768
     },
     {
      "periodo": "2023-03",
-     "valor": 165.98,
+     "valor": 174.45,
      "toneladas": 45613
     },
     {
      "periodo": "2023-04",
-     "valor": 127.49,
+     "valor": 135.08,
      "toneladas": 35811
     },
     {
      "periodo": "2023-05",
-     "valor": 94.8,
+     "valor": 101.24,
      "toneladas": 20653
     },
     {
      "periodo": "2023-06",
-     "valor": 84.47,
+     "valor": 91.16,
      "toneladas": 20568
     },
     {
      "periodo": "2023-07",
-     "valor": 78.62,
+     "valor": 84.93,
      "toneladas": 19148
     },
     {
      "periodo": "2023-08",
-     "valor": 102.53,
+     "valor": 110.31,
      "toneladas": 21674
     },
     {
      "periodo": "2023-09",
-     "valor": 84.36,
+     "valor": 91.45,
      "toneladas": 17762
     },
     {
      "periodo": "2023-10",
-     "valor": 92.03,
+     "valor": 98.29,
      "toneladas": 19761
     },
     {
      "periodo": "2023-11",
-     "valor": 79.27,
+     "valor": 84.96,
      "toneladas": 16533
     },
     {
      "periodo": "2023-12",
-     "valor": 61.89,
+     "valor": 65.85,
      "toneladas": 12858
     },
     {
      "periodo": "2024-01",
-     "valor": 81.46,
+     "valor": 86.96,
      "toneladas": 18701
     },
     {
      "periodo": "2024-02",
-     "valor": 80.9,
+     "valor": 86.73,
      "toneladas": 20530
     },
     {
      "periodo": "2024-03",
-     "valor": 79.97,
+     "valor": 85.67,
      "toneladas": 18282
     },
     {
      "periodo": "2024-04",
-     "valor": 86.06,
+     "valor": 91.32,
      "toneladas": 17036
     },
     {
      "periodo": "2024-05",
-     "valor": 82.47,
+     "valor": 88.14,
      "toneladas": 14690
     },
     {
      "periodo": "2024-06",
-     "valor": 76,
+     "valor": 81.08,
      "toneladas": 18587
     },
     {
      "periodo": "2024-07",
-     "valor": 85.91,
+     "valor": 97.72,
      "toneladas": 17533
     },
     {
      "periodo": "2024-08",
-     "valor": 83.97,
+     "valor": 93.06,
      "toneladas": 17460
     },
     {
      "periodo": "2024-09",
-     "valor": 109.86,
+     "valor": 122.02,
      "toneladas": 25497
     },
     {
      "periodo": "2024-10",
-     "valor": 97.53,
+     "valor": 107.59,
      "toneladas": 21841
     },
     {
      "periodo": "2024-11",
-     "valor": 78.75,
+     "valor": 86.34,
      "toneladas": 17236
     },
     {
      "periodo": "2024-12",
-     "valor": 91.93,
+     "valor": 100.29,
      "toneladas": 21037
     },
     {
      "periodo": "2025-01",
-     "valor": 91.12,
+     "valor": 99.53,
      "toneladas": 25692
     },
     {
      "periodo": "2025-02",
-     "valor": 89.24,
+     "valor": 96.4,
      "toneladas": 22724
     },
     {
      "periodo": "2025-03",
-     "valor": 88.46,
+     "valor": 95.19,
      "toneladas": 19080
     },
     {
      "periodo": "2025-04",
-     "valor": 87.08,
+     "valor": 94.03,
      "toneladas": 23922
     },
     {
      "periodo": "2025-05",
-     "valor": 120.84,
+     "valor": 129.73,
      "toneladas": 36719
     },
     {
      "periodo": "2025-06",
-     "valor": 83.12,
+     "valor": 88.81,
      "toneladas": 20799
     },
     {
      "periodo": "2025-07",
-     "valor": 88.63,
+     "valor": 94.49,
      "toneladas": 22514
     },
     {
      "periodo": "2025-08",
-     "valor": 90.54,
+     "valor": 97.68,
      "toneladas": 25232
     },
     {
      "periodo": "2025-09",
-     "valor": 163.64,
+     "valor": 173.64,
      "toneladas": 40506
     },
     {
      "periodo": "2025-10",
-     "valor": 99.28,
+     "valor": 107.52,
      "toneladas": 28137
     },
     {
      "periodo": "2025-11",
-     "valor": 85.04,
+     "valor": 92.14,
      "toneladas": 31954
     },
     {
      "periodo": "2025-12",
-     "valor": 87.28,
+     "valor": 94.44,
      "toneladas": 25028
     },
     {
      "periodo": "2026-01",
-     "valor": 92.05,
+     "valor": 97.93,
      "toneladas": 30642
     },
     {
      "periodo": "2026-02",
-     "valor": 79.05,
+     "valor": 83.87,
      "toneladas": 21683
     },
     {
      "periodo": "2026-03",
-     "valor": 90.59,
+     "valor": 95.46,
      "toneladas": 24074
     },
     {
      "periodo": "2026-04",
-     "valor": 93.78,
+     "valor": 100.51,
      "toneladas": 26221
     },
     {
      "periodo": "2026-05",
-     "valor": 85.24,
+     "valor": 91.09,
      "toneladas": 21054
     },
     {
      "periodo": "2026-06",
-     "valor": 96.22,
+     "valor": 102.94,
      "toneladas": 25562
     },
     {
      "periodo": "2026-07",
-     "valor": 79.31,
+     "valor": 85.39,
      "toneladas": 18368
     },
     {
      "periodo": "2026-08",
-     "valor": 128.21,
+     "valor": 141.16,
      "toneladas": 40795
     },
     {
      "periodo": "2026-09",
-     "valor": 136.98,
+     "valor": 151.62,
      "toneladas": 44469
     }
    ]
@@ -473,228 +1073,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 42.99,
+     "toneladas": 8262
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 31.22,
+     "toneladas": 5220
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 38.43,
+     "toneladas": 6653
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 40.93,
+     "toneladas": 6465
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 38.25,
+     "toneladas": 7084
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 32.97,
+     "toneladas": 6571
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 37.5,
+     "toneladas": 7597
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 29.21,
+     "toneladas": 5152
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 26.97,
+     "toneladas": 5157
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 32.82,
+     "toneladas": 5978
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 26.47,
+     "toneladas": 5101
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 26.01,
+     "toneladas": 4998
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 29.82,
+     "toneladas": 5885
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 21.79,
+     "toneladas": 4459
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 21.38,
+     "toneladas": 4675
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 27.99,
+     "toneladas": 5816
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 25.63,
+     "toneladas": 5918
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 26.57,
+     "toneladas": 5895
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 28.28,
+     "toneladas": 6360
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 28.56,
+     "toneladas": 5910
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 25.89,
+     "toneladas": 5971
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 28.73,
+     "toneladas": 6643
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 24.72,
+     "toneladas": 5606
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 27.44,
+     "toneladas": 6539
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 26.69,
+     "toneladas": 6141
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 21.32,
+     "toneladas": 4882
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 18.6,
+     "toneladas": 4485
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 23.62,
+     "toneladas": 5481
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 26.65,
+     "toneladas": 6846
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 26.51,
+     "toneladas": 6881
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 24.79,
+     "toneladas": 6098
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 21.83,
+     "toneladas": 5070
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 26.12,
+     "toneladas": 5684
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 28.93,
+     "toneladas": 7347
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 29.17,
+     "toneladas": 6786
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 29.47,
+     "toneladas": 6447
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 28.25,
+     "toneladas": 5915
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 23.24,
+     "toneladas": 5462
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 31.45,
+     "toneladas": 6879
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 28.69,
+     "toneladas": 5635
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 36.72,
+     "toneladas": 7502
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 36.85,
+     "toneladas": 7633
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 35.07,
+     "toneladas": 6795
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 37.55,
+     "toneladas": 7426
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 42.8,
+     "toneladas": 7203
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 37.72,
+     "toneladas": 6768
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 35.35,
+     "toneladas": 5922
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 47.06,
+     "toneladas": 7909
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 48.73,
+     "toneladas": 8487
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 40.81,
+     "toneladas": 7069
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 51.55,
+     "toneladas": 9060
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 46.26,
+     "toneladas": 7568
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 58.45,
+     "toneladas": 9698
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 47.7,
+     "toneladas": 7384
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 41.25,
+     "toneladas": 6940
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 44,
+     "toneladas": 7768
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 43.02,
+     "toneladas": 7548
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 38,
+     "toneladas": 7027
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 32.83,
+     "toneladas": 6274
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 41.16,
+     "toneladas": 7587
+    },
+    {
      "periodo": "2023-01",
-     "valor": 32.85,
+     "valor": 36.12,
      "toneladas": 6261
     },
     {
      "periodo": "2023-02",
-     "valor": 26.18,
+     "valor": 27.83,
      "toneladas": 5520
     },
     {
      "periodo": "2023-03",
-     "valor": 35.55,
+     "valor": 38.29,
      "toneladas": 6956
     },
     {
      "periodo": "2023-04",
-     "valor": 28.56,
+     "valor": 30.83,
      "toneladas": 5711
     },
     {
      "periodo": "2023-05",
-     "valor": 32.02,
+     "valor": 34.04,
      "toneladas": 5763
     },
     {
      "periodo": "2023-06",
-     "valor": 32.45,
+     "valor": 34.05,
      "toneladas": 6750
     },
     {
      "periodo": "2023-07",
-     "valor": 41.61,
+     "valor": 43.7,
      "toneladas": 8927
     },
     {
      "periodo": "2023-08",
-     "valor": 33.65,
+     "valor": 35.65,
      "toneladas": 6329
     },
     {
      "periodo": "2023-09",
-     "valor": 29.22,
+     "valor": 30.88,
      "toneladas": 5606
     },
     {
      "periodo": "2023-10",
-     "valor": 38.81,
+     "valor": 40.89,
      "toneladas": 7158
     },
     {
      "periodo": "2023-11",
-     "valor": 26.44,
+     "valor": 28.32,
      "toneladas": 5790
     },
     {
      "periodo": "2023-12",
-     "valor": 37.01,
+     "valor": 39.1,
      "toneladas": 8119
     },
     {
      "periodo": "2024-01",
-     "valor": 30.44,
+     "valor": 33.1,
      "toneladas": 5968
     },
     {
      "periodo": "2024-02",
-     "valor": 25.07,
+     "valor": 27.08,
      "toneladas": 5133
     },
     {
      "periodo": "2024-03",
-     "valor": 24.96,
+     "valor": 26.61,
      "toneladas": 5018
     },
     {
      "periodo": "2024-04",
-     "valor": 32.87,
+     "valor": 34.68,
      "toneladas": 7742
     },
     {
      "periodo": "2024-05",
-     "valor": 22.11,
+     "valor": 23.27,
      "toneladas": 4715
     },
     {
      "periodo": "2024-06",
-     "valor": 18.99,
+     "valor": 19.86,
      "toneladas": 3167
     },
     {
      "periodo": "2024-07",
-     "valor": 22.28,
+     "valor": 23.69,
      "toneladas": 4208
     },
     {
      "periodo": "2024-08",
-     "valor": 22.45,
+     "valor": 23.98,
      "toneladas": 4759
     },
     {
      "periodo": "2024-09",
-     "valor": 31.74,
+     "valor": 33.85,
      "toneladas": 6621
     },
     {
      "periodo": "2024-10",
-     "valor": 33.37,
+     "valor": 35.7,
      "toneladas": 6800
     },
     {
      "periodo": "2024-11",
-     "valor": 35.87,
+     "valor": 38.6,
      "toneladas": 7516
     },
     {
      "periodo": "2024-12",
-     "valor": 31.75,
+     "valor": 34.26,
      "toneladas": 6389
     },
     {
      "periodo": "2025-01",
-     "valor": 43.89,
+     "valor": 47.17,
      "toneladas": 9520
     },
     {
      "periodo": "2025-02",
-     "valor": 39.1,
+     "valor": 42.07,
      "toneladas": 8429
     },
     {
      "periodo": "2025-03",
-     "valor": 39.95,
+     "valor": 42.37,
      "toneladas": 8772
     },
     {
      "periodo": "2025-04",
-     "valor": 43.34,
+     "valor": 45.74,
      "toneladas": 9376
     },
     {
      "periodo": "2025-05",
-     "valor": 31.2,
+     "valor": 32.73,
      "toneladas": 6224
     },
     {
      "periodo": "2025-06",
-     "valor": 37.15,
+     "valor": 38.8,
      "toneladas": 7947
     },
     {
      "periodo": "2025-07",
-     "valor": 38.39,
+     "valor": 40.22,
      "toneladas": 7807
     },
     {
      "periodo": "2025-08",
-     "valor": 37.51,
+     "valor": 39.43,
      "toneladas": 7939
     },
     {
      "periodo": "2025-09",
-     "valor": 38.63,
+     "valor": 41.06,
      "toneladas": 8218
     },
     {
      "periodo": "2025-10",
-     "valor": 42.59,
+     "valor": 44.8,
      "toneladas": 9654
     },
     {
      "periodo": "2025-11",
-     "valor": 39.61,
+     "valor": 41.41,
      "toneladas": 8302
     },
     {
      "periodo": "2025-12",
-     "valor": 40.43,
+     "valor": 42.2,
      "toneladas": 9247
     },
     {
      "periodo": "2026-01",
-     "valor": 37.82,
+     "valor": 39.53,
      "toneladas": 7732
     },
     {
      "periodo": "2026-02",
-     "valor": 39.83,
+     "valor": 41.33,
      "toneladas": 7784
     },
     {
      "periodo": "2026-03",
-     "valor": 41.38,
+     "valor": 42.92,
      "toneladas": 7921
     },
     {
      "periodo": "2026-04",
-     "valor": 40.69,
+     "valor": 42.37,
      "toneladas": 7996
     },
     {
      "periodo": "2026-05",
-     "valor": 32.59,
+     "valor": 34.26,
      "toneladas": 5910
     },
     {
      "periodo": "2026-06",
-     "valor": 42.56,
+     "valor": 44.42,
      "toneladas": 7900
     },
     {
      "periodo": "2026-07",
-     "valor": 46.71,
+     "valor": 48.47,
      "toneladas": 8679
     },
     {
      "periodo": "2026-08",
-     "valor": 42.76,
+     "valor": 45.23,
      "toneladas": 8080
     },
     {
      "periodo": "2026-09",
-     "valor": 47,
+     "valor": 49.55,
      "toneladas": 8694
     }
    ]
@@ -705,228 +1605,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 45.82,
+     "toneladas": 3958
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 38.76,
+     "toneladas": 3365
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 31.81,
+     "toneladas": 2425
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 22.8,
+     "toneladas": 1623
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 32.77,
+     "toneladas": 2194
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 35.12,
+     "toneladas": 3081
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 35.18,
+     "toneladas": 2807
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 26.85,
+     "toneladas": 2076
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 27.51,
+     "toneladas": 1554
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 26.94,
+     "toneladas": 1803
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 22.35,
+     "toneladas": 1675
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 20.69,
+     "toneladas": 1421
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 22.19,
+     "toneladas": 1425
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 20.57,
+     "toneladas": 962
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 17.14,
+     "toneladas": 1108
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 21.6,
+     "toneladas": 911
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 22.24,
+     "toneladas": 1261
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 18.76,
+     "toneladas": 1062
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 32.4,
+     "toneladas": 2919
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 21.3,
+     "toneladas": 1584
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 15.77,
+     "toneladas": 1415
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 17.42,
+     "toneladas": 1319
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 21.5,
+     "toneladas": 1473
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 19.31,
+     "toneladas": 1331
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 16.76,
+     "toneladas": 1408
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 13.86,
+     "toneladas": 992
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 13.47,
+     "toneladas": 1001
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 10.77,
+     "toneladas": 616
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 11.72,
+     "toneladas": 1007
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 12.41,
+     "toneladas": 895
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 14.57,
+     "toneladas": 1065
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 14.96,
+     "toneladas": 1208
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 17.69,
+     "toneladas": 1270
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 17.61,
+     "toneladas": 1419
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 21.26,
+     "toneladas": 1783
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 24.08,
+     "toneladas": 2030
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 20.28,
+     "toneladas": 1746
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 18.62,
+     "toneladas": 1475
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 33.62,
+     "toneladas": 2643
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 23.77,
+     "toneladas": 1585
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 22.86,
+     "toneladas": 1492
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 23.5,
+     "toneladas": 1977
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 23.88,
+     "toneladas": 1737
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 25.68,
+     "toneladas": 2015
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 25.29,
+     "toneladas": 1925
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 20.81,
+     "toneladas": 1435
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 24.51,
+     "toneladas": 1769
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 28.03,
+     "toneladas": 2282
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 29.28,
+     "toneladas": 2431
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 23.21,
+     "toneladas": 1723
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 31.6,
+     "toneladas": 2430
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 28.23,
+     "toneladas": 1722
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 35.75,
+     "toneladas": 2369
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 37.12,
+     "toneladas": 2862
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 28.85,
+     "toneladas": 2284
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 33.64,
+     "toneladas": 2799
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 34.2,
+     "toneladas": 2995
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 26.15,
+     "toneladas": 2148
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 36.16,
+     "toneladas": 2700
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 27.09,
+     "toneladas": 1786
+    },
+    {
      "periodo": "2023-01",
-     "valor": 24.88,
+     "valor": 25.94,
      "toneladas": 1790
     },
     {
      "periodo": "2023-02",
-     "valor": 24.64,
+     "valor": 25.56,
      "toneladas": 1843
     },
     {
      "periodo": "2023-03",
-     "valor": 29.61,
+     "valor": 30.62,
      "toneladas": 1663
     },
     {
      "periodo": "2023-04",
-     "valor": 28.05,
+     "valor": 28.97,
      "toneladas": 1689
     },
     {
      "periodo": "2023-05",
-     "valor": 27.49,
+     "valor": 28.28,
      "toneladas": 1746
     },
     {
      "periodo": "2023-06",
-     "valor": 22.35,
+     "valor": 23.07,
      "toneladas": 1674
     },
     {
      "periodo": "2023-07",
-     "valor": 20.79,
+     "valor": 21.49,
      "toneladas": 1467
     },
     {
      "periodo": "2023-08",
-     "valor": 34.23,
+     "valor": 35.36,
      "toneladas": 2599
     },
     {
      "periodo": "2023-09",
-     "valor": 26.9,
+     "valor": 27.99,
      "toneladas": 2231
     },
     {
      "periodo": "2023-10",
-     "valor": 25.79,
+     "valor": 26.65,
      "toneladas": 1785
     },
     {
      "periodo": "2023-11",
-     "valor": 24.95,
+     "valor": 25.74,
      "toneladas": 2022
     },
     {
      "periodo": "2023-12",
-     "valor": 18.12,
+     "valor": 18.73,
      "toneladas": 1311
     },
     {
      "periodo": "2024-01",
-     "valor": 27.86,
+     "valor": 28.75,
      "toneladas": 2072
     },
     {
      "periodo": "2024-02",
-     "valor": 21.01,
+     "valor": 21.66,
      "toneladas": 1203
     },
     {
      "periodo": "2024-03",
-     "valor": 22.5,
+     "valor": 23.14,
      "toneladas": 1563
     },
     {
      "periodo": "2024-04",
-     "valor": 20.18,
+     "valor": 20.75,
      "toneladas": 1131
     },
     {
      "periodo": "2024-05",
-     "valor": 18.33,
+     "valor": 18.9,
      "toneladas": 1013
     },
     {
      "periodo": "2024-06",
-     "valor": 17.47,
+     "valor": 18.11,
      "toneladas": 1105
     },
     {
      "periodo": "2024-07",
-     "valor": 25.23,
+     "valor": 26.27,
      "toneladas": 1750
     },
     {
      "periodo": "2024-08",
-     "valor": 17.77,
+     "valor": 18.66,
      "toneladas": 1399
     },
     {
      "periodo": "2024-09",
-     "valor": 23.63,
+     "valor": 24.72,
      "toneladas": 1861
     },
     {
      "periodo": "2024-10",
-     "valor": 27.78,
+     "valor": 29.22,
      "toneladas": 2422
     },
     {
      "periodo": "2024-11",
-     "valor": 25.23,
+     "valor": 26.36,
      "toneladas": 2230
     },
     {
      "periodo": "2024-12",
-     "valor": 25.6,
+     "valor": 26.73,
      "toneladas": 2672
     },
     {
      "periodo": "2025-01",
-     "valor": 39.8,
+     "valor": 41.45,
      "toneladas": 3646
     },
     {
      "periodo": "2025-02",
-     "valor": 28.96,
+     "valor": 30.11,
      "toneladas": 2606
     },
     {
      "periodo": "2025-03",
-     "valor": 23.06,
+     "valor": 24.07,
      "toneladas": 2381
     },
     {
      "periodo": "2025-04",
-     "valor": 25.78,
+     "valor": 26.78,
      "toneladas": 2149
     },
     {
      "periodo": "2025-05",
-     "valor": 26.64,
+     "valor": 27.41,
      "toneladas": 2331
     },
     {
      "periodo": "2025-06",
-     "valor": 28.05,
+     "valor": 28.84,
      "toneladas": 2676
     },
     {
      "periodo": "2025-07",
-     "valor": 24.39,
+     "valor": 25.24,
      "toneladas": 2486
     },
     {
      "periodo": "2025-08",
-     "valor": 27.19,
+     "valor": 28.36,
      "toneladas": 2873
     },
     {
      "periodo": "2025-09",
-     "valor": 33.93,
+     "valor": 35.49,
      "toneladas": 3670
     },
     {
      "periodo": "2025-10",
-     "valor": 34.79,
+     "valor": 36.24,
      "toneladas": 4058
     },
     {
      "periodo": "2025-11",
-     "valor": 34.61,
+     "valor": 36.31,
      "toneladas": 4141
     },
     {
      "periodo": "2025-12",
-     "valor": 39.53,
+     "valor": 41.17,
      "toneladas": 4705
     },
     {
      "periodo": "2026-01",
-     "valor": 27.94,
+     "valor": 28.89,
      "toneladas": 2969
     },
     {
      "periodo": "2026-02",
-     "valor": 25.23,
+     "valor": 26.08,
      "toneladas": 2280
     },
     {
      "periodo": "2026-03",
-     "valor": 31.03,
+     "valor": 32.03,
      "toneladas": 3319
     },
     {
      "periodo": "2026-04",
-     "valor": 30.67,
+     "valor": 31.76,
      "toneladas": 2734
     },
     {
      "periodo": "2026-05",
-     "valor": 29.23,
+     "valor": 30.39,
      "toneladas": 2548
     },
     {
      "periodo": "2026-06",
-     "valor": 31.58,
+     "valor": 32.93,
      "toneladas": 3743
     },
     {
      "periodo": "2026-07",
-     "valor": 23.73,
+     "valor": 24.95,
      "toneladas": 2579
     },
     {
      "periodo": "2026-08",
-     "valor": 32.65,
+     "valor": 34.29,
      "toneladas": 3152
     },
     {
      "periodo": "2026-09",
-     "valor": 31.29,
+     "valor": 33.08,
      "toneladas": 3222
     }
    ]
@@ -937,228 +2137,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 44.21,
+     "toneladas": 3705
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 42.63,
+     "toneladas": 3811
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 52.46,
+     "toneladas": 4699
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 44.62,
+     "toneladas": 3610
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 30.59,
+     "toneladas": 2543
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 27.27,
+     "toneladas": 2485
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 17.27,
+     "toneladas": 1529
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 23.31,
+     "toneladas": 1912
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 14.21,
+     "toneladas": 1110
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 9.91,
+     "toneladas": 855
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 10.53,
+     "toneladas": 840
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 6.16,
+     "toneladas": 455
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 17.4,
+     "toneladas": 1150
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 16.09,
+     "toneladas": 1303
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 16.29,
+     "toneladas": 1260
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 16,
+     "toneladas": 1403
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 14.88,
+     "toneladas": 1102
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 11.99,
+     "toneladas": 940
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 16.38,
+     "toneladas": 1401
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 19.57,
+     "toneladas": 1793
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 14.87,
+     "toneladas": 1372
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 14.17,
+     "toneladas": 1220
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 9.96,
+     "toneladas": 842
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 18.88,
+     "toneladas": 1698
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 31.36,
+     "toneladas": 2585
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 19.16,
+     "toneladas": 1609
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 26.85,
+     "toneladas": 2381
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 18.36,
+     "toneladas": 1562
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 23.02,
+     "toneladas": 1952
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 16.61,
+     "toneladas": 1741
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 12.83,
+     "toneladas": 1451
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 14.3,
+     "toneladas": 1390
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 15.85,
+     "toneladas": 1512
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 13.04,
+     "toneladas": 1389
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 15.73,
+     "toneladas": 1558
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 15.76,
+     "toneladas": 1451
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 24.61,
+     "toneladas": 1802
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 22.91,
+     "toneladas": 2079
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 25.65,
+     "toneladas": 2431
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 22.5,
+     "toneladas": 2063
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 20.47,
+     "toneladas": 2094
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 18.37,
+     "toneladas": 1856
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 13.21,
+     "toneladas": 1454
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 21.61,
+     "toneladas": 2426
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 20.14,
+     "toneladas": 1909
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 24.09,
+     "toneladas": 2278
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 22.44,
+     "toneladas": 2214
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 25.91,
+     "toneladas": 2550
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 21.77,
+     "toneladas": 1881
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 22.41,
+     "toneladas": 2004
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 40.23,
+     "toneladas": 3305
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 33.56,
+     "toneladas": 2826
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 31.2,
+     "toneladas": 2815
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 30.14,
+     "toneladas": 2641
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 22.47,
+     "toneladas": 2070
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 24.58,
+     "toneladas": 2076
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 25.04,
+     "toneladas": 2099
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 15.71,
+     "toneladas": 1449
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 22.81,
+     "toneladas": 1918
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 22.7,
+     "toneladas": 2136
+    },
+    {
      "periodo": "2023-01",
-     "valor": 25.21,
+     "valor": 26.54,
      "toneladas": 2051
     },
     {
      "periodo": "2023-02",
-     "valor": 24.24,
+     "valor": 25.47,
      "toneladas": 2109
     },
     {
      "periodo": "2023-03",
-     "valor": 34.16,
+     "valor": 35.76,
      "toneladas": 2911
     },
     {
      "periodo": "2023-04",
-     "valor": 23.43,
+     "valor": 24.5,
      "toneladas": 2009
     },
     {
      "periodo": "2023-05",
-     "valor": 33.26,
+     "valor": 34.65,
      "toneladas": 2755
     },
     {
      "periodo": "2023-06",
-     "valor": 19.58,
+     "valor": 20.47,
      "toneladas": 1499
     },
     {
      "periodo": "2023-07",
-     "valor": 15.66,
+     "valor": 16.45,
      "toneladas": 1331
     },
     {
      "periodo": "2023-08",
-     "valor": 23.49,
+     "valor": 24.71,
      "toneladas": 1870
     },
     {
      "periodo": "2023-09",
-     "valor": 22.66,
+     "valor": 23.66,
      "toneladas": 1730
     },
     {
      "periodo": "2023-10",
-     "valor": 18.32,
+     "valor": 19.24,
      "toneladas": 1465
     },
     {
      "periodo": "2023-11",
-     "valor": 15.9,
+     "valor": 16.76,
      "toneladas": 1302
     },
     {
      "periodo": "2023-12",
-     "valor": 7.72,
+     "valor": 8.15,
      "toneladas": 523
     },
     {
      "periodo": "2024-01",
-     "valor": 17.45,
+     "valor": 18.12,
      "toneladas": 764
     },
     {
      "periodo": "2024-02",
-     "valor": 11.35,
+     "valor": 12,
      "toneladas": 614
     },
     {
      "periodo": "2024-03",
-     "valor": 29.88,
+     "valor": 31.1,
      "toneladas": 1962
     },
     {
      "periodo": "2024-04",
-     "valor": 20.55,
+     "valor": 21.42,
      "toneladas": 1395
     },
     {
      "periodo": "2024-05",
-     "valor": 17.27,
+     "valor": 18.01,
      "toneladas": 1187
     },
     {
      "periodo": "2024-06",
-     "valor": 13.4,
+     "valor": 14.04,
      "toneladas": 917
     },
     {
      "periodo": "2024-07",
-     "valor": 19.28,
+     "valor": 20.33,
      "toneladas": 1263
     },
     {
      "periodo": "2024-08",
-     "valor": 19.07,
+     "valor": 20.09,
      "toneladas": 1352
     },
     {
      "periodo": "2024-09",
-     "valor": 35.87,
+     "valor": 37.44,
      "toneladas": 2246
     },
     {
      "periodo": "2024-10",
-     "valor": 24.42,
+     "valor": 25.54,
      "toneladas": 1951
     },
     {
      "periodo": "2024-11",
-     "valor": 26.68,
+     "valor": 28.09,
      "toneladas": 2029
     },
     {
      "periodo": "2024-12",
-     "valor": 36.11,
+     "valor": 37.5,
      "toneladas": 2650
     },
     {
      "periodo": "2025-01",
-     "valor": 43.52,
+     "valor": 45.32,
      "toneladas": 2759
     },
     {
      "periodo": "2025-02",
-     "valor": 55.26,
+     "valor": 57.43,
      "toneladas": 3763
     },
     {
      "periodo": "2025-03",
-     "valor": 48.64,
+     "valor": 50.69,
      "toneladas": 3950
     },
     {
      "periodo": "2025-04",
-     "valor": 44.66,
+     "valor": 46.67,
      "toneladas": 3428
     },
     {
      "periodo": "2025-05",
-     "valor": 29.85,
+     "valor": 31.17,
      "toneladas": 2295
     },
     {
      "periodo": "2025-06",
-     "valor": 31.73,
+     "valor": 33.32,
      "toneladas": 2438
     },
     {
      "periodo": "2025-07",
-     "valor": 38.97,
+     "valor": 40.62,
      "toneladas": 2875
     },
     {
      "periodo": "2025-08",
-     "valor": 36.47,
+     "valor": 38.16,
      "toneladas": 2855
     },
     {
      "periodo": "2025-09",
-     "valor": 52.05,
+     "valor": 54.3,
      "toneladas": 4189
     },
     {
      "periodo": "2025-10",
-     "valor": 43.1,
+     "valor": 45.19,
      "toneladas": 3757
     },
     {
      "periodo": "2025-11",
-     "valor": 32.47,
+     "valor": 34.21,
      "toneladas": 2926
     },
     {
      "periodo": "2025-12",
-     "valor": 46.82,
+     "valor": 48.88,
      "toneladas": 3781
     },
     {
      "periodo": "2026-01",
-     "valor": 36.28,
+     "valor": 37.83,
      "toneladas": 2723
     },
     {
      "periodo": "2026-02",
-     "valor": 50.79,
+     "valor": 53.08,
      "toneladas": 3662
     },
     {
      "periodo": "2026-03",
-     "valor": 65.36,
+     "valor": 68.54,
      "toneladas": 5037
     },
     {
      "periodo": "2026-04",
-     "valor": 40.3,
+     "valor": 42.3,
      "toneladas": 3121
     },
     {
      "periodo": "2026-05",
-     "valor": 30.34,
+     "valor": 31.76,
      "toneladas": 2274
     },
     {
      "periodo": "2026-06",
-     "valor": 25.64,
+     "valor": 26.9,
      "toneladas": 1969
     },
     {
      "periodo": "2026-07",
-     "valor": 18.44,
+     "valor": 19.54,
      "toneladas": 1632
     },
     {
      "periodo": "2026-08",
-     "valor": 22.22,
+     "valor": 23.34,
      "toneladas": 1848
     },
     {
      "periodo": "2026-09",
-     "valor": 41.1,
+     "valor": 43.15,
      "toneladas": 3471
     }
    ]
@@ -1169,228 +2669,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 54.08,
+     "toneladas": 9484
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 38.13,
+     "toneladas": 5991
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 44.12,
+     "toneladas": 7228
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 40.28,
+     "toneladas": 6742
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 43.64,
+     "toneladas": 7562
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 33.76,
+     "toneladas": 5551
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 36.62,
+     "toneladas": 5516
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 33.07,
+     "toneladas": 4954
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 24.63,
+     "toneladas": 3592
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 23.52,
+     "toneladas": 3436
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 19.63,
+     "toneladas": 2713
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 13.09,
+     "toneladas": 1681
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 19.08,
+     "toneladas": 2553
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 14.27,
+     "toneladas": 2146
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 18.05,
+     "toneladas": 2497
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 18.04,
+     "toneladas": 2818
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 25.6,
+     "toneladas": 4015
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 19.98,
+     "toneladas": 3652
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 22.95,
+     "toneladas": 3878
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 24.41,
+     "toneladas": 3604
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 22.92,
+     "toneladas": 4054
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 25.78,
+     "toneladas": 4261
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 21.12,
+     "toneladas": 2899
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 23.03,
+     "toneladas": 3865
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 29.86,
+     "toneladas": 5370
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 16.91,
+     "toneladas": 2812
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 21.02,
+     "toneladas": 4051
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 15.44,
+     "toneladas": 2913
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 22.27,
+     "toneladas": 4812
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 16.34,
+     "toneladas": 2949
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 14.78,
+     "toneladas": 2057
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 14.7,
+     "toneladas": 2432
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 20.14,
+     "toneladas": 2937
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 22.46,
+     "toneladas": 3293
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 22.9,
+     "toneladas": 3871
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 23.27,
+     "toneladas": 3636
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 23.85,
+     "toneladas": 3818
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 24.88,
+     "toneladas": 4181
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 30.31,
+     "toneladas": 5054
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 27.82,
+     "toneladas": 4198
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 30.51,
+     "toneladas": 4930
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 35.06,
+     "toneladas": 5783
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 26.75,
+     "toneladas": 4352
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 28.24,
+     "toneladas": 4162
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 30.85,
+     "toneladas": 4590
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 26.12,
+     "toneladas": 3864
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 26.87,
+     "toneladas": 3624
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 32.66,
+     "toneladas": 5160
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 32.84,
+     "toneladas": 4786
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 28.18,
+     "toneladas": 3971
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 41.33,
+     "toneladas": 5677
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 26.24,
+     "toneladas": 3387
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 31.58,
+     "toneladas": 4369
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 35.67,
+     "toneladas": 4394
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 32.42,
+     "toneladas": 4292
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 36.36,
+     "toneladas": 4764
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 40.28,
+     "toneladas": 5233
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 34.06,
+     "toneladas": 4127
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 33.3,
+     "toneladas": 3981
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 26.76,
+     "toneladas": 3395
+    },
+    {
      "periodo": "2023-01",
-     "valor": 23.4,
+     "valor": 25.49,
      "toneladas": 3010
     },
     {
      "periodo": "2023-02",
-     "valor": 24.17,
+     "valor": 26.15,
      "toneladas": 3716
     },
     {
      "periodo": "2023-03",
-     "valor": 26.76,
+     "valor": 28.77,
      "toneladas": 3878
     },
     {
      "periodo": "2023-04",
-     "valor": 25.83,
+     "valor": 27.81,
      "toneladas": 4027
     },
     {
      "periodo": "2023-05",
-     "valor": 26.66,
+     "valor": 28.36,
      "toneladas": 3682
     },
     {
      "periodo": "2023-06",
-     "valor": 27.36,
+     "valor": 29.23,
      "toneladas": 4324
     },
     {
      "periodo": "2023-07",
-     "valor": 36.09,
+     "valor": 38.76,
      "toneladas": 5876
     },
     {
      "periodo": "2023-08",
-     "valor": 25.87,
+     "valor": 27.48,
      "toneladas": 3428
     },
     {
      "periodo": "2023-09",
-     "valor": 36.04,
+     "valor": 38.56,
      "toneladas": 5690
     },
     {
      "periodo": "2023-10",
-     "valor": 32.83,
+     "valor": 35.25,
      "toneladas": 4947
     },
     {
      "periodo": "2023-11",
-     "valor": 31,
+     "valor": 32.89,
      "toneladas": 4326
     },
     {
      "periodo": "2023-12",
-     "valor": 17.4,
+     "valor": 19.1,
      "toneladas": 2754
     },
     {
      "periodo": "2024-01",
-     "valor": 28.07,
+     "valor": 29.92,
      "toneladas": 3891
     },
     {
      "periodo": "2024-02",
-     "valor": 18.16,
+     "valor": 19.53,
      "toneladas": 2416
     },
     {
      "periodo": "2024-03",
-     "valor": 13.81,
+     "valor": 14.99,
      "toneladas": 2036
     },
     {
      "periodo": "2024-04",
-     "valor": 17.54,
+     "valor": 18.72,
      "toneladas": 2228
     },
     {
      "periodo": "2024-05",
-     "valor": 19.26,
+     "valor": 20.59,
      "toneladas": 2803
     },
     {
      "periodo": "2024-06",
-     "valor": 15.99,
+     "valor": 16.97,
      "toneladas": 1951
     },
     {
      "periodo": "2024-07",
-     "valor": 20.41,
+     "valor": 22.14,
      "toneladas": 2846
     },
     {
      "periodo": "2024-08",
-     "valor": 30.23,
+     "valor": 33.72,
      "toneladas": 4809
     },
     {
      "periodo": "2024-09",
-     "valor": 43.1,
+     "valor": 48.35,
      "toneladas": 7868
     },
     {
      "periodo": "2024-10",
-     "valor": 42.39,
+     "valor": 47.89,
      "toneladas": 7906
     },
     {
      "periodo": "2024-11",
-     "valor": 47.9,
+     "valor": 53.77,
      "toneladas": 8722
     },
     {
      "periodo": "2024-12",
-     "valor": 43.44,
+     "valor": 48.77,
      "toneladas": 8108
     },
     {
      "periodo": "2025-01",
-     "valor": 56.84,
+     "valor": 63.71,
      "toneladas": 11288
     },
     {
      "periodo": "2025-02",
-     "valor": 66.63,
+     "valor": 74.12,
      "toneladas": 12953
     },
     {
      "periodo": "2025-03",
-     "valor": 74.89,
+     "valor": 83.76,
      "toneladas": 16174
     },
     {
      "periodo": "2025-04",
-     "valor": 75.31,
+     "valor": 82.8,
      "toneladas": 15887
     },
     {
      "periodo": "2025-05",
-     "valor": 69.93,
+     "valor": 75.51,
      "toneladas": 14871
     },
     {
      "periodo": "2025-06",
-     "valor": 75.3,
+     "valor": 80.38,
      "toneladas": 16725
     },
     {
      "periodo": "2025-07",
-     "valor": 69.51,
+     "valor": 74.36,
      "toneladas": 14807
     },
     {
      "periodo": "2025-08",
-     "valor": 74.37,
+     "valor": 81.53,
      "toneladas": 15263
     },
     {
      "periodo": "2025-09",
-     "valor": 81.43,
+     "valor": 90.73,
      "toneladas": 18242
     },
     {
      "periodo": "2025-10",
-     "valor": 93.92,
+     "valor": 104.67,
      "toneladas": 22123
     },
     {
      "periodo": "2025-11",
-     "valor": 60.9,
+     "valor": 67.3,
      "toneladas": 13755
     },
     {
      "periodo": "2025-12",
-     "valor": 67.14,
+     "valor": 74.2,
      "toneladas": 15648
     },
     {
      "periodo": "2026-01",
-     "valor": 49.64,
+     "valor": 53.97,
      "toneladas": 11036
     },
     {
      "periodo": "2026-02",
-     "valor": 37.15,
+     "valor": 39.6,
      "toneladas": 7410
     },
     {
      "periodo": "2026-03",
-     "valor": 45.59,
+     "valor": 48.93,
      "toneladas": 10537
     },
     {
      "periodo": "2026-04",
-     "valor": 44.09,
+     "valor": 47.59,
      "toneladas": 11246
     },
     {
      "periodo": "2026-05",
-     "valor": 45.7,
+     "valor": 49.36,
      "toneladas": 11381
     },
     {
      "periodo": "2026-06",
-     "valor": 50.42,
+     "valor": 54.37,
      "toneladas": 13347
     },
     {
      "periodo": "2026-07",
-     "valor": 45.43,
+     "valor": 49.77,
      "toneladas": 10954
     },
     {
      "periodo": "2026-08",
-     "valor": 51.03,
+     "valor": 57.52,
      "toneladas": 13180
     },
     {
      "periodo": "2026-09",
-     "valor": 68.55,
+     "valor": 77.91,
      "toneladas": 16630
     }
    ]
@@ -1401,228 +3201,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 210.87,
+     "toneladas": 28672
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 255.2,
+     "toneladas": 32204
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 281.76,
+     "toneladas": 35230
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 274.9,
+     "toneladas": 34598
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 269.88,
+     "toneladas": 34215
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 234.87,
+     "toneladas": 31208
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 260.06,
+     "toneladas": 33679
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 280.47,
+     "toneladas": 34876
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 234.14,
+     "toneladas": 29632
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 239.07,
+     "toneladas": 28147
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 190.86,
+     "toneladas": 22527
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 119.68,
+     "toneladas": 13842
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 144.4,
+     "toneladas": 17571
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 161.46,
+     "toneladas": 19880
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 186.51,
+     "toneladas": 22987
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 186.08,
+     "toneladas": 22743
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 207.19,
+     "toneladas": 25375
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 158.21,
+     "toneladas": 19285
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 178.62,
+     "toneladas": 21978
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 193.47,
+     "toneladas": 23471
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 185.74,
+     "toneladas": 24282
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 192.93,
+     "toneladas": 24136
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 150.64,
+     "toneladas": 18196
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 97.25,
+     "toneladas": 11463
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 140.77,
+     "toneladas": 17437
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 158.45,
+     "toneladas": 20504
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 142.67,
+     "toneladas": 18563
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 118.26,
+     "toneladas": 14165
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 107.86,
+     "toneladas": 12074
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 92.62,
+     "toneladas": 10918
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 67.02,
+     "toneladas": 8902
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 106.7,
+     "toneladas": 14686
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 152.8,
+     "toneladas": 20814
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 166.85,
+     "toneladas": 22237
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 206.58,
+     "toneladas": 25423
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 173.94,
+     "toneladas": 20999
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 159.36,
+     "toneladas": 19884
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 186.39,
+     "toneladas": 23782
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 238.17,
+     "toneladas": 28000
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 238.65,
+     "toneladas": 29218
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 246.88,
+     "toneladas": 31239
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 268.86,
+     "toneladas": 31755
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 254.9,
+     "toneladas": 31469
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 262.89,
+     "toneladas": 30399
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 298.05,
+     "toneladas": 35382
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 243.97,
+     "toneladas": 29578
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 278.41,
+     "toneladas": 33689
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 256.13,
+     "toneladas": 28545
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 216.09,
+     "toneladas": 25008
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 236.15,
+     "toneladas": 26789
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 283.05,
+     "toneladas": 32130
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 287.6,
+     "toneladas": 32714
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 327.16,
+     "toneladas": 35777
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 339.24,
+     "toneladas": 36940
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 336.07,
+     "toneladas": 38605
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 380.63,
+     "toneladas": 43414
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 391,
+     "toneladas": 43073
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 330.06,
+     "toneladas": 38691
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 355.86,
+     "toneladas": 39299
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 244.39,
+     "toneladas": 26092
+    },
+    {
      "periodo": "2023-01",
-     "valor": 277.94,
+     "valor": 294.17,
      "toneladas": 30488
     },
     {
      "periodo": "2023-02",
-     "valor": 293.98,
+     "valor": 310.38,
      "toneladas": 32937
     },
     {
      "periodo": "2023-03",
-     "valor": 371.42,
+     "valor": 392.85,
      "toneladas": 41847
     },
     {
      "periodo": "2023-04",
-     "valor": 330.83,
+     "valor": 349.43,
      "toneladas": 36709
     },
     {
      "periodo": "2023-05",
-     "valor": 364.04,
+     "valor": 383.18,
      "toneladas": 40785
     },
     {
      "periodo": "2023-06",
-     "valor": 353.23,
+     "valor": 372.07,
      "toneladas": 39523
     },
     {
      "periodo": "2023-07",
-     "valor": 365.62,
+     "valor": 385.08,
      "toneladas": 38912
     },
     {
      "periodo": "2023-08",
-     "valor": 446.91,
+     "valor": 468.11,
      "toneladas": 48619
     },
     {
      "periodo": "2023-09",
-     "valor": 383.2,
+     "valor": 402.12,
      "toneladas": 39848
     },
     {
      "periodo": "2023-10",
-     "valor": 354.17,
+     "valor": 371.89,
      "toneladas": 38146
     },
     {
      "periodo": "2023-11",
-     "valor": 355.02,
+     "valor": 371.5,
      "toneladas": 37091
     },
     {
      "periodo": "2023-12",
-     "valor": 237.97,
+     "valor": 250.27,
      "toneladas": 22781
     },
     {
      "periodo": "2024-01",
-     "valor": 224.69,
+     "valor": 233.93,
      "toneladas": 23741
     },
     {
      "periodo": "2024-02",
-     "valor": 230.38,
+     "valor": 239.89,
      "toneladas": 23305
     },
     {
      "periodo": "2024-03",
-     "valor": 283.18,
+     "valor": 296.43,
      "toneladas": 29401
     },
     {
      "periodo": "2024-04",
-     "valor": 312.47,
+     "valor": 326.06,
      "toneladas": 32799
     },
     {
      "periodo": "2024-05",
-     "valor": 290.84,
+     "valor": 309.76,
      "toneladas": 30885
     },
     {
      "periodo": "2024-06",
-     "valor": 236.74,
+     "valor": 249.31,
      "toneladas": 24860
     },
     {
      "periodo": "2024-07",
-     "valor": 267.89,
+     "valor": 280.09,
      "toneladas": 27965
     },
     {
      "periodo": "2024-08",
-     "valor": 317.3,
+     "valor": 332.92,
      "toneladas": 33851
     },
     {
      "periodo": "2024-09",
-     "valor": 335.82,
+     "valor": 353.81,
      "toneladas": 34974
     },
     {
      "periodo": "2024-10",
-     "valor": 354.61,
+     "valor": 396.01,
      "toneladas": 37803
     },
     {
      "periodo": "2024-11",
-     "valor": 325.73,
+     "valor": 342.6,
      "toneladas": 35134
     },
     {
      "periodo": "2024-12",
-     "valor": 297,
+     "valor": 311.24,
      "toneladas": 29600
     },
     {
      "periodo": "2025-01",
-     "valor": 287.08,
+     "valor": 298.73,
      "toneladas": 31741
     },
     {
      "periodo": "2025-02",
-     "valor": 307.12,
+     "valor": 318.66,
      "toneladas": 32321
     },
     {
      "periodo": "2025-03",
-     "valor": 310.82,
+     "valor": 323.92,
      "toneladas": 33070
     },
     {
      "periodo": "2025-04",
-     "valor": 344.17,
+     "valor": 357.31,
      "toneladas": 35474
     },
     {
      "periodo": "2025-05",
-     "valor": 371,
+     "valor": 384.35,
      "toneladas": 39297
     },
     {
      "periodo": "2025-06",
-     "valor": 310.12,
+     "valor": 324.7,
      "toneladas": 32966
     },
     {
      "periodo": "2025-07",
-     "valor": 293.57,
+     "valor": 306.5,
      "toneladas": 32494
     },
     {
      "periodo": "2025-08",
-     "valor": 359.57,
+     "valor": 373.71,
      "toneladas": 39763
     },
     {
      "periodo": "2025-09",
-     "valor": 346.09,
+     "valor": 362.56,
      "toneladas": 38030
     },
     {
      "periodo": "2025-10",
-     "valor": 361.3,
+     "valor": 387.15,
      "toneladas": 38053
     },
     {
      "periodo": "2025-11",
-     "valor": 286.97,
+     "valor": 307.37,
      "toneladas": 32753
     },
     {
      "periodo": "2025-12",
-     "valor": 211.92,
+     "valor": 226.7,
      "toneladas": 22111
     },
     {
      "periodo": "2026-01",
-     "valor": 219.21,
+     "valor": 231.85,
      "toneladas": 22490
     },
     {
      "periodo": "2026-02",
-     "valor": 251.43,
+     "valor": 262.15,
      "toneladas": 26938
     },
     {
      "periodo": "2026-03",
-     "valor": 308.87,
+     "valor": 319.19,
      "toneladas": 32705
     },
     {
      "periodo": "2026-04",
-     "valor": 322.28,
+     "valor": 333.78,
      "toneladas": 34243
     },
     {
      "periodo": "2026-05",
-     "valor": 302.44,
+     "valor": 313.79,
      "toneladas": 31096
     },
     {
      "periodo": "2026-06",
-     "valor": 279.48,
+     "valor": 290.71,
      "toneladas": 28558
     },
     {
      "periodo": "2026-07",
-     "valor": 262.45,
+     "valor": 273.05,
      "toneladas": 27463
     },
     {
      "periodo": "2026-08",
-     "valor": 312.03,
+     "valor": 324.49,
      "toneladas": 31543
     },
     {
      "periodo": "2026-09",
-     "valor": 289.87,
+     "valor": 301.71,
      "toneladas": 32073
     }
    ]
@@ -1633,228 +3733,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 134.49,
+     "toneladas": 11164
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 108.71,
+     "toneladas": 8738
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 129.92,
+     "toneladas": 11031
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 139.02,
+     "toneladas": 10323
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 175.38,
+     "toneladas": 12522
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 127.38,
+     "toneladas": 9676
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 153.66,
+     "toneladas": 11723
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 167.16,
+     "toneladas": 13086
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 143.74,
+     "toneladas": 10559
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 123.95,
+     "toneladas": 9384
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 101.52,
+     "toneladas": 7247
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 84.9,
+     "toneladas": 5458
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 110.17,
+     "toneladas": 7274
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 99.86,
+     "toneladas": 6306
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 102.62,
+     "toneladas": 6857
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 103.99,
+     "toneladas": 6672
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 117.53,
+     "toneladas": 7373
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 99.14,
+     "toneladas": 5799
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 130.5,
+     "toneladas": 8522
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 116.02,
+     "toneladas": 8413
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 101.94,
+     "toneladas": 8501
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 100.07,
+     "toneladas": 8152
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 80.69,
+     "toneladas": 5908
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 79.66,
+     "toneladas": 6395
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 104.8,
+     "toneladas": 8520
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 73.57,
+     "toneladas": 5566
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 68.04,
+     "toneladas": 5397
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 61.8,
+     "toneladas": 3896
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 71.55,
+     "toneladas": 5513
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 71.98,
+     "toneladas": 4977
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 74.92,
+     "toneladas": 6328
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 67.47,
+     "toneladas": 5815
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 92.65,
+     "toneladas": 9371
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 93.24,
+     "toneladas": 9348
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 111.6,
+     "toneladas": 11363
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 114.78,
+     "toneladas": 11359
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 96.89,
+     "toneladas": 10023
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 102.62,
+     "toneladas": 9885
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 131.21,
+     "toneladas": 11868
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 119.16,
+     "toneladas": 10401
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 120.53,
+     "toneladas": 10062
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 133.16,
+     "toneladas": 12734
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 117.35,
+     "toneladas": 9791
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 124.13,
+     "toneladas": 9751
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 134.65,
+     "toneladas": 10522
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 125.39,
+     "toneladas": 10928
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 138.93,
+     "toneladas": 11403
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 174.66,
+     "toneladas": 13442
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 150.76,
+     "toneladas": 12606
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 125.72,
+     "toneladas": 9444
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 166.48,
+     "toneladas": 13545
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 146.94,
+     "toneladas": 10636
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 150.02,
+     "toneladas": 10526
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 167.37,
+     "toneladas": 13215
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 155.72,
+     "toneladas": 12241
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 168.08,
+     "toneladas": 12919
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 181.84,
+     "toneladas": 14709
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 156.42,
+     "toneladas": 13313
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 175.38,
+     "toneladas": 13637
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 133.89,
+     "toneladas": 11052
+    },
+    {
      "periodo": "2023-01",
-     "valor": 137.81,
+     "valor": 145.66,
      "toneladas": 10049
     },
     {
      "periodo": "2023-02",
-     "valor": 121.54,
+     "valor": 136.02,
      "toneladas": 9085
     },
     {
      "periodo": "2023-03",
-     "valor": 146.23,
+     "valor": 163.93,
      "toneladas": 9607
     },
     {
      "periodo": "2023-04",
-     "valor": 151.02,
+     "valor": 158.36,
      "toneladas": 9222
     },
     {
      "periodo": "2023-05",
-     "valor": 172.18,
+     "valor": 180.13,
      "toneladas": 12419
     },
     {
      "periodo": "2023-06",
-     "valor": 139.06,
+     "valor": 144.91,
      "toneladas": 10181
     },
     {
      "periodo": "2023-07",
-     "valor": 147.14,
+     "valor": 153.04,
      "toneladas": 11580
     },
     {
      "periodo": "2023-08",
-     "valor": 183.96,
+     "valor": 193.75,
      "toneladas": 13427
     },
     {
      "periodo": "2023-09",
-     "valor": 161.67,
+     "valor": 168.92,
      "toneladas": 13783
     },
     {
      "periodo": "2023-10",
-     "valor": 162.5,
+     "valor": 169.94,
      "toneladas": 12406
     },
     {
      "periodo": "2023-11",
-     "valor": 124.96,
+     "valor": 130.58,
      "toneladas": 9384
     },
     {
      "periodo": "2023-12",
-     "valor": 101.63,
+     "valor": 105.93,
      "toneladas": 7524
     },
     {
      "periodo": "2024-01",
-     "valor": 148.31,
+     "valor": 154.86,
      "toneladas": 11052
     },
     {
      "periodo": "2024-02",
-     "valor": 120.81,
+     "valor": 126.89,
      "toneladas": 6901
     },
     {
      "periodo": "2024-03",
-     "valor": 108.92,
+     "valor": 113.13,
      "toneladas": 5608
     },
     {
      "periodo": "2024-04",
-     "valor": 138.11,
+     "valor": 143.33,
      "toneladas": 6940
     },
     {
      "periodo": "2024-05",
-     "valor": 145.62,
+     "valor": 151.41,
      "toneladas": 7012
     },
     {
      "periodo": "2024-06",
-     "valor": 111.17,
+     "valor": 116.44,
      "toneladas": 6473
     },
     {
      "periodo": "2024-07",
-     "valor": 127.6,
+     "valor": 133.44,
      "toneladas": 7638
     },
     {
      "periodo": "2024-08",
-     "valor": 127.31,
+     "valor": 134.08,
      "toneladas": 8174
     },
     {
      "periodo": "2024-09",
-     "valor": 153.73,
+     "valor": 163.45,
      "toneladas": 10879
     },
     {
      "periodo": "2024-10",
-     "valor": 165.95,
+     "valor": 176.7,
      "toneladas": 13879
     },
     {
      "periodo": "2024-11",
-     "valor": 138.86,
+     "valor": 147.63,
      "toneladas": 11531
     },
     {
      "periodo": "2024-12",
-     "valor": 154.47,
+     "valor": 162.94,
      "toneladas": 11274
     },
     {
      "periodo": "2025-01",
-     "valor": 185.75,
+     "valor": 195.59,
      "toneladas": 14645
     },
     {
      "periodo": "2025-02",
-     "valor": 193.81,
+     "valor": 203.84,
      "toneladas": 13370
     },
     {
      "periodo": "2025-03",
-     "valor": 168.61,
+     "valor": 176.79,
      "toneladas": 12057
     },
     {
      "periodo": "2025-04",
-     "valor": 156.5,
+     "valor": 163.99,
      "toneladas": 11221
     },
     {
      "periodo": "2025-05",
-     "valor": 160.82,
+     "valor": 167.55,
      "toneladas": 10555
     },
     {
      "periodo": "2025-06",
-     "valor": 156.34,
+     "valor": 162.7,
      "toneladas": 11736
     },
     {
      "periodo": "2025-07",
-     "valor": 157.26,
+     "valor": 163.59,
      "toneladas": 11921
     },
     {
      "periodo": "2025-08",
-     "valor": 146.5,
+     "valor": 153.75,
      "toneladas": 12550
     },
     {
      "periodo": "2025-09",
-     "valor": 179.03,
+     "valor": 187.76,
      "toneladas": 14483
     },
     {
      "periodo": "2025-10",
-     "valor": 176.63,
+     "valor": 185.16,
      "toneladas": 15609
     },
     {
      "periodo": "2025-11",
-     "valor": 149.66,
+     "valor": 157.29,
      "toneladas": 11671
     },
     {
      "periodo": "2025-12",
-     "valor": 184.26,
+     "valor": 192.25,
      "toneladas": 13082
     },
     {
      "periodo": "2026-01",
-     "valor": 158.59,
+     "valor": 165.77,
      "toneladas": 11263
     },
     {
      "periodo": "2026-02",
-     "valor": 160.16,
+     "valor": 167.06,
      "toneladas": 10707
     },
     {
      "periodo": "2026-03",
-     "valor": 155.11,
+     "valor": 161.25,
      "toneladas": 11213
     },
     {
      "periodo": "2026-04",
-     "valor": 172.74,
+     "valor": 180.29,
      "toneladas": 11174
     },
     {
      "periodo": "2026-05",
-     "valor": 142.77,
+     "valor": 148.96,
      "toneladas": 8223
     },
     {
      "periodo": "2026-06",
-     "valor": 154.06,
+     "valor": 161.37,
      "toneladas": 10390
     },
     {
      "periodo": "2026-07",
-     "valor": 175.78,
+     "valor": 184.35,
      "toneladas": 9858
     },
     {
      "periodo": "2026-08",
-     "valor": 182.02,
+     "valor": 191.21,
      "toneladas": 11090
     },
     {
      "periodo": "2026-09",
-     "valor": 199.7,
+     "valor": 209.85,
      "toneladas": 12902
     }
    ]
@@ -1865,228 +4265,528 @@
    "unidad": "millones de USD (CIF)",
    "datos": [
     {
+     "periodo": "2018-01",
+     "valor": 164.02,
+     "toneladas": 15292
+    },
+    {
+     "periodo": "2018-02",
+     "valor": 138.29,
+     "toneladas": 9417
+    },
+    {
+     "periodo": "2018-03",
+     "valor": 245.42,
+     "toneladas": 23441
+    },
+    {
+     "periodo": "2018-04",
+     "valor": 222.52,
+     "toneladas": 20452
+    },
+    {
+     "periodo": "2018-05",
+     "valor": 236.9,
+     "toneladas": 21935
+    },
+    {
+     "periodo": "2018-06",
+     "valor": 264.13,
+     "toneladas": 23501
+    },
+    {
+     "periodo": "2018-07",
+     "valor": 188.18,
+     "toneladas": 17009
+    },
+    {
+     "periodo": "2018-08",
+     "valor": 251.49,
+     "toneladas": 19244
+    },
+    {
+     "periodo": "2018-09",
+     "valor": 199.24,
+     "toneladas": 22690
+    },
+    {
+     "periodo": "2018-10",
+     "valor": 245.26,
+     "toneladas": 21753
+    },
+    {
+     "periodo": "2018-11",
+     "valor": 180.61,
+     "toneladas": 21031
+    },
+    {
+     "periodo": "2018-12",
+     "valor": 257.98,
+     "toneladas": 38231
+    },
+    {
+     "periodo": "2019-01",
+     "valor": 206.73,
+     "toneladas": 24194
+    },
+    {
+     "periodo": "2019-02",
+     "valor": 272.23,
+     "toneladas": 21071
+    },
+    {
+     "periodo": "2019-03",
+     "valor": 194.95,
+     "toneladas": 20234
+    },
+    {
+     "periodo": "2019-04",
+     "valor": 199.17,
+     "toneladas": 17005
+    },
+    {
+     "periodo": "2019-05",
+     "valor": 218.87,
+     "toneladas": 23899
+    },
+    {
+     "periodo": "2019-06",
+     "valor": 179.7,
+     "toneladas": 16945
+    },
+    {
+     "periodo": "2019-07",
+     "valor": 264.42,
+     "toneladas": 26145
+    },
+    {
+     "periodo": "2019-08",
+     "valor": 206.24,
+     "toneladas": 22206
+    },
+    {
+     "periodo": "2019-09",
+     "valor": 191.29,
+     "toneladas": 17897
+    },
+    {
+     "periodo": "2019-10",
+     "valor": 192.66,
+     "toneladas": 21712
+    },
+    {
+     "periodo": "2019-11",
+     "valor": 177.3,
+     "toneladas": 16658
+    },
+    {
+     "periodo": "2019-12",
+     "valor": 134.9,
+     "toneladas": 12667
+    },
+    {
+     "periodo": "2020-01",
+     "valor": 129.75,
+     "toneladas": 9775
+    },
+    {
+     "periodo": "2020-02",
+     "valor": 96.69,
+     "toneladas": 6939
+    },
+    {
+     "periodo": "2020-03",
+     "valor": 100.1,
+     "toneladas": 6464
+    },
+    {
+     "periodo": "2020-04",
+     "valor": 103.49,
+     "toneladas": 8041
+    },
+    {
+     "periodo": "2020-05",
+     "valor": 76.94,
+     "toneladas": 5393
+    },
+    {
+     "periodo": "2020-06",
+     "valor": 102.57,
+     "toneladas": 6818
+    },
+    {
+     "periodo": "2020-07",
+     "valor": 88.95,
+     "toneladas": 5921
+    },
+    {
+     "periodo": "2020-08",
+     "valor": 87.25,
+     "toneladas": 6406
+    },
+    {
+     "periodo": "2020-09",
+     "valor": 106.97,
+     "toneladas": 7715
+    },
+    {
+     "periodo": "2020-10",
+     "valor": 118.57,
+     "toneladas": 10753
+    },
+    {
+     "periodo": "2020-11",
+     "valor": 112.9,
+     "toneladas": 8985
+    },
+    {
+     "periodo": "2020-12",
+     "valor": 146.54,
+     "toneladas": 11349
+    },
+    {
+     "periodo": "2021-01",
+     "valor": 109.91,
+     "toneladas": 7528
+    },
+    {
+     "periodo": "2021-02",
+     "valor": 102.65,
+     "toneladas": 7258
+    },
+    {
+     "periodo": "2021-03",
+     "valor": 142.16,
+     "toneladas": 9959
+    },
+    {
+     "periodo": "2021-04",
+     "valor": 120.6,
+     "toneladas": 8265
+    },
+    {
+     "periodo": "2021-05",
+     "valor": 117.18,
+     "toneladas": 7633
+    },
+    {
+     "periodo": "2021-06",
+     "valor": 130.93,
+     "toneladas": 8737
+    },
+    {
+     "periodo": "2021-07",
+     "valor": 122.06,
+     "toneladas": 7759
+    },
+    {
+     "periodo": "2021-08",
+     "valor": 123.41,
+     "toneladas": 7993
+    },
+    {
+     "periodo": "2021-09",
+     "valor": 155.45,
+     "toneladas": 10206
+    },
+    {
+     "periodo": "2021-10",
+     "valor": 131.81,
+     "toneladas": 8854
+    },
+    {
+     "periodo": "2021-11",
+     "valor": 134.24,
+     "toneladas": 8380
+    },
+    {
+     "periodo": "2021-12",
+     "valor": 168.46,
+     "toneladas": 11142
+    },
+    {
+     "periodo": "2022-01",
+     "valor": 140.47,
+     "toneladas": 9887
+    },
+    {
+     "periodo": "2022-02",
+     "valor": 139.27,
+     "toneladas": 9024
+    },
+    {
+     "periodo": "2022-03",
+     "valor": 165.82,
+     "toneladas": 10732
+    },
+    {
+     "periodo": "2022-04",
+     "valor": 182.55,
+     "toneladas": 10228
+    },
+    {
+     "periodo": "2022-05",
+     "valor": 163.62,
+     "toneladas": 9309
+    },
+    {
+     "periodo": "2022-06",
+     "valor": 178.9,
+     "toneladas": 11749
+    },
+    {
+     "periodo": "2022-07",
+     "valor": 171.32,
+     "toneladas": 11435
+    },
+    {
+     "periodo": "2022-08",
+     "valor": 237.91,
+     "toneladas": 17586
+    },
+    {
+     "periodo": "2022-09",
+     "valor": 201.01,
+     "toneladas": 12897
+    },
+    {
+     "periodo": "2022-10",
+     "valor": 217.47,
+     "toneladas": 15419
+    },
+    {
+     "periodo": "2022-11",
+     "valor": 215.2,
+     "toneladas": 14499
+    },
+    {
+     "periodo": "2022-12",
+     "valor": 183.64,
+     "toneladas": 13472
+    },
+    {
      "periodo": "2023-01",
-     "valor": 173.21,
+     "valor": 190.23,
      "toneladas": 11527
     },
     {
      "periodo": "2023-02",
-     "valor": 129.33,
+     "valor": 136.26,
      "toneladas": 7973
     },
     {
      "periodo": "2023-03",
-     "valor": 192.49,
+     "valor": 201.42,
      "toneladas": 9720
     },
     {
      "periodo": "2023-04",
-     "valor": 168.76,
+     "valor": 180.49,
      "toneladas": 9855
     },
     {
      "periodo": "2023-05",
-     "valor": 166.07,
+     "valor": 174.24,
      "toneladas": 10918
     },
     {
      "periodo": "2023-06",
-     "valor": 179.34,
+     "valor": 187.98,
      "toneladas": 10508
     },
     {
      "periodo": "2023-07",
-     "valor": 180.03,
+     "valor": 188.47,
      "toneladas": 11887
     },
     {
      "periodo": "2023-08",
-     "valor": 273.45,
+     "valor": 289.04,
      "toneladas": 20237
     },
     {
      "periodo": "2023-09",
-     "valor": 259.91,
+     "valor": 277.9,
      "toneladas": 18261
     },
     {
      "periodo": "2023-10",
-     "valor": 252.65,
+     "valor": 273.06,
      "toneladas": 18046
     },
     {
      "periodo": "2023-11",
-     "valor": 228.5,
+     "valor": 243.5,
      "toneladas": 18446
     },
     {
      "periodo": "2023-12",
-     "valor": 148.44,
+     "valor": 154.24,
      "toneladas": 9137
     },
     {
      "periodo": "2024-01",
-     "valor": 154.83,
+     "valor": 160.57,
      "toneladas": 9669
     },
     {
      "periodo": "2024-02",
-     "valor": 165.48,
+     "valor": 174.51,
      "toneladas": 10189
     },
     {
      "periodo": "2024-03",
-     "valor": 149.49,
+     "valor": 155.22,
      "toneladas": 7299
     },
     {
      "periodo": "2024-04",
-     "valor": 148.96,
+     "valor": 155.34,
      "toneladas": 8345
     },
     {
      "periodo": "2024-05",
-     "valor": 174.84,
+     "valor": 184.41,
      "toneladas": 11625
     },
     {
      "periodo": "2024-06",
-     "valor": 116.82,
+     "valor": 121.6,
      "toneladas": 6854
     },
     {
      "periodo": "2024-07",
-     "valor": 173.31,
+     "valor": 183.34,
      "toneladas": 13747
     },
     {
      "periodo": "2024-08",
-     "valor": 145.94,
+     "valor": 153.5,
      "toneladas": 8415
     },
     {
      "periodo": "2024-09",
-     "valor": 201.08,
+     "valor": 212.28,
      "toneladas": 12769
     },
     {
      "periodo": "2024-10",
-     "valor": 185.68,
+     "valor": 197.12,
      "toneladas": 13531
     },
     {
      "periodo": "2024-11",
-     "valor": 144.78,
+     "valor": 153.26,
      "toneladas": 9750
     },
     {
      "periodo": "2024-12",
-     "valor": 187.43,
+     "valor": 198.37,
      "toneladas": 14581
     },
     {
      "periodo": "2025-01",
-     "valor": 233.44,
+     "valor": 246.88,
      "toneladas": 17752
     },
     {
      "periodo": "2025-02",
-     "valor": 226.08,
+     "valor": 238.42,
      "toneladas": 18852
     },
     {
      "periodo": "2025-03",
-     "valor": 194.54,
+     "valor": 203.81,
      "toneladas": 14750
     },
     {
      "periodo": "2025-04",
-     "valor": 165.39,
+     "valor": 172.13,
      "toneladas": 11543
     },
     {
      "periodo": "2025-05",
-     "valor": 190.67,
+     "valor": 199.29,
      "toneladas": 13599
     },
     {
      "periodo": "2025-06",
-     "valor": 161.72,
+     "valor": 169.45,
      "toneladas": 11937
     },
     {
      "periodo": "2025-07",
-     "valor": 177.68,
+     "valor": 185.53,
      "toneladas": 12456
     },
     {
      "periodo": "2025-08",
-     "valor": 187.1,
+     "valor": 196.38,
      "toneladas": 14103
     },
     {
      "periodo": "2025-09",
-     "valor": 185.86,
+     "valor": 195.07,
      "toneladas": 14033
     },
     {
      "periodo": "2025-10",
-     "valor": 186.54,
+     "valor": 194.79,
      "toneladas": 12838
     },
     {
      "periodo": "2025-11",
-     "valor": 148.9,
+     "valor": 155.07,
      "toneladas": 10672
     },
     {
      "periodo": "2025-12",
-     "valor": 154.7,
+     "valor": 161.27,
      "toneladas": 11058
     },
     {
      "periodo": "2026-01",
-     "valor": 127,
+     "valor": 131.97,
      "toneladas": 9066
     },
     {
      "periodo": "2026-02",
-     "valor": 149.92,
+     "valor": 155.55,
      "toneladas": 9718
     },
     {
      "periodo": "2026-03",
-     "valor": 147.18,
+     "valor": 152.31,
      "toneladas": 9525
     },
     {
      "periodo": "2026-04",
-     "valor": 175.21,
+     "valor": 182.46,
      "toneladas": 12370
     },
     {
      "periodo": "2026-05",
-     "valor": 142.58,
+     "valor": 148.64,
      "toneladas": 8665
     },
     {
      "periodo": "2026-06",
-     "valor": 180.46,
+     "valor": 189.46,
      "toneladas": 15788
     },
     {
      "periodo": "2026-07",
-     "valor": 181.74,
+     "valor": 193.73,
      "toneladas": 14185
     },
     {
      "periodo": "2026-08",
-     "valor": 253.89,
+     "valor": 268.32,
      "toneladas": 15423
     },
     {
      "periodo": "2026-09",
-     "valor": 255,
+     "valor": 269.51,
      "toneladas": 15331
     }
    ]
