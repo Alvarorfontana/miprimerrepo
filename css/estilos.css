@@ -223,3 +223,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   body.imprime-rep .rep{border:0;border-radius:0}body.imprime-rep .rep-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   @page{size:A4;margin:12mm}
 }
+
+.gem{background:var(--soft,#eef2f6);border-radius:10px;padding:10px 12px;margin:6px 0 10px}.gem h4{margin:0}
+.gembars{display:flex;gap:6px;align-items:flex-end;height:70px}.gembars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.gembars i{display:block;width:100%;background:#1b4b8a;border-radius:3px 3px 0 0;min-height:2px}.gembars div:last-child i{background:#e05a12}.gembars span{font-size:10px;color:#5a6573;margin-top:2px}

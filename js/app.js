@@ -24,17 +24,17 @@ const PRESETS = [["País", [-73.6, -55.1, -53.6, -21.7]], ["AMBA", [-59.1, -35.0
 const cssv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 /* ---------- estado ---------- */
-const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, osm: true, deptos: true, barrios: true, nombres: true } };
+const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, osm: true, caba: true, deptos: true, barrios: true, nombres: true } };
 let sb = null; // cliente Supabase opcional
 
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp, gem, hab] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.fAle = "todas";
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] }), getJSON("data/gem-acerias.json", { acerias: [] }), getJSON("data/caba-habilitaciones-metal.json", { habilitaciones: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.gem = gem; S.hab = hab; S.fAle = "todas";
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -129,7 +129,7 @@ function baseMapa() {
   svg.addEventListener("wheel", e => { e.preventDefault(); const b = svg.getBoundingClientRect(); zoom(e.deltaY < 0 ? .8 : 1.25, (e.clientX - b.left) / b.width, (e.clientY - b.top) / b.height); }, { passive: false });
   $("zin").onclick = () => zoom(.6, .5, .5); $("zout").onclick = () => zoom(1.6, .5, .5);
   $("zoomPresets").innerHTML = ""; for (const [n, b] of PRESETS) { const c = document.createElement("button"); c.className = "chip"; c.type = "button"; c.textContent = n; c.onclick = () => setVB(fitBox(...b)); $("zoomPresets").appendChild(c); }
-  const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["est", "Establecimientos CEP XXI"], ["deptos", "Departamentos y partidos"], ["barrios", "Barrios porteños"], ["nombres", "Nombres"]];
+  const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["caba", "Fábricas y talleres habilitados (CABA)"], ["est", "Establecimientos CEP XXI"], ["deptos", "Departamentos y partidos"], ["barrios", "Barrios porteños"], ["nombres", "Nombres"]];
   $("capas").innerHTML = `<span class="small muted" style="width:100%">Capas del mapa · en azul se ven, en blanco están ocultas. Tocá para cambiar.</span>` + capas.map(([k, t]) => `<button class="chip" type="button" data-c="${k}" aria-pressed="${S.capas[k]}"><span aria-hidden="true">${S.capas[k] ? "✓ " : ""}</span>${t}</button>`).join("");
   $("capas").querySelectorAll("button").forEach(b => b.onclick = () => { S.capas[b.dataset.c] = !S.capas[b.dataset.c]; b.setAttribute("aria-pressed", S.capas[b.dataset.c]); b.firstChild.textContent = S.capas[b.dataset.c] ? "✓ " : ""; dibujarPuntos(); dibujarEst(); });
   new ResizeObserver(() => { setVB(vb); }).observe($("mapbox"));
@@ -165,6 +165,12 @@ function dibujarPuntos() {
     q.setAttribute("fill", "none"); q.setAttribute("stroke", "#7a3fb0"); q.setAttribute("stroke-width", "1.4"); q.setAttribute("vector-effect", "non-scaling-stroke");
     const t = document.createElementNS(NS, "title"); t.textContent = `Candidata: ${o.nombre}${o.localidad ? " · " + o.localidad : ""} (OpenStreetMap)`; q.appendChild(t); g.appendChild(q);
   }
+  if (S.capas.caba && vb[2] < 40) for (const h of (S.hab && S.hab.habilitaciones) || []) {
+    if (!h.lat) continue; const [x, y] = proj(h.lon, h.lat);
+    const t0 = document.createElementNS(NS, "path"); const q = r * .75; t0.setAttribute("d", `M${x},${y - q}L${x + q},${y + q * .8}L${x - q},${y + q * .8}Z`);
+    t0.setAttribute("fill", "#2f7d4f"); t0.setAttribute("fill-opacity", ".85"); t0.setAttribute("stroke", "#fff"); t0.setAttribute("stroke-width", ".8"); t0.setAttribute("vector-effect", "non-scaling-stroke");
+    const tt = document.createElementNS(NS, "title"); tt.textContent = `${h.razon_social || "Sin razón social"} · ${h.rubro} · ${h.direccion_normalizada || h.direccion} (habilitación AGC)`; t0.appendChild(tt); g.appendChild(t0);
+  }
   if (!S.capas.plantas) return;
   for (const p of filtradas()) {
     if (p.lat == null) continue; const [x, y] = proj(p.lon, p.lat), st = estado(p);
@@ -175,7 +181,7 @@ function dibujarPuntos() {
     g.appendChild(c);
   }
   const est = S.est.filas || [];
-  $("maplegend").innerHTML = (S.capas.osm && S.osm && S.osm.plantas.length ? `<span><i style="border:1.5px solid #7a3fb0;border-radius:2px;background:none"></i>Candidata con nombre (OSM)</span>` : "") + (S.capas.plantas ? Object.values(ESTADOS).map(([l, v]) => `<span><i style="background:${cssv(v)}"></i>${l}</span>`).join("") : "") +
+  $("maplegend").innerHTML = (S.capas.caba && vb[2] < 40 && S.hab && S.hab.habilitaciones.length ? `<span><i style="background:#2f7d4f;clip-path:polygon(50% 0,100% 100%,0 100%);border-radius:0"></i>Fábrica o taller habilitado (CABA)</span>` : "") + (S.capas.osm && S.osm && S.osm.plantas.length ? `<span><i style="border:1.5px solid #7a3fb0;border-radius:2px;background:none"></i>Candidata con nombre (OSM)</span>` : "") + (S.capas.plantas ? Object.values(ESTADOS).map(([l, v]) => `<span><i style="background:${cssv(v)}"></i>${l}</span>`).join("") : "") +
     (S.capas.est && est.length ? `<span style="margin-top:4px;font-weight:600">Establecimientos por rama</span>` + S.fuentes.ramasClae.map(r => `<span><i style="background:${RAMA_COLOR[r.prefijo]};width:7px;height:7px"></i>${esc(r.rama.split(" (")[0])}</span>`).join("") : "");
 }
 function dibujarEst() {
@@ -314,6 +320,10 @@ function ficha() {
    <p class="small muted" style="margin:3px 0 8px">${esc(p.empresa)} · ${esc(p.rama)} · ${esc([p.localidad, p.partido, p.provincia].filter(Boolean).join(", "))} · Seccional ${esc(p.seccional || "sin asignar")}${p.convenio ? " · " + esc(p.convenio) : ""}${p.ubicacion === "aproximada" ? " · ubicación aproximada" : ""}</p>
    ${p.procesos ? `<p class="small" style="margin:0 0 6px"><b>Procesos:</b> ${esc(p.procesos)}</p>` : ""}
    ${(p.referencias || []).length ? `<h4>Datos de referencia</h4><ul class="small" style="margin:4px 0 8px;padding-left:18px">${p.referencias.map(r => `<li><b>${esc(r.variable)}:</b> ${typeof r.valor === "number" ? fmt(r.valor) : esc(r.valor)} ${esc(r.unidad || "")} <span class="muted">(${esc(r.periodo)} · <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.fuente)}</a>)</span></li>`).join("")}</ul>` : ""}
+   ${(() => { const g = (S.gem.acerias || []).find(a => a.planta === p.id); if (!g) return ""; const ys = Object.keys(g.produccion).sort(), u = ys.at(-1), uso = g.produccion[u] / g.cap_acero * 100;
+     return `<div class="gem"><h4>Acería: capacidad y producción</h4><p class="small" style="margin:2px 0 6px">${esc(g.tecnologia)} · capacidad ${fmt(g.cap_acero)} mil t/año de acero crudo · ${fmt(g.dotacion)} trabajadores declarados · desde ${g.inicio}</p>
+     <div class="gembars">${ys.map(y => `<div title="${y}: ${fmt(g.produccion[y])} mil t"><i style="height:${g.produccion[y] / g.cap_acero * 100}%"></i><span>${y.slice(2)}</span></div>`).join("")}</div>
+     <p class="small" style="margin:6px 0 0">En ${u} produjo <b>${fmt(g.produccion[u])} mil t</b>: usó el <b>${dec(uso, 0)}%</b> de su capacidad.</p><p class="small muted" style="margin:2px 0 8px">Fuente: <a href="${esc(g.url)}" target="_blank" rel="noopener">Global Energy Monitor</a>, licencia CC BY-NC-SA 4.0.</p></div>`; })()}
    ${(() => { const e = (S.empresas || []).find(e => e.plantas.includes(p.id)); return e ? `<details class="small" style="margin-bottom:8px"><summary><b>Datos de la empresa: ${esc(e.nombre)}</b></summary><ul style="margin:4px 0;padding-left:18px">${e.datos.map(r => `<li>${esc(r.variable)}: ${typeof r.valor === "number" ? dec(r.valor, r.valor % 1 ? 1 : 0) : esc(r.valor)} ${esc(r.unidad || "")} <span class="muted">(${esc(r.periodo)} · <a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.fuente)}</a>)</span></li>`).join("")}</ul></details>` : ""; })()}
    ${reps.length ? `<div class="tblwrap"><table><thead><tr><th>Mes</th><th class="n">Dotación</th><th class="n">Cap.</th><th class="n">Susp.</th><th class="n">Producción</th></tr></thead><tbody>${reps.map(r => `<tr><td class="n">${esc(r.periodo)}</td><td class="n">${fmt(r.dotacion)}</td><td class="n">${r.capacidad != null ? r.capacidad + "%" : "—"}</td><td class="n">${fmt(r.suspendidos)}</td><td class="n">${r.produccion != null ? fmt(r.produccion) + " " + esc(r.unidad || "") : "—"}</td></tr>`).join("")}</tbody></table></div>` : `<p class="small muted">Sin reportes mensuales todavía.</p>`}
    ${evs.length ? `<h4>Hechos</h4><ul class="small" style="margin:4px 0;padding-left:18px">${evs.map(e => `<li><span class="muted">${esc(e.fecha.split("-").reverse().join("/"))}</span> · ${esc(TIPOS[e.tipo] || e.tipo)}${e.cantidad ? ` · ${fmt(e.cantidad)} trab.` : ""}${e.url ? ` · <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.fuente)}</a>` : ""}${e.nota ? `<div class="muted">${esc(e.nota)}</div>` : ""}</li>`).join("")}</ul>` : ""}
@@ -565,6 +575,8 @@ function generarPedido() {
     if (sel.has("est_zona")) { const z = estPorZona(enAmb).filter(([k]) => k !== "Sin asignar").slice(0, provs && provs.length === 1 ? 30 : 20);
       bloque(provs && provs.length === 1 ? (provs[0] === "CABA" ? "Establecimientos por comuna" : "Establecimientos por partido o departamento") : "Partidos y departamentos con más establecimientos", hbarra(z.map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a límites del IGN.");
       if (provs && provs.includes("CABA") && (S.barrios || []).length) { const zb = estPorZona(p => p === "CABA", "bar").filter(([k]) => k !== "Sin asignar"); bloque("Establecimientos por barrio (CABA)", hbarra(zb.slice(0, 48).map(([k, v]) => [k + (v.g ? ` · ${v.g} ${v.g === 1 ? "grande" : "grandes"}` : ""), v.n])), "CEP XXI, asignado por ubicación a los barrios de la Ciudad."); } }
+    if (sel.has("est_zona") && provs && provs.includes("CABA") && S.hab && S.hab.habilitaciones.length) { const H = S.hab.habilitaciones; const c = {}; H.forEach(h => { const k = h.comuna ? "Comuna " + h.comuna : "Sin comuna"; c[k] = (c[k] || 0) + 1; });
+      bloque("Fábricas y talleres metalúrgicos habilitados en la Ciudad, por comuna", hbarra(Object.entries(c).sort((a, b) => b[1] - a[1])) + `<details><summary class="small">Ver el listado (${fmt(H.length)})</summary><table><thead><tr><th>Razón social</th><th>Rubro</th><th>Domicilio</th><th>Comuna</th></tr></thead><tbody>${H.slice().sort((a, b) => (+a.comuna || 99) - (+b.comuna || 99)).map(h => `<tr><td>${esc(h.razon_social || "")}</td><td class="small">${esc(h.rubro)}</td><td>${esc(h.direccion)}</td><td>${esc(h.comuna || "")}</td></tr>`).join("")}</tbody></table></details>`, "Agencia Gubernamental de Control (GCBA), habilitaciones aprobadas, vía BA Data. Solo rubros de fabricación y talleres metalúrgicos."); }
     if (sel.has("est_tam")) { const T = ["a. 1-9", "b. 10-49", "c. 50-199", "d. 200-499", "e. 500+"]; bloque("Establecimientos por tamaño", hbarra(T.map(t => [t.slice(3) + " trabajadores", est.filter(f => f[3] === t).length])), "CEP XXI."); }
   }
   if (O && (sel.has("emp_total") || sel.has("emp_trim") || sel.has("emp_rama") || sel.has("emp_hist"))) {

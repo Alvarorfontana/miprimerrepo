@@ -1,0 +1,88 @@
+{
+ "fuente": "Global Energy Monitor, Global Iron and Steel Tracker (gem.wiki)",
+ "licencia": "CC BY-NC-SA 4.0 — uso no comercial, con atribución y compartiendo en las mismas condiciones",
+ "licencia_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+ "nota": "Capacidad nominal y producción real de acero crudo en miles de toneladas por año. Uso en este observatorio sin fines comerciales.",
+ "acerias": [
+  {
+   "planta": "ternium-san-nicolas",
+   "nombre_gem": "Ternium Siderar San Nicolás steel plant",
+   "url": "https://www.gem.wiki/Ternium_Siderar_San_Nicol%C3%A1s_steel_plant",
+   "propietario": "Ternium Argentina SA (100%)",
+   "inicio": 1960,
+   "tecnologia": "Alto horno + convertidor al oxígeno (BF-BOF)",
+   "cap_acero": 3501,
+   "cap_hierro": 4015,
+   "dotacion": 2074,
+   "produccion": {
+    "2019": 2162,
+    "2020": 1708,
+    "2021": 2148,
+    "2022": 2270,
+    "2023": 2225,
+    "2024": 1700
+   },
+   "productos": "Laminados en caliente y en frío, planchones, hojalata"
+  },
+  {
+   "planta": "tenaris-siderca-campana",
+   "nombre_gem": "TenarisSiderca Campana steel plant",
+   "url": "https://www.gem.wiki/TenarisSiderca_Campana_steel_plant",
+   "propietario": "Siderca SAIC (Tenaris SA, 100%)",
+   "inicio": 1960,
+   "tecnologia": "Reducción directa + horno eléctrico (DRI-EAF)",
+   "cap_acero": 1720,
+   "cap_hierro": 960,
+   "dotacion": 2993,
+   "produccion": {
+    "2019": 878,
+    "2020": 694,
+    "2021": 873,
+    "2022": 1364,
+    "2023": 1319,
+    "2024": 1034
+   },
+   "productos": "Tubos sin costura"
+  },
+  {
+   "planta": "acindar-villa-constitucion",
+   "nombre_gem": "ArcelorMittal Acindar Villa Constitución steel plant",
+   "url": "https://www.gem.wiki/ArcelorMittal_Acindar_Villa_Constituci%C3%B3n_steel_plant",
+   "propietario": "Acindar (ArcelorMittal, 100%)",
+   "inicio": 1946,
+   "tecnologia": "Reducción directa + horno eléctrico (DRI-EAF)",
+   "cap_acero": 2000,
+   "cap_hierro": 600,
+   "dotacion": 1594,
+   "produccion": {
+    "2019": 1100,
+    "2020": 800,
+    "2021": 1252,
+    "2022": 1174,
+    "2023": 1100,
+    "2024": 700
+   },
+   "productos": "Alambrón, barras, mallas, alambres"
+  },
+  {
+   "planta": "gerdau-perez",
+   "nombre_gem": "Gerdau Sipar Pérez steel plant",
+   "url": "https://www.gem.wiki/Gerdau_Sipar_P%C3%A9rez_steel_plant",
+   "propietario": "Sipar Aceros SA (Gerdau, 98,1%)",
+   "inicio": 2017,
+   "tecnologia": "Horno eléctrico con chatarra (EAF)",
+   "cap_acero": 650,
+   "cap_hierro": null,
+   "dotacion": 716,
+   "produccion": {
+    "2019": 167,
+    "2020": 182,
+    "2021": 219,
+    "2022": 372,
+    "2023": 356,
+    "2024": 291
+   },
+   "productos": "Palanquillas, barras, mallas"
+  }
+ ]
+}

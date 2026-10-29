@@ -150,6 +150,38 @@
         "Nombre y polígono de predios industriales",
         "Parques industriales"
       ]
+    },
+    {
+      "clave": "gem",
+      "nombre": "Global Energy Monitor · Global Iron and Steel Tracker",
+      "tipo": "Datos abiertos (CC BY-NC-SA 4.0)",
+      "conexion": "Fichas de las acerías argentinas en gem.wiki",
+      "frecuencia": "Anual",
+      "estado": "listo",
+      "nivel": "Planta (acerías)",
+      "url": "https://globalenergymonitor.org/projects/global-iron-and-steel-tracker/",
+      "variables": [
+        "Capacidad nominal de acero crudo y de hierro",
+        "Producción real de acero crudo por año",
+        "Tecnología (alto horno, reducción directa, horno eléctrico)",
+        "Dotación declarada y propietario"
+      ]
+    },
+    {
+      "clave": "caba-agc",
+      "nombre": "Ciudad de Buenos Aires · Habilitaciones aprobadas (AGC, BA Data)",
+      "tipo": "Datos abiertos",
+      "conexion": "Descarga automática mensual (GitHub Actions) y ubicación con el normalizador de direcciones de la Ciudad (USIG)",
+      "frecuencia": "Anual o según publicación",
+      "estado": "automático",
+      "nivel": "Local habilitado, con razón social y domicilio",
+      "url": "https://data.buenosaires.gob.ar/dataset/habilitaciones-aprobadas",
+      "variables": [
+        "Razón social",
+        "Rubro habilitado",
+        "Domicilio y comuna",
+        "Ubicación en el mapa"
+      ]
     }
   ],
   "ramasClae": [
