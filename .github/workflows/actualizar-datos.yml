@@ -27,6 +27,9 @@ jobs:
       - name: Establecimientos metalúrgicos (CEP XXI)
         run: node scripts/actualizar-establecimientos.mjs
         continue-on-error: true
+      - name: Plantas candidatas en OpenStreetMap
+        run: node scripts/actualizar-osm.mjs
+        continue-on-error: true
       - name: Archivos oficiales (OEDE, conflictividad, EIL, SIPA)
         run: node scripts/descargar-fuentes.mjs
         continue-on-error: true

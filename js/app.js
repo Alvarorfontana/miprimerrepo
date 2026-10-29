@@ -24,17 +24,17 @@ const PRESETS = [["País", [-73.6, -55.1, -53.6, -21.7]], ["AMBA", [-59.1, -35.0
 const cssv = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 
 /* ---------- estado ---------- */
-const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, nombres: true } };
+const S = { geo: null, plantas: [], eventos: [], reportes: [], series: [], est: { filas: [] }, fuentes: { fuentes: [], ramasClae: [] }, sel: null, tab: "informe", picking: false, capas: { plantas: true, est: true, osm: true, nombres: true } };
 let sb = null; // cliente Supabase opcional
 
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null)]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf;
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm;
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -127,7 +127,7 @@ function baseMapa() {
   svg.addEventListener("wheel", e => { e.preventDefault(); const b = svg.getBoundingClientRect(); zoom(e.deltaY < 0 ? .8 : 1.25, (e.clientX - b.left) / b.width, (e.clientY - b.top) / b.height); }, { passive: false });
   $("zin").onclick = () => zoom(.6, .5, .5); $("zout").onclick = () => zoom(1.6, .5, .5);
   $("zoomPresets").innerHTML = ""; for (const [n, b] of PRESETS) { const c = document.createElement("button"); c.className = "chip"; c.type = "button"; c.textContent = n; c.onclick = () => setVB(fitBox(...b)); $("zoomPresets").appendChild(c); }
-  const capas = [["plantas", "Plantas UOM"], ["est", "Establecimientos CEP XXI"], ["nombres", "Nombres de provincias"]];
+  const capas = [["plantas", "Plantas UOM"], ["osm", "Candidatas con nombre (OSM)"], ["est", "Establecimientos CEP XXI"], ["nombres", "Nombres de provincias"]];
   $("capas").innerHTML = capas.map(([k, t]) => `<button class="chip" type="button" data-c="${k}" aria-pressed="${S.capas[k]}">${t}</button>`).join("");
   $("capas").querySelectorAll("button").forEach(b => b.onclick = () => { S.capas[b.dataset.c] = !S.capas[b.dataset.c]; b.setAttribute("aria-pressed", S.capas[b.dataset.c]); dibujarPuntos(); dibujarEst(); });
   new ResizeObserver(() => { setVB(vb); }).observe($("mapbox"));
@@ -138,8 +138,14 @@ function dibujarPuntos() {
   const k = vb[2] / 316, pv = F().pv;
   document.querySelectorAll(".prov").forEach(p => p.classList.toggle("sel", !!pv && p.dataset.name === pv));
   if (S.capas.nombres) for (const [n, [x, y]] of Object.entries(S.geo.c)) { if (n === "CABA" && vb[2] > 30) continue; const t = document.createElementNS(NS, "text"); t.setAttribute("x", x); t.setAttribute("y", y); t.setAttribute("text-anchor", "middle"); t.setAttribute("class", "plab"); t.setAttribute("font-size", (6.2 * k).toFixed(2)); t.style.strokeWidth = (2.2 * k).toFixed(2) + "px"; t.textContent = n; L.appendChild(t); }
-  if (!S.capas.plantas) return;
   const r = Math.max(4.6 * k, .07);
+  if (S.capas.osm) for (const o of (S.osm && S.osm.plantas) || []) {
+    if (F().pv && !(o.lat && o.lon)) continue; const [x, y] = proj(o.lon, o.lat);
+    const q = document.createElementNS(NS, "rect"); q.setAttribute("x", x - r * .6); q.setAttribute("y", y - r * .6); q.setAttribute("width", r * 1.2); q.setAttribute("height", r * 1.2);
+    q.setAttribute("fill", "none"); q.setAttribute("stroke", "#7a3fb0"); q.setAttribute("stroke-width", "1.4"); q.setAttribute("vector-effect", "non-scaling-stroke");
+    const t = document.createElementNS(NS, "title"); t.textContent = `Candidata: ${o.nombre}${o.localidad ? " · " + o.localidad : ""} (OpenStreetMap)`; q.appendChild(t); g.appendChild(q);
+  }
+  if (!S.capas.plantas) return;
   for (const p of filtradas()) {
     if (p.lat == null) continue; const [x, y] = proj(p.lon, p.lat), st = estado(p);
     const c = document.createElementNS(NS, "circle"); c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", r);
@@ -149,7 +155,7 @@ function dibujarPuntos() {
     g.appendChild(c);
   }
   const est = S.est.filas || [];
-  $("maplegend").innerHTML = (S.capas.plantas ? Object.values(ESTADOS).map(([l, v]) => `<span><i style="background:${cssv(v)}"></i>${l}</span>`).join("") : "") +
+  $("maplegend").innerHTML = (S.capas.osm && S.osm && S.osm.plantas.length ? `<span><i style="border:1.5px solid #7a3fb0;border-radius:2px;background:none"></i>Candidata con nombre (OSM)</span>` : "") + (S.capas.plantas ? Object.values(ESTADOS).map(([l, v]) => `<span><i style="background:${cssv(v)}"></i>${l}</span>`).join("") : "") +
     (S.capas.est && est.length ? `<span style="margin-top:4px;font-weight:600">Establecimientos por rama</span>` + S.fuentes.ramasClae.map(r => `<span><i style="background:${RAMA_COLOR[r.prefijo]};width:7px;height:7px"></i>${esc(r.rama.split(" (")[0])}</span>`).join("") : "");
 }
 function dibujarEst() {
