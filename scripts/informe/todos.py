@@ -11,6 +11,8 @@ for nombre, pv in items:
     if r.returncode: print("ERROR", nombre, r.stderr[-400:]); continue
     out.append({"ambito": nombre, "archivo": r.stdout.strip().splitlines()[-1], "mes": mes})
     print("✓", nombre)
+if len(out) < len(items):
+    print(f"Hubo errores en {len(items) - len(out)} informes: no se borra nada ni se actualiza el índice."); sys.exit(1)
 # borrar informes de meses anteriores que ya no están en el índice
 vigentes = {o["archivo"] for o in out}
 for f in os.listdir(f"{R}/informes"):

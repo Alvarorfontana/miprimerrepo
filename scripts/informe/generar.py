@@ -186,9 +186,10 @@ def main():
     # alertas
     ale = AL["alertas"]
     ale = [x for x in ale if x["nivel"] != "info" and (not PV or x["ambito"] == "Nacional" or x.get("provincia") == PV)]
+    if PV: ale = sorted(ale, key=lambda x: (x.get("provincia") != PV, {"alta": 0, "media": 1}.get(x["nivel"], 2)))
     if ale:
         filas_a = "".join(f"<tr class='{x['nivel']}'><td><span class='nv {x['nivel']}'>{x['nivel'].upper()}</span></td><td><b>{x['titulo']}</b><div class='small'>{x.get('detalle') or ''}</div></td><td class='small'>{x['tema']}<br>{x['ambito']}</td><td class='small'>{str(x['periodo']).replace('T', ' T')}<br>{x['fuente']}</td></tr>" for x in ale[:26])
-        P.append(f"<section class='page'><div class='kick'>Alerta temprana</div><h2>Alertas activas</h2><p>Variables que cruzaron un umbral del modelo: {sum(1 for x in ale if x['nivel'] == 'alta')} alertas altas y {sum(1 for x in ale if x['nivel'] == 'media')} a seguir de cerca.</p><table><thead><tr><th>Nivel</th><th>Alerta</th><th>Tema</th><th>Dato</th></tr></thead><tbody>{filas_a}</tbody></table><p class='src'>Umbrales: producción −5% y −10% interanual; empleo −2% y −5% por provincia (−10% por actividad); capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días.</p></section>")
+        P.append(f"<section class='page'><div class='kick'>Alerta temprana</div><h2>Alertas activas</h2><p>{"Primero las alertas propias de " + titulo_amb + ", después las nacionales. " if PV else ""}Variables que cruzaron un umbral del modelo: {sum(1 for x in ale if x['nivel'] == 'alta')} alertas altas y {sum(1 for x in ale if x['nivel'] == 'media')} a seguir de cerca.</p><table><thead><tr><th>Nivel</th><th>Alerta</th><th>Tema</th><th>Dato</th></tr></thead><tbody>{filas_a}</tbody></table><p class='src'>Umbrales: producción −5% y −10% interanual; empleo −2% y −5% por provincia (−10% por actividad); capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días.</p></section>")
 
     # actividad (nacional)
     if ipi or uci:
@@ -296,9 +297,18 @@ def lectura(e_ia, ipi_ia, uci, adimra):
 
 
 def pagina_importaciones(imp):
-    ms = [d["periodo"] for d in imp["series"][0]["datos"]][-24:]
-    lin = [(s["nombre"], [next((d["valor"] for d in s["datos"] if d["periodo"] == m), None) for m in ms], PAL[i]) for i, s in enumerate(imp["series"])]
-    return f"<section class='page'><div class='kick'>Comercio exterior</div><h2>Importaciones que compiten</h2><p>{imp.get('descripcion', '')}</p>{lineas(lin, alto=300, etiquetas_x=[mes_c(m) for m in ms], cada=4, unidad='')}<p class='src'>Fuente: {imp.get('fuente', 'INDEC')}.</p></section>"
+    IS = imp["series"]; u = IS[0]["datos"][-1]["periodo"]; ya, ma = int(u[:4]), int(u[5:7])
+    acum = lambda s, y: sum(d["valor"] for d in s["datos"] if d["periodo"].startswith(f"{y}-") and int(d["periodo"][5:7]) <= ma)
+    it = sorted([(s["nombre"].split(" (")[0], (acum(s, ya) / acum(s, ya - 1) - 1) * 100 if acum(s, ya - 1) else 0, f"USD {num(acum(s, ya), 0)} millones") for s in IS], key=lambda x: -x[1])
+    mens = {}
+    for s in IS:
+        for d in s["datos"]: mens[d["periodo"]] = mens.get(d["periodo"], 0) + d["valor"]
+    ms = sorted(mens)[-36:]
+    cols = [MOLT if v > 0 else STEEL for _, v, _ in it]
+    return (f"<section class='page'><div class='kick'>Comercio exterior · Ámbito nacional</div><h2>Importaciones que compiten</h2><p>{imp.get('descripcion', '')}</p>"
+            f"<h3>Variación acumulada enero–{MESES_L[ma - 1]} {ya} contra igual período de {ya - 1}</h3><p class='small'>Número a la derecha: variación porcentual. Naranja: suben las importaciones; azul: bajan.</p>{barras_h(it, unidad='%', signo=True, ancho_etq=300, alto_fila=34, colores=cols)}"
+            f"<h3>Total importado por mes, millones de USD</h3>{lineas([('Total', [round(mens[m], 1) for m in ms], MOLT)], alto=230, etiquetas_x=[mes_c(m) for m in ms], cada=6)}"
+            f"<p class='src'>Fuente: {imp.get('fuente', 'INDEC')}. Valores CIF.</p></section>")
 
 
 HTML_BASE = """<!doctype html><html lang='es'><head><meta charset='utf-8'><style>
