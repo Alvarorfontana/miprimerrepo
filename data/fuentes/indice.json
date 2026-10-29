@@ -77,6 +77,45 @@
     }
    ],
    "errores": []
+  },
+  {
+   "clave": "indec-capacidad",
+   "nombre": "INDEC · Utilización de la capacidad instalada por bloque (serie)",
+   "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/15",
+   "archivos": [
+    {
+     "archivo": "data/fuentes/indec-capacidad/sh_capacidad_10_26.xls",
+     "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_capacidad_10_26.xls",
+     "mb": 0.06
+    }
+   ],
+   "errores": []
+  },
+  {
+   "clave": "indec-ipi",
+   "nombre": "INDEC · Índice de producción industrial manufacturero por rama (serie)",
+   "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/14",
+   "archivos": [
+    {
+     "archivo": "data/fuentes/indec-ipi/sh_ipi_manufacturero_2026.xls",
+     "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_ipi_manufacturero_2026.xls",
+     "mb": 1
+    }
+   ],
+   "errores": []
+  },
+  {
+   "clave": "indec-maqagricola",
+   "nombre": "INDEC · Industria de maquinaria agrícola (ventas por tipo)",
+   "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/20",
+   "archivos": [
+    {
+     "archivo": "data/fuentes/indec-maqagricola/sh_industria_maquinaria_agricola.xls",
+     "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_industria_maquinaria_agricola.xls",
+     "mb": 0.24
+    }
+   ],
+   "errores": []
   }
  ]
 }

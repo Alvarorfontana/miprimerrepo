@@ -1,0 +1,63 @@
+{
+ "fecha": "2026-10-29T15:22:30.461Z",
+ "comex_home": {
+  "status": 200
+ },
+ "comex_scripts": [],
+ "comex_rutas": [],
+ "comex_pruebas": {
+  "https://comex.indec.gob.ar/files/zips/impo_2026_M.zip": "404 text/html; charset=utf-8 166",
+  "https://comex.indec.gob.ar/files/zips/impo_2025_M.zip": "404 text/html; charset=utf-8 166",
+  "https://comex.indec.gob.ar/files/zips/imports_2025_M.zip": "200 application/zip 7668194",
+  "https://comex.indec.gob.ar/files/zips/import_2025_M.zip": "404 text/html; charset=utf-8 168"
+ },
+ "acero": [
+  {
+   "fecha": "2026-09-30T12:29:43",
+   "titulo": "20260929 CAA INFORME MENSUAL SEPTIEMBRE",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/09/20260929-CAA-INFORME-MENSUAL-SEPTIEMBRE.pdf"
+  },
+  {
+   "fecha": "2026-08-27T13:39:09",
+   "titulo": "20260827 CAA INFORME MENSUAL AGOSTO",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO-1.pdf"
+  },
+  {
+   "fecha": "2026-08-27T13:33:19",
+   "titulo": "20260827 CAA INFORME MENSUAL AGOSTO",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO.pdf"
+  },
+  {
+   "fecha": "2026-06-30T09:39:16",
+   "titulo": "CAA INFORME MENSUAL JUNIO 2026",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/06/CAA-INFORME-MENSUAL-JUNIO-2026.pdf"
+  },
+  {
+   "fecha": "2026-04-29T13:07:33",
+   "titulo": "20260429 CAA INFORME MENSUAL ABRIL",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/04/20260429-CAA-INFORME-MENSUAL-ABRIL.pdf"
+  },
+  {
+   "fecha": "2026-03-27T13:26:15",
+   "titulo": "20260326 CAA INFORME MENSUAL MARZO",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/03/20260326-CAA-INFORME-MENSUAL-MARZO.pdf"
+  },
+  {
+   "fecha": "2026-02-25T17:33:27",
+   "titulo": "20260220 CAA INFORME MENSUAL",
+   "url": "https://www.acero.org.ar/wp-content/uploads/2026/02/20260220-CAA-INFORME-MENSUAL.pdf"
+  }
+ ],
+ "adimra": {
+  "status": 403,
+  "muestra": "Forbidden\n\nForbidden\niad1::xxj49-1793287356759-efff054cce8e"
+ },
+ "adimra2": {
+  "status": 403,
+  "muestra": "Forbidden\n\nForbidden\niad1::97r4c-1793287357138-689d07c0cc90"
+ },
+ "adimra_home_pdfs": [],
+ "adimra_home_links": [
+  "href=\"/informes-y-comunicados\""
+ ]
+}
