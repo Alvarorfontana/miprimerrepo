@@ -2,5 +2,161 @@
  "actualizado": "2026-10-29",
  "fuente": "Cámara Argentina del Acero, informes mensuales",
  "unidad": "toneladas",
- "meses": {}
+ "meses": {
+  "2026-08": {
+   "acero_crudo": 366700,
+   "laminados": 324100,
+   "var_interanual": -1,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/09/20260929-CAA-INFORME-MENSUAL-SEPTIEMBRE.pdf"
+  },
+  "2026-07": {
+   "acero_crudo": 377500,
+   "laminados": 319200,
+   "var_interanual": 15.3,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO.pdf"
+  },
+  "2026-05": {
+   "acero_crudo": 399400,
+   "laminados": 325900,
+   "var_interanual": 14,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/06/CAA-INFORME-MENSUAL-JUNIO-2026.pdf"
+  },
+  "2026-03": {
+   "acero_crudo": 387400,
+   "laminados": 255600,
+   "var_interanual": 17.1,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/04/20260429-CAA-INFORME-MENSUAL-ABRIL.pdf"
+  },
+  "2026-02": {
+   "acero_crudo": 272200,
+   "laminados": 148500,
+   "var_interanual": -14,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/03/20260326-CAA-INFORME-MENSUAL-MARZO.pdf"
+  },
+  "2026-01": {
+   "acero_crudo": 351400,
+   "laminados": 276500,
+   "var_interanual": 17.2,
+   "fuente": "https://www.acero.org.ar/wp-content/uploads/2026/02/20260220-CAA-INFORME-MENSUAL.pdf"
+  }
+ },
+ "series": [
+  {
+   "clave": "caa-acero-crudo",
+   "nombre": "CAA · Producción de acero crudo",
+   "unidad": "miles de t",
+   "organismo": "Cámara Argentina del Acero",
+   "url": "https://www.acero.org.ar",
+   "datos": [
+    {
+     "periodo": "2026-01",
+     "valor": 351.4,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/02/20260220-CAA-INFORME-MENSUAL.pdf"
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 272.2,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/03/20260326-CAA-INFORME-MENSUAL-MARZO.pdf"
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 387.4,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/04/20260429-CAA-INFORME-MENSUAL-ABRIL.pdf"
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 399.4,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/06/CAA-INFORME-MENSUAL-JUNIO-2026.pdf"
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 377.5,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO.pdf"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 366.7,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/09/20260929-CAA-INFORME-MENSUAL-SEPTIEMBRE.pdf"
+    }
+   ]
+  },
+  {
+   "clave": "caa-laminados",
+   "nombre": "CAA · Producción de laminados (planos y no planos)",
+   "unidad": "miles de t",
+   "organismo": "Cámara Argentina del Acero",
+   "url": "https://www.acero.org.ar",
+   "datos": [
+    {
+     "periodo": "2026-01",
+     "valor": 276.5,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/02/20260220-CAA-INFORME-MENSUAL.pdf"
+    },
+    {
+     "periodo": "2026-02",
+     "valor": 148.5,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/03/20260326-CAA-INFORME-MENSUAL-MARZO.pdf"
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 255.6,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/04/20260429-CAA-INFORME-MENSUAL-ABRIL.pdf"
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 325.9,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/06/CAA-INFORME-MENSUAL-JUNIO-2026.pdf"
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 319.2,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO.pdf"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 324.1,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/09/20260929-CAA-INFORME-MENSUAL-SEPTIEMBRE.pdf"
+    }
+   ]
+  },
+  {
+   "clave": "caa-acero-interanual",
+   "nombre": "CAA · Acero crudo, variación interanual",
+   "unidad": "%",
+   "organismo": "Cámara Argentina del Acero",
+   "url": "https://www.acero.org.ar",
+   "datos": [
+    {
+     "periodo": "2026-01",
+     "valor": 17.2,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/02/20260220-CAA-INFORME-MENSUAL.pdf"
+    },
+    {
+     "periodo": "2026-02",
+     "valor": -14,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/03/20260326-CAA-INFORME-MENSUAL-MARZO.pdf"
+    },
+    {
+     "periodo": "2026-03",
+     "valor": 17.1,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/04/20260429-CAA-INFORME-MENSUAL-ABRIL.pdf"
+    },
+    {
+     "periodo": "2026-05",
+     "valor": 14,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/06/CAA-INFORME-MENSUAL-JUNIO-2026.pdf"
+    },
+    {
+     "periodo": "2026-07",
+     "valor": 15.3,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/08/20260827-CAA-INFORME-MENSUAL-AGOSTO.pdf"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": -1,
+     "url": "https://www.acero.org.ar/wp-content/uploads/2026/09/20260929-CAA-INFORME-MENSUAL-SEPTIEMBRE.pdf"
+    }
+   ]
+  }
+ ]
 }
