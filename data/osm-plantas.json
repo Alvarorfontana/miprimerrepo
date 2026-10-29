@@ -1,7 +1,7 @@
 {
  "actualizado": "2026-10-29",
  "fuente": "OpenStreetMap (ODbL), vía Overpass",
- "servidor": "https://overpass.kumi.systems/api/interpreter, https://overpass-api.de/api/interpreter",
+ "servidor": "https://overpass.private.coffee/api/interpreter, https://overpass.kumi.systems/api/interpreter",
  "nota": "Candidatas detectadas por nombre o etiqueta industrial. Hay que confirmar cuáles son plantas metalúrgicas activas y si están representadas por la UOM.",
  "plantas": [
   {
@@ -645,234 +645,34 @@
    "url": "https://www.openstreetmap.org/way/1330059083"
   },
   {
-   "id": "osm-n1438309140",
-   "nombre": "ACOPLADITOS Y CARROCERIAS NAVAS",
+   "id": "osm-w146638964",
+   "nombre": "Acindar Villa Constitucion",
    "operador": "",
-   "tipo": "works",
+   "tipo": "factory",
    "localidad": "",
-   "lat": -28.44865,
-   "lon": -65.77393,
-   "url": "https://www.openstreetmap.org/node/1438309140"
+   "lat": -33.25738,
+   "lon": -60.29198,
+   "url": "https://www.openstreetmap.org/way/146638964"
   },
   {
-   "id": "osm-n2858398967",
-   "nombre": "Metalúrgica El Erial",
+   "id": "osm-w146819284",
+   "nombre": "Ternium Siderar",
    "operador": "",
-   "tipo": "works",
-   "localidad": "Trenel",
-   "lat": -35.69922,
-   "lon": -64.12772,
-   "url": "https://www.openstreetmap.org/node/2858398967"
-  },
-  {
-   "id": "osm-n3388345080",
-   "nombre": "Carrocerías El Tero S.A.",
-   "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -33.14283,
-   "lon": -64.38329,
-   "url": "https://www.openstreetmap.org/node/3388345080"
+   "lat": -33.37105,
+   "lon": -60.14656,
+   "url": "https://www.openstreetmap.org/way/146819284"
   },
   {
-   "id": "osm-n3388345508",
-   "nombre": "PRAGA Metalúrgica",
+   "id": "osm-w172429736",
+   "nombre": "Acindar Tablada",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -33.14697,
-   "lon": -64.38312,
-   "url": "https://www.openstreetmap.org/node/3388345508"
-  },
-  {
-   "id": "osm-n4139698021",
-   "nombre": "Metalurgica Compes",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "Posadas",
-   "lat": -27.40296,
-   "lon": -55.91046,
-   "url": "https://www.openstreetmap.org/node/4139698021"
-  },
-  {
-   "id": "osm-n5490693504",
-   "nombre": "Fiasa Fundicion",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -35.11928,
-   "lon": -60.47658,
-   "url": "https://www.openstreetmap.org/node/5490693504"
-  },
-  {
-   "id": "osm-n5589388968",
-   "nombre": "Fábrica de tubos",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "corrientes",
-   "lat": -27.51208,
-   "lon": -58.83003,
-   "url": "https://www.openstreetmap.org/node/5589388968"
-  },
-  {
-   "id": "osm-n7066984242",
-   "nombre": "Prometal",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -31.46325,
-   "lon": -64.16754,
-   "url": "https://www.openstreetmap.org/node/7066984242"
-  },
-  {
-   "id": "osm-n7319699717",
-   "nombre": "Metalizaciones Rioplatenses",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "General Rodriguez",
-   "lat": -34.58531,
-   "lon": -58.93512,
-   "url": "https://www.openstreetmap.org/node/7319699717"
-  },
-  {
-   "id": "osm-n8173788595",
-   "nombre": "Gravaz Metalmecánica",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -34.52847,
-   "lon": -58.59894,
-   "url": "https://www.openstreetmap.org/node/8173788595"
-  },
-  {
-   "id": "osm-n9216949519",
-   "nombre": "Tubos DAK",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "Río Grande",
-   "lat": -53.80734,
-   "lon": -67.7593,
-   "url": "https://www.openstreetmap.org/node/9216949519"
-  },
-  {
-   "id": "osm-n9328197474",
-   "nombre": "Agrometalurgica Zippilli Hermanos",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.41964,
-   "lon": -63.21098,
-   "url": "https://www.openstreetmap.org/node/9328197474"
-  },
-  {
-   "id": "osm-n9347349893",
-   "nombre": "Industrias Cormetal",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.42075,
-   "lon": -63.21722,
-   "url": "https://www.openstreetmap.org/node/9347349893"
-  },
-  {
-   "id": "osm-n9347375024",
-   "nombre": "Banchio Hnos. SA Metalquímica",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.42117,
-   "lon": -63.21725,
-   "url": "https://www.openstreetmap.org/node/9347375024"
-  },
-  {
-   "id": "osm-n9821292452",
-   "nombre": "Metalúrgica Matienzo división herrajes",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -34.79908,
-   "lon": -58.44176,
-   "url": "https://www.openstreetmap.org/node/9821292452"
-  },
-  {
-   "id": "osm-n9861676829",
-   "nombre": "Ternium",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -34.63874,
-   "lon": -58.61029,
-   "url": "https://www.openstreetmap.org/node/9861676829"
-  },
-  {
-   "id": "osm-n9883355034",
-   "nombre": "Taller Metalúrgico Luis Calcagno",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.41946,
-   "lon": -63.22498,
-   "url": "https://www.openstreetmap.org/node/9883355034"
-  },
-  {
-   "id": "osm-n10555582773",
-   "nombre": "Acoplados GROSS",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.16855,
-   "lon": -60.17675,
-   "url": "https://www.openstreetmap.org/node/10555582773"
-  },
-  {
-   "id": "osm-n11011445163",
-   "nombre": "Lubrisider",
-   "operador": "Lubrisider S.A.",
-   "tipo": "works",
-   "localidad": "Billinghurst",
-   "lat": -34.57271,
-   "lon": -58.56885,
-   "url": "https://www.openstreetmap.org/node/11011445163"
-  },
-  {
-   "id": "osm-n11707595493",
-   "nombre": "Industrias Cormetal - PILT",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -32.43035,
-   "lon": -63.16949,
-   "url": "https://www.openstreetmap.org/node/11707595493"
-  },
-  {
-   "id": "osm-n13089338737",
-   "nombre": "Tubos de Hormigon",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -26.45904,
-   "lon": -54.64692,
-   "url": "https://www.openstreetmap.org/node/13089338737"
-  },
-  {
-   "id": "osm-n13459390959",
-   "nombre": "Metaltécnica SRL",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "Rosario",
-   "lat": -32.96896,
-   "lon": -60.71674,
-   "url": "https://www.openstreetmap.org/node/13459390959"
-  },
-  {
-   "id": "osm-w149679686",
-   "nombre": "Obras Metalicas S. A.",
-   "operador": "",
-   "tipo": "works",
-   "localidad": "Ciudad Autónoma de Buenos Aires",
-   "lat": -34.66532,
-   "lon": -58.43641,
-   "url": "https://www.openstreetmap.org/way/149679686"
+   "lat": -34.68871,
+   "lon": -58.53974,
+   "url": "https://www.openstreetmap.org/way/172429736"
   },
   {
    "id": "osm-w187148795",
@@ -885,14 +685,104 @@
    "url": "https://www.openstreetmap.org/way/187148795"
   },
   {
-   "id": "osm-w296376890",
-   "nombre": "Metalúrgica Famet",
+   "id": "osm-w188478261",
+   "nombre": "Metalsur Carrocerías",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -27.43322,
-   "lon": -59.02923,
-   "url": "https://www.openstreetmap.org/way/296376890"
+   "lat": -33.03379,
+   "lon": -60.61456,
+   "url": "https://www.openstreetmap.org/way/188478261"
+  },
+  {
+   "id": "osm-w188480143",
+   "nombre": "Troyano Carrocerias",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.03039,
+   "lon": -60.62272,
+   "url": "https://www.openstreetmap.org/way/188480143"
+  },
+  {
+   "id": "osm-w276294367",
+   "nombre": "Metales Demarco",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.58407,
+   "lon": -59.106,
+   "url": "https://www.openstreetmap.org/way/276294367"
+  },
+  {
+   "id": "osm-w282795513",
+   "nombre": "Taller Metalúrgico TSM",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -41.94438,
+   "lon": -71.53679,
+   "url": "https://www.openstreetmap.org/way/282795513"
+  },
+  {
+   "id": "osm-w289947553",
+   "nombre": "Industrias Metalmecánicas Especiales SACI",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -32.93234,
+   "lon": -68.82259,
+   "url": "https://www.openstreetmap.org/way/289947553"
+  },
+  {
+   "id": "osm-w299030370",
+   "nombre": "DE BLASI - Maquinaria Agroindustrial",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Luzuriaga - Maipú",
+   "lat": -32.9324,
+   "lon": -68.80137,
+   "url": "https://www.openstreetmap.org/way/299030370"
+  },
+  {
+   "id": "osm-w316471838",
+   "nombre": "Industrias Metalúrgicas Pescarmona S.A. (IMPSA)",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Godoy Cruz",
+   "lat": -32.93203,
+   "lon": -68.81354,
+   "url": "https://www.openstreetmap.org/way/316471838"
+  },
+  {
+   "id": "osm-w335399454",
+   "nombre": "Metalagro Hidráulica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Villa Elisa",
+   "lat": -32.14809,
+   "lon": -58.41716,
+   "url": "https://www.openstreetmap.org/way/335399454"
+  },
+  {
+   "id": "osm-w359373271",
+   "nombre": "Ternium Siderar Ensenada",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.85577,
+   "lon": -57.94051,
+   "url": "https://www.openstreetmap.org/way/359373271"
+  },
+  {
+   "id": "osm-w367481811",
+   "nombre": "TEC MEN - Fabrica de Vigas y Correas Laminadas",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Gutierrez",
+   "lat": -32.93479,
+   "lon": -68.78357,
+   "url": "https://www.openstreetmap.org/way/367481811"
   },
   {
    "id": "osm-w369946722",
@@ -903,6 +793,676 @@
    "lat": -32.92686,
    "lon": -60.71498,
    "url": "https://www.openstreetmap.org/way/369946722"
+  },
+  {
+   "id": "osm-w402182254",
+   "nombre": "Ferrosider Lomas",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.77701,
+   "lon": -58.41662,
+   "url": "https://www.openstreetmap.org/way/402182254"
+  },
+  {
+   "id": "osm-w413976535",
+   "nombre": "Metalúrgica El Trébol",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -40.84109,
+   "lon": -62.96675,
+   "url": "https://www.openstreetmap.org/way/413976535"
+  },
+  {
+   "id": "osm-w413976539",
+   "nombre": "Daluar",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -40.83686,
+   "lon": -62.9633,
+   "url": "https://www.openstreetmap.org/way/413976539"
+  },
+  {
+   "id": "osm-w413976543",
+   "nombre": "Verificación y Grabado de Autopartes",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -40.83044,
+   "lon": -62.96757,
+   "url": "https://www.openstreetmap.org/way/413976543"
+  },
+  {
+   "id": "osm-w426967100",
+   "nombre": "Industrias Cormetal",
+   "operador": "",
+   "tipo": "works",
+   "localidad": "",
+   "lat": -32.4221,
+   "lon": -63.2218,
+   "url": "https://www.openstreetmap.org/way/426967100"
+  },
+  {
+   "id": "osm-w431478273",
+   "nombre": "Ex Fundición Martin Münster",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -24.175,
+   "lon": -65.40737,
+   "url": "https://www.openstreetmap.org/way/431478273"
+  },
+  {
+   "id": "osm-w440508743",
+   "nombre": "Ternium Siderar Planta Canning",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.87615,
+   "lon": -58.51304,
+   "url": "https://www.openstreetmap.org/way/440508743"
+  },
+  {
+   "id": "osm-w473999034",
+   "nombre": "Red Acindar",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -32.97051,
+   "lon": -60.72137,
+   "url": "https://www.openstreetmap.org/way/473999034"
+  },
+  {
+   "id": "osm-w523509853",
+   "nombre": "Fundición",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.88165,
+   "lon": -58.5108,
+   "url": "https://www.openstreetmap.org/way/523509853"
+  },
+  {
+   "id": "osm-w547742878",
+   "nombre": "Plastiferro Tubos",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "9 de Abril",
+   "lat": -34.7436,
+   "lon": -58.4892,
+   "url": "https://www.openstreetmap.org/way/547742878"
+  },
+  {
+   "id": "osm-w567197765",
+   "nombre": "Whirlpool Argentina",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.68932,
+   "lon": -58.52255,
+   "url": "https://www.openstreetmap.org/way/567197765"
+  },
+  {
+   "id": "osm-w620143275",
+   "nombre": "Alumetal Acerias de Cuyo",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -31.57973,
+   "lon": -68.51968,
+   "url": "https://www.openstreetmap.org/way/620143275"
+  },
+  {
+   "id": "osm-w620943601",
+   "nombre": "Metalsol",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Pergamino",
+   "lat": -33.90333,
+   "lon": -60.52138,
+   "url": "https://www.openstreetmap.org/way/620943601"
+  },
+  {
+   "id": "osm-w622497806",
+   "nombre": "Alumetal",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -31.56965,
+   "lon": -68.51474,
+   "url": "https://www.openstreetmap.org/way/622497806"
+  },
+  {
+   "id": "osm-w626682636",
+   "nombre": "Sidersa",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -33.38895,
+   "lon": -60.21474,
+   "url": "https://www.openstreetmap.org/way/626682636"
+  },
+  {
+   "id": "osm-w628057481",
+   "nombre": "Acindar San Nicolás (Perfiles Livianos)",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.34673,
+   "lon": -60.25717,
+   "url": "https://www.openstreetmap.org/way/628057481"
+  },
+  {
+   "id": "osm-w653245420",
+   "nombre": "Autopartes Rodolfo Stockl",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -34.83584,
+   "lon": -58.41116,
+   "url": "https://www.openstreetmap.org/way/653245420"
+  },
+  {
+   "id": "osm-w707967100",
+   "nombre": "Parque Eólico Aluar I",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -42.63889,
+   "lon": -65.25865,
+   "url": "https://www.openstreetmap.org/way/707967100"
+  },
+  {
+   "id": "osm-w710536668",
+   "nombre": "Laminados Industriales",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.26989,
+   "lon": -60.28254,
+   "url": "https://www.openstreetmap.org/way/710536668"
+  },
+  {
+   "id": "osm-w734481068",
+   "nombre": "Centro de Distribución Metalfor",
+   "operador": "",
+   "tipo": "distributor",
+   "localidad": "",
+   "lat": -33.00622,
+   "lon": -60.68145,
+   "url": "https://www.openstreetmap.org/way/734481068"
+  },
+  {
+   "id": "osm-w781622770",
+   "nombre": "Tenaris Siderca",
+   "operador": "Nicastro José Salvador",
+   "tipo": "factory",
+   "localidad": "Neuquén",
+   "lat": -38.90365,
+   "lon": -68.08237,
+   "url": "https://www.openstreetmap.org/way/781622770"
+  },
+  {
+   "id": "osm-w828302291",
+   "nombre": "Pauny S.A.",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -31.87938,
+   "lon": -62.7182,
+   "url": "https://www.openstreetmap.org/way/828302291"
+  },
+  {
+   "id": "osm-w845038984",
+   "nombre": "Tenaris SIAT",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -34.66226,
+   "lon": -58.40981,
+   "url": "https://www.openstreetmap.org/way/845038984"
+  },
+  {
+   "id": "osm-w853204304",
+   "nombre": "Metalúrgica Arancibia",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "San Juan",
+   "lat": -31.51447,
+   "lon": -68.53855,
+   "url": "https://www.openstreetmap.org/way/853204304"
+  },
+  {
+   "id": "osm-w906403805",
+   "nombre": "Inaforja",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.57058,
+   "lon": -59.15044,
+   "url": "https://www.openstreetmap.org/way/906403805"
+  },
+  {
+   "id": "osm-w906802472",
+   "nombre": "Sirometal",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -32.86355,
+   "lon": -60.71744,
+   "url": "https://www.openstreetmap.org/way/906802472"
+  },
+  {
+   "id": "osm-w930421942",
+   "nombre": "Aluar (Puerto Madryn) Power Plant",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -42.73902,
+   "lon": -65.05338,
+   "url": "https://www.openstreetmap.org/way/930421942"
+  },
+  {
+   "id": "osm-w954544949",
+   "nombre": "Fabrica de tubos",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -27.51237,
+   "lon": -58.82996,
+   "url": "https://www.openstreetmap.org/way/954544949"
+  },
+  {
+   "id": "osm-w1068785162",
+   "nombre": "Tenaris SIAT",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -33.26406,
+   "lon": -60.28902,
+   "url": "https://www.openstreetmap.org/way/1068785162"
+  },
+  {
+   "id": "osm-w1069445002",
+   "nombre": "Central Térmica Siderca",
+   "operador": "Tenaris Siderca",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.1519,
+   "lon": -58.97595,
+   "url": "https://www.openstreetmap.org/way/1069445002"
+  },
+  {
+   "id": "osm-w1079052816",
+   "nombre": "Ref Metalurgica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.0573,
+   "lon": -60.64848,
+   "url": "https://www.openstreetmap.org/way/1079052816"
+  },
+  {
+   "id": "osm-w1160297766",
+   "nombre": "Red Acindar",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -34.6618,
+   "lon": -59.41178,
+   "url": "https://www.openstreetmap.org/way/1160297766"
+  },
+  {
+   "id": "osm-w1180114155",
+   "nombre": "Potenza Metalurgica",
+   "operador": "Potenza S.A.",
+   "tipo": "factory",
+   "localidad": "José León Suarez",
+   "lat": -34.52377,
+   "lon": -58.5729,
+   "url": "https://www.openstreetmap.org/way/1180114155"
+  },
+  {
+   "id": "osm-w1218165849",
+   "nombre": "Seanmetal",
+   "operador": "Seanmetal S.R.L.",
+   "tipo": "industrial",
+   "localidad": "José León Suarez",
+   "lat": -34.51929,
+   "lon": -58.57025,
+   "url": "https://www.openstreetmap.org/way/1218165849"
+  },
+  {
+   "id": "osm-w1245434760",
+   "nombre": "Metalmecánica Vitus Braig",
+   "operador": "",
+   "tipo": "scrap_yard",
+   "localidad": "",
+   "lat": -43.07163,
+   "lon": -71.46203,
+   "url": "https://www.openstreetmap.org/way/1245434760"
+  },
+  {
+   "id": "osm-w1274772910",
+   "nombre": "Cooperativa Forja San Martín",
+   "operador": "Cooperativa Forja San Martín Ltda.",
+   "tipo": "industrial",
+   "localidad": "Villa Bonich",
+   "lat": -34.57323,
+   "lon": -58.56831,
+   "url": "https://www.openstreetmap.org/way/1274772910"
+  },
+  {
+   "id": "osm-w1303607749",
+   "nombre": "Metalúrgica Del Valle",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -31.5326,
+   "lon": -68.57361,
+   "url": "https://www.openstreetmap.org/way/1303607749"
+  },
+  {
+   "id": "osm-w1314890519",
+   "nombre": "Metalúrgica Spaltro SA",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Ramos Mejía",
+   "lat": -34.65741,
+   "lon": -58.5435,
+   "url": "https://www.openstreetmap.org/way/1314890519"
+  },
+  {
+   "id": "osm-w1316403197",
+   "nombre": "Metales Concepción",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -31.52001,
+   "lon": -68.50592,
+   "url": "https://www.openstreetmap.org/way/1316403197"
+  },
+  {
+   "id": "osm-w1330908183",
+   "nombre": "SG Desarrollos Especiales de Autopartes",
+   "operador": "",
+   "tipo": "factory",
+   "localidad": "",
+   "lat": -31.55164,
+   "lon": -68.51176,
+   "url": "https://www.openstreetmap.org/way/1330908183"
+  },
+  {
+   "id": "osm-w1344872910",
+   "nombre": "FABACC Autopartes",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Roldán",
+   "lat": -32.90735,
+   "lon": -60.90242,
+   "url": "https://www.openstreetmap.org/way/1344872910"
+  },
+  {
+   "id": "osm-w1347373287",
+   "nombre": "ALUAR",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Abasto",
+   "lat": -35.00109,
+   "lon": -58.11951,
+   "url": "https://www.openstreetmap.org/way/1347373287"
+  },
+  {
+   "id": "osm-w1355953306",
+   "nombre": "Gabotti Metalúrgica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.72953,
+   "lon": -62.00721,
+   "url": "https://www.openstreetmap.org/way/1355953306"
+  },
+  {
+   "id": "osm-w1417955234",
+   "nombre": "Electrometalúrgica Andina",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -31.49953,
+   "lon": -68.59763,
+   "url": "https://www.openstreetmap.org/way/1417955234"
+  },
+  {
+   "id": "osm-r8733392",
+   "nombre": "Acindar San Nicolás (Aceros Largos)",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.34023,
+   "lon": -60.19409,
+   "url": "https://www.openstreetmap.org/relation/8733392"
+  },
+  {
+   "id": "osm-r13894463",
+   "nombre": "Acoplados Petinari",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.67316,
+   "lon": -58.75298,
+   "url": "https://www.openstreetmap.org/relation/13894463"
+  },
+  {
+   "id": "osm-r16131610",
+   "nombre": "Metalpar Argentina S.A.",
+   "operador": "",
+   "tipo": "works",
+   "localidad": "",
+   "lat": -34.5583,
+   "lon": -58.60578,
+   "url": "https://www.openstreetmap.org/relation/16131610"
+  },
+  {
+   "id": "osm-n3467767651",
+   "nombre": "Empresa Metalúrgica Mahle",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -31.25739,
+   "lon": -61.46641,
+   "url": "https://www.openstreetmap.org/node/3467767651"
+  },
+  {
+   "id": "osm-n3667897271",
+   "nombre": "Proimet Sa Productos Metalúrgicos",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Brandsen",
+   "lat": -35.16206,
+   "lon": -58.22003,
+   "url": "https://www.openstreetmap.org/node/3667897271"
+  },
+  {
+   "id": "osm-n3730044309",
+   "nombre": "Fundición Gatti",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Pilar",
+   "lat": -31.43846,
+   "lon": -61.26505,
+   "url": "https://www.openstreetmap.org/node/3730044309"
+  },
+  {
+   "id": "osm-n3772667490",
+   "nombre": "Metalurgica Chaulet",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Villa Elisa",
+   "lat": -32.16705,
+   "lon": -58.40468,
+   "url": "https://www.openstreetmap.org/node/3772667490"
+  },
+  {
+   "id": "osm-w146820818",
+   "nombre": "Acería",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.36975,
+   "lon": -60.16116,
+   "url": "https://www.openstreetmap.org/way/146820818"
+  },
+  {
+   "id": "osm-w149679686",
+   "nombre": "Obras Metalicas S. A.",
+   "operador": "",
+   "tipo": "works",
+   "localidad": "Ciudad Autónoma de Buenos Aires",
+   "lat": -34.66532,
+   "lon": -58.43641,
+   "url": "https://www.openstreetmap.org/way/149679686"
+  },
+  {
+   "id": "osm-w176555015",
+   "nombre": "Acería",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.15659,
+   "lon": -58.9798,
+   "url": "https://www.openstreetmap.org/way/176555015"
+  },
+  {
+   "id": "osm-w176555020",
+   "nombre": "Laminador Continuo 2",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.15662,
+   "lon": -58.9721,
+   "url": "https://www.openstreetmap.org/way/176555020"
+  },
+  {
+   "id": "osm-w176555025",
+   "nombre": "Laminador Continuo 1",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.15575,
+   "lon": -58.97642,
+   "url": "https://www.openstreetmap.org/way/176555025"
+  },
+  {
+   "id": "osm-w176555030",
+   "nombre": "Tubos Premium",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.1541,
+   "lon": -58.97025,
+   "url": "https://www.openstreetmap.org/way/176555030"
+  },
+  {
+   "id": "osm-w176555057",
+   "nombre": "Praxair Siderca",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.15873,
+   "lon": -58.98426,
+   "url": "https://www.openstreetmap.org/way/176555057"
+  },
+  {
+   "id": "osm-w187564328",
+   "nombre": "Frimetal",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.00858,
+   "lon": -60.6819,
+   "url": "https://www.openstreetmap.org/way/187564328"
+  },
+  {
+   "id": "osm-w200421463",
+   "nombre": "Tenaris Metalmecanica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.71381,
+   "lon": -65.39887,
+   "url": "https://www.openstreetmap.org/way/200421463"
+  },
+  {
+   "id": "osm-w226403132",
+   "nombre": "Metalurgica D´Angelo",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.5477,
+   "lon": -58.50742,
+   "url": "https://www.openstreetmap.org/way/226403132"
+  },
+  {
+   "id": "osm-w230329663",
+   "nombre": "Sidercolor",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.81878,
+   "lon": -58.19909,
+   "url": "https://www.openstreetmap.org/way/230329663"
+  },
+  {
+   "id": "osm-w310944451",
+   "nombre": "Metalúrgica Fanjul",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.64323,
+   "lon": -58.53332,
+   "url": "https://www.openstreetmap.org/way/310944451"
+  },
+  {
+   "id": "osm-w403557589",
+   "nombre": "Metalurgica Victor",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Capioví",
+   "lat": -26.93519,
+   "lon": -55.06589,
+   "url": "https://www.openstreetmap.org/way/403557589"
+  },
+  {
+   "id": "osm-w403557590",
+   "nombre": "Metalurgica Christ",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -26.93451,
+   "lon": -55.06108,
+   "url": "https://www.openstreetmap.org/way/403557590"
+  },
+  {
+   "id": "osm-w403692772",
+   "nombre": "Metalurgica San Pedro",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Capioví",
+   "lat": -26.91137,
+   "lon": -55.06097,
+   "url": "https://www.openstreetmap.org/way/403692772"
+  },
+  {
+   "id": "osm-w407392682",
+   "nombre": "Metalúrgica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -26.83967,
+   "lon": -55.03976,
+   "url": "https://www.openstreetmap.org/way/407392682"
   },
   {
    "id": "osm-w431345218",
@@ -925,84 +1485,134 @@
    "url": "https://www.openstreetmap.org/way/436059229"
   },
   {
-   "id": "osm-w477782787",
-   "nombre": "Mirgor",
+   "id": "osm-w439498232",
+   "nombre": "AFA Metalúrgica",
    "operador": "",
-   "tipo": "electronics",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -53.80219,
-   "lon": -67.74538,
-   "url": "https://www.openstreetmap.org/way/477782787"
+   "lat": -32.47998,
+   "lon": -61.56818,
+   "url": "https://www.openstreetmap.org/way/439498232"
   },
   {
-   "id": "osm-w478091591",
-   "nombre": "C&M S.R.L. Industrias Metalúrgicas",
+   "id": "osm-w446865658",
+   "nombre": "Autopartes FAL",
+   "operador": "FAL Autopartes SA",
+   "tipo": "industrial",
+   "localidad": "Turdera",
+   "lat": -34.79021,
+   "lon": -58.40623,
+   "url": "https://www.openstreetmap.org/way/446865658"
+  },
+  {
+   "id": "osm-w464950758",
+   "nombre": "Red Acindar",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -31.44397,
-   "lon": -68.52192,
-   "url": "https://www.openstreetmap.org/way/478091591"
+   "lat": -34.64038,
+   "lon": -58.43648,
+   "url": "https://www.openstreetmap.org/way/464950758"
   },
   {
-   "id": "osm-w653250890",
-   "nombre": "Burmetal",
+   "id": "osm-w468514682",
+   "nombre": "Polimetal",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -34.83226,
-   "lon": -58.41712,
-   "url": "https://www.openstreetmap.org/way/653250890"
+   "lat": -34.5762,
+   "lon": -58.597,
+   "url": "https://www.openstreetmap.org/way/468514682"
   },
   {
-   "id": "osm-w673729990",
-   "nombre": "Metalúrgica El Turco",
+   "id": "osm-w470804189",
+   "nombre": "Red Acindar",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -32.44382,
-   "lon": -63.24283,
-   "url": "https://www.openstreetmap.org/way/673729990"
+   "lat": -34.52649,
+   "lon": -58.71049,
+   "url": "https://www.openstreetmap.org/way/470804189"
   },
   {
-   "id": "osm-w778877535",
-   "nombre": "Ferrosider Lomas",
+   "id": "osm-w484815504",
+   "nombre": "Metalúrgica Lory",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
+   "localidad": "Oberá",
+   "lat": -27.49713,
+   "lon": -55.10177,
+   "url": "https://www.openstreetmap.org/way/484815504"
+  },
+  {
+   "id": "osm-w486395736",
+   "nombre": "Ferrosider Parts S.A.",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "El Triángulo",
+   "lat": -34.4549,
+   "lon": -58.70525,
+   "url": "https://www.openstreetmap.org/way/486395736"
+  },
+  {
+   "id": "osm-w523083634",
+   "nombre": "Ex Metalurgica Túpac Amaru (Lavadero de motos)",
+   "operador": "",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -34.77701,
-   "lon": -58.41662,
-   "url": "https://www.openstreetmap.org/way/778877535"
+   "lat": -24.25505,
+   "lon": -65.25906,
+   "url": "https://www.openstreetmap.org/way/523083634"
   },
   {
-   "id": "osm-w781628553",
-   "nombre": "Metalúrgica Crauchuk S.A",
+   "id": "osm-w574782623",
+   "nombre": "Metalúrgica del Puerto S.A.",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
+   "localidad": "Santa Fe",
+   "lat": -31.64529,
+   "lon": -60.68917,
+   "url": "https://www.openstreetmap.org/way/574782623"
+  },
+  {
+   "id": "osm-w620769827",
+   "nombre": "Metalúrgica Garín",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "Garín",
+   "lat": -34.4382,
+   "lon": -58.72701,
+   "url": "https://www.openstreetmap.org/way/620769827"
+  },
+  {
+   "id": "osm-w653249424",
+   "nombre": "Metalúrgica Incomet",
+   "operador": "",
+   "tipo": "factory",
    "localidad": "",
-   "lat": -38.90799,
-   "lon": -68.07864,
-   "url": "https://www.openstreetmap.org/way/781628553"
+   "lat": -34.83318,
+   "lon": -58.41628,
+   "url": "https://www.openstreetmap.org/way/653249424"
   },
   {
-   "id": "osm-w814811797",
-   "nombre": "Metalurgica Indumel",
+   "id": "osm-w752856992",
+   "nombre": "METALMECANICA S.A. Planta Laminación",
    "operador": "",
-   "tipo": "works",
-   "localidad": "Eldorado",
-   "lat": -26.4177,
-   "lon": -54.62075,
-   "url": "https://www.openstreetmap.org/way/814811797"
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.63089,
+   "lon": -65.51347,
+   "url": "https://www.openstreetmap.org/way/752856992"
   },
   {
-   "id": "osm-w965939018",
-   "nombre": "Mirgor Planta 4",
-   "operador": "",
-   "tipo": "electronics",
-   "localidad": "Río Grande",
-   "lat": -53.80393,
-   "lon": -67.73398,
-   "url": "https://www.openstreetmap.org/way/965939018"
+   "id": "osm-w1184918538",
+   "nombre": "Carrocerias Coral",
+   "operador": "Carrocerias Coral S.R.L.",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -34.56297,
+   "lon": -58.58041,
+   "url": "https://www.openstreetmap.org/way/1184918538"
   },
   {
    "id": "osm-w1188175984",
@@ -1015,24 +1625,74 @@
    "url": "https://www.openstreetmap.org/way/1188175984"
   },
   {
-   "id": "osm-w1265023686",
-   "nombre": "Fundición Mercurio S.A.",
+   "id": "osm-w1216113143",
+   "nombre": "Skaisider S.A.",
    "operador": "",
-   "tipo": "works",
-   "localidad": "",
-   "lat": -33.01057,
-   "lon": -60.68274,
-   "url": "https://www.openstreetmap.org/way/1265023686"
+   "tipo": "industrial",
+   "localidad": "Billinghurst",
+   "lat": -34.57555,
+   "lon": -58.54871,
+   "url": "https://www.openstreetmap.org/way/1216113143"
   },
   {
-   "id": "osm-r16131610",
-   "nombre": "Metalpar Argentina S.A.",
+   "id": "osm-w1260458176",
+   "nombre": "Centro de Reciclado de Metales",
    "operador": "",
-   "tipo": "works",
+   "tipo": "industrial",
    "localidad": "",
-   "lat": -34.5583,
-   "lon": -58.60578,
-   "url": "https://www.openstreetmap.org/relation/16131610"
+   "lat": -34.53614,
+   "lon": -58.54615,
+   "url": "https://www.openstreetmap.org/way/1260458176"
+  },
+  {
+   "id": "osm-w1466330706",
+   "nombre": "Renault Carrocería",
+   "operador": "Renault",
+   "tipo": "industrial",
+   "localidad": "Córdoba",
+   "lat": -31.38958,
+   "lon": -64.18854,
+   "url": "https://www.openstreetmap.org/way/1466330706"
+  },
+  {
+   "id": "osm-r10372902",
+   "nombre": "Metalmecanica",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.71471,
+   "lon": -65.46612,
+   "url": "https://www.openstreetmap.org/relation/10372902"
+  },
+  {
+   "id": "osm-r10372905",
+   "nombre": "Acindar",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.72134,
+   "lon": -65.46476,
+   "url": "https://www.openstreetmap.org/relation/10372905"
+  },
+  {
+   "id": "osm-r10372945",
+   "nombre": "Acindar",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.69646,
+   "lon": -65.48736,
+   "url": "https://www.openstreetmap.org/relation/10372945"
+  },
+  {
+   "id": "osm-r10373046",
+   "nombre": "Acindar",
+   "operador": "",
+   "tipo": "industrial",
+   "localidad": "",
+   "lat": -33.62246,
+   "lon": -65.53161,
+   "url": "https://www.openstreetmap.org/relation/10373046"
   }
  ]
 }
