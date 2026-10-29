@@ -1,0 +1,210 @@
+[
+ {
+  "archivo": "2023/impom23.csv",
+  "filas": 330278,
+  "cabecera": [
+   "año",
+   "mes",
+   "ncm",
+   "porg",
+   "pnet(kg)",
+   "fob(usd)",
+   "flete(usd)",
+   "seguro(usd)",
+   "cif(usd)"
+  ],
+  "columnas": {
+   "ncm": 2,
+   "mes": 1,
+   "anio": 0,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "2023;01;01012100;200;500,000;20000,00;3174,76;231,75;23406,51",
+   "2023;01;01012100;203;1000,000;8000,00;400,00;84,00;8484,00"
+  ]
+ },
+ {
+  "archivo": "2023/itotm23.csv",
+  "filas": 2,
+  "cabecera": [
+   "tabla",
+   "año",
+   "periodicidad",
+   "total de registros",
+   "total pnet(kg)",
+   "total fob(usd)",
+   "total flete(usd)",
+   "total seguro(usd)",
+   "total cif(usd)",
+   ""
+  ],
+  "columnas": {
+   "ncm": -1,
+   "mes": -1,
+   "anio": 1,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "impom23;2023;mensual;330277;39455249300,61;69849121546,23;3667709139,42;299402534,09;73816233219,74"
+  ]
+ },
+ {
+  "archivo": "2024/impom24.csv",
+  "filas": 347875,
+  "cabecera": [
+   "año",
+   "mes",
+   "ncm",
+   "porg",
+   "pnet(kg)",
+   "fob(usd)",
+   "flete(usd)",
+   "seguro(usd)",
+   "cif(usd)"
+  ],
+  "columnas": {
+   "ncm": 2,
+   "mes": 1,
+   "anio": 0,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "2024;01;01012100;200;500,000;6000,00;3500,00;47,50;9547,50",
+   "2024;01;01012100;212;2500,000;19500,00;26000,01;455,01;45955,02"
+  ]
+ },
+ {
+  "archivo": "2024/itotm24.csv",
+  "filas": 2,
+  "cabecera": [
+   "tabla",
+   "año",
+   "periodicidad",
+   "total de registros",
+   "total pnet(kg)",
+   "total fob(usd)",
+   "total flete(usd)",
+   "total seguro(usd)",
+   "total cif(usd)",
+   ""
+  ],
+  "columnas": {
+   "ncm": -1,
+   "mes": -1,
+   "anio": 1,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "impom24;2024;mensual;347874;31455636675,27;57355705332,69;3158916104,84;260950131,87;60775571569,40"
+  ]
+ },
+ {
+  "archivo": "2025/impom25.csv",
+  "filas": 385931,
+  "cabecera": [
+   "año",
+   "mes",
+   "ncm",
+   "porg",
+   "pnet(kg)",
+   "fob(usd)",
+   "flete(usd)",
+   "seguro(usd)",
+   "cif(usd)"
+  ],
+  "columnas": {
+   "ncm": 2,
+   "mes": 1,
+   "anio": 0,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "2025;01;01012100;200;500,000;4000,00;3466,67;74,67;7541,34",
+   "2025;01;01012100;203;500,000;25000,00;5405,41;152,03;30557,44"
+  ]
+ },
+ {
+  "archivo": "2025/itotm25.csv",
+  "filas": 2,
+  "cabecera": [
+   "tabla",
+   "año",
+   "periodicidad",
+   "total de registros",
+   "total pnet(kg)",
+   "total fob(usd)",
+   "total flete(usd)",
+   "total seguro(usd)",
+   "total cif(usd)",
+   ""
+  ],
+  "columnas": {
+   "ncm": -1,
+   "mes": -1,
+   "anio": 1,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "impom25;2025;mensual;385930;32808957825,64;71792647800,56;3695657936,03;302813494,75;75791119231,34"
+  ]
+ },
+ {
+  "archivo": "2026/impom26.csv",
+  "filas": 285624,
+  "cabecera": [
+   "año",
+   "mes",
+   "ncm",
+   "porg",
+   "pnet(kg)",
+   "fob(usd)",
+   "flete(usd)",
+   "seguro(usd)",
+   "cif(usd)"
+  ],
+  "columnas": {
+   "ncm": 2,
+   "mes": 1,
+   "anio": 0,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "2026;01;01012100;203;4500,000;22500,00;800,00;233,00;23533,00",
+   "2026;01;01012100;212;500,000;53172,40;7241,38;604,14;61017,92"
+  ]
+ },
+ {
+  "archivo": "2026/itotm26.csv",
+  "filas": 2,
+  "cabecera": [
+   "tabla",
+   "año",
+   "periodicidad",
+   "total de registros",
+   "total pnet(kg)",
+   "total fob(usd)",
+   "total flete(usd)",
+   "total seguro(usd)",
+   "total cif(usd)",
+   ""
+  ],
+  "columnas": {
+   "ncm": -1,
+   "mes": -1,
+   "anio": 1,
+   "valor": 5,
+   "kg": 4
+  },
+  "muestra": [
+   "impom26;2026;mensual;285623;26822056224,97;53173807744,98;2677815525,03;217169385,91;56068792655,92"
+  ]
+ }
+]
