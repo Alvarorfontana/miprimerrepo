@@ -30,11 +30,11 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || [];
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null)]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede;
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -269,6 +269,50 @@ function ficha() {
 function elegir(id) { S.sel = id; ficha(); dibujarPuntos(); }
 function tab(t) { S.tab = t; for (const n of ["informe", "plantas", "ramas"]) { $("t-" + n).setAttribute("aria-selected", n === t); $("p-" + n).hidden = n !== t; } ({ informe, plantas, ramas })[t](); }
 
+
+/* ---------- empleo OEDE ---------- */
+const trimTxt = t => `${t.slice(5)}.º trim. ${t.slice(0, 4)}`;
+function empleo() {
+  const O = S.oede; if (!O) { $("empKpis").innerHTML = `<div class="kpi"><span>Datos de empleo no disponibles todavía.</span></div>`; return; }
+  const UOM = Object.keys(O.grupos).filter(g => g !== "3410");
+  const Q = O.trimestres, iRef = Q.indexOf("2023T4"), iUlt = Q.length - 1;
+  const sumArea = (a, k, i) => UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g][k][i] : 0), 0);
+  const nacQ = i => Object.values(O.areas).reduce((x, a) => x + sumArea(a, "trim", i), 0);
+  const nacA = i => Object.values(O.areas).reduce((x, a) => x + sumArea(a, "anual", i), 0);
+  const anual = O.anios.map((y, i) => ({ y, v: nacA(i) }));
+  const ref = nacQ(iRef), ult = nacQ(iUlt), dif = ult - ref, pico = anual.reduce((m, x) => x.v > m.v ? x : m);
+  $("empKpis").innerHTML = [[fmt(ult), `puestos metalúrgicos registrados, ${trimTxt(Q[iUlt])}`, ""], [(dif > 0 ? "+" : "") + fmt(dif), `puestos desde el ${trimTxt(Q[iRef])}`, dif < 0 ? "bad" : ""],
+    [dec((ult / ref - 1) * 100) + "%", "variación en el mismo período", dif < 0 ? "bad" : ""], [fmt(pico.v), `máximo de la serie, promedio ${pico.y}`, ""]].map(([b, l, c]) => `<div class="kpi ${c}"><b>${b}</b><span>${l}</span></div>`).join("");
+  // histórico
+  const W = 620, H = 260, l = 54, r = 20, t = 18, b = 30, xs = anual.length, maxv = 320000;
+  const X = i => l + i * (W - l - r) / xs, Yv = v => t + (1 - v / maxv) * (H - t - b);
+  const ink = cssv("--ink"), mut = cssv("--muted"), line = cssv("--line"), acc = cssv("--steel"), mol = cssv("--molten");
+  let h = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Empleo metalúrgico registrado 1996 a ${Q[iUlt]}">`;
+  for (const v of [0, 100000, 200000, 300000]) h += `<line x1="${l}" x2="${W - r}" y1="${Yv(v)}" y2="${Yv(v)}" stroke="${line}"/><text x="${l - 6}" y="${Yv(v) + 4}" font-size="11" text-anchor="end" fill="${mut}">${v / 1000} mil</text>`;
+  anual.forEach((a, i) => { const hl = a.y === 2002 || a.y === pico.y; h += `<rect x="${X(i) + 1}" y="${Yv(a.v)}" width="${(W - l - r) / xs - 3}" height="${Yv(0) - Yv(a.v)}" fill="${hl ? mol : acc}" fill-opacity="${hl ? 1 : .75}"><title>${a.y}: ${fmt(a.v)}</title></rect>`;
+    if ((a.y % 4 === 0 && a.y < 2023) || a.y === 2025) h += `<text x="${X(i) + (W - l - r) / xs / 2}" y="${H - 10}" font-size="11" text-anchor="middle" fill="${mut}">${a.y}</text>`; });
+  const i02 = anual.findIndex(a => a.y === 2002), ip = anual.findIndex(a => a.y === pico.y);
+  h += `<text x="${X(i02) + (W - l - r) / xs / 2}" y="${Yv(Math.max(anual[i02 - 1].v, anual[i02 + 1].v)) - 6}" font-size="11.5" font-weight="600" fill="${mol}" text-anchor="middle">${fmt(anual[i02].v)}</text><text x="${X(ip) + (W - l - r) / xs / 2}" y="${Yv(anual[ip].v) - 6}" font-size="11.5" font-weight="600" fill="${mol}" text-anchor="middle">${fmt(anual[ip].v)}</text>`;
+  $("empHist").innerHTML = h + `</svg><p class="small muted" style="margin:6px 0 0">En naranja: el piso de la crisis de 2002 y el máximo de la serie. Último dato trimestral: ${fmt(ult)} puestos (${trimTxt(Q[iUlt])}).</p>`;
+  // ramas
+  const ramas = Object.entries(O.ramas).filter(([c, r]) => c !== "3410").map(([c, r]) => ({ c, d: r.descripcion, a: r.trim[iRef], b: r.trim[iUlt], dif: r.trim[iUlt] - r.trim[iRef] })).filter(r => r.a > 300);
+  ramas.sort((x, y) => x.dif - y.dif); const sel = [...ramas.slice(0, 8), ...ramas.slice(-4).reverse()];
+  const mx = Math.max(...sel.map(r => Math.abs(r.dif))), W2 = 620, lh = 28, H2 = sel.length * lh + 16, mid = 400, half = 190;
+  const corto = d => { d = d.replace(/^Fabricación de /, "").replace(/ n\.c\.p\./, ""); d = d[0].toUpperCase() + d.slice(1); return d.length > 46 ? d.slice(0, 45) + "…" : d; };
+  let rb = `<svg viewBox="0 0 ${W2} ${H2}" width="100%" role="img" aria-label="Variación del empleo por rama">`;
+  rb += `<line x1="${mid}" x2="${mid}" y1="4" y2="${H2 - 8}" stroke="${mut}"/>`;
+  sel.forEach((r, i) => { const y = 8 + i * lh, w = half * Math.abs(r.dif) / mx, neg = r.dif < 0, c = neg ? cssv("--bad") : cssv("--ok");
+    rb += `<text x="${neg ? mid - w - 6 : mid - 6}" y="${y + 14}" font-size="11.5" text-anchor="end" fill="${ink}">${esc(corto(r.d))}</text>`;
+    rb += `<rect x="${neg ? mid - w : mid}" y="${y + 3}" width="${w}" height="16" rx="2" fill="${c}"><title>${esc(r.d)}: ${fmt(r.a)} → ${fmt(r.b)}</title></rect>`;
+    rb += `<text x="${neg ? mid + 6 : mid + w + 6}" y="${y + 15}" font-size="11.5" font-family="IBM Plex Mono,monospace" fill="${c}">${r.dif > 0 ? "+" : ""}${fmt(r.dif)} (${dec((r.b / r.a - 1) * 100)}%)</text>`; });
+  $("empRamas").innerHTML = rb + "</svg>"; $("empRamasSub").textContent = `Puestos ganados o perdidos entre el ${trimTxt(Q[iRef])} y el ${trimTxt(Q[iUlt])} · ramas con más de 300 puestos`;
+  // provincias
+  const filas = Object.entries(O.areas).map(([k, a]) => ({ k, n: a.nombre, a: sumArea(a, "trim", iRef), b: sumArea(a, "trim", iUlt), sd: UOM.reduce((x, g) => x + (a.grupos[g] ? a.grupos[g].celdas_sd : 0), 0) })).sort((x, y) => y.b - x.b);
+  $("empProv").innerHTML = `<table><thead><tr><th>Provincia o área</th><th class="n">${trimTxt(Q[iRef])}</th><th class="n">${trimTxt(Q[iUlt])}</th><th class="n">Diferencia</th><th class="n">Var. %</th><th>Peso</th></tr></thead><tbody>${filas.map(f => { const v = f.a ? (f.b / f.a - 1) * 100 : 0, c = v < -0.5 ? "var(--bad)" : v > 0.5 ? "var(--ok)" : "var(--muted)"; return `<tr><td>${esc(f.n)}${f.sd >= 6 && f.b < 5000 ? ` <span class="small muted" title="Varias ramas con secreto estadístico">*</span>` : ""}</td><td class="n">${fmt(f.a)}</td><td class="n">${fmt(f.b)}</td><td class="n" style="color:${c}">${f.b - f.a > 0 ? "+" : ""}${fmt(f.b - f.a)}</td><td class="n" style="color:${c}">${dec(v)}%</td><td style="min-width:90px"><span style="display:block;height:8px;border-radius:2px;background:var(--steel);width:${(f.b / filas[0].b * 100).toFixed(1)}%"></span></td></tr>`; }).join("")}</tbody></table>`;
+  $("empProvSub").textContent = "Puestos metalúrgicos registrados, universo UOM. Buenos Aires aparece separada en Partidos del GBA y resto de la provincia.";
+  $("empNota").innerHTML = `* Provincias con varias ramas bajo secreto estadístico: la cifra es un piso y la variación puede no reflejar cambios reales. Fuente: <a href="${esc(O.url)}" target="_blank" rel="noopener">OEDE, Ministerio de Capital Humano</a>, sobre registros del SIPA. Actualizado ${esc(O.actualizado)}.`;
+}
+
 /* ---------- sector ---------- */
 function linea(pts, unidad) {
   const W = 540, H = 190, l = 46, r = 18, t = 18, b = 30; const ys = pts.map(p => +p.valor);
@@ -349,7 +393,7 @@ function formularios() {
 function irForm(f) { $("cargar").scrollIntoView({ behavior: "smooth" }); $("r_planta").value = S.sel; $("e_planta").value = S.sel; $("ftabs").querySelector(`[data-f="${f}"]`).click(); }
 
 /* ---------- arranque ---------- */
-function refrescar() { filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); }
+function refrescar() { filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); }
 await cargar();
 portada(); baseMapa(); filtros(); fuentes(); formularios();
 for (const n of ["informe", "plantas", "ramas"]) $("t-" + n).onclick = () => tab(n);
@@ -361,5 +405,5 @@ for (const id of ["fReg", "fProv", "fSec", "fRama"]) $(id).onchange = () => {
 $("fClear").onclick = () => { for (const id of ["fReg", "fProv", "fSec", "fRama"]) $(id).value = ""; refrescar(); setVB(fitBox(...PRESETS[0][1])); };
 refrescar(); setVB(fitBox(...PRESETS[0][1]));
 $("pieEstado").textContent = `Plantas: ${S.actualizado.plantas || "—"} · Indicadores: ${S.actualizado.indicadores || "—"} · Series automáticas: ${S.actualizado.auto || "pendiente de la primera corrida"} · Establecimientos CEP XXI: ${S.actualizado.est || "pendiente de la primera corrida"}${sb ? " · Base compartida conectada" : ""}`;
-const secs = ["mapa", "sector", "fuentes", "cargar"].map(id => $(id));
+const secs = ["mapa", "empleo", "sector", "fuentes", "cargar"].map(id => $(id));
 addEventListener("scroll", () => { const y = scrollY + 90; let on = null; for (const s of secs) if (s.offsetTop <= y) on = s.id; document.querySelectorAll(".nav ul a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + on)); }, { passive: true });

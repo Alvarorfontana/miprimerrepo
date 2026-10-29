@@ -21,6 +21,7 @@ Sitio estático (HTML, CSS y JavaScript sin compilación) más dos scripts que a
 | `data/indicadores-auto.json` | Series del INDEC desde la API de Series de Tiempo | Automático (GitHub Actions) |
 | `data/establecimientos.json` | Establecimientos metalúrgicos georreferenciados del CEP XXI | Automático (GitHub Actions) |
 | `data/fuentes/` | Excel y CSV oficiales sin modificar (OEDE, conflictividad, EIL, SIPA) | Automático (GitHub Actions) |
+| `data/empleo-oede.json` | Empleo metalúrgico registrado por provincia y rama, 1996 a hoy (OEDE) | Automático (GitHub Actions) |
 | `data/empresas.json` | Datos de empresa (despachos, producción, inversión) con fuente | Manual, desde informes de las compañías |
 | `data/fuentes.json` | Catálogo de fuentes y variables del modelo de datos | Manual |
 
