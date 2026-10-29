@@ -1,5 +1,5 @@
 {
- "fecha": "2026-10-29T16:43:52.282Z",
+ "fecha": "2026-10-29T18:52:00.808Z",
  "comex_home": {
   "status": 200
  },
@@ -50,11 +50,11 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::ncchl-1793292238444-a87d2819128f"
+  "muestra": "Forbidden\n\nForbidden\niad1::77lbt-1793299927502-51905c3287c9"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::xqddf-1793292238974-98e61b08b04a"
+  "muestra": "Forbidden\n\nForbidden\niad1::nwj9x-1793299927975-de3174558ac2"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
