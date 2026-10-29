@@ -22,7 +22,7 @@
     <ul>
       <li><a href="#alertas">Alertas</a></li>
       <li><a href="#mapa">Mapa</a></li>
-      <li><a href="#informes">Informes</a></li>
+      <li><a href="#pedido">Pedir informe</a></li>
       <li><a href="#empleo">Empleo</a></li>
       <li><a href="#sector">Sector</a></li>
       <li><a href="#fuentes">Fuentes y datos</a></li>
@@ -39,7 +39,7 @@
       <p class="lead">Cada planta, cada seccional, cada mes. Producción, capacidad, empleo, despidos y suspensiones en un solo lugar, con datos propios cruzados con las fuentes oficiales.</p>
       <div class="cta">
         <a class="btn pri" href="#mapa">Ver el mapa</a>
-        <a class="btn" href="#informes">Generar un informe</a>
+        <a class="btn" href="#pedido">Pedir un informe</a>
         <a class="btn" href="#fuentes">Qué datos usa</a>
       </div>
     </div>
@@ -82,7 +82,7 @@
       <p>Seis piezas que comparten una misma base de datos. Lo que carga una seccional aparece en el mapa, en los informes y en los totales nacionales.</p></div>
     <div class="mods">
       <a class="mod" href="#mapa"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></div><h3>Mapa nacional</h3><p>Plantas de la UOM con su estado y miles de establecimientos metalúrgicos del padrón oficial, por rama.</p><div class="src">UOM · CEP XXI</div></a>
-      <a class="mod" href="#informes"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Informes</h3><p>Reporte automático por seccional, provincia, región o país, listo para copiar, imprimir o descargar.</p><div class="src">Se arma con todos los datos</div></a>
+      <a class="mod" href="#pedido"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h4"/></svg></div><h3>Informes</h3><p>Reporte automático por seccional, provincia, región o país, listo para copiar, imprimir o descargar.</p><div class="src">Se arma con todos los datos</div></a>
       <a class="mod" href="#sector"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20h18"/><path d="m4 15 5-5 4 3 7-7"/></svg></div><h3>Coyuntura</h3><p>Actividad, capacidad instalada y producción de acero, actualizadas cada mes desde las fuentes públicas.</p><div class="src">INDEC · ADIMRA · Cámara del Acero</div></a>
       <a class="mod" href="#mapa"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><h3>Alerta temprana</h3><p>Cada suspensión o baja de horas tiñe la planta en el mapa antes de que llegue el despido.</p><div class="src">Reportes de delegados</div></a>
       <a class="mod" href="#cargar"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16"/><path d="M14 4l6 6-9 9H5v-6z"/></svg></div><h3>Carga de datos</h3><p>Formularios cortos para que cada seccional informe su mes en menos de quince minutos.</p><div class="src">Seccionales y delegados</div></a>
@@ -125,6 +125,23 @@
         <div id="p-ramas" hidden></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="sec gut" id="pedido">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Informes a pedido</div><h2>Pedir un informe</h2></div>
+      <p>Elegí el ámbito y las variables. El informe se arma en el momento con los últimos datos disponibles, con gráficos y texto, y se descarga en PDF.</p></div>
+    <form class="card pedido" id="f-pedido">
+      <div class="grid2">
+        <label class="f" for="pAmb">Ámbito<select id="pAmb"></select></label>
+        <label class="f" for="pCmp">Comparar contra<select id="pCmp"><option value="ia">Un año atrás</option><option value="ciclo">Fines de 2023 (cambio de ciclo)</option></select></label>
+      </div>
+      <div class="vars" id="pVars"></div>
+      <div class="row" style="margin-top:12px"><button class="btn pri" type="submit">Generar informe</button><button class="btn" type="button" id="pTodo">Marcar todo</button><button class="btn" type="button" id="pNada">Desmarcar todo</button></div>
+    </form>
+    <div id="reporte" hidden></div>
+    <div class="card" style="margin-top:16px"><h3>Informes completos ya emitidos (PDF)</h3><p class="small muted" style="margin:4px 0 10px">Informe estadístico completo, nacional y por provincia, del último mes.</p><div id="pdfs" class="pdfs"></div></div>
   </div>
 </section>
 

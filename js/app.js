@@ -30,11 +30,11 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.fAle = "todas";
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.fAle = "todas";
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -469,7 +469,112 @@ function alertas() {
   $("alertas-fil").querySelectorAll("button").forEach(b => b.onclick = () => { S.fAle = b.dataset.f; alertas(); });
   box.innerHTML = vis.length ? vis.slice(0, 80).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
 }
-function refrescar() { alertas(); filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
+
+/* ---------- pedido de informe a medida ---------- */
+const VARS = [
+  ["Establecimientos", [["est_total", "Cantidad de establecimientos y grandes (200+)"], ["est_rama", "Establecimientos por rama"], ["est_tam", "Establecimientos por tamaño"]]],
+  ["Empleo", [["emp_total", "Empleados registrados y variación"], ["emp_trim", "Evolución trimestral del empleo"], ["emp_rama", "Empleo por rama"], ["emp_hist", "Serie histórica anual (desde 1996)"]]],
+  ["Despidos y suspensiones", [["hechos", "Despidos, suspensiones y cierres en plantas"], ["conf_desp", "Conflictos con paro por despidos (nacional)"]]],
+  ["Capacidad y producción", [["capacidad", "Capacidad instalada en uso (INDEC y ADIMRA)"], ["ipi", "Producción por rama, IPI (nacional)"], ["acero", "Acero crudo (nacional)"], ["adimra", "Actividad metalúrgica ADIMRA"]]],
+  ["Conflictividad y riesgo", [["conf", "Conflictos laborales con paro (nacional)"], ["indice", "Índice de riesgo ponderado"], ["alertas", "Alertas activas"]]],
+  ["Plantas", [["plantas", "Plantas relevadas con su situación"]]]
+];
+function pedidoForm() {
+  if (!$("f-pedido") || $("pVars").childElementCount) return;
+  const provs = Object.keys(S.geo.p).sort((a, b) => a.localeCompare(b, "es")), regs = [...new Set(Object.values(REGION))].sort();
+  $("pAmb").innerHTML = `<option value="">Total país</option><optgroup label="Regiones">${regs.map(r => `<option value="r:${esc(r)}">Región ${esc(r)}</option>`).join("")}</optgroup><optgroup label="Provincias">${provs.map(p => `<option value="p:${esc(p)}">${esc(p)}</option>`).join("")}</optgroup>`;
+  $("pVars").innerHTML = VARS.map(([g, vs]) => `<fieldset><legend>${g}</legend>${vs.map(([k, t]) => `<label><input type="checkbox" name="v" value="${k}" checked> ${t}</label>`).join("")}</fieldset>`).join("");
+  $("pTodo").onclick = () => $("pVars").querySelectorAll("input").forEach(i => i.checked = true);
+  $("pNada").onclick = () => $("pVars").querySelectorAll("input").forEach(i => i.checked = false);
+  $("f-pedido").onsubmit = e => { e.preventDefault(); generarPedido(); };
+  getJSON("informes/indice.json", { informes: [] }).then(ix => { $("pdfs").innerHTML = (ix.informes || []).map(i => `<a class="chip" href="${esc(i.archivo)}" target="_blank" rel="noopener">${esc(i.ambito)}</a>`).join("") || `<span class="muted small">Todavía no hay informes emitidos.</span>`; });
+}
+function hbarra(items, unidad = "", d = 0, colores) {
+  if (!items.length) return `<p class="muted small">Sin datos.</p>`;
+  const vals = items.map(i => i[1]), lo = Math.min(0, ...vals), hi = Math.max(0, ...vals), W = 640, lh = 26, l = 230 + (lo < 0 ? 50 : 0), r = 60, w = W - l - r, H = items.length * lh + 8;
+  const X = v => l + (v - lo) / ((hi - lo) || 1) * w;
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img"><line x1="${X(0)}" x2="${X(0)}" y1="0" y2="${H}" stroke="#8a95a3"/>`;
+  items.forEach(([lab, v], i) => { const y = 4 + i * lh, c = colores ? colores[i] : v < 0 ? "#c24a0a" : "#1b4b8a", [x1, x2] = [X(0), X(v)].sort((a, b) => a - b);
+    s += `<text x="${226}" y="${y + 16}" font-size="12" text-anchor="end" fill="#111a25">${esc(String(lab).length > 34 ? String(lab).slice(0, 33) + "…" : lab)}</text><rect x="${x1}" y="${y + 4}" width="${Math.max(x2 - x1, 1)}" height="16" rx="2" fill="${c}"/>`
+      + `<text x="${v < 0 ? X(v) - 5 : X(v) + 5}" y="${y + 16}" font-size="11.5" font-weight="700" fill="${c}" text-anchor="${v < 0 ? "end" : "start"}">${v > 0 && lo < 0 ? "+" : ""}${dec(v, d)}${unidad}</text>`; });
+  return s + "</svg>";
+}
+function generarPedido() {
+  const amb = $("pAmb").value, cmp = $("pCmp").value, sel = new Set([...$("pVars").querySelectorAll("input:checked")].map(i => i.value));
+  if (!sel.size) { toast("Elegí al menos una variable"); return; }
+  const tipo = amb.slice(0, 1), val = amb.slice(2), provs = !amb ? null : tipo === "p" ? [val] : Object.keys(REGION).filter(p => REGION[p] === val || (val === "AMBA" && p === "Buenos Aires"));
+  const nombre = !amb ? "Total país" : tipo === "p" ? (val === "CABA" ? "Ciudad de Buenos Aires" : `Provincia de ${val}`) : `Región ${val}`;
+  const enAmb = p => !provs || provs.includes(p);
+  const O = S.oede, Q = O ? O.trimestres : [], n = Q.length, iRef = cmp === "ia" ? n - 5 : Q.indexOf("2023T4"), refTxt = cmp === "ia" ? "un año atrás" : "fines de 2023";
+  const UOM = O ? Object.keys(O.grupos).filter(g => g !== "3410") : [];
+  const areas = O ? Object.entries(O.areas).filter(([k, a]) => enAmb(a.provincia || k)) : [];
+  const sumQ = (gs, i) => areas.reduce((x, [, a]) => x + gs.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].trim[i] || 0 : 0), 0), 0);
+  const sumA = (gs, i) => areas.reduce((x, [, a]) => x + gs.reduce((y, g) => y + (a.grupos[g] ? a.grupos[g].anual[i] || 0 : 0), 0), 0);
+  const serie = k => S.series.find(s => s.clave === k), ultS = k => { const s = serie(k); if (!s || !s.datos.length) return null; return s.datos.slice().sort((a, b) => a.periodo.localeCompare(b.periodo)); };
+  const pct = (a, b) => b ? (a / b - 1) * 100 : null, sg = (v, d = 1) => v == null ? "s/d" : (v > 0 ? "+" : "") + dec(v, d);
+  const est = (S.est.filas || []).filter(f => enAmb(provDeEst(f[4])));
+  const plantas = S.plantas.filter(p => enAmb(p.provincia)), evs = S.eventos.filter(e => plantas.some(p => p.id === e.plantaId)).sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const B = [], R = []; // bloques y resumen
+  const bloque = (titulo, cuerpo, fuente) => B.push(`<section class="rb"><h3>${titulo}</h3>${cuerpo}${fuente ? `<p class="rsrc">Fuente: ${fuente}</p>` : ""}</section>`);
+  const nacional = provs ? ` <span class="tag-nac">dato nacional</span>` : "";
+
+  if (sel.has("est_total") || sel.has("est_rama") || sel.has("est_tam")) {
+    const grandes = est.filter(f => ["d. 200-499", "e. 500+"].includes(f[3])).length;
+    if (sel.has("est_total")) { R.push(`<b>${fmt(est.length)}</b> establecimientos metalúrgicos, <b>${grandes}</b> con 200 o más trabajadores.`);
+      bloque("Establecimientos", `<div class="rk"><div><b>${fmt(est.length)}</b><span>establecimientos metalúrgicos</span></div><div><b>${grandes}</b><span>con 200 o más trabajadores</span></div><div><b>${plantas.length}</b><span>plantas con seguimiento propio</span></div></div>`, "CEP XXI, padrón georreferenciado de establecimientos productivos (sin nombres de empresa).") }
+    if (sel.has("est_rama")) { const c = {}; est.forEach(f => { const r = ramaDeClae(f[2]); c[r] = (c[r] || 0) + 1; }); const it = S.fuentes.ramasClae.map(r => [r.rama.split(" (")[0], c[r.prefijo] || 0]).sort((a, b) => b[1] - a[1]);
+      bloque("Establecimientos por rama", hbarra(it, "", 0, it.map(([l]) => RAMA_COLOR[(S.fuentes.ramasClae.find(r => r.rama.startsWith(l)) || {}).prefijo] || "#1b4b8a")), "CEP XXI."); }
+    if (sel.has("est_tam")) { const T = ["a. 1-9", "b. 10-49", "c. 50-199", "d. 200-499", "e. 500+"]; bloque("Establecimientos por tamaño", hbarra(T.map(t => [t.slice(3) + " trabajadores", est.filter(f => f[3] === t).length])), "CEP XXI."); }
+  }
+  if (O && (sel.has("emp_total") || sel.has("emp_trim") || sel.has("emp_rama") || sel.has("emp_hist"))) {
+    const ult = sumQ(UOM, n - 1), ref = sumQ(UOM, iRef), v = pct(ult, ref);
+    if (sel.has("emp_total")) { R.push(`<b>${fmt(ult)}</b> asalariados metalúrgicos registrados (${Q[n - 1].replace("T", " T")}), <b>${sg(v)}%</b> contra ${refTxt} (${sg(ult - ref, 0)} puestos).`);
+      bloque("Empleo registrado", `<div class="rk"><div><b>${fmt(ult)}</b><span>asalariados registrados · ${Q[n - 1].replace("T", " T")}</span></div><div><b class="${ult < ref ? "neg" : ""}">${sg(ult - ref, 0)}</b><span>puestos contra ${refTxt}</span></div><div><b class="${v < 0 ? "neg" : ""}">${sg(v)}%</b><span>variación</span></div></div>`, "OEDE–SIPA. Universo UOM, sin terminales automotrices."); }
+    if (sel.has("emp_trim")) bloque("Evolución trimestral del empleo", linea(Q.map((q, i) => ({ periodo: q.slice(0, 4) + "-" + String((+q.slice(5) - 1) * 3 + 1).padStart(2, "0"), valor: sumQ(UOM, i) })), ""), "OEDE–SIPA.");
+    if (sel.has("emp_rama")) { const it = UOM.map(g => [O.grupos[g].split(" (")[0], sumQ([g], n - 1) - sumQ([g], iRef)]).filter(x => x[1] || true).sort((a, b) => a[1] - b[1]);
+      bloque(`Empleo por rama: cambio contra ${refTxt} (puestos)`, hbarra(it), "OEDE–SIPA."); }
+    if (sel.has("emp_hist")) bloque("Serie histórica anual del empleo", linea(O.anios.map((y, i) => ({ periodo: y + "-01", valor: sumA(UOM, i) })), ""), "OEDE–SIPA, promedio anual de puestos.");
+  }
+  if (sel.has("hechos")) { const tot = k => evs.filter(e => e.tipo === k).reduce((a, e) => a + (e.cantidad || 0), 0);
+    if (evs.length) R.push(`<b>${evs.length}</b> ${evs.length === 1 ? "hecho registrado" : "hechos registrados"} en plantas: ${tot("despidos")} despidos y ${tot("suspensiones")} suspendidos.`);
+    bloque("Despidos, suspensiones y cierres en plantas", evs.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class="r">Trabajadores</th><th>Fuente</th></tr></thead><tbody>${evs.map(e => `<tr><td>${e.fecha}</td><td>${esc((S.plantas.find(p => p.id === e.plantaId) || {}).nombre || "")}</td><td>${esc(e.tipo)}</td><td class="r">${e.cantidad ?? ""}</td><td>${e.url ? `<a href="${esc(e.url)}">${esc(e.fuente || "")}</a>` : esc(e.fuente || "")}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin hechos registrados en este ámbito.</p>`, "Relevamiento propio del equipo (prensa, empresas y datos aportados por la UOM)."); }
+  if (sel.has("conf_desp") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = (a[y] || 0) + (r[5] || 0); }); const ys = Object.keys(a).sort().slice(-12); bloque("Conflictos con paro por despidos, por año" + nacional, hbarra(ys.map(y => [y, a[y]])), "Ministerio de Capital Humano."); }
+  if (sel.has("capacidad")) { const ks = [["auto-uci-general", "Industria en general"], ["auto-uci-metalicas", "Metálicas básicas"], ["indec-uci-metalmecanica", "Metalmecánica sin automotriz"], ["indec-uci-automotriz", "Automotriz"], ["adimra-capacidad", "Metalúrgica (ADIMRA)"]];
+    const it = ks.map(([k, l]) => { const d = ultS(k); return d ? [`${l} · ${mesTxt(d.at(-1).periodo)}`, d.at(-1).valor] : null; }).filter(Boolean);
+    const mm = it.find(x => x[0].startsWith("Metalmec")); if (mm) R.push(`La metalmecánica usa <b>${dec(mm[1])}%</b> de su capacidad instalada.`);
+    bloque("Capacidad instalada en uso" + nacional, hbarra(it, "%", 1), "INDEC y ADIMRA."); }
+  if (sel.has("ipi")) { const ks = [["auto-ipi-siderurgia", "Siderurgia"], ["auto-ipi-fundicion", "Fundición"], ["auto-ipi-productos-metal", "Productos de metal"], ["auto-ipi-maquinaria", "Maquinaria y equipo"], ["auto-ipi-electricos", "Equipos eléctricos"], ["auto-ipi-autopartes", "Autopartes"]];
+    const it = ks.map(([k, l]) => { const d = ultS(k); if (!d) return null; const u = d.at(-1), b = d.find(x => x.periodo === (+u.periodo.slice(0, 4) - 1) + u.periodo.slice(4)); return b ? [`${l} · ${mesTxt(u.periodo)}`, pct(u.valor, b.valor)] : null; }).filter(Boolean).sort((a, b) => a[1] - b[1]);
+    if (it.length) R.push(`Producción: la mayor caída interanual es <b>${it[0][0].split(" ·")[0].toLowerCase()} (${sg(it[0][1])}%)</b>.`);
+    bloque("Producción por rama, variación interanual" + nacional, hbarra(it, "%", 1), "INDEC, Índice de producción industrial manufacturero."); }
+  if (sel.has("acero")) { const d = ultS("caa-acero-crudo"); if (d) bloque("Acero crudo, miles de toneladas" + nacional, linea(d.slice(-14), ""), "Cámara Argentina del Acero."); }
+  if (sel.has("adimra")) { const d = ultS("adimra-actividad"); let c = d ? linea(d, "%") : "";
+    const ap = (S.adimraProv && S.adimraProv.datos || []).filter(x => enAmb(x.provincia)); if (provs && ap.length) { const u = {}; ap.forEach(x => { if (!u[x.provincia] || x.periodo > u[x.provincia].periodo) u[x.provincia] = x; }); c += hbarra(Object.values(u).map(x => [`${x.provincia} · ${mesTxt(x.periodo)}`, x.valor]), "%", 1); }
+    if (d) R.push(`Actividad metalúrgica (ADIMRA): <b>${sg(d.at(-1).valor)}%</b> interanual en ${mesTxt(d.at(-1).periodo)}.`);
+    bloque("Actividad metalúrgica, variación interanual (ADIMRA)", c || `<p class="muted small">Sin datos.</p>`, "ADIMRA, Informe de actividad metalúrgica."); }
+  if (sel.has("conf") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = a[y] || [0, 0]; a[y][0] += r[1] || 0; a[y][1] += r[4] || 0; }); const ys = Object.keys(a).sort().slice(-12);
+    bloque("Conflictos laborales con paro, sector privado e industria" + nacional, hbarra(ys.map(y => [y + " · total privado", a[y][0]])) + hbarra(ys.map(y => [y + " · industria", a[y][1]]), "", 0, ys.map(() => "#e05a12")), "Ministerio de Capital Humano."); }
+  const AL = S.alertas || {};
+  if (sel.has("indice") && AL.indice) { const I = AL.indice.filter(i => enAmb(i.provincia)); const col = n => n === "alta" ? "#c24a0a" : n === "media" ? "#e0a412" : "#9db6d6";
+    if (I.length === 1) { const i = I[0]; R.push(`Índice de riesgo: <b>${i.puntaje}/100</b> (nivel ${i.nivel}).`); bloque(`Índice de riesgo: ${esc(i.area)} ${i.puntaje}/100`, hbarra(Object.entries(i.componentes).map(([c, o]) => [AL.nombres[c], o.puntos ?? 0]), "", 0, Object.values(i.componentes).map(o => col((o.puntos ?? 0) >= 60 ? "alta" : (o.puntos ?? 0) >= 40 ? "media" : "baja"))), "MIDTM, índice ponderado."); }
+    else if (I.length) bloque("Índice de riesgo por área (0 a 100)", hbarra(I.map(i => [i.area, i.puntaje]), "", 0, I.map(i => col(i.nivel))), "MIDTM, índice ponderado."); }
+  if (sel.has("alertas") && AL.alertas) { const A = AL.alertas.filter(a => a.nivel !== "info" && (!provs || a.ambito === "Nacional" || provs.includes(a.provincia))).sort((a, b) => (provs && provs.includes(b.provincia)) - (provs && provs.includes(a.provincia)));
+    R.push(`<b>${A.filter(a => a.nivel === "alta").length}</b> alertas altas activas.`);
+    bloque("Alertas activas", `<table><thead><tr><th>Nivel</th><th>Alerta</th><th>Dato</th></tr></thead><tbody>${A.slice(0, 30).map(a => `<tr><td><span class="nvl ${a.nivel}">${a.nivel}</span></td><td><b>${esc(a.titulo)}</b><div class="small muted">${esc(a.detalle || "")}</div></td><td class="small">${esc(String(a.periodo).replace("T", " T"))} · ${esc(a.fuente)}</td></tr>`).join("")}</tbody></table>`, "MIDTM."); }
+  if (sel.has("plantas")) bloque("Plantas relevadas", plantas.length ? `<table><thead><tr><th>Planta</th><th>Rama</th><th>Localidad</th><th>Situación</th></tr></thead><tbody>${plantas.map(p => `<tr><td><b>${esc(p.nombre)}</b></td><td>${esc(p.rama || "")}</td><td>${esc(p.localidad || "")}, ${esc(p.provincia)}</td><td>${esc(ESTADOS[estado(p)][0])}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin plantas relevadas en este ámbito.</p>`, "Relevamiento propio.");
+
+  const fecha = new Date().toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" });
+  $("reporte").hidden = false;
+  $("reporte").innerHTML = `<div class="row no-print" style="justify-content:space-between;margin:18px 0 10px"><b>Informe listo</b><div class="row"><button class="btn pri" type="button" id="rPdf">Descargar PDF</button><button class="btn" type="button" id="rCerrar">Cerrar</button></div></div>
+  <article class="rep"><header class="rep-h"><img src="img/midtm-logo-claro.svg" alt="MIDTM"><div><div class="kicker">Informe a pedido · MIDTM</div><h2>${esc(nombre)}</h2><p>Emitido el ${fecha}. Comparación contra ${refTxt}.</p></div></header>
+  ${R.length ? `<section class="rb"><h3>Resumen</h3><ul>${R.map(r => `<li>${r}</li>`).join("")}</ul></section>` : ""}${B.join("")}
+  <footer class="rep-f">MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico. Las cifras de empleo son asalariados registrados del sector privado. Los datos marcados como nacionales no se publican por provincia.</footer></article>`;
+  $("rPdf").onclick = () => { const t = document.title; document.title = `Informe MIDTM - ${nombre} - ${hoy()}`; document.body.classList.add("imprime-rep"); window.print(); setTimeout(() => { document.body.classList.remove("imprime-rep"); document.title = t; }, 500); };
+  $("rCerrar").onclick = () => { $("reporte").hidden = true; };
+  $("reporte").scrollIntoView({ behavior: "smooth" });
+}
+
+function refrescar() { pedidoForm(); alertas(); filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
 await cargar();
 portada(); baseMapa(); filtros(); fuentes(); formularios();
 for (const n of ["informe", "plantas", "ramas"]) $("t-" + n).onclick = () => tab(n);
