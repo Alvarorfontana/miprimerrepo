@@ -30,11 +30,13 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp, gem, hab, ixs] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale, adp, gem, hab, ixs, caa, imp] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] }), getJSON("data/gem-acerias.json", { acerias: [] }), getJSON("data/caba-habilitaciones-metal.json", { habilitaciones: [] }), getJSON("data/indec-series.json", { series: [] })]);
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] }), getJSON("data/adimra-provincias.json", { datos: [] }), getJSON("data/gem-acerias.json", { acerias: [] }), getJSON("data/caba-habilitaciones-metal.json", { habilitaciones: [] }), getJSON("data/indec-series.json", { series: [] }), getJSON("data/acero-caa.json", { series: [] }), getJSON("data/importaciones.json", { series: [] })]);
   S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.adimraProv = adp; S.gem = gem; S.hab = hab;
+  S.imp = imp;
+  for (const x of (caa.series || [])) { const s0 = S.series.find(y => y.clave === x.clave); if (s0) { for (const d of x.datos) if (!s0.datos.some(e => e.periodo === d.periodo)) s0.datos.push(d); } else S.series.push({ ...x, auto: true }); }
   for (const x of (ixs.series || [])) if (!S.series.some(y => y.clave === x.clave)) S.series.push({ ...x, auto: true, historica: true }); S.fAle = "todas";
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
@@ -526,7 +528,7 @@ const VARS = [
   ["Establecimientos", [["est_total", "Cantidad de establecimientos y grandes (200+)"], ["est_rama", "Establecimientos por rama"], ["est_tam", "Establecimientos por tamaño"], ["est_zona", "Por partido, departamento o comuna (y barrio en CABA)"]]],
   ["Empleo", [["emp_total", "Empleados registrados y variación"], ["emp_trim", "Evolución trimestral del empleo"], ["emp_rama", "Empleo por rama"], ["emp_hist", "Serie histórica anual (desde 1996)"]]],
   ["Despidos y suspensiones", [["hechos", "Despidos, suspensiones y cierres en plantas"], ["conf_desp", "Conflictos con paro por despidos (nacional)"]]],
-  ["Capacidad y producción", [["capacidad", "Capacidad instalada en uso (INDEC y ADIMRA)"], ["ipi", "Producción por rama, IPI (nacional)"], ["acero", "Acero crudo (nacional)"], ["adimra", "Actividad metalúrgica ADIMRA"]]],
+  ["Capacidad y producción", [["capacidad", "Capacidad instalada en uso (INDEC y ADIMRA)"], ["ipi", "Producción por rama, IPI (nacional)"], ["acero", "Acero crudo (nacional)"], ["adimra", "Actividad metalúrgica ADIMRA"], ["impo", "Importaciones que compiten (nacional)"]]],
   ["Conflictividad y riesgo", [["conf", "Conflictos laborales con paro (nacional)"], ["indice", "Índice de riesgo ponderado"], ["alertas", "Alertas activas"]]],
   ["Plantas", [["plantas", "Plantas relevadas con su situación"]]]
 ];
@@ -687,6 +689,16 @@ function generarPedido() {
     const ap = (S.adimraProv && S.adimraProv.datos || []).filter(x => enAmb(x.provincia)); if (provs && ap.length) { const u = {}; ap.forEach(x => { if (!u[x.provincia] || x.periodo > u[x.provincia].periodo) u[x.provincia] = x; }); c += hbarra(Object.values(u).map(x => [`${x.provincia} · ${mesTxt(x.periodo)}`, x.valor]), "%", 1); }
     if (d) R.push(`Actividad metalúrgica (ADIMRA): <b>${sg(d.at(-1).valor)}%</b> interanual en ${mesTxt(d.at(-1).periodo)}.`);
     bloque("Actividad metalúrgica, variación interanual (ADIMRA)", c || `<p class="muted small">Sin datos.</p>`, "ADIMRA, Informe de actividad metalúrgica."); }
+  if (sel.has("impo") && S.imp && S.imp.series.length) {
+    const IS = S.imp.series, u = IS[0].datos.at(-1).periodo, [ya, ma] = u.split("-").map(Number);
+    const acum = (s, y) => s.datos.filter(d => d.periodo.startsWith(y + "-") && +d.periodo.slice(5) <= ma).reduce((a, d) => a + d.valor, 0);
+    const it = IS.map(s => [s.nombre.replace(/\s*\(.*\)$/, ""), acum(s, ya - 1) ? (acum(s, ya) / acum(s, ya - 1) - 1) * 100 : 0]).sort((a, b) => b[1] - a[1]);
+    const tot = y => IS.reduce((a, s) => a + acum(s, y), 0), vt = (tot(ya) / tot(ya - 1) - 1) * 100;
+    R.push(`Importaciones metalúrgicas que compiten: <b>USD ${dec(tot(ya), 0)} millones</b> en enero–${mesTxt(u).split(" ")[0]} ${ya}, <b>${vt > 0 ? "+" : ""}${dec(vt, 1)}%</b> contra el mismo período de ${ya - 1}.`);
+    const mens = {}; IS.forEach(s => s.datos.forEach(d => { mens[d.periodo] = (mens[d.periodo] || 0) + d.valor; }));
+    const ms = Object.keys(mens).sort().slice(-36);
+    bloque("Importaciones que compiten con la producción local" + nacional, `<p class="small" style="margin:0 0 4px"><b>Variación acumulada en el año, por grupo de productos</b> (enero–${mesTxt(u).split(" ")[0]} ${ya} contra igual período de ${ya - 1})</p>` + hbarra(it, "%", 1, it.map(([, v]) => v > 0 ? "#d95926" : "#2a78d6"), { neg: false }) + `<p class="small" style="margin:12px 0 4px"><b>Total mensual, millones de USD</b></p>` + serieLinea(ms.map(m => ({ e: mesTxt(m), v: mens[m] })), { color: "#d95926", marcas: 6, cambio: false }), "INDEC, comercio exterior por posición NCM (valor CIF). Naranja: suben las importaciones; azul: bajan.");
+  }
   if (sel.has("conf") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = a[y] || [0, 0]; a[y][0] += r[1] || 0; a[y][1] += r[4] || 0; }); const ys = Object.keys(a).sort().slice(-12);
     bloque("Conflictos laborales con paro" + nacional, `<p class="small" style="margin:0 0 4px"><b>Sector privado, total</b></p>` + columnasT(ys.map(y => [y, a[y][0]]), { alto: 180 }) + `<p class="small" style="margin:10px 0 4px"><b>Industria manufacturera</b></p>` + columnasT(ys.map(y => [y, a[y][1]]), { alto: 160 }), `Ministerio de Capital Humano. ${ys.at(-1)}: año incompleto.`); }
   const AL = S.alertas || {};

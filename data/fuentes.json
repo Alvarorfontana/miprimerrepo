@@ -41,9 +41,9 @@
       "nivel": "Nacional, por bloque industrial",
       "url": "https://datosgobar.github.io/series-tiempo-ar-api/",
       "variables": [
-        "Utilización de capacidad instalada: metalmecánica, metálicas básicas, automotriz y nivel general",
-        "Índice de producción industrial manufacturero (IPI) por rama",
-        "Variación interanual y mensual"
+        "Capacidad instalada por bloque desde 2016: metálicas básicas, metalmecánica y automotriz",
+        "IPI por rama desde 2016: siderurgia, aluminio, fundición, estructuras, envases, maquinaria agropecuaria y de uso general, línea blanca, eléctricos, carrocerías, autopartes, motos",
+        "Venta de maquinaria agrícola nacional e importada (trimestral)"
       ]
     },
     {
@@ -98,7 +98,7 @@
       "clave": "adimra",
       "nombre": "ADIMRA · Informe de actividad metalúrgica",
       "tipo": "Informe mensual (PDF)",
-      "conexion": "Carga mensual desde el formulario de indicadores",
+      "conexion": "Carga desde el informe mensual (el sitio de ADIMRA no permite descarga automática)",
       "frecuencia": "Mensual",
       "estado": "manual",
       "nivel": "Nacional, por provincia y por cadena de valor",
@@ -115,28 +115,29 @@
       "clave": "caa",
       "nombre": "Cámara Argentina del Acero",
       "tipo": "Informe mensual",
-      "conexion": "Carga mensual desde el formulario de indicadores",
+      "conexion": "Lectura automática de los informes mensuales en PDF (GitHub Actions)",
       "frecuencia": "Mensual",
-      "estado": "manual",
+      "estado": "automático",
       "nivel": "Nacional",
       "variables": [
         "Acero crudo (t)",
-        "Hierro primario (t)",
-        "Laminados en caliente y en frío (t)"
+        "Laminados planos y no planos (t)",
+        "Variación interanual"
       ]
     },
     {
       "clave": "comex",
       "nombre": "INDEC · Comercio exterior por posición arancelaria",
       "tipo": "Datos abiertos",
-      "conexion": "Conector a configurar",
-      "frecuencia": "Mensual",
-      "estado": "próximo",
+      "conexion": "Descarga automática (GitHub Actions) de las importaciones por posición NCM desde comex.indec.gob.ar",
+      "frecuencia": "Mensual (desde 2018)",
+      "estado": "automático",
       "nivel": "Producto",
       "variables": [
-        "Importaciones de productos metalúrgicos que compiten con la producción local (valor y toneladas)",
-        "Origen de las importaciones"
-      ]
+        "Importaciones en dólares CIF y toneladas, por mes",
+        "Nueve grupos: hierro y acero, manufacturas de acero, aluminio, herramientas, maquinaria agrícola, línea blanca, autopartes, maquinaria general y equipo eléctrico"
+      ],
+      "url": "https://comex.indec.gob.ar"
     },
     {
       "clave": "osm",

@@ -25,7 +25,7 @@ sg = lambda v, d=1: ("+" if v is not None and v > 0 else "") + num(v, d)
 def series():
     """Todas las series mensuales en un diccionario {clave: {meta, datos: {periodo: valor}}}."""
     S = {}
-    for archivo in ["indicadores-auto.json", "indicadores.json", "indec-series.json"]:
+    for archivo in ["indicadores-auto.json", "indicadores.json", "indec-series.json", "acero-caa.json"]:
         for s in (D(archivo, {"series": []}) or {"series": []})["series"]:
             d = {x["periodo"]: x["valor"] for x in s["datos"] if x.get("valor") is not None}
             if s["clave"] in S: S[s["clave"]]["datos"].update(d)

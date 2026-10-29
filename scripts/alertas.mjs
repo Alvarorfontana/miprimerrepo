@@ -12,7 +12,7 @@ const pl = (await leer("plantas.json", { plantas: [] })).plantas;
 const ev = (await leer("eventos.json", { eventos: [] })).eventos;
 const imp = await leer("importaciones.json");
 const S = {};
-for (const f of ["indicadores-auto.json", "indicadores.json", "indec-series.json"]) {
+for (const f of ["acero-caa.json", "indec-series.json", "indicadores-auto.json", "indicadores.json"]) {
   for (const s of (await leer(f, { series: [] })).series || []) {
     S[s.clave] ??= { nombre: s.nombre, unidad: s.unidad, datos: {} };
     for (const d of s.datos) if (d.valor != null) S[s.clave].datos[d.periodo] ??= d.valor;
@@ -91,11 +91,13 @@ for (const e of ev) {
     titulo: `${p.nombre || e.plantaId}: ${e.tipo}${e.cantidad ? ` (${e.cantidad} trabajadores)` : ""}`, detalle: e.nota || "", fuente: e.fuente || "Relevamiento propio", url: e.url || null, planta: e.plantaId });
 }
 
-// 7. Importaciones (cuando estén conectadas)
+// 7. Importaciones (acumulado del año contra igual período del año anterior, para evitar el ruido mensual)
 for (const s of imp?.series || []) {
-  const d = s.datos, u = d.at(-1), b = d.find(x => x.periodo === `${+u.periodo.slice(0, 4) - 1}${u.periodo.slice(4)}`); if (!b?.valor) continue;
-  const v = (u.valor / b.valor - 1) * 100;
-  if (v >= U.importaciones_suba_media) add({ nivel: v >= U.importaciones_suba_alta ? "alta" : "media", tema: "Importaciones", ambito: "Nacional", variable: s.nombre, periodo: u.periodo, valor: +v.toFixed(1), titulo: `Importaciones de ${s.nombre.toLowerCase()}: ${fmt(v)}% interanual`, detalle: "", fuente: "INDEC" });
+  const u = s.datos.at(-1); if (!u) continue; const [y, m] = u.periodo.split("-").map(Number);
+  const ac = yy => s.datos.filter(d => d.periodo.startsWith(yy + "-") && +d.periodo.slice(5) <= m).reduce((a, d) => a + d.valor, 0);
+  const a1 = ac(y), a0 = ac(y - 1); if (!a0) continue; const v = (a1 / a0 - 1) * 100;
+  if (v >= U.importaciones_suba_media) add({ nivel: v >= U.importaciones_suba_alta ? "alta" : "media", tema: "Importaciones", ambito: "Nacional", variable: s.nombre, periodo: u.periodo, valor: +v.toFixed(1),
+    titulo: `Importaciones de ${s.nombre.replace(/\s*\(.*\)$/, "").toLowerCase()}: ${fmt(v)}% en lo que va del año`, detalle: `USD ${a1.toFixed(0)} millones entre enero y ${u.periodo.slice(5)}/${y}, contra USD ${a0.toFixed(0)} millones un año antes.`, fuente: "INDEC (comercio exterior)" });
 }
 
 // 8. Datos desactualizados

@@ -20,23 +20,23 @@ for (const m of media) {
   try {
     const buf = Buffer.from(await (await fetch(url, { headers: UA })).arrayBuffer()); const f = new URL(nombre, dir).pathname; await writeFile(f, buf);
     const t = execFileSync("pdftotext", ["-layout", f, "-"]).toString("utf8");
-    // mes del dato: "producción de acero crudo de <mes> (de <año>)" o el título
-    const mm = t.match(/(?:en|de|durante)\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)(?:\s+(?:de\s+)?(20\d\d))?/i);
-    const anioPub = +(m.date || "").slice(0, 4);
-    if (!mm) { muestras.push({ nombre, texto: t.slice(0, 800) }); continue; }
-    const mes = MES[mm[1].toLowerCase()], anio = +(mm[2] || (mes > new Date(m.date).getMonth() + 1 ? anioPub - 1 : anioPub));
+    // "Con un total de 366.700 toneladas, la producción de acero crudo tuvo una caída 2,9% en agosto respecto de julio"
+    const ac = t.match(/total de\s+([\d.]+)\s+toneladas,?\s+la producci[oó]n de acero crudo[\s\S]{0,120}?\sen\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\s+respecto/i);
+    if (!ac) { muestras.push({ nombre, texto: t.slice(0, 600) }); continue; }
+    const mes = MES[ac[2].toLowerCase()], pub = new Date(m.date), anio = mes > pub.getMonth() + 1 ? pub.getFullYear() - 1 : pub.getFullYear();
     const per = `${anio}-${String(mes).padStart(2, "0")}`;
-    const busca = re => { const x = t.match(re); return x ? n(x[1]) : null; };
-    const fila = {
-      acero_crudo: busca(/acero crudo[^\d\n]{0,80}?([\d.]{3,9}(?:,\d)?)\s*(?:t|tn|toneladas)/i),
-      hierro_primario: busca(/hierro primario[^\d\n]{0,80}?([\d.]{3,9}(?:,\d)?)\s*(?:t|tn|toneladas)/i),
-      laminados_caliente: busca(/laminados en caliente[^\d\n]{0,80}?([\d.]{3,9}(?:,\d)?)\s*(?:t|tn|toneladas)/i),
-      laminados_frio: busca(/laminados en fr[ií]o[^\d\n]{0,80}?([\d.]{3,9}(?:,\d)?)\s*(?:t|tn|toneladas)/i),
-      fuente: url
-    };
+    const lam = t.match(/producci[oó]n de laminados[^\d]{0,60}?fue de\s+([\d.]+)\s+toneladas/i);
+    const ia = t.match(/acero crudo[\s\S]{0,200}?(suba|incremento|crecimiento|ca[ií]da|baja)\s+(?:del\s+)?([\d,]+)%\s+comparado con el mismo mes/i);
+    const fila = { acero_crudo: n(ac[1]), laminados: lam ? n(lam[1]) : null, var_interanual: ia ? (/(ca[ií]da|baja)/i.test(ia[1]) ? -1 : 1) * n(ia[2]) : null, fuente: url };
     if (fila.acero_crudo) meses[per] = fila; else muestras.push({ nombre, per, texto: t.slice(0, 1500) });
   } catch (e) { muestras.push({ nombre, error: e.message }); }
 }
-await writeFile(new URL("../data/acero-caa.json", import.meta.url), JSON.stringify({ actualizado: new Date().toISOString().slice(0, 10), fuente: "Cámara Argentina del Acero, informes mensuales", unidad: "toneladas", meses }, null, 1));
+const ks = Object.keys(meses).sort();
+const series = [
+  { clave: "caa-acero-crudo", nombre: "CAA · Producción de acero crudo", unidad: "miles de t", organismo: "Cámara Argentina del Acero", url: "https://www.acero.org.ar", datos: ks.map(k => ({ periodo: k, valor: +(meses[k].acero_crudo / 1000).toFixed(1), url: meses[k].fuente })) },
+  { clave: "caa-laminados", nombre: "CAA · Producción de laminados (planos y no planos)", unidad: "miles de t", organismo: "Cámara Argentina del Acero", url: "https://www.acero.org.ar", datos: ks.filter(k => meses[k].laminados).map(k => ({ periodo: k, valor: +(meses[k].laminados / 1000).toFixed(1), url: meses[k].fuente })) },
+  { clave: "caa-acero-interanual", nombre: "CAA · Acero crudo, variación interanual", unidad: "%", organismo: "Cámara Argentina del Acero", url: "https://www.acero.org.ar", datos: ks.filter(k => meses[k].var_interanual != null).map(k => ({ periodo: k, valor: meses[k].var_interanual, url: meses[k].fuente })) }
+].filter(x => x.datos.length);
+await writeFile(new URL("../data/acero-caa.json", import.meta.url), JSON.stringify({ actualizado: new Date().toISOString().slice(0, 10), fuente: "Cámara Argentina del Acero, informes mensuales", unidad: "toneladas", meses, series }, null, 1));
 await writeFile(new URL("muestras.json", dir), JSON.stringify({ diag, encontrados: media.length, muestras: muestras.slice(0, 8) }, null, 1));
 console.log(`Listo: ${Object.keys(meses).length} meses. Sin leer: ${muestras.length}.`);
