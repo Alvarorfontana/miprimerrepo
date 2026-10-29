@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-label="MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico">
+  <g transform="translate(4 8) scale(1.25)">
+    <rect width="64" height="64" rx="14" fill="#0e2a4f"/>
+    <rect x="12" y="22" width="7" height="30" rx="1.5" fill="#ffffff"/>
+    <rect x="22.5" y="31" width="7" height="21" rx="1.5" fill="#9db6d6"/>
+    <rect x="34.5" y="31" width="7" height="21" rx="1.5" fill="#9db6d6"/>
+    <rect x="45" y="22" width="7" height="30" rx="1.5" fill="#ffffff"/>
+    <path d="M15.5 18 L26 27 L32 21 L38 27 L48.5 18" fill="none" stroke="#ff7a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="12.5" r="3.6" fill="#ff7a2e"/>
+  </g>
+  <text x="102" y="56" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="54" letter-spacing="1" fill="#0e2a4f">MIDTM</text>
+  <text x="104" y="78" font-family="'IBM Plex Sans',Arial,sans-serif" font-size="11.5" fill="#5a6573">Modelo de Interpretación de Datos</text>
+  <text x="104" y="92" font-family="'IBM Plex Sans',Arial,sans-serif" font-size="11.5" fill="#5a6573">del Trabajo Metalúrgico</text>
+</svg>

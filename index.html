@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Observatorio Metalúrgico · UOM</title>
+<title>MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico</title>
 <meta name="description" content="Mapa nacional de la industria metalúrgica: plantas, empleo, producción, despidos y suspensiones, con informes por seccional, provincia y región.">
 <meta name="theme-color" content="#0e2a4f">
 <link rel="icon" href="img/icono.svg" type="image/svg+xml">
@@ -14,11 +14,13 @@
 
 <nav class="nav gut" aria-label="Secciones">
   <div class="wrap">
-    <a class="brand" href="#inicio">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e2a4f"/><path d="M7 23V12l5 4 4-7 4 7 5-4v11z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="#e05a12"/></svg>
-      Observatorio Metalúrgico
+    <a class="brand" href="#inicio" aria-label="MIDTM, inicio">
+      <img src="img/midtm-icono.svg" alt="" width="32" height="32">
+      <span>MIDTM<small>Modelo de Interpretación de Datos del Trabajo Metalúrgico</small></span>
     </a>
+    <img class="uom-logo" src="img/uom-logo.png" alt="Unión Obrera Metalúrgica" onerror="this.remove()">
     <ul>
+      <li><a href="#alertas">Alertas</a></li>
       <li><a href="#mapa">Mapa</a></li>
       <li><a href="#informes">Informes</a></li>
       <li><a href="#empleo">Empleo</a></li>
@@ -32,7 +34,7 @@
 <header class="hero gut" id="inicio">
   <div class="wrap">
     <div>
-      <div class="kicker">Unión Obrera Metalúrgica · Observatorio de datos</div>
+      <div class="kicker">MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico</div>
       <h1>El mapa del trabajo <em>metalúrgico</em> argentino</h1>
       <p class="lead">Cada planta, cada seccional, cada mes. Producción, capacidad, empleo, despidos y suspensiones en un solo lugar, con datos propios cruzados con las fuentes oficiales.</p>
       <div class="cta">
@@ -51,6 +53,17 @@
 <div class="band gut" aria-label="Coyuntura del sector">
   <div class="wrap" id="band"></div>
 </div>
+
+<section class="sec gut" id="alertas">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="kicker">Alerta temprana</div><h2>Alertas activas</h2></div>
+      <p>El modelo revisa cada variable cuando llegan datos nuevos y avisa cuando cruza un umbral: caídas de producción o de empleo, capacidad ociosa, despidos y suspensiones en planta, suba de importaciones. Si elegís una provincia en el mapa, se filtran también acá.</p></div>
+    <div class="band-in" id="alertas-res"></div>
+    <div class="row" id="alertas-fil" style="margin:14px 0"></div>
+    <div class="alertas" id="alertas-lista"></div>
+    <p class="note">Umbrales: producción −5% (media) y −10% (alta) interanual; empleo −2% y −5% por provincia; capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días. Se ajustan en <code>data/alertas-reglas.json</code>.</p>
+  </div>
+</section>
 
 <section class="sec gut" id="inicio-mods">
   <div class="wrap">
@@ -145,7 +158,7 @@
 </section>
 
 <footer class="gut"><div class="wrap">
-  <p>Observatorio Metalúrgico · Unión Obrera Metalúrgica de la República Argentina. Datos de planta: seccionales y delegados. Datos públicos: INDEC, CEP XXI, ADIMRA, Cámara Argentina del Acero. Ubicaciones iniciales aproximadas por localidad.</p>
+  <p><img src="img/midtm-logo.svg" alt="MIDTM" style="height:44px;display:block;margin-bottom:10px">MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico, para la Unión Obrera Metalúrgica de la República Argentina. Datos de planta: seccionales y delegados. Datos públicos: INDEC, CEP XXI, ADIMRA, Cámara Argentina del Acero. Ubicaciones iniciales aproximadas por localidad.</p>
   <p id="pieEstado" class="small"></p>
 </div></footer>
 

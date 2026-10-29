@@ -173,3 +173,20 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   body{background:#fff;color:#000} .card{border:none;padding:0} section.sec{padding:0}
   #p-informe{display:block!important}
 }
+
+.brand img{display:block;border-radius:8px}
+.brand span{display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:var(--body);font-size:10px;font-weight:400;letter-spacing:0;text-transform:none;opacity:.7;margin-top:3px}
+.uom-logo{height:36px;width:auto;margin-left:12px}
+@media (max-width:760px){.brand small{display:none}}
+
+.band-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.band-in .stat{background:var(--card,#fff);border:1px solid var(--line,#e1e6eb);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column}
+.band-in .stat b{font-family:var(--display);font-size:34px;line-height:1}.band-in .stat b.neg{color:#c24a0a}
+.alertas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-height:620px;overflow:auto;padding-right:4px}
+@media (max-width:820px){.alertas{grid-template-columns:1fr}.band-in{grid-template-columns:1fr 1fr 1fr}}
+.alerta{display:grid;grid-template-columns:62px 1fr;gap:12px;border:1px solid var(--line,#e1e6eb);border-left:5px solid #9db6d6;border-radius:10px;padding:10px 12px;background:var(--card,#fff)}
+.alerta.alta{border-left-color:#c24a0a}.alerta.media{border-left-color:#e0a412}
+.alerta .nv{font-family:var(--mono,monospace);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:#5a6573}
+.alerta.alta .nv{color:#c24a0a}.alerta.media .nv{color:#a07208}
+.alerta h4{margin:0 0 3px;font-size:15px;line-height:1.3}.alerta p{margin:0 0 4px;font-size:13px;color:var(--muted,#5a6573)}.alerta small{font-size:11.5px;color:var(--muted,#5a6573)}

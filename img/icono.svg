@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0e2a4f"/><path d="M7 23V12l5 4 4-7 4 7 5-4v11z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="9" r="2.2" fill="#e05a12"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MIDTM">
+  <rect width="64" height="64" rx="14" fill="#0e2a4f"/>
+  <!-- barras que forman una M: datos que se leen -->
+  <rect x="12" y="22" width="7" height="30" rx="1.5" fill="#ffffff"/>
+  <rect x="22.5" y="31" width="7" height="21" rx="1.5" fill="#9db6d6"/>
+  <rect x="34.5" y="31" width="7" height="21" rx="1.5" fill="#9db6d6"/>
+  <rect x="45" y="22" width="7" height="30" rx="1.5" fill="#ffffff"/>
+  <!-- línea de lectura y punto de alerta -->
+  <path d="M15.5 18 L26 27 L32 21 L38 27 L48.5 18" fill="none" stroke="#ff7a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="12.5" r="3.6" fill="#ff7a2e"/>
+</svg>

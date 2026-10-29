@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28",
+ "actualizado": "2026-10-29",
  "series": [
   {
    "clave": "adimra-actividad",
@@ -49,9 +49,9 @@
     },
     {
      "periodo": "2026-09",
-     "valor": 40,
-     "fuente": "La Capital",
-     "url": "https://www.lacapital.com.ar/economia/la-actividad-metalurgica-cayo-33-septiembre-n10287526.html"
+     "valor": 40.2,
+     "fuente": "Perfil",
+     "url": "https://www.perfil.com/noticias/economia/actividad-metalurgica-cayo-33-internaual-septiembre-acumulo-una-baja-53-todo-2026-a40.phtml"
     }
    ]
   },
@@ -112,6 +112,12 @@
      "valor": 68.7,
      "fuente": "Cronista",
      "url": "https://www.cronista.com/economia-politica/capacidad-instalada-la-industria-opero-al-591-en-junio-y-mostro-una-leve-mejora-interanual/"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 70.1,
+     "fuente": "INDEC",
+     "url": "https://www.indec.gob.ar/uploads/informesdeprensa/capacidad_10_263AAA0A2B86.pdf"
     }
    ]
   },
@@ -166,6 +172,12 @@
      "valor": 377.5,
      "fuente": "Prensa Mercosur",
      "url": "https://prensamercosur.org/2026/08/30/argentina-la-produccion-de-acero-crece-pero-la-industria-enfrenta-un-mercado-interno-debilitado/"
+    },
+    {
+     "periodo": "2026-08",
+     "valor": 366.7,
+     "fuente": "El Informante (CAA)",
+     "url": "https://diarioelinformante.com.ar/la-produccion-de-acero-crudo-cayo-1-interanual-en-agosto/"
     }
    ]
   }

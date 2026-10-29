@@ -1,0 +1,26 @@
+{
+  "nota": "Umbrales de las alertas del MIDTM. Se pueden ajustar sin tocar código. Porcentajes en variación interanual salvo que se indique otra cosa.",
+  "umbrales": {
+    "ipi_interanual_alta": -10,
+    "ipi_interanual_media": -5,
+    "actividad_interanual_media": -3,
+    "meses_consecutivos_caida": 3,
+    "capacidad_alta": 40,
+    "capacidad_media": 50,
+    "capacidad_caida_puntos": 5,
+    "empleo_interanual_alta": -5,
+    "empleo_interanual_media": -2,
+    "empleo_rama_alta": -10,
+    "empleo_minimo_puestos": 500,
+    "conflicto_despidos_factor": 1.5,
+    "dias_hecho_reciente": 120,
+    "importaciones_suba_media": 20,
+    "importaciones_suba_alta": 40,
+    "meses_sin_dato": 4
+  },
+  "niveles": {
+    "alta": "Requiere atención inmediata: caída fuerte, despidos o cierre.",
+    "media": "Tendencia negativa a seguir de cerca.",
+    "info": "Aviso sobre los datos (por ejemplo, una fuente sin actualizar)."
+  }
+}

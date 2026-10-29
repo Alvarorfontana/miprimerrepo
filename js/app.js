@@ -1,4 +1,4 @@
-// Observatorio Metalúrgico · UOM — aplicación del portal
+// MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico — aplicación del portal
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = n => (n == null || n === "" || isNaN(n)) ? "—" : Number(n).toLocaleString("es-AR");
@@ -30,11 +30,11 @@ let sb = null; // cliente Supabase opcional
 /* ---------- carga de datos ---------- */
 const getJSON = async (u, fb) => { try { const r = await fetch(u, { cache: "no-cache" }); if (!r.ok) throw 0; return await r.json(); } catch { return fb; } };
 async function cargar() {
-  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar] = await Promise.all([
+  const [geo, pl, ev, rep, ind, auto, est, fu, emp, oede, conf, osm, dep, bar, ale] = await Promise.all([
     getJSON("data/provincias.json"), getJSON("data/plantas.json", { plantas: [] }), getJSON("data/eventos.json", { eventos: [] }),
     getJSON("data/reportes.json", { reportes: [] }), getJSON("data/indicadores.json", { series: [] }), getJSON("data/indicadores-auto.json", { series: [] }),
-    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] })]);
-  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || [];
+    getJSON("data/establecimientos.json", { filas: [] }), getJSON("data/fuentes.json", { fuentes: [], ramasClae: [] }), getJSON("data/empresas.json", { empresas: [] }), getJSON("data/empleo-oede.json", null), getJSON("data/conflictividad.json", null), getJSON("data/osm-plantas.json", { plantas: [] }), getJSON("data/departamentos.json", { deptos: [] }), getJSON("data/barrios-caba.json", { barrios: [] }), getJSON("data/alertas.json", { alertas: [] })]);
+  S.geo = geo; S.plantas = pl.plantas; S.eventos = ev.eventos; S.reportes = rep.reportes; S.est = est; S.fuentes = fu; S.empresas = emp.empresas || []; S.oede = oede; S.conf = conf; S.osm = osm; S.deptos = dep.deptos || []; S.barrios = bar.barrios || []; S.alertas = ale; S.fAle = "todas";
   S.series = [...(ind.series || []).map(s => ({ ...s, auto: false })), ...(auto.series || []).map(s => ({ ...s, auto: true }))];
   S.actualizado = { plantas: pl.actualizado, indicadores: ind.actualizado, auto: auto.actualizado, est: est.actualizado };
   await conectarSupabase();
@@ -211,7 +211,7 @@ function kpis() {
 }
 function textoInforme() {
   const L = [], s = stats(filtradas());
-  L.push(`INFORME DE SITUACIÓN — ${ambito().toUpperCase()}`, `Observatorio Metalúrgico UOM · ${new Date().toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" })}`, "");
+  L.push(`INFORME DE SITUACIÓN — ${ambito().toUpperCase()}`, `MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico · ${new Date().toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" })}`, "");
   L.push(`Plantas relevadas: ${s.n}, en ${s.provs} provincia${s.provs === 1 ? "" : "s"}.`);
   L.push(s.conDot ? `Dotación informada: ${fmt(s.dot)} trabajadores en ${s.conDot} plantas con reporte mensual.` : "Dotación: las seccionales todavía no cargaron reportes mensuales para este ámbito.");
   if (s.cap != null) L.push(`Capacidad instalada usada: ${dec(s.cap)}% en promedio (${s.capN} plantas).`);
@@ -446,7 +446,17 @@ function formularios() {
 function irForm(f) { $("cargar").scrollIntoView({ behavior: "smooth" }); $("r_planta").value = S.sel; $("e_planta").value = S.sel; $("ftabs").querySelector(`[data-f="${f}"]`).click(); }
 
 /* ---------- arranque ---------- */
-function refrescar() { filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
+function alertas() {
+  const box = $("alertas-lista"); if (!box) return; const A = (S.alertas && S.alertas.alertas) || [];
+  const pv = F().pv; const temas = [...new Set(A.map(a => a.tema))];
+  const filtro = a => (S.fAle === "todas" || (S.fAle === "alta" ? a.nivel === "alta" : a.tema === S.fAle)) && (!pv || a.ambito === "Nacional" || a.ambito === pv || (pv === "Buenos Aires" && /GBA|Buenos Aires/.test(a.ambito)));
+  const vis = A.filter(filtro);
+  $("alertas-res").innerHTML = `<div class="stat"><b class="neg">${A.filter(a => a.nivel === "alta").length}</b><span>alertas altas</span></div><div class="stat"><b>${A.filter(a => a.nivel === "media").length}</b><span>a seguir de cerca</span></div><div class="stat"><b>${S.alertas.actualizado ? mesTxt(S.alertas.actualizado.slice(0, 7)) : "—"}</b><span>último cálculo</span></div>`;
+  $("alertas-fil").innerHTML = [["todas", "Todas"], ["alta", "Solo altas"], ...temas.map(t => [t, t])].map(([k, t]) => `<button class="chip" type="button" data-f="${esc(k)}" aria-pressed="${S.fAle === k}">${esc(t)}</button>`).join("");
+  $("alertas-fil").querySelectorAll("button").forEach(b => b.onclick = () => { S.fAle = b.dataset.f; alertas(); });
+  box.innerHTML = vis.length ? vis.slice(0, 60).map(a => `<article class="alerta ${a.nivel}"><div class="nv">${a.nivel === "alta" ? "Alta" : a.nivel === "media" ? "Media" : "Aviso"}</div><div><h4>${esc(a.titulo)}</h4><p>${esc(a.detalle || "")}</p><small>${esc(a.tema)} · ${esc(a.ambito)} · ${esc(String(a.periodo).replace("T", " T"))} · ${a.url ? `<a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fuente)}</a>` : esc(a.fuente)}</small></div></article>`).join("") : `<p class="muted">No hay alertas para este filtro.</p>`;
+}
+function refrescar() { alertas(); filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
 await cargar();
 portada(); baseMapa(); filtros(); fuentes(); formularios();
 for (const n of ["informe", "plantas", "ramas"]) $("t-" + n).onclick = () => tab(n);

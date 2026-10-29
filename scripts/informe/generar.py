@@ -162,16 +162,23 @@ def main():
     if PV: kpis += [kpi(num(len(filas), 0), "establecimientos metalúrgicos (padrón CEP XXI)"), kpi(str(grandes), "establecimientos con 200+ trabajadores")]
 
     PORTADA = (f"""<section class='page cover'><div class='in'>
-      <div class='kick lt'>Observatorio Metalúrgico · Informe estadístico</div>
+      <div class='marcas'><img src='file://{R}/img/midtm-logo-claro.svg'>{{UOMLOGO}}</div><div class='kick lt' style='margin-top:14mm'>Informe estadístico · Modelo de Interpretación de Datos</div>
       <h1>{'Situación del sector metalúrgico' if not PV else 'Situación metalúrgica'}<br><em>{titulo_amb}</em></h1>
       <p class='lead lt'>Actividad, capacidad instalada, producción, empleo, conflictividad y territorio. Datos hasta {periodo_inf}.</p>
       <div class='kpis'>{''.join(kpis[:4])}</div>
-      <p class='lt small' style='margin-top:auto'>Emitido el {fecha}. Elaborado por el equipo del Observatorio a partir de fuentes oficiales y relevamiento propio.</p></div></section>""")
+      <p class='lt small' style='margin-top:auto'>Emitido el {fecha}. Elaborado por el equipo del MIDTM a partir de fuentes oficiales y relevamiento propio.</p></div></section>""")
 
     P.append(f"""<section class='page'><div class='kick'>Resumen</div><h2>Lo que muestran los datos</h2>
       <ul class='res'>{''.join(f'<li>{r}</li>' for r in resumen if r)}</ul>
       <h3>Lectura</h3><p>{lectura(e_ia, ipi_ia, uci, adimra)}</p>
       <div class='nota'>Cada cifra lleva su fuente y fecha en la página correspondiente. Las variaciones interanuales comparan con el mismo mes o trimestre del año anterior.</div></section>""")
+
+    # alertas
+    ale = D("alertas.json", {"alertas": []})["alertas"]
+    ale = [x for x in ale if x["nivel"] != "info" and (not PV or x["ambito"] in ("Nacional", PV) or (PV == "Buenos Aires" and ("GBA" in x["ambito"] or "Buenos Aires" in x["ambito"])))]
+    if ale:
+        filas_a = "".join(f"<tr class='{x['nivel']}'><td><span class='nv {x['nivel']}'>{x['nivel'].upper()}</span></td><td><b>{x['titulo']}</b><div class='small'>{x.get('detalle') or ''}</div></td><td class='small'>{x['tema']}<br>{x['ambito']}</td><td class='small'>{str(x['periodo']).replace('T', ' T')}<br>{x['fuente']}</td></tr>" for x in ale[:26])
+        P.append(f"<section class='page'><div class='kick'>Alerta temprana</div><h2>Alertas activas</h2><p>Variables que cruzaron un umbral del modelo: {sum(1 for x in ale if x['nivel'] == 'alta')} alertas altas y {sum(1 for x in ale if x['nivel'] == 'media')} a seguir de cerca.</p><table><thead><tr><th>Nivel</th><th>Alerta</th><th>Tema</th><th>Dato</th></tr></thead><tbody>{filas_a}</tbody></table><p class='src'>Umbrales: producción −5% y −10% interanual; empleo −2% y −5% por provincia (−10% por actividad); capacidad en uso menor a 50% y 40%; hechos en planta de los últimos 120 días.</p></section>")
 
     # actividad (nacional)
     if ipi or uci:
@@ -237,6 +244,8 @@ def main():
     P.append(f"<section class='page'><div class='kick'>Metodología</div><h2>Fuentes y notas</h2><table><thead><tr><th>Fuente</th><th>Frecuencia</th><th>Nivel</th></tr></thead><tbody>{filas_f}</tbody></table><h3>Notas</h3><ul><li>Universo UOM: ramas CIIU 27, 28, 29, 31, 32, 34 (sin terminales, 3410) y 35. En el padrón CEP XXI: CLAE 24 a 28, 293 y 30.</li><li>Las cifras de empleo son asalariados registrados del sector privado; no incluyen monotributistas ni trabajo no registrado.</li><li>Los datos de ADIMRA y de la Cámara Argentina del Acero se toman de sus informes mensuales.</li><li>Este informe se genera automáticamente con los datos disponibles a la fecha de emisión.</li></ul></section>")
 
     base = HTML_BASE.replace("{{R}}", R)
+    uom = next((f"{R}/img/{n}" for n in ("uom-logo-claro.png", "uom-logo.png", "uom-logo.svg") if os.path.exists(f"{R}/img/{n}")), None)
+    PORTADA = PORTADA.replace("{R}", R).replace("{UOMLOGO}", f"<img src='file://{uom}'>" if uom else "")
     os.makedirs(f"{R}/informes", exist_ok=True)
     nombre = a.salida or f"informe-{'nacional' if not PV else slug(PV)}-{hoy.strftime('%Y-%m')}"
     tmp = f"{R}/informes/.tmp-{nombre}"
@@ -249,7 +258,7 @@ def main():
         pg.pdf(path=tmp + "-tapa.pdf", format="A4", print_background=True, margin={"top": "0", "bottom": "0", "left": "0", "right": "0"})
         pg.goto(f"file://{tmp}-cuerpo.html"); pg.wait_for_timeout(400)
         pg.pdf(path=tmp + "-cuerpo.pdf", format="A4", print_background=True, display_header_footer=True,
-               header_template="<span></span>", footer_template=f"<div style='font-size:7px;font-family:monospace;color:#8a95a3;width:100%;padding:0 16mm;display:flex;justify-content:space-between'><span>Observatorio Metalúrgico · {titulo_amb} · {fecha}</span><span class='pageNumber'></span></div>",
+               header_template="<span></span>", footer_template=f"<div style='font-size:7px;font-family:monospace;color:#8a95a3;width:100%;padding:0 16mm;display:flex;justify-content:space-between'><span>MIDTM · Modelo de Interpretación de Datos del Trabajo Metalúrgico · {titulo_amb} · {fecha}</span><span class='pageNumber'></span></div>",
                margin={"top": "14mm", "bottom": "14mm", "left": "0", "right": "0"})
         b.close()
     from pypdf import PdfWriter
@@ -299,6 +308,7 @@ p{margin:0 0 2.5mm}svg{display:block;break-inside:avoid;margin:1mm 0}
 .src{font-size:7.5pt;color:#6b7684;margin-top:1.5mm}.small{font-size:8pt;color:#5a6573}
 .cover{background:#0e2a4f;color:#fff;height:297mm;padding:0;overflow:hidden}
 .cover .in{padding:30mm 18mm 22mm;height:100%;display:flex;flex-direction:column}
+.marcas{display:flex;justify-content:space-between;align-items:center}.marcas img{height:22mm}
 .cover h1{font-size:50pt;line-height:.9;margin:10mm 0 6mm;color:#fff}.cover h1 em{font-style:normal;color:#ff7a2e}
 .lt{color:#c9d6e6}.kick.lt{color:#ff9b63}.kick.lt:before{background:#ff9b63}.lead{font-size:12.5pt;line-height:1.45}
 .kpis{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:12mm}
@@ -307,7 +317,7 @@ p{margin:0 0 2.5mm}svg{display:block;break-inside:avoid;margin:1mm 0}
 .nota{background:#f2f5f8;border-radius:2mm;padding:3mm 4mm;font-size:8.5pt;color:#334050;margin-top:6mm}
 table{border-collapse:collapse;width:100%;font-size:8.8pt}th{text-align:left;font-size:7pt;letter-spacing:.08em;text-transform:uppercase;color:#5a6573;border-bottom:1.5px solid #0e2a4f;padding:1.5mm 2mm}
 td{padding:1.6mm 2mm;border-bottom:1px solid #e1e6eb;vertical-align:top}tr{break-inside:avoid}.r{text-align:right}.neg{color:#c24a0a;font-weight:600}.pos{color:#1b4b8a}
-ul{padding-left:5mm}li{margin-bottom:1.5mm}
+ul{padding-left:5mm}.nv{font-family:'IBM Plex Mono';font-size:7pt;font-weight:600;padding:.5mm 1.5mm;border-radius:1mm;background:#eef2f6;color:#5a6573}.nv.alta{background:#fdeee3;color:#c24a0a}.nv.media{background:#fbf3dc;color:#a07208}li{margin-bottom:1.5mm}
 </style></head><body>"""
 
 if __name__ == "__main__":
