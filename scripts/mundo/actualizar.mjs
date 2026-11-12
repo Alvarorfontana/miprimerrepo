@@ -18,7 +18,7 @@ const ANIO = new Date().getUTCFullYear();
 const BM = "https://api.worldbank.org/v2";
 const errores = [];
 
-async function pedir(url, intentos = 3, texto = false) {
+async function pedir(url, intentos = 5, texto = false) {
   for (let i = 1; ; i++) {
     try {
       const r = await fetch(url, { headers: { "User-Agent": "observatorio-uom/mundo" }, signal: AbortSignal.timeout(90000) });
@@ -26,7 +26,7 @@ async function pedir(url, intentos = 3, texto = false) {
       return texto ? await r.text() : await r.json();
     } catch (e) {
       if (i >= intentos) throw new Error(`${e.message} en ${url}`);
-      await new Promise(res => setTimeout(res, 2000 * i));
+      await new Promise(res => setTimeout(res, 5000 * i));
     }
   }
 }
@@ -57,7 +57,9 @@ async function datosDe(ind) {
   }
   if (ind.fuente === "cepal") {
     const r = await pedir(`https://api-cepalstat.cepal.org/cepalstat/api/v1/indicator/${ind.codigo}/data?lang=es&format=json`);
-    return { valores: leerCepal(r, validos), url: `https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=${ind.codigo}&lang=es` };
+    const usados = {};
+    const valores = leerCepal(r, validos, ind.elegir || {}, usados);
+    return { valores, nota: usados.ARG ? `Para la Argentina, la CEPAL tiene dato de: ${usados.ARG}.` : ind.nota, url: `https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=${ind.codigo}&lang=es` };
   }
   throw new Error(`fuente desconocida: ${ind.fuente}`);
 }
@@ -70,11 +72,16 @@ async function enParalelo(lista, n, fn) {
 }
 
 const filas = [];
-const bajados = await enParalelo(conf.indicadores, 6, ind => datosDe(ind).then(r => ({ r }), e => ({ e })));
+// El Banco Mundial corta (502) si se le piden muchas cosas juntas: va de a uno; el resto, de a cuatro.
+const bajar = ind => datosDe(ind).then(r => ({ r }), e => ({ e }));
+const delBM = conf.indicadores.filter(i => i.fuente === "bm"), otros = conf.indicadores.filter(i => i.fuente !== "bm");
+const [rBM, rOtros] = await Promise.all([enParalelo(delBM, 1, bajar), enParalelo(otros, 4, bajar)]);
+const porClave = new Map([...delBM.map((i, k) => [i.clave, rBM[k]]), ...otros.map((i, k) => [i.clave, rOtros[k]])]);
+const bajados = conf.indicadores.map(i => porClave.get(i.clave));
 for (const [k, ind] of conf.indicadores.entries()) {
   try {
     if (bajados[k].e) throw bajados[k].e;
-    const { valores, url } = bajados[k].r;
+    const { valores, url, nota } = bajados[k].r;
     const minimo = ind.minimo || conf.minimo_paises;
     const anio = anioDeReferencia(Object.fromEntries(Object.entries(valores).filter(([k]) => k !== "WLD")), minimo);
     if (!anio) throw new Error(`menos de ${minimo} países con dato en un mismo año`);
@@ -84,7 +91,7 @@ for (const [k, ind] of conf.indicadores.entries()) {
     if (!pos) throw new Error("la Argentina no tiene dato en la ventana");
     const serieAR = Object.entries(valores.ARG || {}).map(([a, v]) => ({ periodo: a, valor: v }));
     filas.push({
-      ...ind, url, anioReferencia: anio, puesto: pos.puesto, total: pos.total, percentil: pos.percentil,
+      ...ind, url, nota: nota || ind.nota || null, anioReferencia: anio, puesto: pos.puesto, total: pos.total, percentil: pos.percentil,
       valor: pos.valor, anio: pos.anio, mediana: pos.mediana, lectura: lectura(pos.percentil), mundo: delMundo || null,
       mejorPais: { ...pos.primero, nombre: nombres[pos.primero.pais] }, peorPais: { ...pos.ultimo, nombre: nombres[pos.ultimo.pais] },
       comparados: Object.fromEntries(conf.comparar_con.map(c => [c, c === "WLD" ? delMundo || null : ult[c] || null])),

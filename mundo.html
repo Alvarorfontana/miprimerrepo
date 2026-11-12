@@ -229,7 +229,7 @@
     var filas = D.indicadores.slice().sort(function (a, b) { return orden.indexOf(a.area) - orden.indexOf(b.area) || a.percentil - b.percentil; });
     $("tabla").innerHTML = filas.map(function (i) {
       var hist = i.historia && i.historia.esPeorHistorico ? ' <span class="mu-alerta">peor desde ' + esc(i.historia.desde) + '</span>' : '';
-      return '<tr><td><span class="area">' + esc(D.porArea[i.area].nombre) + '</span><br>' + esc(i.nombre) + hist + '</td>' +
+      return '<tr><td><span class="area">' + esc(D.porArea[i.area].nombre) + '</span><br>' + esc(i.nombre) + hist + (i.nota ? '<br><small style="color:var(--muted)">' + esc(i.nota) + '</small>' : '') + '</td>' +
         '<td class="n">' + f(i.valor) + '<br><small style="color:var(--muted)">' + esc(i.unidad) + ' · ' + i.anio + '</small></td>' +
         '<td class="n">' + i.puesto + ' de ' + i.total + (i.ambito ? '<br><small>en A. Latina</small>' : '') + '</td><td class="mu-mini">' + barra(i.percentil) + '<small class="n" style="font-family:var(--mono)">' + f(i.percentil) + '</small></td>' +
         '<td class="ocultar-movil">' + esc(i.lectura) + '<br><small style="color:var(--muted)">Mediana mundial: ' + f(i.mediana) + '</small></td>' +
