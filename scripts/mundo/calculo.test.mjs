@@ -137,3 +137,23 @@ test("hoja del SIPA y empleos perdidos", () => {
   assert.deepEqual(d.map(x => x.periodo), ["2023-11", "2025-12", "2026-07"]);
   assert.equal(variacionDesde(d, "2023-11").diferencia, -147.474);
 });
+
+test("CEPAL con preferencia nacional y respaldo urbano", () => {
+  const j = { body: {
+    dimensions: [
+      { id: 208, name: "País__ESTANDAR", members: [{ id: 216, name: "Argentina" }, { id: 222, name: "Brasil" }] },
+      { id: 29117, name: "Años__ESTANDAR", members: [{ id: 1, name: "2023" }] },
+      { id: 1361, name: "Pobreza extrema y pobreza", members: [{ id: 1362, name: "Pobreza" }, { id: 1363, name: "Pobreza extrema" }] },
+      { id: 326, name: "Área geográfica", members: [{ id: 327, name: "Nacional" }, { id: 330, name: "Urbana" }] },
+    ],
+    data: [
+      { iso3: "ARG", value: "30", dim_29117: 1, dim_1361: 1362, dim_326: 330 },
+      { iso3: "ARG", value: "6", dim_29117: 1, dim_1361: 1363, dim_326: 330 },
+      { iso3: "BRA", value: "25", dim_29117: 1, dim_1361: 1362, dim_326: 327 },
+      { iso3: "BRA", value: "22", dim_29117: 1, dim_1361: 1362, dim_326: 330 },
+    ] } };
+  const usados = {};
+  const v = leerCepal(j, null, { "pobreza extrema y pobreza": ["Pobreza"], "área geográfica": ["Nacional", "Urbana"] }, usados);
+  assert.deepEqual(v, { ARG: { 2023: 30 }, BRA: { 2023: 25 } });
+  assert.deepEqual(usados, { ARG: "Urbana" });
+});

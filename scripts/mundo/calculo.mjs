@@ -226,8 +226,11 @@ export function cambioEnAnios(valores, anios = 2) {
 
 const PREFERIDOS = /^(total|ambos sexos|nacional|total nacional|total país|total pais)$/i;
 
-/** Datos de CEPALSTAT → {ISO3: {anio: valor}}. Se queda con el total (ambos sexos, nacional) cuando hay cortes. */
-export function leerCepal(json, paisesValidos) {
+/** Datos de CEPALSTAT → {ISO3: {anio: valor}}.
+ * `elegir` dice qué miembro tomar en cada corte, en orden de preferencia: {"Área geográfica": ["Nacional", "Urbana"]}.
+ * Si un país no tiene el primero se usa el siguiente, y queda anotado en `usados` (p. ej. la Argentina solo urbana).
+ * En los cortes no nombrados se toma el total (ambos sexos, nacional) o el único miembro que haya. */
+export function leerCepal(json, paisesValidos, elegir = {}, usados = {}) {
   const body = json?.body || {};
   const dims = body.dimensions || [];
   const nombre = {};
@@ -239,19 +242,31 @@ export function leerCepal(json, paisesValidos) {
   if (!dimAnio) throw new Error("CEPAL: no encuentro la dimensión de años");
   const dimPais = (dims.find(d => /pa[ií]s/i.test(d.name)) || {}).id;
   const otras = dims.filter(d => d.id !== dimAnio && d.id !== dimPais);
-  // En cada corte (sexo, área...) se toma el miembro "total" o, si no hay, el único que exista.
-  const elegido = {};
+  const orden = {};
   for (const d of otras) {
-    const t = (d.members || []).find(m => PREFERIDOS.test(String(m.name).trim()));
-    elegido[d.id] = t ? t.id : (d.members || []).length === 1 ? d.members[0].id : null;
+    const clave = Object.keys(elegir).find(k => sinTildes(d.name).includes(sinTildes(k)));
+    const ms = d.members || [];
+    let ids;
+    if (clave) ids = elegir[clave].map(n => (ms.find(m => sinTildes(m.name) === sinTildes(n)) || {}).id).filter(x => x != null);
+    else { const t = ms.find(m => PREFERIDOS.test(String(m.name).trim())); ids = t ? [t.id] : ms.length === 1 ? [ms[0].id] : []; }
+    orden[d.id] = ids;
   }
-  const out = {};
+  const mejor = {};
   for (const f of body.data || []) {
     const iso = f.iso3 || isoDeNombre(nombre[f[`dim_${dimPais}`]]);
     if (!iso || (paisesValidos && !paisesValidos.has(iso))) continue;
-    if (otras.some(d => elegido[d.id] == null || f[`dim_${d.id}`] !== elegido[d.id])) continue;
+    let rango = 0, ok = true;
+    for (const d of otras) { const k = orden[d.id].indexOf(f[`dim_${d.id}`]); if (k < 0) { ok = false; break; } rango += k; }
+    if (!ok) continue;
     const a = parseInt(nombre[f[`dim_${dimAnio}`]], 10), v = parseFloat(f.value);
-    if (Number.isFinite(a) && Number.isFinite(v)) (out[iso] ||= {})[a] = v;
+    if (!Number.isFinite(a) || !Number.isFinite(v)) continue;
+    const prev = mejor[iso]?.[a];
+    if (!prev || rango < prev.rango) (mejor[iso] ||= {})[a] = { v, rango, f };
+  }
+  const out = {};
+  for (const [iso, anios] of Object.entries(mejor)) for (const [a, x] of Object.entries(anios)) {
+    (out[iso] ||= {})[a] = x.v;
+    if (x.rango > 0) usados[iso] = otras.filter(d => orden[d.id].indexOf(x.f[`dim_${d.id}`]) > 0).map(d => nombre[x.f[`dim_${d.id}`]]).join(", ");
   }
   return out;
 }

@@ -689,18 +689,6 @@
       "minimo": 25
     },
     {
-      "clave": "cepal_ocupados_manufactura",
-      "area": "latam",
-      "nombre": "Ocupados en la industria manufacturera",
-      "unidad": "% de los ocupados",
-      "mejor": "alto",
-      "fuente": "cepal",
-      "codigo": "4558",
-      "minimo": 12,
-      "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
-    },
-    {
       "clave": "cepal_productividad",
       "area": "latam",
       "nombre": "Productividad laboral",
@@ -722,7 +710,16 @@
       "codigo": "3347",
       "minimo": 12,
       "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
+      "organismo": "CEPAL · CEPALSTAT",
+      "elegir": {
+        "pobreza extrema y pobreza": [
+          "Pobreza"
+        ],
+        "área geográfica": [
+          "Nacional",
+          "Urbana"
+        ]
+      }
     },
     {
       "clave": "cepal_gini",
@@ -734,19 +731,13 @@
       "codigo": "3289",
       "minimo": 12,
       "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
-    },
-    {
-      "clave": "cepal_informalidad",
-      "area": "latam",
-      "nombre": "Informalidad laboral",
-      "unidad": "% de los ocupados",
-      "mejor": "bajo",
-      "fuente": "cepal",
-      "codigo": "5095",
-      "minimo": 12,
-      "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
+      "organismo": "CEPAL · CEPALSTAT",
+      "elegir": {
+        "área geográfica": [
+          "Nacional",
+          "Urbana"
+        ]
+      }
     },
     {
       "clave": "cepal_deuda_publica",
@@ -758,7 +749,15 @@
       "codigo": "1240",
       "minimo": 12,
       "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
+      "organismo": "CEPAL · CEPALSTAT",
+      "elegir": {
+        "cobertura institucional": [
+          "Gobierno central"
+        ],
+        "clasificación": [
+          "Total deuda pública (clasificación por residencia)"
+        ]
+      }
     }
   ],
   "argentina_series": [

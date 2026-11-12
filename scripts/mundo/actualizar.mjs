@@ -57,7 +57,9 @@ async function datosDe(ind) {
   }
   if (ind.fuente === "cepal") {
     const r = await pedir(`https://api-cepalstat.cepal.org/cepalstat/api/v1/indicator/${ind.codigo}/data?lang=es&format=json`);
-    return { valores: leerCepal(r, validos), url: `https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=${ind.codigo}&lang=es` };
+    const usados = {};
+    const valores = leerCepal(r, validos, ind.elegir || {}, usados);
+    return { valores, nota: usados.ARG ? `Para la Argentina, la CEPAL tiene dato de: ${usados.ARG}.` : ind.nota, url: `https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=${ind.codigo}&lang=es` };
   }
   throw new Error(`fuente desconocida: ${ind.fuente}`);
 }
@@ -79,7 +81,7 @@ const bajados = conf.indicadores.map(i => porClave.get(i.clave));
 for (const [k, ind] of conf.indicadores.entries()) {
   try {
     if (bajados[k].e) throw bajados[k].e;
-    const { valores, url } = bajados[k].r;
+    const { valores, url, nota } = bajados[k].r;
     const minimo = ind.minimo || conf.minimo_paises;
     const anio = anioDeReferencia(Object.fromEntries(Object.entries(valores).filter(([k]) => k !== "WLD")), minimo);
     if (!anio) throw new Error(`menos de ${minimo} países con dato en un mismo año`);
@@ -89,7 +91,7 @@ for (const [k, ind] of conf.indicadores.entries()) {
     if (!pos) throw new Error("la Argentina no tiene dato en la ventana");
     const serieAR = Object.entries(valores.ARG || {}).map(([a, v]) => ({ periodo: a, valor: v }));
     filas.push({
-      ...ind, url, anioReferencia: anio, puesto: pos.puesto, total: pos.total, percentil: pos.percentil,
+      ...ind, url, nota: nota || ind.nota || null, anioReferencia: anio, puesto: pos.puesto, total: pos.total, percentil: pos.percentil,
       valor: pos.valor, anio: pos.anio, mediana: pos.mediana, lectura: lectura(pos.percentil), mundo: delMundo || null,
       mejorPais: { ...pos.primero, nombre: nombres[pos.primero.pais] }, peorPais: { ...pos.ultimo, nombre: nombres[pos.ultimo.pais] },
       comparados: Object.fromEntries(conf.comparar_con.map(c => [c, c === "WLD" ? delMundo || null : ult[c] || null])),
