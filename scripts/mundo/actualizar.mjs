@@ -1,12 +1,13 @@
 // Módulo «Argentina frente al mundo»: baja los indicadores del catálogo (scripts/mundo/indicadores.json),
 // calcula el puesto y el percentil de la Argentina en cada uno, el promedio por área y los mínimos históricos,
 // y guarda todo en data/mundo/indice.json. Corre una vez por mes en GitHub Actions (mundo.yml).
-// Fuentes gratuitas y sin clave: API del Banco Mundial, FMI DataMapper y API de Series de Tiempo (INDEC).
+// Fuentes gratuitas y sin clave: Banco Mundial, FMI DataMapper, OIT (ILOSTAT), CEPAL (CEPALSTAT),
+// API de Series de Tiempo (INDEC) y la planilla del SIPA que guarda el repo.
 // Uso: node scripts/mundo/actualizar.mjs
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import {
   ultimosValores, anioDeReferencia, posicion, historia, promedios, lectura, leerBancoMundial, leerFmi,
-  regionDe, REGIONES, GRUPOS_FIJOS,
+  regionDe, REGIONES, GRUPOS_FIJOS, leerOit, leerCepal, cambioEnAnios, leerSipa, variacionDesde,
 } from "./calculo.mjs";
 
 const AQUI = new URL("./", import.meta.url);
@@ -17,12 +18,12 @@ const ANIO = new Date().getUTCFullYear();
 const BM = "https://api.worldbank.org/v2";
 const errores = [];
 
-async function pedir(url, intentos = 3) {
+async function pedir(url, intentos = 3, texto = false) {
   for (let i = 1; ; i++) {
     try {
-      const r = await fetch(url, { headers: { "User-Agent": "observatorio-uom/mundo" }, signal: AbortSignal.timeout(60000) });
+      const r = await fetch(url, { headers: { "User-Agent": "observatorio-uom/mundo" }, signal: AbortSignal.timeout(90000) });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return await r.json();
+      return texto ? await r.text() : await r.json();
     } catch (e) {
       if (i >= intentos) throw new Error(`${e.message} en ${url}`);
       await new Promise(res => setTimeout(res, 2000 * i));
@@ -48,16 +49,36 @@ async function datosDe(ind) {
     const r = await pedir(`https://www.imf.org/external/datamapper/api/v1/${ind.codigo}`);
     return { valores: leerFmi(r, ind.codigo, ANIO, validos), url: `https://www.imf.org/external/datamapper/${ind.codigo}` };
   }
+  if (ind.fuente === "oit") {
+    const q = new URLSearchParams({ id: ind.codigo, timefrom: "2000", type: "code", format: ".csv", ...(ind.filtro || {}) });
+    let valores = leerOit(await pedir(`https://rplumber.ilo.org/data/indicator/?${q}`, 3, true), ANIO, validos);
+    if (ind.cambio_anios) valores = cambioEnAnios(valores, ind.cambio_anios);
+    return { valores, url: `https://ilostat.ilo.org/data/?indicator=${ind.codigo}` };
+  }
+  if (ind.fuente === "cepal") {
+    const r = await pedir(`https://api-cepalstat.cepal.org/cepalstat/api/v1/indicator/${ind.codigo}/data?lang=es&format=json`);
+    return { valores: leerCepal(r, validos), url: `https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=${ind.codigo}&lang=es` };
+  }
   throw new Error(`fuente desconocida: ${ind.fuente}`);
 }
 
+// Pide varias cosas a la vez, sin pasar de `n` pedidos en paralelo, y devuelve los resultados en orden.
+async function enParalelo(lista, n, fn) {
+  const out = new Array(lista.length); let sig = 0;
+  await Promise.all(Array.from({ length: n }, async () => { while (sig < lista.length) { const k = sig++; out[k] = await fn(lista[k]); } }));
+  return out;
+}
+
 const filas = [];
-for (const ind of conf.indicadores) {
+const bajados = await enParalelo(conf.indicadores, 6, ind => datosDe(ind).then(r => ({ r }), e => ({ e })));
+for (const [k, ind] of conf.indicadores.entries()) {
   try {
-    const { valores, url } = await datosDe(ind);
-    const anio = anioDeReferencia(Object.fromEntries(Object.entries(valores).filter(([k]) => k !== "WLD")), conf.minimo_paises);
-    if (!anio) throw new Error("menos países con dato que el mínimo");
-    const ult = ultimosValores(valores, anio, conf.ventana_anios);
+    if (bajados[k].e) throw bajados[k].e;
+    const { valores, url } = bajados[k].r;
+    const minimo = ind.minimo || conf.minimo_paises;
+    const anio = anioDeReferencia(Object.fromEntries(Object.entries(valores).filter(([k]) => k !== "WLD")), minimo);
+    if (!anio) throw new Error(`menos de ${minimo} países con dato en un mismo año`);
+    const ult = ultimosValores(valores, anio, ind.ventana || conf.ventana_anios);
     const delMundo = ult.WLD; delete ult.WLD;
     const pos = posicion(ult, "ARG", ind.mejor);
     if (!pos) throw new Error("la Argentina no tiene dato en la ventana");
@@ -79,14 +100,28 @@ for (const ind of conf.indicadores) {
   }
 }
 
-// Series argentinas largas (INDEC): para ver si el último dato es un mínimo histórico.
+// Series argentinas largas (INDEC y SIPA): para ver si el último dato es un mínimo histórico
+// y cuánto cambió desde una fecha (p. ej. noviembre de 2023).
+async function datosSerie(s) {
+  if (s.fuente === "sipa") {
+    const XLSX = (await import("xlsx")).default;
+    const libro = XLSX.read(await readFile(new URL(`../../${s.archivo}`, import.meta.url)), { cellDates: true });
+    const hoja = libro.Sheets[s.hoja];
+    if (!hoja) throw new Error(`no está la hoja ${s.hoja}`);
+    return { datos: leerSipa(XLSX.utils.sheet_to_json(hoja, { header: 1, raw: true }), s.columna), url: s.url };
+  }
+  const r = await pedir(`https://apis.datos.gob.ar/series/api/series/?ids=${encodeURIComponent(s.codigo)}&format=json&limit=5000`);
+  return {
+    datos: (r.data || []).filter(f => f[1] != null).map(f => ({ periodo: String(f[0]).slice(0, 7), valor: +(+f[1]).toFixed(2) })),
+    url: `https://apis.datos.gob.ar/series/api/series/?ids=${s.codigo}&format=csv`,
+  };
+}
 const seriesAR = [];
 for (const s of conf.argentina_series) {
   try {
-    const r = await pedir(`https://apis.datos.gob.ar/series/api/series/?ids=${encodeURIComponent(s.codigo)}&format=json&limit=5000`);
-    const datos = (r.data || []).filter(f => f[1] != null).map(f => ({ periodo: String(f[0]).slice(0, 7), valor: +(+f[1]).toFixed(2) }));
+    const { datos, url } = await datosSerie(s);
     if (!datos.length) throw new Error("serie vacía");
-    seriesAR.push({ ...s, url: `https://apis.datos.gob.ar/series/api/series/?ids=${s.codigo}&format=csv`, historia: historia(datos, s.mejor), datos });
+    seriesAR.push({ ...s, url, historia: historia(datos, s.mejor), variacion: s.comparar_desde ? variacionDesde(datos, s.comparar_desde) : null, datos });
     console.log(`${s.clave}: ${datos.length} datos`);
   } catch (e) {
     errores.push({ indicador: s.clave, error: e.message });
@@ -94,7 +129,11 @@ for (const s of conf.argentina_series) {
   }
 }
 
-const { porArea, general } = promedios(filas, conf.areas);
+// El índice general usa solo las áreas con ranking mundial; las regionales (CEPAL) se muestran aparte.
+const regionales = new Set(conf.areas_regionales || []);
+const mundiales = Object.fromEntries(Object.entries(conf.areas).filter(([k]) => !regionales.has(k)));
+const { porArea, general } = promedios(filas, mundiales);
+for (const k of regionales) porArea[k] = { ...promedios(filas, { [k]: conf.areas[k] }).porArea[k], regional: true };
 await mkdir(new URL("../../data/mundo/", import.meta.url), { recursive: true });
 await writeFile(SALIDA, JSON.stringify({
   actualizado: new Date().toISOString().slice(0, 10),

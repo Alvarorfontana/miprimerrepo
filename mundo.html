@@ -39,6 +39,7 @@
 .mu-serie h3{margin:0;font-size:15px}
 .mu-serie .val{font-family:var(--display);font-size:34px;line-height:1}
 .mu-serie svg{width:100%;height:90px}
+.mu-var-desde{font-size:13px;margin:2px 0 4px}
 .mu-alerta{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--bad);color:#fff}
 .mu-tabla{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
 .mu-tabla table{width:100%;border-collapse:collapse;font-size:14px}
@@ -125,8 +126,8 @@
   </section>
 
   <section class="mu-panel" id="capacidad">
-    <h2>Capacidad instalada y producción en la Argentina</h2>
-    <p>Series largas del INDEC. Se marca cuando el último dato es el peor de toda la serie.</p>
+    <h2>Industria, empleo y salarios en la Argentina</h2>
+    <p>Series largas del INDEC y del SIPA (empleo registrado). Se marca cuando el último dato es el peor de toda la serie, y se muestra cuánto cambió desde noviembre de 2023.</p>
     <div class="mu-series" id="lista-series"></div>
   </section>
 
@@ -157,7 +158,7 @@
     </div>
     <p class="mu-nota"><b>Cómo se calcula:</b> para cada indicador se ordena a todos los países con dato según si conviene un valor alto (producción, empleo) o bajo (desempleo, inflación, desigualdad). El promedio por área y el índice general promedian posiciones, nunca valores de indicadores distintos.</p>
     <p class="mu-nota"><b>Límites:</b> los organismos publican con uno o dos años de demora, así que el último dato internacional puede no mostrar lo que pasó este año; para eso están las series del INDEC. Las empresas que dejan de aportar a la seguridad social solo se miden en la Argentina y no tienen comparación internacional. Los indicadores pesan todos igual, y elegir otros cambiaría el promedio. El índice es orientativo.</p>
-    <p class="mu-nota"><b>Fuentes:</b> API del Banco Mundial (con datos de la OIT, la ONU, la ONUDI, la UNESCO, la OMS, la UIT y la OCDE, más los Indicadores de Gobernanza), FMI DataMapper, API de Series de Tiempo del INDEC (datos.gob.ar) e informes citados. Se actualiza solo una vez por mes. Fuentes en camino: ONUDI (producción industrial trimestral), OIT (ILOSTAT), CEPAL (CEPALSTAT), OCDE (capacidad instalada) y SRT.</p>
+    <p class="mu-nota"><b>Fuentes:</b> API del Banco Mundial (con datos de la OIT, la ONU, la ONUDI, la UNESCO, la OMS, la UIT y la OCDE, más los Indicadores de Gobernanza), FMI DataMapper, OIT (ILOSTAT, directo), CEPAL (CEPALSTAT, solo América Latina y el Caribe), API de Series de Tiempo del INDEC (datos.gob.ar), SIPA (empleo asalariado registrado, Secretaría de Trabajo) e informes citados. Se actualiza solo una vez por mes. <b>Sin conexión directa:</b> la ONUDI bloquea las consultas automáticas, así que sus datos llegan por el Banco Mundial; la API de la OCDE no respondió en las pruebas y la SRT no publica una API. Todo es orientativo.</p>
     <div id="errores"></div>
   </section>
 </div></main>
@@ -186,7 +187,7 @@
       var ind = D.indicadores.filter(function (i) { return i.area === k; });
       var peor = ind.slice().sort(function (x, y) { return x.percentil - y.percentil; })[0];
       return '<div class="mu-area"><h3>' + esc(a.nombre) + '</h3><div class="pct" style="color:' + colorP(a.percentil) + '">' + f(a.percentil) + '</div>' + barra(a.percentil) +
-        '<small style="color:var(--muted)">' + a.indicadores + ' indicadores' + (peor ? ' · más bajo: ' + esc(peor.nombre.charAt(0).toLowerCase() + peor.nombre.slice(1)) + ' (puesto ' + peor.puesto + ' de ' + peor.total + ')' : '') + '</small></div>';
+        '<small style="color:var(--muted)">' + (a.regional ? 'Solo entre países de América Latina y el Caribe; no entra en el índice general. ' : '') + a.indicadores + ' indicadores' + (peor ? ' · más bajo: ' + esc(peor.nombre.charAt(0).toLowerCase() + peor.nombre.slice(1)) + ' (puesto ' + peor.puesto + ' de ' + peor.total + ')' : '') + '</small></div>';
     }).join("");
   }
 
@@ -215,11 +216,12 @@
     $("lista-series").innerHTML = (D.argentina || []).map(function (s) {
       var h = s.historia;
       return '<div class="mu-serie"><h3>' + esc(s.nombre) + '</h3><div><span class="val">' + f(h.ultimo) + '</span> ' + esc(s.unidad) + ' · ' + periodo(h.hasta) +
-        (h.esPeorHistorico ? ' <span class="mu-alerta">Mínimo histórico</span>' : '') + '</div>' + linea(s.datos) +
+        (h.esPeorHistorico ? ' <span class="mu-alerta">Mínimo histórico</span>' : '') + '</div>' +
+        (s.variacion ? '<div class="mu-var-desde">Desde ' + periodo(s.variacion.desde) + ': <b style="color:' + ((s.variacion.diferencia < 0) === (s.mejor === "alto") ? css("--bad") : css("--ok")) + '">' + (s.variacion.diferencia > 0 ? "+" : "") + f(s.variacion.diferencia) + '</b> ' + esc(s.unidad) + ' (' + (s.variacion.porcentaje > 0 ? "+" : "") + f(s.variacion.porcentaje) + ' %)</div>' : '') + linea(s.datos) +
         '<small style="color:var(--muted)">Peor dato: ' + f(h.peor.valor) + ' (' + periodo(h.peor.periodo) + ') · Mejor: ' + f(h.mejor.valor) + ' (' + periodo(h.mejor.periodo) + ')' +
         (h.esPeorHistorico ? '' : ' · El último es el ' + h.lugarEntreLosPeores + '.º más bajo de ' + h.datos) + ' · Serie desde ' + periodo(h.desde) +
         '<br><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.organismo) + '</a></small></div>';
-    }).join("") || '<p class="mu-vacio">Las series del INDEC no respondieron en la última actualización.</p>';
+    }).join("") || '<p class="mu-vacio">Las series argentinas no respondieron en la última actualización.</p>';
   }
 
   function tabla() {
@@ -229,7 +231,7 @@
       var hist = i.historia && i.historia.esPeorHistorico ? ' <span class="mu-alerta">peor desde ' + esc(i.historia.desde) + '</span>' : '';
       return '<tr><td><span class="area">' + esc(D.porArea[i.area].nombre) + '</span><br>' + esc(i.nombre) + hist + '</td>' +
         '<td class="n">' + f(i.valor) + '<br><small style="color:var(--muted)">' + esc(i.unidad) + ' · ' + i.anio + '</small></td>' +
-        '<td class="n">' + i.puesto + ' de ' + i.total + '</td><td class="mu-mini">' + barra(i.percentil) + '<small class="n" style="font-family:var(--mono)">' + f(i.percentil) + '</small></td>' +
+        '<td class="n">' + i.puesto + ' de ' + i.total + (i.ambito ? '<br><small>en A. Latina</small>' : '') + '</td><td class="mu-mini">' + barra(i.percentil) + '<small class="n" style="font-family:var(--mono)">' + f(i.percentil) + '</small></td>' +
         '<td class="ocultar-movil">' + esc(i.lectura) + '<br><small style="color:var(--muted)">Mediana mundial: ' + f(i.mediana) + '</small></td>' +
         '<td class="ocultar-movil"><a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.organismo) + '</a></td></tr>';
     }).join("");
@@ -351,7 +353,7 @@
 
   fetch("data/mundo/indice.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (j) {
     D = j;
-    $("estado").textContent = "Actualizado el " + D.actualizado.split("-").reverse().join("/") + " · " + D.indicadores.length + " indicadores internacionales · " + (D.argentina || []).length + " series del INDEC";
+    $("estado").textContent = "Actualizado el " + D.actualizado.split("-").reverse().join("/") + " · " + D.indicadores.length + " indicadores internacionales · " + (D.argentina || []).length + " series argentinas (INDEC y SIPA)";
     general(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme();
     $("sel").innerHTML = D.indicadores.map(function (i) { return '<option value="' + esc(i.clave) + '">' + esc(i.nombre) + '</option>'; }).join("");
     $("sel").onchange = function () { comparar(this.value); };

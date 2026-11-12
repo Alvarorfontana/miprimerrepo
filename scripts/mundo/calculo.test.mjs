@@ -94,3 +94,46 @@ test("puesto dentro de un grupo de países", () => {
   assert.equal(p.puesto, 2);
   assert.equal(p.total, 3);
 });
+
+import { leerCsv, leerOit, cambioEnAnios, leerCepal } from "./calculo.mjs";
+
+test("CSV de la OIT", () => {
+  const t = '"ref_area","time","obs_value","note"\n"ARG","2024",50.12,\n"ARG","2026",50.2,"M"\n"BRA","2024",48,"a, b"\n';
+  assert.equal(leerCsv(t).length, 3);
+  assert.deepEqual(leerOit(t, 2026, new Set(["ARG", "BRA"])), { ARG: { 2024: 50.12 }, BRA: { 2024: 48 } });
+});
+
+test("variación en dos años", () => {
+  assert.deepEqual(cambioEnAnios({ ARG: { 2022: 3000, 2023: 2900, 2024: 2760 } }, 2), { ARG: { 2024: -8 } });
+});
+
+test("CEPAL toma el total de ambos sexos", () => {
+  const j = { body: {
+    dimensions: [
+      { id: 208, name: "País__ESTANDAR", members: [{ id: 216, name: "Argentina" }] },
+      { id: 29117, name: "Años__ESTANDAR", members: [{ id: 1, name: "2023" }, { id: 2, name: "2024" }] },
+      { id: 144, name: "Sexo", members: [{ id: 10, name: "Ambos sexos" }, { id: 11, name: "Mujeres" }] },
+    ],
+    data: [
+      { iso3: "ARG", value: "6.1", dim_208: 216, dim_29117: 2, dim_144: 10 },
+      { iso3: "ARG", value: "7.0", dim_208: 216, dim_29117: 2, dim_144: 11 },
+      { iso3: null, value: "9", dim_208: 211, dim_29117: 2, dim_144: 10 },
+    ] } };
+  assert.deepEqual(leerCepal(j, new Set(["ARG"])), { ARG: { 2024: 6.1 } });
+});
+
+import { isoDeNombre, leerSipa, variacionDesde } from "./calculo.mjs";
+
+test("nombres de la CEPAL", () => {
+  assert.equal(isoDeNombre("Bolivia (Estado Plurinacional de)"), "BOL");
+  assert.equal(isoDeNombre("México"), "MEX");
+  assert.equal(isoDeNombre("América Latina"), null);
+});
+
+test("hoja del SIPA y empleos perdidos", () => {
+  const filas = [["A.2.2 título"], ["Período", "Pesca", "Industrias \nmanufactureras"],
+    [new Date(Date.UTC(2023, 10, 1)), 1, 1250.5], [45992, 1, 1200], ["jul-26*", 1, 1103.026], ["Notas: ", null, null]];
+  const d = leerSipa(filas, "Industrias manufactureras");
+  assert.deepEqual(d.map(x => x.periodo), ["2023-11", "2025-12", "2026-07"]);
+  assert.equal(variacionDesde(d, "2023-11").diferencia, -147.474);
+});
