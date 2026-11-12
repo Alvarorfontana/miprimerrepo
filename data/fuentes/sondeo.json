@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-12T22:27:39.187Z",
+ "fecha": "2026-11-12T22:36:17.141Z",
  "comex_home": {
   "status": 200
  },
@@ -50,11 +50,11 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::ph9c4-1794522465905-cc64940f0c70"
+  "muestra": "Forbidden\n\nForbidden\ncle1::dsprr-1794522983821-ac83ddcef146"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::nv8gc-1794522466685-d9ebc86ffb4e"
+  "muestra": "Forbidden\n\nForbidden\ncle1::jrdz6-1794522984457-38e65e136a3b"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
@@ -63,19 +63,19 @@
  "badata": {
   "industria": {
    "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749690242789><br><br><a href='javasc"
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749725709701><br><br><a href='javasc"
   },
   "habilitaciones": {
    "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748760894468><br><br><a href='javasc"
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749691018989><br><br><a href='javasc"
   },
   "metal": {
    "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749700379747><br><br><a href='javasc"
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748761272588><br><br><a href='javasc"
   },
   "establecimientos": {
    "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748759017426><br><br><a href='javasc"
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748783263582><br><br><a href='javasc"
   }
  },
  "habilitaciones": {
