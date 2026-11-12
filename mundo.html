@@ -71,6 +71,16 @@
 .mu-var{border-top:1px solid var(--line);padding-top:12px}
 .mu-var h4{margin:0 0 4px;font-size:16px}
 @media print{body.imprimir .nav,body.imprimir main .mu-wrap > *:not(#informe){display:none!important}body.imprimir #informe > h2,body.imprimir #informe > p,body.imprimir .mu-form,body.imprimir .no-imp{display:none!important}body.imprimir #informe{border:0}.mu-var{break-inside:avoid}}
+.mu-tp table{font-size:13px}
+.mu-tp th,.mu-tp td{white-space:nowrap}
+.mu-tp td.ind{white-space:normal;min-width:220px}
+.mu-tp td.ar,.mu-tp th.ar{background:var(--molten-soft);font-weight:700}
+.mu-tp td.mej{color:var(--ok)}.mu-tp td.pe{color:var(--bad)}
+.mu-tp tr.vec td{border-top:0;padding-top:0;font-size:12px;color:var(--muted);white-space:normal}
+.mu-tp tr.sec td{background:var(--soft);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.mu-chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:3px 6px 3px 10px;background:var(--soft)}
+.mu-chip button{border:0;background:none;cursor:pointer;color:var(--muted);font-size:15px;line-height:1;padding:0 2px}
+@media print{body.imprimir-todo .mu-tp{overflow:visible;border:0}body.imprimir-todo .mu-tp table{font-size:8.5px}body.imprimir-todo .mu-tp td.ind{min-width:0}body.imprimir-todo #tabla-paises{break-before:page}}
 @media (max-width:760px){.mu-hero{grid-template-columns:1fr}.ocultar-movil{display:none}.mu-rangos div{grid-template-columns:1fr;gap:0}}
 </style>
 </head>
@@ -89,6 +99,7 @@
       <li><a href="#capacidad">Capacidad</a></li>
       <li><a href="#indicadores">Indicadores</a></li>
       <li><a href="#comparar">Comparar</a></li>
+      <li><a href="#tabla-paises">Tabla por país</a></li>
       <li><a href="#metodo">Método</a></li>
     </ul>
   </div>
@@ -156,6 +167,18 @@
     <p>Elegí un indicador para ver a la Argentina junto a la región, a países de desarrollo parecido y al promedio mundial.</p>
     <div class="mu-ctrl"><select id="sel" aria-label="Indicador para comparar"></select></div>
     <div class="mu-comp" id="comp"></div>
+  </section>
+
+  <section class="mu-panel" id="tabla-paises">
+    <h2>Tabla comparativa por país</h2>
+    <p>Todos los indicadores juntos: la Argentina al lado de los países que elijas y del promedio mundial. En cada fila, los países mejor ubicados que la Argentina aparecen en verde y los peor ubicados en rojo. Debajo de cada indicador: quiénes están justo arriba y justo abajo de la Argentina en el ranking mundial, y el mejor y el peor del mundo. Entra en el PDF del informe general.</p>
+    <div class="mu-ctrl no-imp"><select id="tp-agregar" aria-label="Agregar un país a la tabla"></select>
+      <button type="button" class="mu-btn" id="tp-region">Solo América Latina</button>
+      <button type="button" class="mu-btn" id="tp-defecto">Selección por defecto</button>
+      <button type="button" class="mu-btn pri" id="tp-csv">Bajar la tabla en CSV</button></div>
+    <div class="mu-ctrl no-imp" id="tp-chips"></div>
+    <div class="mu-tabla mu-tp"><table><thead id="tp-head"></thead><tbody id="tp-body"></tbody></table></div>
+    <p class="mu-nota">Valores del último año con dato de cada país (entre paréntesis cuando no es el mismo año que el de la Argentina). La comparación usa los mismos datos con los que se calcula el puesto: Banco Mundial, FMI, OIT y CEPAL.</p>
   </section>
 
   <section class="mu-panel" id="metodo">
@@ -373,11 +396,87 @@
     if (h && D.regiones[h]) { $("sel-region").value = h; armarInforme(); }
   }
 
+  // ---- Tabla comparativa por país ----
+  var TP_DEF = ["BRA", "CHL", "URY", "MEX", "COL", "PER", "HUN", "DEU", "ESP", "POL", "CHN", "KOR", "VNM"];
+  var tpSel = TP_DEF.slice(), tpRank = {};
+  function ranking(i) {
+    if (tpRank[i.clave]) return tpRank[i.clave];
+    var l = Object.keys(i.paises || {}).filter(function (k) { return k !== "WLD"; })
+      .map(function (k) { return { pais: k, valor: i.paises[k][0], anio: i.paises[k][1] }; });
+    l.sort(function (a, b) { return i.mejor === "alto" ? b.valor - a.valor : a.valor - b.valor; });
+    return (tpRank[i.clave] = l);
+  }
+  function nom(k) { return D.nombres[k] || k; }
+  function tpVal(i, k) { var p = i.paises && i.paises[k]; return p ? { v: p[0], a: p[1] } : null; }
+  function tpVecinos(i) {
+    var l = ranking(i), j = l.findIndex(function (d) { return d.pais === "ARG"; });
+    if (j < 0) return "";
+    var it = function (d) { return esc(nom(d.pais)) + " " + f(d.valor); };
+    var arriba = l.slice(Math.max(0, j - 2), j).map(it).join(", "), abajo = l.slice(j + 1, j + 3).map(it).join(", ");
+    return (arriba ? "Justo arriba: " + arriba + ". " : "") + (abajo ? "Justo abajo: " + abajo + ". " : "") +
+      "Mejor: " + it(l[0]) + ". Peor: " + it(l[l.length - 1]) + ". Fuente: " + esc(i.organismo) + ".";
+  }
+  function tablaPaises() {
+    var cols = tpSel.filter(function (k) { return D.nombres[k]; });
+    $("tp-head").innerHTML = '<tr><th>Indicador</th><th class="ar">Argentina</th>' + cols.map(function (k) { return '<th>' + esc(nom(k)) + '</th>'; }).join("") + '<th>Mundo</th></tr>';
+    var orden = Object.keys(D.porArea), html = "";
+    orden.forEach(function (a) {
+      var inds = D.indicadores.filter(function (i) { return i.area === a && i.paises; });
+      if (!inds.length) return;
+      html += '<tr class="sec"><td colspan="' + (cols.length + 3) + '">' + esc(D.porArea[a].nombre) + '</td></tr>';
+      inds.forEach(function (i) {
+        var ar = tpVal(i, "ARG") || { v: i.valor, a: i.anio };
+        var celda = function (d) {
+          if (!d) return '<td class="n">—</td>';
+          var mejor = i.mejor === "alto" ? d.v > ar.v : d.v < ar.v, igual = d.v === ar.v;
+          return '<td class="n ' + (igual ? "" : mejor ? "mej" : "pe") + '">' + f(d.v) + (d.a !== ar.a ? ' <small>(' + d.a + ')</small>' : '') + '</td>';
+        };
+        var mundo = i.mundo ? { v: i.mundo.valor, a: i.mundo.anio } : tpVal(i, "WLD");
+        html += '<tr><td class="ind">' + esc(i.nombre) + '<br><small style="color:var(--muted)">' + esc(i.unidad) + ' · puesto ' + i.puesto + ' de ' + i.total + '</small></td>' +
+          '<td class="n ar">' + f(ar.v) + ' <small>(' + ar.a + ')</small></td>' + cols.map(function (k) { return celda(tpVal(i, k)); }).join("") +
+          (mundo ? '<td class="n">' + f(mundo.v) + '</td>' : '<td class="n">—</td>') + '</tr>' +
+          '<tr class="vec"><td colspan="' + (cols.length + 3) + '">' + tpVecinos(i) + '</td></tr>';
+      });
+    });
+    $("tp-body").innerHTML = html;
+    $("tp-chips").innerHTML = cols.map(function (k) { return '<span class="mu-chip">' + esc(nom(k)) + '<button type="button" data-k="' + k + '" aria-label="Sacar ' + esc(nom(k)) + '">×</button></span>'; }).join("");
+    Array.prototype.forEach.call(document.querySelectorAll("#tp-chips button"), function (b) {
+      b.onclick = function () { tpSel = tpSel.filter(function (k) { return k !== b.dataset.k; }); tablaPaises(); };
+    });
+    var todos = Object.keys(D.nombres).filter(function (k) { return k !== "ARG" && k !== "WLD" && tpSel.indexOf(k) < 0; })
+      .sort(function (a, b) { return nom(a).localeCompare(nom(b), "es"); });
+    $("tp-agregar").innerHTML = '<option value="">Agregar un país…</option>' + todos.map(function (k) { return '<option value="' + k + '">' + esc(nom(k)) + '</option>'; }).join("");
+  }
+  function prepararTablaPaises() {
+    $("tp-agregar").onchange = function () { if (this.value) { tpSel.push(this.value); tablaPaises(); } };
+    $("tp-defecto").onclick = function () { tpSel = TP_DEF.slice(); tablaPaises(); };
+    $("tp-region").onclick = function () {
+      var sa = (miembros("sudamerica") || []).filter(function (k) { return k !== "ARG"; });
+      tpSel = sa.concat(["MEX", "CRI"]).filter(function (k, n, a) { return a.indexOf(k) === n; }); tablaPaises();
+    };
+    $("tp-csv").onclick = function () {
+      var t = "indicador,unidad,pais,codigo,valor,anio,puesto_mundial,total_paises,mejor_es,fuente\n";
+      D.indicadores.filter(function (i) { return i.paises; }).forEach(function (i) {
+        var l = ranking(i);
+        ["ARG"].concat(tpSel).forEach(function (k) {
+          var d = tpVal(i, k); if (!d) return;
+          var pos = l.findIndex(function (x) { return x.pais === k; }) + 1;
+          if (k === "ARG") pos = i.puesto;
+          t += ['"' + i.nombre + '"', '"' + i.unidad + '"', '"' + nom(k) + '"', k, d.v, d.a, pos || "", l.length, i.mejor, '"' + i.organismo + '"'].join(",") + "\n";
+        });
+      });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
+      a.download = "argentina-frente-al-mundo-tabla-por-pais.csv"; document.body.appendChild(a); a.click(); a.remove();
+    };
+    tablaPaises();
+  }
+
   fetch("data/mundo/indice.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (j) {
     D = j;
     $("estado").textContent = "Actualizado el " + D.actualizado.split("-").reverse().join("/") + " · " + D.indicadores.length + " indicadores internacionales · " + (D.argentina || []).length + " series argentinas (INDEC y SIPA)";
     $("b-pdf-todo").onclick = function () { document.body.classList.add("imprimir-todo"); window.print(); setTimeout(function () { document.body.classList.remove("imprimir-todo"); }, 500); };
-    general(); peores(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme();
+    general(); peores(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme(); if (D.nombres) prepararTablaPaises();
     $("sel").innerHTML = D.indicadores.map(function (i) { return '<option value="' + esc(i.clave) + '">' + esc(i.nombre) + '</option>'; }).join("");
     $("sel").onchange = function () { comparar(this.value); };
     var peor = D.indicadores.slice().sort(function (a, b) { return a.percentil - b.percentil; })[0];
