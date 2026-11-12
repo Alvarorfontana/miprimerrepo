@@ -34,6 +34,11 @@ El modelo de datos completo está en [`docs/modelo-de-datos.md`](docs/modelo-de-
 
 Para fijar una serie del INDEC después de la primera corrida, copiá el `idSerie` que aparece en `data/indicadores-auto.json` al campo `id` de `scripts/series.json`.
 
+## Argentina frente al mundo (`/mundo`)
+
+Módulo aparte: dónde está la Argentina entre todos los países en industria, empleo, economía y desarrollo.
+`scripts/mundo/actualizar.mjs` baja los indicadores del catálogo `scripts/mundo/indicadores.json` (API del Banco Mundial, FMI DataMapper y series largas del INDEC), calcula el puesto y el percentil de la Argentina en cada uno, el promedio por área y los mínimos históricos, y guarda `data/mundo/indice.json`. Las cifras de informes de terceros (por ejemplo, Audemus) van en `data/mundo/informes.json`, con su fuente. Corre el día 8 de cada mes (`.github/workflows/mundo.yml`) o a mano. Para sumar un indicador se agrega al catálogo, sin tocar código. Pruebas: `node --test scripts/mundo/calculo.test.mjs`.
+
 ## Carga compartida de datos (opcional, gratuita)
 
 Sin configuración, el portal funciona en modo lectura y lo que se carga queda como borrador en el navegador. Para que todas las seccionales carguen en una misma base:

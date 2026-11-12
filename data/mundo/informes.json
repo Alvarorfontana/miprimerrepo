@@ -1,0 +1,35 @@
+{
+  "nota": "Cifras tomadas de informes de terceros, con su fuente. No las calcula el observatorio: se citan como las publicó cada autor. Se cargan a mano.",
+  "informes": [
+    {
+      "autor": "Audemus (consultora fundada por Matías Kulfas, ex ministro de Desarrollo Productivo)",
+      "titulo": "Informe Sectorial N.º 41",
+      "fecha": "2026-03-03",
+      "base": "ONUDI, INDEC, Superintendencia de Riesgos del Trabajo y cámaras empresariales",
+      "cifras": [
+        {"dato": "Caída de la producción industrial argentina 2023-2025", "valor": "-7,9%", "nota": "Promedio de los dos años frente a 2023"},
+        {"dato": "Puesto de la Argentina entre 56 economías relevadas por la ONUDI", "valor": "2.º peor", "nota": "Solo Hungría cayó más (-8,2%)"},
+        {"dato": "Empresas manufactureras que dejaron de aportar a la seguridad social en 24 meses", "valor": "2.436", "nota": "El 5% de las firmas del sector. Que una empresa deje de aportar no siempre significa que cerró."},
+        {"dato": "Puestos de trabajo industriales perdidos en dos años", "valor": "72.955", "nota": "Empleo registrado"}
+      ],
+      "enlaces": [
+        {"medio": "Infobae", "url": "https://www.infobae.com/economia/2026/03/05/la-argentina-registro-el-segundo-peor-desempeno-industrial-en-un-ranking-de-56-paises/"},
+        {"medio": "Buenos Aires Herald", "url": "https://buenosairesherald.com/economics/argentinas-industry-records-the-second-worst-decline-worldwide-in-two-years"},
+        {"medio": "Hoy Día Córdoba", "url": "https://hoydia.com.ar/economia/argentina-segunda-mayor-caida-industrial/"}
+      ]
+    },
+    {
+      "autor": "Audemus",
+      "titulo": "Actualización del ranking industrial mundial",
+      "fecha": "2026-05-08",
+      "base": "Muestra de 80 economías con datos completos a 2025",
+      "cifras": [
+        {"dato": "Posición de la Argentina", "valor": "Peor desempeño, junto con Hungría", "nota": "Bienio 2023-2025"},
+        {"dato": "Puestos industriales perdidos desde el cambio de gobierno", "valor": "Más de 79.000", "nota": "23 meses seguidos de caída del empleo industrial"}
+      ],
+      "enlaces": [
+        {"medio": "Infobae", "url": "https://www.infobae.com/economia/2026/05/08/en-los-ultimos-dos-anos-la-argentina-registro-la-peor-performance-industrial-del-mundo-junto-con-hungria/"}
+      ]
+    }
+  ]
+}
