@@ -1,7 +1,7 @@
 {
  "actualizado": "2026-11-12",
  "metodo": "Puesto y percentil de la Argentina en cada indicador (último dato de cada país en una ventana de 3 años). Promedio simple de percentiles por área y de las áreas. No se suman valores de indicadores distintos.",
- "general": 44.6,
+ "general": 43.4,
  "lecturaGeneral": "por debajo de la mitad",
  "porArea": {
   "industria": {
@@ -11,13 +11,13 @@
   },
   "empleo": {
    "nombre": "Empleo y trabajo",
-   "percentil": 48,
-   "indicadores": 15
+   "percentil": 48.8,
+   "indicadores": 17
   },
   "macro": {
    "nombre": "Economía general",
-   "percentil": 34.5,
-   "indicadores": 10
+   "percentil": 32.7,
+   "indicadores": 12
   },
   "comercio": {
    "nombre": "Comercio e inversión externa",
@@ -26,13 +26,13 @@
   },
   "desarrollo": {
    "nombre": "Desarrollo social",
-   "percentil": 62.4,
-   "indicadores": 7
+   "percentil": 60.6,
+   "indicadores": 11
   },
   "innovacion": {
    "nombre": "Ciencia, tecnología y energía",
-   "percentil": 49.4,
-   "indicadores": 3
+   "percentil": 45.1,
+   "indicadores": 5
   },
   "instituciones": {
    "nombre": "Instituciones",
@@ -41,8 +41,8 @@
   },
   "latam": {
    "nombre": "América Latina (CEPAL)",
-   "percentil": 37.9,
-   "indicadores": 2,
+   "percentil": 50.4,
+   "indicadores": 4,
    "regional": true
   }
  },
@@ -558,6 +558,7 @@
    "codigo": "NV.IND.MANF.ZS",
    "organismo": "Banco Mundial (con datos de la ONU y la OCDE)",
    "url": "https://datos.bancomundial.org/indicador/NV.IND.MANF.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 55,
    "total": 187,
@@ -1511,6 +1512,7 @@
    "codigo": "NV.IND.MANF.KD.ZG",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NV.IND.MANF.KD.ZG",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 127,
    "total": 181,
@@ -2434,6 +2436,7 @@
    "codigo": "NV.IND.TOTL.KD.ZG",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NV.IND.TOTL.KD.ZG",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 102,
    "total": 192,
@@ -3407,6 +3410,7 @@
    "codigo": "TX.VAL.MANF.ZS.UN",
    "organismo": "Banco Mundial (con datos de UN Comtrade)",
    "url": "https://datos.bancomundial.org/indicador/TX.VAL.MANF.ZS.UN",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 122,
    "total": 165,
@@ -4272,6 +4276,7 @@
    "codigo": "TX.VAL.TECH.MF.ZS",
    "organismo": "Banco Mundial (con datos de UN Comtrade)",
    "url": "https://datos.bancomundial.org/indicador/TX.VAL.TECH.MF.ZS",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 103,
    "total": 164,
@@ -5101,6 +5106,7 @@
    "codigo": "SL.IND.EMPL.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.IND.EMPL.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 68,
    "total": 184,
@@ -6042,6 +6048,7 @@
    "codigo": "SL.UEM.TOTL.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.UEM.TOTL.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 128,
    "total": 184,
@@ -6983,6 +6990,7 @@
    "codigo": "SL.EMP.TOTL.SP.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.EMP.TOTL.SP.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 94,
    "total": 184,
@@ -7924,6 +7932,7 @@
    "codigo": "SL.EMP.WORK.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.EMP.WORK.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 70,
    "total": 184,
@@ -8865,6 +8874,7 @@
    "codigo": "NY.GDP.MKTP.KD.ZG",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NY.GDP.MKTP.KD.ZG",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 66,
    "total": 204,
@@ -9886,6 +9896,7 @@
    "codigo": "FP.CPI.TOTL.ZG",
    "organismo": "Banco Mundial (con datos del FMI)",
    "url": "https://datos.bancomundial.org/indicador/FP.CPI.TOTL.ZG",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 177,
    "total": 177,
@@ -10723,6 +10734,7 @@
    "codigo": "NE.GDI.FTOT.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NE.GDI.FTOT.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 146,
    "total": 169,
@@ -11604,6 +11616,7 @@
    "codigo": "NGDP_RPCH",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/NGDP_RPCH",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 63,
    "total": 192,
@@ -12651,6 +12664,7 @@
    "codigo": "LUR",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/LUR",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 81,
    "total": 109,
@@ -13366,6 +13380,7 @@
    "codigo": "NY.GDP.PCAP.PP.KD",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NY.GDP.PCAP.PP.KD",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 77,
    "total": 197,
@@ -14359,6 +14374,7 @@
    "codigo": "SI.POV.GINI",
    "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad",
    "url": "https://datos.bancomundial.org/indicador/SI.POV.GINI",
+   "nota": null,
    "anioReferencia": 2023,
    "puesto": 90,
    "total": 105,
@@ -14967,6 +14983,7 @@
    "codigo": "SP.DYN.LE00.IN",
    "organismo": "Banco Mundial (con datos de la ONU)",
    "url": "https://datos.bancomundial.org/indicador/SP.DYN.LE00.IN",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 80,
    "total": 217,
@@ -16036,6 +16053,7 @@
    "codigo": "GB.XPD.RSDV.GD.ZS",
    "organismo": "Banco Mundial (con datos de la UNESCO)",
    "url": "https://datos.bancomundial.org/indicador/GB.XPD.RSDV.GD.ZS",
+   "nota": null,
    "anioReferencia": 2023,
    "puesto": 57,
    "total": 102,
@@ -16638,6 +16656,7 @@
    "codigo": "NV.IND.TOTL.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NV.IND.TOTL.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 105,
    "total": 196,
@@ -17627,6 +17646,7 @@
    "codigo": "NV.MNF.TECH.ZS.UN",
    "organismo": "Banco Mundial (con datos de la ONUDI)",
    "url": "https://datos.bancomundial.org/indicador/NV.MNF.TECH.ZS.UN",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 58,
    "total": 152,
@@ -18430,6 +18450,7 @@
    "codigo": "SL.UEM.1524.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.UEM.1524.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 131,
    "total": 184,
@@ -19362,6 +19383,948 @@
    ]
   },
   {
+   "clave": "participacion",
+   "area": "empleo",
+   "nombre": "Participación en el mercado de trabajo",
+   "unidad": "% de la población de 15 años o más",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.TLF.CACT.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)",
+   "url": "https://datos.bancomundial.org/indicador/SL.TLF.CACT.ZS",
+   "nota": null,
+   "anioReferencia": 2025,
+   "puesto": 91,
+   "total": 184,
+   "percentil": 50.8,
+   "valor": 61.913,
+   "anio": 2025,
+   "mediana": 61.6565,
+   "lectura": "en la mitad de la tabla",
+   "mundo": {
+    "valor": 60.9808041802524,
+    "anio": 2025
+   },
+   "mejorPais": {
+    "pais": "QAT",
+    "valor": 87.013,
+    "anio": 2025,
+    "nombre": "Qatar"
+   },
+   "peorPais": {
+    "pais": "STP",
+    "valor": 23.342,
+    "anio": 2025,
+    "nombre": "Santo Tomé y Príncipe"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 63.139,
+     "anio": 2025
+    },
+    "CHL": {
+     "valor": 62.304,
+     "anio": 2025
+    },
+    "MEX": {
+     "valor": 61.609,
+     "anio": 2025
+    },
+    "URY": {
+     "valor": 64.99,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 63.398,
+     "anio": 2025
+    },
+    "HUN": {
+     "valor": 60.578,
+     "anio": 2025
+    },
+    "ESP": {
+     "valor": 57.41,
+     "anio": 2025
+    },
+    "POL": {
+     "valor": 58.312,
+     "anio": 2025
+    },
+    "TUR": {
+     "valor": 54.379,
+     "anio": 2025
+    },
+    "KOR": {
+     "valor": 64.351,
+     "anio": 2025
+    },
+    "WLD": {
+     "valor": 60.9808041802524,
+     "anio": 2025
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2025",
+    "datos": 26,
+    "ultimo": 61.913,
+    "peor": {
+     "valor": 56.023,
+     "periodo": "2020"
+    },
+    "mejor": {
+     "valor": 62.315,
+     "periodo": "2000"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 23
+   },
+   "paises": {
+    "AFG": [
+     37.457,
+     2025
+    ],
+    "ALB": [
+     64.263,
+     2025
+    ],
+    "DZA": [
+     40.784,
+     2025
+    ],
+    "AGO": [
+     74.786,
+     2025
+    ],
+    "ARG": [
+     61.913,
+     2025
+    ],
+    "ARM": [
+     59.388,
+     2025
+    ],
+    "AUS": [
+     66.537,
+     2025
+    ],
+    "AUT": [
+     60.124,
+     2025
+    ],
+    "AZE": [
+     63.288,
+     2025
+    ],
+    "BHS": [
+     73.775,
+     2025
+    ],
+    "BHR": [
+     70.429,
+     2025
+    ],
+    "BGD": [
+     58.796,
+     2025
+    ],
+    "BRB": [
+     64.685,
+     2025
+    ],
+    "BLR": [
+     62.747,
+     2025
+    ],
+    "BEL": [
+     54.274,
+     2025
+    ],
+    "BLZ": [
+     59.1,
+     2025
+    ],
+    "BEN": [
+     76.356,
+     2025
+    ],
+    "BTN": [
+     64.82,
+     2025
+    ],
+    "BOL": [
+     78.626,
+     2025
+    ],
+    "BIH": [
+     48.991,
+     2025
+    ],
+    "BWA": [
+     68.798,
+     2025
+    ],
+    "BRA": [
+     63.139,
+     2025
+    ],
+    "BRN": [
+     64.235,
+     2025
+    ],
+    "BGR": [
+     56.115,
+     2025
+    ],
+    "BFA": [
+     70.005,
+     2025
+    ],
+    "BDI": [
+     78.255,
+     2025
+    ],
+    "CPV": [
+     57.025,
+     2025
+    ],
+    "KHM": [
+     82.392,
+     2025
+    ],
+    "CMR": [
+     65.171,
+     2025
+    ],
+    "CAN": [
+     64.516,
+     2025
+    ],
+    "CAF": [
+     73.389,
+     2025
+    ],
+    "TCD": [
+     59.44,
+     2025
+    ],
+    "CHI": [
+     56.356,
+     2025
+    ],
+    "CHL": [
+     62.304,
+     2025
+    ],
+    "CHN": [
+     64.551,
+     2025
+    ],
+    "COL": [
+     63.398,
+     2025
+    ],
+    "COM": [
+     55.772,
+     2025
+    ],
+    "COD": [
+     64.306,
+     2025
+    ],
+    "COG": [
+     67.825,
+     2025
+    ],
+    "CRI": [
+     57.659,
+     2025
+    ],
+    "CIV": [
+     67.09,
+     2025
+    ],
+    "HRV": [
+     52.143,
+     2025
+    ],
+    "CUB": [
+     52.248,
+     2025
+    ],
+    "CYP": [
+     66.961,
+     2025
+    ],
+    "CZE": [
+     60.341,
+     2025
+    ],
+    "DNK": [
+     64.935,
+     2025
+    ],
+    "DJI": [
+     31.744,
+     2025
+    ],
+    "DOM": [
+     64.839,
+     2025
+    ],
+    "ECU": [
+     64.497,
+     2025
+    ],
+    "EGY": [
+     44.568,
+     2025
+    ],
+    "SLV": [
+     62.107,
+     2025
+    ],
+    "GNQ": [
+     60.513,
+     2025
+    ],
+    "ERI": [
+     78.348,
+     2025
+    ],
+    "EST": [
+     65.128,
+     2025
+    ],
+    "SWZ": [
+     51.191,
+     2025
+    ],
+    "ETH": [
+     68.461,
+     2025
+    ],
+    "FJI": [
+     57.16,
+     2025
+    ],
+    "FIN": [
+     59.681,
+     2025
+    ],
+    "FRA": [
+     55.346,
+     2025
+    ],
+    "PYF": [
+     52.369,
+     2025
+    ],
+    "GAB": [
+     51.058,
+     2025
+    ],
+    "GMB": [
+     47.457,
+     2025
+    ],
+    "GEO": [
+     64.312,
+     2025
+    ],
+    "DEU": [
+     60.571,
+     2025
+    ],
+    "GHA": [
+     58.524,
+     2025
+    ],
+    "GRC": [
+     51.958,
+     2025
+    ],
+    "GUM": [
+     62.265,
+     2025
+    ],
+    "GTM": [
+     59.619,
+     2025
+    ],
+    "GIN": [
+     52.61,
+     2025
+    ],
+    "GNB": [
+     64.814,
+     2025
+    ],
+    "GUY": [
+     54.987,
+     2025
+    ],
+    "HTI": [
+     63.93,
+     2025
+    ],
+    "HND": [
+     56.556,
+     2025
+    ],
+    "HKG": [
+     56.356,
+     2025
+    ],
+    "HUN": [
+     60.578,
+     2025
+    ],
+    "ISL": [
+     74.926,
+     2025
+    ],
+    "IND": [
+     55.658,
+     2025
+    ],
+    "IDN": [
+     67.965,
+     2025
+    ],
+    "IRN": [
+     40.965,
+     2025
+    ],
+    "IRQ": [
+     41.533,
+     2025
+    ],
+    "IRL": [
+     64.844,
+     2025
+    ],
+    "ISR": [
+     65.489,
+     2025
+    ],
+    "ITA": [
+     49.302,
+     2025
+    ],
+    "JAM": [
+     69.566,
+     2025
+    ],
+    "JPN": [
+     63.448,
+     2025
+    ],
+    "JOR": [
+     40.052,
+     2025
+    ],
+    "KAZ": [
+     67.77,
+     2025
+    ],
+    "KEN": [
+     67.385,
+     2025
+    ],
+    "PRK": [
+     82.152,
+     2025
+    ],
+    "KOR": [
+     64.351,
+     2025
+    ],
+    "KWT": [
+     73.365,
+     2025
+    ],
+    "KGZ": [
+     57.366,
+     2025
+    ],
+    "LAO": [
+     66.087,
+     2025
+    ],
+    "LVA": [
+     60.519,
+     2025
+    ],
+    "LBN": [
+     43.424,
+     2023
+    ],
+    "LSO": [
+     57.117,
+     2025
+    ],
+    "LBR": [
+     76.582,
+     2025
+    ],
+    "LBY": [
+     47.963,
+     2025
+    ],
+    "LTU": [
+     62.918,
+     2025
+    ],
+    "LUX": [
+     61.502,
+     2025
+    ],
+    "MAC": [
+     67.848,
+     2025
+    ],
+    "MDG": [
+     85.495,
+     2025
+    ],
+    "MWI": [
+     62.577,
+     2025
+    ],
+    "MYS": [
+     66.12,
+     2025
+    ],
+    "MDV": [
+     63.501,
+     2025
+    ],
+    "MLI": [
+     67.036,
+     2025
+    ],
+    "MLT": [
+     63.98,
+     2025
+    ],
+    "MRT": [
+     40.772,
+     2025
+    ],
+    "MUS": [
+     58.548,
+     2025
+    ],
+    "MEX": [
+     61.609,
+     2025
+    ],
+    "MDA": [
+     72.29,
+     2025
+    ],
+    "MNG": [
+     59.689,
+     2025
+    ],
+    "MNE": [
+     57.966,
+     2025
+    ],
+    "MAR": [
+     43.941,
+     2025
+    ],
+    "MOZ": [
+     78.709,
+     2025
+    ],
+    "MMR": [
+     55.088,
+     2025
+    ],
+    "NAM": [
+     58.838,
+     2025
+    ],
+    "NPL": [
+     39.244,
+     2025
+    ],
+    "NLD": [
+     67.248,
+     2025
+    ],
+    "NCL": [
+     56.421,
+     2025
+    ],
+    "NZL": [
+     70.352,
+     2025
+    ],
+    "NIC": [
+     66.074,
+     2025
+    ],
+    "NER": [
+     79.741,
+     2025
+    ],
+    "NGA": [
+     82.517,
+     2025
+    ],
+    "MKD": [
+     51.935,
+     2025
+    ],
+    "NOR": [
+     65.606,
+     2025
+    ],
+    "OMN": [
+     68.377,
+     2025
+    ],
+    "PAK": [
+     52.335,
+     2025
+    ],
+    "PAN": [
+     66.304,
+     2025
+    ],
+    "PNG": [
+     52.07,
+     2025
+    ],
+    "PRY": [
+     70.247,
+     2025
+    ],
+    "PER": [
+     72.856,
+     2025
+    ],
+    "PHL": [
+     61.35,
+     2025
+    ],
+    "POL": [
+     58.312,
+     2025
+    ],
+    "PRT": [
+     58.161,
+     2025
+    ],
+    "PRI": [
+     42.779,
+     2025
+    ],
+    "QAT": [
+     87.013,
+     2025
+    ],
+    "ROU": [
+     51.331,
+     2025
+    ],
+    "RUS": [
+     61.113,
+     2025
+    ],
+    "RWA": [
+     63.681,
+     2025
+    ],
+    "WSM": [
+     42.534,
+     2025
+    ],
+    "STP": [
+     23.342,
+     2025
+    ],
+    "SAU": [
+     65.098,
+     2025
+    ],
+    "SEN": [
+     52.019,
+     2025
+    ],
+    "SRB": [
+     59.142,
+     2025
+    ],
+    "SLE": [
+     53.372,
+     2025
+    ],
+    "SGP": [
+     69.673,
+     2025
+    ],
+    "SVK": [
+     60.422,
+     2025
+    ],
+    "SVN": [
+     57.565,
+     2025
+    ],
+    "SLB": [
+     84.296,
+     2025
+    ],
+    "SOM": [
+     33.846,
+     2025
+    ],
+    "ZAF": [
+     55.584,
+     2025
+    ],
+    "SSD": [
+     73.408,
+     2023
+    ],
+    "ESP": [
+     57.41,
+     2025
+    ],
+    "LKA": [
+     48.517,
+     2025
+    ],
+    "LCA": [
+     68.265,
+     2025
+    ],
+    "VCT": [
+     67.9,
+     2025
+    ],
+    "SUR": [
+     53.823,
+     2025
+    ],
+    "SWE": [
+     64.595,
+     2025
+    ],
+    "CHE": [
+     66.747,
+     2025
+    ],
+    "SYR": [
+     36.898,
+     2025
+    ],
+    "TJK": [
+     38.276,
+     2025
+    ],
+    "TZA": [
+     83.716,
+     2025
+    ],
+    "THA": [
+     66.678,
+     2025
+    ],
+    "TLS": [
+     66.98,
+     2025
+    ],
+    "TGO": [
+     57.845,
+     2025
+    ],
+    "TON": [
+     49.808,
+     2025
+    ],
+    "TTO": [
+     57.75,
+     2025
+    ],
+    "TUN": [
+     45.219,
+     2025
+    ],
+    "TUR": [
+     54.379,
+     2025
+    ],
+    "TKM": [
+     42.031,
+     2025
+    ],
+    "UGA": [
+     80.028,
+     2025
+    ],
+    "ARE": [
+     78.594,
+     2025
+    ],
+    "GBR": [
+     61.369,
+     2025
+    ],
+    "USA": [
+     61.704,
+     2025
+    ],
+    "URY": [
+     64.99,
+     2025
+    ],
+    "UZB": [
+     57.499,
+     2025
+    ],
+    "VUT": [
+     58.111,
+     2025
+    ],
+    "VEN": [
+     51.927,
+     2025
+    ],
+    "VNM": [
+     72.778,
+     2025
+    ],
+    "VIR": [
+     54.356,
+     2025
+    ],
+    "YEM": [
+     33.103,
+     2025
+    ],
+    "ZMB": [
+     61.933,
+     2025
+    ],
+    "ZWE": [
+     67.718,
+     2025
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 62.315
+    },
+    {
+     "periodo": "2001",
+     "valor": 61.651
+    },
+    {
+     "periodo": "2002",
+     "valor": 60.149
+    },
+    {
+     "periodo": "2003",
+     "valor": 61.036
+    },
+    {
+     "periodo": "2004",
+     "valor": 61.943
+    },
+    {
+     "periodo": "2005",
+     "valor": 61.511
+    },
+    {
+     "periodo": "2006",
+     "valor": 61.795
+    },
+    {
+     "periodo": "2007",
+     "valor": 61.114
+    },
+    {
+     "periodo": "2008",
+     "valor": 60.428
+    },
+    {
+     "periodo": "2009",
+     "valor": 60.78
+    },
+    {
+     "periodo": "2010",
+     "valor": 60.187
+    },
+    {
+     "periodo": "2011",
+     "valor": 60.651
+    },
+    {
+     "periodo": "2012",
+     "valor": 60.362
+    },
+    {
+     "periodo": "2013",
+     "valor": 59.962
+    },
+    {
+     "periodo": "2014",
+     "valor": 59.444
+    },
+    {
+     "periodo": "2015",
+     "valor": 59.232
+    },
+    {
+     "periodo": "2016",
+     "valor": 59.02
+    },
+    {
+     "periodo": "2017",
+     "valor": 58.808
+    },
+    {
+     "periodo": "2018",
+     "valor": 59.595
+    },
+    {
+     "periodo": "2019",
+     "valor": 60.289
+    },
+    {
+     "periodo": "2020",
+     "valor": 56.023
+    },
+    {
+     "periodo": "2021",
+     "valor": 60.358
+    },
+    {
+     "periodo": "2022",
+     "valor": 61.484
+    },
+    {
+     "periodo": "2023",
+     "valor": 62.286
+    },
+    {
+     "periodo": "2024",
+     "valor": 61.862
+    },
+    {
+     "periodo": "2025",
+     "valor": 61.913
+    }
+   ]
+  },
+  {
    "clave": "participacion_mujeres",
    "area": "empleo",
    "nombre": "Participación laboral de las mujeres",
@@ -19371,6 +20334,7 @@
    "codigo": "SL.TLF.CACT.FE.ZS",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.TLF.CACT.FE.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 101,
    "total": 184,
@@ -20303,6 +21267,948 @@
    ]
   },
   {
+   "clave": "empleo_vulnerable",
+   "area": "empleo",
+   "nombre": "Empleo vulnerable (cuentapropistas y familiares sin paga)",
+   "unidad": "% del empleo total",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SL.EMP.VULN.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)",
+   "url": "https://datos.bancomundial.org/indicador/SL.EMP.VULN.ZS",
+   "nota": null,
+   "anioReferencia": 2025,
+   "puesto": 75,
+   "total": 184,
+   "percentil": 59.6,
+   "valor": 22.2688789059329,
+   "anio": 2025,
+   "mediana": 28.67195795787515,
+   "lectura": "por encima de la mitad",
+   "mundo": {
+    "valor": 42.3766387750589,
+    "anio": 2025
+   },
+   "mejorPais": {
+    "pais": "QAT",
+    "valor": 0.455955577569801,
+    "anio": 2025,
+    "nombre": "Qatar"
+   },
+   "peorPais": {
+    "pais": "TCD",
+    "valor": 90.224285798179,
+    "anio": 2025,
+    "nombre": "Chad"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 26.0849820869874,
+     "anio": 2025
+    },
+    "CHL": {
+     "valor": 20.9258881377996,
+     "anio": 2025
+    },
+    "MEX": {
+     "valor": 25.3099549208398,
+     "anio": 2025
+    },
+    "URY": {
+     "valor": 24.3650488598959,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 42.9606092259457,
+     "anio": 2025
+    },
+    "HUN": {
+     "valor": 7.82939017142129,
+     "anio": 2025
+    },
+    "ESP": {
+     "valor": 10.0734513788099,
+     "anio": 2025
+    },
+    "POL": {
+     "valor": 14.978771000446,
+     "anio": 2025
+    },
+    "TUR": {
+     "valor": 23.9069908746299,
+     "anio": 2025
+    },
+    "KOR": {
+     "valor": 17.6868314198239,
+     "anio": 2025
+    },
+    "WLD": {
+     "valor": 42.3766387750589,
+     "anio": 2025
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2025",
+    "datos": 26,
+    "ultimo": 22.2688789059329,
+    "peor": {
+     "valor": 24.0669497937937,
+     "periodo": "2020"
+    },
+    "mejor": {
+     "valor": 18.6211188839315,
+     "periodo": "2011"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 9
+   },
+   "paises": {
+    "AFG": [
+     81.77,
+     2025
+    ],
+    "ALB": [
+     46.032,
+     2025
+    ],
+    "DZA": [
+     25.556,
+     2025
+    ],
+    "AGO": [
+     66.267,
+     2025
+    ],
+    "ARG": [
+     22.269,
+     2025
+    ],
+    "ARM": [
+     32.848,
+     2025
+    ],
+    "AUS": [
+     9.125,
+     2025
+    ],
+    "AUT": [
+     7.852,
+     2025
+    ],
+    "AZE": [
+     53.841,
+     2025
+    ],
+    "BHS": [
+     15.943,
+     2025
+    ],
+    "BHR": [
+     0.749,
+     2025
+    ],
+    "BGD": [
+     57.348,
+     2025
+    ],
+    "BRB": [
+     18.802,
+     2025
+    ],
+    "BLR": [
+     6.327,
+     2025
+    ],
+    "BEL": [
+     11.036,
+     2025
+    ],
+    "BLZ": [
+     29.842,
+     2025
+    ],
+    "BEN": [
+     78.529,
+     2025
+    ],
+    "BTN": [
+     69.029,
+     2025
+    ],
+    "BOL": [
+     62.69,
+     2025
+    ],
+    "BIH": [
+     18.11,
+     2025
+    ],
+    "BWA": [
+     25.61,
+     2025
+    ],
+    "BRA": [
+     26.085,
+     2025
+    ],
+    "BRN": [
+     4.478,
+     2025
+    ],
+    "BGR": [
+     6.922,
+     2025
+    ],
+    "BFA": [
+     80.555,
+     2025
+    ],
+    "BDI": [
+     83.664,
+     2025
+    ],
+    "CPV": [
+     34.257,
+     2025
+    ],
+    "KHM": [
+     52.321,
+     2025
+    ],
+    "CMR": [
+     67.559,
+     2025
+    ],
+    "CAN": [
+     9.555,
+     2025
+    ],
+    "CAF": [
+     79.422,
+     2025
+    ],
+    "TCD": [
+     90.224,
+     2025
+    ],
+    "CHI": [
+     4.173,
+     2025
+    ],
+    "CHL": [
+     20.926,
+     2025
+    ],
+    "CHN": [
+     33.399,
+     2025
+    ],
+    "COL": [
+     42.961,
+     2025
+    ],
+    "COM": [
+     56.845,
+     2025
+    ],
+    "COD": [
+     81.514,
+     2025
+    ],
+    "COG": [
+     75.894,
+     2025
+    ],
+    "CRI": [
+     23.362,
+     2025
+    ],
+    "CIV": [
+     69.431,
+     2025
+    ],
+    "HRV": [
+     6.346,
+     2025
+    ],
+    "CUB": [
+     19.322,
+     2025
+    ],
+    "CYP": [
+     8.383,
+     2025
+    ],
+    "CZE": [
+     13.499,
+     2025
+    ],
+    "DNK": [
+     5.395,
+     2025
+    ],
+    "DJI": [
+     30.289,
+     2025
+    ],
+    "DOM": [
+     37.994,
+     2025
+    ],
+    "ECU": [
+     50.118,
+     2025
+    ],
+    "EGY": [
+     23.944,
+     2025
+    ],
+    "SLV": [
+     30.823,
+     2025
+    ],
+    "GNQ": [
+     23.082,
+     2025
+    ],
+    "ERI": [
+     47.893,
+     2025
+    ],
+    "EST": [
+     7.093,
+     2025
+    ],
+    "SWZ": [
+     28.377,
+     2025
+    ],
+    "ETH": [
+     84.147,
+     2025
+    ],
+    "FJI": [
+     32.787,
+     2025
+    ],
+    "FIN": [
+     9.462,
+     2025
+    ],
+    "FRA": [
+     8.499,
+     2025
+    ],
+    "PYF": [
+     14.781,
+     2025
+    ],
+    "GAB": [
+     29.805,
+     2025
+    ],
+    "GMB": [
+     63.509,
+     2025
+    ],
+    "GEO": [
+     42.406,
+     2025
+    ],
+    "DEU": [
+     4.344,
+     2025
+    ],
+    "GHA": [
+     59.96,
+     2025
+    ],
+    "GRC": [
+     23.062,
+     2025
+    ],
+    "GUM": [
+     11.752,
+     2025
+    ],
+    "GTM": [
+     36.161,
+     2025
+    ],
+    "GIN": [
+     79.169,
+     2025
+    ],
+    "GNB": [
+     74.944,
+     2025
+    ],
+    "GUY": [
+     25.339,
+     2025
+    ],
+    "HTI": [
+     76.036,
+     2025
+    ],
+    "HND": [
+     33.868,
+     2025
+    ],
+    "HKG": [
+     5.761,
+     2025
+    ],
+    "HUN": [
+     7.829,
+     2025
+    ],
+    "ISL": [
+     8.397,
+     2025
+    ],
+    "IND": [
+     71.584,
+     2025
+    ],
+    "IDN": [
+     49.956,
+     2025
+    ],
+    "IRN": [
+     39.523,
+     2025
+    ],
+    "IRQ": [
+     27.141,
+     2025
+    ],
+    "IRL": [
+     9.638,
+     2025
+    ],
+    "ISR": [
+     7.701,
+     2025
+    ],
+    "ITA": [
+     14.35,
+     2025
+    ],
+    "JAM": [
+     31.556,
+     2025
+    ],
+    "JPN": [
+     7.487,
+     2025
+    ],
+    "JOR": [
+     7.857,
+     2025
+    ],
+    "KAZ": [
+     24.789,
+     2025
+    ],
+    "KEN": [
+     63.826,
+     2025
+    ],
+    "PRK": [
+     56.766,
+     2025
+    ],
+    "KOR": [
+     17.687,
+     2025
+    ],
+    "KWT": [
+     2.403,
+     2025
+    ],
+    "KGZ": [
+     28.967,
+     2025
+    ],
+    "LAO": [
+     76.38,
+     2025
+    ],
+    "LVA": [
+     8.615,
+     2025
+    ],
+    "LBN": [
+     19.394,
+     2023
+    ],
+    "LSO": [
+     32.639,
+     2025
+    ],
+    "LBR": [
+     76.851,
+     2025
+    ],
+    "LBY": [
+     21.594,
+     2025
+    ],
+    "LTU": [
+     10.356,
+     2025
+    ],
+    "LUX": [
+     6.948,
+     2025
+    ],
+    "MAC": [
+     3.326,
+     2025
+    ],
+    "MDG": [
+     84.415,
+     2025
+    ],
+    "MWI": [
+     59.907,
+     2025
+    ],
+    "MYS": [
+     21.887,
+     2025
+    ],
+    "MDV": [
+     16.907,
+     2025
+    ],
+    "MLI": [
+     75.76,
+     2025
+    ],
+    "MLT": [
+     10.073,
+     2025
+    ],
+    "MRT": [
+     53.349,
+     2025
+    ],
+    "MUS": [
+     14.88,
+     2025
+    ],
+    "MEX": [
+     25.31,
+     2025
+    ],
+    "MDA": [
+     58.619,
+     2025
+    ],
+    "MNG": [
+     38.37,
+     2025
+    ],
+    "MNE": [
+     14.281,
+     2025
+    ],
+    "MAR": [
+     35.537,
+     2025
+    ],
+    "MOZ": [
+     83.685,
+     2025
+    ],
+    "MMR": [
+     62.891,
+     2025
+    ],
+    "NAM": [
+     29.936,
+     2025
+    ],
+    "NPL": [
+     76.978,
+     2025
+    ],
+    "NLD": [
+     13.424,
+     2025
+    ],
+    "NCL": [
+     14.161,
+     2025
+    ],
+    "NZL": [
+     12.574,
+     2025
+    ],
+    "NIC": [
+     38.865,
+     2025
+    ],
+    "NER": [
+     83.73,
+     2025
+    ],
+    "NGA": [
+     66.479,
+     2025
+    ],
+    "MKD": [
+     12.336,
+     2025
+    ],
+    "NOR": [
+     4.166,
+     2025
+    ],
+    "OMN": [
+     3.813,
+     2025
+    ],
+    "PAK": [
+     55.513,
+     2025
+    ],
+    "PAN": [
+     37.873,
+     2025
+    ],
+    "PNG": [
+     71.155,
+     2025
+    ],
+    "PRY": [
+     36.086,
+     2025
+    ],
+    "PER": [
+     47.514,
+     2025
+    ],
+    "PHL": [
+     33.622,
+     2025
+    ],
+    "POL": [
+     14.979,
+     2025
+    ],
+    "PRT": [
+     9.657,
+     2025
+    ],
+    "PRI": [
+     10.311,
+     2025
+    ],
+    "QAT": [
+     0.456,
+     2025
+    ],
+    "ROU": [
+     13.046,
+     2025
+    ],
+    "RUS": [
+     4.931,
+     2025
+    ],
+    "RWA": [
+     39.356,
+     2025
+    ],
+    "WSM": [
+     41.643,
+     2025
+    ],
+    "STP": [
+     34.99,
+     2025
+    ],
+    "SAU": [
+     1.662,
+     2025
+    ],
+    "SEN": [
+     62.982,
+     2025
+    ],
+    "SRB": [
+     23.894,
+     2025
+    ],
+    "SLE": [
+     86.038,
+     2025
+    ],
+    "SGP": [
+     9.296,
+     2025
+    ],
+    "SVK": [
+     11.76,
+     2025
+    ],
+    "SVN": [
+     10.605,
+     2025
+    ],
+    "SLB": [
+     68.653,
+     2025
+    ],
+    "SOM": [
+     45.973,
+     2025
+    ],
+    "ZAF": [
+     11.662,
+     2025
+    ],
+    "SSD": [
+     80.263,
+     2023
+    ],
+    "ESP": [
+     10.073,
+     2025
+    ],
+    "LKA": [
+     39.244,
+     2025
+    ],
+    "LCA": [
+     21.987,
+     2025
+    ],
+    "VCT": [
+     21.961,
+     2025
+    ],
+    "SUR": [
+     18.376,
+     2025
+    ],
+    "SWE": [
+     6.874,
+     2025
+    ],
+    "CHE": [
+     9.597,
+     2025
+    ],
+    "SYR": [
+     38.864,
+     2025
+    ],
+    "TJK": [
+     27.978,
+     2025
+    ],
+    "TZA": [
+     83.654,
+     2025
+    ],
+    "THA": [
+     47.983,
+     2025
+    ],
+    "TLS": [
+     58.631,
+     2025
+    ],
+    "TGO": [
+     75.028,
+     2025
+    ],
+    "TON": [
+     33.696,
+     2025
+    ],
+    "TTO": [
+     21.248,
+     2025
+    ],
+    "TUN": [
+     17.941,
+     2025
+    ],
+    "TUR": [
+     23.907,
+     2025
+    ],
+    "TKM": [
+     28.274,
+     2025
+    ],
+    "UGA": [
+     74.393,
+     2025
+    ],
+    "ARE": [
+     1.501,
+     2025
+    ],
+    "GBR": [
+     11.532,
+     2025
+    ],
+    "USA": [
+     3.81,
+     2025
+    ],
+    "URY": [
+     24.365,
+     2025
+    ],
+    "UZB": [
+     33.315,
+     2025
+    ],
+    "VUT": [
+     57.991,
+     2025
+    ],
+    "VEN": [
+     37.298,
+     2025
+    ],
+    "VNM": [
+     51.397,
+     2025
+    ],
+    "VIR": [
+     5.474,
+     2025
+    ],
+    "YEM": [
+     45.59,
+     2025
+    ],
+    "ZMB": [
+     70.169,
+     2025
+    ],
+    "ZWE": [
+     68.214,
+     2025
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 21.9748899685516
+    },
+    {
+     "periodo": "2001",
+     "valor": 22.9126921231873
+    },
+    {
+     "periodo": "2002",
+     "valor": 23.70466457638
+    },
+    {
+     "periodo": "2003",
+     "valor": 21.7001661163026
+    },
+    {
+     "periodo": "2004",
+     "valor": 21.6028718502752
+    },
+    {
+     "periodo": "2005",
+     "valor": 21.2797063654732
+    },
+    {
+     "periodo": "2006",
+     "valor": 20.2573051041667
+    },
+    {
+     "periodo": "2007",
+     "valor": 19.178244400597
+    },
+    {
+     "periodo": "2008",
+     "valor": 19.1016841857864
+    },
+    {
+     "periodo": "2009",
+     "valor": 19.5906993047639
+    },
+    {
+     "periodo": "2010",
+     "valor": 19.0490238114851
+    },
+    {
+     "periodo": "2011",
+     "valor": 18.6211188839315
+    },
+    {
+     "periodo": "2012",
+     "valor": 19.0299608764648
+    },
+    {
+     "periodo": "2013",
+     "valor": 19.6857850931616
+    },
+    {
+     "periodo": "2014",
+     "valor": 20.1779734655309
+    },
+    {
+     "periodo": "2015",
+     "valor": 20.604372046677
+    },
+    {
+     "periodo": "2016",
+     "valor": 21.0846506714366
+    },
+    {
+     "periodo": "2017",
+     "valor": 21.505941986483
+    },
+    {
+     "periodo": "2018",
+     "valor": 21.6175577222417
+    },
+    {
+     "periodo": "2019",
+     "valor": 22.7149996003683
+    },
+    {
+     "periodo": "2020",
+     "valor": 24.0669497937937
+    },
+    {
+     "periodo": "2021",
+     "valor": 24.0189803057016
+    },
+    {
+     "periodo": "2022",
+     "valor": 23.2797968408073
+    },
+    {
+     "periodo": "2023",
+     "valor": 22.4431470253428
+    },
+    {
+     "periodo": "2024",
+     "valor": 22.4231386348518
+    },
+    {
+     "periodo": "2025",
+     "valor": 22.2688789059329
+    }
+   ]
+  },
+  {
    "clave": "productividad",
    "area": "empleo",
    "nombre": "Productividad: PIB por persona ocupada",
@@ -20312,6 +22218,7 @@
    "codigo": "SL.GDP.PCAP.EM.KD",
    "organismo": "Banco Mundial (estimación modelada de la OIT)",
    "url": "https://datos.bancomundial.org/indicador/SL.GDP.PCAP.EM.KD",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 66,
    "total": 172,
@@ -21205,6 +23112,7 @@
    "codigo": "NY.GDP.PCAP.KD.ZG",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NY.GDP.PCAP.KD.ZG",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 48,
    "total": 204,
@@ -22226,6 +24134,7 @@
    "codigo": "NE.GDI.TOTL.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NE.GDI.TOTL.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 149,
    "total": 174,
@@ -23127,6 +25036,7 @@
    "codigo": "NY.GNS.ICTR.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NY.GNS.ICTR.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 129,
    "total": 158,
@@ -23955,6 +25865,1376 @@
    ]
   },
   {
+   "clave": "tasa_prestamo",
+   "area": "macro",
+   "nombre": "Tasa de interés de los préstamos",
+   "unidad": "% anual",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "FR.INR.LEND",
+   "organismo": "Banco Mundial (con datos del FMI)",
+   "url": "https://datos.bancomundial.org/indicador/FR.INR.LEND",
+   "nota": null,
+   "anioReferencia": 2025,
+   "puesto": 92,
+   "total": 94,
+   "percentil": 2.2,
+   "valor": 46.0191666666666,
+   "anio": 2025,
+   "mediana": 8.992632607861449,
+   "lectura": "entre los peores del mundo",
+   "mundo": null,
+   "mejorPais": {
+    "pais": "NZL",
+    "valor": 0,
+    "anio": 2025,
+    "nombre": "Nueva Zelandia"
+   },
+   "peorPais": {
+    "pais": "MDG",
+    "valor": 60,
+    "anio": 2025,
+    "nombre": "Madagascar"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 45.3333333333333,
+     "anio": 2025
+    },
+    "CHL": null,
+    "MEX": {
+     "valor": 8.78583333333333,
+     "anio": 2025
+    },
+    "URY": {
+     "valor": 10.0619986594372,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 14.3114389316572,
+     "anio": 2025
+    },
+    "HUN": {
+     "valor": 8.01151582250833,
+     "anio": 2025
+    },
+    "ESP": null,
+    "POL": null,
+    "TUR": null,
+    "KOR": {
+     "valor": 4.1925,
+     "anio": 2025
+    },
+    "WLD": null
+   },
+   "historia": {
+    "desde": "2010",
+    "hasta": "2025",
+    "datos": 16,
+    "ultimo": 46.0191666666666,
+    "peor": {
+     "valor": 95.8941666666666,
+     "periodo": "2023"
+    },
+    "mejor": {
+     "valor": 10.5575,
+     "periodo": "2010"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 6
+   },
+   "paises": {
+    "ALB": [
+     6.443,
+     2024
+    ],
+    "DZA": [
+     8,
+     2025
+    ],
+    "AGO": [
+     19.372,
+     2025
+    ],
+    "ATG": [
+     6.389,
+     2025
+    ],
+    "ARG": [
+     46.019,
+     2025
+    ],
+    "ARM": [
+     13.783,
+     2025
+    ],
+    "ABW": [
+     5.8,
+     2023
+    ],
+    "AZE": [
+     15.336,
+     2025
+    ],
+    "BHS": [
+     4.25,
+     2025
+    ],
+    "BGD": [
+     8.623,
+     2025
+    ],
+    "BLR": [
+     10.945,
+     2025
+    ],
+    "BLZ": [
+     8.478,
+     2025
+    ],
+    "BTN": [
+     11.757,
+     2025
+    ],
+    "BOL": [
+     10.187,
+     2025
+    ],
+    "BIH": [
+     4.096,
+     2025
+    ],
+    "BWA": [
+     6.26,
+     2024
+    ],
+    "BRA": [
+     45.333,
+     2025
+    ],
+    "BRN": [
+     5.5,
+     2025
+    ],
+    "BGR": [
+     4.236,
+     2025
+    ],
+    "BDI": [
+     12.374,
+     2025
+    ],
+    "CPV": [
+     7.747,
+     2025
+    ],
+    "CHN": [
+     4.35,
+     2024
+    ],
+    "COL": [
+     14.311,
+     2025
+    ],
+    "COD": [
+     24.106,
+     2025
+    ],
+    "CRI": [
+     6.878,
+     2025
+    ],
+    "CZE": [
+     4.668,
+     2025
+    ],
+    "DMA": [
+     5.773,
+     2025
+    ],
+    "DOM": [
+     15.253,
+     2024
+    ],
+    "EGY": [
+     24.292,
+     2024
+    ],
+    "SWZ": [
+     10.875,
+     2024
+    ],
+    "FJI": [
+     4.564,
+     2024
+    ],
+    "GMB": [
+     22,
+     2025
+    ],
+    "GEO": [
+     15.912,
+     2025
+    ],
+    "GRD": [
+     6.861,
+     2025
+    ],
+    "GTM": [
+     12.853,
+     2025
+    ],
+    "GUY": [
+     8.233,
+     2025
+    ],
+    "HTI": [
+     13.008,
+     2025
+    ],
+    "HND": [
+     18.584,
+     2025
+    ],
+    "HKG": [
+     5.177,
+     2025
+    ],
+    "HUN": [
+     8.012,
+     2025
+    ],
+    "ISL": [
+     11.008,
+     2025
+    ],
+    "IDN": [
+     8.502,
+     2025
+    ],
+    "ITA": [
+     4.892,
+     2023
+    ],
+    "JAM": [
+     12.141,
+     2025
+    ],
+    "JOR": [
+     8.096,
+     2025
+    ],
+    "KEN": [
+     16.593,
+     2024
+    ],
+    "KOR": [
+     4.192,
+     2025
+    ],
+    "KWT": [
+     5.031,
+     2025
+    ],
+    "KGZ": [
+     19.784,
+     2024
+    ],
+    "LSO": [
+     11.208,
+     2024
+    ],
+    "LBR": [
+     12.994,
+     2025
+    ],
+    "MAC": [
+     5.451,
+     2025
+    ],
+    "MDG": [
+     60,
+     2025
+    ],
+    "MWI": [
+     37.064,
+     2024
+    ],
+    "MYS": [
+     4.825,
+     2025
+    ],
+    "MDV": [
+     11.632,
+     2025
+    ],
+    "MUS": [
+     9,
+     2025
+    ],
+    "MEX": [
+     8.786,
+     2025
+    ],
+    "MDA": [
+     8.985,
+     2025
+    ],
+    "MNE": [
+     6.318,
+     2025
+    ],
+    "MOZ": [
+     17.533,
+     2025
+    ],
+    "NAM": [
+     10.957,
+     2024
+    ],
+    "NZL": [
+     0,
+     2025
+    ],
+    "NIC": [
+     9.156,
+     2025
+    ],
+    "NGA": [
+     18.454,
+     2025
+    ],
+    "MKD": [
+     5.416,
+     2025
+    ],
+    "NOR": [
+     5.878,
+     2025
+    ],
+    "PNG": [
+     8.29,
+     2024
+    ],
+    "QAT": [
+     4.754,
+     2025
+    ],
+    "ROU": [
+     8.522,
+     2025
+    ],
+    "RUS": [
+     17.093,
+     2024
+    ],
+    "RWA": [
+     16.017,
+     2024
+    ],
+    "WSM": [
+     8.386,
+     2025
+    ],
+    "SMR": [
+     4.616,
+     2025
+    ],
+    "STP": [
+     17.744,
+     2025
+    ],
+    "SYC": [
+     9.852,
+     2025
+    ],
+    "SLE": [
+     21.435,
+     2025
+    ],
+    "ZAF": [
+     10.688,
+     2025
+    ],
+    "SSD": [
+     14.292,
+     2025
+    ],
+    "KNA": [
+     6.524,
+     2025
+    ],
+    "LCA": [
+     6.251,
+     2025
+    ],
+    "VCT": [
+     7.059,
+     2025
+    ],
+    "SUR": [
+     14.496,
+     2025
+    ],
+    "CHE": [
+     2.822,
+     2025
+    ],
+    "THA": [
+     4.987,
+     2025
+    ],
+    "TLS": [
+     10.415,
+     2025
+    ],
+    "TON": [
+     7.565,
+     2025
+    ],
+    "TTO": [
+     7.5,
+     2025
+    ],
+    "UKR": [
+     19.7,
+     2025
+    ],
+    "URY": [
+     10.062,
+     2025
+    ],
+    "UZB": [
+     23.134,
+     2024
+    ],
+    "VUT": [
+     8.449,
+     2025
+    ],
+    "VNM": [
+     9.323,
+     2023
+    ],
+    "ZWE": [
+     46.363,
+     2025
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2010",
+     "valor": 10.5575
+    },
+    {
+     "periodo": "2011",
+     "valor": 14.0875
+    },
+    {
+     "periodo": "2012",
+     "valor": 14.0608333333333
+    },
+    {
+     "periodo": "2013",
+     "valor": 17.1491666666666
+    },
+    {
+     "periodo": "2014",
+     "valor": 24.0091666666666
+    },
+    {
+     "periodo": "2015",
+     "valor": 24.9158333333333
+    },
+    {
+     "periodo": "2016",
+     "valor": 31.2325
+    },
+    {
+     "periodo": "2017",
+     "valor": 26.5808333333333
+    },
+    {
+     "periodo": "2018",
+     "valor": 48.5166666666666
+    },
+    {
+     "periodo": "2019",
+     "valor": 67.2541666666666
+    },
+    {
+     "periodo": "2020",
+     "valor": 29.3875
+    },
+    {
+     "periodo": "2021",
+     "valor": 35.5583333333333
+    },
+    {
+     "periodo": "2022",
+     "valor": 52.3991666666666
+    },
+    {
+     "periodo": "2023",
+     "valor": 95.8941666666666
+    },
+    {
+     "periodo": "2024",
+     "valor": 61.7066666666666
+    },
+    {
+     "periodo": "2025",
+     "valor": 46.0191666666666
+    }
+   ]
+  },
+  {
+   "clave": "reservas",
+   "area": "macro",
+   "nombre": "Reservas internacionales",
+   "unidad": "meses de importaciones",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "FI.RES.TOTL.MO",
+   "organismo": "Banco Mundial",
+   "url": "https://datos.bancomundial.org/indicador/FI.RES.TOTL.MO",
+   "nota": null,
+   "anioReferencia": 2025,
+   "puesto": 88,
+   "total": 160,
+   "percentil": 45.3,
+   "valor": 4.02597376292894,
+   "anio": 2025,
+   "mediana": 4.374390665881025,
+   "lectura": "en la mitad de la tabla",
+   "mundo": {
+    "valor": 8.61837024365403,
+    "anio": 2025
+   },
+   "mejorPais": {
+    "pais": "LBY",
+    "valor": 31.5696640862316,
+    "anio": 2023,
+    "nombre": "Libia"
+   },
+   "peorPais": {
+    "pais": "LUX",
+    "valor": 0.0615530116784497,
+    "anio": 2025,
+    "nombre": "Luxemburgo"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 8.4209144130353,
+     "anio": 2025
+    },
+    "CHL": {
+     "valor": 4.21740649827425,
+     "anio": 2025
+    },
+    "MEX": {
+     "valor": 3.73015745906868,
+     "anio": 2025
+    },
+    "URY": {
+     "valor": 8.63386267643164,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 7.26846617199358,
+     "anio": 2025
+    },
+    "HUN": {
+     "valor": 3.49530681990442,
+     "anio": 2025
+    },
+    "ESP": {
+     "valor": 2.01598427434474,
+     "anio": 2025
+    },
+    "POL": {
+     "valor": 5.86142823595696,
+     "anio": 2025
+    },
+    "TUR": {
+     "valor": 5.127654800312,
+     "anio": 2025
+    },
+    "KOR": {
+     "valor": 6.46273036949367,
+     "anio": 2025
+    },
+    "WLD": {
+     "valor": 8.61837024365403,
+     "anio": 2025
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2025",
+    "datos": 26,
+    "ultimo": 4.02597376292894,
+    "peor": {
+     "valor": 2.42404663750926,
+     "periodo": "2023"
+    },
+    "mejor": {
+     "valor": 9.06749992875245,
+     "periodo": "2009"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 6
+   },
+   "paises": {
+    "ALB": [
+     7.208,
+     2025
+    ],
+    "DZA": [
+     11.633,
+     2025
+    ],
+    "AGO": [
+     5.292,
+     2025
+    ],
+    "ATG": [
+     3.004,
+     2025
+    ],
+    "ARG": [
+     4.026,
+     2025
+    ],
+    "ARM": [
+     3.321,
+     2025
+    ],
+    "ABW": [
+     5.824,
+     2023
+    ],
+    "AUS": [
+     1.583,
+     2025
+    ],
+    "AUT": [
+     1.8,
+     2025
+    ],
+    "AZE": [
+     4.954,
+     2025
+    ],
+    "BHS": [
+     3.953,
+     2024
+    ],
+    "BHR": [
+     1.436,
+     2025
+    ],
+    "BGD": [
+     3.912,
+     2025
+    ],
+    "BLR": [
+     3.03,
+     2025
+    ],
+    "BEL": [
+     1.027,
+     2025
+    ],
+    "BLZ": [
+     3.492,
+     2025
+    ],
+    "BTN": [
+     6.615,
+     2024
+    ],
+    "BOL": [
+     0.514,
+     2025
+    ],
+    "BIH": [
+     6.473,
+     2024
+    ],
+    "BWA": [
+     4.71,
+     2024
+    ],
+    "BRA": [
+     8.421,
+     2025
+    ],
+    "BRN": [
+     7.906,
+     2025
+    ],
+    "BGR": [
+     7.158,
+     2025
+    ],
+    "BDI": [
+     0.734,
+     2023
+    ],
+    "CPV": [
+     8.69,
+     2025
+    ],
+    "KHM": [
+     7.914,
+     2025
+    ],
+    "CMR": [
+     5.275,
+     2024
+    ],
+    "CAN": [
+     1.596,
+     2025
+    ],
+    "CYM": [
+     0.265,
+     2024
+    ],
+    "CHL": [
+     4.217,
+     2025
+    ],
+    "CHN": [
+     11.943,
+     2025
+    ],
+    "COL": [
+     7.268,
+     2025
+    ],
+    "COM": [
+     7.611,
+     2023
+    ],
+    "COD": [
+     1.69,
+     2023
+    ],
+    "CRI": [
+     4.66,
+     2025
+    ],
+    "HRV": [
+     0.788,
+     2025
+    ],
+    "CYP": [
+     0.532,
+     2025
+    ],
+    "CZE": [
+     7.644,
+     2025
+    ],
+    "DNK": [
+     4.884,
+     2025
+    ],
+    "DJI": [
+     0.85,
+     2024
+    ],
+    "DMA": [
+     3.865,
+     2025
+    ],
+    "DOM": [
+     3.973,
+     2025
+    ],
+    "ECU": [
+     2.839,
+     2025
+    ],
+    "EGY": [
+     4.36,
+     2025
+    ],
+    "SLV": [
+     2.448,
+     2025
+    ],
+    "EST": [
+     0.726,
+     2025
+    ],
+    "SWZ": [
+     1.909,
+     2024
+    ],
+    "ETH": [
+     1.781,
+     2024
+    ],
+    "FJI": [
+     4.441,
+     2024
+    ],
+    "FIN": [
+     1.642,
+     2025
+    ],
+    "FRA": [
+     3.42,
+     2025
+    ],
+    "GMB": [
+     4.79,
+     2024
+    ],
+    "GEO": [
+     3.017,
+     2025
+    ],
+    "DEU": [
+     3.106,
+     2025
+    ],
+    "GHA": [
+     3.832,
+     2025
+    ],
+    "GRC": [
+     2.039,
+     2025
+    ],
+    "GRD": [
+     4.356,
+     2025
+    ],
+    "GTM": [
+     9.256,
+     2025
+    ],
+    "GIN": [
+     1.277,
+     2024
+    ],
+    "GUY": [
+     0.85,
+     2023
+    ],
+    "HTI": [
+     6.769,
+     2024
+    ],
+    "HND": [
+     5.304,
+     2025
+    ],
+    "HKG": [
+     5.688,
+     2023
+    ],
+    "HUN": [
+     3.495,
+     2025
+    ],
+    "ISL": [
+     5.302,
+     2025
+    ],
+    "IND": [
+     7.851,
+     2025
+    ],
+    "IDN": [
+     5.514,
+     2025
+    ],
+    "IRQ": [
+     11.6,
+     2025
+    ],
+    "IRL": [
+     0.13,
+     2025
+    ],
+    "ISR": [
+     14.361,
+     2025
+    ],
+    "ITA": [
+     5.67,
+     2025
+    ],
+    "JAM": [
+     7.105,
+     2025
+    ],
+    "JPN": [
+     14.009,
+     2025
+    ],
+    "JOR": [
+     7.793,
+     2024
+    ],
+    "KAZ": [
+     7.386,
+     2025
+    ],
+    "KEN": [
+     4.632,
+     2025
+    ],
+    "KOR": [
+     6.463,
+     2025
+    ],
+    "XKX": [
+     1.817,
+     2025
+    ],
+    "KWT": [
+     8.406,
+     2025
+    ],
+    "KGZ": [
+     3.949,
+     2024
+    ],
+    "LAO": [
+     3.427,
+     2025
+    ],
+    "LVA": [
+     2.009,
+     2025
+    ],
+    "LBN": [
+     13.603,
+     2023
+    ],
+    "LSO": [
+     5.533,
+     2024
+    ],
+    "LBR": [
+     2.016,
+     2024
+    ],
+    "LBY": [
+     31.57,
+     2023
+    ],
+    "LTU": [
+     1.173,
+     2025
+    ],
+    "LUX": [
+     0.062,
+     2025
+    ],
+    "MAC": [
+     10.063,
+     2025
+    ],
+    "MDG": [
+     5.546,
+     2024
+    ],
+    "MYS": [
+     4.276,
+     2025
+    ],
+    "MDV": [
+     1.934,
+     2025
+    ],
+    "MLT": [
+     0.246,
+     2024
+    ],
+    "MUS": [
+     5.161,
+     2024
+    ],
+    "MEX": [
+     3.73,
+     2025
+    ],
+    "MDA": [
+     5.397,
+     2025
+    ],
+    "MNG": [
+     4.151,
+     2025
+    ],
+    "MNE": [
+     3.947,
+     2025
+    ],
+    "MAR": [
+     5.927,
+     2025
+    ],
+    "MOZ": [
+     3.44,
+     2024
+    ],
+    "NAM": [
+     3.958,
+     2024
+    ],
+    "NPL": [
+     15.519,
+     2025
+    ],
+    "NLD": [
+     1.007,
+     2025
+    ],
+    "NZL": [
+     3.909,
+     2025
+    ],
+    "NIC": [
+     5.722,
+     2024
+    ],
+    "NGA": [
+     7.118,
+     2025
+    ],
+    "MKD": [
+     4.566,
+     2025
+    ],
+    "NOR": [
+     4.361,
+     2025
+    ],
+    "OMN": [
+     3.744,
+     2024
+    ],
+    "PAK": [
+     3.755,
+     2025
+    ],
+    "PAN": [
+     1.743,
+     2025
+    ],
+    "PNG": [
+     4.9,
+     2024
+    ],
+    "PRY": [
+     5.551,
+     2024
+    ],
+    "PER": [
+     10.423,
+     2025
+    ],
+    "PHL": [
+     7.306,
+     2025
+    ],
+    "POL": [
+     5.861,
+     2025
+    ],
+    "PRT": [
+     4.727,
+     2025
+    ],
+    "QAT": [
+     7.453,
+     2025
+    ],
+    "ROU": [
+     5.528,
+     2025
+    ],
+    "RUS": [
+     16.782,
+     2024
+    ],
+    "RWA": [
+     4.185,
+     2024
+    ],
+    "WSM": [
+     12.367,
+     2025
+    ],
+    "SMR": [
+     2.585,
+     2024
+    ],
+    "STP": [
+     2.715,
+     2024
+    ],
+    "SAU": [
+     15.595,
+     2025
+    ],
+    "SRB": [
+     6.161,
+     2025
+    ],
+    "SYC": [
+     3.667,
+     2024
+    ],
+    "SLE": [
+     1.75,
+     2024
+    ],
+    "SGP": [
+     4.388,
+     2025
+    ],
+    "SVK": [
+     1.545,
+     2025
+    ],
+    "SVN": [
+     0.678,
+     2025
+    ],
+    "SLB": [
+     8.904,
+     2024
+    ],
+    "ZAF": [
+     6.225,
+     2025
+    ],
+    "SSD": [
+     0.175,
+     2023
+    ],
+    "ESP": [
+     2.016,
+     2025
+    ],
+    "LKA": [
+     2.865,
+     2024
+    ],
+    "KNA": [
+     4.443,
+     2025
+    ],
+    "LCA": [
+     2.989,
+     2025
+    ],
+    "VCT": [
+     4.746,
+     2025
+    ],
+    "SUR": [
+     3.285,
+     2025
+    ],
+    "SWE": [
+     2.16,
+     2025
+    ],
+    "CHE": [
+     13.067,
+     2025
+    ],
+    "TJK": [
+     5.749,
+     2025
+    ],
+    "THA": [
+     8.051,
+     2025
+    ],
+    "TLS": [
+     5.757,
+     2025
+    ],
+    "TON": [
+     10.978,
+     2025
+    ],
+    "TTO": [
+     5.495,
+     2025
+    ],
+    "TUN": [
+     4.504,
+     2024
+    ],
+    "TUR": [
+     5.128,
+     2025
+    ],
+    "UGA": [
+     2.345,
+     2024
+    ],
+    "UKR": [
+     5.79,
+     2025
+    ],
+    "ARE": [
+     5.234,
+     2025
+    ],
+    "GBR": [
+     1.386,
+     2025
+    ],
+    "USA": [
+     2.799,
+     2025
+    ],
+    "URY": [
+     8.634,
+     2025
+    ],
+    "UZB": [
+     13.593,
+     2025
+    ],
+    "VNM": [
+     2.081,
+     2025
+    ],
+    "PSE": [
+     2.348,
+     2025
+    ],
+    "ZMB": [
+     3.293,
+     2024
+    ],
+    "ZWE": [
+     0.519,
+     2024
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 6.28322204626374
+    },
+    {
+     "periodo": "2001",
+     "valor": 4.29371406025342
+    },
+    {
+     "periodo": "2002",
+     "valor": 5.27543170673438
+    },
+    {
+     "periodo": "2003",
+     "valor": 5.70013745215415
+    },
+    {
+     "periodo": "2004",
+     "valor": 5.77837779911896
+    },
+    {
+     "periodo": "2005",
+     "valor": 7.26029776298213
+    },
+    {
+     "periodo": "2006",
+     "valor": 7.02897239370493
+    },
+    {
+     "periodo": "2007",
+     "valor": 8.17153428618646
+    },
+    {
+     "periodo": "2008",
+     "valor": 6.71425831138327
+    },
+    {
+     "periodo": "2009",
+     "valor": 9.06749992875245
+    },
+    {
+     "periodo": "2010",
+     "valor": 7.27697103967374
+    },
+    {
+     "periodo": "2011",
+     "valor": 5.20195157798821
+    },
+    {
+     "periodo": "2012",
+     "valor": 5.21829041219894
+    },
+    {
+     "periodo": "2013",
+     "valor": 3.46015205462157
+    },
+    {
+     "periodo": "2014",
+     "valor": 3.96299919336678
+    },
+    {
+     "periodo": "2015",
+     "valor": 3.36214425707702
+    },
+    {
+     "periodo": "2016",
+     "valor": 5.09719624487539
+    },
+    {
+     "periodo": "2017",
+     "valor": 6.0503876658256
+    },
+    {
+     "periodo": "2018",
+     "valor": 7.11111211150086
+    },
+    {
+     "periodo": "2019",
+     "valor": 5.94220121846315
+    },
+    {
+     "periodo": "2020",
+     "valor": 7.09405401009515
+    },
+    {
+     "periodo": "2021",
+     "valor": 5.6049034262494
+    },
+    {
+     "periodo": "2022",
+     "valor": 4.75930856415363
+    },
+    {
+     "periodo": "2023",
+     "valor": 2.42404663750926
+    },
+    {
+     "periodo": "2024",
+     "valor": 3.56051129086099
+    },
+    {
+     "periodo": "2025",
+     "valor": 4.02597376292894
+    }
+   ]
+  },
+  {
    "clave": "fmi_deuda",
    "area": "macro",
    "nombre": "Deuda pública bruta",
@@ -23964,6 +27244,7 @@
    "codigo": "GGXWDG_NGDP",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/GGXWDG_NGDP",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 146,
    "total": 189,
@@ -24951,6 +28232,7 @@
    "codigo": "PCPIPCH",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/PCPIPCH",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 187,
    "total": 192,
@@ -25914,6 +29196,7 @@
    "codigo": "NGDPDPC",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/NGDPDPC",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 74,
    "total": 192,
@@ -26961,6 +30244,7 @@
    "codigo": "BCA_NGDPD",
    "organismo": "FMI · Perspectivas de la Economía Mundial",
    "url": "https://www.imf.org/external/datamapper/BCA_NGDPD",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 93,
    "total": 191,
@@ -28004,6 +31288,7 @@
    "codigo": "NE.EXP.GNFS.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NE.EXP.GNFS.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 156,
    "total": 176,
@@ -28913,6 +32198,7 @@
    "codigo": "NE.TRD.GNFS.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/NE.TRD.GNFS.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 169,
    "total": 176,
@@ -29822,6 +33108,7 @@
    "codigo": "BX.KLT.DINV.WD.GD.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/BX.KLT.DINV.WD.GD.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 154,
    "total": 195,
@@ -30807,6 +34094,7 @@
    "codigo": "BN.CAB.XOKA.GD.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/BN.CAB.XOKA.GD.ZS",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 89,
    "total": 181,
@@ -31730,6 +35018,7 @@
    "codigo": "SI.POV.DDAY",
    "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad",
    "url": "https://datos.bancomundial.org/indicador/SI.POV.DDAY",
+   "nota": null,
    "anioReferencia": 2023,
    "puesto": 50,
    "total": 105,
@@ -32335,6 +35624,615 @@
    ]
   },
   {
+   "clave": "ingreso_top10",
+   "area": "desarrollo",
+   "nombre": "Parte del ingreso del 10% más rico",
+   "unidad": "% del ingreso",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SI.DST.10TH.10",
+   "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad",
+   "url": "https://datos.bancomundial.org/indicador/SI.DST.10TH.10",
+   "nota": null,
+   "anioReferencia": 2023,
+   "puesto": 85,
+   "total": 105,
+   "percentil": 19.2,
+   "valor": 31,
+   "anio": 2023,
+   "mediana": 26.3,
+   "lectura": "muy por debajo de la mayoría",
+   "mundo": null,
+   "mejorPais": {
+    "pais": "SVK",
+    "valor": 18.8,
+    "anio": 2023,
+    "nombre": "República Eslovaca"
+   },
+   "peorPais": {
+    "pais": "COL",
+    "valor": 43.1,
+    "anio": 2023,
+    "nombre": "Colombia"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 40.7,
+     "anio": 2023
+    },
+    "CHL": {
+     "valor": 34.6,
+     "anio": 2022
+    },
+    "MEX": {
+     "valor": 34.4,
+     "anio": 2022
+    },
+    "URY": {
+     "valor": 30.8,
+     "anio": 2023
+    },
+    "COL": {
+     "valor": 43.1,
+     "anio": 2023
+    },
+    "HUN": null,
+    "ESP": {
+     "valor": 24.5,
+     "anio": 2023
+    },
+    "POL": {
+     "valor": 22.9,
+     "anio": 2023
+    },
+    "TUR": {
+     "valor": 34.4,
+     "anio": 2023
+    },
+    "KOR": {
+     "valor": 25,
+     "anio": 2021
+    },
+    "WLD": null
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2024",
+    "datos": 24,
+    "ultimo": 31.2,
+    "peor": {
+     "valor": 40.5,
+     "periodo": "2002"
+    },
+    "mejor": {
+     "valor": 29.5,
+     "periodo": "2013"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 14
+   },
+   "paises": {
+    "ARG": [
+     31,
+     2023
+    ],
+    "ARM": [
+     22.9,
+     2023
+    ],
+    "AUT": [
+     24.8,
+     2023
+    ],
+    "BGD": [
+     25.5,
+     2022
+    ],
+    "BEL": [
+     22.2,
+     2023
+    ],
+    "BEN": [
+     27.2,
+     2021
+    ],
+    "BTN": [
+     22.7,
+     2022
+    ],
+    "BOL": [
+     31.3,
+     2023
+    ],
+    "BIH": [
+     23.6,
+     2021
+    ],
+    "BRA": [
+     40.7,
+     2023
+    ],
+    "BGR": [
+     31.1,
+     2023
+    ],
+    "BFA": [
+     30.2,
+     2021
+    ],
+    "CMR": [
+     31.1,
+     2021
+    ],
+    "CAN": [
+     24.6,
+     2022
+    ],
+    "CAF": [
+     33.1,
+     2021
+    ],
+    "TCD": [
+     29.5,
+     2022
+    ],
+    "CHL": [
+     34.6,
+     2022
+    ],
+    "CHN": [
+     28.4,
+     2022
+    ],
+    "COL": [
+     43.1,
+     2023
+    ],
+    "CRI": [
+     35.1,
+     2023
+    ],
+    "CIV": [
+     27.8,
+     2021
+    ],
+    "HRV": [
+     23.3,
+     2023
+    ],
+    "CYP": [
+     26.3,
+     2023
+    ],
+    "CZE": [
+     21.5,
+     2023
+    ],
+    "DNK": [
+     25.5,
+     2023
+    ],
+    "DOM": [
+     29.1,
+     2023
+    ],
+    "ECU": [
+     33.2,
+     2023
+    ],
+    "EGY": [
+     24.6,
+     2021
+    ],
+    "SLV": [
+     29.7,
+     2023
+    ],
+    "GNQ": [
+     29.1,
+     2022
+    ],
+    "EST": [
+     23.7,
+     2023
+    ],
+    "ETH": [
+     24.8,
+     2021
+    ],
+    "FIN": [
+     22.5,
+     2023
+    ],
+    "FRA": [
+     25,
+     2023
+    ],
+    "GEO": [
+     26.9,
+     2023
+    ],
+    "DEU": [
+     26.2,
+     2022
+    ],
+    "GRC": [
+     26,
+     2023
+    ],
+    "GTM": [
+     34.1,
+     2023
+    ],
+    "GNB": [
+     26.1,
+     2021
+    ],
+    "HND": [
+     33,
+     2023
+    ],
+    "IND": [
+     20.5,
+     2023
+    ],
+    "IDN": [
+     29.9,
+     2023
+    ],
+    "IRN": [
+     28.2,
+     2023
+    ],
+    "IRQ": [
+     24.2,
+     2023
+    ],
+    "IRL": [
+     24.1,
+     2023
+    ],
+    "ISR": [
+     27,
+     2022
+    ],
+    "ITA": [
+     25.8,
+     2023
+    ],
+    "JAM": [
+     29.6,
+     2021
+    ],
+    "KAZ": [
+     24.8,
+     2021
+    ],
+    "KEN": [
+     30.9,
+     2022
+    ],
+    "KIR": [
+     20.9,
+     2023
+    ],
+    "KOR": [
+     25,
+     2021
+    ],
+    "XKX": [
+     25.1,
+     2022
+    ],
+    "KGZ": [
+     23,
+     2023
+    ],
+    "LVA": [
+     26.2,
+     2023
+    ],
+    "LBN": [
+     25.6,
+     2022
+    ],
+    "LTU": [
+     27.3,
+     2023
+    ],
+    "LUX": [
+     25,
+     2023
+    ],
+    "MDG": [
+     29.6,
+     2021
+    ],
+    "MYS": [
+     30.9,
+     2021
+    ],
+    "MLI": [
+     28.3,
+     2021
+    ],
+    "MLT": [
+     24.7,
+     2023
+    ],
+    "MEX": [
+     34.4,
+     2022
+    ],
+    "MDA": [
+     22.8,
+     2023
+    ],
+    "MNG": [
+     24.6,
+     2022
+    ],
+    "MNE": [
+     24.7,
+     2021
+    ],
+    "MOZ": [
+     40.8,
+     2022
+    ],
+    "NPL": [
+     24.2,
+     2022
+    ],
+    "NLD": [
+     21.4,
+     2021
+    ],
+    "NER": [
+     27.8,
+     2021
+    ],
+    "NGA": [
+     26.3,
+     2022
+    ],
+    "NOR": [
+     21.6,
+     2023
+    ],
+    "PAN": [
+     36.9,
+     2023
+    ],
+    "PRY": [
+     34.3,
+     2023
+    ],
+    "PER": [
+     30.6,
+     2023
+    ],
+    "PHL": [
+     31.6,
+     2023
+    ],
+    "POL": [
+     22.9,
+     2023
+    ],
+    "PRT": [
+     26.9,
+     2023
+    ],
+    "ROU": [
+     21.8,
+     2023
+    ],
+    "RUS": [
+     25.1,
+     2023
+    ],
+    "RWA": [
+     33.4,
+     2023
+    ],
+    "SEN": [
+     28.8,
+     2021
+    ],
+    "SRB": [
+     24.7,
+     2023
+    ],
+    "SVK": [
+     18.8,
+     2023
+    ],
+    "SVN": [
+     20.6,
+     2023
+    ],
+    "ZAF": [
+     42.1,
+     2022
+    ],
+    "ESP": [
+     24.5,
+     2023
+    ],
+    "SUR": [
+     30.1,
+     2022
+    ],
+    "SWE": [
+     22.3,
+     2023
+    ],
+    "CHE": [
+     26.3,
+     2023
+    ],
+    "SYR": [
+     20.9,
+     2022
+    ],
+    "TJK": [
+     29.9,
+     2023
+    ],
+    "THA": [
+     26.1,
+     2023
+    ],
+    "TGO": [
+     29.6,
+     2021
+    ],
+    "TON": [
+     22,
+     2021
+    ],
+    "TUN": [
+     27,
+     2021
+    ],
+    "TUR": [
+     34.4,
+     2023
+    ],
+    "UGA": [
+     29.3,
+     2023
+    ],
+    "GBR": [
+     25,
+     2021
+    ],
+    "USA": [
+     30.9,
+     2023
+    ],
+    "URY": [
+     30.8,
+     2023
+    ],
+    "UZB": [
+     25.3,
+     2023
+    ],
+    "VNM": [
+     28.1,
+     2022
+    ],
+    "PSE": [
+     27.1,
+     2023
+    ],
+    "ZMB": [
+     39.1,
+     2022
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 37.7
+    },
+    {
+     "periodo": "2001",
+     "valor": 39.5
+    },
+    {
+     "periodo": "2002",
+     "valor": 40.5
+    },
+    {
+     "periodo": "2003",
+     "valor": 37.7
+    },
+    {
+     "periodo": "2004",
+     "valor": 35.3
+    },
+    {
+     "periodo": "2005",
+     "valor": 35
+    },
+    {
+     "periodo": "2006",
+     "valor": 33.8
+    },
+    {
+     "periodo": "2007",
+     "valor": 33.7
+    },
+    {
+     "periodo": "2008",
+     "valor": 32.5
+    },
+    {
+     "periodo": "2009",
+     "valor": 31.3
+    },
+    {
+     "periodo": "2010",
+     "valor": 31.8
+    },
+    {
+     "periodo": "2011",
+     "valor": 31
+    },
+    {
+     "periodo": "2012",
+     "valor": 29.8
+    },
+    {
+     "periodo": "2013",
+     "valor": 29.5
+    },
+    {
+     "periodo": "2014",
+     "valor": 30.1
+    },
+    {
+     "periodo": "2016",
+     "valor": 30.7
+    },
+    {
+     "periodo": "2017",
+     "valor": 30
+    },
+    {
+     "periodo": "2018",
+     "valor": 30.1
+    },
+    {
+     "periodo": "2019",
+     "valor": 31.3
+    },
+    {
+     "periodo": "2020",
+     "valor": 30.6
+    },
+    {
+     "periodo": "2021",
+     "valor": 31.2
+    },
+    {
+     "periodo": "2022",
+     "valor": 29.8
+    },
+    {
+     "periodo": "2023",
+     "valor": 31
+    },
+    {
+     "periodo": "2024",
+     "valor": 31.2
+    }
+   ]
+  },
+  {
    "clave": "mortalidad_infantil",
    "area": "desarrollo",
    "nombre": "Mortalidad infantil",
@@ -32344,6 +36242,7 @@
    "codigo": "SP.DYN.IMRT.IN",
    "organismo": "Banco Mundial (con datos de la ONU)",
    "url": "https://datos.bancomundial.org/indicador/SP.DYN.IMRT.IN",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 70,
    "total": 196,
@@ -33320,6 +37219,992 @@
    ]
   },
   {
+   "clave": "mortalidad_5",
+   "area": "desarrollo",
+   "nombre": "Mortalidad de menores de 5 años",
+   "unidad": "por cada 1.000 nacidos vivos",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SH.DYN.MORT",
+   "organismo": "Banco Mundial (con datos de la ONU)",
+   "url": "https://datos.bancomundial.org/indicador/SH.DYN.MORT",
+   "nota": null,
+   "anioReferencia": 2024,
+   "puesto": 70,
+   "total": 196,
+   "percentil": 64.1,
+   "valor": 9.5,
+   "anio": 2024,
+   "mediana": 14.95,
+   "lectura": "por encima de la mitad",
+   "mundo": {
+    "valor": 37.4,
+    "anio": 2024
+   },
+   "mejorPais": {
+    "pais": "SMR",
+    "valor": 1.3,
+    "anio": 2024,
+    "nombre": "San Marino"
+   },
+   "peorPais": {
+    "pais": "NGA",
+    "valor": 115.6,
+    "anio": 2024,
+    "nombre": "Nigeria"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 14.2,
+     "anio": 2024
+    },
+    "CHL": {
+     "valor": 6.8,
+     "anio": 2024
+    },
+    "MEX": {
+     "valor": 13.1,
+     "anio": 2024
+    },
+    "URY": {
+     "valor": 7.4,
+     "anio": 2024
+    },
+    "COL": {
+     "valor": 11.5,
+     "anio": 2024
+    },
+    "HUN": {
+     "valor": 3.7,
+     "anio": 2024
+    },
+    "ESP": {
+     "valor": 3.2,
+     "anio": 2024
+    },
+    "POL": {
+     "valor": 4.2,
+     "anio": 2024
+    },
+    "TUR": {
+     "valor": 9.6,
+     "anio": 2024
+    },
+    "KOR": {
+     "valor": 2.8,
+     "anio": 2024
+    },
+    "WLD": {
+     "valor": 37.4,
+     "anio": 2024
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2024",
+    "datos": 25,
+    "ultimo": 9.5,
+    "peor": {
+     "valor": 19.4,
+     "periodo": "2000"
+    },
+    "mejor": {
+     "valor": 9.5,
+     "periodo": "2024"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 25
+   },
+   "paises": {
+    "AFG": [
+     53,
+     2024
+    ],
+    "ALB": [
+     9.2,
+     2024
+    ],
+    "DZA": [
+     21.6,
+     2024
+    ],
+    "AND": [
+     2.5,
+     2024
+    ],
+    "AGO": [
+     49,
+     2024
+    ],
+    "ATG": [
+     9.1,
+     2024
+    ],
+    "ARG": [
+     9.5,
+     2024
+    ],
+    "ARM": [
+     9.6,
+     2024
+    ],
+    "AUS": [
+     3.6,
+     2024
+    ],
+    "AUT": [
+     3.3,
+     2024
+    ],
+    "AZE": [
+     17.9,
+     2024
+    ],
+    "BHS": [
+     12.4,
+     2024
+    ],
+    "BHR": [
+     8.8,
+     2024
+    ],
+    "BGD": [
+     30.5,
+     2024
+    ],
+    "BRB": [
+     9.8,
+     2024
+    ],
+    "BLR": [
+     2.3,
+     2024
+    ],
+    "BEL": [
+     3.7,
+     2024
+    ],
+    "BLZ": [
+     12.7,
+     2024
+    ],
+    "BEN": [
+     74.7,
+     2024
+    ],
+    "BTN": [
+     17.2,
+     2024
+    ],
+    "BOL": [
+     15.7,
+     2024
+    ],
+    "BIH": [
+     6.9,
+     2024
+    ],
+    "BWA": [
+     33.3,
+     2024
+    ],
+    "BRA": [
+     14.2,
+     2024
+    ],
+    "VGB": [
+     12.4,
+     2024
+    ],
+    "BRN": [
+     9.9,
+     2024
+    ],
+    "BGR": [
+     5.7,
+     2024
+    ],
+    "BFA": [
+     74.9,
+     2024
+    ],
+    "BDI": [
+     47.1,
+     2024
+    ],
+    "CPV": [
+     11.1,
+     2024
+    ],
+    "KHM": [
+     18.4,
+     2024
+    ],
+    "CMR": [
+     64.8,
+     2024
+    ],
+    "CAN": [
+     5.4,
+     2024
+    ],
+    "CAF": [
+     89.7,
+     2024
+    ],
+    "TCD": [
+     97.3,
+     2024
+    ],
+    "CHL": [
+     6.8,
+     2024
+    ],
+    "CHN": [
+     5.7,
+     2024
+    ],
+    "COL": [
+     11.5,
+     2024
+    ],
+    "COM": [
+     39,
+     2024
+    ],
+    "COD": [
+     89.7,
+     2024
+    ],
+    "COG": [
+     39.1,
+     2024
+    ],
+    "CRI": [
+     10.4,
+     2024
+    ],
+    "CIV": [
+     64.5,
+     2024
+    ],
+    "HRV": [
+     5.6,
+     2024
+    ],
+    "CUB": [
+     8.6,
+     2024
+    ],
+    "CYP": [
+     5,
+     2024
+    ],
+    "CZE": [
+     2.6,
+     2024
+    ],
+    "DNK": [
+     4,
+     2024
+    ],
+    "DJI": [
+     48.9,
+     2024
+    ],
+    "DMA": [
+     35.7,
+     2024
+    ],
+    "DOM": [
+     30.6,
+     2024
+    ],
+    "ECU": [
+     12.9,
+     2024
+    ],
+    "EGY": [
+     22.4,
+     2024
+    ],
+    "SLV": [
+     10,
+     2024
+    ],
+    "GNQ": [
+     68,
+     2024
+    ],
+    "ERI": [
+     34.3,
+     2024
+    ],
+    "EST": [
+     2,
+     2024
+    ],
+    "SWZ": [
+     45.1,
+     2024
+    ],
+    "ETH": [
+     44.5,
+     2024
+    ],
+    "FJI": [
+     29.1,
+     2024
+    ],
+    "FIN": [
+     2.4,
+     2024
+    ],
+    "FRA": [
+     4.3,
+     2024
+    ],
+    "GAB": [
+     32.6,
+     2024
+    ],
+    "GMB": [
+     42.4,
+     2024
+    ],
+    "GEO": [
+     8.6,
+     2024
+    ],
+    "DEU": [
+     3.7,
+     2024
+    ],
+    "GHA": [
+     35.9,
+     2024
+    ],
+    "GRC": [
+     3.8,
+     2024
+    ],
+    "GRD": [
+     18,
+     2024
+    ],
+    "GTM": [
+     20.5,
+     2024
+    ],
+    "GIN": [
+     92.1,
+     2024
+    ],
+    "GNB": [
+     67.3,
+     2024
+    ],
+    "GUY": [
+     25.2,
+     2024
+    ],
+    "HTI": [
+     52.8,
+     2024
+    ],
+    "HND": [
+     15,
+     2024
+    ],
+    "HUN": [
+     3.7,
+     2024
+    ],
+    "ISL": [
+     2.8,
+     2024
+    ],
+    "IND": [
+     26.6,
+     2024
+    ],
+    "IDN": [
+     17.7,
+     2024
+    ],
+    "IRN": [
+     11.3,
+     2024
+    ],
+    "IRQ": [
+     21.8,
+     2024
+    ],
+    "IRL": [
+     3.9,
+     2024
+    ],
+    "ISR": [
+     3.3,
+     2024
+    ],
+    "ITA": [
+     2.7,
+     2024
+    ],
+    "JAM": [
+     17.8,
+     2024
+    ],
+    "JPN": [
+     2.4,
+     2024
+    ],
+    "JOR": [
+     12.9,
+     2024
+    ],
+    "KAZ": [
+     9.4,
+     2024
+    ],
+    "KEN": [
+     38.8,
+     2024
+    ],
+    "KIR": [
+     53.1,
+     2024
+    ],
+    "PRK": [
+     16.7,
+     2024
+    ],
+    "KOR": [
+     2.8,
+     2024
+    ],
+    "XKX": [
+     8.7,
+     2024
+    ],
+    "KWT": [
+     8.1,
+     2024
+    ],
+    "KGZ": [
+     16.8,
+     2024
+    ],
+    "LAO": [
+     29.4,
+     2024
+    ],
+    "LVA": [
+     2.5,
+     2024
+    ],
+    "LBN": [
+     17.6,
+     2024
+    ],
+    "LSO": [
+     60,
+     2024
+    ],
+    "LBR": [
+     86.4,
+     2024
+    ],
+    "LBY": [
+     9.8,
+     2024
+    ],
+    "LTU": [
+     3.4,
+     2024
+    ],
+    "LUX": [
+     2.2,
+     2024
+    ],
+    "MDG": [
+     62.4,
+     2024
+    ],
+    "MWI": [
+     48.8,
+     2024
+    ],
+    "MYS": [
+     8.3,
+     2024
+    ],
+    "MDV": [
+     5.4,
+     2024
+    ],
+    "MLI": [
+     73,
+     2024
+    ],
+    "MLT": [
+     5.3,
+     2024
+    ],
+    "MHL": [
+     26.7,
+     2024
+    ],
+    "MRT": [
+     36.9,
+     2024
+    ],
+    "MUS": [
+     15.4,
+     2024
+    ],
+    "MEX": [
+     13.1,
+     2024
+    ],
+    "FSM": [
+     22.4,
+     2024
+    ],
+    "MDA": [
+     16.5,
+     2024
+    ],
+    "MCO": [
+     2.7,
+     2024
+    ],
+    "MNG": [
+     13.4,
+     2024
+    ],
+    "MNE": [
+     2.4,
+     2024
+    ],
+    "MAR": [
+     15.7,
+     2024
+    ],
+    "MOZ": [
+     59.4,
+     2024
+    ],
+    "MMR": [
+     36.9,
+     2024
+    ],
+    "NAM": [
+     39.5,
+     2024
+    ],
+    "NRU": [
+     8.3,
+     2024
+    ],
+    "NPL": [
+     25.1,
+     2024
+    ],
+    "NLD": [
+     3.9,
+     2024
+    ],
+    "NZL": [
+     4.7,
+     2024
+    ],
+    "NIC": [
+     11.2,
+     2024
+    ],
+    "NER": [
+     110.7,
+     2024
+    ],
+    "NGA": [
+     115.6,
+     2024
+    ],
+    "MKD": [
+     2.8,
+     2024
+    ],
+    "NOR": [
+     2.5,
+     2024
+    ],
+    "OMN": [
+     10.3,
+     2024
+    ],
+    "PAK": [
+     56,
+     2024
+    ],
+    "PLW": [
+     21.4,
+     2024
+    ],
+    "PAN": [
+     15.3,
+     2024
+    ],
+    "PNG": [
+     39.4,
+     2024
+    ],
+    "PRY": [
+     16.3,
+     2024
+    ],
+    "PER": [
+     12.9,
+     2024
+    ],
+    "PHL": [
+     26.5,
+     2024
+    ],
+    "POL": [
+     4.2,
+     2024
+    ],
+    "PRT": [
+     3.2,
+     2024
+    ],
+    "QAT": [
+     5.9,
+     2024
+    ],
+    "ROU": [
+     7.3,
+     2024
+    ],
+    "RUS": [
+     5.2,
+     2024
+    ],
+    "RWA": [
+     37.7,
+     2024
+    ],
+    "WSM": [
+     14.9,
+     2024
+    ],
+    "SMR": [
+     1.3,
+     2024
+    ],
+    "STP": [
+     13.6,
+     2024
+    ],
+    "SAU": [
+     6,
+     2024
+    ],
+    "SEN": [
+     36.5,
+     2024
+    ],
+    "SRB": [
+     5.4,
+     2024
+    ],
+    "SYC": [
+     14,
+     2024
+    ],
+    "SLE": [
+     90.5,
+     2024
+    ],
+    "SGP": [
+     2.7,
+     2024
+    ],
+    "SVK": [
+     6.3,
+     2024
+    ],
+    "SVN": [
+     2.3,
+     2024
+    ],
+    "SLB": [
+     20,
+     2024
+    ],
+    "SOM": [
+     101.1,
+     2024
+    ],
+    "ZAF": [
+     35.1,
+     2024
+    ],
+    "SSD": [
+     96.7,
+     2024
+    ],
+    "ESP": [
+     3.2,
+     2024
+    ],
+    "LKA": [
+     5.9,
+     2024
+    ],
+    "KNA": [
+     15.9,
+     2024
+    ],
+    "LCA": [
+     17.2,
+     2024
+    ],
+    "VCT": [
+     11.3,
+     2024
+    ],
+    "SDN": [
+     61.6,
+     2024
+    ],
+    "SUR": [
+     15.8,
+     2024
+    ],
+    "SWE": [
+     2.4,
+     2024
+    ],
+    "CHE": [
+     3.9,
+     2024
+    ],
+    "SYR": [
+     18.4,
+     2024
+    ],
+    "TJK": [
+     28.1,
+     2024
+    ],
+    "TZA": [
+     37,
+     2024
+    ],
+    "THA": [
+     9,
+     2024
+    ],
+    "TLS": [
+     47.6,
+     2024
+    ],
+    "TGO": [
+     56.1,
+     2024
+    ],
+    "TON": [
+     9.5,
+     2024
+    ],
+    "TTO": [
+     18.8,
+     2024
+    ],
+    "TUN": [
+     12.1,
+     2024
+    ],
+    "TUR": [
+     9.6,
+     2024
+    ],
+    "TKM": [
+     39,
+     2024
+    ],
+    "TCA": [
+     4.7,
+     2024
+    ],
+    "TUV": [
+     19.2,
+     2024
+    ],
+    "UGA": [
+     48.7,
+     2024
+    ],
+    "UKR": [
+     7.9,
+     2024
+    ],
+    "ARE": [
+     4.8,
+     2024
+    ],
+    "GBR": [
+     4.7,
+     2024
+    ],
+    "USA": [
+     6.5,
+     2024
+    ],
+    "URY": [
+     7.4,
+     2024
+    ],
+    "UZB": [
+     13.4,
+     2024
+    ],
+    "VUT": [
+     17.1,
+     2024
+    ],
+    "VEN": [
+     24.2,
+     2024
+    ],
+    "VNM": [
+     17.3,
+     2024
+    ],
+    "PSE": [
+     37.9,
+     2024
+    ],
+    "YEM": [
+     38.1,
+     2024
+    ],
+    "ZMB": [
+     48.4,
+     2024
+    ],
+    "ZWE": [
+     64.7,
+     2024
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 19.4
+    },
+    {
+     "periodo": "2001",
+     "valor": 18.8
+    },
+    {
+     "periodo": "2002",
+     "valor": 18.3
+    },
+    {
+     "periodo": "2003",
+     "valor": 17.8
+    },
+    {
+     "periodo": "2004",
+     "valor": 17.3
+    },
+    {
+     "periodo": "2005",
+     "valor": 16.7
+    },
+    {
+     "periodo": "2006",
+     "valor": 16.2
+    },
+    {
+     "periodo": "2007",
+     "valor": 15.8
+    },
+    {
+     "periodo": "2008",
+     "valor": 15.4
+    },
+    {
+     "periodo": "2009",
+     "valor": 15
+    },
+    {
+     "periodo": "2010",
+     "valor": 14.4
+    },
+    {
+     "periodo": "2011",
+     "valor": 13.9
+    },
+    {
+     "periodo": "2012",
+     "valor": 13.3
+    },
+    {
+     "periodo": "2013",
+     "valor": 12.7
+    },
+    {
+     "periodo": "2014",
+     "valor": 12.2
+    },
+    {
+     "periodo": "2015",
+     "valor": 11.7
+    },
+    {
+     "periodo": "2016",
+     "valor": 11.4
+    },
+    {
+     "periodo": "2017",
+     "valor": 11
+    },
+    {
+     "periodo": "2018",
+     "valor": 10.7
+    },
+    {
+     "periodo": "2019",
+     "valor": 10.5
+    },
+    {
+     "periodo": "2020",
+     "valor": 10.3
+    },
+    {
+     "periodo": "2021",
+     "valor": 10.1
+    },
+    {
+     "periodo": "2022",
+     "valor": 9.9
+    },
+    {
+     "periodo": "2023",
+     "valor": 9.7
+    },
+    {
+     "periodo": "2024",
+     "valor": 9.5
+    }
+   ]
+  },
+  {
    "clave": "gasto_salud",
    "area": "desarrollo",
    "nombre": "Gasto en salud",
@@ -33329,6 +38214,7 @@
    "codigo": "SH.XPD.CHEX.GD.ZS",
    "organismo": "Banco Mundial (con datos de la OMS)",
    "url": "https://datos.bancomundial.org/indicador/SH.XPD.CHEX.GD.ZS",
+   "nota": null,
    "anioReferencia": 2023,
    "puesto": 25,
    "total": 193,
@@ -34289,6 +39175,1747 @@
    ]
   },
   {
+   "clave": "gasto_educacion",
+   "area": "desarrollo",
+   "nombre": "Gasto público en educación",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SE.XPD.TOTL.GD.ZS",
+   "organismo": "Banco Mundial (con datos de la UNESCO)",
+   "url": "https://datos.bancomundial.org/indicador/SE.XPD.TOTL.GD.ZS",
+   "nota": null,
+   "anioReferencia": 2024,
+   "puesto": 56,
+   "total": 170,
+   "percentil": 67.5,
+   "valor": 5.00324010848999,
+   "anio": 2023,
+   "mediana": 4.153683692803545,
+   "lectura": "por encima de la mitad",
+   "mundo": {
+    "valor": 3.56927475138052,
+    "anio": 2023
+   },
+   "mejorPais": {
+    "pais": "KIR",
+    "valor": 16.39053,
+    "anio": 2023,
+    "nombre": "Kiribati"
+   },
+   "peorPais": {
+    "pais": "SOM",
+    "valor": 0.00000814262404011,
+    "anio": 2023,
+    "nombre": "República Federal de Somalia"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 5.61920976638794,
+     "anio": 2022
+    },
+    "CHL": {
+     "valor": 4.91201019287109,
+     "anio": 2022
+    },
+    "MEX": {
+     "valor": 4.05987977981567,
+     "anio": 2022
+    },
+    "URY": {
+     "valor": 4.76461982727051,
+     "anio": 2023
+    },
+    "COL": null,
+    "HUN": {
+     "valor": 3.8011999130249,
+     "anio": 2022
+    },
+    "ESP": {
+     "valor": 4.58553981781006,
+     "anio": 2022
+    },
+    "POL": {
+     "valor": 4.31372976303101,
+     "anio": 2022
+    },
+    "TUR": {
+     "valor": 3.09571003913879,
+     "anio": 2022
+    },
+    "KOR": {
+     "valor": 5.40910005569458,
+     "anio": 2022
+    },
+    "WLD": {
+     "valor": 3.56927475138052,
+     "anio": 2023
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2023",
+    "datos": 24,
+    "ultimo": 5.00324010848999,
+    "peor": {
+     "valor": 3.48652005195618,
+     "periodo": "2004"
+    },
+    "mejor": {
+     "valor": 5.77611017227173,
+     "periodo": "2015"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 14
+   },
+   "paises": {
+    "ALB": [
+     3.092,
+     2023
+    ],
+    "DZA": [
+     8.978,
+     2024
+    ],
+    "AND": [
+     1.899,
+     2023
+    ],
+    "AGO": [
+     2.513,
+     2023
+    ],
+    "ATG": [
+     3.105,
+     2023
+    ],
+    "ARG": [
+     5.003,
+     2023
+    ],
+    "ARM": [
+     2.439,
+     2023
+    ],
+    "AUS": [
+     5.059,
+     2022
+    ],
+    "AUT": [
+     5.277,
+     2022
+    ],
+    "AZE": [
+     3.66,
+     2023
+    ],
+    "BHS": [
+     2.742,
+     2023
+    ],
+    "BHR": [
+     1.888,
+     2023
+    ],
+    "BGD": [
+     2.034,
+     2024
+    ],
+    "BRB": [
+     3.556,
+     2024
+    ],
+    "BLR": [
+     5.046,
+     2024
+    ],
+    "BEL": [
+     6.276,
+     2022
+    ],
+    "BLZ": [
+     4.623,
+     2024
+    ],
+    "BEN": [
+     3.23,
+     2023
+    ],
+    "BMU": [
+     1.865,
+     2023
+    ],
+    "BTN": [
+     5.845,
+     2023
+    ],
+    "BOL": [
+     7.54,
+     2024
+    ],
+    "BIH": [
+     3.246,
+     2023
+    ],
+    "BRA": [
+     5.619,
+     2022
+    ],
+    "VGB": [
+     3.173,
+     2023
+    ],
+    "BGR": [
+     4.501,
+     2022
+    ],
+    "BFA": [
+     5.328,
+     2023
+    ],
+    "CPV": [
+     4.348,
+     2023
+    ],
+    "KHM": [
+     2.181,
+     2023
+    ],
+    "CMR": [
+     2.839,
+     2023
+    ],
+    "CAN": [
+     4.844,
+     2022
+    ],
+    "CYM": [
+     1.57,
+     2023
+    ],
+    "CAF": [
+     1.83,
+     2023
+    ],
+    "TCD": [
+     3.201,
+     2023
+    ],
+    "CHL": [
+     4.912,
+     2022
+    ],
+    "CHN": [
+     3.897,
+     2023
+    ],
+    "COM": [
+     2.341,
+     2023
+    ],
+    "COD": [
+     2.845,
+     2022
+    ],
+    "COG": [
+     3.34,
+     2023
+    ],
+    "CRI": [
+     5.312,
+     2023
+    ],
+    "CIV": [
+     3.613,
+     2024
+    ],
+    "CUB": [
+     8.441,
+     2022
+    ],
+    "CUW": [
+     5.443,
+     2024
+    ],
+    "CYP": [
+     4.742,
+     2022
+    ],
+    "CZE": [
+     4.303,
+     2022
+    ],
+    "DNK": [
+     6.356,
+     2022
+    ],
+    "DMA": [
+     5.386,
+     2024
+    ],
+    "DOM": [
+     3.761,
+     2023
+    ],
+    "ECU": [
+     3.691,
+     2024
+    ],
+    "SLV": [
+     3.317,
+     2024
+    ],
+    "EST": [
+     5.207,
+     2022
+    ],
+    "SWZ": [
+     6.031,
+     2024
+    ],
+    "ETH": [
+     2.298,
+     2024
+    ],
+    "FJI": [
+     4.247,
+     2023
+    ],
+    "FIN": [
+     6.376,
+     2022
+    ],
+    "FRA": [
+     5.324,
+     2022
+    ],
+    "GAB": [
+     2.316,
+     2023
+    ],
+    "GMB": [
+     2.808,
+     2023
+    ],
+    "GEO": [
+     3.98,
+     2024
+    ],
+    "DEU": [
+     5.239,
+     2022
+    ],
+    "GHA": [
+     2.91,
+     2022
+    ],
+    "GRC": [
+     3.375,
+     2022
+    ],
+    "GRD": [
+     5.125,
+     2023
+    ],
+    "GTM": [
+     3.076,
+     2024
+    ],
+    "GIN": [
+     1.725,
+     2023
+    ],
+    "HTI": [
+     0.965,
+     2023
+    ],
+    "HND": [
+     4.55,
+     2023
+    ],
+    "HKG": [
+     3.806,
+     2024
+    ],
+    "HUN": [
+     3.801,
+     2022
+    ],
+    "ISL": [
+     7.308,
+     2022
+    ],
+    "IND": [
+     4.099,
+     2022
+    ],
+    "IDN": [
+     1.275,
+     2023
+    ],
+    "IRN": [
+     2.824,
+     2023
+    ],
+    "ISR": [
+     5.933,
+     2022
+    ],
+    "ITA": [
+     4.068,
+     2022
+    ],
+    "JAM": [
+     5.514,
+     2024
+    ],
+    "JOR": [
+     3.234,
+     2024
+    ],
+    "KAZ": [
+     4.865,
+     2023
+    ],
+    "KEN": [
+     4.022,
+     2024
+    ],
+    "KIR": [
+     16.391,
+     2023
+    ],
+    "KOR": [
+     5.409,
+     2022
+    ],
+    "KWT": [
+     6.436,
+     2024
+    ],
+    "KGZ": [
+     6.827,
+     2023
+    ],
+    "LAO": [
+     1.234,
+     2023
+    ],
+    "LVA": [
+     4.32,
+     2022
+    ],
+    "LBN": [
+     1.225,
+     2024
+    ],
+    "LSO": [
+     6.623,
+     2024
+    ],
+    "LBR": [
+     2.267,
+     2023
+    ],
+    "LTU": [
+     4.253,
+     2022
+    ],
+    "LUX": [
+     3.745,
+     2022
+    ],
+    "MAC": [
+     3.502,
+     2023
+    ],
+    "MDG": [
+     3.048,
+     2023
+    ],
+    "MWI": [
+     2.749,
+     2022
+    ],
+    "MYS": [
+     3.515,
+     2023
+    ],
+    "MDV": [
+     5.167,
+     2023
+    ],
+    "MLI": [
+     4.185,
+     2023
+    ],
+    "MLT": [
+     4.713,
+     2022
+    ],
+    "MHL": [
+     7.701,
+     2022
+    ],
+    "MRT": [
+     7.61,
+     2024
+    ],
+    "MUS": [
+     4.247,
+     2024
+    ],
+    "MEX": [
+     4.06,
+     2022
+    ],
+    "MDA": [
+     6.557,
+     2023
+    ],
+    "MCO": [
+     1.732,
+     2023
+    ],
+    "MNG": [
+     5.212,
+     2024
+    ],
+    "MAR": [
+     6.021,
+     2023
+    ],
+    "MOZ": [
+     5.976,
+     2022
+    ],
+    "NAM": [
+     9.084,
+     2024
+    ],
+    "NRU": [
+     5.777,
+     2023
+    ],
+    "NPL": [
+     3.688,
+     2024
+    ],
+    "NLD": [
+     5.179,
+     2022
+    ],
+    "NZL": [
+     5.213,
+     2023
+    ],
+    "NIC": [
+     2.87,
+     2023
+    ],
+    "NER": [
+     4.074,
+     2023
+    ],
+    "NGA": [
+     0.319,
+     2023
+    ],
+    "NOR": [
+     5.432,
+     2022
+    ],
+    "OMN": [
+     4.383,
+     2022
+    ],
+    "PAK": [
+     1.947,
+     2023
+    ],
+    "PLW": [
+     3.437,
+     2023
+    ],
+    "PAN": [
+     2.472,
+     2023
+    ],
+    "PNG": [
+     0.782,
+     2023
+    ],
+    "PRY": [
+     3.534,
+     2024
+    ],
+    "PER": [
+     4.358,
+     2024
+    ],
+    "PHL": [
+     3.925,
+     2024
+    ],
+    "POL": [
+     4.314,
+     2022
+    ],
+    "PRT": [
+     4.552,
+     2022
+    ],
+    "PRI": [
+     4.271,
+     2024
+    ],
+    "ROU": [
+     3.279,
+     2022
+    ],
+    "RUS": [
+     4.165,
+     2023
+    ],
+    "RWA": [
+     4.615,
+     2024
+    ],
+    "WSM": [
+     5.456,
+     2024
+    ],
+    "SMR": [
+     2.898,
+     2022
+    ],
+    "STP": [
+     5.029,
+     2023
+    ],
+    "SAU": [
+     4.481,
+     2023
+    ],
+    "SEN": [
+     6.163,
+     2023
+    ],
+    "SRB": [
+     3.404,
+     2023
+    ],
+    "SYC": [
+     4.454,
+     2023
+    ],
+    "SLE": [
+     2.625,
+     2023
+    ],
+    "SGP": [
+     2.191,
+     2024
+    ],
+    "SXM": [
+     3.924,
+     2023
+    ],
+    "SVK": [
+     4.657,
+     2022
+    ],
+    "SVN": [
+     5.281,
+     2022
+    ],
+    "SLB": [
+     8.293,
+     2023
+    ],
+    "SOM": [
+     0,
+     2023
+    ],
+    "ZAF": [
+     6.021,
+     2024
+    ],
+    "ESP": [
+     4.586,
+     2022
+    ],
+    "LKA": [
+     1.828,
+     2023
+    ],
+    "KNA": [
+     3.497,
+     2023
+    ],
+    "LCA": [
+     3.847,
+     2024
+    ],
+    "VCT": [
+     6.458,
+     2023
+    ],
+    "SUR": [
+     2.866,
+     2023
+    ],
+    "SWE": [
+     7.319,
+     2022
+    ],
+    "CHE": [
+     4.864,
+     2022
+    ],
+    "TJK": [
+     5.437,
+     2023
+    ],
+    "TZA": [
+     3.155,
+     2024
+    ],
+    "THA": [
+     2.521,
+     2023
+    ],
+    "TLS": [
+     5.241,
+     2023
+    ],
+    "TGO": [
+     4.143,
+     2023
+    ],
+    "TON": [
+     5.31,
+     2022
+    ],
+    "TTO": [
+     3.234,
+     2023
+    ],
+    "TUN": [
+     6.734,
+     2023
+    ],
+    "TUR": [
+     3.096,
+     2022
+    ],
+    "TKM": [
+     4.289,
+     2024
+    ],
+    "TCA": [
+     2.95,
+     2024
+    ],
+    "TUV": [
+     12.846,
+     2023
+    ],
+    "UGA": [
+     2.561,
+     2022
+    ],
+    "URY": [
+     4.765,
+     2023
+    ],
+    "UZB": [
+     5.473,
+     2023
+    ],
+    "VUT": [
+     7.637,
+     2024
+    ],
+    "VNM": [
+     2.887,
+     2022
+    ],
+    "ZMB": [
+     4.074,
+     2023
+    ],
+    "ZWE": [
+     0.385,
+     2023
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 4.58030986785889
+    },
+    {
+     "periodo": "2001",
+     "valor": 4.833740234375
+    },
+    {
+     "periodo": "2002",
+     "valor": 4.01734018325806
+    },
+    {
+     "periodo": "2003",
+     "valor": 3.53504991531372
+    },
+    {
+     "periodo": "2004",
+     "valor": 3.48652005195618
+    },
+    {
+     "periodo": "2005",
+     "valor": 3.86000990867615
+    },
+    {
+     "periodo": "2006",
+     "valor": 4.12821006774902
+    },
+    {
+     "periodo": "2007",
+     "valor": 4.46260976791382
+    },
+    {
+     "periodo": "2008",
+     "valor": 4.84438991546631
+    },
+    {
+     "periodo": "2009",
+     "valor": 5.53105020523071
+    },
+    {
+     "periodo": "2010",
+     "valor": 5.01972007751465
+    },
+    {
+     "periodo": "2011",
+     "valor": 5.29063987731934
+    },
+    {
+     "periodo": "2012",
+     "valor": 5.3458399772644
+    },
+    {
+     "periodo": "2013",
+     "valor": 5.43660020828247
+    },
+    {
+     "periodo": "2014",
+     "valor": 5.36144018173218
+    },
+    {
+     "periodo": "2015",
+     "valor": 5.77611017227173
+    },
+    {
+     "periodo": "2016",
+     "valor": 5.54548978805542
+    },
+    {
+     "periodo": "2017",
+     "valor": 5.45432996749878
+    },
+    {
+     "periodo": "2018",
+     "valor": 4.87773990631104
+    },
+    {
+     "periodo": "2019",
+     "valor": 4.77165985107422
+    },
+    {
+     "periodo": "2020",
+     "valor": 5.27689981460571
+    },
+    {
+     "periodo": "2021",
+     "valor": 4.65393018722534
+    },
+    {
+     "periodo": "2022",
+     "valor": 4.79263019561768
+    },
+    {
+     "periodo": "2023",
+     "valor": 5.00324010848999
+    }
+   ]
+  },
+  {
+   "clave": "secundaria",
+   "area": "desarrollo",
+   "nombre": "Matrícula en la secundaria",
+   "unidad": "% bruto",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SE.SEC.ENRR",
+   "organismo": "Banco Mundial (con datos de la UNESCO)",
+   "url": "https://datos.bancomundial.org/indicador/SE.SEC.ENRR",
+   "nota": null,
+   "anioReferencia": 2024,
+   "puesto": 36,
+   "total": 167,
+   "percentil": 78.9,
+   "valor": 105.574584297051,
+   "anio": 2023,
+   "mediana": 93.1929931640625,
+   "lectura": "muy por encima de la mayoría",
+   "mundo": {
+    "valor": 77.2785720825195,
+    "anio": 2024
+   },
+   "mejorPais": {
+    "pais": "MCO",
+    "valor": 158.546615600586,
+    "anio": 2024,
+    "nombre": "Mónaco"
+   },
+   "peorPais": {
+    "pais": "SOM",
+    "valor": 3.34785008430481,
+    "anio": 2023,
+    "nombre": "República Federal de Somalia"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 104.144660949707,
+     "anio": 2024
+    },
+    "CHL": {
+     "valor": 105.608551025391,
+     "anio": 2024
+    },
+    "MEX": {
+     "valor": 103.093322753906,
+     "anio": 2024
+    },
+    "URY": {
+     "valor": 119.105005958635,
+     "anio": 2023
+    },
+    "COL": {
+     "valor": 101.573776245117,
+     "anio": 2022
+    },
+    "HUN": {
+     "valor": 107.350929260254,
+     "anio": 2024
+    },
+    "ESP": {
+     "valor": 118.537803649902,
+     "anio": 2024
+    },
+    "POL": {
+     "valor": 107.881309509277,
+     "anio": 2024
+    },
+    "TUR": {
+     "valor": 118.411979675293,
+     "anio": 2023
+    },
+    "KOR": {
+     "valor": 96.2539901733398,
+     "anio": 2024
+    },
+    "WLD": {
+     "valor": 77.2785720825195,
+     "anio": 2024
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2023",
+    "datos": 24,
+    "ultimo": 105.574584297051,
+    "peor": {
+     "valor": 92.1874084472656,
+     "periodo": "2007"
+    },
+    "mejor": {
+     "valor": 115.735778808594,
+     "periodo": "2021"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 15
+   },
+   "paises": {
+    "AFG": [
+     59.614,
+     2023
+    ],
+    "ALB": [
+     108.355,
+     2024
+    ],
+    "DZA": [
+     105.164,
+     2024
+    ],
+    "AND": [
+     101.924,
+     2024
+    ],
+    "AGO": [
+     51.484,
+     2023
+    ],
+    "ATG": [
+     108.881,
+     2023
+    ],
+    "ARG": [
+     105.575,
+     2023
+    ],
+    "ARM": [
+     90.946,
+     2024
+    ],
+    "ABW": [
+     124.379,
+     2024
+    ],
+    "AUS": [
+     131.932,
+     2024
+    ],
+    "AUT": [
+     100.623,
+     2024
+    ],
+    "AZE": [
+     91.123,
+     2024
+    ],
+    "BHS": [
+     79.486,
+     2024
+    ],
+    "BHR": [
+     98.814,
+     2024
+    ],
+    "BGD": [
+     64.3,
+     2024
+    ],
+    "BRB": [
+     104.371,
+     2024
+    ],
+    "BLR": [
+     94.79,
+     2024
+    ],
+    "BEL": [
+     142.96,
+     2023
+    ],
+    "BLZ": [
+     86.457,
+     2024
+    ],
+    "BEN": [
+     43.561,
+     2022
+    ],
+    "BMU": [
+     74.397,
+     2023
+    ],
+    "BTN": [
+     86.181,
+     2024
+    ],
+    "BOL": [
+     90.527,
+     2024
+    ],
+    "BIH": [
+     87.866,
+     2023
+    ],
+    "BRA": [
+     104.145,
+     2024
+    ],
+    "VGB": [
+     75.583,
+     2024
+    ],
+    "BRN": [
+     91.838,
+     2023
+    ],
+    "BGR": [
+     94.782,
+     2024
+    ],
+    "BFA": [
+     29.991,
+     2024
+    ],
+    "CPV": [
+     96.432,
+     2022
+    ],
+    "KHM": [
+     58.789,
+     2024
+    ],
+    "CMR": [
+     44.841,
+     2023
+    ],
+    "CAN": [
+     104.321,
+     2023
+    ],
+    "CYM": [
+     84.76,
+     2024
+    ],
+    "TCD": [
+     23.493,
+     2024
+    ],
+    "CHL": [
+     105.609,
+     2024
+    ],
+    "COL": [
+     101.574,
+     2022
+    ],
+    "COM": [
+     54.806,
+     2022
+    ],
+    "COD": [
+     55.486,
+     2023
+    ],
+    "CRI": [
+     121.811,
+     2024
+    ],
+    "CIV": [
+     65.307,
+     2024
+    ],
+    "HRV": [
+     105.025,
+     2023
+    ],
+    "CUB": [
+     91.746,
+     2024
+    ],
+    "CUW": [
+     89.905,
+     2024
+    ],
+    "CYP": [
+     106.741,
+     2024
+    ],
+    "CZE": [
+     97.615,
+     2023
+    ],
+    "DNK": [
+     125.628,
+     2024
+    ],
+    "DMA": [
+     102.586,
+     2023
+    ],
+    "DOM": [
+     76.365,
+     2024
+    ],
+    "ECU": [
+     92.812,
+     2023
+    ],
+    "EGY": [
+     84.829,
+     2024
+    ],
+    "SLV": [
+     62.143,
+     2024
+    ],
+    "ERI": [
+     44.044,
+     2022
+    ],
+    "EST": [
+     108.539,
+     2024
+    ],
+    "FJI": [
+     98.093,
+     2024
+    ],
+    "FIN": [
+     142.395,
+     2024
+    ],
+    "FRA": [
+     103.785,
+     2024
+    ],
+    "GEO": [
+     100.959,
+     2024
+    ],
+    "DEU": [
+     100.244,
+     2024
+    ],
+    "GHA": [
+     75.717,
+     2024
+    ],
+    "GIB": [
+     78.528,
+     2024
+    ],
+    "GRC": [
+     105.192,
+     2023
+    ],
+    "GRD": [
+     100.732,
+     2024
+    ],
+    "GTM": [
+     49.577,
+     2024
+    ],
+    "GUY": [
+     91.43,
+     2024
+    ],
+    "HND": [
+     51.764,
+     2024
+    ],
+    "HKG": [
+     107.16,
+     2024
+    ],
+    "HUN": [
+     107.351,
+     2024
+    ],
+    "ISL": [
+     108.911,
+     2023
+    ],
+    "IND": [
+     78.106,
+     2024
+    ],
+    "IDN": [
+     98.836,
+     2024
+    ],
+    "IRN": [
+     85.147,
+     2023
+    ],
+    "IRL": [
+     130.605,
+     2022
+    ],
+    "ISR": [
+     98.547,
+     2024
+    ],
+    "ITA": [
+     100.679,
+     2023
+    ],
+    "JAM": [
+     84.457,
+     2024
+    ],
+    "JPN": [
+     101.537,
+     2023
+    ],
+    "JOR": [
+     91.752,
+     2024
+    ],
+    "KAZ": [
+     97.199,
+     2024
+    ],
+    "KEN": [
+     84.308,
+     2023
+    ],
+    "KIR": [
+     90.279,
+     2024
+    ],
+    "KOR": [
+     96.254,
+     2024
+    ],
+    "KGZ": [
+     91.34,
+     2024
+    ],
+    "LAO": [
+     51.852,
+     2024
+    ],
+    "LVA": [
+     101.253,
+     2024
+    ],
+    "LBN": [
+     63.792,
+     2024
+    ],
+    "LTU": [
+     104.861,
+     2024
+    ],
+    "LUX": [
+     108.577,
+     2024
+    ],
+    "MAC": [
+     94.662,
+     2024
+    ],
+    "MWI": [
+     36.644,
+     2023
+    ],
+    "MYS": [
+     80.276,
+     2024
+    ],
+    "MDV": [
+     79.357,
+     2023
+    ],
+    "MLI": [
+     38.939,
+     2023
+    ],
+    "MLT": [
+     103.027,
+     2023
+    ],
+    "MHL": [
+     85.756,
+     2024
+    ],
+    "MUS": [
+     90.725,
+     2024
+    ],
+    "MEX": [
+     103.093,
+     2024
+    ],
+    "MDA": [
+     99.344,
+     2024
+    ],
+    "MCO": [
+     158.547,
+     2024
+    ],
+    "MNG": [
+     96.818,
+     2023
+    ],
+    "MNE": [
+     93.872,
+     2023
+    ],
+    "MAR": [
+     89.983,
+     2024
+    ],
+    "NAM": [
+     81.957,
+     2024
+    ],
+    "NRU": [
+     91.513,
+     2024
+    ],
+    "NPL": [
+     90.388,
+     2024
+    ],
+    "NLD": [
+     137.515,
+     2023
+    ],
+    "NZL": [
+     114.231,
+     2024
+    ],
+    "NIC": [
+     70.175,
+     2023
+    ],
+    "NER": [
+     19.866,
+     2024
+    ],
+    "NGA": [
+     46.893,
+     2023
+    ],
+    "MKD": [
+     90.072,
+     2023
+    ],
+    "NOR": [
+     116.254,
+     2024
+    ],
+    "OMN": [
+     95.122,
+     2024
+    ],
+    "PAK": [
+     48.281,
+     2024
+    ],
+    "PLW": [
+     95.727,
+     2024
+    ],
+    "PNG": [
+     52.093,
+     2023
+    ],
+    "PRY": [
+     79.131,
+     2024
+    ],
+    "PER": [
+     108.289,
+     2024
+    ],
+    "PHL": [
+     85.295,
+     2024
+    ],
+    "POL": [
+     107.881,
+     2024
+    ],
+    "PRT": [
+     120.347,
+     2023
+    ],
+    "PRI": [
+     81.482,
+     2024
+    ],
+    "QAT": [
+     99.579,
+     2024
+    ],
+    "ROU": [
+     81.632,
+     2023
+    ],
+    "RUS": [
+     92.484,
+     2023
+    ],
+    "RWA": [
+     48.79,
+     2024
+    ],
+    "SMR": [
+     60.375,
+     2024
+    ],
+    "SAU": [
+     110.663,
+     2024
+    ],
+    "SEN": [
+     44.067,
+     2023
+    ],
+    "SRB": [
+     89.84,
+     2024
+    ],
+    "SYC": [
+     70.825,
+     2024
+    ],
+    "SLE": [
+     86.908,
+     2023
+    ],
+    "SGP": [
+     103.083,
+     2023
+    ],
+    "SVK": [
+     93.193,
+     2024
+    ],
+    "SVN": [
+     107.627,
+     2023
+    ],
+    "SOM": [
+     3.348,
+     2023
+    ],
+    "ZAF": [
+     104.133,
+     2023
+    ],
+    "SSD": [
+     122.121,
+     2024
+    ],
+    "ESP": [
+     118.538,
+     2024
+    ],
+    "LKA": [
+     87.953,
+     2023
+    ],
+    "KNA": [
+     137.513,
+     2023
+    ],
+    "LCA": [
+     87.867,
+     2024
+    ],
+    "VCT": [
+     124.872,
+     2024
+    ],
+    "SUR": [
+     76.111,
+     2023
+    ],
+    "SWE": [
+     131.964,
+     2024
+    ],
+    "CHE": [
+     101.429,
+     2024
+    ],
+    "SYR": [
+     38.737,
+     2024
+    ],
+    "TJK": [
+     86.904,
+     2024
+    ],
+    "THA": [
+     92.507,
+     2024
+    ],
+    "TGO": [
+     63.419,
+     2023
+    ],
+    "TON": [
+     92.426,
+     2024
+    ],
+    "TTO": [
+     95.682,
+     2024
+    ],
+    "TUR": [
+     118.412,
+     2023
+    ],
+    "TKM": [
+     94.646,
+     2024
+    ],
+    "TCA": [
+     119.729,
+     2024
+    ],
+    "TUV": [
+     90.657,
+     2024
+    ],
+    "UKR": [
+     86.17,
+     2024
+    ],
+    "ARE": [
+     102.13,
+     2024
+    ],
+    "GBR": [
+     112.12,
+     2023
+    ],
+    "USA": [
+     97.473,
+     2022
+    ],
+    "URY": [
+     119.105,
+     2023
+    ],
+    "UZB": [
+     96.84,
+     2024
+    ],
+    "VUT": [
+     134.671,
+     2023
+    ],
+    "VEN": [
+     97.791,
+     2024
+    ],
+    "VNM": [
+     93.412,
+     2022
+    ],
+    "PSE": [
+     89.121,
+     2023
+    ],
+    "ZMB": [
+     56.789,
+     2024
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 96.2141189575195
+    },
+    {
+     "periodo": "2001",
+     "valor": 97.6240463256836
+    },
+    {
+     "periodo": "2002",
+     "valor": 96.9965667724609
+    },
+    {
+     "periodo": "2003",
+     "valor": 96.0464477539062
+    },
+    {
+     "periodo": "2004",
+     "valor": 95.4575576782227
+    },
+    {
+     "periodo": "2005",
+     "valor": 93.6376724243164
+    },
+    {
+     "periodo": "2006",
+     "valor": 92.4075775146484
+    },
+    {
+     "periodo": "2007",
+     "valor": 92.1874084472656
+    },
+    {
+     "periodo": "2008",
+     "valor": 93.183219909668
+    },
+    {
+     "periodo": "2009",
+     "valor": 96.4056777954102
+    },
+    {
+     "periodo": "2010",
+     "valor": 99.0709991455078
+    },
+    {
+     "periodo": "2011",
+     "valor": 100.884559631348
+    },
+    {
+     "periodo": "2012",
+     "valor": 102.709991455078
+    },
+    {
+     "periodo": "2013",
+     "valor": 104.540863037109
+    },
+    {
+     "periodo": "2014",
+     "valor": 106.038902282715
+    },
+    {
+     "periodo": "2015",
+     "valor": 107.504867553711
+    },
+    {
+     "periodo": "2016",
+     "valor": 109.598327636719
+    },
+    {
+     "periodo": "2017",
+     "valor": 110.377799987793
+    },
+    {
+     "periodo": "2018",
+     "valor": 109.671241760254
+    },
+    {
+     "periodo": "2019",
+     "valor": 110.460151672363
+    },
+    {
+     "periodo": "2020",
+     "valor": 112.376731872559
+    },
+    {
+     "periodo": "2021",
+     "valor": 115.735778808594
+    },
+    {
+     "periodo": "2022",
+     "valor": 114.14811706543
+    },
+    {
+     "periodo": "2023",
+     "valor": 105.574584297051
+    }
+   ]
+  },
+  {
    "clave": "universidad",
    "area": "desarrollo",
    "nombre": "Matrícula en la educación superior",
@@ -34298,6 +40925,7 @@
    "codigo": "SE.TER.ENRR",
    "organismo": "Banco Mundial (con datos de la UNESCO)",
    "url": "https://datos.bancomundial.org/indicador/SE.TER.ENRR",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 9,
    "total": 148,
@@ -35078,6 +41706,584 @@
    ]
   },
   {
+   "clave": "investigadores",
+   "area": "innovacion",
+   "nombre": "Investigadores en I+D",
+   "unidad": "por millón de habitantes",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SP.POP.SCIE.RD.P6",
+   "organismo": "Banco Mundial (con datos de la UNESCO)",
+   "url": "https://datos.bancomundial.org/indicador/SP.POP.SCIE.RD.P6",
+   "nota": null,
+   "anioReferencia": 2023,
+   "puesto": 52,
+   "total": 98,
+   "percentil": 47.4,
+   "valor": 1312.75278,
+   "anio": 2023,
+   "mediana": 1627.65348,
+   "lectura": "en la mitad de la tabla",
+   "mundo": null,
+   "mejorPais": {
+    "pais": "LIE",
+    "valor": 18129.75165,
+    "anio": 2023,
+    "nombre": "Liechtenstein"
+   },
+   "peorPais": {
+    "pais": "GTM",
+    "valor": 1.44569,
+    "anio": 2023,
+    "nombre": "Guatemala"
+   },
+   "comparados": {
+    "BRA": null,
+    "CHL": {
+     "valor": 707.0557,
+     "anio": 2022
+    },
+    "MEX": {
+     "valor": 419.44361,
+     "anio": 2023
+    },
+    "URY": {
+     "valor": 902.41575,
+     "anio": 2023
+    },
+    "COL": null,
+    "HUN": {
+     "valor": 4567.0829,
+     "anio": 2023
+    },
+    "ESP": {
+     "valor": 3653.80306,
+     "anio": 2023
+    },
+    "POL": {
+     "valor": 3675.06022,
+     "anio": 2023
+    },
+    "TUR": {
+     "valor": 2644.6573,
+     "anio": 2023
+    },
+    "KOR": {
+     "valor": 9471.82543,
+     "anio": 2023
+    },
+    "WLD": null
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2023",
+    "datos": 24,
+    "ultimo": 1312.75278,
+    "peor": {
+     "valor": 685.59721,
+     "periodo": "2001"
+    },
+    "mejor": {
+     "valor": 1312.75278,
+     "periodo": "2023"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 24
+   },
+   "paises": {
+    "ALB": [
+     428.7,
+     2022
+    ],
+    "DZA": [
+     1782.463,
+     2023
+    ],
+    "ARG": [
+     1312.753,
+     2023
+    ],
+    "ARM": [
+     1039.848,
+     2023
+    ],
+    "AUT": [
+     6633.649,
+     2023
+    ],
+    "AZE": [
+     1663.34,
+     2023
+    ],
+    "BLR": [
+     1504.353,
+     2023
+    ],
+    "BEL": [
+     5990.128,
+     2023
+    ],
+    "BTN": [
+     237.238,
+     2023
+    ],
+    "BOL": [
+     63.057,
+     2021
+    ],
+    "BIH": [
+     669.768,
+     2023
+    ],
+    "BRN": [
+     506.181,
+     2022
+    ],
+    "BGR": [
+     2400.569,
+     2023
+    ],
+    "CAN": [
+     5624.269,
+     2022
+    ],
+    "CHL": [
+     707.056,
+     2022
+    ],
+    "CHN": [
+     2107.27,
+     2023
+    ],
+    "COG": [
+     126.969,
+     2022
+    ],
+    "CRI": [
+     507.758,
+     2023
+    ],
+    "HRV": [
+     2440.277,
+     2023
+    ],
+    "CUB": [
+     1968.337,
+     2023
+    ],
+    "CYP": [
+     1686.468,
+     2023
+    ],
+    "CZE": [
+     4504.584,
+     2023
+    ],
+    "DNK": [
+     8837.517,
+     2023
+    ],
+    "DOM": [
+     20.038,
+     2022
+    ],
+    "EGY": [
+     845.318,
+     2023
+    ],
+    "SLV": [
+     55.47,
+     2023
+    ],
+    "EST": [
+     4800.441,
+     2023
+    ],
+    "FIN": [
+     8314.898,
+     2023
+    ],
+    "FRA": [
+     5368.636,
+     2023
+    ],
+    "GEO": [
+     1768.165,
+     2023
+    ],
+    "DEU": [
+     5926.074,
+     2023
+    ],
+    "GRC": [
+     5283.367,
+     2023
+    ],
+    "GTM": [
+     1.446,
+     2023
+    ],
+    "HKG": [
+     5273.744,
+     2023
+    ],
+    "HUN": [
+     4567.083,
+     2023
+    ],
+    "ISL": [
+     5952.52,
+     2023
+    ],
+    "IRN": [
+     2239.74,
+     2021
+    ],
+    "IRQ": [
+     164.285,
+     2021
+    ],
+    "IRL": [
+     5752.797,
+     2023
+    ],
+    "ITA": [
+     2855.125,
+     2023
+    ],
+    "JPN": [
+     5608.631,
+     2023
+    ],
+    "KAZ": [
+     693.058,
+     2023
+    ],
+    "KEN": [
+     200.852,
+     2023
+    ],
+    "KOR": [
+     9471.825,
+     2023
+    ],
+    "KWT": [
+     159.385,
+     2023
+    ],
+    "LVA": [
+     2190.866,
+     2023
+    ],
+    "LSO": [
+     32.238,
+     2023
+    ],
+    "LIE": [
+     18129.752,
+     2023
+    ],
+    "LTU": [
+     3703.863,
+     2023
+    ],
+    "LUX": [
+     5359.066,
+     2023
+    ],
+    "MAC": [
+     3826.965,
+     2023
+    ],
+    "MYS": [
+     1218.33,
+     2022
+    ],
+    "MLI": [
+     26.038,
+     2023
+    ],
+    "MLT": [
+     2354.972,
+     2023
+    ],
+    "MUS": [
+     852.675,
+     2023
+    ],
+    "MEX": [
+     419.444,
+     2023
+    ],
+    "MDA": [
+     717.416,
+     2023
+    ],
+    "MNG": [
+     535.374,
+     2022
+    ],
+    "MMR": [
+     28.009,
+     2023
+    ],
+    "NAM": [
+     224.811,
+     2022
+    ],
+    "NLD": [
+     6563.336,
+     2023
+    ],
+    "NZL": [
+     5435.461,
+     2023
+    ],
+    "MKD": [
+     922.471,
+     2023
+    ],
+    "NOR": [
+     7450.595,
+     2023
+    ],
+    "OMN": [
+     655.149,
+     2023
+    ],
+    "PAK": [
+     473.716,
+     2023
+    ],
+    "PAN": [
+     253.271,
+     2023
+    ],
+    "PRY": [
+     138.792,
+     2023
+    ],
+    "POL": [
+     3675.06,
+     2023
+    ],
+    "PRT": [
+     5983.27,
+     2023
+    ],
+    "QAT": [
+     947.779,
+     2021
+    ],
+    "ROU": [
+     1082.105,
+     2023
+    ],
+    "RUS": [
+     2652.985,
+     2023
+    ],
+    "RWA": [
+     133.12,
+     2023
+    ],
+    "SAU": [
+     1120.626,
+     2023
+    ],
+    "SRB": [
+     2515.315,
+     2023
+    ],
+    "SGP": [
+     8781.743,
+     2022
+    ],
+    "SVK": [
+     3506.62,
+     2023
+    ],
+    "SVN": [
+     5616.349,
+     2023
+    ],
+    "ZAF": [
+     444.163,
+     2022
+    ],
+    "ESP": [
+     3653.803,
+     2023
+    ],
+    "LKA": [
+     94.487,
+     2022
+    ],
+    "SWE": [
+     8910.739,
+     2023
+    ],
+    "CHE": [
+     6107.958,
+     2023
+    ],
+    "SYR": [
+     139.938,
+     2022
+    ],
+    "THA": [
+     1591.967,
+     2023
+    ],
+    "TGO": [
+     41.391,
+     2023
+    ],
+    "TTO": [
+     492.716,
+     2022
+    ],
+    "TUN": [
+     1703.915,
+     2022
+    ],
+    "TUR": [
+     2644.657,
+     2023
+    ],
+    "UGA": [
+     81.306,
+     2023
+    ],
+    "UKR": [
+     586.079,
+     2022
+    ],
+    "ARE": [
+     2606.785,
+     2021
+    ],
+    "USA": [
+     4937.494,
+     2022
+    ],
+    "URY": [
+     902.416,
+     2023
+    ],
+    "UZB": [
+     542.073,
+     2023
+    ],
+    "VEN": [
+     179.96,
+     2023
+    ],
+    "VNM": [
+     836.107,
+     2023
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 713.92711
+    },
+    {
+     "periodo": "2001",
+     "valor": 685.59721
+    },
+    {
+     "periodo": "2002",
+     "valor": 689.51093
+    },
+    {
+     "periodo": "2003",
+     "valor": 715.84326
+    },
+    {
+     "periodo": "2004",
+     "valor": 763.13901
+    },
+    {
+     "periodo": "2005",
+     "valor": 816.8412
+    },
+    {
+     "periodo": "2006",
+     "valor": 888.89168
+    },
+    {
+     "periodo": "2007",
+     "valor": 971.29008
+    },
+    {
+     "periodo": "2008",
+     "valor": 1032.67483
+    },
+    {
+     "periodo": "2009",
+     "valor": 1031.64133
+    },
+    {
+     "periodo": "2010",
+     "valor": 1119.05035
+    },
+    {
+     "periodo": "2011",
+     "valor": 1175.37229
+    },
+    {
+     "periodo": "2012",
+     "valor": 1197.6554
+    },
+    {
+     "periodo": "2013",
+     "valor": 1193.37333
+    },
+    {
+     "periodo": "2014",
+     "valor": 1202.47388
+    },
+    {
+     "periodo": "2015",
+     "valor": 1225.50983
+    },
+    {
+     "periodo": "2016",
+     "valor": 1254.06674
+    },
+    {
+     "periodo": "2017",
+     "valor": 1206.01905
+    },
+    {
+     "periodo": "2018",
+     "valor": 1220.93622
+    },
+    {
+     "periodo": "2019",
+     "valor": 1224.69939
+    },
+    {
+     "periodo": "2020",
+     "valor": 1250.48347
+    },
+    {
+     "periodo": "2021",
+     "valor": 1288.13477
+    },
+    {
+     "periodo": "2022",
+     "valor": 1301.43112
+    },
+    {
+     "periodo": "2023",
+     "valor": 1312.75278
+    }
+   ]
+  },
+  {
    "clave": "internet",
    "area": "innovacion",
    "nombre": "Personas que usan internet",
@@ -35087,6 +42293,7 @@
    "codigo": "IT.NET.USER.ZS",
    "organismo": "Banco Mundial (con datos de la UIT)",
    "url": "https://datos.bancomundial.org/indicador/IT.NET.USER.ZS",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 58,
    "total": 185,
@@ -36028,6 +43235,7 @@
    "codigo": "EG.ELC.ACCS.ZS",
    "organismo": "Banco Mundial",
    "url": "https://datos.bancomundial.org/indicador/EG.ELC.ACCS.ZS",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 140,
    "total": 215,
@@ -37080,6 +44288,1044 @@
    ]
   },
   {
+   "clave": "renovables",
+   "area": "innovacion",
+   "nombre": "Energía renovable en el consumo final",
+   "unidad": "% del consumo",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "EG.FEC.RNEW.ZS",
+   "organismo": "Banco Mundial (con datos de la AIE y la IRENA)",
+   "url": "https://datos.bancomundial.org/indicador/EG.FEC.RNEW.ZS",
+   "nota": null,
+   "anioReferencia": 2022,
+   "puesto": 149,
+   "total": 212,
+   "percentil": 29.9,
+   "valor": 9.2,
+   "anio": 2021,
+   "mediana": 20.1,
+   "lectura": "por debajo de la mitad",
+   "mundo": {
+    "valor": 19.7355641050053,
+    "anio": 2020
+   },
+   "mejorPais": {
+    "pais": "COD",
+    "valor": 96.3,
+    "anio": 2021,
+    "nombre": "Congo, República Democrática del"
+   },
+   "peorPais": {
+    "pais": "SXM",
+    "valor": 0,
+    "anio": 2022,
+    "nombre": "Sint Maarten (Dutch part)"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 46.5,
+     "anio": 2021
+    },
+    "CHL": {
+     "valor": 24.2,
+     "anio": 2021
+    },
+    "MEX": {
+     "valor": 13,
+     "anio": 2021
+    },
+    "URY": {
+     "valor": 57.8,
+     "anio": 2021
+    },
+    "COL": {
+     "valor": 29.7,
+     "anio": 2021
+    },
+    "HUN": {
+     "valor": 15.3,
+     "anio": 2021
+    },
+    "ESP": {
+     "valor": 19,
+     "anio": 2021
+    },
+    "POL": {
+     "valor": 15.2,
+     "anio": 2021
+    },
+    "TUR": {
+     "valor": 12,
+     "anio": 2021
+    },
+    "KOR": {
+     "valor": 3.6,
+     "anio": 2021
+    },
+    "WLD": {
+     "valor": 19.7355641050053,
+     "anio": 2020
+    }
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2021",
+    "datos": 22,
+    "ultimo": 9.2,
+    "peor": {
+     "valor": 7.7,
+     "periodo": "2007"
+    },
+    "mejor": {
+     "valor": 11.6,
+     "periodo": "2002"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 9
+   },
+   "paises": {
+    "AFG": [
+     20,
+     2022
+    ],
+    "ALB": [
+     41.9,
+     2021
+    ],
+    "DZA": [
+     0.1,
+     2021
+    ],
+    "ASM": [
+     0.4,
+     2022
+    ],
+    "AND": [
+     18.7,
+     2022
+    ],
+    "AGO": [
+     52.9,
+     2021
+    ],
+    "ATG": [
+     0.9,
+     2022
+    ],
+    "ARG": [
+     9.2,
+     2021
+    ],
+    "ARM": [
+     9.1,
+     2021
+    ],
+    "ABW": [
+     8.8,
+     2022
+    ],
+    "AUS": [
+     12.3,
+     2021
+    ],
+    "AUT": [
+     36,
+     2021
+    ],
+    "AZE": [
+     1.3,
+     2021
+    ],
+    "BHS": [
+     1.1,
+     2022
+    ],
+    "BHR": [
+     0,
+     2021
+    ],
+    "BGD": [
+     25,
+     2021
+    ],
+    "BRB": [
+     5.5,
+     2022
+    ],
+    "BLR": [
+     8.2,
+     2021
+    ],
+    "BEL": [
+     11.7,
+     2021
+    ],
+    "BLZ": [
+     30.8,
+     2022
+    ],
+    "BEN": [
+     54.5,
+     2021
+    ],
+    "BMU": [
+     0.9,
+     2022
+    ],
+    "BTN": [
+     82.5,
+     2022
+    ],
+    "BOL": [
+     12.8,
+     2021
+    ],
+    "BIH": [
+     36.6,
+     2021
+    ],
+    "BWA": [
+     27.4,
+     2021
+    ],
+    "BRA": [
+     46.5,
+     2021
+    ],
+    "VGB": [
+     1.3,
+     2022
+    ],
+    "BRN": [
+     0,
+     2021
+    ],
+    "BGR": [
+     20.4,
+     2021
+    ],
+    "BFA": [
+     71.4,
+     2022
+    ],
+    "BDI": [
+     83,
+     2022
+    ],
+    "CPV": [
+     21.8,
+     2022
+    ],
+    "KHM": [
+     52.4,
+     2021
+    ],
+    "CMR": [
+     79.2,
+     2021
+    ],
+    "CAN": [
+     23.8,
+     2021
+    ],
+    "CYM": [
+     0,
+     2022
+    ],
+    "CAF": [
+     90.9,
+     2022
+    ],
+    "TCD": [
+     70,
+     2022
+    ],
+    "CHL": [
+     24.2,
+     2021
+    ],
+    "CHN": [
+     15.2,
+     2021
+    ],
+    "COL": [
+     29.7,
+     2021
+    ],
+    "COM": [
+     39.3,
+     2022
+    ],
+    "COD": [
+     96.3,
+     2021
+    ],
+    "COG": [
+     71.4,
+     2021
+    ],
+    "CRI": [
+     34.2,
+     2021
+    ],
+    "CIV": [
+     58.2,
+     2021
+    ],
+    "HRV": [
+     34.1,
+     2021
+    ],
+    "CUB": [
+     20.9,
+     2021
+    ],
+    "CUW": [
+     2.8,
+     2021
+    ],
+    "CYP": [
+     15.6,
+     2021
+    ],
+    "CZE": [
+     17.2,
+     2021
+    ],
+    "DNK": [
+     39.5,
+     2021
+    ],
+    "DJI": [
+     26.9,
+     2022
+    ],
+    "DMA": [
+     8.9,
+     2022
+    ],
+    "DOM": [
+     14.8,
+     2021
+    ],
+    "ECU": [
+     18.9,
+     2021
+    ],
+    "EGY": [
+     6.1,
+     2021
+    ],
+    "SLV": [
+     21.9,
+     2021
+    ],
+    "GNQ": [
+     4.2,
+     2022
+    ],
+    "ERI": [
+     80.7,
+     2021
+    ],
+    "EST": [
+     38,
+     2021
+    ],
+    "SWZ": [
+     64.7,
+     2022
+    ],
+    "ETH": [
+     90.6,
+     2021
+    ],
+    "FRO": [
+     7.9,
+     2022
+    ],
+    "FJI": [
+     28.4,
+     2022
+    ],
+    "FIN": [
+     50.2,
+     2021
+    ],
+    "FRA": [
+     16.2,
+     2021
+    ],
+    "PYF": [
+     7,
+     2022
+    ],
+    "GAB": [
+     91.3,
+     2021
+    ],
+    "GMB": [
+     47.7,
+     2022
+    ],
+    "GEO": [
+     25.2,
+     2021
+    ],
+    "DEU": [
+     17.6,
+     2021
+    ],
+    "GHA": [
+     39,
+     2021
+    ],
+    "GIB": [
+     0,
+     2021
+    ],
+    "GRC": [
+     21.5,
+     2021
+    ],
+    "GRL": [
+     11.7,
+     2022
+    ],
+    "GRD": [
+     10,
+     2022
+    ],
+    "GUM": [
+     6.7,
+     2022
+    ],
+    "GTM": [
+     62.1,
+     2021
+    ],
+    "GIN": [
+     66.6,
+     2022
+    ],
+    "GNB": [
+     87.4,
+     2022
+    ],
+    "GUY": [
+     12.1,
+     2022
+    ],
+    "HTI": [
+     76.7,
+     2021
+    ],
+    "HND": [
+     45.9,
+     2021
+    ],
+    "HKG": [
+     0.4,
+     2021
+    ],
+    "HUN": [
+     15.3,
+     2021
+    ],
+    "ISL": [
+     82.4,
+     2021
+    ],
+    "IND": [
+     34.9,
+     2021
+    ],
+    "IDN": [
+     20.2,
+     2021
+    ],
+    "IRN": [
+     0.9,
+     2021
+    ],
+    "IRQ": [
+     1.1,
+     2021
+    ],
+    "IRL": [
+     12.7,
+     2021
+    ],
+    "IMN": [
+     2.7,
+     2022
+    ],
+    "ISR": [
+     6.2,
+     2021
+    ],
+    "ITA": [
+     17.5,
+     2021
+    ],
+    "JAM": [
+     10.5,
+     2021
+    ],
+    "JPN": [
+     8.8,
+     2021
+    ],
+    "JOR": [
+     11.5,
+     2021
+    ],
+    "KAZ": [
+     2,
+     2021
+    ],
+    "KEN": [
+     67.7,
+     2021
+    ],
+    "KIR": [
+     41.9,
+     2022
+    ],
+    "PRK": [
+     14.7,
+     2021
+    ],
+    "KOR": [
+     3.6,
+     2021
+    ],
+    "KWT": [
+     0.1,
+     2021
+    ],
+    "KGZ": [
+     27.6,
+     2021
+    ],
+    "LAO": [
+     49.2,
+     2022
+    ],
+    "LVA": [
+     44,
+     2021
+    ],
+    "LBN": [
+     6.8,
+     2021
+    ],
+    "LSO": [
+     34.9,
+     2022
+    ],
+    "LBR": [
+     92.8,
+     2022
+    ],
+    "LBY": [
+     3.1,
+     2021
+    ],
+    "LIE": [
+     56.9,
+     2022
+    ],
+    "LTU": [
+     33.2,
+     2021
+    ],
+    "LUX": [
+     20.5,
+     2021
+    ],
+    "MAC": [
+     11,
+     2022
+    ],
+    "MDG": [
+     83.1,
+     2022
+    ],
+    "MWI": [
+     62.9,
+     2022
+    ],
+    "MYS": [
+     7.5,
+     2021
+    ],
+    "MDV": [
+     1.2,
+     2022
+    ],
+    "MLI": [
+     71.1,
+     2022
+    ],
+    "MLT": [
+     8.6,
+     2021
+    ],
+    "MHL": [
+     12.2,
+     2022
+    ],
+    "MRT": [
+     19.6,
+     2022
+    ],
+    "MUS": [
+     8.6,
+     2021
+    ],
+    "MEX": [
+     13,
+     2021
+    ],
+    "FSM": [
+     2,
+     2022
+    ],
+    "MDA": [
+     21.4,
+     2021
+    ],
+    "MNG": [
+     3,
+     2021
+    ],
+    "MNE": [
+     39.6,
+     2021
+    ],
+    "MAR": [
+     10.9,
+     2021
+    ],
+    "MOZ": [
+     76.9,
+     2021
+    ],
+    "MMR": [
+     62.9,
+     2021
+    ],
+    "NAM": [
+     30,
+     2021
+    ],
+    "NRU": [
+     1.9,
+     2022
+    ],
+    "NPL": [
+     73.7,
+     2021
+    ],
+    "NLD": [
+     12.2,
+     2021
+    ],
+    "NCL": [
+     9.6,
+     2022
+    ],
+    "NZL": [
+     28.9,
+     2021
+    ],
+    "NIC": [
+     50.4,
+     2021
+    ],
+    "NER": [
+     79.6,
+     2021
+    ],
+    "NGA": [
+     80.3,
+     2021
+    ],
+    "MKD": [
+     19.5,
+     2021
+    ],
+    "MNP": [
+     0.5,
+     2022
+    ],
+    "NOR": [
+     61.4,
+     2021
+    ],
+    "OMN": [
+     0.1,
+     2021
+    ],
+    "PAK": [
+     41.6,
+     2021
+    ],
+    "PLW": [
+     0.9,
+     2022
+    ],
+    "PAN": [
+     28,
+     2021
+    ],
+    "PNG": [
+     54.6,
+     2022
+    ],
+    "PRY": [
+     58.8,
+     2021
+    ],
+    "PER": [
+     30.6,
+     2021
+    ],
+    "PHL": [
+     28,
+     2021
+    ],
+    "POL": [
+     15.2,
+     2021
+    ],
+    "PRT": [
+     32.3,
+     2021
+    ],
+    "PRI": [
+     2.5,
+     2022
+    ],
+    "QAT": [
+     0,
+     2021
+    ],
+    "ROU": [
+     23.6,
+     2021
+    ],
+    "RUS": [
+     3.5,
+     2021
+    ],
+    "RWA": [
+     79.9,
+     2022
+    ],
+    "WSM": [
+     35.9,
+     2022
+    ],
+    "STP": [
+     42.5,
+     2022
+    ],
+    "SAU": [
+     0.1,
+     2021
+    ],
+    "SEN": [
+     35.4,
+     2021
+    ],
+    "SRB": [
+     27.2,
+     2021
+    ],
+    "SYC": [
+     1.9,
+     2022
+    ],
+    "SLE": [
+     71.6,
+     2022
+    ],
+    "SGP": [
+     1.1,
+     2021
+    ],
+    "SXM": [
+     0,
+     2022
+    ],
+    "SVK": [
+     17.9,
+     2021
+    ],
+    "SVN": [
+     23.4,
+     2021
+    ],
+    "SLB": [
+     50.1,
+     2022
+    ],
+    "SOM": [
+     95.4,
+     2022
+    ],
+    "ZAF": [
+     9.7,
+     2021
+    ],
+    "SSD": [
+     32.4,
+     2021
+    ],
+    "ESP": [
+     19,
+     2021
+    ],
+    "LKA": [
+     48.8,
+     2021
+    ],
+    "KNA": [
+     1.5,
+     2022
+    ],
+    "LCA": [
+     9.7,
+     2022
+    ],
+    "VCT": [
+     5.1,
+     2022
+    ],
+    "SDN": [
+     61,
+     2021
+    ],
+    "SUR": [
+     14.5,
+     2021
+    ],
+    "SWE": [
+     57.9,
+     2021
+    ],
+    "CHE": [
+     27.7,
+     2021
+    ],
+    "SYR": [
+     1.1,
+     2021
+    ],
+    "TJK": [
+     34.9,
+     2021
+    ],
+    "TZA": [
+     78.3,
+     2021
+    ],
+    "THA": [
+     19,
+     2021
+    ],
+    "TLS": [
+     11.4,
+     2022
+    ],
+    "TGO": [
+     75.1,
+     2021
+    ],
+    "TON": [
+     2.3,
+     2022
+    ],
+    "TTO": [
+     0.5,
+     2021
+    ],
+    "TUN": [
+     11.6,
+     2021
+    ],
+    "TUR": [
+     12,
+     2021
+    ],
+    "TKM": [
+     0.1,
+     2021
+    ],
+    "TCA": [
+     0.8,
+     2022
+    ],
+    "TUV": [
+     5.2,
+     2022
+    ],
+    "UGA": [
+     90.9,
+     2022
+    ],
+    "UKR": [
+     8.9,
+     2021
+    ],
+    "ARE": [
+     1,
+     2021
+    ],
+    "GBR": [
+     12.2,
+     2021
+    ],
+    "USA": [
+     10.9,
+     2021
+    ],
+    "URY": [
+     57.8,
+     2021
+    ],
+    "UZB": [
+     1,
+     2021
+    ],
+    "VUT": [
+     25,
+     2022
+    ],
+    "VEN": [
+     33.7,
+     2021
+    ],
+    "VNM": [
+     24.2,
+     2021
+    ],
+    "VIR": [
+     5.9,
+     2022
+    ],
+    "PSE": [
+     15.4,
+     2022
+    ],
+    "YEM": [
+     3.7,
+     2021
+    ],
+    "ZMB": [
+     83,
+     2021
+    ],
+    "ZWE": [
+     82.4,
+     2021
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 9.8
+    },
+    {
+     "periodo": "2001",
+     "valor": 11.5
+    },
+    {
+     "periodo": "2002",
+     "valor": 11.6
+    },
+    {
+     "periodo": "2003",
+     "valor": 10.8
+    },
+    {
+     "periodo": "2004",
+     "valor": 9.3
+    },
+    {
+     "periodo": "2005",
+     "valor": 9.6
+    },
+    {
+     "periodo": "2006",
+     "valor": 9.2
+    },
+    {
+     "periodo": "2007",
+     "valor": 7.7
+    },
+    {
+     "periodo": "2008",
+     "valor": 7.7
+    },
+    {
+     "periodo": "2009",
+     "valor": 8.6
+    },
+    {
+     "periodo": "2010",
+     "valor": 8.8
+    },
+    {
+     "periodo": "2011",
+     "valor": 8.8
+    },
+    {
+     "periodo": "2012",
+     "valor": 8.6
+    },
+    {
+     "periodo": "2013",
+     "valor": 8.9
+    },
+    {
+     "periodo": "2014",
+     "valor": 9.8
+    },
+    {
+     "periodo": "2015",
+     "valor": 9.4
+    },
+    {
+     "periodo": "2016",
+     "valor": 9.4
+    },
+    {
+     "periodo": "2017",
+     "valor": 10.4
+    },
+    {
+     "periodo": "2018",
+     "valor": 10.5
+    },
+    {
+     "periodo": "2019",
+     "valor": 10.7
+    },
+    {
+     "periodo": "2020",
+     "valor": 9.8
+    },
+    {
+     "periodo": "2021",
+     "valor": 9.2
+    }
+   ]
+  },
+  {
    "clave": "oit_participacion_trabajo",
    "area": "empleo",
    "nombre": "Participación de los salarios en el PIB",
@@ -37090,6 +45336,7 @@
    "filtro": {},
    "organismo": "OIT · ILOSTAT",
    "url": "https://ilostat.ilo.org/data/?indicator=LAP_2GDP_NOC_RT_A",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 67,
    "total": 183,
@@ -38009,6 +46256,7 @@
    },
    "organismo": "OIT · ILOSTAT",
    "url": "https://ilostat.ilo.org/data/?indicator=SDG_0831_SEX_ECO_RT_A",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 51,
    "total": 95,
@@ -38558,6 +46806,7 @@
    },
    "organismo": "OIT · ILOSTAT",
    "url": "https://ilostat.ilo.org/data/?indicator=SDG_0831_SEX_ECO_RT_A",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 56,
    "total": 94,
@@ -39104,6 +47353,7 @@
    "organismo": "OIT · ILOSTAT",
    "cambio_anios": 2,
    "url": "https://ilostat.ilo.org/data/?indicator=EMP_TEMP_SEX_ECO_NB_A",
+   "nota": null,
    "anioReferencia": 2025,
    "puesto": 97,
    "total": 106,
@@ -39701,6 +47951,7 @@
    "ventana": 5,
    "minimo": 25,
    "url": "https://ilostat.ilo.org/data/?indicator=INJ_FATL_SEX_MIG_RT_A",
+   "nota": null,
    "anioReferencia": 2023,
    "puesto": 34,
    "total": 54,
@@ -40091,6 +48342,7 @@
    "ventana": 6,
    "minimo": 25,
    "url": "https://ilostat.ilo.org/data/?indicator=ILR_TUMT_NOC_RT_A",
+   "nota": null,
    "anioReferencia": 2019,
    "puesto": 22,
    "total": 114,
@@ -40682,6 +48934,7 @@
    "ventana": 6,
    "minimo": 25,
    "url": "https://ilostat.ilo.org/data/?indicator=ILR_CBCT_NOC_RT_A",
+   "nota": null,
    "anioReferencia": 2019,
    "puesto": 22,
    "total": 81,
@@ -41147,6 +49400,7 @@
    "ambito": "América Latina y el Caribe",
    "organismo": "CEPAL · CEPALSTAT",
    "url": "https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=5556&lang=es",
+   "nota": null,
    "anioReferencia": 2024,
    "puesto": 9,
    "total": 28,
@@ -41410,57 +49664,67 @@
    ]
   },
   {
-   "clave": "cepal_salario_minimo",
+   "clave": "cepal_pobreza",
    "area": "latam",
-   "nombre": "Salario mínimo real",
-   "unidad": "índice",
-   "mejor": "alto",
+   "nombre": "Pobreza",
+   "unidad": "% de la población",
+   "mejor": "bajo",
    "fuente": "cepal",
-   "codigo": "340",
+   "codigo": "3347",
    "minimo": 12,
    "ambito": "América Latina y el Caribe",
    "organismo": "CEPAL · CEPALSTAT",
-   "url": "https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=340&lang=es",
+   "elegir": {
+    "pobreza extrema y pobreza": [
+     "Pobreza"
+    ],
+    "área geográfica": [
+     "Nacional",
+     "Urbana"
+    ]
+   },
+   "url": "https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=3347&lang=es",
+   "nota": "Para la Argentina, la CEPAL tiene dato de: Urbana.",
    "anioReferencia": 2024,
-   "puesto": 19,
-   "total": 20,
-   "percentil": 5.3,
-   "valor": 55.327933532025,
+   "puesto": 14,
+   "total": 16,
+   "percentil": 13.3,
+   "valor": 38.1,
    "anio": 2024,
-   "mediana": 106.549950311074,
-   "lectura": "entre los peores del mundo",
+   "mediana": 26.705,
+   "lectura": "muy por debajo de la mayoría",
    "mundo": null,
    "mejorPais": {
-    "pais": "MEX",
-    "valor": 208.609997449449,
+    "pais": "CHL",
+    "valor": 17.3,
     "anio": 2024,
-    "nombre": "México"
+    "nombre": "Chile"
    },
    "peorPais": {
-    "pais": "HTI",
-    "valor": 47.2906116592629,
+    "pais": "HND",
+    "valor": 62.86301318,
     "anio": 2024,
-    "nombre": "Haití"
+    "nombre": "Honduras"
    },
    "comparados": {
     "BRA": {
-     "valor": 107.001189681542,
+     "valor": 23.1110155,
      "anio": 2024
     },
     "CHL": {
-     "valor": 123.821395550525,
+     "valor": 17.3,
      "anio": 2024
     },
     "MEX": {
-     "valor": 208.609997449449,
+     "valor": 35.4,
      "anio": 2024
     },
     "URY": {
-     "valor": 107.178036403824,
+     "valor": 17.3,
      "anio": 2024
     },
     "COL": {
-     "valor": 115.433790481087,
+     "valor": 31.8,
      "anio": 2024
     },
     "HUN": null,
@@ -41472,138 +49736,714 @@
    },
    "historia": {
     "desde": "2016",
-    "hasta": "2024",
-    "datos": 9,
-    "ultimo": 55.327933532025,
+    "hasta": "2025",
+    "datos": 10,
+    "ultimo": 28.2,
     "peor": {
-     "valor": 55.327933532025,
-     "periodo": "2024"
+     "valor": 42,
+     "periodo": "2020"
     },
     "mejor": {
-     "valor": 112.610868899264,
-     "periodo": "2016"
+     "valor": 25.7,
+     "periodo": "2017"
     },
-    "esPeorHistorico": true,
-    "lugarEntreLosPeores": 1
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 9
    },
    "paises": {
-    "BRA": [
-     107.001,
-     2024
-    ],
-    "CHL": [
-     123.821,
-     2024
-    ],
-    "COL": [
-     115.434,
-     2024
-    ],
-    "CRI": [
-     106.159,
-     2024
-    ],
-    "ECU": [
-     110.913,
-     2024
-    ],
-    "GTM": [
-     94.439,
-     2024
-    ],
-    "HND": [
-     101.651,
-     2024
-    ],
-    "MEX": [
-     208.61,
+    "ARG": [
+     38.1,
      2024
     ],
     "BOL": [
-     106.94,
+     37.65,
      2024
     ],
-    "NIC": [
-     98.169,
+    "BRA": [
+     23.111,
      2024
     ],
-    "PAN": [
-     100.631,
+    "CHL": [
+     17.3,
      2024
     ],
-    "PER": [
-     88.876,
+    "COL": [
+     31.8,
      2024
     ],
-    "PRY": [
-     101.281,
+    "CRI": [
+     17.952,
+     2024
+    ],
+    "ECU": [
+     27.992,
      2024
     ],
     "SLV": [
-     103.411,
+     25.81,
      2024
     ],
-    "URY": [
-     107.178,
+    "GTM": [
+     56,
+     2023
+    ],
+    "HND": [
+     62.863,
      2024
     ],
-    "HTI": [
-     47.291,
+    "MEX": [
+     35.4,
+     2024
+    ],
+    "PAN": [
+     21.7,
+     2023
+    ],
+    "PRY": [
+     19.604,
+     2024
+    ],
+    "PER": [
+     27.6,
      2024
     ],
     "DOM": [
-     121.303,
+     19,
      2024
     ],
-    "JAM": [
-     152.004,
-     2024
-    ],
-    "TTO": [
-     118.4,
-     2024
-    ],
-    "ARG": [
-     55.328,
+    "URY": [
+     17.3,
      2024
     ]
    },
    "serie": [
     {
      "periodo": "2016",
-     "valor": 112.610868899264
+     "valor": 30.3
     },
     {
      "periodo": "2017",
-     "valor": 110.676986819985
+     "valor": 25.7
     },
     {
      "periodo": "2018",
-     "valor": 100
+     "valor": 32
     },
     {
      "periodo": "2019",
-     "valor": 88.9739834602393
+     "valor": 35.5
     },
     {
      "periodo": "2020",
-     "valor": 80.8996241927007
+     "valor": 42
     },
     {
      "periodo": "2021",
-     "valor": 76.5538849293895
+     "valor": 37.3
     },
     {
      "periodo": "2022",
-     "valor": 79.4327552170014
+     "valor": 39.2
     },
     {
      "periodo": "2023",
-     "valor": 78.801394686586
+     "valor": 41.7
     },
     {
      "periodo": "2024",
-     "valor": 55.327933532025
+     "valor": 38.1
+    },
+    {
+     "periodo": "2025",
+     "valor": 28.2
+    }
+   ]
+  },
+  {
+   "clave": "cepal_gini",
+   "area": "latam",
+   "nombre": "Desigualdad del ingreso (Gini)",
+   "unidad": "índice 0 a 1",
+   "mejor": "bajo",
+   "fuente": "cepal",
+   "codigo": "3289",
+   "minimo": 12,
+   "ambito": "América Latina y el Caribe",
+   "organismo": "CEPAL · CEPALSTAT",
+   "elegir": {
+    "área geográfica": [
+     "Nacional",
+     "Urbana"
+    ]
+   },
+   "url": "https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=3289&lang=es",
+   "nota": "Para la Argentina, la CEPAL tiene dato de: Urbana.",
+   "anioReferencia": 2025,
+   "puesto": 1,
+   "total": 16,
+   "percentil": 100,
+   "valor": 0.388,
+   "anio": 2025,
+   "mediana": 0.437,
+   "lectura": "entre los mejores del mundo",
+   "mundo": null,
+   "mejorPais": {
+    "pais": "ARG",
+    "valor": 0.388,
+    "anio": 2025,
+    "nombre": "Argentina"
+   },
+   "peorPais": {
+    "pais": "COL",
+    "valor": 0.539,
+    "anio": 2025,
+    "nombre": "Colombia"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 0.509,
+     "anio": 2025
+    },
+    "CHL": {
+     "valor": 0.441,
+     "anio": 2024
+    },
+    "MEX": {
+     "valor": 0.432,
+     "anio": 2024
+    },
+    "URY": {
+     "valor": 0.396,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 0.539,
+     "anio": 2025
+    },
+    "HUN": null,
+    "ESP": null,
+    "POL": null,
+    "TUR": null,
+    "KOR": null,
+    "WLD": null
+   },
+   "historia": {
+    "desde": "2000",
+    "hasta": "2025",
+    "datos": 25,
+    "ultimo": 0.388,
+    "peor": {
+     "valor": 0.504,
+     "periodo": "2001"
+    },
+    "mejor": {
+     "valor": 0.362,
+     "periodo": "2022"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 17
+   },
+   "paises": {
+    "ARG": [
+     0.388,
+     2025
+    ],
+    "BOL": [
+     0.423,
+     2025
+    ],
+    "BRA": [
+     0.509,
+     2025
+    ],
+    "CHL": [
+     0.441,
+     2024
+    ],
+    "COL": [
+     0.539,
+     2025
+    ],
+    "CRI": [
+     0.466,
+     2025
+    ],
+    "ECU": [
+     0.433,
+     2025
+    ],
+    "SLV": [
+     0.407,
+     2025
+    ],
+    "GTM": [
+     0.494,
+     2023
+    ],
+    "HND": [
+     0.459,
+     2025
+    ],
+    "MEX": [
+     0.432,
+     2024
+    ],
+    "PAN": [
+     0.498,
+     2025
+    ],
+    "PRY": [
+     0.446,
+     2025
+    ],
+    "PER": [
+     0.405,
+     2025
+    ],
+    "DOM": [
+     0.398,
+     2025
+    ],
+    "URY": [
+     0.396,
+     2025
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "2000",
+     "valor": 0.484
+    },
+    {
+     "periodo": "2001",
+     "valor": 0.504
+    },
+    {
+     "periodo": "2002",
+     "valor": 0.497
+    },
+    {
+     "periodo": "2003",
+     "valor": 0.468
+    },
+    {
+     "periodo": "2004",
+     "valor": 0.44
+    },
+    {
+     "periodo": "2005",
+     "valor": 0.438
+    },
+    {
+     "periodo": "2006",
+     "valor": 0.434
+    },
+    {
+     "periodo": "2007",
+     "valor": 0.436
+    },
+    {
+     "periodo": "2008",
+     "valor": 0.417
+    },
+    {
+     "periodo": "2009",
+     "valor": 0.413
+    },
+    {
+     "periodo": "2010",
+     "valor": 0.411
+    },
+    {
+     "periodo": "2011",
+     "valor": 0.406
+    },
+    {
+     "periodo": "2012",
+     "valor": 0.395
+    },
+    {
+     "periodo": "2013",
+     "valor": 0.393
+    },
+    {
+     "periodo": "2014",
+     "valor": 0.393
+    },
+    {
+     "periodo": "2016",
+     "valor": 0.385
+    },
+    {
+     "periodo": "2017",
+     "valor": 0.381
+    },
+    {
+     "periodo": "2018",
+     "valor": 0.381
+    },
+    {
+     "periodo": "2019",
+     "valor": 0.394
+    },
+    {
+     "periodo": "2020",
+     "valor": 0.382
+    },
+    {
+     "periodo": "2021",
+     "valor": 0.378
+    },
+    {
+     "periodo": "2022",
+     "valor": 0.362
+    },
+    {
+     "periodo": "2023",
+     "valor": 0.387
+    },
+    {
+     "periodo": "2024",
+     "valor": 0.385
+    },
+    {
+     "periodo": "2025",
+     "valor": 0.388
+    }
+   ]
+  },
+  {
+   "clave": "cepal_deuda_publica",
+   "area": "latam",
+   "nombre": "Deuda pública del gobierno central",
+   "unidad": "% del PIB",
+   "mejor": "bajo",
+   "fuente": "cepal",
+   "codigo": "1240",
+   "minimo": 12,
+   "ambito": "América Latina y el Caribe",
+   "organismo": "CEPAL · CEPALSTAT",
+   "elegir": {
+    "cobertura institucional": [
+     "Gobierno central"
+    ],
+    "clasificación": [
+     "Total deuda pública (clasificación por residencia)"
+    ]
+   },
+   "url": "https://statistics.cepal.org/portal/cepalstat/dashboard.html?indicator_id=1240&lang=es",
+   "nota": null,
+   "anioReferencia": 2025,
+   "puesto": 24,
+   "total": 29,
+   "percentil": 17.9,
+   "valor": 78.113,
+   "anio": 2025,
+   "mediana": 62.827,
+   "lectura": "muy por debajo de la mayoría",
+   "mundo": null,
+   "mejorPais": {
+    "pais": "PER",
+    "valor": 27.228,
+    "anio": 2025,
+    "nombre": "Perú"
+   },
+   "peorPais": {
+    "pais": "SUR",
+    "valor": 108.7,
+    "anio": 2025,
+    "nombre": "Suriname"
+   },
+   "comparados": {
+    "BRA": {
+     "valor": 78.642,
+     "anio": 2025
+    },
+    "CHL": {
+     "valor": 41.5,
+     "anio": 2025
+    },
+    "MEX": {
+     "valor": 49.2,
+     "anio": 2025
+    },
+    "URY": {
+     "valor": 60.54,
+     "anio": 2025
+    },
+    "COL": {
+     "valor": 64.446,
+     "anio": 2025
+    },
+    "HUN": null,
+    "ESP": null,
+    "POL": null,
+    "TUR": null,
+    "KOR": null,
+    "WLD": null
+   },
+   "historia": {
+    "desde": "1994",
+    "hasta": "2025",
+    "datos": 32,
+    "ultimo": 78.113,
+    "peor": {
+     "valor": 166.4,
+     "periodo": "2002"
+    },
+    "mejor": {
+     "valor": 26.5,
+     "periodo": "1994"
+    },
+    "esPeorHistorico": false,
+    "lugarEntreLosPeores": 12
+   },
+   "paises": {
+    "ARG": [
+     78.113,
+     2025
+    ],
+    "BOL": [
+     68.8,
+     2023
+    ],
+    "BRA": [
+     78.642,
+     2025
+    ],
+    "CHL": [
+     41.5,
+     2025
+    ],
+    "COL": [
+     64.446,
+     2025
+    ],
+    "CRI": [
+     60.4,
+     2025
+    ],
+    "DOM": [
+     48.04,
+     2025
+    ],
+    "ECU": [
+     60.718,
+     2025
+    ],
+    "SLV": [
+     55.434,
+     2025
+    ],
+    "GTM": [
+     27.253,
+     2025
+    ],
+    "HND": [
+     45.27,
+     2025
+    ],
+    "MEX": [
+     49.2,
+     2025
+    ],
+    "NIC": [
+     32.564,
+     2025
+    ],
+    "PAN": [
+     65.596,
+     2025
+    ],
+    "PRY": [
+     36.067,
+     2025
+    ],
+    "PER": [
+     27.228,
+     2025
+    ],
+    "URY": [
+     60.54,
+     2025
+    ],
+    "ATG": [
+     57.821,
+     2025
+    ],
+    "BHS": [
+     75.156,
+     2025
+    ],
+    "BRB": [
+     94.132,
+     2025
+    ],
+    "BLZ": [
+     65.811,
+     2025
+    ],
+    "DMA": [
+     89.261,
+     2025
+    ],
+    "GRD": [
+     69.439,
+     2025
+    ],
+    "KNA": [
+     40.955,
+     2025
+    ],
+    "VCT": [
+     107.9,
+     2025
+    ],
+    "LCA": [
+     72.669,
+     2025
+    ],
+    "SUR": [
+     108.7,
+     2025
+    ],
+    "TTO": [
+     70.281,
+     2025
+    ],
+    "JAM": [
+     62.827,
+     2025
+    ]
+   },
+   "serie": [
+    {
+     "periodo": "1994",
+     "valor": 26.5
+    },
+    {
+     "periodo": "1995",
+     "valor": 28.7
+    },
+    {
+     "periodo": "1996",
+     "valor": 30.4
+    },
+    {
+     "periodo": "1997",
+     "valor": 29.6
+    },
+    {
+     "periodo": "1998",
+     "valor": 31.9
+    },
+    {
+     "periodo": "1999",
+     "valor": 36.3
+    },
+    {
+     "periodo": "2000",
+     "valor": 45.7
+    },
+    {
+     "periodo": "2001",
+     "valor": 53.7
+    },
+    {
+     "periodo": "2002",
+     "valor": 166.4
+    },
+    {
+     "periodo": "2003",
+     "valor": 138.7
+    },
+    {
+     "periodo": "2004",
+     "valor": 118.1
+    },
+    {
+     "periodo": "2005",
+     "valor": 80.5
+    },
+    {
+     "periodo": "2006",
+     "valor": 70.6
+    },
+    {
+     "periodo": "2007",
+     "valor": 62.1
+    },
+    {
+     "periodo": "2008",
+     "valor": 53.8
+    },
+    {
+     "periodo": "2009",
+     "valor": 55.4
+    },
+    {
+     "periodo": "2010",
+     "valor": 43.5
+    },
+    {
+     "periodo": "2011",
+     "valor": 38.9
+    },
+    {
+     "periodo": "2012",
+     "valor": 40.4
+    },
+    {
+     "periodo": "2013",
+     "valor": 43.5
+    },
+    {
+     "periodo": "2014",
+     "valor": 44.7
+    },
+    {
+     "periodo": "2015",
+     "valor": 52.6
+    },
+    {
+     "periodo": "2016",
+     "valor": 53.3
+    },
+    {
+     "periodo": "2017",
+     "valor": 56.5
+    },
+    {
+     "periodo": "2018",
+     "valor": 85.2
+    },
+    {
+     "periodo": "2019",
+     "valor": 89.8
+    },
+    {
+     "periodo": "2020",
+     "valor": 103.8
+    },
+    {
+     "periodo": "2021",
+     "valor": 80.8
+    },
+    {
+     "periodo": "2022",
+     "valor": 84.8
+    },
+    {
+     "periodo": "2023",
+     "valor": 155.7
+    },
+    {
+     "periodo": "2024",
+     "valor": 82.6
+    },
+    {
+     "periodo": "2025",
+     "valor": 78.113
     }
    ]
   }
@@ -45697,52 +54537,12 @@
  ],
  "errores": [
   {
-   "indicador": "participacion",
-   "error": "The operation was aborted due to timeout en https://api.worldbank.org/v2/country/all/indicator/SL.TLF.CACT.ZS?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "empleo_vulnerable",
-   "error": "The operation was aborted due to timeout en https://api.worldbank.org/v2/country/all/indicator/SL.EMP.VULN.ZS?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "tasa_prestamo",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/FR.INR.LEND?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "reservas",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/FI.RES.TOTL.MO?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "ingreso_top10",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/SI.DST.10TH.10?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "mortalidad_5",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/SH.DYN.MORT?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "gasto_educacion",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/SE.XPD.TOTL.GD.ZS?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "secundaria",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/SE.SEC.ENRR?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "investigadores",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/SP.POP.SCIE.RD.P6?format=json&per_page=20000&date=2000:2026"
-  },
-  {
-   "indicador": "renovables",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/EG.FEC.RNEW.ZS?format=json&per_page=20000&date=2000:2026"
-  },
-  {
    "indicador": "efectividad_gobierno",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/GE.EST?format=json&per_page=20000&date=2000:2026&source=3"
+   "error": "menos de 40 países con dato en un mismo año"
   },
   {
    "indicador": "calidad_regulatoria",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/RQ.EST?format=json&per_page=20000&date=2000:2026&source=3"
+   "error": "menos de 40 países con dato en un mismo año"
   },
   {
    "indicador": "estado_derecho",
@@ -45754,31 +54554,11 @@
   },
   {
    "indicador": "estabilidad_politica",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/PV.EST?format=json&per_page=20000&date=2000:2026&source=3"
+   "error": "menos de 40 países con dato en un mismo año"
   },
   {
    "indicador": "voz",
-   "error": "HTTP 502 en https://api.worldbank.org/v2/country/all/indicator/VA.EST?format=json&per_page=20000&date=2000:2026&source=3"
-  },
-  {
-   "indicador": "cepal_ocupados_manufactura",
-   "error": "menos de 12 países con dato en un mismo año"
-  },
-  {
-   "indicador": "cepal_pobreza",
-   "error": "menos de 12 países con dato en un mismo año"
-  },
-  {
-   "indicador": "cepal_gini",
-   "error": "la Argentina no tiene dato en la ventana"
-  },
-  {
-   "indicador": "cepal_informalidad",
-   "error": "menos de 12 países con dato en un mismo año"
-  },
-  {
-   "indicador": "cepal_deuda_publica",
-   "error": "menos de 12 países con dato en un mismo año"
+   "error": "menos de 40 países con dato en un mismo año"
   }
  ]
 }
