@@ -39,6 +39,9 @@
 .mu-serie h3{margin:0;font-size:15px}
 .mu-serie .val{font-family:var(--display);font-size:34px;line-height:1}
 .mu-serie svg{width:100%;height:90px}
+.mu-pm{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.mu-pm ol{margin:6px 0 0;padding-left:22px}.mu-pm li{margin:0 0 10px;line-height:1.35}.mu-pm li small{color:var(--muted)}
+@media print{body.imprimir-todo .nav,body.imprimir-todo .no-imp,body.imprimir-todo .mu-form,body.imprimir-todo #informe,body.imprimir-todo #comparar,body.imprimir-todo #errores{display:none!important}body.imprimir-todo .mu-panel{break-inside:avoid-page}}
 .mu-var-desde{font-size:13px;margin:2px 0 4px}
 .mu-alerta{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--bad);color:#fff}
 .mu-tabla{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
@@ -80,6 +83,7 @@
     </a>
     <ul>
       <li><a href="#informe">Pedir informe</a></li>
+      <li><a href="#peores">Peores y mejores</a></li>
       <li><a href="#areas">Áreas</a></li>
       <li><a href="#informes">Informes</a></li>
       <li><a href="#capacidad">Capacidad</a></li>
@@ -97,9 +101,16 @@
       <h1>Argentina frente al <em>mundo</em></h1>
       <p class="mu-lead">Dónde está la Argentina entre todos los países del mundo en industria, empleo, economía y desarrollo. Cada número viene de un organismo internacional o del INDEC, con su año y su enlace.</p>
       <p class="mu-meta" id="estado">Cargando datos…</p>
+      <p class="no-imp"><button type="button" class="mu-btn pri" id="b-pdf-todo">Bajar el informe general en PDF</button></p>
     </div>
     <div class="mu-big" id="general" aria-live="polite"></div>
   </header>
+
+  <section class="mu-panel" id="peores">
+    <h2>Dónde peor y dónde mejor está la Argentina</h2>
+    <p>Los indicadores ordenados por el lugar que ocupa la Argentina. El percentil 0 es el peor país y 100 el mejor. Sirve como punto de partida para el análisis: el dato solo no explica las causas.</p>
+    <div class="mu-pm"><div><h3>Los 10 más bajos</h3><ol id="lista-peores"></ol></div><div><h3>Los 5 más altos</h3><ol id="lista-mejores"></ol></div></div>
+  </section>
 
   <section class="mu-panel" id="informe">
     <h2>Pedir un informe</h2>
@@ -189,6 +200,17 @@
       return '<div class="mu-area"><h3>' + esc(a.nombre) + '</h3><div class="pct" style="color:' + colorP(a.percentil) + '">' + f(a.percentil) + '</div>' + barra(a.percentil) +
         '<small style="color:var(--muted)">' + (a.regional ? 'Solo entre países de América Latina y el Caribe; no entra en el índice general. ' : '') + a.indicadores + ' indicadores' + (peor ? ' · más bajo: ' + esc(peor.nombre.charAt(0).toLowerCase() + peor.nombre.slice(1)) + ' (puesto ' + peor.puesto + ' de ' + peor.total + ')' : '') + '</small></div>';
     }).join("");
+  }
+
+  function peores() {
+    var con = D.indicadores.filter(function (i) { return i.percentil != null; }).sort(function (a, b) { return a.percentil - b.percentil; });
+    function item(i) {
+      return '<li><b>' + esc(i.nombre) + '</b>: puesto ' + i.puesto + ' de ' + i.total + (i.ambito ? ' en América Latina' : '') +
+        ' <span class="n" style="color:' + colorP(i.percentil) + '">(percentil ' + f(i.percentil, 0) + ')</span><br><small>' + f(i.valor) + ' ' + esc(i.unidad) + ' en ' + i.anio +
+        ' · peor: ' + esc(i.peorPais.nombre) + ' · mejor: ' + esc(i.mejorPais.nombre) + ' · ' + esc(i.organismo) + '</small></li>';
+    }
+    $("lista-peores").innerHTML = con.slice(0, 10).map(item).join("");
+    $("lista-mejores").innerHTML = con.slice(-5).reverse().map(item).join("");
   }
 
   function informes() {
@@ -354,7 +376,8 @@
   fetch("data/mundo/indice.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (j) {
     D = j;
     $("estado").textContent = "Actualizado el " + D.actualizado.split("-").reverse().join("/") + " · " + D.indicadores.length + " indicadores internacionales · " + (D.argentina || []).length + " series argentinas (INDEC y SIPA)";
-    general(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme();
+    $("b-pdf-todo").onclick = function () { document.body.classList.add("imprimir-todo"); window.print(); setTimeout(function () { document.body.classList.remove("imprimir-todo"); }, 500); };
+    general(); peores(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme();
     $("sel").innerHTML = D.indicadores.map(function (i) { return '<option value="' + esc(i.clave) + '">' + esc(i.nombre) + '</option>'; }).join("");
     $("sel").onchange = function () { comparar(this.value); };
     var peor = D.indicadores.slice().sort(function (a, b) { return a.percentil - b.percentil; })[0];
