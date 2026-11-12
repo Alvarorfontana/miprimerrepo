@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-05T20:11:23.203Z",
+ "fecha": "2026-11-12T22:04:44.549Z",
  "comex_home": {
   "status": 200
  },
@@ -50,11 +50,11 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::xsmrx-1793909488493-0838644604e5"
+  "muestra": "Forbidden\n\nForbidden\niad1::cq9bq-1794521089811-fc4c2e0435c6"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\niad1::7kvbq-1793909488815-481e7621d862"
+  "muestra": "Forbidden\n\nForbidden\niad1::sb9g8-1794521090347-3977ff3b27e5"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
@@ -280,7 +280,7 @@
    {
     "id": "registro-fabricantes-reparadores-recargadores-extintores",
     "titulo": "Registro de Fabricantes, Reparadores y Recargadores de Extintores.",
-    "actualizado": "2026-11-03T13:28:20.349515",
+    "actualizado": "2026-11-03T13:28:20.698011",
     "recursos": [
      {
       "nombre": "Registro de Fabricantes, Reparadores y Recargadores de Extintores (XLSX)",
@@ -297,7 +297,7 @@
    {
     "id": "fabric-rep-instal-mant-inst-fijas-contra-incendios",
     "titulo": "Fabricantes, Reparadores, Instaladores y Mantenedores de Instalaciones Fijas contra Incendios.",
-    "actualizado": "2026-11-03T13:27:12.244798",
+    "actualizado": "2026-11-03T13:27:12.606278",
     "recursos": [
      {
       "nombre": "Fabricantes, reparadores, mantenedores e instaladores - Instalaciones Fijas Contra Incendios (XLSX)",
@@ -376,7 +376,7 @@
    {
     "id": "establecimientos-educativos",
     "titulo": "Establecimientos Educativos",
-    "actualizado": "2026-11-03T13:29:53.138297",
+    "actualizado": "2026-11-03T13:29:53.546299",
     "recursos": [
      {
       "nombre": "Establecimientos Educativos (XLSX)",
@@ -662,7 +662,7 @@
    {
     "id": "centros-de-accion-familiar",
     "titulo": "Centros de Acción Familiar",
-    "actualizado": "2026-11-03T13:29:20.393738",
+    "actualizado": "2026-11-03T13:29:20.709580",
     "recursos": [
      {
       "nombre": "Centros de acción familiar (CSV)",
@@ -864,7 +864,7 @@
    {
     "id": "centros-desarrollo-infantil",
     "titulo": "Centros de Desarrollo Infantil.",
-    "actualizado": "2026-11-03T13:29:24.101077",
+    "actualizado": "2026-11-03T13:29:24.448911",
     "recursos": [
      {
       "nombre": "Centros de Desarrollo Infantil (CSV)",

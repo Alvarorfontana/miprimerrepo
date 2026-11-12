@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-05",
+ "actualizado": "2026-11-12",
  "fuentes": [
   {
    "clave": "oede-provincial",
@@ -56,14 +56,10 @@
    "clave": "eil",
    "nombre": "Encuesta de Indicadores Laborales (EIL) · altas, bajas y expectativas por rama",
    "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/encuesta-de-indicadores-laborales",
-   "archivos": [
-    {
-     "archivo": "data/fuentes/eil/eil_2608_estadisticas.xlsx",
-     "url": "https://www.argentina.gob.ar/sites/default/files/eil_2608_estadisticas.xlsx",
-     "mb": 13.87
-    }
-   ],
-   "errores": []
+   "archivos": [],
+   "errores": [
+    "https://back.argentina.gob.ar/sites/default/files/eil_2609_estadisticas.xlsx: HTTP 403"
+   ]
   },
   {
    "clave": "sipa",
@@ -99,7 +95,7 @@
     {
      "archivo": "data/fuentes/indec-ipi/sh_ipi_manufacturero_2026.xls",
      "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_ipi_manufacturero_2026.xls",
-     "mb": 1
+     "mb": 1.01
     }
    ],
    "errores": []

@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-11-05",
+ "actualizado": "2026-11-12",
  "fuente": "OpenStreetMap (ODbL), vía Overpass",
- "servidor": "https://overpass-api.de/api/interpreter, https://overpass.private.coffee/api/interpreter",
+ "servidor": "https://overpass-api.de/api/interpreter, https://overpass.kumi.systems/api/interpreter, https://overpass.private.coffee/api/interpreter",
  "nota": "Candidatas detectadas por nombre o etiqueta industrial. Hay que confirmar cuáles son plantas metalúrgicas activas y si están representadas por la UOM.",
  "plantas": [
   {
@@ -1583,16 +1583,6 @@
    "lat": -31.49953,
    "lon": -68.59763,
    "url": "https://www.openstreetmap.org/way/1417955234"
-  },
-  {
-   "id": "osm-w1540877148",
-   "nombre": "Industrias Metalúrgicas Jaime",
-   "operador": "",
-   "tipo": "industrial",
-   "localidad": "",
-   "lat": -31.48656,
-   "lon": -68.52168,
-   "url": "https://www.openstreetmap.org/way/1540877148"
   },
   {
    "id": "osm-r8733392",
