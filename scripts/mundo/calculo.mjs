@@ -125,3 +125,51 @@ export function leerFmi(json, codigo, anioActual, paisesValidos) {
   }
   return out;
 }
+
+// ---- Regiones para comparar ----
+const SUDAMERICA = ["ARG", "BOL", "BRA", "CHL", "COL", "ECU", "GUY", "PRY", "PER", "SUR", "URY", "VEN"];
+const NORTEAMERICA = ["USA", "CAN", "MEX"];
+const NORTE_AFRICA = ["DZA", "EGY", "LBY", "MAR", "TUN"];
+const ASIA_CENTRAL = ["KAZ", "KGZ", "TJK", "TKM", "UZB", "AFG"];
+const OCEANIA = ["AUS", "NZL", "PNG", "FJI", "SLB", "VUT", "WSM", "TON", "KIR", "FSM", "MHL", "PLW", "NRU", "TUV"];
+export const GRUPOS_FIJOS = {
+  mercosur: { nombre: "Mercosur", paises: ["ARG", "BRA", "PRY", "URY", "BOL"] },
+  g20: { nombre: "G20", paises: ["ARG", "AUS", "BRA", "CAN", "CHN", "FRA", "DEU", "IND", "IDN", "ITA", "JPN", "KOR", "MEX", "RUS", "SAU", "ZAF", "TUR", "GBR", "USA"] },
+};
+
+/** Región de cada país a partir de la región del Banco Mundial (id) y su código. */
+export function regionDe(iso, regionBM) {
+  if (SUDAMERICA.includes(iso)) return "sudamerica";
+  if (NORTEAMERICA.includes(iso)) return "norteamerica";
+  if (regionBM === "LCN") return "centroamerica";
+  if (OCEANIA.includes(iso)) return "oceania";
+  if (iso === "TUR") return "medio_oriente";
+  if (NORTE_AFRICA.includes(iso) || regionBM === "SSF") return "africa";
+  if (regionBM === "MEA") return "medio_oriente";
+  if (ASIA_CENTRAL.includes(iso) || regionBM === "EAS" || regionBM === "SAS") return "asia";
+  if (regionBM === "ECS") return "europa";
+  if (regionBM === "NAC") return "norteamerica";
+  return "otros";
+}
+
+export const REGIONES = {
+  mundo: "Todo el mundo",
+  sudamerica: "América del Sur",
+  centroamerica: "América Central y el Caribe",
+  norteamerica: "América del Norte",
+  europa: "Europa",
+  medio_oriente: "Medio Oriente y Asia Menor (incluye Turquía)",
+  africa: "África",
+  asia: "Asia (China, Japón, Corea, India, Sudeste y Asia Central)",
+  oceania: "Oceanía (Australia, Nueva Zelanda y el Pacífico)",
+  mercosur: "Mercosur",
+  g20: "G20",
+};
+
+/** Puesto de un país dentro de un grupo de países (lista de ISO3), con el mismo criterio que posicion(). */
+export function posicionEnGrupo(ultimos, pais, mejor, grupo) {
+  const g = new Set(grupo);
+  g.add(pais); // la Argentina siempre entra en la comparación
+  const sub = Object.fromEntries(Object.entries(ultimos).filter(([k]) => g.has(k)));
+  return posicion(sub, pais, mejor);
+}

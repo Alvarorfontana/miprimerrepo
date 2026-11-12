@@ -6,6 +6,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import {
   ultimosValores, anioDeReferencia, posicion, historia, promedios, lectura, leerBancoMundial, leerFmi,
+  regionDe, REGIONES, GRUPOS_FIJOS,
 } from "./calculo.mjs";
 
 const AQUI = new URL("./", import.meta.url);
@@ -31,16 +32,16 @@ async function pedir(url, intentos = 3) {
 
 // Países (sin agregados regionales) con su nombre en español.
 const paises = await pedir(`${BM}/es/country?format=json&per_page=400`);
-const validos = new Set(), nombres = { WLD: "Mundo" };
+const validos = new Set(), nombres = { WLD: "Mundo" }, region = {};
 for (const p of paises[1] || []) {
   if (p.region?.value === "Agregados" || p.region?.id === "NA" || p.region?.value === "Aggregates") continue;
-  validos.add(p.id); nombres[p.id] = p.name;
+  validos.add(p.id); nombres[p.id] = p.name; region[p.id] = regionDe(p.id, p.region?.id);
 }
 console.log(`Países: ${validos.size}`);
 
 async function datosDe(ind) {
   if (ind.fuente === "bm") {
-    const r = await pedir(`${BM}/country/all/indicator/${ind.codigo}?format=json&per_page=20000&date=2000:${ANIO}`);
+    const r = await pedir(`${BM}/country/all/indicator/${ind.codigo}?format=json&per_page=20000&date=2000:${ANIO}${ind.source ? `&source=${ind.source}` : ""}`);
     return { valores: leerBancoMundial(r[1], validos), url: `https://datos.bancomundial.org/indicador/${ind.codigo}` };
   }
   if (ind.fuente === "fmi") {
@@ -67,6 +68,8 @@ for (const ind of conf.indicadores) {
       mejorPais: { ...pos.primero, nombre: nombres[pos.primero.pais] }, peorPais: { ...pos.ultimo, nombre: nombres[pos.ultimo.pais] },
       comparados: Object.fromEntries(conf.comparar_con.map(c => [c, c === "WLD" ? delMundo || null : ult[c] || null])),
       historia: historia(serieAR, ind.mejor),
+      // Último valor de cada país, compacto [valor, año], para los informes por región de la página.
+      paises: Object.fromEntries(Object.entries(ult).map(([k, d]) => [k, [+d.valor.toFixed(3), d.anio]])),
       serie: serieAR.sort((a, b) => (a.periodo < b.periodo ? -1 : 1)),
     });
     console.log(`${ind.clave}: puesto ${pos.puesto} de ${pos.total} (${anio})`);
@@ -98,7 +101,8 @@ await writeFile(SALIDA, JSON.stringify({
   metodo: "Puesto y percentil de la Argentina en cada indicador (último dato de cada país en una ventana de " +
     `${conf.ventana_anios} años). Promedio simple de percentiles por área y de las áreas. No se suman valores de indicadores distintos.`,
   general, lecturaGeneral: lectura(general), porArea,
-  comparar_con: conf.comparar_con, nombres: Object.fromEntries(conf.comparar_con.map(c => [c, nombres[c] || c])),
+  comparar_con: conf.comparar_con, nombres,
+  regiones: REGIONES, regionDePais: region, grupos: GRUPOS_FIJOS,
   indicadores: filas, argentina: seriesAR, informes: informes.informes, errores,
 }, null, 1));
 console.log(`Listo: ${filas.length} indicadores, ${seriesAR.length} series argentinas, ${errores.length} errores. Índice general: ${general}`);

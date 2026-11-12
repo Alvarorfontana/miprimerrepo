@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   ultimosValores, anioDeReferencia, posicion, historia, promedios, lectura, leerBancoMundial, leerFmi,
+  regionDe, posicionEnGrupo,
 } from "./calculo.mjs";
 
 const valores = {
@@ -75,4 +76,21 @@ test("lector del Banco Mundial deja afuera los agregados", () => {
 test("lector del FMI deja afuera las proyecciones", () => {
   const j = { values: { LUR: { ARG: { 2024: 7.2, 2025: 7.0, 2026: 6.8 }, EUQ: { 2024: 6 } } } };
   assert.deepEqual(leerFmi(j, "LUR", 2026, new Set(["ARG"])), { ARG: { 2024: 7.2, 2025: 7.0 } });
+});
+
+test("regiones: Turquía va con Medio Oriente, México con América del Norte, Egipto con África", () => {
+  assert.equal(regionDe("TUR", "ECS"), "medio_oriente");
+  assert.equal(regionDe("MEX", "LCN"), "norteamerica");
+  assert.equal(regionDe("CRI", "LCN"), "centroamerica");
+  assert.equal(regionDe("EGY", "MEA"), "africa");
+  assert.equal(regionDe("JPN", "EAS"), "asia");
+  assert.equal(regionDe("AUS", "EAS"), "oceania");
+  assert.equal(regionDe("DEU", "ECS"), "europa");
+});
+
+test("puesto dentro de un grupo de países", () => {
+  const u = ultimosValores(valores, 2024, 3);
+  const p = posicionEnGrupo(u, "ARG", "alto", ["BRA", "HUN"]);
+  assert.equal(p.puesto, 2);
+  assert.equal(p.total, 3);
 });
