@@ -173,3 +173,123 @@ export function posicionEnGrupo(ultimos, pais, mejor, grupo) {
   const sub = Object.fromEntries(Object.entries(ultimos).filter(([k]) => g.has(k)));
   return posicion(sub, pais, mejor);
 }
+
+// ---- Lectores de otras fuentes ----
+
+/** CSV simple con comillas (lo que devuelve la OIT). Devuelve una lista de objetos por fila. */
+export function leerCsv(texto) {
+  const filas = [];
+  let campo = "", fila = [], comillas = false;
+  for (let i = 0; i < texto.length; i++) {
+    const c = texto[i];
+    if (comillas) {
+      if (c === '"' && texto[i + 1] === '"') { campo += '"'; i++; }
+      else if (c === '"') comillas = false;
+      else campo += c;
+    } else if (c === '"') comillas = true;
+    else if (c === ",") { fila.push(campo); campo = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && texto[i + 1] === "\n") i++;
+      fila.push(campo); campo = "";
+      if (fila.length > 1 || fila[0] !== "") filas.push(fila);
+      fila = [];
+    } else campo += c;
+  }
+  if (campo !== "" || fila.length) { fila.push(campo); filas.push(fila); }
+  const [cab, ...resto] = filas;
+  return resto.map(f => Object.fromEntries(cab.map((k, i) => [k, f[i]])));
+}
+
+/** Datos de la OIT (rplumber CSV) → {ISO3: {anio: valor}}. Solo años cerrados. */
+export function leerOit(texto, anioActual, paisesValidos) {
+  const out = {};
+  for (const f of leerCsv(texto)) {
+    const iso = f.ref_area, a = +f.time, v = parseFloat(f.obs_value);
+    if (!iso || !Number.isFinite(v) || !(a < anioActual)) continue;
+    if (paisesValidos && !paisesValidos.has(iso)) continue;
+    (out[iso] ||= {})[a] = v;
+  }
+  return out;
+}
+
+/** Variación porcentual en `anios` años de cada serie (para comparar cuánto cambió el empleo, por ejemplo). */
+export function cambioEnAnios(valores, anios = 2) {
+  const out = {};
+  for (const [pais, serie] of Object.entries(valores)) {
+    for (const [a, v] of Object.entries(serie)) {
+      const antes = serie[+a - anios];
+      if (antes != null && antes !== 0) (out[pais] ||= {})[+a] = Math.round(((v / antes) - 1) * 10000) / 100;
+    }
+  }
+  return out;
+}
+
+const PREFERIDOS = /^(total|ambos sexos|nacional|total nacional|total país|total pais)$/i;
+
+/** Datos de CEPALSTAT → {ISO3: {anio: valor}}. Se queda con el total (ambos sexos, nacional) cuando hay cortes. */
+export function leerCepal(json, paisesValidos) {
+  const body = json?.body || {};
+  const dims = body.dimensions || [];
+  const nombre = {};
+  let dimAnio = null;
+  for (const d of dims) {
+    for (const m of d.members || []) nombre[m.id] = m.name;
+    if (/a[nñ]o/i.test(d.name)) dimAnio = d.id;
+  }
+  if (!dimAnio) throw new Error("CEPAL: no encuentro la dimensión de años");
+  const dimPais = (dims.find(d => /pa[ií]s/i.test(d.name)) || {}).id;
+  const otras = dims.filter(d => d.id !== dimAnio && d.id !== dimPais);
+  // En cada corte (sexo, área...) se toma el miembro "total" o, si no hay, el único que exista.
+  const elegido = {};
+  for (const d of otras) {
+    const t = (d.members || []).find(m => PREFERIDOS.test(String(m.name).trim()));
+    elegido[d.id] = t ? t.id : (d.members || []).length === 1 ? d.members[0].id : null;
+  }
+  const out = {};
+  for (const f of body.data || []) {
+    const iso = f.iso3 || isoDeNombre(nombre[f[`dim_${dimPais}`]]);
+    if (!iso || (paisesValidos && !paisesValidos.has(iso))) continue;
+    if (otras.some(d => elegido[d.id] == null || f[`dim_${d.id}`] !== elegido[d.id])) continue;
+    const a = parseInt(nombre[f[`dim_${dimAnio}`]], 10), v = parseFloat(f.value);
+    if (Number.isFinite(a) && Number.isFinite(v)) (out[iso] ||= {})[a] = v;
+  }
+  return out;
+}
+
+const sinTildes = t => String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s*\(.*\)\s*/g, "").trim();
+const LAC = {
+  argentina: "ARG", bolivia: "BOL", brasil: "BRA", chile: "CHL", colombia: "COL", "costa rica": "CRI", cuba: "CUB",
+  ecuador: "ECU", "el salvador": "SLV", guatemala: "GTM", haiti: "HTI", honduras: "HND", mexico: "MEX", nicaragua: "NIC",
+  panama: "PAN", paraguay: "PRY", peru: "PER", "republica dominicana": "DOM", uruguay: "URY", venezuela: "VEN",
+  jamaica: "JAM", "trinidad y tabago": "TTO", "trinidad y tobago": "TTO", barbados: "BRB", bahamas: "BHS", belice: "BLZ",
+  guyana: "GUY", suriname: "SUR", granada: "GRD", dominica: "DMA", "santa lucia": "LCA", "antigua y barbuda": "ATG",
+  "san vicente y las granadinas": "VCT", "saint kitts y nevis": "KNA",
+};
+/** Nombre de país de la CEPAL → ISO3 (solo América Latina y el Caribe). */
+export const isoDeNombre = n => LAC[sinTildes(n)] || null;
+
+/** Hoja del SIPA (filas como listas) → [{periodo:"AAAA-MM", valor}]. Acepta fechas, números de Excel y textos como "jul-26*". */
+const MESES = { ene: 1, feb: 2, mar: 3, abr: 4, may: 5, jun: 6, jul: 7, ago: 8, sep: 9, set: 9, oct: 10, nov: 11, dic: 12 };
+export function leerSipa(filas, columna) {
+  const i = filas.findIndex(f => f.some(c => String(c ?? "").replace(/\s+/g, " ").trim() === columna));
+  if (i < 0) throw new Error(`SIPA: no encuentro la columna «${columna}»`);
+  const col = filas[i].findIndex(c => String(c ?? "").replace(/\s+/g, " ").trim() === columna);
+  const out = [];
+  for (const f of filas.slice(i + 1)) {
+    const c = f[0], v = Number(f[col]);
+    let a, m;
+    if (c instanceof Date) { a = c.getUTCFullYear(); m = c.getUTCMonth() + 1; }
+    else if (typeof c === "number" && c > 20000) { const d = new Date(Math.round((c - 25569) * 864e5)); a = d.getUTCFullYear(); m = d.getUTCMonth() + 1; }
+    else { const r = /^([a-z]{3})-(\d{2})/i.exec(String(c ?? "").trim()); if (r && MESES[r[1].toLowerCase()]) { m = MESES[r[1].toLowerCase()]; a = 2000 + +r[2]; } }
+    if (a && m && Number.isFinite(v) && f[col] !== null && f[col] !== "") out.push({ periodo: `${a}-${String(m).padStart(2, "0")}`, valor: +v.toFixed(3) });
+  }
+  return out;
+}
+
+/** Cuánto cambió una serie desde un período (p. ej. "2023-11") hasta el último dato. */
+export function variacionDesde(datos, desde) {
+  const base = datos.find(d => d.periodo >= desde), ult = datos[datos.length - 1];
+  if (!base || !ult || base === ult) return null;
+  return { desde: base.periodo, valorDesde: base.valor, hasta: ult.periodo, valorHasta: ult.valor,
+    diferencia: +(ult.valor - base.valor).toFixed(3), porcentaje: base.valor ? +(((ult.valor / base.valor) - 1) * 100).toFixed(2) : null };
+}
