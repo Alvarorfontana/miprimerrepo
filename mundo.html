@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Argentina frente al mundo · MIDTM</title>
+<meta name="description" content="Dónde está la Argentina frente al resto del mundo en industria, empleo, economía y desarrollo, con datos del Banco Mundial, el FMI, el INDEC y la ONUDI, y la fuente de cada número.">
+<meta name="theme-color" content="#0e2a4f">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+.mu-wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:28px;padding-block:28px 64px}
+.mu-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:24px;align-items:center}
+.mu-hero h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,78px);line-height:.92;margin:12px 0 14px;color:var(--steel-deep)}
+.mu-hero h1 em{font-style:normal;color:var(--molten)}
+@media (prefers-color-scheme:dark){.mu-hero h1{color:var(--ink)}}
+.mu-lead{color:var(--muted);max-width:60ch;margin:0}
+.mu-meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:10px}
+.mu-big{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;text-align:center}
+.mu-big span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mu-big b{display:block;font-family:var(--display);font-size:72px;line-height:1;color:var(--molten)}
+.mu-big small{display:block;color:var(--muted);font-size:14px}
+.mu-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.mu-panel h2{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(26px,3.6vw,36px);line-height:1;margin:0}
+.mu-panel > p{margin:0;color:var(--muted);font-size:14.5px;max-width:80ch}
+.mu-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.mu-area{border:1px solid var(--line);border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.mu-area h3{margin:0;font-size:15px}
+.mu-area .pct{font-family:var(--display);font-size:38px;line-height:1}
+.mu-barra{position:relative;height:10px;border-radius:99px;background:linear-gradient(90deg,var(--bad),var(--warn) 45%,var(--ok));opacity:.9}
+.mu-barra i{position:absolute;top:-4px;width:4px;height:18px;border-radius:2px;background:var(--ink);transform:translateX(-2px)}
+.mu-escala{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.mu-informe{border-left:4px solid var(--molten);background:var(--molten-soft);padding:12px 14px;border-radius:0 8px 8px 0}
+.mu-informe h3{margin:0 0 4px;font-size:16px}
+.mu-informe ul{margin:6px 0;padding-left:18px}
+.mu-informe li b{font-family:var(--mono)}
+.mu-series{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.mu-serie{border:1px solid var(--line);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.mu-serie h3{margin:0;font-size:15px}
+.mu-serie .val{font-family:var(--display);font-size:34px;line-height:1}
+.mu-serie svg{width:100%;height:90px}
+.mu-alerta{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--bad);color:#fff}
+.mu-tabla{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.mu-tabla table{width:100%;border-collapse:collapse;font-size:14px}
+.mu-tabla th,.mu-tabla td{padding:9px 10px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.mu-tabla thead th{border-top:0;background:var(--soft);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.mu-tabla td.n{font-family:var(--mono);white-space:nowrap;text-align:right}
+.mu-tabla .area{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.mu-mini{width:110px}
+.mu-ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.mu-ctrl select{font:14px var(--body);color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:7px 9px;max-width:100%}
+.mu-comp svg{width:100%}
+.mu-rangos div{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.mu-rangos div:first-child{border-top:0}
+.mu-nota{font-size:13.5px;color:var(--muted);border-left:3px solid var(--steel);padding-left:12px;margin:0;max-width:80ch}
+.mu-vacio{padding:20px;text-align:center;color:var(--muted)}
+.mu-vars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 14px;font-size:14px}
+.mu-vars fieldset{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0}
+.mu-vars legend{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 4px}
+.mu-vars label{display:flex;gap:8px;align-items:flex-start;justify-content:flex-start;text-align:left;padding:3px 0;font-weight:400;margin:0}
+.mu-vars input{width:auto;flex:none;margin:3px 0 0;min-height:0}
+.mu-btn{font:600 14px var(--body);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer;background:var(--soft);color:var(--ink)}
+.mu-btn.pri{background:var(--steel);border-color:var(--steel);color:#fff}
+#rep:empty{display:none}
+#rep{border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:14px}
+#rep h3{font-family:var(--display);font-size:28px;text-transform:uppercase;margin:0;line-height:1}
+.mu-var{border-top:1px solid var(--line);padding-top:12px}
+.mu-var h4{margin:0 0 4px;font-size:16px}
+@media print{body.imprimir .nav,body.imprimir main .mu-wrap > *:not(#informe){display:none!important}body.imprimir #informe > h2,body.imprimir #informe > p,body.imprimir .mu-form,body.imprimir .no-imp{display:none!important}body.imprimir #informe{border:0}.mu-var{break-inside:avoid}}
+@media (max-width:760px){.mu-hero{grid-template-columns:1fr}.ocultar-movil{display:none}.mu-rangos div{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<nav class="nav gut" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="MIDTM, inicio">
+      <img src="img/midtm-icono.svg" alt="" width="32" height="32">
+      <span>MIDTM<small>Argentina frente al mundo</small></span>
+    </a>
+    <ul>
+      <li><a href="#informe">Pedir informe</a></li>
+      <li><a href="#areas">Áreas</a></li>
+      <li><a href="#informes">Informes</a></li>
+      <li><a href="#capacidad">Capacidad</a></li>
+      <li><a href="#indicadores">Indicadores</a></li>
+      <li><a href="#comparar">Comparar</a></li>
+      <li><a href="#metodo">Método</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="gut"><div class="mu-wrap">
+  <header class="mu-hero">
+    <div>
+      <div class="kicker">MIDTM · Comparación internacional</div>
+      <h1>Argentina frente al <em>mundo</em></h1>
+      <p class="mu-lead">Dónde está la Argentina entre todos los países del mundo en industria, empleo, economía y desarrollo. Cada número viene de un organismo internacional o del INDEC, con su año y su enlace.</p>
+      <p class="mu-meta" id="estado">Cargando datos…</p>
+    </div>
+    <div class="mu-big" id="general" aria-live="polite"></div>
+  </header>
+
+  <section class="mu-panel" id="informe">
+    <h2>Pedir un informe</h2>
+    <p>Elegí con qué región comparar a la Argentina y qué variables querés ver. El informe muestra su puesto dentro de la región en cada variable, el promedio por área, el gráfico con todos los países y la fuente de cada dato. Se guarda en PDF o se baja en CSV.</p>
+    <div class="mu-form" style="display:flex;flex-direction:column;gap:10px">
+      <div class="mu-ctrl"><select id="sel-region" aria-label="Región para comparar"></select>
+        <button type="button" class="mu-btn" id="b-todas">Todas las variables</button><button type="button" class="mu-btn" id="b-ninguna">Ninguna</button></div>
+      <div class="mu-vars" id="vars"></div>
+      <div><button type="button" class="mu-btn pri" id="b-informe">Armar informe</button></div>
+    </div>
+    <div id="rep" aria-live="polite"></div>
+  </section>
+
+  <section class="mu-panel" id="areas">
+    <h2>Por área</h2>
+    <p>El percentil dice qué parte de los países queda por detrás de la Argentina: 100 es el mejor del mundo y 0 el peor. Cada área es el promedio de sus indicadores.</p>
+    <div class="mu-areas" id="lista-areas"></div>
+  </section>
+
+  <section class="mu-panel" id="informes">
+    <h2>Lo que dicen los informes</h2>
+    <p>Cifras publicadas por terceros, citadas como las dio cada autor. El observatorio no las calcula.</p>
+    <div id="lista-informes"></div>
+  </section>
+
+  <section class="mu-panel" id="capacidad">
+    <h2>Capacidad instalada y producción en la Argentina</h2>
+    <p>Series largas del INDEC. Se marca cuando el último dato es el peor de toda la serie.</p>
+    <div class="mu-series" id="lista-series"></div>
+  </section>
+
+  <section class="mu-panel" id="indicadores">
+    <h2>Indicador por indicador</h2>
+    <p>Puesto de la Argentina entre los países con dato. Para no dejar afuera a quienes publican tarde, se toma el último valor de cada país en los últimos tres años.</p>
+    <div class="mu-tabla"><table>
+      <thead><tr><th>Indicador</th><th>Argentina</th><th>Puesto</th><th class="mu-mini">Percentil</th><th class="ocultar-movil">Lectura</th><th class="ocultar-movil">Fuente</th></tr></thead>
+      <tbody id="tabla"></tbody>
+    </table></div>
+  </section>
+
+  <section class="mu-panel" id="comparar">
+    <h2>Comparar con otros países</h2>
+    <p>Elegí un indicador para ver a la Argentina junto a la región, a países de desarrollo parecido y al promedio mundial.</p>
+    <div class="mu-ctrl"><select id="sel" aria-label="Indicador para comparar"></select></div>
+    <div class="mu-comp" id="comp"></div>
+  </section>
+
+  <section class="mu-panel" id="metodo">
+    <h2>Método y límites</h2>
+    <div class="mu-rangos">
+      <div><b>0 a 10</b><span>Entre los peores del mundo.</span></div>
+      <div><b>10 a 45</b><span>Por debajo de la mayoría de los países.</span></div>
+      <div><b>45 a 55</b><span>En la mitad de la tabla.</span></div>
+      <div><b>55 a 90</b><span>Por encima de la mayoría.</span></div>
+      <div><b>90 a 100</b><span>Entre los mejores del mundo.</span></div>
+    </div>
+    <p class="mu-nota"><b>Cómo se calcula:</b> para cada indicador se ordena a todos los países con dato según si conviene un valor alto (producción, empleo) o bajo (desempleo, inflación, desigualdad). El promedio por área y el índice general promedian posiciones, nunca valores de indicadores distintos.</p>
+    <p class="mu-nota"><b>Límites:</b> los organismos publican con uno o dos años de demora, así que el último dato internacional puede no mostrar lo que pasó este año; para eso están las series del INDEC. Las empresas que dejan de aportar a la seguridad social solo se miden en la Argentina y no tienen comparación internacional. Los indicadores pesan todos igual, y elegir otros cambiaría el promedio. El índice es orientativo.</p>
+    <p class="mu-nota"><b>Fuentes:</b> API del Banco Mundial (con datos de la OIT, la ONU, la ONUDI, la UNESCO, la OMS, la UIT y la OCDE, más los Indicadores de Gobernanza), FMI DataMapper, API de Series de Tiempo del INDEC (datos.gob.ar) e informes citados. Se actualiza solo una vez por mes. Fuentes en camino: ONUDI (producción industrial trimestral), OIT (ILOSTAT), CEPAL (CEPALSTAT), OCDE (capacidad instalada) y SRT.</p>
+    <div id="errores"></div>
+  </section>
+</div></main>
+
+<script>
+(function () {
+  "use strict";
+  var D = null;
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function f(n, d) { if (n == null || !isFinite(n)) return "—"; return Number(n).toLocaleString("es-AR", { minimumFractionDigits: d == null ? 1 : d, maximumFractionDigits: d == null ? 1 : d }); }
+  function css(k) { return getComputedStyle(document.documentElement).getPropertyValue(k).trim(); }
+  function colorP(p) { return p == null ? css("--nodata") : p < 25 ? css("--bad") : p < 45 ? css("--warn") : p <= 55 ? css("--muted") : css("--ok"); }
+  function barra(p) { return '<div class="mu-barra" role="img" aria-label="Percentil ' + f(p) + '"><i style="left:' + Math.max(0, Math.min(100, p || 0)) + '%"></i></div>'; }
+  function periodo(p) { if (!p) return ""; var x = String(p).split("-"); return x.length > 1 ? x[1] + "/" + x[0] : x[0]; }
+
+  function general() {
+    $("general").innerHTML = D.general == null ? '<span>Índice general</span><b>—</b>' :
+      '<span>Índice general</span><b style="color:' + colorP(D.general) + '">' + f(D.general) + '</b><small>' + esc(D.lecturaGeneral) + '</small>' +
+      '<div style="margin-top:12px">' + barra(D.general) + '<div class="mu-escala"><span>0 · peor</span><span>100 · mejor</span></div></div>';
+  }
+
+  function areas() {
+    $("lista-areas").innerHTML = Object.keys(D.porArea).map(function (k) {
+      var a = D.porArea[k];
+      var ind = D.indicadores.filter(function (i) { return i.area === k; });
+      var peor = ind.slice().sort(function (x, y) { return x.percentil - y.percentil; })[0];
+      return '<div class="mu-area"><h3>' + esc(a.nombre) + '</h3><div class="pct" style="color:' + colorP(a.percentil) + '">' + f(a.percentil) + '</div>' + barra(a.percentil) +
+        '<small style="color:var(--muted)">' + a.indicadores + ' indicadores' + (peor ? ' · más bajo: ' + esc(peor.nombre.charAt(0).toLowerCase() + peor.nombre.slice(1)) + ' (puesto ' + peor.puesto + ' de ' + peor.total + ')' : '') + '</small></div>';
+    }).join("");
+  }
+
+  function informes() {
+    $("lista-informes").innerHTML = (D.informes || []).map(function (r) {
+      var fch = r.fecha.split("-").reverse().join("/");
+      return '<div class="mu-informe"><h3>' + esc(r.titulo) + ' · ' + fch + '</h3><small>' + esc(r.autor) + '. Con datos de ' + esc(r.base) + '.</small><ul>' +
+        r.cifras.map(function (c) { return '<li>' + esc(c.dato) + ': <b>' + esc(c.valor) + '</b>' + (c.nota ? ' — ' + esc(c.nota) : '') + '</li>'; }).join("") +
+        '</ul><small>Fuentes: ' + r.enlaces.map(function (e) { return '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.medio) + '</a>'; }).join(" · ") + '</small></div>';
+    }).join("") || '<p class="mu-vacio">Sin informes cargados.</p>';
+  }
+
+  function linea(datos, h) {
+    var W = 300, H = h || 90, pad = 4;
+    var vs = datos.map(function (d) { return d.valor; });
+    var mn = Math.min.apply(null, vs), mx = Math.max.apply(null, vs), r = mx - mn || 1;
+    var pts = datos.map(function (d, i) { return [pad + i * (W - 2 * pad) / Math.max(1, datos.length - 1), H - pad - (d.valor - mn) / r * (H - 2 * pad)]; });
+    var minI = vs.indexOf(mn), u = pts[pts.length - 1];
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" role="img" aria-label="Serie histórica">' +
+      '<polyline fill="none" stroke="' + css("--steel") + '" stroke-width="1.6" points="' + pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ") + '"/>' +
+      '<circle cx="' + pts[minI][0] + '" cy="' + pts[minI][1] + '" r="3.5" fill="' + css("--bad") + '"/>' +
+      '<circle cx="' + u[0] + '" cy="' + u[1] + '" r="3.5" fill="' + css("--molten") + '"/></svg>';
+  }
+
+  function series() {
+    $("lista-series").innerHTML = (D.argentina || []).map(function (s) {
+      var h = s.historia;
+      return '<div class="mu-serie"><h3>' + esc(s.nombre) + '</h3><div><span class="val">' + f(h.ultimo) + '</span> ' + esc(s.unidad) + ' · ' + periodo(h.hasta) +
+        (h.esPeorHistorico ? ' <span class="mu-alerta">Mínimo histórico</span>' : '') + '</div>' + linea(s.datos) +
+        '<small style="color:var(--muted)">Peor dato: ' + f(h.peor.valor) + ' (' + periodo(h.peor.periodo) + ') · Mejor: ' + f(h.mejor.valor) + ' (' + periodo(h.mejor.periodo) + ')' +
+        (h.esPeorHistorico ? '' : ' · El último es el ' + h.lugarEntreLosPeores + '.º más bajo de ' + h.datos) + ' · Serie desde ' + periodo(h.desde) +
+        '<br><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.organismo) + '</a></small></div>';
+    }).join("") || '<p class="mu-vacio">Las series del INDEC no respondieron en la última actualización.</p>';
+  }
+
+  function tabla() {
+    var orden = Object.keys(D.porArea);
+    var filas = D.indicadores.slice().sort(function (a, b) { return orden.indexOf(a.area) - orden.indexOf(b.area) || a.percentil - b.percentil; });
+    $("tabla").innerHTML = filas.map(function (i) {
+      var hist = i.historia && i.historia.esPeorHistorico ? ' <span class="mu-alerta">peor desde ' + esc(i.historia.desde) + '</span>' : '';
+      return '<tr><td><span class="area">' + esc(D.porArea[i.area].nombre) + '</span><br>' + esc(i.nombre) + hist + '</td>' +
+        '<td class="n">' + f(i.valor) + '<br><small style="color:var(--muted)">' + esc(i.unidad) + ' · ' + i.anio + '</small></td>' +
+        '<td class="n">' + i.puesto + ' de ' + i.total + '</td><td class="mu-mini">' + barra(i.percentil) + '<small class="n" style="font-family:var(--mono)">' + f(i.percentil) + '</small></td>' +
+        '<td class="ocultar-movil">' + esc(i.lectura) + '<br><small style="color:var(--muted)">Mediana mundial: ' + f(i.mediana) + '</small></td>' +
+        '<td class="ocultar-movil"><a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.organismo) + '</a></td></tr>';
+    }).join("");
+  }
+
+  function comparar(clave) {
+    var i = D.indicadores.filter(function (x) { return x.clave === clave; })[0]; if (!i) return;
+    var filas = [{ n: "Argentina", v: i.valor, a: i.anio, ar: true }];
+    D.comparar_con.forEach(function (c) { var d = i.comparados[c]; if (d) filas.push({ n: D.nombres[c] || c, v: d.valor, a: d.anio, mundo: c === "WLD" }); });
+    filas.sort(function (a, b) { return i.mejor === "alto" ? b.v - a.v : a.v - b.v; });
+    var mx = Math.max.apply(null, filas.map(function (x) { return Math.abs(x.v); })) || 1;
+    var H = 26, W = 640, L = 150;
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + (filas.length * H + 8) + '" role="img" aria-label="Comparación: ' + esc(i.nombre) + '">';
+    filas.forEach(function (x, k) {
+      var y = k * H + 4, w = Math.max(1, Math.abs(x.v) / mx * (W - L - 120));
+      var col = x.ar ? css("--molten") : x.mundo ? css("--muted") : css("--steel");
+      svg += '<text x="' + (L - 8) + '" y="' + (y + 16) + '" text-anchor="end" font-size="13" fill="' + css("--ink") + '" font-weight="' + (x.ar ? 700 : 400) + '">' + esc(x.n) + '</text>' +
+        '<rect x="' + L + '" y="' + (y + 4) + '" width="' + w + '" height="16" rx="3" fill="' + col + '" opacity="' + (x.ar ? 1 : .75) + '"/>' +
+        '<text x="' + (L + w + 6) + '" y="' + (y + 16) + '" font-size="12" font-family="IBM Plex Mono, monospace" fill="' + css("--muted") + '">' + f(x.v) + ' (' + x.a + ')</text>';
+    });
+    $("comp").innerHTML = svg + '</svg><p class="mu-nota">' + esc(i.nombre) + ', en ' + esc(i.unidad) + '. Conviene un valor ' + (i.mejor === "alto" ? "alto" : "bajo") + '. Mejor del mundo: ' + esc(i.mejorPais.nombre) + ' (' + f(i.mejorPais.valor) + '). Peor: ' + esc(i.peorPais.nombre) + ' (' + f(i.peorPais.valor) + '). Fuente: <a href="' + esc(i.url) + '" target="_blank" rel="noopener">' + esc(i.organismo) + '</a>.</p>';
+  }
+
+  function errores() {
+    if (!D.errores || !D.errores.length) return;
+    $("errores").innerHTML = '<p class="mu-nota"><b>No respondieron en la última actualización:</b> ' + D.errores.map(function (e) { return esc(e.indicador); }).join(", ") + '. Se vuelven a pedir el mes que viene.</p>';
+  }
+
+  // ---- Informe por región y variables ----
+  function miembros(reg) {
+    if (reg === "mundo") return null;
+    if (D.grupos && D.grupos[reg]) return D.grupos[reg].paises;
+    return Object.keys(D.regionDePais).filter(function (k) { return D.regionDePais[k] === reg; });
+  }
+  function slug(t) { return String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+  function puestoEn(ind, grupo) {
+    var lista = Object.keys(ind.paises).filter(function (k) { return !grupo || grupo.indexOf(k) >= 0 || k === "ARG"; })
+      .map(function (k) { return { pais: k, valor: ind.paises[k][0], anio: ind.paises[k][1] }; });
+    if (!ind.paises.ARG || lista.length < 2) return null;
+    lista.sort(function (a, b) { return ind.mejor === "alto" ? b.valor - a.valor : a.valor - b.valor; });
+    var yo = ind.paises.ARG[0];
+    var mejores = lista.filter(function (d) { return ind.mejor === "alto" ? d.valor > yo : d.valor < yo; }).length;
+    var peores = lista.filter(function (d) { return ind.mejor === "alto" ? d.valor < yo : d.valor > yo; }).length;
+    var vs = lista.map(function (d) { return d.valor; }).sort(function (a, b) { return a - b; }), m = Math.floor(vs.length / 2);
+    return { puesto: mejores + 1, total: lista.length, percentil: Math.round(peores / (lista.length - 1) * 1000) / 10, lista: lista,
+      mediana: vs.length % 2 ? vs[m] : (vs[m - 1] + vs[m]) / 2 };
+  }
+  function barras(ind, r) {
+    var lista = r.lista, i = lista.findIndex(function (d) { return d.pais === "ARG"; });
+    if (lista.length > 26) {
+      var arriba = lista.slice(0, 10), abajo = lista.slice(-10), medio = lista.slice(Math.max(10, i - 2), Math.min(lista.length - 10, i + 3));
+      lista = arriba.concat(medio.length ? [{ sep: true }] : [], medio, [{ sep: true }], abajo);
+    }
+    var vals = r.lista.map(function (d) { return Math.abs(d.valor); }), mx = Math.max.apply(null, vals) || 1;
+    var H = 20, W = 640, L = 170, y = 4, svg = "";
+    lista.forEach(function (d) {
+      if (d.sep) { svg += '<text x="' + (L - 8) + '" y="' + (y + 13) + '" text-anchor="end" font-size="12" fill="' + css("--muted") + '">…</text>'; y += H; return; }
+      var w = Math.max(1, Math.abs(d.valor) / mx * (W - L - 120)), ar = d.pais === "ARG";
+      var pos = r.lista.indexOf(d) + 1;
+      svg += '<text x="' + (L - 8) + '" y="' + (y + 13) + '" text-anchor="end" font-size="12" fill="' + css("--ink") + '" font-weight="' + (ar ? 700 : 400) + '">' + pos + '. ' + esc((D.nombres[d.pais] || d.pais).slice(0, 22)) + '</text>' +
+        '<rect x="' + L + '" y="' + (y + 3) + '" width="' + w + '" height="13" rx="2" fill="' + (ar ? css("--molten") : css("--steel")) + '" opacity="' + (ar ? 1 : .7) + '"/>' +
+        '<text x="' + (L + w + 5) + '" y="' + (y + 13) + '" font-size="11" font-family="IBM Plex Mono, monospace" fill="' + css("--muted") + '">' + f(d.valor) + ' (' + d.anio + ')</text>';
+      y += H;
+    });
+    return '<svg viewBox="0 0 ' + W + ' ' + (y + 4) + '" style="width:100%" role="img" aria-label="' + esc(ind.nombre) + '">' + svg + '</svg>';
+  }
+  function armarInforme() {
+    var reg = $("sel-region").value, grupo = miembros(reg), nombreReg = (D.grupos && D.grupos[reg]) ? D.grupos[reg].nombre : D.regiones[reg];
+    var elegidas = Array.prototype.filter.call(document.querySelectorAll("#vars input"), function (c) { return c.checked; }).map(function (c) { return c.value; });
+    var inds = D.indicadores.filter(function (i) { return elegidas.indexOf(i.clave) >= 0; });
+    if (!inds.length) { $("rep").innerHTML = '<p>Elegí al menos una variable.</p>'; return; }
+    var res = inds.map(function (i) { return { i: i, r: puestoEn(i, grupo) }; }).filter(function (x) { return x.r; });
+    var areasP = {};
+    res.forEach(function (x) { (areasP[x.i.area] = areasP[x.i.area] || []).push(x.r.percentil); });
+    var prom = function (a) { return a.reduce(function (s, v) { return s + v; }, 0) / a.length; };
+    var gen = res.length ? prom(Object.keys(areasP).map(function (k) { return prom(areasP[k]); })) : null;
+    var nPaises = grupo ? grupo.filter(function (k) { return D.regionDePais[k] || (D.grupos[reg] && true); }).length : Object.keys(D.regionDePais).length;
+    var html = '<h3>Informe · Argentina frente a ' + esc(nombreReg) + '</h3>' +
+      '<p class="mu-meta">MIDTM · emitido el ' + new Date().toLocaleDateString("es-AR") + ' · datos al ' + D.actualizado.split("-").reverse().join("/") + ' · ' + res.length + ' variables · ' + nPaises + ' países en la región</p>' +
+      '<div class="mu-big" style="text-align:left"><span>Posición promedio de la Argentina en la región</span><b style="color:' + colorP(gen) + '">' + f(gen) + '</b><small>' + esc(lecturaP(gen, nombreReg)) + '</small><div style="margin-top:10px">' + barra(gen) + '</div></div>' +
+      '<div class="mu-areas">' + Object.keys(areasP).map(function (k) { var p = prom(areasP[k]); return '<div class="mu-area"><h3>' + esc(D.porArea[k].nombre) + '</h3><div class="pct" style="color:' + colorP(p) + '">' + f(p) + '</div>' + barra(p) + '</div>'; }).join("") + '</div>' +
+      '<div class="mu-tabla"><table><thead><tr><th>Variable</th><th>Argentina</th><th>Puesto en la región</th><th>Mediana de la región</th><th class="ocultar-movil">Puesto mundial</th></tr></thead><tbody>' +
+      res.map(function (x) { return '<tr><td>' + esc(x.i.nombre) + '</td><td class="n">' + f(x.i.valor) + ' <small>' + esc(x.i.unidad) + '</small></td><td class="n">' + x.r.puesto + ' de ' + x.r.total + '</td><td class="n">' + f(x.r.mediana) + '</td><td class="n ocultar-movil">' + x.i.puesto + ' de ' + x.i.total + '</td></tr>'; }).join("") + '</tbody></table></div>' +
+      res.map(function (x) {
+        return '<div class="mu-var"><h4>' + esc(x.i.nombre) + '</h4><small style="color:var(--muted)">' + esc(x.i.unidad) + ' · conviene un valor ' + (x.i.mejor === "alto" ? "alto" : "bajo") + ' · la Argentina queda ' + x.r.puesto + '.ª de ' + x.r.total + ' · Fuente: <a href="' + esc(x.i.url) + '" target="_blank" rel="noopener">' + esc(x.i.organismo) + '</a></small>' + barras(x.i, x.r) + '</div>';
+      }).join("") +
+      '<p class="mu-nota">Último dato de cada país en los últimos tres años, por eso los años pueden variar. Los promedios son de posiciones, no de valores. Orientativo: elegir otras variables cambia el resultado.</p>' +
+      '<div class="mu-ctrl no-imp"><button type="button" class="mu-btn pri" id="b-pdf">Guardar en PDF</button><button type="button" class="mu-btn" id="b-csv">Bajar en CSV</button></div>';
+    $("rep").innerHTML = html;
+    $("b-pdf").onclick = function () { document.body.classList.add("imprimir"); window.print(); setTimeout(function () { document.body.classList.remove("imprimir"); }, 500); };
+    $("b-csv").onclick = function () {
+      var t = "variable,unidad,pais,iso3,valor,anio,puesto_en_region,fuente\n";
+      res.forEach(function (x) { x.r.lista.forEach(function (d, k) { t += ['"' + x.i.nombre + '"', '"' + x.i.unidad + '"', '"' + (D.nombres[d.pais] || d.pais) + '"', d.pais, d.valor, d.anio, k + 1, '"' + x.i.organismo + '"'].join(",") + "\n"; }); });
+      var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(["\ufeff" + t], { type: "text/csv;charset=utf-8" })); a.download = "midtm-argentina-" + slug(nombreReg) + ".csv"; a.click();
+    };
+    try { history.replaceState(null, "", "#informe-" + reg); } catch (e) {}
+  }
+  function lecturaP(p, reg) {
+    if (p == null) return "sin datos";
+    if (p < 10) return "entre los últimos de " + reg;
+    if (p < 45) return "por debajo de la mayoría de " + reg;
+    if (p <= 55) return "en la mitad de " + reg;
+    if (p < 90) return "por encima de la mayoría de " + reg;
+    return "entre los primeros de " + reg;
+  }
+  function prepararInforme() {
+    var opts = Object.keys(D.regiones || {}).map(function (k) { return '<option value="' + k + '">' + esc(D.regiones[k]) + '</option>'; }).join("");
+    $("sel-region").innerHTML = opts;
+    $("vars").innerHTML = Object.keys(D.porArea).map(function (a) {
+      return '<fieldset><legend>' + esc(D.porArea[a].nombre) + '</legend>' + D.indicadores.filter(function (i) { return i.area === a; }).map(function (i) {
+        return '<label><input type="checkbox" value="' + esc(i.clave) + '" checked> ' + esc(i.nombre) + '</label>'; }).join("") + '</fieldset>';
+    }).join("");
+    var marcar = function (v) { Array.prototype.forEach.call(document.querySelectorAll("#vars input"), function (c) { c.checked = v; }); };
+    $("b-todas").onclick = function () { marcar(true); }; $("b-ninguna").onclick = function () { marcar(false); };
+    $("b-informe").onclick = armarInforme;
+    var h = (location.hash || "").replace("#informe-", "");
+    if (h && D.regiones[h]) { $("sel-region").value = h; armarInforme(); }
+  }
+
+  fetch("data/mundo/indice.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (j) {
+    D = j;
+    $("estado").textContent = "Actualizado el " + D.actualizado.split("-").reverse().join("/") + " · " + D.indicadores.length + " indicadores internacionales · " + (D.argentina || []).length + " series del INDEC";
+    general(); areas(); informes(); series(); tabla(); errores(); if (D.regiones) prepararInforme();
+    $("sel").innerHTML = D.indicadores.map(function (i) { return '<option value="' + esc(i.clave) + '">' + esc(i.nombre) + '</option>'; }).join("");
+    $("sel").onchange = function () { comparar(this.value); };
+    var peor = D.indicadores.slice().sort(function (a, b) { return a.percentil - b.percentil; })[0];
+    if (peor) { $("sel").value = peor.clave; comparar(peor.clave); }
+  }).catch(function () {
+    $("estado").textContent = "Todavía no hay datos: la primera actualización corre sola en GitHub. Mientras tanto se muestran los informes citados.";
+    fetch("data/mundo/informes.json").then(function (r) { return r.json(); }).then(function (j) { D = { informes: j.informes }; informes(); }).catch(function () {});
+    $("general").innerHTML = '<span>Índice general</span><b>—</b><small>Sin datos todavía</small>';
+  });
+})();
+</script>
+</body>
+</html>

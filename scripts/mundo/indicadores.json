@@ -1,0 +1,624 @@
+{
+ "nota": "Catálogo del módulo «Argentina frente al mundo». Cada indicador dice de dónde sale, qué mide y si es mejor un valor alto o bajo. Para sumar uno, se agrega acá: no hace falta tocar código. Fuentes gratuitas y sin clave.",
+ "ventana_anios": 3,
+ "minimo_paises": 40,
+ "comparar_con": [
+  "BRA",
+  "CHL",
+  "MEX",
+  "URY",
+  "COL",
+  "HUN",
+  "ESP",
+  "POL",
+  "TUR",
+  "KOR",
+  "WLD"
+ ],
+ "areas": {
+  "industria": "Industria",
+  "empleo": "Empleo y trabajo",
+  "macro": "Economía general",
+  "comercio": "Comercio e inversión externa",
+  "desarrollo": "Desarrollo social",
+  "innovacion": "Ciencia, tecnología y energía",
+  "instituciones": "Instituciones"
+ },
+ "indicadores": [
+  {
+   "clave": "manuf_pib",
+   "area": "industria",
+   "nombre": "Peso de la industria manufacturera en el PIB",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NV.IND.MANF.ZS",
+   "organismo": "Banco Mundial (con datos de la ONU y la OCDE)"
+  },
+  {
+   "clave": "manuf_crec",
+   "area": "industria",
+   "nombre": "Crecimiento de la industria manufacturera",
+   "unidad": "% anual",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NV.IND.MANF.KD.ZG",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "industria_crec",
+   "area": "industria",
+   "nombre": "Crecimiento de la industria (incluye construcción y energía)",
+   "unidad": "% anual",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NV.IND.TOTL.KD.ZG",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "expo_manuf",
+   "area": "industria",
+   "nombre": "Manufacturas en las exportaciones de bienes",
+   "unidad": "% de las exportaciones",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "TX.VAL.MANF.ZS.UN",
+   "organismo": "Banco Mundial (con datos de UN Comtrade)"
+  },
+  {
+   "clave": "alta_tec",
+   "area": "industria",
+   "nombre": "Exportaciones de alta tecnología",
+   "unidad": "% de las manufacturas exportadas",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "TX.VAL.TECH.MF.ZS",
+   "organismo": "Banco Mundial (con datos de UN Comtrade)"
+  },
+  {
+   "clave": "empleo_industria",
+   "area": "empleo",
+   "nombre": "Empleo en la industria",
+   "unidad": "% del empleo total",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.IND.EMPL.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "desempleo",
+   "area": "empleo",
+   "nombre": "Desempleo",
+   "unidad": "% de la población activa",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SL.UEM.TOTL.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "tasa_empleo",
+   "area": "empleo",
+   "nombre": "Tasa de empleo",
+   "unidad": "% de la población de 15 años o más",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.EMP.TOTL.SP.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "asalariados",
+   "area": "empleo",
+   "nombre": "Asalariados",
+   "unidad": "% del empleo total",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.EMP.WORK.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "pib_crec",
+   "area": "macro",
+   "nombre": "Crecimiento del PIB",
+   "unidad": "% anual",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NY.GDP.MKTP.KD.ZG",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "inflacion",
+   "area": "macro",
+   "nombre": "Inflación",
+   "unidad": "% anual",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "FP.CPI.TOTL.ZG",
+   "organismo": "Banco Mundial (con datos del FMI)"
+  },
+  {
+   "clave": "inversion",
+   "area": "macro",
+   "nombre": "Inversión (formación bruta de capital fijo)",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NE.GDI.FTOT.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "fmi_pib",
+   "area": "macro",
+   "nombre": "Crecimiento del PIB según el FMI (último año cerrado)",
+   "unidad": "% anual",
+   "mejor": "alto",
+   "fuente": "fmi",
+   "codigo": "NGDP_RPCH",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "fmi_desempleo",
+   "area": "empleo",
+   "nombre": "Desempleo según el FMI (último año cerrado)",
+   "unidad": "% de la población activa",
+   "mejor": "bajo",
+   "fuente": "fmi",
+   "codigo": "LUR",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "pib_pc",
+   "area": "desarrollo",
+   "nombre": "PIB por habitante (paridad de poder de compra)",
+   "unidad": "US$ internacionales de 2021",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NY.GDP.PCAP.PP.KD",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "gini",
+   "area": "desarrollo",
+   "nombre": "Desigualdad del ingreso (índice de Gini)",
+   "unidad": "0 a 100",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SI.POV.GINI",
+   "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad"
+  },
+  {
+   "clave": "esperanza_vida",
+   "area": "desarrollo",
+   "nombre": "Esperanza de vida al nacer",
+   "unidad": "años",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SP.DYN.LE00.IN",
+   "organismo": "Banco Mundial (con datos de la ONU)"
+  },
+  {
+   "clave": "id_pib",
+   "area": "innovacion",
+   "nombre": "Inversión en investigación y desarrollo",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "GB.XPD.RSDV.GD.ZS",
+   "organismo": "Banco Mundial (con datos de la UNESCO)"
+  },
+  {
+   "clave": "industria_pib",
+   "area": "industria",
+   "nombre": "Peso de la industria (incluye construcción y energía) en el PIB",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NV.IND.TOTL.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "manuf_tec",
+   "area": "industria",
+   "nombre": "Manufactura de tecnología media y alta",
+   "unidad": "% de la manufactura",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NV.MNF.TECH.ZS.UN",
+   "organismo": "Banco Mundial (con datos de la ONUDI)"
+  },
+  {
+   "clave": "desempleo_jovenes",
+   "area": "empleo",
+   "nombre": "Desempleo de jóvenes (15 a 24 años)",
+   "unidad": "% de la población activa joven",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SL.UEM.1524.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "participacion",
+   "area": "empleo",
+   "nombre": "Participación en el mercado de trabajo",
+   "unidad": "% de la población de 15 años o más",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.TLF.CACT.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "participacion_mujeres",
+   "area": "empleo",
+   "nombre": "Participación laboral de las mujeres",
+   "unidad": "% de las mujeres de 15 años o más",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.TLF.CACT.FE.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "empleo_vulnerable",
+   "area": "empleo",
+   "nombre": "Empleo vulnerable (cuentapropistas y familiares sin paga)",
+   "unidad": "% del empleo total",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SL.EMP.VULN.ZS",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "productividad",
+   "area": "empleo",
+   "nombre": "Productividad: PIB por persona ocupada",
+   "unidad": "US$ PPA constantes de 2021",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SL.GDP.PCAP.EM.KD",
+   "organismo": "Banco Mundial (estimación modelada de la OIT)"
+  },
+  {
+   "clave": "pib_pc_crec",
+   "area": "macro",
+   "nombre": "Crecimiento del PIB por habitante",
+   "unidad": "% anual",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NY.GDP.PCAP.KD.ZG",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "formacion_capital",
+   "area": "macro",
+   "nombre": "Formación bruta de capital",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NE.GDI.TOTL.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "ahorro",
+   "area": "macro",
+   "nombre": "Ahorro bruto",
+   "unidad": "% del ingreso nacional bruto",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NY.GNS.ICTR.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "tasa_prestamo",
+   "area": "macro",
+   "nombre": "Tasa de interés de los préstamos",
+   "unidad": "% anual",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "FR.INR.LEND",
+   "organismo": "Banco Mundial (con datos del FMI)"
+  },
+  {
+   "clave": "reservas",
+   "area": "macro",
+   "nombre": "Reservas internacionales",
+   "unidad": "meses de importaciones",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "FI.RES.TOTL.MO",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "fmi_deuda",
+   "area": "macro",
+   "nombre": "Deuda pública bruta",
+   "unidad": "% del PIB",
+   "mejor": "bajo",
+   "fuente": "fmi",
+   "codigo": "GGXWDG_NGDP",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "fmi_inflacion",
+   "area": "macro",
+   "nombre": "Inflación según el FMI (último año cerrado)",
+   "unidad": "% anual",
+   "mejor": "bajo",
+   "fuente": "fmi",
+   "codigo": "PCPIPCH",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "fmi_pib_pc",
+   "area": "macro",
+   "nombre": "PIB por habitante en dólares (FMI)",
+   "unidad": "US$ corrientes",
+   "mejor": "alto",
+   "fuente": "fmi",
+   "codigo": "NGDPDPC",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "fmi_cuenta_corriente",
+   "area": "comercio",
+   "nombre": "Saldo de la cuenta corriente (FMI)",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "fmi",
+   "codigo": "BCA_NGDPD",
+   "organismo": "FMI · Perspectivas de la Economía Mundial"
+  },
+  {
+   "clave": "exportaciones",
+   "area": "comercio",
+   "nombre": "Exportaciones de bienes y servicios",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NE.EXP.GNFS.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "apertura",
+   "area": "comercio",
+   "nombre": "Comercio exterior total",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "NE.TRD.GNFS.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "ied",
+   "area": "comercio",
+   "nombre": "Inversión extranjera directa (entrada neta)",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "BX.KLT.DINV.WD.GD.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "cuenta_corriente",
+   "area": "comercio",
+   "nombre": "Saldo de la cuenta corriente",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "BN.CAB.XOKA.GD.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "pobreza_extrema",
+   "area": "desarrollo",
+   "nombre": "Pobreza extrema (línea internacional)",
+   "unidad": "% de la población",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SI.POV.DDAY",
+   "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad"
+  },
+  {
+   "clave": "ingreso_top10",
+   "area": "desarrollo",
+   "nombre": "Parte del ingreso del 10% más rico",
+   "unidad": "% del ingreso",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SI.DST.10TH.10",
+   "organismo": "Banco Mundial · Plataforma de pobreza y desigualdad"
+  },
+  {
+   "clave": "mortalidad_infantil",
+   "area": "desarrollo",
+   "nombre": "Mortalidad infantil",
+   "unidad": "por cada 1.000 nacidos vivos",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SP.DYN.IMRT.IN",
+   "organismo": "Banco Mundial (con datos de la ONU)"
+  },
+  {
+   "clave": "mortalidad_5",
+   "area": "desarrollo",
+   "nombre": "Mortalidad de menores de 5 años",
+   "unidad": "por cada 1.000 nacidos vivos",
+   "mejor": "bajo",
+   "fuente": "bm",
+   "codigo": "SH.DYN.MORT",
+   "organismo": "Banco Mundial (con datos de la ONU)"
+  },
+  {
+   "clave": "gasto_salud",
+   "area": "desarrollo",
+   "nombre": "Gasto en salud",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SH.XPD.CHEX.GD.ZS",
+   "organismo": "Banco Mundial (con datos de la OMS)"
+  },
+  {
+   "clave": "gasto_educacion",
+   "area": "desarrollo",
+   "nombre": "Gasto público en educación",
+   "unidad": "% del PIB",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SE.XPD.TOTL.GD.ZS",
+   "organismo": "Banco Mundial (con datos de la UNESCO)"
+  },
+  {
+   "clave": "secundaria",
+   "area": "desarrollo",
+   "nombre": "Matrícula en la secundaria",
+   "unidad": "% bruto",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SE.SEC.ENRR",
+   "organismo": "Banco Mundial (con datos de la UNESCO)"
+  },
+  {
+   "clave": "universidad",
+   "area": "desarrollo",
+   "nombre": "Matrícula en la educación superior",
+   "unidad": "% bruto",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SE.TER.ENRR",
+   "organismo": "Banco Mundial (con datos de la UNESCO)"
+  },
+  {
+   "clave": "investigadores",
+   "area": "innovacion",
+   "nombre": "Investigadores en I+D",
+   "unidad": "por millón de habitantes",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "SP.POP.SCIE.RD.P6",
+   "organismo": "Banco Mundial (con datos de la UNESCO)"
+  },
+  {
+   "clave": "internet",
+   "area": "innovacion",
+   "nombre": "Personas que usan internet",
+   "unidad": "% de la población",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "IT.NET.USER.ZS",
+   "organismo": "Banco Mundial (con datos de la UIT)"
+  },
+  {
+   "clave": "electricidad",
+   "area": "innovacion",
+   "nombre": "Acceso a la electricidad",
+   "unidad": "% de la población",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "EG.ELC.ACCS.ZS",
+   "organismo": "Banco Mundial"
+  },
+  {
+   "clave": "renovables",
+   "area": "innovacion",
+   "nombre": "Energía renovable en el consumo final",
+   "unidad": "% del consumo",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "EG.FEC.RNEW.ZS",
+   "organismo": "Banco Mundial (con datos de la AIE y la IRENA)"
+  },
+  {
+   "clave": "efectividad_gobierno",
+   "area": "instituciones",
+   "nombre": "Efectividad del gobierno",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "GE.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  },
+  {
+   "clave": "calidad_regulatoria",
+   "area": "instituciones",
+   "nombre": "Calidad regulatoria",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "RQ.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  },
+  {
+   "clave": "estado_derecho",
+   "area": "instituciones",
+   "nombre": "Estado de derecho",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "RL.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  },
+  {
+   "clave": "control_corrupcion",
+   "area": "instituciones",
+   "nombre": "Control de la corrupción",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "CC.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  },
+  {
+   "clave": "estabilidad_politica",
+   "area": "instituciones",
+   "nombre": "Estabilidad política y ausencia de violencia",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "PV.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  },
+  {
+   "clave": "voz",
+   "area": "instituciones",
+   "nombre": "Voz y rendición de cuentas",
+   "unidad": "-2,5 a 2,5",
+   "mejor": "alto",
+   "fuente": "bm",
+   "codigo": "VA.EST",
+   "organismo": "Banco Mundial · Indicadores de Gobernanza",
+   "source": 3
+  }
+ ],
+ "argentina_series": [
+  {
+   "clave": "uci_general",
+   "nombre": "Uso de la capacidad instalada de la industria",
+   "unidad": "%",
+   "mejor": "alto",
+   "fuente": "indec",
+   "codigo": "31.3_UNG_2004_M_18",
+   "organismo": "INDEC · Utilización de la capacidad instalada"
+  },
+  {
+   "clave": "uci_metales",
+   "nombre": "Uso de la capacidad instalada · metales básicos",
+   "unidad": "%",
+   "mejor": "alto",
+   "fuente": "indec",
+   "codigo": "31.3_UIMB_2004_M_33",
+   "organismo": "INDEC · Utilización de la capacidad instalada"
+  },
+  {
+   "clave": "ipi_siderurgia",
+   "nombre": "Producción de la industria siderúrgica (IPI)",
+   "unidad": "índice",
+   "mejor": "alto",
+   "fuente": "indec",
+   "codigo": "453.2_INDUSTRIA_ICA_0_0_21_100",
+   "organismo": "INDEC · Índice de producción industrial manufacturero"
+  }
+ ]
+}

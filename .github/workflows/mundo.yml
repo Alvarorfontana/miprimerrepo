@@ -1,0 +1,44 @@
+# Argentina frente al mundo: una vez por mes baja los indicadores internacionales (Banco Mundial, FMI) y las
+# series largas del INDEC, calcula el puesto de la Argentina y guarda data/mundo/indice.json. Vercel publica solo.
+# Ver scripts/mundo/actualizar.mjs. Es independiente de «Actualizar datos públicos».
+name: Argentina frente al mundo
+
+on:
+  schedule:
+    - cron: "43 13 8 * *"   # día 8 de cada mes, 10:43 hora argentina
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/mundo.yml"
+      - "scripts/mundo/**"
+      - "data/mundo/informes.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mundo
+  cancel-in-progress: false
+
+jobs:
+  mundo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pruebas del cálculo
+        run: node --test scripts/mundo/calculo.test.mjs
+      - name: Bajar indicadores y calcular
+        run: node scripts/mundo/actualizar.mjs
+      - name: Guardar cambios
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/mundo/
+          git diff --cached --quiet || git commit -m "Argentina frente al mundo: actualización mensual"
+          git pull --rebase -X theirs || true
+          git push
