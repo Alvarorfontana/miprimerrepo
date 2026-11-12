@@ -713,18 +713,6 @@
       "organismo": "CEPAL · CEPALSTAT"
     },
     {
-      "clave": "cepal_salario_minimo",
-      "area": "latam",
-      "nombre": "Salario mínimo real",
-      "unidad": "índice",
-      "mejor": "alto",
-      "fuente": "cepal",
-      "codigo": "340",
-      "minimo": 12,
-      "ambito": "América Latina y el Caribe",
-      "organismo": "CEPAL · CEPALSTAT"
-    },
-    {
       "clave": "cepal_pobreza",
       "area": "latam",
       "nombre": "Pobreza",

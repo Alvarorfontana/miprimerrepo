@@ -18,7 +18,7 @@ const ANIO = new Date().getUTCFullYear();
 const BM = "https://api.worldbank.org/v2";
 const errores = [];
 
-async function pedir(url, intentos = 3, texto = false) {
+async function pedir(url, intentos = 5, texto = false) {
   for (let i = 1; ; i++) {
     try {
       const r = await fetch(url, { headers: { "User-Agent": "observatorio-uom/mundo" }, signal: AbortSignal.timeout(90000) });
@@ -26,7 +26,7 @@ async function pedir(url, intentos = 3, texto = false) {
       return texto ? await r.text() : await r.json();
     } catch (e) {
       if (i >= intentos) throw new Error(`${e.message} en ${url}`);
-      await new Promise(res => setTimeout(res, 2000 * i));
+      await new Promise(res => setTimeout(res, 5000 * i));
     }
   }
 }
@@ -70,7 +70,12 @@ async function enParalelo(lista, n, fn) {
 }
 
 const filas = [];
-const bajados = await enParalelo(conf.indicadores, 6, ind => datosDe(ind).then(r => ({ r }), e => ({ e })));
+// El Banco Mundial corta (502) si se le piden muchas cosas juntas: va de a uno; el resto, de a cuatro.
+const bajar = ind => datosDe(ind).then(r => ({ r }), e => ({ e }));
+const delBM = conf.indicadores.filter(i => i.fuente === "bm"), otros = conf.indicadores.filter(i => i.fuente !== "bm");
+const [rBM, rOtros] = await Promise.all([enParalelo(delBM, 1, bajar), enParalelo(otros, 4, bajar)]);
+const porClave = new Map([...delBM.map((i, k) => [i.clave, rBM[k]]), ...otros.map((i, k) => [i.clave, rOtros[k]])]);
+const bajados = conf.indicadores.map(i => porClave.get(i.clave));
 for (const [k, ind] of conf.indicadores.entries()) {
   try {
     if (bajados[k].e) throw bajados[k].e;
