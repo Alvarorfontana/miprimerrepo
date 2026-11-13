@@ -1,0 +1,29 @@
+# Baja las planillas de cobertura de la SRT (empleadores y trabajadores por sector) a data/fuentes/srt/.
+name: Fuentes SRT
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "17 14 20 * *"   # día 20 de cada mes
+
+permissions:
+  contents: write
+
+jobs:
+  srt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/fuentes/srt.mjs
+      - name: Guardar
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/fuentes/srt/
+          git diff --cached --quiet || git commit -m "Fuentes SRT: planillas de cobertura"
+          git pull --rebase -X theirs || true
+          git push
