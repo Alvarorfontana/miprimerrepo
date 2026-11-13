@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-12T22:36:17.141Z",
+ "fecha": "2026-11-13T00:24:30.426Z",
  "comex_home": {
   "status": 200
  },
@@ -50,32 +50,331 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::dsprr-1794522983821-ac83ddcef146"
+  "muestra": "Forbidden\n\nForbidden\ncle1::gjxww-1794529476761-a099dbd4c77c"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::jrdz6-1794522984457-38e65e136a3b"
+  "muestra": "Forbidden\n\nForbidden\ncle1::bp4zl-1794529477338-a9b63ef41178"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
   "href=\"/informes-y-comunicados\""
  ],
  "badata": {
-  "industria": {
-   "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749725709701><br><br><a href='javasc"
-  },
-  "habilitaciones": {
-   "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289749691018989><br><br><a href='javasc"
-  },
-  "metal": {
-   "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748761272588><br><br><a href='javasc"
-  },
+  "industria": [
+   {
+    "id": "inspectores-trabajo-industria-comercio",
+    "titulo": "Inspectores de Trabajo, Industria y Comercio",
+    "actualizado": "2026-06-23T19:15:05.025490",
+    "recursos": [
+     {
+      "nombre": "Inspectores de desarrollo económico",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-justicia-y-seguridad/inspectores-trabajo-industria-comercio/inspectores-de-desarrollo-economico.csv"
+     },
+     {
+      "nombre": "Inspectores de desarrollo económico (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-justicia-y-seguridad/inspectores-trabajo-industria-comercio/inspectores-de-desarrollo-economico.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "editoriales-independientes",
+    "titulo": "Editoriales Independientes",
+    "actualizado": "2026-07-22T13:43:44.812789",
+    "recursos": [
+     {
+      "nombre": "2016 - Editoriales independientes (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/editoriales-independientes/editoriales-independientes.csv"
+     },
+     {
+      "nombre": "2014 - Editoriales Independientes (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/editoriales-independientes/editoriales-independientes-2014.csv"
+     },
+     {
+      "nombre": "2016 - Editoriales independientes (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/editoriales-independientes/editoriales-independientes.xlsx"
+     },
+     {
+      "nombre": "2014 - Editoriales Independientes (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/editoriales-independientes/editoriales-independientes-2014.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "inspecciones-obras",
+    "titulo": "Inspecciones a las Obras",
+    "actualizado": "2026-06-23T16:35:06.802716",
+    "recursos": [
+     {
+      "nombre": "Inspecciones a las Obras 2016",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/inspecciones-a-las-obras-2016.csv"
+     },
+     {
+      "nombre": "Inspecciones a las Obras 2017",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/inspecciones-a-las-obras-2017.csv"
+     },
+     {
+      "nombre": "Inspecciones a las Obras 2018",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/inspecciones-a-las-obras-2018.csv"
+     },
+     {
+      "nombre": "Registro Histórico Acumulado de Inspecciones a las Obras",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/registro-historico-acumulado-de-inspecciones-a-las-obras.csv"
+     },
+     {
+      "nombre": "Inspecciones a las Obras 2019",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/inspecciones-a-las-obras-2019.csv"
+     },
+     {
+      "nombre": "Inspecciones a las Obras 2016 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-gobierno/inspecciones-obras/inspecciones-a-las-obras-2016.xlsx"
+     }
+    ]
+   }
+  ],
+  "habilitaciones": [
+   {
+    "id": "habilitaciones-aprobadas",
+    "titulo": "Habilitaciones Aprobadas.",
+    "actualizado": "2026-08-12T14:35:14.313189",
+    "recursos": [
+     {
+      "nombre": "Habilitaciones 2024 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2024 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.csv"
+     },
+     {
+      "nombre": "Habilitaciones 2023 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2023.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2023 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2023.csv"
+     },
+     {
+      "nombre": "Habilitaciones 2022 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2022.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2022 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2022.csv"
+     }
+    ]
+   },
+   {
+    "id": "empresas-seguridad-privada-habilitadas",
+    "titulo": "Empresas de Seguridad Privada Habilitadas",
+    "actualizado": "2025-09-29T17:24:18.658800",
+    "recursos": [
+     {
+      "nombre": "Empresas de Seguridad Privada Habilitadas (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-justicia-y-seguridad/empresas-seguridad-privada-habilitadas/empresas-de-seguridad-privada-habilitadas.csv"
+     },
+     {
+      "nombre": "Empresas de Seguridad Privada Habilitadas (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-justicia-y-seguridad/empresas-seguridad-privada-habilitadas/empresas-de-seguridad-privada-habilitadas.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "empresas-limpieza-tanques-agua",
+    "titulo": "Empresas de limpieza de tanques de agua.",
+    "actualizado": "2026-06-18T14:55:32.426198",
+    "recursos": [
+     {
+      "nombre": "Empresas habilitadas (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-de-proteccion-ambiental/empresas-limpieza-tanques-agua/empresas-habilitadas.csv"
+     },
+     {
+      "nombre": "Empresas habilitadas (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-de-proteccion-ambiental/empresas-limpieza-tanques-agua/empresas-habilitadas.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "locales-bailables",
+    "titulo": "Locales Bailables",
+    "actualizado": "2026-08-28T17:54:32.943389",
+    "recursos": [
+     {
+      "nombre": "Locales Bailables (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/locales-bailables/locales_bailables.xlsx"
+     },
+     {
+      "nombre": "Locales Bailables (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/locales-bailables/locales_bailables.csv"
+     },
+     {
+      "nombre": "Registro histórico acumulado de locales bailables (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/locales-bailables/registro-historico-acumulado-de-locales-bailables.xlsx"
+     },
+     {
+      "nombre": "Registro histórico acumulado de locales bailables (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/locales-bailables/registro-historico-acumulado-de-locales-bailables.csv"
+     }
+    ]
+   },
+   {
+    "id": "inspectores-verificadores-agc",
+    "titulo": "Inspectores de la AGC",
+    "actualizado": "2026-10-21T18:46:49.121570",
+    "recursos": [
+     {
+      "nombre": "Inspectores y Verificadores AGC (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/inspectores-verificadores-agc/inspectores-y-verificadores-agc.csv"
+     },
+     {
+      "nombre": "Inspectores y Verificadores AGC (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/inspectores-verificadores-agc/inspectores-y-verificadores-agc.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "inspectores-verificadores-ambiente-espacio-publico",
+    "titulo": "Inspectores y verificadores de Espacio Público e Higiene Urbana",
+    "actualizado": "2026-06-23T19:15:10.315163",
+    "recursos": [
+     {
+      "nombre": "Inspectores y verificadores de Espacio Público e Higiene Urbana",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-espacio-publico-e-higiene-urbana/inspectores-verificadores-ambiente-espacio-publico/inspectores-y-verificadores-ambiente-y-espacio-publico.csv"
+     },
+     {
+      "nombre": "Inspectores y verificadores de Espacio Público e Higiene Urbana (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-espacio-publico-e-higiene-urbana/inspectores-verificadores-ambiente-espacio-publico/inspectores-y-verificadores-ambiente-y-espacio-publico.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "registro-fabricantes-reparadores-recargadores-extintores",
+    "titulo": "Registro de Fabricantes, Reparadores y Recargadores de Extintores.",
+    "actualizado": "2026-11-03T13:28:20.698011",
+    "recursos": [
+     {
+      "nombre": "Registro de Fabricantes, Reparadores y Recargadores de Extintores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/registro-fabricantes-reparadores-recargadores-extintores/registro-de-fabricantes-reparadores-y-recargadores-de-extintores.xlsx"
+     },
+     {
+      "nombre": "Registro de Fabricantes, Reparadores y Recargadores de Extintores (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/registro-fabricantes-reparadores-recargadores-extintores/registro-de-fabricantes-reparadores-y-recargadores-de-extintores.csv"
+     }
+    ]
+   },
+   {
+    "id": "fabric-rep-instal-mant-inst-fijas-contra-incendios",
+    "titulo": "Fabricantes, Reparadores, Instaladores y Mantenedores de Instalaciones Fijas contra Incendios.",
+    "actualizado": "2026-11-03T13:27:12.606278",
+    "recursos": [
+     {
+      "nombre": "Fabricantes, reparadores, mantenedores e instaladores - Instalaciones Fijas Contra Incendios (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/fabric-rep-instal-mant-inst-fijas-contra-incendios/fabricantes-reparadores-mantenedores-e-instaladores-ifci.xlsx"
+     },
+     {
+      "nombre": "Fabricantes, reparadores, mantenedores e instaladores - Instalaciones Fijas Contra Incendios",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/fabric-rep-instal-mant-inst-fijas-contra-incendios/fabricantes-reparadores-mantenedores-e-instaladores-ifci.csv"
+     }
+    ]
+   },
+   {
+    "id": "licencias-conducir",
+    "titulo": "Licencias de conducir",
+    "actualizado": "2026-06-24T14:09:06.420994",
+    "recursos": [
+     {
+      "nombre": "Licencias de conducir",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/licencias-conducir/licencias-de-conducir.csv"
+     },
+     {
+      "nombre": "Licencias de conducir (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/licencias-conducir/licencias-de-conducir.zip"
+     },
+     {
+      "nombre": "Licencias de conducir (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/licencias-conducir/licencias-de-conducir.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "transportes-autorizados-pasajeros",
+    "titulo": "Transportes autorizados de pasajeros",
+    "actualizado": "2026-06-24T14:11:27.546081",
+    "recursos": [
+     {
+      "nombre": "Acompañantes autorizados de Servicios Escolares",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/acompanantes-autorizados-de-servicios-escolares.csv"
+     },
+     {
+      "nombre": "Agencias de Radio Taxis",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/agencias-de-radio-taxis.csv"
+     },
+     {
+      "nombre": "Conductores autorizados de Servicios Escolares",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/conductores-autorizados-de-servicios-escolares.csv"
+     },
+     {
+      "nombre": "Registro histórico acumulado de Acompañantes autorizados de Servicios Escolares",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/registro-historico-acumulado-de-acompanantes-autorizados-de-servicios-escolares.csv"
+     },
+     {
+      "nombre": "Registro histórico acumulado de Conductores autorizados de Servicios Escolares",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/registro-historico-acumulado-de-conductores-autorizados-de-servicios-escolares.csv"
+     },
+     {
+      "nombre": "Registro histórico acumulado de Radio Taxis",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/transportes-autorizados-pasajeros/registro-historico-acumulado-de-radio-taxis.csv"
+     }
+    ]
+   }
+  ],
+  "metal": [],
   "establecimientos": {
    "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <10423289748783263582><br><br><a href='javasc"
+   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <7248579356717689420><br><br><a href='javascr"
   }
  },
  "habilitaciones": {
