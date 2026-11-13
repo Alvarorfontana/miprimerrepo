@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-13T00:24:30.426Z",
+ "fecha": "2026-11-13T00:40:20.536Z",
  "comex_home": {
   "status": 200
  },
@@ -50,11 +50,11 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::gjxww-1794529476761-a099dbd4c77c"
+  "muestra": "Forbidden\n\nForbidden\nsfo1::kf65w-1794530426742-6e0c2c6dfc44"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\ncle1::bp4zl-1794529477338-a9b63ef41178"
+  "muestra": "Forbidden\n\nForbidden\nsfo1::c7sfh-1794530427381-c840243f6827"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
@@ -372,10 +372,523 @@
    }
   ],
   "metal": [],
-  "establecimientos": {
-   "status": 200,
-   "muestra": "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br>Your support ID is: <7248579356717689420><br><br><a href='javascr"
-  }
+  "establecimientos": [
+   {
+    "id": "establecimientos-educativos",
+    "titulo": "Establecimientos Educativos",
+    "actualizado": "2026-11-03T13:29:53.546299",
+    "recursos": [
+     {
+      "nombre": "Establecimientos Educativos (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/establecimientos_educativos.xlsx"
+     },
+     {
+      "nombre": "Establecimientos Educativos (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/establecimientos_educativos.csv"
+     },
+     {
+      "nombre": "Escuelas Verdes (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/escuelas-verdes.csv"
+     },
+     {
+      "nombre": "Establecimientos Educativos (GEOJSON)",
+      "formato": "GeoJSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/establecimientos_educativos.geojson"
+     },
+     {
+      "nombre": "Establecimientos Educativos (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/establecimientos_educativos.zip"
+     },
+     {
+      "nombre": "Escuelas Verdes (GEOJSON)",
+      "formato": "GeoJSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-educacion/establecimientos-educativos/escuelas-verdes-wgs84.geojson"
+     }
+    ]
+   },
+   {
+    "id": "oferta-establecimientos-gastronomicos",
+    "titulo": "Oferta y Establecimientos gastronómicos",
+    "actualizado": "2026-07-22T13:13:22.725228",
+    "recursos": [
+     {
+      "nombre": "Oferta gastronómica (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/oferta_gastronomica.xlsx"
+     },
+     {
+      "nombre": "Oferta gastronómica",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/oferta_gastronomica.csv"
+     },
+     {
+      "nombre": "Establecimientos Gastronómicos (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/establecimientos_gastronomicos.xlsx"
+     },
+     {
+      "nombre": "Establecimientos Gastronómicos",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/establecimientos_gastronomicos.csv"
+     },
+     {
+      "nombre": "Establecimientos Gastronómicos (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/establecimientos-gastronomicos.zip"
+     },
+     {
+      "nombre": "Oferta gastronómica (GeoJSON)",
+      "formato": "GeoJSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/oferta-gastronomica.geojson"
+     }
+    ]
+   },
+   {
+    "id": "habilitaciones-aprobadas",
+    "titulo": "Habilitaciones Aprobadas.",
+    "actualizado": "2026-08-12T14:35:14.313189",
+    "recursos": [
+     {
+      "nombre": "Habilitaciones 2024 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2024 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.csv"
+     },
+     {
+      "nombre": "Habilitaciones 2023 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2023.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2023 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2023.csv"
+     },
+     {
+      "nombre": "Habilitaciones 2022 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2022.xlsx"
+     },
+     {
+      "nombre": "Habilitaciones 2022 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2022.csv"
+     }
+    ]
+   },
+   {
+    "id": "elecciones-2015",
+    "titulo": "Elecciones 2015",
+    "actualizado": "2026-06-23T19:13:49.869230",
+    "recursos": [
+     {
+      "nombre": "Circuitos Electorales (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/circuitos-electorales-zip.zip"
+     },
+     {
+      "nombre": "Diccionario de datos (PDF)",
+      "formato": "PDF",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/diccionario-de-datos.pdf"
+     },
+     {
+      "nombre": "2015 Establecimientos electores extranjeros (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/establecimientos-electores-extranjeros.csv"
+     },
+     {
+      "nombre": "2015 Establecimientos electores nacionales (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/establecimientos-electores-nacionales.csv"
+     },
+     {
+      "nombre": "2015 Resultados definitivos de elecciones PASO (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/resultados-definitivos-de-elecciones-paso.csv"
+     },
+     {
+      "nombre": "2015 Resultados definitivos primera vuelta (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2015/resultados-definitivos-primera-vuelta.csv"
+     }
+    ]
+   },
+   {
+    "id": "elecciones-2021",
+    "titulo": "Elecciones 2021",
+    "actualizado": "2024-12-04T14:39:26.350801",
+    "recursos": [
+     {
+      "nombre": "Establecimientos 2021 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/establecimientos_2021.xlsx"
+     },
+     {
+      "nombre": "Establecimientos 2021 Nacionales (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/establecimientos_2021_nacionales.csv"
+     },
+     {
+      "nombre": "Establecimientos 2021 Extranjeros (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/establecimientos_2021_extranjeros.csv"
+     },
+     {
+      "nombre": "Elecciones Generales 2021. Electores/as Privados/as de Libertad",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/generales_dl_caba_privados.csv"
+     },
+     {
+      "nombre": "Elecciones Generales 2021. Electores/as Nativos/as",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/generales_dl_circuitos_nativos.csv"
+     },
+     {
+      "nombre": "Elecciones Generales 2021. Electores/as Extranjeros/as",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2021/generales_dl_circuitos_extranjeros.csv"
+     }
+    ]
+   },
+   {
+    "id": "colonias-de-verano",
+    "titulo": "Colonias de Verano",
+    "actualizado": "2026-04-21T18:28:09.086086",
+    "recursos": [
+     {
+      "nombre": "Colonias de Verano (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-general-y-relaciones-internacionales/colonias-de-verano/colonias_de_verano.csv"
+     },
+     {
+      "nombre": "Colonias de Verano (GEOJSON)",
+      "formato": "JSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-general-y-relaciones-internacionales/colonias-de-verano/colonias_de_verano.geojson"
+     },
+     {
+      "nombre": "Colonias de Verano (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-general-y-relaciones-internacionales/colonias-de-verano/colonias_de_verano.xlsx"
+     },
+     {
+      "nombre": "Colonias de Verano",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-general-y-relaciones-internacionales/colonias-de-verano/colonias_de_verano.zip"
+     }
+    ]
+   },
+   {
+    "id": "asistencia-escolar",
+    "titulo": "Asistencia escolar.",
+    "actualizado": "2026-06-18T19:25:06.227848",
+    "recursos": [
+     {
+      "nombre": "Condición de asistencia escolar de 3 a 24 años (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/cond_asis_esc_edad__sexo__annio__c_asist_limpio.csv"
+     },
+     {
+      "nombre": "Condición de asistencia escolar de 25 años y más (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/cond_asis_24_sexo__annio__g_edad__c_asist_limpio.csv"
+     },
+     {
+      "nombre": "Tasa de asistencia escolar (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/tas_asis_esc_cen_edad__sexo__annio_limpio.csv"
+     },
+     {
+      "nombre": "Años de escolarización (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/prom_an_esc_sexo__annio_limpio.csv"
+     },
+     {
+      "nombre": "Población que asiste a algún establecimiento de educación formal (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/tas_asis_esc_cen_edad__sexo__annio_limpio.csv"
+     },
+     {
+      "nombre": "Condición de asistencia escolar de 3 a 24 años (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/asistencia-escolar/cond_asis_esc_edad__sexo__annio__c_asist_limpio.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "elecciones-2013",
+    "titulo": "Elecciones 2013",
+    "actualizado": "2025-08-25T15:14:05.087412",
+    "recursos": [
+     {
+      "nombre": "2013 Código Elecciones (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/codigo-elecciones-2013.csv"
+     },
+     {
+      "nombre": "2013 Establecimientos Elecciones Legisladores (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/establecimientos-elecciones-legisladores-2013.csv"
+     },
+     {
+      "nombre": "2013 Resultados Elecciones Legisladores (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/resultados-elecciones-legisladores-2013.csv"
+     },
+     {
+      "nombre": "2013 Código Elecciones (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/codigo-elecciones-2013.xlsx"
+     },
+     {
+      "nombre": "2013 Establecimientos Elecciones Legisladores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/establecimientos-elecciones-legisladores-2013.xlsx"
+     },
+     {
+      "nombre": "2013 Resultados Elecciones Legisladores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2013/resultados-elecciones-legisladores-2013.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "centros-de-accion-familiar",
+    "titulo": "Centros de Acción Familiar",
+    "actualizado": "2026-11-03T13:29:20.709580",
+    "recursos": [
+     {
+      "nombre": "Centros de acción familiar (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-de-accion-familiar/centros_de_accion_familiar.csv"
+     },
+     {
+      "nombre": "Centros de acción familiar (GEOJSON)",
+      "formato": "JSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-de-accion-familiar/centros_de_accion_familiar.geojson"
+     },
+     {
+      "nombre": "Centros de acción familiar (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-de-accion-familiar/centros_de_accion_familiar.xlsx"
+     },
+     {
+      "nombre": "Centros de acción familiar (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-de-accion-familiar/centros_de_accion_familiar.zip"
+     }
+    ]
+   },
+   {
+    "id": "elecciones-2023",
+    "titulo": "Elecciones 2023",
+    "actualizado": "2026-07-01T17:53:05.529456",
+    "recursos": [
+     {
+      "nombre": "Establecimientos elecciones 2023 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/establecimientos_elecciones_2023.xlsx"
+     },
+     {
+      "nombre": "Establecimientos elecciones 2023 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/establecimientos_elecciones_2023.csv"
+     },
+     {
+      "nombre": "Escrutinio provisorio elecciones PASO 2023 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/elecciones_generales_provisorio_PASO_2023.csv"
+     },
+     {
+      "nombre": "Escrutinio provisorio elecciones generales 2023 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/elecciones_generales_provisorio_2023.xlsx"
+     },
+     {
+      "nombre": "Escrutinio provisorio elecciones generales 2023 (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/elecciones_generales_provisorio_2023.csv"
+     },
+     {
+      "nombre": "Escrutinio provisorio elecciones PASO 2023 (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/subsecretaria-justicia/elecciones-2023/elecciones_generales_provisorio_PASO_2023.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "casas-ninas-ninos-adolescentes",
+    "titulo": "Casas de Niñas, Niños y Adolescentes.",
+    "actualizado": "2026-06-18T19:26:33.305318",
+    "recursos": [
+     {
+      "nombre": "Casas de Niñas, Niños y Adolescentes (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/casas-ninas-ninos-adolescentes/casas-de-ninas-ninos-yo-adolescentes.zip"
+     },
+     {
+      "nombre": "Casas de Niñas, Niños y/o Adolescentes (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/casas-ninas-ninos-adolescentes/casas-de-ninas-ninos-yo-adolescentes.csv"
+     },
+     {
+      "nombre": "Casas de Niñas, Niños y/o Adolescentes (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/casas-ninas-ninos-adolescentes/casas-de-ninas-ninos-yo-adolescentes.xlsx"
+     },
+     {
+      "nombre": "Casas de Niñas, Niños y Adolescentes (GEOJSON)",
+      "formato": "GeoJSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/casas-ninas-ninos-adolescentes/casas-de-ninas-ninos-yo-adolescentes.geojson"
+     }
+    ]
+   },
+   {
+    "id": "hogares-paradores",
+    "titulo": "Hogares y Paradores",
+    "actualizado": "2026-06-23T19:14:17.074998",
+    "recursos": [
+     {
+      "nombre": "Personas alojadas en hogares y paradores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/personas-alojadas-en-hogares-y-paradores.xlsx"
+     },
+     {
+      "nombre": "Personas alojadas en hogares y paradores (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/personas-alojadas-en-hogares-y-paradores.csv"
+     },
+     {
+      "nombre": "Hogares y paradores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/hogares-paradores.xlsx"
+     },
+     {
+      "nombre": "Hogares y paradores (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/hogares-paradores.csv"
+     },
+     {
+      "nombre": "Hogares y Paradores (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/hogares-y-paradores.xlsx"
+     },
+     {
+      "nombre": "Hogares y Paradores (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/hogares-paradores/hogares-y-paradores-zip.zip"
+     }
+    ]
+   },
+   {
+    "id": "nacimientos",
+    "titulo": "Nacimientos.",
+    "actualizado": "2026-10-02T12:50:06.550080",
+    "recursos": [
+     {
+      "nombre": "Nacidos vivos según situación de convivencia (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/nac_viv_annio__sit_conv_dm_limpio.xlsx"
+     },
+     {
+      "nombre": "Nacidos vivos según situación de convivencia (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/nac_viv_annio__sit_conv_dm_limpio.csv"
+     },
+     {
+      "nombre": "Nacidos vivos según grupo de edad (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/nac_viv_annio__g_edad_limpio.xlsx"
+     },
+     {
+      "nombre": "Nacidos vivos según grupo de edad (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/nac_viv_annio__g_edad_limpio.csv"
+     },
+     {
+      "nombre": "Lugar donde se produjo el nacimiento (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/loc_ocurr_part_annio__l_ocu_limpio.xlsx"
+     },
+     {
+      "nombre": "Lugar donde se produjo el nacimiento (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/direccion-general-de-estadisticas-y-censos/nacimientos/loc_ocurr_part_annio__l_ocu_limpio.csv"
+     }
+    ]
+   },
+   {
+    "id": "educacion-sexual-integral",
+    "titulo": "Educación Sexual Integral (ESI)",
+    "actualizado": "2026-05-27T17:42:38.924170",
+    "recursos": [
+     {
+      "nombre": "",
+      "formato": "",
+      "url": ""
+     },
+     {
+      "nombre": "Docentes capacitados en Educación Sexual Integral (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-para-la-igualdad-de-genero/educacion-sexual-integral/datos-ESI-docentes.xlsx"
+     },
+     {
+      "nombre": "Establecimientos donde se implementa la Educación Sexual Integral (ESI) (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-para-la-igualdad-de-genero/educacion-sexual-integral/datos-ESI-establ.xlsx"
+     },
+     {
+      "nombre": "Total alumnos que recibieron ESI (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-para-la-igualdad-de-genero/educacion-sexual-integral/total_alumnos.csv"
+     },
+     {
+      "nombre": "Total alumnos que recibieron ESI (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/secretaria-para-la-igualdad-de-genero/educacion-sexual-integral/total_alumnos.xlsx"
+     },
+     {
+      "nombre": "2024 ESI Estudiantes (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos//datasets/secretaria-para-la-igualdad-de-genero/educacion-sexual-integral/ESI_estudiantes_2024_.xlsx"
+     }
+    ]
+   },
+   {
+    "id": "centros-desarrollo-infantil",
+    "titulo": "Centros de Desarrollo Infantil.",
+    "actualizado": "2026-11-03T13:29:24.448911",
+    "recursos": [
+     {
+      "nombre": "Centros de Desarrollo Infantil (CSV)",
+      "formato": "CSV",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-desarrollo-infantil/centros_de_desarrollo_infantil.csv"
+     },
+     {
+      "nombre": "Centros de Desarrollo Infantil (SHP)",
+      "formato": "ZIP",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-desarrollo-infantil/centros_de_desarrollo_infantil.zip"
+     },
+     {
+      "nombre": "Centros de Desarrollo Infantil (XLSX)",
+      "formato": "XLSX",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-desarrollo-infantil/centros_de_desarrollo_infantil.xlsx"
+     },
+     {
+      "nombre": "Centros de Desarrollo Infantil (GEOJSON)",
+      "formato": "JSON",
+      "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-desarrollo-humano-y-habitat/centros-desarrollo-infantil/centros_de_desarrollo_infantil.geojson"
+     }
+    ]
+   }
+  ]
  },
  "habilitaciones": {
   "url": "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/agencia-gubernamental-de-control/habilitaciones-aprobadas/habilitaciones-aprobadas2024.csv",
