@@ -25,23 +25,63 @@
    "https://www.srt.gob.ar/estadisticas/cf_otros_informes.php"
   ]
  },
- "https://www.srt.gob.ar/estadisticas/ts_boletin_total_sistema.php": {
+ "https://www.srt.gob.ar/estadisticas/cf_serie_historica_up.php": {
   "status": 200,
-  "archivos": [],
+  "archivos": [
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_ART_o_empleador_autoasegurado%20-%20UP.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/Serie_historica_Segun_Sector_de_actividad_economica_CIIUrev2.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_Sector_de_actividad_economica_CIIUrev4%20-%20UP.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_Sector_de_actividad_economica_CIIUrev4_6Digitos%20-%20UP.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_Jurisdiccion%20-%20Ubicacion%20Fiscal%20-%20UP.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_Jurisdiccion%20-%20Ubicacion%20Persona%20Trabajadora%20-%20UP.xlsx",
+   "https://www.srt.gob.ar/estadisticas/series/co/up/Serie_historica_Segun_Tama%C3%B1o_de_la_nomina_del_empleador%20-%20UP.xlsx",
+   "https://www.argentina.gob.ar/sites/default/files/diccionario_de_datos_e_instrucciones_para_la_descarga_0_1.pdf"
+  ],
   "paginas": [
    "https://www.srt.gob.ar/estadisticas/ts_boletin_total_sistema.php",
    "https://www.srt.gob.ar/estadisticas/cf_ultimos_datos.php",
    "https://www.srt.gob.ar/estadisticas/acc_ultimos_datos.php",
    "https://www.srt.gob.ar/estadisticas/lit_ultimos_datos.php",
    "https://www.srt.gob.ar/estadisticas/tem_situacion_jovenes.php",
-   "https://www.srt.gob.ar/estadisticas/ts_situacion_genero.php",
-   "https://www.srt.gob.ar/estadisticas/ts_situacion_migrantes.php",
-   "https://www.srt.gob.ar/estadisticas/ts_situacion_jovenes.php"
+   "https://www.srt.gob.ar/estadisticas/cf_definiciones.php",
+   "https://www.srt.gob.ar/estadisticas/cf_serie_historica_up.php",
+   "https://www.srt.gob.ar/estadisticas/cf_serie_historica_cp.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_sector.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_provincia.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_art.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_tamano.php",
+   "https://www.srt.gob.ar/estadisticas/cf_precios_primas.php",
+   "https://www.srt.gob.ar/estadisticas/cf_altas_bajas_tm.php",
+   "https://www.srt.gob.ar/estadisticas/cf_anuario_estadistico.php",
+   "https://www.srt.gob.ar/estadisticas/cf_informe_anual.php",
+   "https://www.srt.gob.ar/estadisticas/cf_tablero_dinamico.php",
+   "https://www.srt.gob.ar/estadisticas/cf_otros_informes.php"
   ]
  },
- "https://www.srt.gob.ar/estadisticas/cf_series_historicas.php": {
-  "status": 404,
-  "archivos": [],
-  "paginas": []
+ "https://www.srt.gob.ar/estadisticas/cf_boletin_sector.php": {
+  "status": 200,
+  "archivos": [
+   "https://www.argentina.gob.ar/sites/default/files/diccionario_de_datos_e_instrucciones_para_la_descarga_0_1.pdf"
+  ],
+  "paginas": [
+   "https://www.srt.gob.ar/estadisticas/ts_boletin_total_sistema.php",
+   "https://www.srt.gob.ar/estadisticas/cf_ultimos_datos.php",
+   "https://www.srt.gob.ar/estadisticas/acc_ultimos_datos.php",
+   "https://www.srt.gob.ar/estadisticas/lit_ultimos_datos.php",
+   "https://www.srt.gob.ar/estadisticas/tem_situacion_jovenes.php",
+   "https://www.srt.gob.ar/estadisticas/cf_definiciones.php",
+   "https://www.srt.gob.ar/estadisticas/cf_serie_historica_up.php",
+   "https://www.srt.gob.ar/estadisticas/cf_serie_historica_cp.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_sector.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_provincia.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_art.php",
+   "https://www.srt.gob.ar/estadisticas/cf_boletin_tamano.php",
+   "https://www.srt.gob.ar/estadisticas/cf_precios_primas.php",
+   "https://www.srt.gob.ar/estadisticas/cf_altas_bajas_tm.php",
+   "https://www.srt.gob.ar/estadisticas/cf_anuario_estadistico.php",
+   "https://www.srt.gob.ar/estadisticas/cf_informe_anual.php",
+   "https://www.srt.gob.ar/estadisticas/cf_tablero_dinamico.php",
+   "https://www.srt.gob.ar/estadisticas/cf_otros_informes.php"
+  ]
  }
 }
