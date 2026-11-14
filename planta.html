@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulso de Planta · seguimiento de producción por áreas</title>
+<meta name="description" content="Partes por área, OEE, paradas y cuello de botella de una planta industrial.">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+.pp{max-width:1240px;margin:0 auto;padding:18px}
+.pp h1{font-family:var(--display);font-size:2.2rem;margin:.2em 0 0}
+.pp h2{font-family:var(--display);font-size:1.4rem;margin:0 0 .4em}
+.pp .lead{color:var(--muted);margin:.2em 0 1em}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.kpis{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.kpi b{display:block;font-family:var(--display);font-size:2rem;line-height:1.1}
+.kpi span{color:var(--muted);font-size:.85rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:6px 4px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+.mono{font-family:var(--mono)}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+.bar{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:.88rem}
+.bar i{display:block;height:12px;background:var(--molten);border-radius:3px}
+.bar span{min-width:150px}
+.cols{display:flex;align-items:flex-end;gap:3px;height:140px;border-bottom:1px solid var(--line)}
+.cols i{flex:1;background:var(--steel);border-radius:2px 2px 0 0;min-height:2px}
+form label{display:block;font-size:.85rem;color:var(--muted);margin-top:8px}
+form input,form select{width:100%;padding:7px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+button{margin-top:12px;padding:9px 14px;border:0;border-radius:6px;background:var(--steel);color:#fff;font:inherit;cursor:pointer}
+button.sec{background:var(--soft);color:var(--ink)}
+.note{color:var(--muted);font-size:.85rem}
+.tag{display:inline-block;padding:1px 7px;border-radius:9px;background:var(--molten-soft);font-size:.8rem}
+@media(max-width:520px){table{font-size:.8rem}th,td{padding:5px 2px}}
+.tree{font-size:.9rem;line-height:1.7}.tree div{padding-left:16px}
+</style>
+</head>
+<body>
+<main class="pp">
+  <p class="note"><a href="index.html">← Observatorio Metalúrgico</a></p>
+  <h1>Pulso de Planta</h1>
+  <p class="lead">Cada área carga su parte por turno. El sistema calcula cuánto rinde cada etapa, qué la frena y dónde está el cuello de botella. <span class="tag" id="modo">Demo: planta de ejes ficticia</span></p>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid">
+    <section class="card" style="grid-column:1/-1">
+      <h2>OEE por área</h2>
+      <table id="tabla"></table>
+      <p class="note">OEE = disponibilidad × rendimiento × calidad. <b>Disponibilidad</b>: tiempo que la máquina trabajó sobre el planificado. <b>Rendimiento</b>: piezas hechas sobre las que daba el ciclo ideal. <b>Calidad</b>: piezas buenas sobre el total. Rangos de lectura: <span class="ok">85 % o más, nivel de referencia mundial</span> · <span class="warn">60 a 85 %, habitual en la industria</span> · <span class="bad">menos de 60 %, hay mucho para recuperar</span>. Las áreas que siguen al cuello de botella muestran rendimiento bajo porque esperan material: no es culpa de ellas. Límites: depende de que los partes se carguen completos; no mide calidad de producto terminado ni costos.</p>
+    </section>
+
+    <section class="card">
+      <h2>Qué frena la planta</h2>
+      <p class="note">Minutos de parada por motivo, de mayor a menor (Pareto). Atacar los primeros dos suele resolver la mayor parte.</p>
+      <div id="pareto"></div>
+    </section>
+
+    <section class="card">
+      <h2>Producción diaria</h2>
+      <p class="note">Piezas buenas que salieron de la última área (<span id="ultima"></span>).</p>
+      <div class="cols" id="diaria"></div>
+      <p class="note mono" id="diariaEje"></p>
+    </section>
+
+    <section class="card">
+      <h2>Cargar parte de turno</h2>
+      <form id="parte">
+        <div class="row2"><div><label>Fecha<input type="date" name="fecha" required></label></div>
+        <div><label>Turno<select name="turno"><option>Mañana</option><option>Tarde</option><option>Noche</option></select></label></div></div>
+        <label>Área<select name="area" id="selArea"></select></label>
+        <div class="row2"><div><label>Piezas buenas<input type="number" name="buenas" min="0" required></label></div>
+        <div><label>Rechazos<input type="number" name="rechazos" min="0" value="0"></label></div></div>
+        <div class="row2"><div><label>Minutos parado<input type="number" name="parada" min="0" value="0"></label></div>
+        <div><label>Motivo principal<select name="motivo" id="selMotivo"></select></label></div></div>
+        <button>Guardar parte</button> <button type="button" class="sec" id="borrar">Volver a la demo</button>
+        <p class="note" id="msg">Por ahora los partes quedan guardados en este navegador. Para que carguen varias personas se conecta una base gratuita (Supabase), igual que el portal UOM.</p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Estructura de la planta</h2>
+      <p class="note">Modelo ISA-95: el mismo sistema sirve para cualquier rama, solo cambian las áreas y lo que mide cada una.</p>
+      <div class="tree" id="arbol"></div>
+    </section>
+  </div>
+</main>
+<script src="js/planta.js"></script>
+</body>
+</html>
