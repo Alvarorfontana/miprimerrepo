@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13",
+ "actualizado": "2026-11-20",
  "fuentes": [
   {
    "clave": "oede-provincial",
@@ -32,9 +32,9 @@
      "mb": 0.57
     },
     {
-     "archivo": "data/fuentes/oede-provincial/departamento_series_empleo_y_salarios_mensual_sector_1.csv",
-     "url": "https://www.argentina.gob.ar/sites/default/files/departamento_series_empleo_y_salarios_mensual_sector_1.csv",
-     "mb": 22.46
+     "archivo": "data/fuentes/oede-provincial/departamento_series_empleo_y_salarios_mensual_sector_2.csv",
+     "url": "https://www.argentina.gob.ar/sites/default/files/departamento_series_empleo_y_salarios_mensual_sector_2.csv",
+     "mb": 22.33
     }
    ],
    "errores": []
@@ -67,9 +67,9 @@
    "pagina": "https://www.argentina.gob.ar/trabajo/estadisticas/situacion-y-evolucion-del-trabajo-registrado",
    "archivos": [
     {
-     "archivo": "data/fuentes/sipa/trabajoregistrado_2607_estadisticas.xlsx",
-     "url": "https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2607_estadisticas.xlsx",
-     "mb": 29.44
+     "archivo": "data/fuentes/sipa/trabajoregistrado_2608_estadisticas.xlsx",
+     "url": "https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2608_estadisticas.xlsx",
+     "mb": 29.43
     }
    ],
    "errores": []
@@ -80,8 +80,8 @@
    "pagina": "https://www.indec.gob.ar/Nivel4/Tema/3/6/15",
    "archivos": [
     {
-     "archivo": "data/fuentes/indec-capacidad/sh_capacidad_10_26.xls",
-     "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_capacidad_10_26.xls",
+     "archivo": "data/fuentes/indec-capacidad/sh_capacidad_11_26.xls",
+     "url": "https://www.indec.gob.ar/ftp/cuadros/economia/sh_capacidad_11_26.xls",
      "mb": 0.06
     }
    ],

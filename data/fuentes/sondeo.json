@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-13T00:40:20.536Z",
+ "fecha": "2026-11-20T20:28:22.904Z",
  "comex_home": {
   "status": 200
  },
@@ -50,11 +50,11 @@
  ],
  "adimra": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\nsfo1::kf65w-1794530426742-6e0c2c6dfc44"
+  "muestra": "Forbidden\n\nForbidden\niad1::jfb57-1795206509054-7d9eaa341f4c"
  },
  "adimra2": {
   "status": 403,
-  "muestra": "Forbidden\n\nForbidden\nsfo1::c7sfh-1794530427381-c840243f6827"
+  "muestra": "Forbidden\n\nForbidden\niad1::xs45s-1795206509497-b7cba62066b6"
  },
  "adimra_home_pdfs": [],
  "adimra_home_links": [
@@ -376,7 +376,7 @@
    {
     "id": "establecimientos-educativos",
     "titulo": "Establecimientos Educativos",
-    "actualizado": "2026-11-03T13:29:53.546299",
+    "actualizado": "2026-11-13T15:37:54.872294",
     "recursos": [
      {
       "nombre": "Establecimientos Educativos (XLSX)",
@@ -662,7 +662,7 @@
    {
     "id": "centros-de-accion-familiar",
     "titulo": "Centros de Acción Familiar",
-    "actualizado": "2026-11-03T13:29:20.709580",
+    "actualizado": "2026-11-13T15:37:31.937896",
     "recursos": [
      {
       "nombre": "Centros de acción familiar (CSV)",
@@ -864,7 +864,7 @@
    {
     "id": "centros-desarrollo-infantil",
     "titulo": "Centros de Desarrollo Infantil.",
-    "actualizado": "2026-11-03T13:29:24.448911",
+    "actualizado": "2026-11-13T15:37:34.592857",
     "recursos": [
      {
       "nombre": "Centros de Desarrollo Infantil (CSV)",

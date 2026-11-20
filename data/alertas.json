@@ -1,63 +1,63 @@
 {
- "actualizado": "2026-11-13",
- "total": 144,
+ "actualizado": "2026-11-20",
+ "total": 148,
  "alta": 55,
- "media": 89,
+ "media": 93,
  "alertas": [
   {
-   "fecha": "2026-11-13",
-   "provincia": "Chubut",
-   "nivel": "alta",
-   "tema": "Índice de riesgo",
-   "ambito": "Chubut",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 69,
-   "titulo": "Chubut: índice de riesgo 69/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Índice de riesgo",
    "ambito": "San Luis",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 69,
-   "titulo": "San Luis: índice de riesgo 69/100",
+   "valor": 67,
+   "titulo": "San Luis: índice de riesgo 67/100",
    "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Salta",
+   "fecha": "2026-11-20",
+   "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Índice de riesgo",
-   "ambito": "Salta",
+   "ambito": "Chubut",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 65,
-   "titulo": "Salta: índice de riesgo 65/100",
+   "valor": 64,
+   "titulo": "Chubut: índice de riesgo 64/100",
    "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Índice de riesgo",
    "ambito": "Misiones",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 62,
-   "titulo": "Misiones: índice de riesgo 62/100",
+   "valor": 61,
+   "titulo": "Misiones: índice de riesgo 61/100",
    "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y pérdida de empleo desde fines de 2023.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Salta",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "Salta",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 60,
+   "titulo": "Salta: índice de riesgo 60/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -70,85 +70,59 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
    "variable": "IPI Maquinaria y equipo",
-   "periodo": "2026-08",
-   "valor": -24,
-   "titulo": "Maquinaria y equipo: la producción cae 24,0% interanual",
-   "detalle": "Lleva 11 meses seguidos por debajo del año anterior.",
+   "periodo": "2026-09",
+   "valor": -26.8,
+   "titulo": "Maquinaria y equipo: la producción cae 26,8% interanual",
+   "detalle": "Lleva 12 meses seguidos por debajo del año anterior.",
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
    "variable": "Doble señal 29",
    "periodo": "2026T1",
-   "valor": -24,
-   "titulo": "Maquinaria y equipo: cae la producción (24,0%) y el empleo (4,3%)",
+   "valor": -26.8,
+   "titulo": "Maquinaria y equipo: cae la producción (26,8%) y el empleo (4,3%)",
    "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
    "fuente": "INDEC + OEDE"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": null,
-   "nivel": "alta",
-   "tema": "Producción",
-   "ambito": "Nacional",
-   "variable": "IPI Fundición",
-   "periodo": "2026-08",
-   "valor": -13.3,
-   "titulo": "Fundición: la producción cae 13,3% interanual",
-   "detalle": "Lleva 14 meses seguidos por debajo del año anterior.",
-   "fuente": "INDEC"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
    "variable": "IPI Equipos eléctricos",
-   "periodo": "2026-08",
-   "valor": -11.2,
-   "titulo": "Equipos eléctricos: la producción cae 11,2% interanual",
-   "detalle": "Lleva 3 meses seguidos por debajo del año anterior.",
+   "periodo": "2026-09",
+   "valor": -14,
+   "titulo": "Equipos eléctricos: la producción cae 14,0% interanual",
+   "detalle": "Lleva 4 meses seguidos por debajo del año anterior.",
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
    "ambito": "Nacional",
    "variable": "Doble señal 31",
    "periodo": "2026T1",
-   "valor": -11.2,
-   "titulo": "Equipo eléctrico: cae la producción (11,2%) y el empleo (2,8%)",
+   "valor": -14,
+   "titulo": "Equipo eléctrico: cae la producción (14,0%) y el empleo (2,8%)",
    "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
    "fuente": "INDEC + OEDE"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": null,
-   "nivel": "alta",
-   "tema": "Producción",
-   "ambito": "Nacional",
-   "variable": "Doble señal 28",
-   "periodo": "2026T1",
-   "valor": -9.6,
-   "titulo": "Productos de metal: cae la producción (9,6%) y el empleo (3,4%)",
-   "detalle": "Doble señal: menos producción y menos puestos al mismo tiempo, el patrón que antecede a ajustes más profundos.",
-   "fuente": "INDEC + OEDE"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Corrientes",
    "nivel": "alta",
    "tema": "Empresas",
@@ -161,7 +135,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Santa Cruz",
    "nivel": "alta",
    "tema": "Empresas",
@@ -174,7 +148,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empresas",
@@ -187,7 +161,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chaco",
    "nivel": "alta",
    "tema": "Empresas",
@@ -200,7 +174,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empresas",
@@ -213,7 +187,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empresas",
@@ -226,20 +200,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": null,
-   "nivel": "alta",
-   "tema": "Capacidad instalada",
-   "ambito": "Nacional",
-   "variable": "Capacidad Metalmecánica",
-   "periodo": "2026-08",
-   "valor": 35.9,
-   "titulo": "Metalmecánica: 35,9% de la capacidad en uso",
-   "detalle": "-8,7 puntos contra un año atrás.",
-   "fuente": "INDEC"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -252,7 +213,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -265,7 +226,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -278,7 +239,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -291,7 +252,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Jujuy",
    "nivel": "alta",
    "tema": "Empleo",
@@ -304,7 +265,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Corrientes",
    "nivel": "alta",
    "tema": "Empleo",
@@ -317,7 +278,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -330,7 +291,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Jujuy",
    "nivel": "alta",
    "tema": "Empleo",
@@ -343,7 +304,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -356,7 +317,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -369,7 +330,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -382,7 +343,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empleo",
@@ -395,7 +356,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo",
@@ -408,7 +369,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -421,7 +382,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo",
@@ -434,7 +395,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -447,7 +408,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empleo",
@@ -460,7 +421,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -473,7 +434,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -486,7 +447,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -499,7 +460,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -512,7 +473,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo",
@@ -525,7 +486,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo",
@@ -538,7 +499,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo",
@@ -551,7 +512,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "La Pampa",
    "nivel": "alta",
    "tema": "Empleo",
@@ -564,7 +525,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Mendoza",
    "nivel": "alta",
    "tema": "Empleo",
@@ -577,7 +538,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Río Negro",
    "nivel": "alta",
    "tema": "Empleo",
@@ -590,163 +551,189 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Misiones",
-   "nivel": "alta",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Apostoles",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -23.5,
-   "titulo": "Apostoles (Misiones): el empleo industrial cae 23,5%",
-   "detalle": "-380 puestos en la industria manufacturera en un año (1.237 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
    "ambito": "San Fernando",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -18.5,
-   "titulo": "San Fernando (Buenos Aires): el empleo industrial cae 18,5%",
-   "detalle": "-1.737 puestos en la industria manufacturera en un año (7.648 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -20.3,
+   "titulo": "San Fernando (Buenos Aires): el empleo industrial cae 20,3%",
+   "detalle": "-1.729 puestos en la industria manufacturera en un año (6.768 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "La Pampa",
+   "fecha": "2026-11-20",
+   "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
-   "ambito": "Maraco",
+   "ambito": "Rio Grande",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -18.4,
-   "titulo": "Maraco (La Pampa): el empleo industrial cae 18,4%",
-   "detalle": "-296 puestos en la industria manufacturera en un año (1.315 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -20.1,
+   "titulo": "Rio Grande (Tierra del Fuego): el empleo industrial cae 20,1%",
+   "detalle": "-1.335 puestos en la industria manufacturera en un año (5.319 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Tucumán",
-   "nivel": "alta",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Famailla",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -13.3,
-   "titulo": "Famailla (Tucumán): el empleo industrial cae 13,3%",
-   "detalle": "-247 puestos en la industria manufacturera en un año (1.606 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
    "ambito": "Tres Arroyos",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -12.9,
-   "titulo": "Tres Arroyos (Buenos Aires): el empleo industrial cae 12,9%",
-   "detalle": "-196 puestos en la industria manufacturera en un año (1.319 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -17.8,
+   "titulo": "Tres Arroyos (Buenos Aires): el empleo industrial cae 17,8%",
+   "detalle": "-273 puestos en la industria manufacturera en un año (1.259 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "La Pampa",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Maraco",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -17.7,
+   "titulo": "Maraco (La Pampa): el empleo industrial cae 17,7%",
+   "detalle": "-267 puestos en la industria manufacturera en un año (1.240 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Tierra del Fuego",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Ushuaia",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -16.9,
+   "titulo": "Ushuaia (Tierra del Fuego): el empleo industrial cae 16,9%",
+   "detalle": "-505 puestos en la industria manufacturera en un año (2.490 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
    "ambito": "Tafi Viejo",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -12.8,
-   "titulo": "Tafi Viejo (Tucumán): el empleo industrial cae 12,8%",
-   "detalle": "-285 puestos en la industria manufacturera en un año (1.948 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -15.8,
+   "titulo": "Tafi Viejo (Tucumán): el empleo industrial cae 15,8%",
+   "detalle": "-299 puestos en la industria manufacturera en un año (1.594 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Salta",
+   "fecha": "2026-11-20",
+   "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
-   "ambito": "General Jose de San Martin",
+   "ambito": "Famailla",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -12.5,
-   "titulo": "General Jose de San Martin (Salta): el empleo industrial cae 12,5%",
-   "detalle": "-245 puestos en la industria manufacturera en un año (1.710 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -15.1,
+   "titulo": "Famailla (Tucumán): el empleo industrial cae 15,1%",
+   "detalle": "-274 puestos en la industria manufacturera en un año (1.542 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Mendoza",
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
-   "ambito": "San Martin",
+   "ambito": "Ramallo",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -10.8,
-   "titulo": "San Martin (Mendoza): el empleo industrial cae 10,8%",
-   "detalle": "-278 puestos en la industria manufacturera en un año (2.305 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -14.1,
+   "titulo": "Ramallo (Buenos Aires): el empleo industrial cae 14,1%",
+   "detalle": "-508 puestos en la industria manufacturera en un año (3.088 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Chubut",
-   "nivel": "alta",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Escalante",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -10.7,
-   "titulo": "Escalante (Chubut): el empleo industrial cae 10,7%",
-   "detalle": "-265 puestos en la industria manufacturera en un año (2.212 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "La Rioja",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
    "ambito": "Capital",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -10.6,
-   "titulo": "Capital (La Rioja): el empleo industrial cae 10,6%",
-   "detalle": "-643 puestos en la industria manufacturera en un año (5.404 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -13.3,
+   "titulo": "Capital (La Rioja): el empleo industrial cae 13,3%",
+   "detalle": "-870 puestos en la industria manufacturera en un año (5.670 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Chubut",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Escalante",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -12.7,
+   "titulo": "Escalante (Chubut): el empleo industrial cae 12,7%",
+   "detalle": "-309 puestos en la industria manufacturera en un año (2.126 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Campana",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -11.7,
+   "titulo": "Campana (Buenos Aires): el empleo industrial cae 11,7%",
+   "detalle": "-854 puestos en la industria manufacturera en un año (6.464 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Moreno",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -11,
+   "titulo": "Moreno (Buenos Aires): el empleo industrial cae 11,0%",
+   "detalle": "-831 puestos en la industria manufacturera en un año (6.707 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "alta",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Ituzaingo",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -10.9,
+   "titulo": "Ituzaingo (Buenos Aires): el empleo industrial cae 10,9%",
+   "detalle": "-342 puestos en la industria manufacturera en un año (2.803 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Índice de riesgo",
    "ambito": "Partidos del GBA",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 55,
-   "titulo": "Partidos del GBA: índice de riesgo 55/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Índice de riesgo",
-   "ambito": "Resto de Buenos Aires",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 54,
-   "titulo": "Resto de Buenos Aires: índice de riesgo 54/100",
+   "valor": 53,
+   "titulo": "Partidos del GBA: índice de riesgo 53/100",
    "detalle": "Pesa sobre todo: caída del empleo en el último año y trimestres seguidos en baja.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tierra del Fuego",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -759,111 +746,111 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Jujuy",
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Índice de riesgo",
-   "ambito": "Jujuy",
+   "ambito": "Resto de Buenos Aires",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 49,
-   "titulo": "Jujuy: índice de riesgo 49/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "valor": 51,
+   "titulo": "Resto de Buenos Aires: índice de riesgo 51/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y trimestres seguidos en baja.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Río Negro",
-   "nivel": "media",
-   "tema": "Índice de riesgo",
-   "ambito": "Río Negro",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 49,
-   "titulo": "Río Negro: índice de riesgo 49/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Índice de riesgo",
    "ambito": "Córdoba",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 47,
-   "titulo": "Córdoba: índice de riesgo 47/100",
+   "valor": 46,
+   "titulo": "Córdoba: índice de riesgo 46/100",
    "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y caída del empleo en el último año.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "La Pampa",
+   "fecha": "2026-11-20",
+   "provincia": "Río Negro",
    "nivel": "media",
    "tema": "Índice de riesgo",
-   "ambito": "La Pampa",
+   "ambito": "Río Negro",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 47,
-   "titulo": "La Pampa: índice de riesgo 47/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y cierre neto de empresas metalúrgicas.",
+   "valor": 45,
+   "titulo": "Río Negro: índice de riesgo 45/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y trimestres seguidos en baja.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Tucumán",
-   "nivel": "media",
-   "tema": "Índice de riesgo",
-   "ambito": "Tucumán",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 47,
-   "titulo": "Tucumán: índice de riesgo 47/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y cierre neto de empresas metalúrgicas.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Índice de riesgo",
    "ambito": "CABA",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 45,
-   "titulo": "CABA: índice de riesgo 45/100",
-   "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y caída del empleo en el último año.",
+   "valor": 43,
+   "titulo": "CABA: índice de riesgo 43/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Jujuy",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Jujuy",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 43,
+   "titulo": "Jujuy: índice de riesgo 43/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "La Pampa",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "La Pampa",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 43,
+   "titulo": "La Pampa: índice de riesgo 43/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y cierre neto de empresas metalúrgicas.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Tucumán",
+   "nivel": "media",
+   "tema": "Índice de riesgo",
+   "ambito": "Tucumán",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 43,
+   "titulo": "Tucumán: índice de riesgo 43/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y cierre neto de empresas metalúrgicas.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Índice de riesgo",
    "ambito": "Mendoza",
    "variable": "Índice ponderado",
    "periodo": "2026T1",
-   "valor": 42,
-   "titulo": "Mendoza: índice de riesgo 42/100",
+   "valor": 40,
+   "titulo": "Mendoza: índice de riesgo 40/100",
    "detalle": "Pesa sobre todo: caída del empleo en el último año y peso de ramas cuya producción cae.",
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": null,
-   "nivel": "media",
-   "tema": "Producción",
-   "ambito": "Nacional",
-   "variable": "IPI Productos de metal",
-   "periodo": "2026-08",
-   "valor": -9.6,
-   "titulo": "Productos de metal: la producción cae 9,6% interanual",
-   "detalle": "Lleva 2 meses seguidos por debajo del año anterior.",
-   "fuente": "INDEC"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Producción",
@@ -876,7 +863,20 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": null,
+   "nivel": "media",
+   "tema": "Producción",
+   "ambito": "Nacional",
+   "variable": "IPI Productos de metal",
+   "periodo": "2026-09",
+   "valor": -4,
+   "titulo": "Productos de metal: la producción cae 4,0% interanual",
+   "detalle": "Lleva 3 meses seguidos por debajo del año anterior.",
+   "fuente": "INDEC"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Producción",
@@ -889,7 +889,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Entre Ríos",
    "nivel": "media",
    "tema": "Producción",
@@ -902,7 +902,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Producción",
@@ -915,7 +915,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "La Pampa",
    "nivel": "media",
    "tema": "Empresas",
@@ -928,7 +928,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empresas",
@@ -941,7 +941,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empresas",
@@ -954,7 +954,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Santa Fe",
    "nivel": "media",
    "tema": "Empresas",
@@ -967,7 +967,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empresas",
@@ -980,7 +980,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
@@ -993,20 +993,33 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": null,
+   "nivel": "media",
+   "tema": "Capacidad instalada",
+   "ambito": "Nacional",
+   "variable": "Capacidad Metalmecánica",
+   "periodo": "2026-09",
+   "valor": 40.5,
+   "titulo": "Metalmecánica: 40,5% de la capacidad en uso",
+   "detalle": "-3,7 puntos contra un año atrás.",
+   "fuente": "INDEC"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
    "ambito": "Nacional",
    "variable": "Capacidad Automotriz",
-   "periodo": "2026-08",
-   "valor": 46.2,
-   "titulo": "Automotriz: 46,2% de la capacidad en uso",
-   "detalle": "-7,1 puntos contra un año atrás.",
+   "periodo": "2026-09",
+   "valor": 49.5,
+   "titulo": "Automotriz: 49,5% de la capacidad en uso",
+   "detalle": "-7,6 puntos contra un año atrás.",
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tierra del Fuego",
    "nivel": "media",
    "tema": "Empleo",
@@ -1019,7 +1032,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Río Negro",
    "nivel": "media",
    "tema": "Empleo",
@@ -1032,7 +1045,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1045,7 +1058,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo",
@@ -1058,7 +1071,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo",
@@ -1071,7 +1084,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1084,7 +1097,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1097,7 +1110,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo",
@@ -1110,7 +1123,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo",
@@ -1123,7 +1136,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1136,7 +1149,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1149,7 +1162,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1162,7 +1175,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Santa Fe",
    "nivel": "media",
    "tema": "Empleo",
@@ -1175,7 +1188,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1188,7 +1201,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1201,7 +1214,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1214,7 +1227,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1227,7 +1240,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1240,7 +1253,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1253,7 +1266,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1266,7 +1279,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1279,7 +1292,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1292,7 +1305,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1305,7 +1318,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1318,7 +1331,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1331,7 +1344,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1344,7 +1357,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo",
@@ -1357,7 +1370,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empleo",
@@ -1370,7 +1383,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo",
@@ -1383,7 +1396,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "La Pampa",
    "nivel": "media",
    "tema": "Empleo",
@@ -1396,7 +1409,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo",
@@ -1409,7 +1422,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Tucumán",
    "nivel": "media",
    "tema": "Empleo",
@@ -1422,503 +1435,505 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Tierra del Fuego",
+   "fecha": "2026-11-20",
+   "provincia": "Santiago del Estero",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Ushuaia",
+   "ambito": "Capital",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.9,
-   "titulo": "Ushuaia (Tierra del Fuego): el empleo industrial cae 9,9%",
-   "detalle": "-344 puestos en la industria manufacturera en un año (3.116 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Campana",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.8,
-   "titulo": "Campana (Buenos Aires): el empleo industrial cae 9,8%",
-   "detalle": "-707 puestos en la industria manufacturera en un año (6.513 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Ituzaingo",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.8,
-   "titulo": "Ituzaingo (Buenos Aires): el empleo industrial cae 9,8%",
-   "detalle": "-310 puestos en la industria manufacturera en un año (2.849 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Córdoba",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Rio Primero",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
+   "periodo": "2026-03",
    "valor": -9.7,
-   "titulo": "Rio Primero (Córdoba): el empleo industrial cae 9,7%",
-   "detalle": "-163 puestos en la industria manufacturera en un año (1.512 hoy). Incluye todas las ramas industriales.",
+   "titulo": "Capital (Santiago del Estero): el empleo industrial cae 9,7%",
+   "detalle": "-189 puestos en la industria manufacturera en un año (1.762 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Jujuy",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Ledesma",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.7,
-   "titulo": "Ledesma (Jujuy): el empleo industrial cae 9,7%",
-   "detalle": "-569 puestos en la industria manufacturera en un año (5.322 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
    "ambito": "Pilar",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.4,
-   "titulo": "Pilar (Buenos Aires): el empleo industrial cae 9,4%",
-   "detalle": "-2.062 puestos en la industria manufacturera en un año (19.885 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -9.6,
+   "titulo": "Pilar (Buenos Aires): el empleo industrial cae 9,6%",
+   "detalle": "-2.118 puestos en la industria manufacturera en un año (19.926 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Corrientes",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Santo Tome",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -9.1,
-   "titulo": "Santo Tome (Corrientes): el empleo industrial cae 9,1%",
-   "detalle": "-320 puestos en la industria manufacturera en un año (3.209 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Tierra del Fuego",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Rio Grande",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -8.3,
-   "titulo": "Rio Grande (Tierra del Fuego): el empleo industrial cae 8,3%",
-   "detalle": "-640 puestos en la industria manufacturera en un año (7.103 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Salta",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Capital",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -8.1,
-   "titulo": "Capital (Salta): el empleo industrial cae 8,1%",
-   "detalle": "-753 puestos en la industria manufacturera en un año (8.556 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Lomas de Zamora",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -7.9,
-   "titulo": "Lomas de Zamora (Buenos Aires): el empleo industrial cae 7,9%",
-   "detalle": "-852 puestos en la industria manufacturera en un año (9.873 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Moreno",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -7.9,
-   "titulo": "Moreno (Buenos Aires): el empleo industrial cae 7,9%",
-   "detalle": "-580 puestos en la industria manufacturera en un año (6.788 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Merlo",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -7.8,
-   "titulo": "Merlo (Buenos Aires): el empleo industrial cae 7,8%",
-   "detalle": "-309 puestos en la industria manufacturera en un año (3.632 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Catamarca",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Capital",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -7.6,
-   "titulo": "Capital (Catamarca): el empleo industrial cae 7,6%",
-   "detalle": "-264 puestos en la industria manufacturera en un año (3.198 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Entre Ríos",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Uruguay",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -7.1,
-   "titulo": "Uruguay (Entre Ríos): el empleo industrial cae 7,1%",
-   "detalle": "-304 puestos en la industria manufacturera en un año (3.952 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Bragado",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.9,
-   "titulo": "Bragado (Buenos Aires): el empleo industrial cae 6,9%",
-   "detalle": "-139 puestos en la industria manufacturera en un año (1.883 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "San Luis",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "General Pedernera",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.9,
-   "titulo": "General Pedernera (San Luis): el empleo industrial cae 6,9%",
-   "detalle": "-462 puestos en la industria manufacturera en un año (6.276 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
    "ambito": "Lanus",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.8,
-   "titulo": "Lanus (Buenos Aires): el empleo industrial cae 6,8%",
-   "detalle": "-1.256 puestos en la industria manufacturera en un año (17.120 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -9.2,
+   "titulo": "Lanus (Buenos Aires): el empleo industrial cae 9,2%",
+   "detalle": "-1.701 puestos en la industria manufacturera en un año (16.784 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Moron",
+   "ambito": "Merlo",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.5,
-   "titulo": "Moron (Buenos Aires): el empleo industrial cae 6,5%",
-   "detalle": "-658 puestos en la industria manufacturera en un año (9.538 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -8.9,
+   "titulo": "Merlo (Buenos Aires): el empleo industrial cae 8,9%",
+   "detalle": "-348 puestos en la industria manufacturera en un año (3.546 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Santa Fe",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Constitucion",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.3,
-   "titulo": "Constitucion (Santa Fe): el empleo industrial cae 6,3%",
-   "detalle": "-236 puestos en la industria manufacturera en un año (3.529 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Córdoba",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Rio Segundo",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6.2,
-   "titulo": "Rio Segundo (Córdoba): el empleo industrial cae 6,2%",
-   "detalle": "-372 puestos en la industria manufacturera en un año (5.599 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Obera",
+   "ambito": "Eldorado",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -6,
-   "titulo": "Obera (Misiones): el empleo industrial cae 6,0%",
-   "detalle": "-172 puestos en la industria manufacturera en un año (2.707 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -8.7,
+   "titulo": "Eldorado (Misiones): el empleo industrial cae 8,7%",
+   "detalle": "-199 puestos en la industria manufacturera en un año (2.086 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Mendoza",
+   "fecha": "2026-11-20",
+   "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Godoy Cruz",
+   "ambito": "General Pedernera",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.9,
-   "titulo": "Godoy Cruz (Mendoza): el empleo industrial cae 5,9%",
-   "detalle": "-268 puestos en la industria manufacturera en un año (4.302 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -8.5,
+   "titulo": "General Pedernera (San Luis): el empleo industrial cae 8,5%",
+   "detalle": "-568 puestos en la industria manufacturera en un año (6.116 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "la Plata",
+   "ambito": "Azul",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.8,
-   "titulo": "la Plata (Buenos Aires): el empleo industrial cae 5,8%",
-   "detalle": "-548 puestos en la industria manufacturera en un año (8.894 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -8.4,
+   "titulo": "Azul (Buenos Aires): el empleo industrial cae 8,4%",
+   "detalle": "-167 puestos en la industria manufacturera en un año (1.812 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Río Negro",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "General Roca",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.8,
-   "titulo": "General Roca (Río Negro): el empleo industrial cae 5,8%",
-   "detalle": "-716 puestos en la industria manufacturera en un año (11.535 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
    "ambito": "Ca�uelas",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.7,
-   "titulo": "Ca�uelas (Buenos Aires): el empleo industrial cae 5,7%",
-   "detalle": "-215 puestos en la industria manufacturera en un año (3.534 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -7.9,
+   "titulo": "Ca�uelas (Buenos Aires): el empleo industrial cae 7,9%",
+   "detalle": "-296 puestos en la industria manufacturera en un año (3.453 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "San Luis",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "la Capital",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.7,
-   "titulo": "la Capital (San Luis): el empleo industrial cae 5,7%",
-   "detalle": "-371 puestos en la industria manufacturera en un año (6.148 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Buenos Aires",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Escobar",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.6,
-   "titulo": "Escobar (Buenos Aires): el empleo industrial cae 5,6%",
-   "detalle": "-700 puestos en la industria manufacturera en un año (11.772 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Mendoza",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Lujan de Cuyo",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.6,
-   "titulo": "Lujan de Cuyo (Mendoza): el empleo industrial cae 5,6%",
-   "detalle": "-472 puestos en la industria manufacturera en un año (7.945 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
-   "provincia": "Mendoza",
-   "nivel": "media",
-   "tema": "Empleo industrial por partido",
-   "ambito": "Guaymallen",
-   "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.5,
-   "titulo": "Guaymallen (Mendoza): el empleo industrial cae 5,5%",
-   "detalle": "-457 puestos en la industria manufacturera en un año (7.812 hoy). Incluye todas las ramas industriales.",
-   "fuente": "OEDE–SIPA (por departamento)"
-  },
-  {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
    "ambito": "Rawson",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.4,
-   "titulo": "Rawson (Chubut): el empleo industrial cae 5,4%",
-   "detalle": "-223 puestos en la industria manufacturera en un año (3.943 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -7.8,
+   "titulo": "Rawson (Chubut): el empleo industrial cae 7,8%",
+   "detalle": "-282 puestos en la industria manufacturera en un año (3.324 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Tunuyan",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.7,
+   "titulo": "Tunuyan (Mendoza): el empleo industrial cae 7,7%",
+   "detalle": "-198 puestos en la industria manufacturera en un año (2.370 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Salto",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.6,
+   "titulo": "Salto (Buenos Aires): el empleo industrial cae 7,6%",
+   "detalle": "-143 puestos en la industria manufacturera en un año (1.742 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Catamarca",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Capital",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.5,
+   "titulo": "Capital (Catamarca): el empleo industrial cae 7,5%",
+   "detalle": "-251 puestos en la industria manufacturera en un año (3.116 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
    "ambito": "Florencio Varela",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.2,
-   "titulo": "Florencio Varela (Buenos Aires): el empleo industrial cae 5,2%",
-   "detalle": "-241 puestos en la industria manufacturera en un año (4.380 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -7.4,
+   "titulo": "Florencio Varela (Buenos Aires): el empleo industrial cae 7,4%",
+   "detalle": "-356 puestos en la industria manufacturera en un año (4.476 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "San Juan",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Rawson",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.4,
+   "titulo": "Rawson (San Juan): el empleo industrial cae 7,4%",
+   "detalle": "-137 puestos en la industria manufacturera en un año (1.707 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Lomas de Zamora",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.3,
+   "titulo": "Lomas de Zamora (Buenos Aires): el empleo industrial cae 7,3%",
+   "detalle": "-767 puestos en la industria manufacturera en un año (9.763 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Chubut",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Biedma",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.3,
+   "titulo": "Biedma (Chubut): el empleo industrial cae 7,3%",
+   "detalle": "-501 puestos en la industria manufacturera en un año (6.381 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Tucumán",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Lules",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.3,
+   "titulo": "Lules (Tucumán): el empleo industrial cae 7,3%",
+   "detalle": "-138 puestos en la industria manufacturera en un año (1.748 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "San Martin",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7.1,
+   "titulo": "San Martin (Mendoza): el empleo industrial cae 7,1%",
+   "detalle": "-202 puestos en la industria manufacturera en un año (2.625 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Lujan de Cuyo",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -7,
+   "titulo": "Lujan de Cuyo (Mendoza): el empleo industrial cae 7,0%",
+   "detalle": "-619 puestos en la industria manufacturera en un año (8.242 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Moron",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.9,
+   "titulo": "Moron (Buenos Aires): el empleo industrial cae 6,9%",
+   "detalle": "-692 puestos en la industria manufacturera en un año (9.377 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Misiones",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Obera",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.9,
+   "titulo": "Obera (Misiones): el empleo industrial cae 6,9%",
+   "detalle": "-215 puestos en la industria manufacturera en un año (2.918 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Córdoba",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Rio Segundo",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.8,
+   "titulo": "Rio Segundo (Córdoba): el empleo industrial cae 6,8%",
+   "detalle": "-402 puestos en la industria manufacturera en un año (5.472 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Olavarria",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.7,
+   "titulo": "Olavarria (Buenos Aires): el empleo industrial cae 6,7%",
+   "detalle": "-243 puestos en la industria manufacturera en un año (3.395 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "San Luis",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "la Capital",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.6,
+   "titulo": "la Capital (San Luis): el empleo industrial cae 6,6%",
+   "detalle": "-434 puestos en la industria manufacturera en un año (6.143 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Capital",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.5,
+   "titulo": "Capital (Mendoza): el empleo industrial cae 6,5%",
+   "detalle": "-189 puestos en la industria manufacturera en un año (2.716 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "San Juan",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Pocito",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.4,
+   "titulo": "Pocito (San Juan): el empleo industrial cae 6,4%",
+   "detalle": "-160 puestos en la industria manufacturera en un año (2.323 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Pergamino",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.3,
+   "titulo": "Pergamino (Buenos Aires): el empleo industrial cae 6,3%",
+   "detalle": "-248 puestos en la industria manufacturera en un año (3.705 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "General San Martin",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.1,
+   "titulo": "General San Martin (Buenos Aires): el empleo industrial cae 6,1%",
+   "detalle": "-2.146 puestos en la industria manufacturera en un año (32.887 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Junin",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.1,
+   "titulo": "Junin (Buenos Aires): el empleo industrial cae 6,1%",
+   "detalle": "-132 puestos en la industria manufacturera en un año (2.031 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Corrientes",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Santo Tome",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6.1,
+   "titulo": "Santo Tome (Corrientes): el empleo industrial cae 6,1%",
+   "detalle": "-215 puestos en la industria manufacturera en un año (3.326 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Buenos Aires",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Bragado",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -6,
+   "titulo": "Bragado (Buenos Aires): el empleo industrial cae 6,0%",
+   "detalle": "-122 puestos en la industria manufacturera en un año (1.895 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Salta",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Anta",
+   "ambito": "Capital",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.2,
-   "titulo": "Anta (Salta): el empleo industrial cae 5,2%",
-   "detalle": "-79 puestos en la industria manufacturera en un año (1.445 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -6,
+   "titulo": "Capital (Salta): el empleo industrial cae 6,0%",
+   "detalle": "-539 puestos en la industria manufacturera en un año (8.489 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Jujuy",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Ledesma",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -5.8,
+   "titulo": "Ledesma (Jujuy): el empleo industrial cae 5,8%",
+   "detalle": "-330 puestos en la industria manufacturera en un año (5.336 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Avellaneda",
+   "ambito": "Escobar",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.1,
-   "titulo": "Avellaneda (Buenos Aires): el empleo industrial cae 5,1%",
-   "detalle": "-976 puestos en la industria manufacturera en un año (17.992 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -5.7,
+   "titulo": "Escobar (Buenos Aires): el empleo industrial cae 5,7%",
+   "detalle": "-761 puestos en la industria manufacturera en un año (12.616 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
+   "fecha": "2026-11-20",
+   "provincia": "Misiones",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Capital",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
+   "valor": -5.7,
+   "titulo": "Capital (Misiones): el empleo industrial cae 5,7%",
+   "detalle": "-190 puestos en la industria manufacturera en un año (3.139 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "General Rodriguez",
+   "ambito": "Lujan",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
-   "valor": -5.1,
-   "titulo": "General Rodriguez (Buenos Aires): el empleo industrial cae 5,1%",
-   "detalle": "-326 puestos en la industria manufacturera en un año (6.082 hoy). Incluye todas las ramas industriales.",
+   "periodo": "2026-03",
+   "valor": -5.3,
+   "titulo": "Lujan (Buenos Aires): el empleo industrial cae 5,3%",
+   "detalle": "-347 puestos en la industria manufacturera en un año (6.165 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-13",
-   "provincia": "Neuquén",
+   "fecha": "2026-11-20",
+   "provincia": "Jujuy",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
-   "ambito": "Confluencia",
+   "ambito": "Dr. Manuel Belgrano",
    "variable": "Empleo industrial",
-   "periodo": "2025-12",
+   "periodo": "2026-03",
+   "valor": -5.3,
+   "titulo": "Dr. Manuel Belgrano (Jujuy): el empleo industrial cae 5,3%",
+   "detalle": "-99 puestos en la industria manufacturera en un año (1.785 hoy). Incluye todas las ramas industriales.",
+   "fuente": "OEDE–SIPA (por departamento)"
+  },
+  {
+   "fecha": "2026-11-20",
+   "provincia": "Mendoza",
+   "nivel": "media",
+   "tema": "Empleo industrial por partido",
+   "ambito": "Godoy Cruz",
+   "variable": "Empleo industrial",
+   "periodo": "2026-03",
    "valor": -5.1,
-   "titulo": "Confluencia (Neuquén): el empleo industrial cae 5,1%",
-   "detalle": "-518 puestos en la industria manufacturera en un año (9.722 hoy). Incluye todas las ramas industriales.",
+   "titulo": "Godoy Cruz (Mendoza): el empleo industrial cae 5,1%",
+   "detalle": "-240 puestos en la industria manufacturera en un año (4.495 hoy). Incluye todas las ramas industriales.",
    "fuente": "OEDE–SIPA (por departamento)"
   }
  ],
  "indice": [
   {
-   "area": "Chubut",
-   "provincia": "Chubut",
-   "puntaje": 69,
-   "nivel": "alta",
-   "empleo": 1210,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -9.6,
-     "puntos": 96
-    },
-    "empleo_acumulado": {
-     "valor": -17.1,
-     "puntos": 100
-    },
-    "tendencia": {
-     "valor": 10,
-     "puntos": 100
-    },
-    "exposicion_ramas": {
-     "valor": 7.8,
-     "puntos": 52
-    },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": null,
-     "puntos": null
-    },
-    "cierre_empresas": {
-     "valor": -2.7,
-     "puntos": 53
-    }
-   }
-  },
-  {
    "area": "San Luis",
    "provincia": "San Luis",
-   "puntaje": 69,
+   "puntaje": 67,
    "nivel": "alta",
    "empleo": 2336,
    "componentes": {
@@ -1935,8 +1950,8 @@
      "puntos": 0
     },
     "exposicion_ramas": {
-     "valor": 13.2,
-     "puntos": 88
+     "valor": 11.7,
+     "puntos": 78
     },
     "hechos_planta": {
      "valor": 0,
@@ -1953,27 +1968,27 @@
    }
   },
   {
-   "area": "Salta",
-   "provincia": "Salta",
-   "puntaje": 65,
+   "area": "Chubut",
+   "provincia": "Chubut",
+   "puntaje": 64,
    "nivel": "alta",
-   "empleo": 878,
+   "empleo": 1210,
    "componentes": {
     "empleo_interanual": {
-     "valor": -35.7,
-     "puntos": 100
+     "valor": -9.6,
+     "puntos": 96
     },
     "empleo_acumulado": {
-     "valor": -29.9,
+     "valor": -17.1,
      "puntos": 100
     },
     "tendencia": {
-     "valor": 7,
+     "valor": 10,
      "puntos": 100
     },
     "exposicion_ramas": {
-     "valor": 8.6,
-     "puntos": 57
+     "valor": 3.6,
+     "puntos": 24
     },
     "hechos_planta": {
      "valor": 0,
@@ -1984,15 +1999,15 @@
      "puntos": null
     },
     "cierre_empresas": {
-     "valor": 6.1,
-     "puntos": 0
+     "valor": -2.7,
+     "puntos": 53
     }
    }
   },
   {
    "area": "Misiones",
    "provincia": "Misiones",
-   "puntaje": 62,
+   "puntaje": 61,
    "nivel": "alta",
    "empleo": 818,
    "componentes": {
@@ -2009,8 +2024,8 @@
      "puntos": 75
     },
     "exposicion_ramas": {
-     "valor": 15.5,
-     "puntos": 100
+     "valor": 14.1,
+     "puntos": 94
     },
     "hechos_planta": {
      "valor": 0,
@@ -2027,9 +2042,46 @@
    }
   },
   {
+   "area": "Salta",
+   "provincia": "Salta",
+   "puntaje": 60,
+   "nivel": "alta",
+   "empleo": 878,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -35.7,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -29.9,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 7,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 3.7,
+     "puntos": 25
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    },
+    "cierre_empresas": {
+     "valor": 6.1,
+     "puntos": 0
+    }
+   }
+  },
+  {
    "area": "Partidos del GBA",
    "provincia": "Buenos Aires",
-   "puntaje": 55,
+   "puntaje": 53,
    "nivel": "media",
    "empleo": 87913,
    "componentes": {
@@ -2046,8 +2098,8 @@
      "puntos": 100
     },
     "exposicion_ramas": {
-     "valor": 10.7,
-     "puntos": 71
+     "valor": 8.7,
+     "puntos": 58
     },
     "hechos_planta": {
      "valor": 1,
@@ -2060,43 +2112,6 @@
     "cierre_empresas": {
      "valor": -1.8,
      "puntos": 40
-    }
-   }
-  },
-  {
-   "area": "Resto de Buenos Aires",
-   "provincia": "Buenos Aires",
-   "puntaje": 54,
-   "nivel": "media",
-   "empleo": 43983,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -4.8,
-     "puntos": 57
-    },
-    "empleo_acumulado": {
-     "valor": -7.4,
-     "puntos": 55
-    },
-    "tendencia": {
-     "valor": 5,
-     "puntos": 100
-    },
-    "exposicion_ramas": {
-     "valor": 8.4,
-     "puntos": 56
-    },
-    "hechos_planta": {
-     "valor": 1,
-     "puntos": 17
-    },
-    "actividad_adimra": {
-     "valor": -3.7,
-     "puntos": 57
-    },
-    "cierre_empresas": {
-     "valor": -2.1,
-     "puntos": 44
     }
    }
   },
@@ -2120,8 +2135,8 @@
      "puntos": 50
     },
     "exposicion_ramas": {
-     "valor": 0.2,
-     "puntos": 1
+     "valor": 0,
+     "puntos": 0
     },
     "hechos_planta": {
      "valor": 0,
@@ -2138,83 +2153,46 @@
    }
   },
   {
-   "area": "Jujuy",
-   "provincia": "Jujuy",
-   "puntaje": 49,
+   "area": "Resto de Buenos Aires",
+   "provincia": "Buenos Aires",
+   "puntaje": 51,
    "nivel": "media",
-   "empleo": 404,
+   "empleo": 43983,
    "componentes": {
     "empleo_interanual": {
-     "valor": -26.4,
-     "puntos": 100
+     "valor": -4.8,
+     "puntos": 57
     },
     "empleo_acumulado": {
-     "valor": -10,
-     "puntos": 71
-    },
-    "tendencia": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "exposicion_ramas": {
-     "valor": 8.2,
+     "valor": -7.4,
      "puntos": 55
     },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": null,
-     "puntos": null
-    },
-    "cierre_empresas": {
-     "valor": 6.5,
-     "puntos": 0
-    }
-   }
-  },
-  {
-   "area": "Río Negro",
-   "provincia": "Río Negro",
-   "puntaje": 49,
-   "nivel": "media",
-   "empleo": 820,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -5.4,
-     "puntos": 62
-    },
-    "empleo_acumulado": {
-     "valor": -6.9,
-     "puntos": 52
-    },
     "tendencia": {
-     "valor": 6,
+     "valor": 5,
      "puntos": 100
     },
     "exposicion_ramas": {
-     "valor": 10.5,
-     "puntos": 70
+     "valor": 5.8,
+     "puntos": 39
     },
     "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
+     "valor": 1,
+     "puntos": 17
     },
     "actividad_adimra": {
-     "valor": null,
-     "puntos": null
+     "valor": -3.7,
+     "puntos": 57
     },
     "cierre_empresas": {
-     "valor": 1,
-     "puntos": 0
+     "valor": -2.1,
+     "puntos": 44
     }
    }
   },
   {
    "area": "Córdoba",
    "provincia": "Córdoba",
-   "puntaje": 47,
+   "puntaje": 46,
    "nivel": "media",
    "empleo": 33130,
    "componentes": {
@@ -2231,8 +2209,8 @@
      "puntos": 50
     },
     "exposicion_ramas": {
-     "valor": 12.3,
-     "puntos": 82
+     "valor": 10.9,
+     "puntos": 73
     },
     "hechos_planta": {
      "valor": 0,
@@ -2249,9 +2227,120 @@
    }
   },
   {
+   "area": "Río Negro",
+   "provincia": "Río Negro",
+   "puntaje": 45,
+   "nivel": "media",
+   "empleo": 820,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -5.4,
+     "puntos": 62
+    },
+    "empleo_acumulado": {
+     "valor": -6.9,
+     "puntos": 52
+    },
+    "tendencia": {
+     "valor": 6,
+     "puntos": 100
+    },
+    "exposicion_ramas": {
+     "valor": 7.1,
+     "puntos": 48
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    },
+    "cierre_empresas": {
+     "valor": 1,
+     "puntos": 0
+    }
+   }
+  },
+  {
+   "area": "CABA",
+   "provincia": "CABA",
+   "puntaje": 43,
+   "nivel": "media",
+   "empleo": 29734,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -3.2,
+     "puntos": 43
+    },
+    "empleo_acumulado": {
+     "valor": -5.9,
+     "puntos": 47
+    },
+    "tendencia": {
+     "valor": 3,
+     "puntos": 75
+    },
+    "exposicion_ramas": {
+     "valor": 9.8,
+     "puntos": 66
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    },
+    "cierre_empresas": {
+     "valor": -1.8,
+     "puntos": 41
+    }
+   }
+  },
+  {
+   "area": "Jujuy",
+   "provincia": "Jujuy",
+   "puntaje": 43,
+   "nivel": "media",
+   "empleo": 404,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -26.4,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -10,
+     "puntos": 71
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 3.2,
+     "puntos": 21
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    },
+    "cierre_empresas": {
+     "valor": 6.5,
+     "puntos": 0
+    }
+   }
+  },
+  {
    "area": "La Pampa",
    "provincia": "La Pampa",
-   "puntaje": 47,
+   "puntaje": 43,
    "nivel": "media",
    "empleo": 571,
    "componentes": {
@@ -2268,8 +2357,8 @@
      "puntos": 50
     },
     "exposicion_ramas": {
-     "valor": 6.8,
-     "puntos": 45
+     "valor": 2.9,
+     "puntos": 19
     },
     "hechos_planta": {
      "valor": 0,
@@ -2288,7 +2377,7 @@
   {
    "area": "Tucumán",
    "provincia": "Tucumán",
-   "puntaje": 47,
+   "puntaje": 43,
    "nivel": "media",
    "empleo": 2486,
    "componentes": {
@@ -2305,8 +2394,8 @@
      "puntos": 0
     },
     "exposicion_ramas": {
-     "valor": 6.9,
-     "puntos": 46
+     "valor": 3.2,
+     "puntos": 21
     },
     "hechos_planta": {
      "valor": 0,
@@ -2323,46 +2412,9 @@
    }
   },
   {
-   "area": "CABA",
-   "provincia": "CABA",
-   "puntaje": 45,
-   "nivel": "media",
-   "empleo": 29734,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -3.2,
-     "puntos": 43
-    },
-    "empleo_acumulado": {
-     "valor": -5.9,
-     "puntos": 47
-    },
-    "tendencia": {
-     "valor": 3,
-     "puntos": 75
-    },
-    "exposicion_ramas": {
-     "valor": 10.9,
-     "puntos": 73
-    },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": null,
-     "puntos": null
-    },
-    "cierre_empresas": {
-     "valor": -1.8,
-     "puntos": 41
-    }
-   }
-  },
-  {
    "area": "Mendoza",
    "provincia": "Mendoza",
-   "puntaje": 42,
+   "puntaje": 40,
    "nivel": "media",
    "empleo": 6297,
    "componentes": {
@@ -2379,8 +2431,8 @@
      "puntos": 0
     },
     "exposicion_ramas": {
-     "valor": 13.3,
-     "puntos": 88
+     "valor": 11.7,
+     "puntos": 78
     },
     "hechos_planta": {
      "valor": 0,
@@ -2399,7 +2451,7 @@
   {
    "area": "Santa Fe",
    "provincia": "Santa Fe",
-   "puntaje": 35,
+   "puntaje": 33,
    "nivel": "baja",
    "empleo": 50770,
    "componentes": {
@@ -2416,8 +2468,8 @@
      "puntos": 0
     },
     "exposicion_ramas": {
-     "valor": 12.5,
-     "puntos": 84
+     "valor": 11.1,
+     "puntos": 74
     },
     "hechos_planta": {
      "valor": 0,
@@ -2430,43 +2482,6 @@
     "cierre_empresas": {
      "valor": -2.3,
      "puntos": 47
-    }
-   }
-  },
-  {
-   "area": "Entre Ríos",
-   "provincia": "Entre Ríos",
-   "puntaje": 20,
-   "nivel": "baja",
-   "empleo": 3262,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": 2.6,
-     "puntos": 0
-    },
-    "empleo_acumulado": {
-     "valor": 4.5,
-     "puntos": 0
-    },
-    "tendencia": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "exposicion_ramas": {
-     "valor": 11.1,
-     "puntos": 74
-    },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": -3.7,
-     "puntos": 57
-    },
-    "cierre_empresas": {
-     "valor": -1,
-     "puntos": 28
     }
    }
   },
@@ -2508,9 +2523,46 @@
    }
   },
   {
+   "area": "Entre Ríos",
+   "provincia": "Entre Ríos",
+   "puntaje": 17,
+   "nivel": "baja",
+   "empleo": 3262,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": 2.6,
+     "puntos": 0
+    },
+    "empleo_acumulado": {
+     "valor": 4.5,
+     "puntos": 0
+    },
+    "tendencia": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "exposicion_ramas": {
+     "valor": 8.3,
+     "puntos": 55
+    },
+    "hechos_planta": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "actividad_adimra": {
+     "valor": -3.7,
+     "puntos": 57
+    },
+    "cierre_empresas": {
+     "valor": -1,
+     "puntos": 28
+    }
+   }
+  },
+  {
    "area": "San Juan",
    "provincia": "San Juan",
-   "puntaje": 14,
+   "puntaje": 9,
    "nivel": "baja",
    "empleo": 2023,
    "componentes": {
@@ -2527,8 +2579,8 @@
      "puntos": 0
     },
     "exposicion_ramas": {
-     "valor": 9.8,
-     "puntos": 65
+     "valor": 6.1,
+     "puntos": 40
     },
     "hechos_planta": {
      "valor": 0,
