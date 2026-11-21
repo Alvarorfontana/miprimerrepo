@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-21T04:01:37.821Z",
+ "fecha": "2026-11-21T13:22:35.469Z",
  "electricidad": {
   "metadata_modified": "2026-07-27T19:58:38.015752",
   "recursos": [
@@ -19,7 +19,13 @@
   }
  },
  "gas": {
-  "recursos": [],
+  "metadata_modified": "2026-07-27T19:55:31.355341",
+  "recursos": [
+   {
+    "nombre": "Datos Operativos de Gas Natural",
+    "url": "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php"
+   }
+  ],
   "paginas": {
    "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php": {
     "status": 200,
