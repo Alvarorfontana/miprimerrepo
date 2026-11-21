@@ -1,18 +1,6 @@
 {
  "pendientes": [
   {
-   "id": "prensa-RRbHBLVFE_b2M9NQ",
-   "estado": "a revisar",
-   "plantaId": null,
-   "empresaNueva": true,
-   "tipo": "despidos",
-   "fecha": "2026-11-07",
-   "cantidad": null,
-   "fuente": "Expansión",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeGpyY2EtZXA4cnBKWVJQZnVwRzhyWFdnbGNjM3hvLS1DNTlDRkczR1hCU3VnTjJMdjZodjV4YUw1SGY4VkVwbS1oR0p0SmdiQ2Z5X0xwNkFkWXY0OTVJUG1odmJJQVByeG1fRUh5WXFpOGdUOE1qdGNkRVI1bmpDQWdZcER6dlc1aWI1Q0JYNk50SkVVd29kV25uSjJCeGPSAawBQVVfeXFMUExxYm9XbW00YTdnNGs4Z0NtU2N5alB4amh3OVh6dDNuTml2UGNmb2VsUG5Rb09SMG1aZDNBeVUteXlUUGh5NDYyWjdqQTEtcGdpTFJNNmpPQWpIakFXNWh3LTlqaWVvWGE1ZG5jbVYyc2laeWlfQ3ZfLUtWUEJwSWpSai1naHF5X0VTTXk0RlZJWGFRYWlQajU4YWVsa1VwZGVkWmZtN2o4QlpKTQ?oc=5",
-   "titulo": "Honda ensamblará en Jalisco motos que traía de China; el ajuste evitará despidos tras caída en producción de autopartes - Expansión"
-  },
-  {
    "id": "prensa-tY2t4elFRP29jPTU",
    "estado": "a revisar",
    "plantaId": "pauny-las-varillas",
@@ -71,48 +59,6 @@
    ]
   },
   {
-   "id": "prensa-NVU56Ylc4P29jPTU",
-   "estado": "a revisar",
-   "plantaId": "dana-san-luis",
-   "empresaNueva": null,
-   "tipo": "conflicto",
-   "fecha": "2026-11-09",
-   "cantidad": null,
-   "fuente": "El Nuevo Día",
-   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNSjFFUFdXZUdHemhHaGRFRGlxT0h6QXV5OFhkbVJyeWpUY2o5M3hLQTc4V0lxLVV3dVdOT25fa3FIaUhTY2VZQzFhcmpoQzNhRUoxUUpNZGZwRFVrR1E2eW16RjFCMW1Cck80Z3ZiYnlTVzVWVmhYRWllUzlaU1hjRHZHelNOTkVUd0lpUGxWYXNOQVUta19EN2ZkZEFJRF9QdGtad1BaYjNDSFV1WGtXZkpSOXR4TE9ldlFCYlVITDF5OTlKcko2MGZjcmtKamN2enRNZHRFMUNzbW8?oc=5",
-   "titulo": "De broma a realidad: Dana White toma preguntas en el salón de prensa de la Casa Blanca - El Nuevo Día"
-  },
-  {
-   "id": "prensa-sWnNXVEJuP29jPTU",
-   "estado": "a revisar",
-   "plantaId": "dana-san-luis",
-   "empresaNueva": null,
-   "tipo": "cierre",
-   "fecha": "2026-11-09",
-   "cantidad": null,
-   "fuente": "Cadena SER",
-   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxON1h2WmcwMk5tU2lOZVNLZnN0SERGUHNoMXJxSENITG9TNlI3Z0FsWHU1eGNmZDBHMVIzeWtZOEl1TUtxV25ScnFtbDFnVGpodmlZWUxFeU1SeTdDQmVfWVRHUHhQa051YTRCQ2hzel9hSzliNjJqOUQ2TDJtVHlLSlM4ZklQa1hZdTRiQ3I5T0o3c3hsOU9OcFktYThLU253WDd3dFdjYWFZOWRWNDVWQm96Y0xTWUFNcE44T3hEa0lRQk1TZkx0Z0tXejk1Tnp0cDR0MzBsT3czaDIySGFNS0E5UDU4TTJkQng3eUlsSmFEaTg0LU9HMldRcnp4d9IBkgJBVV95cUxNNlFIMkdxLUctc3gtdy13RUdUTW8yeTMxZk90UWYtV1JKeDdCY2V5LXkzSWotT3I1SzJ4UU5jU2hoNmdGeGtPYmpFMGZENkhtN0dJZEpvSlA5ZEU1VU1zTThYUmFvSHY1UTQ1aHRtazIwY3B0UlpSWkM3YjZNdVNRZmFRV1pldnplVEk2SF9DRFA1NnJHOWVnRjBLa3ZSMktQcXZlUUpMMTVjRjhaME5RT193Nnl1ckNNb3RoNWFoMlUzZHJLOVNGb2phYkpqVnVHbVEwNm1WdklTOEdNR0M0MkktS1ZXQlFqNUNHbWhYUUdHSnNuMnN4V2lpMm1rN1JSM0NZNFpDd2dfY1lnalZsWTBn?oc=5",
-   "titulo": "Cierran el parque del Hort de la Bosca de Oliva para evaluar los daños de la DANA Adam en el arbolado - Cadena SER"
-  },
-  {
-   "id": "prensa-1UzNCcmR3P29jPTU",
-   "estado": "a revisar",
-   "plantaId": "dana-san-luis",
-   "empresaNueva": null,
-   "tipo": "suspensiones",
-   "fecha": "2026-11-10",
-   "cantidad": null,
-   "fuente": "COPE",
-   "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQbmZ3bTVsR1Naekw3VXFZWlFySHZfSElscHpRbUswTi1ZdURjSzNFZzU5d2dEa2lEbWhhaks0bmVPTXl6ZVBtRDJjS3JSSTluNEF3b2Q3V3VKUkRIM3UxM2Zqd3hSSGRyaXMxYkxXY2g2ajhrYWxHb3VwNy1MbmdzbHNqMmF6NUVCMEZ3cWtZa0tMOEY0eWJ3bEpudkZPejc5X28xTlBHdVZMd1dnMWhCME82MWEwb3NXT2FIdU5DQl9JblNRUmNFYWpycEJWa3NtMHJkX29CaXl2Nko4WE00MG13eVZORXBkWkVSN29XYkk1T0lYT2JTU2VYSTE0YkNsZ0JvbDdRYTdSVXN5T1otNmQ1SkdUTlpPRl9iaHkxOEczREJ3LTRNNk1DazFrMjNBY0xCNNIBugJBVV95cUxPVVdaN1U5X25HTVlHb1BxNjJQdGVSNGl0QXVMSzZiRXM2YTlDaFE1cjJJRUIxM212QUlJazhIclBzbmxqa1IzbkJMQ28wLTd6ejk1cGhXS1hNMEVxMnZiSnRST0gtbGxFeERsT29teUhJNlJyNGlCdVBfNlQtMER4MG9DaWp6eXJyQ2NwM1ZTdXBsSEZyUkZiOUcwZWV5NFprM1dMa3dXczI1TWtKaGNOWXhiUDVZUnd3Q3dlaGozX2pYYUtPV2xtUUVVeGt2Z0tUM3MtV3FVM3FPOExaTTg0QzJCeU1BSmM3Z3N1Sy1ub3JOOTEzTGZaUy1ManhrYkxoeGlkd1hYc2hfSTdhRmFTRldZRDlZVlpDTzFlaFp5V2RNREd5RVNlNkJ6OGpZZVhkU003a3U5S3Brdw?oc=5",
-   "titulo": "El alcalde de Els Poblets impulsa un frente de alcaldes para proteger la Marina Alta ante futuras DANA y suspende \"Persianes amb Art\" - COPE",
-   "otras": [
-    {
-     "fuente": "Noventa Grados",
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZlNyb0g4SVRtV3l0WkI3UDZNd1UybTQxbDNabGV4Y0ZHTDVLT3oxMEZEWkM0WU45d09ET3ZLWVh3NHhUdFA2YVZiVEt6bnRNWHZhRzNGZzJNWnhQeUctQklFU2Z6QWxhYmN0ODZzeFpMX1VHZzNYODZDZXlPR0hZZWtHQ3BCWnBZRW13MTAzbXJLUnkzd2ljc1VTSzg3LTlzNm93ZHpQMlY2RzRiOThCT2dMOEdoUmUwbGtlcA?oc=5"
-    }
-   ]
-  },
-  {
    "id": "prensa-eloxSnROZz9vYz01",
    "estado": "a revisar",
    "plantaId": null,
@@ -123,18 +69,6 @@
    "fuente": "El Submarino Jujuy",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlUMVVUUm9mU1JUSk5EdG5oM0FEV0FIajZLeGR0MFZCd293aDEyUkV4R1BxRVU5VGZlUFp2bVBuVUVFSjRkYzdSanpGYkNQaUxvMk5nUko3eXZkMkRTTndxUGMwUDE0eUx1RzJwOUx5SkR2UUFFUUJHck92bzVGVENBcWxGcm5TLW5JOUxDdk5vVlZxaE9Vc0dEQlZqdURJYlNnbWo3djh0bU5LcUtB0gG0AUFVX3lxTE9QT2hqamllT1NQbmJiWWlEbjVfUnRkQXV4dHRlOGlEYy14aS1KajdCN1BDSnNST3h1SkNOR2hhNWFVaUFtVmVUWTQ5RkV2ZnNwQzJYUGpTdERodTJjRGRWODE3c2xwcW5JWHVIUURjUFl0VXdvTTdoZldmQ3ZnSng0N1Z5dENOYWlPYWtqWnFzMzRDNjZ0MUdOdmVzZ0twVk5nVGhhYzBmVDBoeEh3d1UzZ1JtNg?oc=5",
    "titulo": "Acuerdo UOM-Zapla: Pago en cuotas de la deuda y aumento salarial de más del 80% - El Submarino Jujuy"
-  },
-  {
-   "id": "prensa-dsNmFUWm4_b2M9NQ",
-   "estado": "a revisar",
-   "plantaId": "ternium-san-nicolas",
-   "empresaNueva": null,
-   "tipo": "cierre",
-   "fecha": "2026-11-11",
-   "cantidad": null,
-   "fuente": "El Informante",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQ0s0NVBKUjJNU05QUXk3Wlhpd2w3Zm9hWS00SXRiamhVOHFta3RRREE0QzJ1NHhDU1hUalZlWGNyZ3p0a2ZtM2RkUlgxWFF6Q1pTd3ptUlBfU09ZSUhvWXE5eE1nVkt2Y1RhWGFIOHMta291ZnZCS19sRFNnblo4N2I4RmdvQkRRTm9UclQyTVJOUFlHZG4yMF9hM2JJQVZSRTBsQ1FuZlJqdi0xelFkT0xFeXpjbzFnU0puTTZRTEFITG1uYU5yZDRHTTh6dVNZNGl6aTZn?oc=5",
-   "titulo": "Ternium reafirmó su compromiso con el deporte y la educación en el cierre de los Torneos Intercolegiales - El Informante"
   },
   {
    "id": "prensa-JZFVONFVRP29jPTU",
@@ -339,18 +273,6 @@
    "fuente": "MONTE MAIZ MIRA",
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWE54WHhtNUkyUWVwY0xWcFZJaEx1MTFRRkw1SDIyemkzRjg3ZS1sTkY4NnpnRlhBaTRmOWpuY05hdE9yRVYxcU0zeTBIOXg5SUVZRWdHelBDWWh5ZlRnN0o4N2U4WmZ5c1dQTUxySnZyT0UyMGloMHdhelgwN2Y5YUhIQkVMNk1ScC1NVjFOeHg?oc=5",
    "titulo": "EL CIERRE DE PAUNY PONE EN JAQUE A LAS VARILLAS - MONTE MAIZ MIRA"
-  },
-  {
-   "id": "prensa-UUlhUbVJCP29jPTU",
-   "estado": "a revisar",
-   "plantaId": null,
-   "empresaNueva": true,
-   "tipo": "despidos",
-   "fecha": "2026-11-16",
-   "cantidad": 250,
-   "fuente": "Puebla Online",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTDV0V2gwV2hJYWtNY1A2OTFrbzZ4VW9fVzQ4M1N0aTFzSFZfQU9FanBndUh2bXhVTTlxWUswZTFHcFZPWmtxNElWM3U4TXZZTkk1MHpFMmZEZDVQMWVaMFNIVHYyeEhkS1ItSl9FQjV2YnRKMFFvb0NKWS1JZ205NndyRVdXcXZkQlduNF8zWjI2QVhsOWp2dWx6cW5ONWhYcUI1VlZLV0xFZXJic0lrYjZBT3ZxUmRDdlg3b2J1Z1NTTnpxX2gwRW1fZVJ1SFBLamotNUFTQdIB3wFBVV95cUxOWUpIZWlJck9ZVFNqakh5cEJ2WjJybnBmT0dDUmoxX2FiVThyclRRTUx3S0xsSzd0U0NIelhkVUMyXzhMS1dyRDA5YzZOVUJ2WTA2Z21hbHZtelUyYVUza1pqcWZHRTU4NWNpQjRpRHhHMkd3cFZIU1JtS2V1dTFmVTdiTjBaY3h1T0NrMGY2ZVZ5QlF5dVZabUlwc0lDdWJzSWR3YkF0a1phWDRoNzA3ZTdiOXFmR09qZU9TSGJCTHoydFJmQWUxdzRfSElFM1pIdlhrOEhzYXNDWTRXTmRB?oc=5",
-   "titulo": "Siete proveedoras de autopartes aplican paros técnicos y suman 250 despidos - Puebla Online"
   },
   {
    "id": "prensa-5sZldWTjM_b2M9NQ",
@@ -559,18 +481,6 @@
    "titulo": "Escándalo en Metalfor: denuncian despidos durante el entretiempo del partido de Argentina en el Mundial - DeGremiales.com"
   },
   {
-   "id": "prensa-IVUZsTFl3P29jPTU",
-   "estado": "a revisar",
-   "plantaId": "dana-san-luis",
-   "empresaNueva": null,
-   "tipo": "cierre",
-   "fecha": "2026-11-20",
-   "cantidad": null,
-   "fuente": "Noticias Ciudadanas",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1DVG9XQ0VscncxMVBCNkJNWTdzNDJCUS1Sd2FrR1kteTJLUVhTX1k5WGI5anRyTnFYdWI1amR4ZG84X1hqbGpQTjVuSVRGd0t0Z1RTUGxyS3ZGelZzcTV3RWdOM1JLZUtZWkhCcnh3TERFQ1FBeHVHUFlLYw?oc=5",
-   "titulo": "El Circuit Ricardo Tormo rozará los cinco millones de espectadores históricos en el cierre del Mundial de MotoGP - Noticias Ciudadanas"
-  },
-  {
    "id": "prensa-GZEdGaFFRP29jPTU",
    "estado": "a revisar",
    "plantaId": null,
@@ -599,18 +509,6 @@
      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcTRwM3ZRWEVpLUtPRTU1YlpYWFFJdUhaQVBhcjgyeFBoOEY1Xy1VLW40akp3TDVjalJkQ1VGWERCR19tQ3daRkxwTnhwXzgtWHFKOU80OEEwRlBiQWs2TUJxUjQ4eGtJSzktbmMzTlFsZllqQ04tZzJDZ0NXX3pnSS10cGlvaEdpTU9QNy1Vd0FSMzVrd2Jvd2xMSVd6N2NZTnkya0lwSnRHYy05R3Z0YnZmMml5U1JZMTJTZ0RsQWZxVlFVQzVkMmtvOThDaTduVUNkUmY1SC1GSWtKUFV2YjQ2TzN5MVdV?oc=5"
     }
    ]
-  },
-  {
-   "id": "prensa-Q2REZFlkQT9vYz01",
-   "estado": "a revisar",
-   "plantaId": null,
-   "empresaNueva": true,
-   "tipo": "conflicto",
-   "fecha": "2026-11-20",
-   "cantidad": null,
-   "fuente": "Economía 3",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYzNHcGtaTEhraFJpaDhCQTFEZ0Z5U05DbktGNmFMdzI5ekJMRElGRWlzb0pNaU95YTE5MlE0aFkyMU5QaUlRbHdpdjdkR09EWGx2WE5UZmVzZURZYjZqem9UR2E1LThZbFhEYW1fcklmbTdHWTBKOHBHSW5ZWUxpMW9iT3FjX2t5TTI1LW9KNWhSbGxCdDdYdA?oc=5",
-   "titulo": "Los trabajadores de Tubos Reunidos se concentran en Amurrio en pleno concurso - Economía 3"
   },
   {
    "id": "prensa-VrWjNWa0U_b2M9NQ",
