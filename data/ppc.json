@@ -2,14 +2,38 @@
  "actualizado": "2026-11-20",
  "fuente": "Perfil, sobre un pedido de acceso a la información pública al Ministerio de Capital Humano (14/09/2026)",
  "url": "https://www.perfil.com/noticias/amp/economia/el-gobierno-confirmo-que-en-solo-siete-meses-quedaron-al-borde-del-cierre-la-misma-cantidad-de-empresas-que-en-todo-2025-a40.phtml",
- "nota": "Procedimientos Preventivos de Crisis (PPC) iniciados ante Trabajo de la Nación, todos los sectores. La nota no separa por rama ni por provincia. 2026 llega al 31 de julio.",
+ "nota": "Contexto general, NO es dato metalúrgico: Procedimientos Preventivos de Crisis (PPC) iniciados ante Trabajo de la Nación en todos los sectores. La nota no separa por rama ni por provincia. 2026 llega al 31 de julio.",
  "anual": [
-  { "anio": 2017, "ppc": 158 },
-  { "anio": 2018, "ppc": 183 },
-  { "anio": 2020, "ppc": 498 },
-  { "anio": 2024, "ppc": 131 },
-  { "anio": 2025, "ppc": 164 },
-  { "anio": 2026, "ppc": 163, "hasta": "2026-07-31" }
+  {
+   "anio": 2017,
+   "ppc": 158
+  },
+  {
+   "anio": 2018,
+   "ppc": 183
+  },
+  {
+   "anio": 2020,
+   "ppc": 498
+  },
+  {
+   "anio": 2024,
+   "ppc": 131
+  },
+  {
+   "anio": 2025,
+   "ppc": 164
+  },
+  {
+   "anio": 2026,
+   "ppc": 163,
+   "hasta": "2026-07-31"
+  }
  ],
- "estado2026": { "homologados": 24, "en_tramite": 42, "cerrados_o_guarda": 19 }
+ "estado2026": {
+  "homologados": 24,
+  "en_tramite": 42,
+  "cerrados_o_guarda": 19
+ },
+ "sector": "todos (contexto)"
 }

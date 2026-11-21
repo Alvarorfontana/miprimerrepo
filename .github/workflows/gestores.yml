@@ -1,0 +1,48 @@
+# Equipo de gestores del MIDTM (solo sector metalúrgico):
+# 3 · Lector de prensa, 5 · Analista y el Supervisor, todos los días. El 1 (Recolector oficial), el 2 (Vigía del
+# Boletín Oficial) y el 4 (Gestor financiero) tienen sus propios workflows.
+name: Gestores (prensa, analista, supervisor)
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [datos-prensa-noviembre]
+    paths: ["scripts/gestores/**", ".github/workflows/gestores.yml"]
+  schedule:
+    - cron: "11 13 * * *"   # todos los días, 10:11 hora argentina
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  gestores:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Lector de prensa
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIAS: ${{ github.event_name == 'push' && '14' || '2' }}
+        run: node scripts/gestores/prensa.mjs
+      - name: Analista
+        continue-on-error: true
+        run: node scripts/gestores/analista.mjs
+      - name: Supervisor
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/gestores/supervisor.mjs
+      - name: Guardar
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Gestores: prensa, semáforo y supervisión"
+          git pull --rebase -X theirs || true
+          git push
