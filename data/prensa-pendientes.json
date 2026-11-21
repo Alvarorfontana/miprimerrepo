@@ -1,0 +1,618 @@
+{
+ "pendientes": [
+  {
+   "id": "prensa-RRbHBLVFE_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-07",
+   "cantidad": null,
+   "fuente": "Expansión",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeGpyY2EtZXA4cnBKWVJQZnVwRzhyWFdnbGNjM3hvLS1DNTlDRkczR1hCU3VnTjJMdjZodjV4YUw1SGY4VkVwbS1oR0p0SmdiQ2Z5X0xwNkFkWXY0OTVJUG1odmJJQVByeG1fRUh5WXFpOGdUOE1qdGNkRVI1bmpDQWdZcER6dlc1aWI1Q0JYNk50SkVVd29kV25uSjJCeGPSAawBQVVfeXFMUExxYm9XbW00YTdnNGs4Z0NtU2N5alB4amh3OVh6dDNuTml2UGNmb2VsUG5Rb09SMG1aZDNBeVUteXlUUGh5NDYyWjdqQTEtcGdpTFJNNmpPQWpIakFXNWh3LTlqaWVvWGE1ZG5jbVYyc2laeWlfQ3ZfLUtWUEJwSWpSai1naHF5X0VTTXk0RlZJWGFRYWlQajU4YWVsa1VwZGVkWmZtN2o4QlpKTQ?oc=5",
+   "titulo": "Honda ensamblará en Jalisco motos que traía de China; el ajuste evitará despidos tras caída en producción de autopartes - Expansión"
+  },
+  {
+   "id": "prensa-tY2t4elFRP29jPTU",
+   "estado": "a revisar",
+   "plantaId": "pauny-las-varillas",
+   "empresaNueva": null,
+   "tipo": "conflicto",
+   "fecha": "2026-11-09",
+   "cantidad": null,
+   "fuente": "La Nación",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObmEzaXZWOUdHeG9PdGYzNEYwZU1MOHNYQU5pX25OOWRfZjRqb0pXbm01b1BaM0NBTXVpcHI3R0JwdmVTWHZTTlpzVlpEQmtjXzNfc0ZFOFgyVFc3c1pPQlNyXzJCZUJLSjlMdGNxa1ZPQjJSSjk3eTJIM2QxT19wU3J0dVRVaEpKRERFV05NSF8ySldKOFpzMnB6eVV6R09BZmppV3ZnRGRWaHVtbkhWV3A4ZXRRd2o4b2RMcjhwOWkwUmZfUUFxdUhkUnQ1eFRsQ2F2Uk4zMjN0cGVOcVRoQVlmckxzQQ?oc=5",
+   "titulo": "Se mantiene la toma de Pauny. Los trabajadores reclaman un plan de pagos y la empresa ofrece una apertura parcial - La Nación",
+   "otras": [
+    {
+     "fuente": "Up San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNV1JucXZVczBQMktfSnZwb1BINEZfWkEtRGU0cWN1bTNucnl6bHE1TTJaMWtQanFtVGNkVnBqeXdBaW1DSDNTbXdBUEFvRVF3aTBhWXFwQ3RlQzN6N21QeVU1TVFXOTZiQ1J1elpNWE1nWmdMM3FsMTM3RnVYLW93c1VmN1RuT1JBVW5kbDRPTldUd3psdXpFa3MyX0d3Vm9wUXNyR21FTlhYeVBnR1pRaTZ1dmpFS25FTHFKRlBiaEwzMGxReGROYmJTSlNNeFpXUXEyZFVpWWt0ZklFcnZWMnJtNnc2UkZ3VkE?oc=5"
+    },
+    {
+     "fuente": "Diario Digital Conclusión",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPOFhHY3FVWm0zVV9mVWxtQWFodkJ4Rml6OF9OekU4TWZ6OHdQZ1N4aU9XYXBQcF83VmxuZHJNQzlmdThWTnZqLVA1LUEwWGdiaXBkajVfOHhqLXEyU3BFZ2JGa09fWHFmSmhWNEpkREJucU1SX0dkVGU2X29vT3doZ0t3bjZ5RXhSaTNlMTc0Y01JMVBacHRzdzZPT3Mta0wzQUtXcGpVRmlnVnRCbDFHQzJqV3ItckQ0YzB0ZXRUTWxkak10VmhzdHpaVFdQYnpaYVk3c3gwRExKN1FHSkNvR3NjaE44dXM3aWFuX2kwb3N4TmJk?oc=5"
+    },
+    {
+     "fuente": "Up San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd2lWZ1JXWFZlNGc3M0o0dVJlQm1kb2VnZm1zN2Znak1nbVdZWkFfWWwycWN3YmJFM3ExeFNPLTJUSDlyS0NObFlKM2pqR3VEZUZENzYzLXQ3MlpmWUxuaUYzTkdISUVNRlQzbzlDSzFWOGk1TGhFUEpNRDNuUVFxU25Hb09INzM2bDVXdkFBclRJaDdkZ0FZLTU5a3dib3IxaTlCZDlZeGpnYl9CNGZwd2x5TQ?oc=5"
+    },
+    {
+     "fuente": "Prensa Obrera",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdWU3TzBQQU40UkNnOXJjWTU1Slh1UExIVnk1SnlHWDJ2Mm1qZy1mdl9fOGhEMmpyS0xZcE5aLUJhUV9ZQ2Y1LTI0NEszWDhBMmVTb3lISG9ocFZWVlNNenZNUjZMcjB4VXY5bXRSeXdRT0pTeDFBTjhxdkpFdzFubFJHOXRSbUZnUEtHaW9zdjlWQ0N0ZUt3M05idmRQaEU4bTFPY1Z0Nk1tNW9Jc0dlQ083cjY?oc=5"
+    },
+    {
+     "fuente": "Up San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNYnl6eVBINC1QVXRVMGszN05PRUtQcGFaU0RDMS1HLXRmcHVRbG1OeHZjTjUzNnZrTVRXZlNqQmhWeUhTcHJlOG0wV1RLVGc2ZzY1RnNCWUNrWHlNVUtWZnFfWEdXTlYyenZrcVZKVXdHTFEwYTlaTHpDYlhkam9FQjJ2eEhJQ0NhY08yOWd5QXl4NFdnT1hPeFVqREZ5Vkt4MlFTei0wcVNFVmhaNWFMSVh5aWc4V3RRUFZpbUJrRXFTQmYyM0pyTjJTUnpzeXNjYndqUA?oc=5"
+    },
+    {
+     "fuente": "FM Identidad",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQb25TOVNJWVRuUUFmaDhFblp6dmhOeU1nUjhyaUJvSE1lUGJsbmVIaEEtckZ1ZkJRX3ZYZjJJbEpLV3hjSXRGd2ppRWpfM3ZvRGplZ2NUbG1UOGoxVFNRTkk5SVBSRHBac1htTzNKU1N2Q2hrdzBKd2VlYkRCTHVSNUE3OWp1QXVuQndTODB5SFNVeW83TWJtRWFJMnduNEEycjE5NHc1a19xOFZQamNOQlhNaHNhQncxaE9kX09lWDhzUTh2VmRmUzdSV0xKVnhNZkdUX0x0SFprY29iY2c?oc=5"
+    },
+    {
+     "fuente": "https://diariolapluma.com.ar/",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSzM2YzQtR0ZsZHphTzdBRlA0dWwteXFQWkZ0TnM5VE9BU1UyakJlM2k1b0M1blFjQ0MzUmswc2daWXZoSmNjbnNobGUwUjF5RGJSbmlqd1FIOWFoeHl5ZUtjZVM1ckc2ck5wMnMwVGFxMkFKUmJWOTRVbmxmWW8zRkItX0dBVDB1a2pYb1VFODhINUVSRlJ1N01SSWZFNGhDSllzQ3FjTUFSZUZtdkZpeW9DTktmU1JzeWw3ZlJaMmlVS2YzLWNxNFJJZzk3bTFXS2lIeXQtVzlKeVNQ?oc=5"
+    },
+    {
+     "fuente": "Radio Vive",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNcW1INnl4YVlQWTYtTTY4dTl5T29ySDZvVXBpNnZHdWxEWVYyVXp5VnNhQlhZeWZrbXh3Tnc5OEFjYTc2dTh4czk0R19FSzdDZlFjWFFhcU02dEIxNmR5c284QUNZSFlPX1pieWZ0QUw4Um1RUTl5aDJFM3U4NXBWSlRyR0pHTUMwQUp3RGlQaDlJc2Z0N05mRTUxTFFUVjF3ZDRDbUZFMWloTUl3SDRwS2ttMXhJajE5OFdGZldPS2tMN3VHM3phdUZtY2d1QdIBzgFBVV95cUxNcW1INnl4YVlQWTYtTTY4dTl5T29ySDZvVXBpNnZHdWxEWVYyVXp5VnNhQlhZeWZrbXh3Tnc5OEFjYTc2dTh4czk0R19FSzdDZlFjWFFhcU02dEIxNmR5c284QUNZSFlPX1pieWZ0QUw4Um1RUTl5aDJFM3U4NXBWSlRyR0pHTUMwQUp3RGlQaDlJc2Z0N05mRTUxTFFUVjF3ZDRDbUZFMWloTUl3SDRwS2ttMXhJajE5OFdGZldPS2tMN3VHM3phdUZtY2d1QQ?oc=5"
+    },
+    {
+     "fuente": "El Periódico - San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQRFFFR2VNWkNSMWhDaXV6c0NLQXNFQklRVEt1T1p0OUVQN09rOEdiUTVsanZhWG95Q2NaVFBxTGtzd1owMVdHdU5CSFN1NlZwYnpxZnBrV1czTG1JdWM5TkxGRzFaRzRnbjA3ZUtocWxJdHpGSHVzd2xiUk9yVUJUNmtnWTZ4WnRmaklRa09CYVNZazFJMmlmcFdmTUQ3akxFcWdJLW5feXJqNkpnak9RY3NHbmFYdkhlbnh0bG5vZkZ2SEtFdVdldjZuQmNOLVQyYlRyTTJVVEZXaFlrZlk0MHcyUdIB8gFBVV95cUxPT3ItMHFUZUtScGhKbFFXdWs2MmQxa3RyQXRmWHRtZTdLTGJ2eUpfVERKYWJ5V0FRSHNXeUdtS0Q3akxQMDR5NHkxeHQ2aU1MMTV5QUlWSGhTV0ttUzJLQnpJS18xMkNyT1VDMTFzalczakw0WkUxN2hmeWR1X2FuWVRNVGI2aWo5UWQ3RWs4WER5SXBzT3NvX01IdkxVWDVmQXFZUzVET19Gc0Q2bXNhTE5pODVzU1R6Z1hsQ0h2SEF6Ym5KSndSbGtBMWlxLVd1WDVzOUhlSFlfSnROTjAycVhIQ2k2VC1WR0tiR1ZnQ0Ezdw?oc=5"
+    },
+    {
+     "fuente": "Bichos de Campo",
+     "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOUm5fTHE5RmZXWFBfMGpjZVRaNDQ5XzhjM0NnSjlFOXpRNE8wSjhaTVNrQmNjdFJ6a0Vvc2hGeEh6RndfbVl1WWNxWkhRWTRKRDJFVjFNNTZKWldHT1FoUUFHUEJNY0RPdVhRVTBORzNHc0VPOU0zUkY5Q1ZTNTN2SF9keVcxWkVXTHMzRE0wUWJxdDhoTUl0ajk0azJ0YWptRExyQW9wdHkydno1MUwwWTVrUDBabzBxeHdDWW9WLUV6aGJzRjhDdDgwa2hOWlViR3hnVHZORzlCT0pqdm9DeFVxLUloYm96ZkhIaFRIalVFbU92b0RLM3VIel83bnY4MUR0bDNTdFA3Q05vdksyQzJrNA?oc=5"
+    },
+    {
+     "fuente": "El Periódico - San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQU094YmlyOXdWQ2dDZ1p6SWlRMUJCdHNzaEJrYkZyQl9sUFpMZlZocXZpeUJic2k4d2JJOHZjOThGYTVUb1RUOGRHY2E1c20yZzRTUEI5aHIwQXhqZ1JrRkdFam1ERnpuNjh2V1lxdVFjZXBralEyeXhzeE10Z2JTSnJfOS1IMzBLSzk0RnVNQlNTZWdBd2RDX2FLQ0E1TENWZFFSX1ZjU1AxcFY2VU8wd3MwYVEwMVFySGJLcHdpcnAxcXpOamNndnhxampDRGVuMGJaUmRGOHVGNml6TVFIY2xPYnFmaS1fUk1UcDFHM0VveXJjTk5KOGtRbTdZXzlLQU02Q2RhY9IBlgJBVV95cUxPX19zTVlrX25pNUVwMEZqVEFOaDVhd2NMbXVTZXVnZGdpMFdfRTFjVlRaWXhrVEdVMUpqN1hNWG1wa2RmM3hNODhPbTRLdVBBS1U2UEdlS2FTbTVUTFlJWnprMVo1SjhJSzd6RHFLY0hjRjJyUnR0MVNaUGU0WXpBcHhWeU0tSU1mMEgxaEswU0N1VUtzS1NRcEYyNmJXNG1XbHlRd1dudEQzTUZCYktEdkdlOXc3YndxbWdfVVNoYlJQbUVMbnJWVDctVGd2UlRKbC1OSy1BNHFBNjlCcnAzbm5oYlJMbjh0UmxfdHhBYjFRQVJmbTNMLVBHQk1FeTk4R3RMRWlHUTdVcWNzMzNCTDdWWWpIdw?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-NVU56Ylc4P29jPTU",
+   "estado": "a revisar",
+   "plantaId": "dana-san-luis",
+   "empresaNueva": null,
+   "tipo": "conflicto",
+   "fecha": "2026-11-09",
+   "cantidad": null,
+   "fuente": "El Nuevo Día",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNSjFFUFdXZUdHemhHaGRFRGlxT0h6QXV5OFhkbVJyeWpUY2o5M3hLQTc4V0lxLVV3dVdOT25fa3FIaUhTY2VZQzFhcmpoQzNhRUoxUUpNZGZwRFVrR1E2eW16RjFCMW1Cck80Z3ZiYnlTVzVWVmhYRWllUzlaU1hjRHZHelNOTkVUd0lpUGxWYXNOQVUta19EN2ZkZEFJRF9QdGtad1BaYjNDSFV1WGtXZkpSOXR4TE9ldlFCYlVITDF5OTlKcko2MGZjcmtKamN2enRNZHRFMUNzbW8?oc=5",
+   "titulo": "De broma a realidad: Dana White toma preguntas en el salón de prensa de la Casa Blanca - El Nuevo Día"
+  },
+  {
+   "id": "prensa-sWnNXVEJuP29jPTU",
+   "estado": "a revisar",
+   "plantaId": "dana-san-luis",
+   "empresaNueva": null,
+   "tipo": "cierre",
+   "fecha": "2026-11-09",
+   "cantidad": null,
+   "fuente": "Cadena SER",
+   "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxON1h2WmcwMk5tU2lOZVNLZnN0SERGUHNoMXJxSENITG9TNlI3Z0FsWHU1eGNmZDBHMVIzeWtZOEl1TUtxV25ScnFtbDFnVGpodmlZWUxFeU1SeTdDQmVfWVRHUHhQa051YTRCQ2hzel9hSzliNjJqOUQ2TDJtVHlLSlM4ZklQa1hZdTRiQ3I5T0o3c3hsOU9OcFktYThLU253WDd3dFdjYWFZOWRWNDVWQm96Y0xTWUFNcE44T3hEa0lRQk1TZkx0Z0tXejk1Tnp0cDR0MzBsT3czaDIySGFNS0E5UDU4TTJkQng3eUlsSmFEaTg0LU9HMldRcnp4d9IBkgJBVV95cUxNNlFIMkdxLUctc3gtdy13RUdUTW8yeTMxZk90UWYtV1JKeDdCY2V5LXkzSWotT3I1SzJ4UU5jU2hoNmdGeGtPYmpFMGZENkhtN0dJZEpvSlA5ZEU1VU1zTThYUmFvSHY1UTQ1aHRtazIwY3B0UlpSWkM3YjZNdVNRZmFRV1pldnplVEk2SF9DRFA1NnJHOWVnRjBLa3ZSMktQcXZlUUpMMTVjRjhaME5RT193Nnl1ckNNb3RoNWFoMlUzZHJLOVNGb2phYkpqVnVHbVEwNm1WdklTOEdNR0M0MkktS1ZXQlFqNUNHbWhYUUdHSnNuMnN4V2lpMm1rN1JSM0NZNFpDd2dfY1lnalZsWTBn?oc=5",
+   "titulo": "Cierran el parque del Hort de la Bosca de Oliva para evaluar los daños de la DANA Adam en el arbolado - Cadena SER"
+  },
+  {
+   "id": "prensa-1UzNCcmR3P29jPTU",
+   "estado": "a revisar",
+   "plantaId": "dana-san-luis",
+   "empresaNueva": null,
+   "tipo": "suspensiones",
+   "fecha": "2026-11-10",
+   "cantidad": null,
+   "fuente": "COPE",
+   "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQbmZ3bTVsR1Naekw3VXFZWlFySHZfSElscHpRbUswTi1ZdURjSzNFZzU5d2dEa2lEbWhhaks0bmVPTXl6ZVBtRDJjS3JSSTluNEF3b2Q3V3VKUkRIM3UxM2Zqd3hSSGRyaXMxYkxXY2g2ajhrYWxHb3VwNy1MbmdzbHNqMmF6NUVCMEZ3cWtZa0tMOEY0eWJ3bEpudkZPejc5X28xTlBHdVZMd1dnMWhCME82MWEwb3NXT2FIdU5DQl9JblNRUmNFYWpycEJWa3NtMHJkX29CaXl2Nko4WE00MG13eVZORXBkWkVSN29XYkk1T0lYT2JTU2VYSTE0YkNsZ0JvbDdRYTdSVXN5T1otNmQ1SkdUTlpPRl9iaHkxOEczREJ3LTRNNk1DazFrMjNBY0xCNNIBugJBVV95cUxPVVdaN1U5X25HTVlHb1BxNjJQdGVSNGl0QXVMSzZiRXM2YTlDaFE1cjJJRUIxM212QUlJazhIclBzbmxqa1IzbkJMQ28wLTd6ejk1cGhXS1hNMEVxMnZiSnRST0gtbGxFeERsT29teUhJNlJyNGlCdVBfNlQtMER4MG9DaWp6eXJyQ2NwM1ZTdXBsSEZyUkZiOUcwZWV5NFprM1dMa3dXczI1TWtKaGNOWXhiUDVZUnd3Q3dlaGozX2pYYUtPV2xtUUVVeGt2Z0tUM3MtV3FVM3FPOExaTTg0QzJCeU1BSmM3Z3N1Sy1ub3JOOTEzTGZaUy1ManhrYkxoeGlkd1hYc2hfSTdhRmFTRldZRDlZVlpDTzFlaFp5V2RNREd5RVNlNkJ6OGpZZVhkU003a3U5S3Brdw?oc=5",
+   "titulo": "El alcalde de Els Poblets impulsa un frente de alcaldes para proteger la Marina Alta ante futuras DANA y suspende \"Persianes amb Art\" - COPE",
+   "otras": [
+    {
+     "fuente": "Noventa Grados",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQZlNyb0g4SVRtV3l0WkI3UDZNd1UybTQxbDNabGV4Y0ZHTDVLT3oxMEZEWkM0WU45d09ET3ZLWVh3NHhUdFA2YVZiVEt6bnRNWHZhRzNGZzJNWnhQeUctQklFU2Z6QWxhYmN0ODZzeFpMX1VHZzNYODZDZXlPR0hZZWtHQ3BCWnBZRW13MTAzbXJLUnkzd2ljc1VTSzg3LTlzNm93ZHpQMlY2RzRiOThCT2dMOEdoUmUwbGtlcA?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-eloxSnROZz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-10",
+   "cantidad": null,
+   "fuente": "El Submarino Jujuy",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlUMVVUUm9mU1JUSk5EdG5oM0FEV0FIajZLeGR0MFZCd293aDEyUkV4R1BxRVU5VGZlUFp2bVBuVUVFSjRkYzdSanpGYkNQaUxvMk5nUko3eXZkMkRTTndxUGMwUDE0eUx1RzJwOUx5SkR2UUFFUUJHck92bzVGVENBcWxGcm5TLW5JOUxDdk5vVlZxaE9Vc0dEQlZqdURJYlNnbWo3djh0bU5LcUtB0gG0AUFVX3lxTE9QT2hqamllT1NQbmJiWWlEbjVfUnRkQXV4dHRlOGlEYy14aS1KajdCN1BDSnNST3h1SkNOR2hhNWFVaUFtVmVUWTQ5RkV2ZnNwQzJYUGpTdERodTJjRGRWODE3c2xwcW5JWHVIUURjUFl0VXdvTTdoZldmQ3ZnSng0N1Z5dENOYWlPYWtqWnFzMzRDNjZ0MUdOdmVzZ0twVk5nVGhhYzBmVDBoeEh3d1UzZ1JtNg?oc=5",
+   "titulo": "Acuerdo UOM-Zapla: Pago en cuotas de la deuda y aumento salarial de más del 80% - El Submarino Jujuy"
+  },
+  {
+   "id": "prensa-dsNmFUWm4_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "ternium-san-nicolas",
+   "empresaNueva": null,
+   "tipo": "cierre",
+   "fecha": "2026-11-11",
+   "cantidad": null,
+   "fuente": "El Informante",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQ0s0NVBKUjJNU05QUXk3Wlhpd2w3Zm9hWS00SXRiamhVOHFta3RRREE0QzJ1NHhDU1hUalZlWGNyZ3p0a2ZtM2RkUlgxWFF6Q1pTd3ptUlBfU09ZSUhvWXE5eE1nVkt2Y1RhWGFIOHMta291ZnZCS19sRFNnblo4N2I4RmdvQkRRTm9UclQyTVJOUFlHZG4yMF9hM2JJQVZSRTBsQ1FuZlJqdi0xelFkT0xFeXpjbzFnU0puTTZRTEFITG1uYU5yZDRHTTh6dVNZNGl6aTZn?oc=5",
+   "titulo": "Ternium reafirmó su compromiso con el deporte y la educación en el cierre de los Torneos Intercolegiales - El Informante"
+  },
+  {
+   "id": "prensa-JZFVONFVRP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-11",
+   "cantidad": null,
+   "fuente": "La Gaceta",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZ29qY0pPZzM4ZHNxc2JjMDFqanVXRkNMc1NLUkRQam16U1EtT3ZXRTBiaUJXRmgwak5ZZ1RoWlgtbG05cjZmeVJscWlMTU9jbGoyM1ZSSkxsYzNXcmRKR2lwVWtRX2JMUldwT2R6VlFKdXZuVHVoejNITGd3R2YtaGd4T3ktT2ZkOVp4LVRsYWd2RVVmR0tPVTlKS0dCb3VRdkZzMW5IYVh1U0k1ckRQdlRaZFp0X3VNMU5iSS1Zc295RjdvNFRNVTRlbUQ1WlhwVkpuVHln0gHbAUFVX3lxTE02UTg2b2QwUl9OckRoOTJta2ZJcjlQdmE3MlpGY3lpTXkzSDRuQURmRnp0d1ZvV2Z1cmhXWUpPTjRhUmRyNHNSSFNnczBoZTVfXzU0M3ZfZzZyRUtrYnZETXN2ODRnUUJxaHBZMmpLUFBic1NSeU9oU0RhUWszTVNvTkVBUEM5WDJWVEV0Wjh1M0N3cWR1NUs4eUNFRE1nUExOdE5VOFdTVGV6SmVFWjZuV3Z2UTNwSU5HbHRsUW1DUkx2NVpyemYtMXoxTmo5NzdqbEVWa0dIdUN4UQ?oc=5",
+   "titulo": "Córdoba: una autopartista que fabrica asientos para Renault cerrará su planta y hay temor por los despidos - La Gaceta"
+  },
+  {
+   "id": "prensa-NGVteHdWQT9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-11",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQLU5pUGc0Rk9OeEdqZ3FsSXpTNG9oQ3MzZHQwT0hFNkExRUF2RVlyVW95NHhrQWRkMk1XeGNQTkYwNThoeGhVZWp2ZXF5eEg4NGlsaTdfRnVnSkVvQktSZ3RKZy14X3VuWVlFS2ZzMkI2bGlFd2NodDl6dmZQNk9uSHBGLTZoMUtjYl83RHliVnhPSlJVbXpUQVRnNVdzbjliLXNvbjBqcTdWUEZUb2Y4dG56MnN5SFBoRVpNUWFaOGwya2JMaGk1UzJZMG8xWW51dFItclR0SFZaXzE4emxwVA?oc=5",
+   "titulo": "La autopartista multinacional Magna abandona sus operaciones en Córdoba, habrá despidos y la producción quedará en manos de Renault - InfoGremiales"
+  },
+  {
+   "id": "prensa-elJFUVc1Mz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-11",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSVhTNjNZVVpSbENPT1NEYmt4b1lKbkNELUNYUXVRZ3J3dEJqd0wtTHhERGpEY2swcmt1TmIzZUc3enlkd0E2bDJfeFZPQURwMlgwdVUxQnpFbWR2REdUMV96U1pPYjZBaWRCZnZyOTAxdi02QW5hNVF5WFUwQXNnVFJpdXh1Vk81Q19Odnh1bWkyend2cnhoeENlNmZNT2tlWERhdmd1OEI3SmZRTjlZclFISFRvWVdBcHpra01xNTlVMUE4cDdkNURCV0hOQ1h2TkFFcHJUTlNCcl83WVd3YlllN2RVM0xZNzREQW53?oc=5",
+   "titulo": "Acuerdo entre la UOM Jujuy-Salta y la siderúrgica Zapla: deuda salarial en 20 cuotas y un aumento acumulado que supera el 80% - InfoGremiales"
+  },
+  {
+   "id": "prensa-VdDZRMGc0P29jPTU",
+   "estado": "a revisar",
+   "plantaId": "pauny-las-varillas",
+   "empresaNueva": null,
+   "tipo": "retiros",
+   "fecha": "2026-11-12",
+   "cantidad": 150,
+   "fuente": "Infocampo",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQUllMZnFKUkwtLVV6NS1LdG9wak9LTkxKQi1fMWtWVXdQM0tEMTZvODhJSzktZ2xEc2puV0dSSk5YZFZzenNZZVBJZllxeWRiYjVHb1JwTFV2b3hnV1FxRXNpZS1feWEtNEM5ZVBzNWU0dXI5SlBOVkkyN1dlRkRIenk4UEhjRlptdmwxVjZoemZXaEpsUzhpWElDT2JKMXhVTDZWRU1xbUJGQzYwdXB3Mm1PNUNVamVUZkNxYTItR1Yyc2VMZ3BYU0hHREtqUXBFV3NuYVUtWl95RDh2YjdMa0h1YUI4cUt6Q0g4?oc=5",
+   "titulo": "Pauny lanza retiros voluntarios para reducir 150 empleos y promete plan de pagos, pero solo si se levanta la toma de la planta - Infocampo",
+   "otras": [
+    {
+     "fuente": "Clarin.com",
+     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPVFdZdTFMdV9kTEF2MU82b3VtVV9vSmZSTEwyeDZmeUljdXFXVFViemhwU0RBeGg2QUgxQXdxLTY1U3FHODJWSFpfWk54eFcwS0ZzNlduSmhqTHlGY3Q1bHRXelNpWjdHQVFXWnZxemphQ215ZWt2WHFsemM1QVAzeDI4WFktdEs5T25meWhYd0pOTkpieWZVdWpXZE1yMWFMNXRzNGVtSVgwVEQzR2RKRjRaTmVTTFpERG1YMTI4Mmtad3dYZEE5UWx1OTJyTktmb1F3ZEpobDZsQUNaOVo5Yl8zWDJ6cG9mTlZHYm1GVDFUSDBOTmwyTy02X0t6dXEzd2h5TlZaSU8?oc=5"
+    },
+    {
+     "fuente": "La Voz del Interior",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVjZHbGtiX1FveEc1MkwyYUJrbkF3Q3IwWG8zejVsd1dJekcxTlMyWE56LXFQdWFpWHlLQkV2M19MbnprV2VDQ1hVMGxOWDhZck5DV1J3SnNmZER4THJlb2o0NHBLdTFrWmY5cHhsai1CekVPSVgyZWdWR3ZxTi02YXdjRnpXNHA5TVVrRExrVkd5aEY3UVN5bTk2T1Y3aEk0Z3VSVGV5bHNmajhfcGpOZ3k3SkpJbHlwLVlRSjU5YVVMcFZfTDgtQWRnekFudw?oc=5"
+    },
+    {
+     "fuente": "Cuestión Entrerriana",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWEJ4Y3ZONDN6OFlLMXJEWWQtWjNpbWNuMjBfM1dzZnpuaU13RU9Rek1FRGlGQ0FzMEw3UFZSbVgwSkFvQk92SFhpRHhSWlFDVkhGM0lSN3J5dWRvNzNYdkJyRlVoX1J5OGtya1hsVzZnUk1yQUI4cXdQeXE3bkpSMmVQZ0NXUjdVM1FWRjFMeUJwVXVkbUhxM1JPVlVZZ3lISUNVTFF0MUptT29j?oc=5"
+    },
+    {
+     "fuente": "La Arena",
+     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxObjFwaWpuYnRWTjNHZEs5dklaa1hZeUp3YXpJdi1sTmJzNkd4WEIwN3N5alBFc0x3MGYtM0lnR1ZYT1R4WDVzVVVEMEc2OEk1T0NzcVV2d1pJeVRweUhqYWNfVXhPdWVodHlldFFlMXhxS2dpbmxxb0NPc2ZGSm5BakRONnBrR0pCV211YlNEMGg1b0VMUWJ5cktkcGVtbHI2QzM5T3E2b2Q5aTFjWlRyZ1VxRWpaWkpTZUJYaEdPNVhNZ2poR0tIanVZczFVdHdlcmV4QQ?oc=5"
+    },
+    {
+     "fuente": "La Nación",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNWjRWQmRRQ0VzbkEyMlVhZUs5VUpiVEVpN1lLNVdHcmxwdXJvZ1RNTnlrTk5XU2FONEdXNTRaVDZnSDRzRDJuNDg2SlV6QWlNNjEzQ1lpdFQxUlRYallVZWFFOUFQQlNLcFhJVDBIVDN3YUJQVHJGZ191cWRmWGZxWFl1ajFlQWJZUDZwWGgtVWN2elZURzdKLXNyWGVHMnI1eGZoNmEweXFfNnYxNXg5cWgtQVRnYUxPajRucC1sRmRKRHl5RXUyTkVVVTREOF9YWmtPbTBvUUFacjNKN05aNG1iSUlyaFhO?oc=5"
+    },
+    {
+     "fuente": "Mundo Gremial",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQaEtCLWdMZURaUHRMWmpDMnU5Q01VaXFUSV9sRFA1UjNJSFJaeWVSMWZ2X3hrTDltREx5UVVYclVvNTZUXzlwZjllOGFRcG5FelQ4a0ZXRWd2VzJUbENfejdRZzJuZ0EtY19CZVBDei0tX1pNSXlKTWFUUDFVQXlEd3BFbFA5SnVNdlhCWmVNSTN4cGhFeVc1eFZ3TlVvVXJuZmJ3eVdjUS1kQnVQaUtPZWZJVWwyX3c?oc=5"
+    },
+    {
+     "fuente": "Diario de Las Varillas",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQzM3S1Q2bWNTSFNRV19FTkJqcVFwNXBvd1ZaSUNCb2M5VnNRQjAyZHY2VW5HQXRITDlSa0RYSkl4b0duWkxYVUkxNmlVZ2lQZE1TMkdNTXM3T2dSd2Q2VmIwdEFQT1JvWmZIc241eG93d0hYeE5KUE1TMEdaOF8wOUI2cTA5Z2VkUW94dm9hY19NOEhKWlE4dXl0bnB5dEhIUjkxeV9HaWJNWGZhYnotMm1mSHRrVXgweGJGaHg3eXI2SzJ1V2RV?oc=5"
+    },
+    {
+     "fuente": "https://eltiempodiario.com.ar/",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPRnBWQUQyNjR4TnFma0hxLUprSUQyR1dZUXFnUHhhN3kxV2FLMEtxeVpVMGZGOGJPNDUwRnVDNndUY1RLbE9fRDJxNGdmSG9wWlFLQ0E5OVpSVmItbnlHbGk4cW9CM3JtdnNKWGJJOVZ4djBVWUY0UHozUW43RDV3TVgxZVZjZlo2VFVhUUk4c1BDWFY2LUFULTloLUNJMGw4SU5Cc1B4azVWeDNRT0FrcXJ4dWMwSVRNZTZmV01DUkZNUjQxWF93WnFkOXNoUWt0U29FMkFydGVOcVVGcVluYkF3NzVUa0Z2V01IMENhN1NWNENo?oc=5"
+    },
+    {
+     "fuente": "AgroLatam",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYk4tdW5SbndrSGpjSDQ2UHJTRjlfVldjTFZfcHBuUTFkcGlnd1FfamFJd1R6dGpwVk5KZnRuaVRXZEVnYUN0RlVONFRITW5sR2h1WUJwTE5rZ0FDbHREQzdIYzA4aER4Rk9xSVBZMmFETVJILXZXaFZWbzFtekZyVWJCd284RTJFMzBfeEVOQlI3ODhtWTd3V0cxNF9na3lJVThUOWplRV9CTzBqM3ZB?oc=5"
+    },
+    {
+     "fuente": "ENREDACCIÓN",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNDNsYVlQV0dMSDFxRXRVV1RkOF94OUVpMXhheThyakphT3BnYUdLQi12XzZyZGtLRW1ETkhFMlBLdGU3b3VtY0d1WDZlcmlVanpOaWJjN1JVcm0tVG53YnhfeDcwbl9uR2FVc2NCMy1VT3k2aXJocXJIOFZFM3Q1TnU0aEJjTWZUVmd2WmRRaXlaT3BIalU2dlZLZVdfX2pLdHpjcXB6V3g1TG4xMU83U3BybUNLa0xsaHN1YTc3OTRCRUs2WFNV?oc=5"
+    },
+    {
+     "fuente": "Radio Vive",
+     "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNOU9oWFVNLVU5UVFhWmVSX19YVVV4WWU0Sl9tYVg4NjFyc0hNSml2MXVTU29lQUprWXZOaUJKMTY3REVfMDBSMW5rcUdEQWJHNHA4VU5IUkxoRHRMa00yalI4YVVLbnp0UExQZVd6Yk5nelFpbVF5cGdZWGlIemJMWHFqSkRIYjc1YVd1V054cVNhR2lqUEZnT1VtX3RXcXN3WmNVWDNIc2R5MXN5OUlzcGdicXowYjF0bGJNZUh6MjBUYkxNQjZZeWQ4SkpkN1NEVHlYZXdmVlFzekx1QkhHMC1BeWtFSlRGZFJ4Q1VpVXBkRmszd3djeWtHTW9NcmF3U1ZUZnZjV2lFUdIBigJBVV95cUxNOU9oWFVNLVU5UVFhWmVSX19YVVV4WWU0Sl9tYVg4NjFyc0hNSml2MXVTU29lQUprWXZOaUJKMTY3REVfMDBSMW5rcUdEQWJHNHA4VU5IUkxoRHRMa00yalI4YVVLbnp0UExQZVd6Yk5nelFpbVF5cGdZWGlIemJMWHFqSkRIYjc1YVd1V054cVNhR2lqUEZnT1VtX3RXcXN3WmNVWDNIc2R5MXN5OUlzcGdicXowYjF0bGJNZUh6MjBUYkxNQjZZeWQ4SkpkN1NEVHlYZXdmVlFzekx1QkhHMC1BeWtFSlRGZFJ4Q1VpVXBkRmszd3djeWtHTW9NcmF3U1ZUZnZjV2lFUQ?oc=5"
+    },
+    {
+     "fuente": "Ruralnet",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uZXFMVVhDUm5xOTVRZmZteGpTLU4xSmVfelpKUzY2YWcwN2d3NmIwVFVDRTJJaHBHNVEwY0VHLW12RFJpNWRjM1kzczBzNjZtVEhsSThTYU9aOFM5NnZ6MG5mNEQ?oc=5"
+    },
+    {
+     "fuente": "Radio Vive",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNRXhBX2JidGtsa250ZVVXYnZOYllMdXVkWEl4QVdxMlhHdm9ud0tEb1E5MkVST0NZMm54S29wNmVpeTBfaUhPQVByb3h5dDNiR1JjZzRFekhGX2NwYkRLZ0RnU0N3TnFTSmM3dEdKNDNBbTJsUGtqb08waUhmSmxodC1ydDFHUmxESElMRU44dExnNGNRQlhlT043X1NiNzMyaXpBaW5KYzk2TDVEUk1yVlMtcHl1Uzl6QUN6MkQ0VTJic3FNb0xIYjlPWkdRaU9CMlFKWnJEdlpPNDFNeldBOUs4SHc5Mk45ZVlyaVc4aml4Ri1ydVFSYzJsSEllZ9IB_gFBVV95cUxNRXhBX2JidGtsa250ZVVXYnZOYllMdXVkWEl4QVdxMlhHdm9ud0tEb1E5MkVST0NZMm54S29wNmVpeTBfaUhPQVByb3h5dDNiR1JjZzRFekhGX2NwYkRLZ0RnU0N3TnFTSmM3dEdKNDNBbTJsUGtqb08waUhmSmxodC1ydDFHUmxESElMRU44dExnNGNRQlhlT043X1NiNzMyaXpBaW5KYzk2TDVEUk1yVlMtcHl1Uzl6QUN6MkQ0VTJic3FNb0xIYjlPWkdRaU9CMlFKWnJEdlpPNDFNeldBOUs4SHc5Mk45ZVlyaVc4aml4Ri1ydVFSYzJsSEllZw?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-GSnRRemxUP29jPTU",
+   "estado": "a revisar",
+   "plantaId": "mirgor-rio-grande",
+   "empresaNueva": null,
+   "tipo": "despidos",
+   "fecha": "2026-11-12",
+   "cantidad": 16,
+   "fuente": "La 97 Radio Fueguina",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVS0zcklhaDQzTnl0cEFib3UtclVUWUlUanpaMkEzOEpYQVVkVnk3Z290ZENyRTlHYUphcHowbWhNZlh5ZnYxYkh5ZmlmdW9hVE1Vd1ZKLXZIRzFlOE05VkgxQUN6bkJXaDBmOE56ZTlud0xnTEhLb2JINWZ2S2RCNWlUbkNYVktfd1U4eDBSRVh3Y19OVzR0aGhFWlI0Nm5vMW9QLVBubFJtQzlT?oc=5",
+   "titulo": "«Un capricho» de la empresa: fuerte denuncia, tras los despidos en Mirgor - La 97 Radio Fueguina",
+   "otras": [
+    {
+     "fuente": "19640 Noticias",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTWgycHZzbGVsWjBWNmhUUy1EbWJJOTNuQ2l5bmEtYTlocVByVkhHbVJvaDlRWWZPRWgyR0loLUVjMVdkc2Y4QUliYldCTTczR1cxazFRMmRnTnRPdnRoV2NxZVhhMmJFcEpUaU85S0duSUxzTkJiRUtUMWZ4YVBVU29DRUhldjBZUE9zd25yeHIzSDFTdE5idDVhak1JRm1NZWVGRUY0OG9Ua0hubWc?oc=5"
+    },
+    {
+     "fuente": "Mundo Gremial",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBzYXl1bHdmUWJNRXJpODVtdHI2MmdhQWFvajNZb0JoSVdBZkgtOE9iMFFHXzczZkhJY1AxcGZlM1hvQnhwV3hJNndhazA0M0NuTHBoVEtvVl96ZzVGdlRxa0tvTHlWUHJ0a0FUUXVKLWRjZ1g2dTdEMlRB?oc=5"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORm9oQTU3UnpoY05hdHhHWFBzb2Fnb3RuVkFwU3BWbXNHN3ZWbUFHamZNUHhvcHBERGRXRlZRdFJTYmttYUlMU0F0S0tZb2p3NFl4b0p0WUI5eTlyb3pJVzVRd1N6bXktQzVrdEhaTnU5UkJja0hiMGhScVpSaHl1eU80QThYMkI1dnBFQy1VU2JNTXB4ZXlfdENpaXM4YmpJMEJOeHFXamphOEVDTGYwTnBBeEoycERwTXVxcjNTUXNudDRrOUVIUjI4RVdBMmlEUFE?oc=5"
+    },
+    {
+     "fuente": "Minuto Fueguino",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBFeXc0LUhmY1gwaWptRmdXR0dqY1RPSXFmUGhVT0hzQ1kyc0VBQlp5R1Nqc0xzQ1NkbC0zam4yRXd5RmxzeHl6Sm4wUTJfb3dsbUlFSlRIenNCYlVFbjJZTlB3cWJMV3BCUEtfMmtTZk53Mi1wRld3SlIybXdHWmc?oc=5"
+    },
+    {
+     "fuente": "radiouniversidad.com.ar",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcGhDbHByLVVPbzJ6dmJKUUFHRGlab2JQOExJQjVpWXlrei1zVk9aYWljTlZWQnRZNEFSajhZb1IwMWx5Rm9QSEhzUXp6d1VvSG5hVEJ6dXZDV1daOURqOHEzMnlKZTZQQnlEd3ZqODhKTExEVm1ET3Bvek1RRGg4RTlReHJqcllmU1BYSjhQN2RjajNrYzVkc3l4c1h5RzQxd29xR3QtRjRLcDNFVkFnX1dyVUlWbDc3UHp3LVBTT2hXTVB3bmpFcy14UjJFTlF6b0dGb2UyZHFGQQ?oc=5"
+    },
+    {
+     "fuente": "Notitdf",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4wVlBubmRfNVJ3ZzdFOVQ3VXJPcWw1dElOMEpiNVl4dmtYdlg5ZUxvYUdiVzRMQ0lWYjI0dS11TUhjWENjZEY4bGdwbWIwdlVrQjdYdW1ueUtCVUdLMG5vYmdqZ0xzUDVTQ3FN?oc=5"
+    },
+    {
+     "fuente": "Minuto Fueguino",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONVdoWHE3eU5STkxYVTdBRjNhSFF0QXhLb0o5V1FHRmNiTmZ6bWxLRkFudW9KSTlJODRabVVob0p5a21STFc3UUVoZWJWWnJnT0NnWW43X0cyb1VRdUl4dS0xNXF3SjlqWl80SDFjRnpxS1VvdDVKeXY2WGxFVllLam9UZG1VN2RRa3cxQ09CcGFydE1RdjVoVUVZTXNpWVU?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-NGMzUkxadz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-13",
+   "cantidad": null,
+   "fuente": "Cuestión Entrerriana",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYWlHSDdWMS1WLWJkUkQ5TDBTZk1JeEVHd0M5SE1icklmT0xURTVDUk1UVjR1NVp6YWFabnlmYUszbkF2MjhnbGptWXVCeEw1YUM4cEVxNnJCUmxkUXRIelMyaXlvc2VjekFTbDZNUHRCNFBjVXBrZFhkODhYOVBVc3pSNnZyVV9VRWs0RmY3bEM4TExOaEdvQk4yUk12c0MtcW5NRF96YlVPc01uV01HcGUyZFRwcG5FcWprYTZXbVhUc2N4N0REb2h4c3RLZw?oc=5",
+   "titulo": "Crisis en la industria metalúrgica: Promettom entró en concurso tras perder a su principal cliente - Cuestión Entrerriana"
+  },
+  {
+   "id": "prensa-VzV3ZURVMz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-13",
+   "cantidad": null,
+   "fuente": "Urgente24",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeUpmWkFlMWdKY2NWOXpVcm14dFNrb3VpS0RQY3lWeW9EMEJnVUFYTVhrTzUtNTJLYlNRaGNWVm1YWUNsOV9DMmxKWHltRGxHNVpWZmpmeUxUS2FUald4dXMwLWN2RE9lakFNMlE1TUp4OUFrd1pNRFhQODNTN0lIVzJIdERMRS1xcm1GMGRGbDVteUNOdXpkS19tRdIBoAFBVV95cUxPbWMxa2ZmcGdoUGxUQnNYLTdzMzJiUmRaVXdtSGpnU05FNUprZVZJR2FlZXd6X3puRnh4VVpzSjlHbUhiU1ZaUnI0WTVaOW1faC1NbzhJbWhROWZZTndhREpYUGI5MnFmek14aERuay1RSXhkYVcwOXJnMTJkZXp4RlJYNjhXTV83R0Z3TlJnQTdvYjJOakpaekdsdW5weDU3?oc=5",
+   "titulo": "Incertidumbre en una empresa de maquinaria agrícola tras ola de despidos - Urgente24"
+  },
+  {
+   "id": "prensa-FUTFRMmR3P29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-14",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdkNaam5yTi16OGhQcHY3UU9Bei16d0xyd0hDQmRreTVSNk9Cc3diVVNMXy1RTW5mQktRR3lRNU9yZllOZEZWa0NxejdwZkNva1ptbjhUV3BtUmpUQURIT1NMYkNBZTNUR2NMcTIzTjVzMnhZTU1ZVEw4NEhGeFVsazVqQ0Y3NTl1ZXBwTnB0Zkx4YVg4SnliYjNVUmVReEtJanhRU2FZMDZMMVZaRER1U1Ztc2NmMXZ2b1VqLUljSXVmRVhXQk1SQ0I4cXF3WGpTU3VSdTdHVEVrdk11dVk1SXc4WjIxNV9oZmtEQ1Q2dw?oc=5",
+   "titulo": "La paritaria siderúrgica de la UOM entra en su tramo final entre tensiones internas y amenaza de huelga en Villa Constitución - DeGremiales.com"
+  },
+  {
+   "id": "prensa-tT0dkaldRP29jPTU",
+   "estado": "a revisar",
+   "plantaId": "acindar-villa-constitucion",
+   "empresaNueva": null,
+   "tipo": "conflicto",
+   "fecha": "2026-11-15",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZkc0RTRpcFIwMUJNRXhHN3NJM05jeTBNS29MbEx3QlRVckphNFJTUzU0ZHY3T3NIaFZPOEhsYVRPSWpYNHA1ZGVfNUJSMXRtU0xyYjdKbDYtUnZGVVJ0MW1HQUZJU0U1TW1WTDA5WmhyTGtCenNqSmE2ejZCTi12Wmlkcy1TczVFWGdNcUxkd0p4Ym1UcEJUMWZ6Tk52eXY0RldZY3FzWW9tRTE4bVh3bWRjejY3aDctdThmdXNoMG9xRTB5clNmOGdjWQ?oc=5",
+   "titulo": "Crece la preocupación en Villa Constitución tras la quiebra de una contratista vinculada a Acindar - DeGremiales.com"
+  },
+  {
+   "id": "prensa-ZqRk9lSGc_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "pauny-las-varillas",
+   "empresaNueva": null,
+   "tipo": "cierre",
+   "fecha": "2026-11-16",
+   "cantidad": null,
+   "fuente": "MONTE MAIZ MIRA",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWE54WHhtNUkyUWVwY0xWcFZJaEx1MTFRRkw1SDIyemkzRjg3ZS1sTkY4NnpnRlhBaTRmOWpuY05hdE9yRVYxcU0zeTBIOXg5SUVZRWdHelBDWWh5ZlRnN0o4N2U4WmZ5c1dQTUxySnZyT0UyMGloMHdhelgwN2Y5YUhIQkVMNk1ScC1NVjFOeHg?oc=5",
+   "titulo": "EL CIERRE DE PAUNY PONE EN JAQUE A LAS VARILLAS - MONTE MAIZ MIRA"
+  },
+  {
+   "id": "prensa-UUlhUbVJCP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-16",
+   "cantidad": 250,
+   "fuente": "Puebla Online",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTDV0V2gwV2hJYWtNY1A2OTFrbzZ4VW9fVzQ4M1N0aTFzSFZfQU9FanBndUh2bXhVTTlxWUswZTFHcFZPWmtxNElWM3U4TXZZTkk1MHpFMmZEZDVQMWVaMFNIVHYyeEhkS1ItSl9FQjV2YnRKMFFvb0NKWS1JZ205NndyRVdXcXZkQlduNF8zWjI2QVhsOWp2dWx6cW5ONWhYcUI1VlZLV0xFZXJic0lrYjZBT3ZxUmRDdlg3b2J1Z1NTTnpxX2gwRW1fZVJ1SFBLamotNUFTQdIB3wFBVV95cUxOWUpIZWlJck9ZVFNqakh5cEJ2WjJybnBmT0dDUmoxX2FiVThyclRRTUx3S0xsSzd0U0NIelhkVUMyXzhMS1dyRDA5YzZOVUJ2WTA2Z21hbHZtelUyYVUza1pqcWZHRTU4NWNpQjRpRHhHMkd3cFZIU1JtS2V1dTFmVTdiTjBaY3h1T0NrMGY2ZVZ5QlF5dVZabUlwc0lDdWJzSWR3YkF0a1phWDRoNzA3ZTdiOXFmR09qZU9TSGJCTHoydFJmQWUxdzRfSElFM1pIdlhrOEhzYXNDWTRXTmRB?oc=5",
+   "titulo": "Siete proveedoras de autopartes aplican paros técnicos y suman 250 despidos - Puebla Online"
+  },
+  {
+   "id": "prensa-5sZldWTjM_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "mirgor-rio-grande",
+   "empresaNueva": null,
+   "tipo": "suspensiones",
+   "fecha": "2026-11-17",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPSUFQU1k2eXdyQVlKNUVBLUV1UmltT0dSMUhRV2xCMEhmSzduSGNwMm1ZRjY5MkItcHBPV01DZ2k5UFQtZUZnQVBXbzluQW9KZHVYNGlSRDBrNmc5MmNwbGRNVHJiSE9JNWRHWVAtbkk4cWx0VUgtTFRNN0hWcFRMV01DZVJ1dXV0eDhWcURkOUxoM0RyZVNHaEtITEVlR3UzbDZFTjdzRHNTT0JLYm9wMVBiTGprRGtTT1RjV1JGNjdPaWJQb1dKM3I3dE1CN21nM0V5YzRCYi1SenJITU5XVjgxTUJ3cDlZdHhvOExyUXo5cWtRZnlfWVN3?oc=5",
+   "titulo": "Ajuste en Tierra del Fuego: un acuerdo entre la UOM y Mirgor habilita suspensiones con quitas salariales y limita la actividad gremial - DeGremiales.com"
+  },
+  {
+   "id": "prensa-5iSGd5WXc_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "metalfor-marcos-juarez",
+   "empresaNueva": null,
+   "tipo": "conflicto",
+   "fecha": "2026-11-18",
+   "cantidad": null,
+   "fuente": "iProfesional",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOHFfLVp2VG82QnZZTk96bU9zWURfeHNud2lYWXU2UnVQS3dRdlhaN1paeldnS1FrYjJjQXNUSExnN1pZdDVjTEUxLUhSVHc1ZDRLSXBHQXVlT3RJclpyOTA0N0MzVDhnNEUxMTlvX3RvcjY5dkh2TmtJemZPTmttQkEtSTQxa1ljVnBYR3hTUWNfX09MQmJxSXkxRTlTcHZUcHh0dUZ5QlR4aDRHUjdNbHgyY9IBswFBVV95cUxQOHFfLVp2VG82QnZZTk96bU9zWURfeHNud2lYWXU2UnVQS3dRdlhaN1paeldnS1FrYjJjQXNUSExnN1pZdDVjTEUxLUhSVHc1ZDRLSXBHQXVlT3RJclpyOTA0N0MzVDhnNEUxMTlvX3RvcjY5dkh2TmtJemZPTmttQkEtSTQxa1ljVnBYR3hTUWNfX09MQmJxSXkxRTlTcHZUcHh0dUZ5QlR4aDRHUjdNbHgyYw?oc=5",
+   "titulo": "Concurso preventivo: Agro de Souza se suma a Los Grobo y Metalfor - iProfesional"
+  },
+  {
+   "id": "prensa-5MVNSV1IzP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-18",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPUXZodFl1TXRja0JxMkF5dDFjTEVDeGNsUEpZX3NaWTVKaGFTclg2b2NIRVlCM0c0c19rVkFvZmhxakU4TEV5aEp0LU01cUFRV0doUHJqTHIwS29CclZZcjVyZ1h6NU5PaTNSWnp5NlNhdS1WUUM4aVU3b1hkYXBDaDZOUnYzOHpJZC1wNW02Y1lSSTVZbGxwY1doMkl5b2xyMG1KejVsSHVHbUk5bTFycEFDMlQ1OUVyRkwyOUZIUUszZzBrMHMxRXdhMGV0bjlOMnI2d2FWdVFVLURpQy1SRWR3?oc=5",
+   "titulo": "Bonetti pidió normalizar la UOM y advirtió por el vencimiento de un convenio colectivo que considera desactualizado - DeGremiales.com"
+  },
+  {
+   "id": "prensa-YWtwWGNrRT9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "cierre",
+   "fecha": "2026-11-18",
+   "cantidad": 90,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQTHhxQ013OWJobzE3WkdKSVBiOW1NckxUUUozbkpLMm15dDFMVFNPaEp1NGdBX3cwdXZibGZBZWR4NXdTVG5EWWFjWGlHemJHMGlYVjZfZUpldk4wWGJoQk8xcTNHRmdBY2V0VGZhMi0wYzl2aEZTdzl5RGZGS2ExVGxqWnIyUzBXOTFNamNrOUZxZTc4RzU5ZlhHX3lzRUU0c2hjUzI4X0t6TC1mNF94WTNCVnctSHVRcFdPY0JXQWVoTmtGazk5NG1mNzZaQk5wZko0aW5rajBYWUlNaldLbDBpaUx5bF9YRVVySmhLdmdGaGFtbXRYVFZVYU5rTUxLczFiak9mS0VDcWRleU1pemhHd1Zlc0xtRkN0aDZYQlBBakpXckE?oc=5",
+   "titulo": "Trabajadores de fábrica de maquinaria agrícola Plantium reclaman frente a la planta en Villa Constitución por el cierre, los 90 despidos y meses de atrasos salariales - InfoGremiales"
+  },
+  {
+   "id": "prensa-VdHJOVjluP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-18",
+   "cantidad": null,
+   "fuente": "Hoy Día Córdoba",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sLXZFWFltUHdzb3RZSjY3c3JXQURfZ3lNRUx2SWZuLVBHanN4R3VCVXEzWXFyb0MxRGsyc1ZSSFRqd2E3NzF3VlNFT1hYXzJhajFYb1UzOElGd2Q3d3NJd0xtM1XSAWpBVV95cUxOZjlpTzFvazF4Q0JlbXB5Vi16S0pZR2R6NjlSQTF1TV9aQ05xVFVWRVk5TnZPMThoeXBfVXptVnZ4U3U3Z0FuYS1nUnhtNl9iVzJNVnJCVTJKWnQ2SnZqSjhTVjJMVUtrNV9n?oc=5",
+   "titulo": "Otro revés para la maquinaria agrícola: Agro de Souza pidió el concurso preventivo | 18 de noviembre de 2026 - Hoy Día Córdoba"
+  },
+  {
+   "id": "prensa-ITkpOalZ4P29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-18",
+   "cantidad": null,
+   "fuente": "Cuestión Entrerriana",
+   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPS0ZRVmVQdGtjNzIyeUNnd3RjM2kwWjFfMjFGX1JmMXd1bXN4MV9hVWtPanNJWnhaeXlEYXVSNFNQM0VWSThaLVZEUkFlb0hSVTdqbE1tVTdaR21KeFhkOGlGRDRWUFhEbWJsZXlkM0ctb1pJUXpZazFJNm9KYmZDMzNxbEVVRUpQaFVxbUV1OHota29ZQnNwcFhDSHFudEdNUmE3OUNVQmtVQlFUQ0hfWTJ5bHdGdkFYczdJR2s0S3JwWVozcDNCaGRkbkVkckhKczhUcDdEaWdmaVRMcHJGRjBuWFBudDBKSEo3bFBGUHNJNjVx?oc=5",
+   "titulo": "Crisis de maquinaria agrícola: concurso de Agro de Souza - Cuestión Entrerriana"
+  },
+  {
+   "id": "prensa-lbFJSY1ZFP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-18",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPd0VUT09SRF9pZzJmSEwyMld1WDJBM3JVUTRDeUltQlkwLV9iamhZcmhWd3lVTENkaTdmTm9uTlNCbndRNlJSNHRzNE9LX0ZRS0NkZ0J5bnRVTnJrS0xzVjJONlVIMUt0eUxaY3U3U2tqUGJ0dFRidTltWENsazk3TVlkLXFGdjhhRk82X2dlVXhtWVp6V3ctRHdCWlZVdjFmMXMzNk1sQnpseUtMWGswVC1hd1hHMW5WRWEzNkxHeHNBZzJIRUZWYjFCQ29kelRRcVE?oc=5",
+   "titulo": "La UOM volvió a la mesa paritaria en medio de la crisis industrial y la presión por recomponer salarios - DeGremiales.com"
+  },
+  {
+   "id": "prensa-dZalpZUVE_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "tenaris-siat-valentin-alsina",
+   "empresaNueva": null,
+   "tipo": "despidos",
+   "fecha": "2026-11-19",
+   "cantidad": 150,
+   "fuente": "Mundo Gremial",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZUJyQW9iLWp4QlQwQlNvRHJPSGp2Z1UyZlJCQ0hWMkRrdXBITXZNenYyc1lyUUtJcnpHM1ZCSnNVSkJWN1lEdG9zZm5FTDlOQVJDVnVaajNEVm54ZktFN0ZiMEJSTVZWb0RPTkF1WHhHTzVCYllnWjdkMEE2eWtLMTNPdHZ5SzU1QjVubzM0WkJRdTJoUlVYdkNTX0hQYkRXWEd2SXBMempGWkJZLXNoY1MydFRseWlQWno3V3VrRERBSExYZEFYZjA0UW9CajhjMjV2Q2wwYjZYQQ?oc=5",
+   "titulo": "Tenaris SIAT confirmó 150 despidos en Valentín Alsina y la UOM exige extender suspensiones para evitar las cesantías - Mundo Gremial",
+   "otras": [
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNa3VuYzJoOWxZQXk1TXBCQ0ZGMERidXBMQ2RCdk9KdDgwZkNfaUY2REprMEZiWGVRSzNyU2JxLVVlclpUbG9UYkdnYnpsWlZWaEJ3WEo3ZTBDOEptRDM3M2N6UkNjX09HZ09DUy1ybERpNnlJVUZBTV9rN1pZLXhpa3lZVDVpZ0w1NHRJWG82anA2OEJ0eEFIdEQxU2NMNUQtelJWRXoybUJEZFMzZFh3bFhveG9rR2hTcUhrRnZMWUwxRGpzM2c?oc=5"
+    },
+    {
+     "fuente": "Data Gremial",
+     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNclNKNlBfU2hvRUtsZ08xU0h5cUtBY0ZpdEdFanoxSHJ0ZWZ2d05vcXZaSFFMeXRTa0RQUjVBY2JrSjBSaWZhV2RFZXpoXzVoVG9DOVJTZFlRemswcjQwcllDZXRFNC1FQm8zWXBKN3REVHZxbzVmb0pzbENEaVhfeS1pelVMSUNVS0I2N1FGMTQxNmFKWFktQ2kzQ0ZEcHZ6dFRsTGttUlB1RnpjelBaVWVtS3gyT2R5MFRsZi11RlNCZTZlR081eERnVUpJdmEyaVNELVF0ckx5ZURwei1ORzVqQ2ZrYVU4TUxhMXBNbDlrLXdLNXlHcg?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-5GSlNIWko_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "pauny-las-varillas",
+   "empresaNueva": null,
+   "tipo": "suspensiones",
+   "fecha": "2026-11-19",
+   "cantidad": null,
+   "fuente": "eccos multimedios -",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWWtpb2V3eGJzX3RjeGR5RDBSdWMzQ2p6c2F1dXFKdXRKSEpUOEd2MjVPdWJjQ1htTU1Rdjl1N2dISS1oSmxpX1hZZHBpR0pZRDRGYTlud01BbGZ4emRGQ2tMMjVTZTRHWjUtU3diNm0yRGtFN1RIclMyZUh0UWJVWTAyNEgybG1kVTJiZy1TOWFFUnFJSHZJ?oc=5",
+   "titulo": "Crisis en Pauny: la empresa propone reactivar la fábrica, pero plantea suspensiones y reducir su personal - eccos multimedios -",
+   "otras": [
+    {
+     "fuente": "InfoGremiales",
+     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNmlnRHBWSFFMb1lxc0hfOUxGWUN2SkdEQXJKU0x0YlVhX0JVU2Jhekl3NFM0aHoxN19VUGRVU2ZOMGF5X1dJd1pkTGoxUWZNNGhLNEM5Y2FGR3N4WWhvM2ZFakFkelVMMXNsSzVyb3RWUnNPS3IwaXVKTnc1all1Q2YzRXNYcEFJdlZkc24zM05ZQmw1cS1tQjRNMjI0SWY1X2hwVTZJcXNoOUgwVlQ4R1lrQnNITm5UUGZCb0hyUzZzVzJ1cURDS01tYmcybFA2THRxQ0NSaVVlTGZkM2pGRjJWODRMUklWdjBhQldqZGl5bDR1bW8xa0R1ZGFoWkRvME56cEFn?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-FXNWtNbEU_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "whirlpool-pilar",
+   "empresaNueva": null,
+   "tipo": "cierre",
+   "fecha": "2026-11-19",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcEYtUldIMnJTSHdGandWdVYyNlRXUnNkQU1jc3JqWThDM3ViOUhfN2pwdVpNb0Yzc2tOdEUtNnVIbnUyR2JMWWtUWk1WRHZySVhYSlRPSkxJY2dFQWczLXNXLUcwdGZ6Qi1DNTVvYmdmWG1nY1VWUmxwUU13M0xPVDZLQzJwVnZDS1hUTldONGdDdjFsRjQ2Uk5iSmczQUw0THpVVmNSTTFyNXEyR05wMTBQVExXNDlNN0lmSWV4MHhSaW5kMlE?oc=5",
+   "titulo": "Whirlpool abandonó la fabricación en Argentina: cerró su planta de Pilar y ahora busca venderla - DeGremiales.com"
+  },
+  {
+   "id": "prensa-VDNkaWRHYz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-19",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMlhZVl9vclhZblZKZzdKZ2lzQWxuQUlrZ1FQSEw2ZGlwY183YVBCTEVwdVdiOGVpREROZE8ta3M1blV3LWVRLUR0ZkpQbi1qTV9CNkFYOFY2Ny1UTF8tTnIzMXZuRHdlV3hQOHQteTZEdk5Yb04xaGNxNkxDSmZzWThvb25JeGhjbWZ0RlNhUnZGNTZRSUF3QVoyd2tZbER5bTdFZnVma1BPdVZ1VG9TMWZLY2hTT1BSZHN4eG1iQmw3TTRCZmhXUVRFX180M0hQZGdUSmxDUTdjT3didGc?oc=5",
+   "titulo": "Tras un paro por tiempo indeterminado, la UOM logró un bono de casi $1,3 millones para los trabajadores de Acerbrag - DeGremiales.com"
+  },
+  {
+   "id": "prensa-UVVFME9UZz9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "cierre",
+   "fecha": "2026-11-19",
+   "cantidad": null,
+   "fuente": "Página|12",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQmp6RmVvUnRWdGFjNDdFNDVCZy1fdFdsdGU1dTFOeUlvXzRLdTNTWFB0bm1NSUF4QXpIbHAxZE9mb05FWVhRZTE4ZTIyZzRJOWM0aE1heGMtUjc4c2owb0NqUVc2MV9BWTNlTFNZbThreFdsLWlXNmRHREYxaTlpMnU3VXZndGliMWkySEVXWFNlZE1kNDcyMU1talJxYS1GSHA2eTQ2VnJPNUZzNXVNcEZsRTV2aENTVE41ai1DQUE0OTg?oc=5",
+   "titulo": "En el país del agro, la producción de maquinaria agrícola se paraliza, cierra o despide - Página|12"
+  },
+  {
+   "id": "prensa-GWlJOekU0P29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-19",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVHFXMHlMaGJuM2lxVzVZSmk4VExUWG9MRzFHbldHX3Ywb21yemN0NV9jZDB2SUVhaEEtVnVrcHFCSU01cUFfV1c3d0tHVjdhZ3VOcl9BR3Rld1FEdkZ2bnJzRjczeDZLN0g0Y1JqOU1EVU4zaUl4NTY4NUtMR3NKa2h1SDBZZmJiaEdrbXZFcHRVTUlPRnU2R1FlVGlNT1Z1RHo4SWdEazFxa1FjZG9mSmZiUHduTVZhaXpSM09vaUVfcFZRNzE4?oc=5",
+   "titulo": "La caída industrial no cede y otra empresa de maquinaria agrícola entró en concurso preventivo - InfoGremiales"
+  },
+  {
+   "id": "prensa-VHNUJOMUU_b2M9NQ",
+   "estado": "a revisar",
+   "plantaId": "pauny-las-varillas",
+   "empresaNueva": null,
+   "tipo": "conflicto",
+   "fecha": "2026-11-20",
+   "cantidad": null,
+   "fuente": "Hoy Día Córdoba",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3dTYW05Z1BOekZObG5iSzdKc0J3NHV5VFZvbWlmejJ0S2g3U2gySWY4Q1Jub1VyTElfRDhJY1FwdXZMT1hqVXhuYzNsVTdscDVVc2ltSFEwdjhkdGdFLXcxRUtrYmxXSHQydXNzS21sR2Vrb1d4N0k4Q2NoT2RQTUhOUFhQTVFrSDJ4VENybkxjYk5ISUtSdERvMkhaa2V2d24xNm1QUlNfUjYzc1lEZjd3cHFLZndj0gG-AUFVX3lxTE91T01WeVp1WW1CMTFBbFlZLU9nbHRRYlk2aXZwT1p0MkYxVEJTM1drd2t5cjRDTlAyUkJpQTk1SlFHTE5XeHNZc3FBeUNfNUhqbVdJSEg4c1pqT1gxOUowWkU1SFdWWlhiaDZqOTQzVkhIN0hEX25ScXRBaVZmaGZBNTdhYnpzTldRc2pLU2otWkVjWEJ6WGNyVXAyVWZ2TFJnd3ZmQmFnUTdsRFVBY2FfVS1HVDZnOUJDeG5BN1E?oc=5",
+   "titulo": "Toma en Pauny: ofrecen pagar deudas en cuotas y la Provincia asiste a los trabajadores | 20 de noviembre de - Hoy Día Córdoba",
+   "otras": [
+    {
+     "fuente": "Infocampo",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOGFiZWNTU3VhOVc4ZTdNaTl4VW04R1UzaUpXXzUyemJkMGRyUXRkZXFQYUpGeTMtd3ZwT2hJQnZhOUJLV1Q0c1ljRjREYkZFMDBKY0dENkVNRFU5ZmduUFp5VFd4QnNvODJ0bkhJWE9UcXdCN3hNakhCc1cydWV3X1Y5eVBfYVVQQ2pCR21WYXJmV2lzN20zNHRTTExfdU5Fb29QTmFnSm9PRmF0TGg5cjFKWVBJRDlFN0cwaDdsa2t2amxmcDlHcw?oc=5"
+    },
+    {
+     "fuente": "Radio El Condor",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPakVUbllSSVcwLTFMOW1Xc09ZYmtxdDJSbVVlanA0SDR2SUhON1ZDQ2RaQUxJZTNjRW1yc1N3X05SQ3JFeUxoOW1Tc1EtQWxZVnJmRkVUY0dYQTBzWVRiLWRPMVdNd3laOEZIODFQMDlBTzVteG5rWnBSeGFaNjAwX2J0V21fVWMxenlmWG9vTWF3QzlaalRTbktTWkJmaGkwV2lsZmw1b0ttSUtjY1lNVGV6UVNSUQ?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-HTXllRlpzP29jPTU",
+   "estado": "a revisar",
+   "plantaId": "metalfor-marcos-juarez",
+   "empresaNueva": null,
+   "tipo": "despidos",
+   "fecha": "2026-11-20",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZmZpcWdjdkZZLVpWUWF1RmdtU1RYVHlTMzB2Nm5MTTdQWHBEZU0xQlc2NVlCckdIMzZBd2MxSmZPQy1kV3NrZENYNE9pbHowdVF3RzZsTlpKYTMwcFNnN3RjUEhaT045clVnekRmeGQ3cGplRUcxSFlXYWpzTEVYbXZRcDVBa0ROZFlKd0JsU3RFSVEwQ1BPYTVfZjJRTHdBNy1xNml3MWkxSnhnQXUxZU95cVRkS1BOUnRpUU85Q09uNUEzbFlnR0lHSGMyeFZs?oc=5",
+   "titulo": "Escándalo en Metalfor: denuncian despidos durante el entretiempo del partido de Argentina en el Mundial - DeGremiales.com"
+  },
+  {
+   "id": "prensa-IVUZsTFl3P29jPTU",
+   "estado": "a revisar",
+   "plantaId": "dana-san-luis",
+   "empresaNueva": null,
+   "tipo": "cierre",
+   "fecha": "2026-11-20",
+   "cantidad": null,
+   "fuente": "Noticias Ciudadanas",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1DVG9XQ0VscncxMVBCNkJNWTdzNDJCUS1Sd2FrR1kteTJLUVhTX1k5WGI5anRyTnFYdWI1amR4ZG84X1hqbGpQTjVuSVRGd0t0Z1RTUGxyS3ZGelZzcTV3RWdOM1JLZUtZWkhCcnh3TERFQ1FBeHVHUFlLYw?oc=5",
+   "titulo": "El Circuit Ricardo Tormo rozará los cinco millones de espectadores históricos en el cierre del Mundial de MotoGP - Noticias Ciudadanas"
+  },
+  {
+   "id": "prensa-GZEdGaFFRP29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-20",
+   "cantidad": 40,
+   "fuente": "Canal Doce Misiones",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV3U3Y1l5MnZOMmFvQTI1UnFkSG1qb3FPUUluMFd5dDZ3UGI3STlVaUowNnpGMkJtSlIzRno5LVdRd1ZMZFR5aFEzekpub2xCZlVXOHU2Wm1ReEZxMlp5NVlLZlI5NzJ6TXduOHBQTEFfYnljTzFFbVJZOXcwQ1NFdGFhQQ?oc=5",
+   "titulo": "Crisis en el sector autopartista: trabajadores ocuparon la planta de Taranto en Córdoba tras más de 40 despidos - Canal Doce Misiones"
+  },
+  {
+   "id": "prensa-CWkZSU1p3P29jPTU",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "despidos",
+   "fecha": "2026-11-20",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPek9VWDNrUjVYeHowVDZGLVBMb0Q0bUN3bXl1aDFYbDgtNDVGN2VuYlVZNUtKM0hmQmRyTDlqb1Jyb2ZENF9RX0hEeHpxcXJQc1pqclQzcXF2LXZDaVJkQk5nZnVYajRRVTd5NW1RaGxUejlqUGtnUS1MR2NzOFVwdTE2Mzh0RWNEUWZab0JaemdiQXRMRWlRVHlfd3VIbkppd25LSnNiRHBPLXFvdzJ0SV90d3F2MjhJV1FpTzJya3lNZHg2YXVjRVhPcXFIeHZnVUpranN0OUtCWGRvblBDeFJBZFRSZw?oc=5",
+   "titulo": "Se profundiza la crisis autopartista: operarios ocuparon la planta de Taranto en Córdoba por más de 40 nuevos despidos - InfoGremiales",
+   "otras": [
+    {
+     "fuente": "Huella del Sur",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcTRwM3ZRWEVpLUtPRTU1YlpYWFFJdUhaQVBhcjgyeFBoOEY1Xy1VLW40akp3TDVjalJkQ1VGWERCR19tQ3daRkxwTnhwXzgtWHFKOU80OEEwRlBiQWs2TUJxUjQ4eGtJSzktbmMzTlFsZllqQ04tZzJDZ0NXX3pnSS10cGlvaEdpTU9QNy1Vd0FSMzVrd2Jvd2xMSVd6N2NZTnkya0lwSnRHYy05R3Z0YnZmMml5U1JZMTJTZ0RsQWZxVlFVQzVkMmtvOThDaTduVUNkUmY1SC1GSWtKUFV2YjQ2TzN5MVdV?oc=5"
+    }
+   ]
+  },
+  {
+   "id": "prensa-Q2REZFlkQT9vYz01",
+   "estado": "a revisar",
+   "plantaId": null,
+   "empresaNueva": true,
+   "tipo": "conflicto",
+   "fecha": "2026-11-20",
+   "cantidad": null,
+   "fuente": "Economía 3",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYzNHcGtaTEhraFJpaDhCQTFEZ0Z5U05DbktGNmFMdzI5ekJMRElGRWlzb0pNaU95YTE5MlE0aFkyMU5QaUlRbHdpdjdkR09EWGx2WE5UZmVzZURZYjZqem9UR2E1LThZbFhEYW1fcklmbTdHWTBKOHBHSW5ZWUxpMW9iT3FjX2t5TTI1LW9KNWhSbGxCdDdYdA?oc=5",
+   "titulo": "Los trabajadores de Tubos Reunidos se concentran en Amurrio en pleno concurso - Economía 3"
+  }
+ ],
+ "actualizado": "2026-11-21",
+ "nota": "Hechos del sector metalúrgico detectados en prensa. No cuentan en informes hasta que se aprueban."
+}
