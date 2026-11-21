@@ -35,9 +35,7 @@
    "situacionMax": 1,
    "deudaMiles": 129823998,
    "entidades": 14,
-   "cheques12m": 0,
-   "montoCheques12m": 0,
-   "chequesSinPagar": 0
+   "errorCheques": "HTTP 429"
   }
  ]
 }
