@@ -59,12 +59,15 @@ for (let k = 0; k < DIAS; k++) {
   if (html) {
     const links = [...html.matchAll(/href="([^"]*\/detalleAviso\/primera\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,600}?)<\/a>/gi)];
     const deTrabajo = links.filter(m => /RELACIONES|DNRYRT|SSRT|ST#M|TRABAJO|CONVENCI/i.test(texto(m[4])));
+    console.log("  de Trabajo:", deTrabajo.length);
     for (const m of deTrabajo) {
       const url = `${BASE}/detalleAviso/primera/${m[2]}/${m[3]}`;
       if (vistos.has(url)) continue; vistos.add(url);
       const det = await get(url); await pausa(400);
       if (!det) continue;
+      if (process.env.MUESTRA && !globalThis.muestraDet) { globalThis.muestraDet = 1; await writeFile("data/fuentes/bo/detalle-muestra.html", det); }
       const t = texto(det);
+      if (process.env.MUESTRA) console.log("   ", m[2], t.length, GREMIO.test(t) ? "METALÚRGICO" : "", t.slice(t.indexOf("homolog"), t.indexOf("homolog") + 140));
       if (!GREMIO.test(t)) continue;
       const norma = (t.match(/(Disposici[oó]n|Resoluci[oó]n)\s+\d+\/\d{4}/i) || [""])[0];
       const empresa = (t.match(/(?:la firma|la empresa|la sociedad)\s+([^,]{3,120}?)\s*(?:\(C\.?\s?U\.?\s?I\.?\s?T\.?[^)]*\))?\s*,?\s*por la parte empleadora/i) || [])[1] || "";

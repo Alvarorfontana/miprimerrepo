@@ -10,9 +10,12 @@ const eventos = (await leer("data/eventos.json", { eventos: [] })).eventos;
 const pend = await leer("data/prensa-pendientes.json", { pendientes: [] });
 const yaVisto = new Set([...pend.pendientes.map(p => p.url), ...eventos.map(e => e.url)]);
 
+const METAL = /metal[uú]rg|uom\b|asimra|sider[uú]rg|acer[ií]a|acero|autopart|maquinaria agr|fundici|tornill|metalmec|aluminio|forja|tubos?\b|electrodom|lavarropas|tractor/i;
 const marca = p => p.nombre.split(" · ")[0].replace(/\s*\(.*\)/, "");
 const palabras = p => norm(marca(p)).split(/\s+/).filter(w => w.length >= 4);
-const nombra = (p, t) => palabras(p).some(w => norm(t).includes(w));
+// nombres cortos o comunes (Dana) piden además una palabra del sector en el título
+const nombra = (p, t) => palabras(p).some(w => new RegExp(`\\b${w}\\b`).test(norm(t))) && (!palabras(p).some(w => AMBIGUOS.includes(w)) || METAL.test(t));
+const AMBIGUOS = ["dana"]; // nombres que también son otras cosas (Dana White, la DANA española)
 const CONFLICTO = "(despidos OR suspensiones OR cierre OR suspende OR despide OR toma OR paro OR retiros OR \"procedimiento preventivo de crisis\" OR concurso OR quiebra)";
 const consultas = [
   ...plantas.map(p => ({ q: `"${marca(p)}" ${CONFLICTO}`, plantaId: p.id })),
@@ -20,10 +23,9 @@ const consultas = [
   { q: `fábrica metalúrgica ${CONFLICTO}` }, { q: `autopartista ${CONFLICTO}` }, { q: `maquinaria agrícola fábrica ${CONFLICTO}` }, { q: `siderúrgica ${CONFLICTO}` },
 ];
 // filtro de sector: la nota tiene que hablar de industria metalúrgica o de una planta seguida
-const METAL = /metal[uú]rg|uom\b|asimra|sider[uú]rg|acer[ií]a|acero|autopart|maquinaria agr|fundici|tornill|metalmec|aluminio|forja|tubos?\b|electrodom|lavarropas|tractor/i;
 // el título tiene que hablar de trabajo o crisis, y no de otro país
 const LABORAL = /despid|despide|suspend|suspensi|cierr|cerr[oó]|cesant|toma\b|tomaron|paro\b|retiros|quiebra|concurso|preventivo de crisis|uom\b|asimra|trabajadores|operarios|obreros|salarios adeudados|desvincul|conciliaci/i;
-const AFUERA = /nuevo le[oó]n|\bnl\b|uanl|monterrey|m[eé]xico|brasil|colombia|guatemala|chile\b|per[uú]\b|estados unidos|precio objetivo|tradingview|acciones de/i;
+const AFUERA = /nuevo le[oó]n|\bnl\b|uanl|monterrey|m[eé]xico|brasil|colombia|guatemala|chile\b|per[uú]\b|estados unidos|jalisco|puebla|amurrio|espa[ñn]a|valencia|casa blanca|precio objetivo|tradingview|acciones de/i;
 const tipoDe = t => /quiebra|concurso preventivo/i.test(t) ? "conflicto" : /cierr|cerr[oó]/i.test(t) ? "cierre" : /despid|cesant|desvincul/i.test(t) ? "despidos"
   : /suspend|suspensi/i.test(t) ? "suspensiones" : /retiros/i.test(t) ? "retiros" : /reincorpor/i.test(t) ? "reincorporacion" : "conflicto";
 const cantidadDe = t => { const m = t.match(/(\d{1,3}(?:\.\d{3})*|\d+)\s+(?:trabajadores|operarios|empleados|obreros|despidos|suspendidos|puestos)/i); return m ? +m[1].replace(/\./g, "") : null; };
