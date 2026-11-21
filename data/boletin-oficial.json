@@ -1,5 +1,17 @@
 {
- "acuerdos": [],
+ "acuerdos": [
+  {
+   "fecha": "2026-09-03",
+   "norma": "Disposición 427/2026",
+   "empresa": "METALMECANICA SOCIEDAD ANONIMA",
+   "cuit": "",
+   "gremio": "UOM",
+   "seccional": "Villa Mercedes",
+   "tipo": "suspensiones",
+   "enAnexo": false,
+   "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/346900/20260903"
+  }
+ ],
  "menciones": [],
  "actualizado": "2026-11-21",
  "fuente": "Boletín Oficial de la República Argentina (primera y segunda sección)",
