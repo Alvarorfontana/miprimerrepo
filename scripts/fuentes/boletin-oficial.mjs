@@ -54,6 +54,8 @@ for (let k = 0; k < DIAS; k++) {
   const f = ymd(d);
   // --- primera sección: acuerdos de Trabajo ---
   const html = await get(`${BASE}/seccion/primera/${f}`);
+  if (html && k < 4 && process.env.MUESTRA) { const { mkdir } = await import("node:fs/promises"); await mkdir("data/fuentes/bo", { recursive: true }); await writeFile(`data/fuentes/bo/primera-${f}.html`, html); }
+  console.log(f, "primera:", html ? html.length : "sin página", html ? (html.match(/detalleAviso\/primera/g) || []).length : 0, "enlaces");
   if (html) {
     const links = [...html.matchAll(/href="([^"]*\/detalleAviso\/primera\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,600}?)<\/a>/gi)];
     const deTrabajo = links.filter(m => /RELACIONES|DNRYRT|SSRT|ST#M|TRABAJO|CONVENCI/i.test(texto(m[4])));

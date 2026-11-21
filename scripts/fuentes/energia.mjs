@@ -14,7 +14,7 @@ async function get(url, bin = false) {
 }
 const ckan = async id => { const r = await get(`https://datos.gob.ar/api/3/action/package_show?id=${id}`); try { return JSON.parse(r.body).result; } catch { return { error: r.error || r.status }; } };
 
-// --- 1) electricidad por rama ---
+// --- 1) electricidad por rama (el dataset del CEP XXI quedó en febrero de 2024; se deja el chequeo por si vuelve) ---
 const series = [];
 const pk = await ckan("produccion-consumo-electrico-por-sectores-manufactureros");
 sondeo.electricidad = { metadata_modified: pk.metadata_modified, recursos: (pk.resources || []).map(r => ({ nombre: r.name, url: r.url, modificado: r.last_modified || r.metadata_modified })) };
@@ -49,7 +49,7 @@ for (const p of paginasGas) {
     subpaginas: [...new Set(hrefs.filter(h => /datos-operativos/i.test(h)))].slice(0, 80) };
 }
 // baja los archivos que hablan de industria o de gas entregado por tipo de usuario
-const cand = [...new Set(Object.values(sondeo.gas.paginas).flatMap(x => x.archivos || []))].filter(h => /indust|entregado|usuario|consumo/i.test(decodeURIComponent(h)));
+const cand = [...new Set(Object.values(sondeo.gas.paginas).flatMap(x => x.archivos || []))].filter(h => /GEGU|GED\b|GED\.|indust|entregado|usuario/i.test(decodeURIComponent(h)));
 sondeo.gas.bajados = [];
 for (const u of cand.slice(0, 10)) {
   const r = await get(u, true);
@@ -58,6 +58,14 @@ for (const u of cand.slice(0, 10)) {
   await writeFile(`data/fuentes/energia/${n}`, r.body); sondeo.gas.bajados.push(n);
 }
 
+try {
+  const XLSX = (await import("xlsx")).default;
+  sondeo.gas.hojas = {};
+  for (const n of sondeo.gas.bajados) {
+    const wb = XLSX.readFile(`data/fuentes/energia/${n}`);
+    sondeo.gas.hojas[n] = wb.SheetNames.slice(0, 12).map(h => { const f = XLSX.utils.sheet_to_json(wb.Sheets[h], { header: 1, blankrows: false }); return { hoja: h, filas: f.length, primeras: f.slice(0, 8), ultimas: f.slice(-3) }; });
+  }
+} catch (e) { sondeo.gas.errorXlsx = e.message; }
 await writeFile("data/fuentes/energia/sondeo.json", JSON.stringify(sondeo, null, 1) + "\n");
 const prev = JSON.parse(await readFile("data/energia.json", "utf8").catch(() => "{}"));
 await writeFile("data/energia.json", JSON.stringify({ ...prev, actualizado: new Date().toISOString().slice(0, 10), fuente: "CAMMESA vía CEP XXI (datos.gob.ar); ENARGAS", series: series.length ? series : prev.series || [] }, null, 1) + "\n");
