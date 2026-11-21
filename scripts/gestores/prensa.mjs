@@ -21,6 +21,9 @@ const consultas = [
 ];
 // filtro de sector: la nota tiene que hablar de industria metalúrgica o de una planta seguida
 const METAL = /metal[uú]rg|uom\b|asimra|sider[uú]rg|acer[ií]a|acero|autopart|maquinaria agr|fundici|tornill|metalmec|aluminio|forja|tubos?\b|electrodom|lavarropas|tractor/i;
+// el título tiene que hablar de trabajo o crisis, y no de otro país
+const LABORAL = /despid|despide|suspend|suspensi|cierr|cerr[oó]|cesant|toma\b|tomaron|paro\b|retiros|quiebra|concurso|preventivo de crisis|uom\b|asimra|trabajadores|operarios|obreros|salarios adeudados|desvincul|conciliaci/i;
+const AFUERA = /nuevo le[oó]n|\bnl\b|uanl|monterrey|m[eé]xico|brasil|colombia|guatemala|chile\b|per[uú]\b|estados unidos|precio objetivo|tradingview|acciones de/i;
 const tipoDe = t => /quiebra|concurso preventivo/i.test(t) ? "conflicto" : /cierr|cerr[oó]/i.test(t) ? "cierre" : /despid|cesant|desvincul/i.test(t) ? "despidos"
   : /suspend|suspensi/i.test(t) ? "suspensiones" : /retiros/i.test(t) ? "retiros" : /reincorpor/i.test(t) ? "reincorporacion" : "conflicto";
 const cantidadDe = t => { const m = t.match(/(\d{1,3}(?:\.\d{3})*|\d+)\s+(?:trabajadores|operarios|empleados|obreros|despidos|suspendidos|puestos)/i); return m ? +m[1].replace(/\./g, "") : null; };
@@ -34,6 +37,7 @@ for (const c of consultas) {
     const g = tag => (it.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`)) || [])[1]?.replace(/<!\[CDATA\[|\]\]>/g, "").trim() || "";
     const titulo = g("title").replace(/&quot;/g, '"').replace(/&amp;/g, "&"), link = g("link"), fecha = new Date(g("pubDate")), medio = g("source");
     if (!link || yaVisto.has(link) || isNaN(fecha) || fecha < desde) continue;
+    if (!LABORAL.test(titulo) || AFUERA.test(titulo)) continue;
     if (!METAL.test(titulo) && !c.plantaId) continue;
     // si no vino por una planta, ver si el título nombra alguna
     const planta = c.plantaId ? plantas.find(p => p.id === c.plantaId) : plantas.find(p => nombra(p, titulo));
@@ -44,6 +48,16 @@ for (const c of consultas) {
   }
   await new Promise(r => setTimeout(r, 1200));
 }
+// agrupar notas del mismo hecho: misma planta y tipo, a 10 días o menos; o mismo título sin el medio
+const grupos = [];
+for (const n of nuevos.sort((a, b) => a.fecha.localeCompare(b.fecha))) {
+  const base = norm(n.titulo.replace(/\s+-\s+[^-]+$/, "")).slice(0, 60);
+  const g = grupos.find(g => (n.plantaId && g.plantaId === n.plantaId && g.tipo === n.tipo && Math.abs(new Date(n.fecha) - new Date(g.fecha)) <= 10 * 864e5) || g._base === base);
+  if (g) { g.otras = [...(g.otras || []), { fuente: n.fuente, url: n.url }]; g.cantidad = g.cantidad || n.cantidad; }
+  else grupos.push({ ...n, _base: base });
+}
+for (const g of grupos) delete g._base;
+nuevos.length = 0; nuevos.push(...grupos);
 pend.pendientes.push(...nuevos); pend.actualizado = new Date().toISOString().slice(0, 10);
 pend.nota = "Hechos del sector metalúrgico detectados en prensa. No cuentan en informes hasta que se aprueban.";
 await writeFile("data/prensa-pendientes.json", JSON.stringify(pend, null, 1) + "\n");
@@ -53,7 +67,7 @@ console.log("nuevos a revisar:", nuevos.length);
 const TOKEN = process.env.GITHUB_TOKEN, REPO = process.env.GITHUB_REPOSITORY;
 if (TOKEN && REPO) for (const n of nuevos.slice(0, 25)) {
   const p = plantas.find(x => x.id === n.plantaId);
-  const body = `**${n.titulo}**\n\n- Planta: ${p ? p.nombre : "⚠️ empresa no seguida todavía"}\n- Hecho: ${n.tipo}${n.cantidad ? ` · ${n.cantidad} trabajadores` : ""}\n- Fecha: ${n.fecha}\n- Fuente: [${n.fuente}](${n.url})\n\nPara cargarlo: poné la etiqueta **aprobado**. Para descartarlo: cerrá el issue.\n\n<!-- hecho ${JSON.stringify(n)} -->`;
+  const body = `**${n.titulo}**\n\n- Planta: ${p ? p.nombre : "⚠️ empresa no seguida todavía"}\n- Hecho: ${n.tipo}${n.cantidad ? ` · ${n.cantidad} trabajadores` : ""}\n- Fecha: ${n.fecha}\n- Fuente: [${n.fuente}](${n.url})${(n.otras || []).length ? `\n- También: ${n.otras.slice(0, 6).map(o => `[${o.fuente}](${o.url})`).join(", ")}` : ""}\n\nPara cargarlo: poné la etiqueta **aprobado**. Para descartarlo: cerrá el issue.\n\n<!-- hecho ${JSON.stringify(n)} -->`;
   await fetch(`https://api.github.com/repos/${REPO}/issues`, { method: "POST", headers: { Authorization: `Bearer ${TOKEN}`, Accept: "application/vnd.github+json" },
     body: JSON.stringify({ title: `A revisar: ${n.tipo} · ${p ? p.nombre : n.fuente}`.slice(0, 120), body, labels: ["a revisar", "prensa"] }) }).catch(e => console.log("issue", e.message));
 }
