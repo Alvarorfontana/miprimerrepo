@@ -11,9 +11,11 @@ const hoy = new Date();
 const leer = async (f, fb) => { try { return JSON.parse(await readFile(f, "utf8")); } catch { return fb; } };
 const guardar = (f, d) => writeFile(f, JSON.stringify(d, null, 1) + "\n");
 const pausa = ms => new Promise(r => setTimeout(r, ms));
+const ENT = { aacute: "á", eacute: "é", iacute: "í", oacute: "ó", uacute: "ú", Aacute: "Á", Eacute: "É", Iacute: "Í", Oacute: "Ó", Uacute: "Ú",
+  ntilde: "ñ", Ntilde: "Ñ", uuml: "ü", Uuml: "Ü", nbsp: " ", quot: '"', amp: "&", deg: "°", ordm: "º", ordf: "ª", laquo: "«", raquo: "»" };
 const texto = html => html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ")
-  .replace(/&nbsp;/g, " ").replace(/&aacute;/g, "á").replace(/&eacute;/g, "é").replace(/&iacute;/g, "í").replace(/&oacute;/g, "ó")
-  .replace(/&uacute;/g, "ú").replace(/&ntilde;/g, "ñ").replace(/&Ntilde;/g, "Ñ").replace(/&quot;/g, '"').replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+  .replace(/&([a-zA-Z]+);/g, (m, n) => ENT[n] ?? m).replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n)).replace(/&#x([0-9a-f]+);/gi, (m, n) => String.fromCharCode(parseInt(n, 16)))
+  .replace(/\s+/g, " ").trim();
 const norm = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase();
 async function get(url) {
   for (let i = 0; i < 3; i++) {
@@ -48,8 +50,9 @@ const ev = await leer("data/eventos.json", { eventos: [] });
 const cuits = await leer("data/cuits.json", { nota: "CUIT de empresas seguidas, solo de fuentes públicas.", empresas: {} });
 let nuevosAc = 0, nuevosMe = 0, nuevosEv = 0;
 
-for (let k = 0; k < DIAS; k++) {
-  const d = new Date(hoy); d.setDate(d.getDate() - k);
+const FECHAS = (process.env.FECHAS || "").split(",").filter(Boolean);
+for (let k = 0; k < (FECHAS.length || DIAS); k++) {
+  const d = FECHAS.length ? new Date(`${FECHAS[k].slice(0, 4)}-${FECHAS[k].slice(4, 6)}-${FECHAS[k].slice(6)}T12:00:00Z`) : new Date(hoy); if (!FECHAS.length) d.setDate(d.getDate() - k);
   if ([0, 6].includes(d.getDay())) continue;
   const f = ymd(d);
   // --- primera sección: acuerdos de Trabajo ---
