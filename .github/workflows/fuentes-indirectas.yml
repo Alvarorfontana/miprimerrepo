@@ -1,0 +1,44 @@
+# Fuentes indirectas: Boletín Oficial (todos los días hábiles), BCRA y energía (una vez por mes).
+name: Fuentes indirectas
+
+on:
+  workflow_dispatch:
+    inputs:
+      dias:
+        description: "Días hacia atrás a revisar en el Boletín Oficial"
+        default: "10"
+  push:
+    branches: [datos-prensa-noviembre]
+    paths: ["scripts/fuentes/**", ".github/workflows/fuentes-indirectas.yml"]
+  schedule:
+    - cron: "37 12 * * 1-5"   # días hábiles, 9:37 hora argentina
+
+permissions:
+  contents: write
+
+jobs:
+  fuentes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Boletín Oficial
+        continue-on-error: true
+        run: DIAS=${{ github.event.inputs.dias || (github.event_name == 'push' && '60') || '10' }} node scripts/fuentes/boletin-oficial.mjs
+      - name: BCRA, Central de Deudores
+        continue-on-error: true
+        run: node scripts/fuentes/bcra-cheques.mjs
+      - name: Energía (luz y gas)
+        continue-on-error: true
+        run: node scripts/fuentes/energia.mjs
+      - name: Guardar
+        run: |
+          git config user.name "observatorio-bot"
+          git config user.email "observatorio-bot@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "Fuentes indirectas: Boletín Oficial, BCRA y energía"
+          git pull --rebase -X theirs || true
+          git push

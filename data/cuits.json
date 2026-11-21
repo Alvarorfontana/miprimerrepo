@@ -1,0 +1,8 @@
+{
+ "nota": "CUIT de empresas seguidas, solo de fuentes públicas. El robot del Boletín Oficial suma los que encuentra en acuerdos homologados.",
+ "empresas": {
+  "Ternium Argentina": { "cuit": "30516888241", "fuente": "https://infonegocios.info/tarjetero/empresa/ternium" },
+  "ArcelorMittal Acindar": { "cuit": "30501199253", "fuente": "https://infonegocios.info/tarjetero/empresa/redacindar" },
+  "Aluar": { "cuit": "30522780606", "fuente": "https://www.bancoprovincia.com.ar/CDN/Get/Aluar_Prospecto_Definitivo_de_Ampliacion_y_Prorroga" }
+ }
+}
