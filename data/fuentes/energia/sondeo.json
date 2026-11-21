@@ -1,0 +1,43 @@
+{
+ "fecha": "2026-11-21T02:41:46.972Z",
+ "electricidad": {
+  "metadata_modified": "2026-07-27T19:58:38.015752",
+  "recursos": [
+   {
+    "nombre": "Consumo eléctrico de sectores manufactureros - series originales",
+    "url": "https://datos.produccion.gob.ar/dataset/bf0da6da-4cb0-4362-a925-0bdd69cf1c61/resource/f476cffb-7121-4f03-8cda-e51523c034e0/download/consumo_electrico_sectores_manufactureros_original.csv",
+    "modificado": "2024-02-20T15:13:09.200355"
+   },
+   {
+    "nombre": "Consumo eléctrico de sectores manufactureros - series desestacionalizadas",
+    "url": "https://datos.produccion.gob.ar/dataset/bf0da6da-4cb0-4362-a925-0bdd69cf1c61/resource/3e342577-a2c3-414c-8290-39656c325c62/download/consumo_electrico_sectores_manufactureros_desestacionalizado.csv",
+    "modificado": "2024-02-20T15:13:40.818497"
+   }
+  ],
+  "descarga": {
+   "status": 403
+  }
+ },
+ "gas": {
+  "recursos": [],
+  "paginas": {
+   "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-operativos.php": {
+    "status": 200,
+    "archivos": [
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GCD/GCD.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GED/GED.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GEGU/GEGU.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/Contratos/Contratos.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/CPGNNC/CLP.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GRT/GRT.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GET/GET.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GETD/GETD.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/Expo/Exportaciones.xlsx",
+     "https://www.enargas.gob.ar/secciones/transporte-y-distribucion/datos-estadisticos/GLP/GLP.xlsx"
+    ],
+    "subpaginas": []
+   }
+  },
+  "bajados": []
+ }
+}
