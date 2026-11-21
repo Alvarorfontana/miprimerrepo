@@ -1,6 +1,8 @@
 # Modelo de datos del Observatorio Metalúrgico
 
-El observatorio funciona como un modelo de datos: cinco entidades conectadas, alimentadas por fuentes propias (seccionales y delegados de la UOM) y públicas (INDEC, CEP XXI, ADIMRA, Cámara Argentina del Acero, SIPA).
+El observatorio funciona como un modelo de datos: cinco entidades conectadas, alimentadas solo por fuentes públicas (INDEC, CEP XXI, SIPA, OEDE, ADIMRA, Cámara Argentina del Acero, SRT) y por relevamiento de prensa y balances de empresas. **Nadie carga datos a mano**: ni la UOM, ni seccionales, ni delegados.
+
+Por eso los datos de cada planta (dotación, producción, capacidad) se guardan como **datos de referencia** con fecha y fuente (`referencias` en `plantas.json`), y los hechos (despidos, suspensiones, cierres, conflictos) salen de notas periodísticas con link. El reporte mensual por planta queda en el modelo pero vacío: solo se completaría si una fuente pública publica esos números.
 
 ## Entidades
 
@@ -19,7 +21,7 @@ Una fábrica representada por la UOM.
 | ubicacion | texto | `aproximada` (por localidad) o `marcada` (punto exacto) |
 
 ### Reporte mensual
-La situación de una planta en un mes. Lo carga la seccional.
+La situación de una planta en un mes. Sin carga manual: hoy está vacío (ver arriba).
 
 | Campo | Tipo | Descripción |
 |---|---|---|

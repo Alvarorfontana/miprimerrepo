@@ -244,7 +244,7 @@ def main():
     if plantas:
         filas_p = "".join(f"<tr><td><b>{p['nombre']}</b><div class='small'>{p.get('localidad', '')}, {p.get('provincia', '')}</div></td><td>{p.get('rama', '')}</td><td>{p.get('seccional') or ''}</td></tr>" for p in plantas[:24])
         filas_e = "".join(f"<tr><td>{e['fecha']}</td><td>{next((p['nombre'] for p in plantas if p['id'] == e['plantaId']), '')}</td><td>{e['tipo']}</td><td class='r'>{e.get('cantidad') or ''}</td><td class='small'>{e.get('fuente', '')}</td></tr>" for e in ev_amb[:12])
-        P.append(f"<section class='page'><div class='kick'>Seguimiento propio</div><h2>Plantas relevadas</h2><table><thead><tr><th>Planta</th><th>Rama</th><th>Seccional UOM</th></tr></thead><tbody>{filas_p}</tbody></table>" + (f"<h3>Hechos registrados</h3><table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class='r'>Trab.</th><th>Fuente</th></tr></thead><tbody>{filas_e}</tbody></table>" if filas_e else "") + "<p class='src'>Fuente: relevamiento del equipo del Observatorio (prensa, informes de empresas y datos aportados por la UOM).</p></section>")
+        P.append(f"<section class='page'><div class='kick'>Seguimiento propio</div><h2>Plantas relevadas</h2><table><thead><tr><th>Planta</th><th>Rama</th><th>Seccional UOM</th></tr></thead><tbody>{filas_p}</tbody></table>" + (f"<h3>Hechos registrados</h3><table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class='r'>Trab.</th><th>Fuente</th></tr></thead><tbody>{filas_e}</tbody></table>" if filas_e else "") + "<p class='src'>Fuente: relevamiento del equipo del Observatorio (prensa, balances de empresas y fuentes públicas).</p></section>")
 
     # importaciones
     if imp and imp.get("series"):

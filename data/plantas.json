@@ -1,6 +1,6 @@
 {
- "actualizado": "2026-10-28",
- "nota": "Plantas de referencia. Ubicación aproximada por localidad; seccional y convenio a confirmar por la UOM.",
+ "actualizado": "2026-11-20",
+ "nota": "Plantas de referencia. Ubicación aproximada por localidad. Datos de cada planta tomados de prensa, balances y fuentes públicas; no hay carga manual de la UOM.",
  "plantas": [
   {
    "id": "ternium-san-nicolas",
@@ -153,7 +153,25 @@
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Producción de acero",
+     "valor": "75.000–80.000",
+     "unidad": "t/mes",
+     "periodo": "2026-06",
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/acindar-decidio-frenar-la-produccion-villa-constitucion-falta-ventas-n10263980.html"
+    },
+    {
+     "variable": "Empleo directo de Acindar (empresa)",
+     "valor": 2500,
+     "unidad": "trabajadores",
+     "periodo": "2025-12",
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/acindar-consenso-extender-2026-el-actual-sistema-suspensiones-n10234407.html"
+    }
+   ]
   },
   {
    "id": "acindar-la-tablada",
@@ -290,12 +308,30 @@
    "partido": "Rosario",
    "localidad": "Pérez",
    "seccional": "Rosario",
-   "lat": -33.0,
+   "lat": -33,
    "lon": -60.77,
    "convenio": "Rama siderúrgica (UOM – Cámara Argentina del Acero)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Empleo directo e indirecto",
+     "valor": "más de 1.700",
+     "unidad": "personas",
+     "periodo": "2025",
+     "fuente": "Mercado",
+     "url": "https://mercado.com.ar/innovacion/gerdau-inaugura-aceria-en-perez-con-tecnologia-avanzada-y-recibe-visita-diplomatica-de-brasil"
+    },
+    {
+     "variable": "Capacidad de la acería (palanquillas)",
+     "valor": 650,
+     "unidad": "miles de t/año",
+     "periodo": "2017",
+     "fuente": "Mercado",
+     "url": "https://mercado.com.ar/protagonistas/gerdau-pone-en-marcha-una-nueva-aceria-en-santa-fe"
+    }
+   ]
   },
   {
    "id": "aluar-puerto-madryn",
@@ -311,7 +347,25 @@
    "convenio": "A confirmar",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Capacidad de aluminio primario",
+     "valor": 460,
+     "unidad": "miles de t/año",
+     "periodo": "2026",
+     "fuente": "Aluar",
+     "url": "https://www.aluar.com.ar/seccion/historia/2/36"
+    },
+    {
+     "variable": "Empleados en Puerto Madryn",
+     "valor": 1561,
+     "unidad": "trabajadores",
+     "periodo": "2024-06",
+     "fuente": "Aluar, balance",
+     "url": "https://www.aluar.com.ar/seccion/historia/2/36"
+    }
+   ]
   },
   {
    "id": "impsa-mendoza",
@@ -343,7 +397,25 @@
    "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Trabajadores en conflicto (Las Varillas y La Banda)",
+     "valor": 450,
+     "unidad": "trabajadores",
+     "periodo": "2026-11",
+     "fuente": "Letra P",
+     "url": "https://www.letrap.com.ar/politica/cordoba-manuel-calvo-llevo-asistencia-los-trabajadores-pauny-las-varillas-n5428220"
+    },
+    {
+     "variable": "Tractores patentados en el mes",
+     "valor": 24,
+     "unidad": "unidades (llegó a más de 200)",
+     "periodo": "2026-09",
+     "fuente": "Bichos de Campo",
+     "url": "https://bichosdecampo.com/pauny-se-agrava-la-situacion-social-en-las-varillas-luego-del-fracaso-en-una-audiencia-entre-los-trabajadores-y-los-duenos-en-busca-de-saldar-deudas-salariales/"
+    }
+   ]
   },
   {
    "id": "metalfor-marcos-juarez",
@@ -359,7 +431,33 @@
    "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Producción de máquinas (1er trimestre)",
+     "valor": 38,
+     "unidad": "unidades (86 un año antes)",
+     "periodo": "2026-03",
+     "fuente": "Bichos de Campo",
+     "url": "https://bichosdecampo.com/metalfor-en-su-peor-momento-acumula-un-pasivo-financiero-de-55-mil-millones-de-pesos-y-por-mas-deudas-con-sus-600-trabajadores-ahora-se-acogio-a-un-procedimiento-preventivo-de-crisis/"
+    },
+    {
+     "variable": "Dotación directa en Marcos Juárez",
+     "valor": 375,
+     "unidad": "trabajadores",
+     "periodo": "2026-08",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/461705-gigante-del-agro-metalfor-recortara-mas-de-200-empleos-por-el-derrumbe-de-las-ventas"
+    },
+    {
+     "variable": "Concurso preventivo de acreedores (pasivo a junio)",
+     "valor": 194408,
+     "unidad": "millones de $",
+     "periodo": "2026-11",
+     "fuente": "La Capital",
+     "url": "https://www.lacapital.com.ar/economia/metalfor-pidio-el-concurso-preventivo-acreedores-n10290279.html"
+    }
+   ]
   },
   {
    "id": "agrometal-monte-maiz",
@@ -391,7 +489,17 @@
    "convenio": "CCT 260/75 (metalmecánica)",
    "ubicacion": "aproximada",
    "seccional_confirmada": false,
-   "convenio_confirmado": false
+   "convenio_confirmado": false,
+   "referencias": [
+    {
+     "variable": "Estado",
+     "valor": "Cerrada; planta puesta en venta, la empresa importa",
+     "unidad": "",
+     "periodo": "2026-09",
+     "fuente": "iProfesional",
+     "url": "https://www.iprofesional.com/negocios/463833-whirlpool-vende-su-planta-de-pilar-y-pasa-a-importar-todo"
+    }
+   ]
   },
   {
    "id": "newsan-ushuaia",
