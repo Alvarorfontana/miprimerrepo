@@ -29,8 +29,8 @@ jobs:
       - name: Boletín Oficial
         continue-on-error: true
         env:
-          MUESTRA: ${{ github.event_name == 'push' && '1' || '' }}
-        run: DIAS=${{ github.event.inputs.dias || (github.event_name == 'push' && '5') || '10' }} node scripts/fuentes/boletin-oficial.mjs
+          MUESTRA: ''
+        run: DIAS=${{ github.event.inputs.dias || (github.event_name == 'push' && '90') || '10' }} node scripts/fuentes/boletin-oficial.mjs
       - name: BCRA, Central de Deudores
         continue-on-error: true
         run: node scripts/fuentes/bcra-cheques.mjs
