@@ -1,0 +1,233 @@
+{
+ "actualizado": "2026-11-21",
+ "sector": "metalúrgico",
+ "nota": "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
+ "suspensionesHomologadasPorMes": {
+  "2026-09": 1
+ },
+ "plantas": [
+  {
+   "plantaId": "pauny-las-varillas",
+   "planta": "Pauny · Las Varillas",
+   "provincia": "Córdoba",
+   "rama": "Maquinaria agrícola",
+   "puntos": 30,
+   "color": "amarillo",
+   "motivos": [
+    "2026-11-12 · retiros · Bichos de Campo",
+    "2026-11-03 · conflicto (450) · Bichos de Campo"
+   ]
+  },
+  {
+   "plantaId": "metalfor-marcos-juarez",
+   "planta": "Metalfor · Marcos Juárez",
+   "provincia": "Córdoba",
+   "rama": "Maquinaria agrícola",
+   "puntos": 30,
+   "color": "amarillo",
+   "motivos": [
+    "2026-08-06 · despidos (225) · iProfesional"
+   ]
+  },
+  {
+   "plantaId": "mirgor-rio-grande",
+   "planta": "Mirgor · Río Grande",
+   "provincia": "Tierra del Fuego",
+   "rama": "Electrónica",
+   "puntos": 30,
+   "color": "amarillo",
+   "motivos": [
+    "2026-08-10 · despidos (300) · Infobae"
+   ]
+  },
+  {
+   "plantaId": "ternium-san-nicolas",
+   "planta": "Ternium · Planta General Savio (Ramallo)",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-ensenada",
+   "planta": "Ternium · Planta Ensenada",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-canning",
+   "planta": "Ternium · Planta Canning",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "acindar-villa-constitucion",
+   "planta": "Acindar · Villa Constitución",
+   "provincia": "Santa Fe",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "acindar-la-tablada",
+   "planta": "Acindar · La Tablada",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "acindar-villa-mercedes",
+   "planta": "Acindar · Villa Mercedes",
+   "provincia": "San Luis",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "tenaris-siderca-campana",
+   "planta": "Tenaris Siderca · Campana",
+   "provincia": "Buenos Aires",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "tenaris-siat-valentin-alsina",
+   "planta": "Tenaris Siat · Valentín Alsina",
+   "provincia": "Buenos Aires",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "gerdau-perez",
+   "planta": "Gerdau · Pérez",
+   "provincia": "Santa Fe",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "aluar-puerto-madryn",
+   "planta": "Aluar · Puerto Madryn",
+   "provincia": "Chubut",
+   "rama": "Aluminio y no ferrosos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "impsa-mendoza",
+   "planta": "IMPSA · Godoy Cruz",
+   "provincia": "Mendoza",
+   "rama": "Bienes de capital",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "agrometal-monte-maiz",
+   "planta": "Agrometal · Monte Maíz",
+   "provincia": "Córdoba",
+   "rama": "Maquinaria agrícola",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "whirlpool-pilar",
+   "planta": "Whirlpool · Pilar",
+   "provincia": "Buenos Aires",
+   "rama": "Línea blanca",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "newsan-ushuaia",
+   "planta": "Newsan · Ushuaia",
+   "provincia": "Tierra del Fuego",
+   "rama": "Electrónica",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "dana-san-luis",
+   "planta": "Dana · San Luis",
+   "provincia": "San Luis",
+   "rama": "Autopartes",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-haedo",
+   "planta": "Ternium · Haedo",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-bosques",
+   "planta": "Ternium · Florencio Varela",
+   "provincia": "Buenos Aires",
+   "rama": "Siderurgia",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "tenaris-villa-constitucion",
+   "planta": "Tenaris · Villa Constitución",
+   "provincia": "Santa Fe",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-rosario",
+   "planta": "Ternium · Rosario",
+   "provincia": "Santa Fe",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-el-talar",
+   "planta": "Ternium · El Talar (ex Tubos Argentinos)",
+   "provincia": "Buenos Aires",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  },
+  {
+   "plantaId": "ternium-justo-daract",
+   "planta": "Ternium · Justo Daract (ex Tubos Argentinos)",
+   "provincia": "San Luis",
+   "rama": "Tubos",
+   "puntos": 0,
+   "color": "verde",
+   "motivos": []
+  }
+ ]
+}

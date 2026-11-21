@@ -1,0 +1,43 @@
+{
+ "actualizado": "2026-11-21",
+ "fuente": "BCRA, Central de Deudores (API pública)",
+ "nota": "Situación 1 es normal; 2 a 6 indican atrasos crecientes. Cheques rechazados de los últimos 12 meses.",
+ "empresas": [
+  {
+   "empresa": "Ternium Argentina",
+   "cuit": "30516888241",
+   "denominacion": "TERNIUM ARGENTINA S.A.",
+   "periodo": "202609",
+   "situacionMax": 1,
+   "deudaMiles": 8241607,
+   "entidades": 5,
+   "cheques12m": 0,
+   "montoCheques12m": 0,
+   "chequesSinPagar": 0
+  },
+  {
+   "empresa": "ArcelorMittal Acindar",
+   "cuit": "30501199253",
+   "denominacion": "ACINDAR INDUSTRIA ARGENTINA DE ACEROS S A",
+   "periodo": "202609",
+   "situacionMax": 1,
+   "deudaMiles": 56409158,
+   "entidades": 8,
+   "cheques12m": 0,
+   "montoCheques12m": 0,
+   "chequesSinPagar": 0
+  },
+  {
+   "empresa": "Aluar",
+   "cuit": "30522780606",
+   "denominacion": "ALUAR ALUMINIO ARGENTINO SOCIEDAD ANONIMA INDUSTRIAL Y",
+   "periodo": "202609",
+   "situacionMax": 1,
+   "deudaMiles": 129823998,
+   "entidades": 14,
+   "cheques12m": 0,
+   "montoCheques12m": 0,
+   "chequesSinPagar": 0
+  }
+ ]
+}

@@ -335,7 +335,39 @@ function ficha() {
   $("irRep").onclick = () => irForm("rep"); $("irEv").onclick = () => irForm("ev");
 }
 function elegir(id) { S.sel = id; ficha(); dibujarPuntos(); }
-function tab(t) { S.tab = t; for (const n of ["informe", "plantas", "ramas"]) { $("t-" + n).setAttribute("aria-selected", n === t); $("p-" + n).hidden = n !== t; } ({ informe, plantas, ramas })[t](); }
+function tab(t) { S.tab = t; for (const n of ["informe", "plantas", "ramas", "vigilancia"]) { $("t-" + n).setAttribute("aria-selected", n === t); $("p-" + n).hidden = n !== t; } ({ informe, plantas, ramas, vigilancia })[t](); }
+
+/* ---------- Vigilancia: lo que juntan los gestores automáticos (solo sector metalúrgico) ---------- */
+async function vigilancia() {
+  const el = $("p-vigilancia");
+  if (!S.vig) { el.innerHTML = `<p class="muted small">Cargando…</p>`; const [sem, bo, bc, pr, ppc] = await Promise.all(["semaforo", "boletin-oficial", "bcra-empresas", "prensa-pendientes", "ppc"].map(n => getJSON(`data/${n}.json`, null))); S.vig = { sem, bo, bc, pr, ppc }; }
+  const { sem, bo, bc, pr, ppc } = S.vig, COL = { rojo: "var(--bad)", amarillo: "var(--warn)", verde: "var(--ok)" };
+  const dot = c => `<span aria-hidden="true" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${COL[c] || "var(--nodata)"};margin-right:6px"></span>`;
+  const link = (u, t) => u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
+  const repo = "https://github.com/Alvarorfontana/miprimerrepo/issues?q=is%3Aopen+label%3A%22a+revisar%22";
+  let h = `<p class="small muted">Datos que juntan solos, todos los días, los gestores del observatorio. Solo sector metalúrgico. Cada dato tiene su fuente.</p>`;
+  // semáforo
+  const pls = (sem?.plantas || []).filter(x => x.color !== "verde");
+  h += `<h3>Semáforo de plantas <span class="badge auto">${esc(sem?.actualizado || "sin datos")}</span></h3>`;
+  h += pls.length ? `<ul style="list-style:none;padding:0;margin:0">${pls.map(x => `<li style="padding:8px 0;border-bottom:1px solid var(--line)"><b>${dot(x.color)}${esc(x.planta)}</b> <span class="muted small">${esc(x.provincia || "")} · ${x.puntos} puntos</span><div class="small">${x.motivos.map(esc).join("<br>")}</div></li>`).join("")}</ul>`
+    : `<p class="small">Todas las plantas seguidas en verde.</p>`;
+  h += `<p class="small muted">${esc(sem?.nota || "")}</p>`;
+  // prensa a revisar
+  const pend = (pr?.pendientes || []).filter(x => x.estado === "a revisar").sort((a, b) => b.fecha.localeCompare(a.fecha));
+  h += `<h3>Prensa a revisar <span class="badge manual">${pend.length}</span></h3><p class="small muted">No cuentan en el semáforo ni en los informes hasta aprobarlos. Para aprobar: abrí el <a href="${repo}" target="_blank" rel="noopener">listado en GitHub</a> y ponele la etiqueta "aprobado".</p>`;
+  h += pend.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th>Nota</th></tr></thead><tbody>${pend.slice(0, 40).map(x => `<tr><td>${x.fecha}</td><td>${esc((S.plantas.find(p => p.id === x.plantaId) || {}).nombre || "No seguida")}</td><td>${esc(x.tipo)}${x.cantidad ? ` · ${x.cantidad}` : ""}</td><td class="small">${link(x.url, x.titulo)}${(x.otras || []).length ? ` <span class="muted">(+${x.otras.length} notas)</span>` : ""}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Nada pendiente.</p>`;
+  // boletín oficial
+  const ac = bo?.acuerdos || [];
+  h += `<h3>Boletín Oficial: acuerdos con la UOM y ASIMRA <span class="badge auto">${ac.length}</span></h3><p class="small muted">Suspensiones y acuerdos homologados por la Secretaría de Trabajo. Si la empresa figura solo en el anexo, se indica.</p>`;
+  h += ac.length ? `<table><thead><tr><th>Publicado</th><th>Empresa</th><th>Gremio</th><th>Tipo</th><th>Norma</th></tr></thead><tbody>${ac.slice(0, 40).map(a => `<tr><td>${a.fecha}</td><td>${esc(a.empresa || "(en el anexo)")}</td><td>${esc(a.gremio)}${a.seccional ? ` · ${esc(a.seccional)}` : ""}</td><td>${esc(a.tipo)}</td><td>${link(a.url, a.norma || "ver")}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Sin acuerdos registrados todavía.</p>`;
+  // banco central
+  const em = bc?.empresas || [];
+  h += `<h3>Banco Central: deuda y cheques rechazados <span class="badge auto">${esc(bc?.actualizado || "sin datos")}</span></h3><p class="small muted">${esc(bc?.nota || "")}</p>`;
+  h += em.length ? `<table><thead><tr><th>Empresa</th><th>Situación</th><th class="r">Bancos</th><th class="r">Cheques rechazados (12 meses)</th></tr></thead><tbody>${em.map(x => `<tr><td>${esc(x.denominacion || x.empresa)}</td><td>${x.situacionMax ? `${x.situacionMax === 1 ? "1 · normal" : x.situacionMax + " · con atrasos"}` : "s/d"}</td><td class="r">${x.entidades ?? ""}</td><td class="r">${x.cheques12m ?? ""}${x.chequesSinPagar ? ` (${x.chequesSinPagar} sin pagar)` : ""}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Sin datos todavía.</p>`;
+  // contexto
+  if (ppc) h += `<h3>Contexto general</h3><p class="small">Procedimientos preventivos de crisis en todo el país (todos los sectores, no solo metalúrgico): ${ppc.anual.map(a => `${a.anio}: ${a.ppc}${a.hasta ? "*" : ""}`).join(" · ")}. <span class="muted">*Hasta el 31/7. Fuente: ${link(ppc.url, "Perfil")}.</span></p>`;
+  el.innerHTML = h;
+}
 
 
 /* ---------- empleo OEDE ---------- */
@@ -738,7 +770,7 @@ function generarPedido() {
   }
   if (sel.has("hechos")) { const tot = k => evs.filter(e => e.tipo === k).reduce((a, e) => a + (e.cantidad || 0), 0);
     if (evs.length) R.push(`<b>${evs.length}</b> ${evs.length === 1 ? "hecho registrado" : "hechos registrados"} en plantas: ${tot("despidos")} despidos y ${tot("suspensiones")} suspendidos.`);
-    bloque("Despidos, suspensiones y cierres en plantas", evs.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class="r">Trabajadores</th><th>Fuente</th></tr></thead><tbody>${evs.map(e => `<tr><td>${e.fecha}</td><td>${esc((S.plantas.find(p => p.id === e.plantaId) || {}).nombre || "")}</td><td>${esc(e.tipo)}</td><td class="r">${e.cantidad ?? ""}</td><td>${e.url ? `<a href="${esc(e.url)}">${esc(e.fuente || "")}</a>` : esc(e.fuente || "")}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin hechos registrados en este ámbito.</p>`, "Relevamiento propio del equipo (prensa, empresas y datos aportados por la UOM)."); }
+    bloque("Despidos, suspensiones y cierres en plantas", evs.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class="r">Trabajadores</th><th>Fuente</th></tr></thead><tbody>${evs.map(e => `<tr><td>${e.fecha}</td><td>${esc((S.plantas.find(p => p.id === e.plantaId) || {}).nombre || "")}</td><td>${esc(e.tipo)}</td><td class="r">${e.cantidad ?? ""}</td><td>${e.url ? `<a href="${esc(e.url)}">${esc(e.fuente || "")}</a>` : esc(e.fuente || "")}</td></tr>`).join("")}</tbody></table>` : `<p class="muted small">Sin hechos registrados en este ámbito.</p>`, "Relevamiento propio del equipo (prensa, balances de empresas y fuentes públicas)."); }
   if (sel.has("conf_desp") && S.conf) { const a = {}; S.conf.rows.forEach(r => { const y = r[0].slice(0, 4); a[y] = (a[y] || 0) + (r[5] || 0); }); const ys = Object.keys(a).sort().slice(-12); bloque("Conflictos con paro por despidos, por año" + nacional, columnasT(ys.map(y => [y, a[y]]), { nota: "año en curso" }), `Ministerio de Capital Humano. ${ys.at(-1)}: año incompleto (datos hasta ${S.conf.rows.at(-1)[0]}).`); }
   if (sel.has("capacidad")) { const ks = [["auto-uci-general", "Industria en general"], ["auto-uci-metalicas", "Metálicas básicas"], ["indec-uci-metalmecanica", "Metalmecánica sin automotriz"], ["indec-uci-automotriz", "Automotriz"], ["adimra-capacidad", "Metalúrgica (ADIMRA)"]];
     const it = ks.map(([k, l]) => { const d = ultS(k); return d ? [`${l} · ${mesTxt(d.at(-1).periodo)}`, d.at(-1).valor] : null; }).filter(Boolean);
@@ -788,7 +820,7 @@ function generarPedido() {
 function refrescar() { pedidoForm(); alertas(); filtros(); kpis(); dibujarPuntos(); dibujarEst(); ficha(); tab(S.tab); sector(); empleo(); conflictividad(); }
 await cargar();
 portada(); baseMapa(); filtros(); fuentes(); formularios();
-for (const n of ["informe", "plantas", "ramas"]) $("t-" + n).onclick = () => tab(n);
+for (const n of ["informe", "plantas", "ramas", "vigilancia"]) $("t-" + n).onclick = () => tab(n);
 for (const id of ["fReg", "fProv", "fSec", "fRama"]) $(id).onchange = () => {
   if (id === "fReg") { $("fProv").value = ""; $("fSec").value = ""; } if (id === "fProv") $("fSec").value = "";
   refrescar(); const pv = $("fProv").value; if (pv) { const el = document.querySelector(`.prov[data-name="${pv}"]`); const bb = el.getBBox(); setVB(fitBox(...unproj(bb.x, bb.y + bb.height), ...unproj(bb.x + bb.width, bb.y))); }

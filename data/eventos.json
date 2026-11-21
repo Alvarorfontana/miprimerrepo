@@ -1,6 +1,66 @@
 {
- "actualizado": "2026-10-28",
+ "actualizado": "2026-11-20",
  "eventos": [
+  {
+   "id": "pauny-2026-11-retiros",
+   "plantaId": "pauny-las-varillas",
+   "tipo": "retiros",
+   "fecha": "2026-11-12",
+   "cantidad": null,
+   "fuente": "Bichos de Campo",
+   "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
+   "nota": "La empresa faltó a la audiencia en Trabajo y propuso un plan de retiros voluntarios. La planta sigue tomada."
+  },
+  {
+   "id": "pauny-2026-11-toma",
+   "plantaId": "pauny-las-varillas",
+   "tipo": "conflicto",
+   "fecha": "2026-11-03",
+   "cantidad": 450,
+   "fuente": "Bichos de Campo",
+   "url": "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas/",
+   "nota": "Toma de la planta tras tres quincenas de salarios adeudados. La medida se extendió a la planta de La Banda (Santiago del Estero)."
+  },
+  {
+   "id": "mirgor-rg-2026-08-despidos",
+   "plantaId": "mirgor-rio-grande",
+   "tipo": "despidos",
+   "fecha": "2026-08-10",
+   "cantidad": 300,
+   "fuente": "Infobae",
+   "url": "https://www.infobae.com/economia/2026/08/10/mirgor-desvinculo-a-300-empleados-por-paros-gremiales-y-el-gobierno-de-tierra-del-fuego-dispuso-la-conciliacion-obligatoria/",
+   "nota": "Desvinculaciones en IATEC, FAMAR, Brightstar y Mirgor (Letra P habla de 296). Tierra del Fuego dictó conciliación obligatoria por 15 días."
+  },
+  {
+   "id": "metalfor-2026-08-recorte",
+   "plantaId": "metalfor-marcos-juarez",
+   "tipo": "despidos",
+   "fecha": "2026-08-06",
+   "cantidad": 225,
+   "fuente": "iProfesional",
+   "url": "https://www.iprofesional.com/negocios/461705-gigante-del-agro-metalfor-recortara-mas-de-200-empleos-por-el-derrumbe-de-las-ventas",
+   "nota": "Recorte anunciado: salida de 225 de los 375 trabajadores directos de Marcos Juárez (60%)."
+  },
+  {
+   "id": "metalfor-2026-07-despidos-noetinger",
+   "plantaId": "metalfor-marcos-juarez",
+   "tipo": "despidos",
+   "fecha": "2026-07-07",
+   "cantidad": 35,
+   "fuente": "Tiempo de San Juan",
+   "url": "https://www.tiempodesanjuan.com/el-pais/metalfor-despidio-a-35-trabajadores-tras-liberar-al-personal-para-ver-a-la-seleccion_1783528397/amp",
+   "nota": "Despidos en la planta de Noetinger (misma empresa)."
+  },
+  {
+   "id": "metalfor-2026-07-ppc",
+   "plantaId": "metalfor-marcos-juarez",
+   "tipo": "conflicto",
+   "fecha": "2026-07-02",
+   "cantidad": 600,
+   "fuente": "Ámbito",
+   "url": "https://www.ambito.com/negocios/metalfor-busca-oxigeno-abrio-un-procedimiento-preventivo-crisis-y-negocia-la-uom-n6295387",
+   "nota": "Apertura de Procedimiento Preventivo de Crisis con atraso salarial. La empresa emplea unos 600 trabajadores entre Marcos Juárez y Noetinger."
+  },
   {
    "id": "tenaris-siat-2026-06-despidos",
    "plantaId": "tenaris-siat-valentin-alsina",
@@ -10,6 +70,46 @@
    "fuente": "iProfesional",
    "url": "https://iprofesional.com/management/458612-despidos-tenaris-golpe-empleo-lanus-vaca-muerta-junio-2026",
    "nota": "La planta venía con suspensiones desde abril. Despidos de trabajadores con más de cuatro años de antigüedad, según el delegado UOM."
+  },
+  {
+   "id": "acindar-vc-2026-06-parada-hornos",
+   "plantaId": "acindar-villa-constitucion",
+   "tipo": "suspensiones",
+   "fecha": "2026-06-10",
+   "cantidad": null,
+   "fuente": "Tiempo de San Juan",
+   "url": "https://www.tiempodesanjuan.com/politica/acindar-vuelve-a-paralizar-su-produccion-por-la-caida-en-las-ventas_1781119156/amp",
+   "nota": "Nueva parada de los hornos de la acería por caída de ventas y exceso de stock."
+  },
+  {
+   "id": "metalfor-2026-03-paro",
+   "plantaId": "metalfor-marcos-juarez",
+   "tipo": "conflicto",
+   "fecha": "2026-03-03",
+   "cantidad": null,
+   "fuente": "Elonce",
+   "url": "https://www.elonce.com/uid-867199",
+   "nota": "Paro en Marcos Juárez y Noetinger por pago incompleto de las quincenas de febrero."
+  },
+  {
+   "id": "acindar-vc-2025-12-acuerdo-suspensiones",
+   "plantaId": "acindar-villa-constitucion",
+   "tipo": "suspensiones",
+   "fecha": "2025-12-09",
+   "cantidad": 2500,
+   "fuente": "Cadena 3",
+   "url": "https://www.cadena3.com/noticia/noticias-rosario/crisis-economica-acindar-ya-definio-un-esquema-de-suspensiones-para-2026_496243",
+   "nota": "Acuerdo UOM Villa Constitución–Acindar: suspensiones rotativas con pago parcial durante todo 2026, según el ritmo de producción. Alcanza al plantel directo (unos 2.500)."
+  },
+  {
+   "id": "whirlpool-pilar-2025-11-cierre",
+   "plantaId": "whirlpool-pilar",
+   "tipo": "cierre",
+   "fecha": "2025-11-26",
+   "cantidad": 220,
+   "fuente": "Diario de Cuyo",
+   "url": "https://www.diariodecuyo.com.ar/argentina/whirlpool-cerro-su-planta-de-pilar-y-despidio-a-sus-220-trabajadores-1803145.html",
+   "nota": "Cierre definitivo de la planta de lavarropas inaugurada en 2022 (USD 52 millones). La empresa pasa a importar."
   },
   {
    "id": "dana-san-luis-2025-11-cierre",
@@ -22,6 +122,26 @@
    "nota": "Cierre de planta y despido de 50 empleados; la UOM denunció una decisión unilateral."
   },
   {
+   "id": "ternium-sn-2025-09-conflicto",
+   "plantaId": "ternium-san-nicolas",
+   "tipo": "conflicto",
+   "fecha": "2025-09-04",
+   "cantidad": 1200,
+   "fuente": "La Capital",
+   "url": "https://www.lacapital.com.ar/la-region/san-nicolas-hierve-miles-trabajadores-ternium-marcharon-contra-despidos-y-bajos-salarios-n10216960.html",
+   "nota": "Marcha en San Nicolás de trabajadores de contratistas (unos 1.200 tercerizados) contra despidos y bajos salarios."
+  },
+  {
+   "id": "siderca-2025-09-despidos",
+   "plantaId": "tenaris-siderca-campana",
+   "tipo": "despidos",
+   "fecha": "2025-09-01",
+   "cantidad": 65,
+   "fuente": "HCDN, proyecto 5049-D-2025",
+   "url": "https://www4.hcdn.gob.ar/dependencias/dsecretaria/Periodo2025/PDF2025/TP2025/5049-D-2025.pdf",
+   "nota": "La UOM Campana denunció 65 despidos; con estos, más de 200 en los meses previos."
+  },
+  {
    "id": "acindar-vc-2025-02-suspensiones",
    "plantaId": "acindar-villa-constitucion",
    "tipo": "suspensiones",
@@ -31,5 +151,6 @@
    "url": "https://www.baenegocios.com/politica/uom-acuerdo-con-acindar-por-suspensiones-en-la-planta-siderurgica-de-santa-fe-20250212-0070.html",
    "nota": "Acuerdo UOM Villa Constitución de suspensiones rotativas para evitar despidos."
   }
- ]
+ ],
+ "nota": "Relevamiento de prensa y fuentes públicas. No hay carga manual de la UOM ni de delegados."
 }

@@ -244,7 +244,26 @@ def main():
     if plantas:
         filas_p = "".join(f"<tr><td><b>{p['nombre']}</b><div class='small'>{p.get('localidad', '')}, {p.get('provincia', '')}</div></td><td>{p.get('rama', '')}</td><td>{p.get('seccional') or ''}</td></tr>" for p in plantas[:24])
         filas_e = "".join(f"<tr><td>{e['fecha']}</td><td>{next((p['nombre'] for p in plantas if p['id'] == e['plantaId']), '')}</td><td>{e['tipo']}</td><td class='r'>{e.get('cantidad') or ''}</td><td class='small'>{e.get('fuente', '')}</td></tr>" for e in ev_amb[:12])
-        P.append(f"<section class='page'><div class='kick'>Seguimiento propio</div><h2>Plantas relevadas</h2><table><thead><tr><th>Planta</th><th>Rama</th><th>Seccional UOM</th></tr></thead><tbody>{filas_p}</tbody></table>" + (f"<h3>Hechos registrados</h3><table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class='r'>Trab.</th><th>Fuente</th></tr></thead><tbody>{filas_e}</tbody></table>" if filas_e else "") + "<p class='src'>Fuente: relevamiento del equipo del Observatorio (prensa, informes de empresas y datos aportados por la UOM).</p></section>")
+        P.append(f"<section class='page'><div class='kick'>Seguimiento propio</div><h2>Plantas relevadas</h2><table><thead><tr><th>Planta</th><th>Rama</th><th>Seccional UOM</th></tr></thead><tbody>{filas_p}</tbody></table>" + (f"<h3>Hechos registrados</h3><table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th class='r'>Trab.</th><th>Fuente</th></tr></thead><tbody>{filas_e}</tbody></table>" if filas_e else "") + "<p class='src'>Fuente: relevamiento del equipo del Observatorio (prensa, balances de empresas y fuentes públicas).</p></section>")
+
+    # --- vigilancia automática: semáforo, Boletín Oficial y Banco Central (solo sector metalúrgico) ---
+    sem = D("semaforo.json"); bo = D("boletin-oficial.json"); bc = D("bcra-empresas.json")
+    ids_amb = {p["id"] for p in plantas}
+    sem_pl = [x for x in (sem or {}).get("plantas", []) if x["plantaId"] in ids_amb and x["color"] != "verde"]
+    ac = [a for a in (bo or {}).get("acuerdos", []) if not PV or PV.upper() in (a.get("seccional", "") + " " + a.get("empresa", "")).upper() or any(a.get("empresa") and p["empresa"].split()[0].upper() in a["empresa"].upper() for p in plantas)]
+    if sem_pl or ac or (bc and not PV):
+        COLR = {"rojo": "#c0352b", "amarillo": "#d48a0c"}
+        c = "<div class='kick'>Vigilancia automática</div><h2>Señales de alerta</h2><p>Cruce diario de prensa aprobada, Boletín Oficial y Banco Central para las plantas seguidas. Solo sector metalúrgico.</p>"
+        if sem_pl:
+            c += "<h3>Semáforo de plantas</h3><table><thead><tr><th>Planta</th><th>Estado</th><th>Motivos</th></tr></thead><tbody>" + "".join(f"<tr><td><b>{x['planta']}</b><div class='small'>{x.get('provincia') or ''}</div></td><td style='color:{COLR[x['color']]};font-weight:600'>{x['color']}</td><td class='small'>{'<br>'.join(x['motivos'])}</td></tr>" for x in sem_pl) + "</tbody></table>"
+            resumen.append(f"<b>Semáforo:</b> {sum(1 for x in sem_pl if x['color'] == 'rojo')} plantas en rojo y {sum(1 for x in sem_pl if x['color'] == 'amarillo')} en amarillo.")
+        if ac:
+            c += f"<h3>Acuerdos homologados con la UOM y ASIMRA (Boletín Oficial)</h3><table><thead><tr><th>Publicado</th><th>Empresa</th><th>Gremio</th><th>Tipo</th></tr></thead><tbody>" + "".join(f"<tr><td>{a['fecha']}</td><td>{a.get('empresa') or '(en el anexo)'}</td><td>{a['gremio']}{(' · ' + a['seccional']) if a.get('seccional') else ''}</td><td>{a['tipo']}</td></tr>" for a in ac[:15]) + "</tbody></table>"
+            resumen.append(f"<b>Boletín Oficial:</b> {len(ac)} acuerdos con la UOM o ASIMRA homologados en los últimos meses, {sum(1 for a in ac if a['tipo'] == 'suspensiones')} de suspensiones.")
+        if bc and not PV and bc.get("empresas"):
+            c += "<h3>Banco Central: situación crediticia</h3><table><thead><tr><th>Empresa</th><th>Situación</th><th class='r'>Cheques rechazados (12 meses)</th></tr></thead><tbody>" + "".join(f"<tr><td>{x.get('denominacion') or x['empresa']}</td><td>{x.get('situacionMax') or 's/d'}</td><td class='r'>{x.get('cheques12m', '')}</td></tr>" for x in bc["empresas"]) + "</tbody></table><p class='small'>Situación 1: normal. 2 a 6: atrasos crecientes.</p>"
+        c += "<p class='src'>Fuentes: gestores automáticos del MIDTM sobre Boletín Oficial, BCRA (Central de Deudores) y prensa revisada.</p>"
+        P.append(f"<section class='page'>{c}</section>")
 
     # importaciones
     if imp and imp.get("series"):
