@@ -30,7 +30,7 @@ jobs:
         continue-on-error: true
         env:
           MUESTRA: ''
-        run: FECHAS=${{ github.event_name == 'push' && '20260903' || '' }} DIAS=${{ github.event.inputs.dias || (github.event_name == 'push' && '90') || '10' }} node scripts/fuentes/boletin-oficial.mjs
+        run: DIAS=${{ github.event.inputs.dias || (github.event_name == 'push' && '90') || '10' }} node scripts/fuentes/boletin-oficial.mjs
       - name: BCRA, Central de Deudores
         continue-on-error: true
         run: node scripts/fuentes/bcra-cheques.mjs
