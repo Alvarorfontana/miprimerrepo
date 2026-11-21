@@ -57,8 +57,8 @@ for (let k = 0; k < DIAS; k++) {
   if (html && k < 4 && process.env.MUESTRA) { const { mkdir } = await import("node:fs/promises"); await mkdir("data/fuentes/bo", { recursive: true }); await writeFile(`data/fuentes/bo/primera-${f}.html`, html); }
   console.log(f, "primera:", html ? html.length : "sin página", html ? (html.match(/detalleAviso\/primera/g) || []).length : 0, "enlaces");
   if (html) {
-    const links = [...html.matchAll(/href="([^"]*\/detalleAviso\/primera\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,600}?)<\/a>/gi)];
-    const deTrabajo = links.filter(m => /RELACIONES|DNRYRT|SSRT|ST#M|TRABAJO|CONVENCI/i.test(texto(m[4])));
+    const links = [...html.matchAll(/href="([^"]*\/detalleAviso\/primera\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,3000}?)<\/a>/gi)];
+    const deTrabajo = links.filter(m => /RELACIONES (Y REGULACIONES )?DEL TRABAJO|DNRYRT|SSRT|SECRETAR[IÍ]A DE TRABAJO|CONVENCI/i.test(texto(m[4])));
     console.log("  de Trabajo:", deTrabajo.length);
     for (const m of deTrabajo) {
       const url = `${BASE}/detalleAviso/primera/${m[2]}/${m[3]}`;
@@ -94,7 +94,7 @@ for (let k = 0; k < DIAS; k++) {
   // --- segunda sección: menciones de empresas seguidas (sociedades, concursos, quiebras) ---
   const h2 = await get(`${BASE}/seccion/segunda/${f}`);
   if (h2) {
-    for (const m of h2.matchAll(/href="([^"]*\/detalleAviso\/segunda\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,400}?)<\/a>/gi)) {
+    for (const m of h2.matchAll(/href="([^"]*\/detalleAviso\/segunda\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,3000}?)<\/a>/gi)) {
       const tx = norm(texto(m[4])); const clave = CLAVES.find(c => new RegExp(`\\b${c}\\b`).test(tx));
       if (!clave) continue;
       const url = `${BASE}/detalleAviso/segunda/${m[2]}/${m[3]}`;
