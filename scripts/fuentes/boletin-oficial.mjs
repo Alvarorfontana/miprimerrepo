@@ -6,7 +6,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const BASE = "https://www.boletinoficial.gob.ar";
 const CAB = { "User-Agent": "Mozilla/5.0 (observatorio MIDTM; datos publicos)" };
-const DIAS = +(process.env.DIAS || 10);
+const DIAS = +(process.env.DIAS || 10), SALTO = +(process.env.SALTO || 0);
 const hoy = new Date();
 const leer = async (f, fb) => { try { return JSON.parse(await readFile(f, "utf8")); } catch { return fb; } };
 const guardar = (f, d) => writeFile(f, JSON.stringify(d, null, 1) + "\n");
@@ -24,7 +24,7 @@ async function get(url) {
       if (r.ok) return await r.text();
       if (r.status === 404) return null;
     } catch (e) { if (i === 2) console.log("error", url, e.message); }
-    await pausa(2000 * (i + 1));
+    await pausa(8000 * (i + 1) ** 2);
   }
   return null;
 }
@@ -52,13 +52,14 @@ let nuevosAc = 0, nuevosMe = 0, nuevosEv = 0;
 
 const FECHAS = (process.env.FECHAS || "").split(",").filter(Boolean);
 for (let k = 0; k < (FECHAS.length || DIAS); k++) {
-  const d = FECHAS.length ? new Date(`${FECHAS[k].slice(0, 4)}-${FECHAS[k].slice(4, 6)}-${FECHAS[k].slice(6)}T12:00:00Z`) : new Date(hoy); if (!FECHAS.length) d.setDate(d.getDate() - k);
+  const d = FECHAS.length ? new Date(`${FECHAS[k].slice(0, 4)}-${FECHAS[k].slice(4, 6)}-${FECHAS[k].slice(6)}T12:00:00Z`) : new Date(hoy); if (!FECHAS.length) d.setDate(d.getDate() - k - SALTO);
   if ([0, 6].includes(d.getDay())) continue;
   const f = ymd(d);
   // --- primera sección: acuerdos de Trabajo ---
   const html = await get(`${BASE}/seccion/primera/${f}`);
   if (html && k < 4 && process.env.MUESTRA) { const { mkdir } = await import("node:fs/promises"); await mkdir("data/fuentes/bo", { recursive: true }); await writeFile(`data/fuentes/bo/primera-${f}.html`, html); }
   console.log(f, "primera:", html ? html.length : "sin página", html ? (html.match(/detalleAviso\/primera/g) || []).length : 0, "enlaces");
+  if (!html) { globalThis.fallas = (globalThis.fallas || 0) + 1; if (globalThis.fallas >= 3) { console.log("El Boletín Oficial dejó de responder: corto acá y sigo en la próxima corrida."); break; } } else globalThis.fallas = 0;
   if (html) {
     const links = [...html.matchAll(/href="([^"]*\/detalleAviso\/primera\/(\d+)\/(\d{8})[^"]*)"[^>]*>([\s\S]{0,3000}?)<\/a>/gi)];
     const deTrabajo = links.filter(m => /RELACIONES (Y REGULACIONES )?DEL TRABAJO|DNRYRT|SSRT|SECRETAR[IÍ]A DE TRABAJO|CONVENCI/i.test(texto(m[4])));
@@ -66,19 +67,23 @@ for (let k = 0; k < (FECHAS.length || DIAS); k++) {
     for (const m of deTrabajo) {
       const url = `${BASE}/detalleAviso/primera/${m[2]}/${m[3]}`;
       if (vistos.has(url)) continue; vistos.add(url);
-      const det = await get(url); await pausa(400);
+      const det = await get(url); await pausa(900);
       if (!det) continue;
       if (process.env.MUESTRA && !globalThis.muestraDet) { globalThis.muestraDet = 1; await writeFile("data/fuentes/bo/detalle-muestra.html", det); }
-      const t = texto(det);
+      let t = texto(det);
+      if (!GREMIO.test(t) && /223\s*bis/i.test(t) && /Anexo/i.test(t)) {
+        const anx = await get(`${url}?anexos=1`); await pausa(700);
+        if (anx && GREMIO.test(texto(anx))) t += " [ANEXO] " + texto(anx).slice(0, 20000);
+      }
       if (process.env.MUESTRA) console.log("   ", m[2], t.length, GREMIO.test(t) ? "METALÚRGICO" : "", t.slice(t.indexOf("homolog"), t.indexOf("homolog") + 140));
       if (!GREMIO.test(t)) continue;
       const norma = (t.match(/(Disposici[oó]n|Resoluci[oó]n)\s+\d+\/\d{4}/i) || [""])[0];
-      const empresa = (t.match(/(?:la firma|la empresa|la sociedad)\s+([^,]{3,120}?)\s*(?:\(C\.?\s?U\.?\s?I\.?\s?T\.?[^)]*\))?\s*,?\s*por la parte empleadora/i) || [])[1] || "";
+      const empresa = (t.split(" [ANEXO] ")[0].match(/(?:la firma|la empresa|la sociedad)\s+([^,]{3,120}?)\s*(?:\(C\.?\s?U\.?\s?I\.?\s?T\.?[^)]*\))?\s*,?\s*por la parte empleadora/i) || [])[1] || "";
       const cuit = ((t.match(/C\.?\s?U\.?\s?I\.?\s?T\.?\s*(?:N[°º]?)?\s*:?\s*(\d{2}-?\d{8}-?\d)/i) || [])[1] || "").replace(/-/g, "");
       const gremio = /SUPERVISORES|ASIMRA/i.test(t) ? "ASIMRA" : "UOM";
       const seccional = ((t.match(/Seccional\s+([A-ZÁÉÍÓÚÑa-záéíóúñ .]{3,40}?)\s+de la UNI[OÓ]N OBRERA/i) || [])[1] || "").trim();
       const tipo = /223\s*bis/i.test(t) ? "suspensiones" : /despid/i.test(t) ? "despidos" : "acuerdo";
-      const enAnexo = !empresa && /Anexo/i.test(t);
+      const enAnexo = t.includes(" [ANEXO] ") || (!empresa && /Anexo/i.test(t));
       const item = { fecha: `${f.slice(0, 4)}-${f.slice(4, 6)}-${f.slice(6)}`, norma, empresa: empresa.trim(), cuit, gremio, seccional, tipo, enAnexo, url };
       bo.acuerdos.push(item); nuevosAc++;
       console.log("acuerdo", item.fecha, gremio, item.empresa || "(en anexo)", seccional);
@@ -108,7 +113,7 @@ for (let k = 0; k < (FECHAS.length || DIAS); k++) {
       console.log("mención", clave, tipo, url);
     }
   }
-  await pausa(600);
+  await pausa(2500);
 }
 
 bo.actualizado = hoy.toISOString().slice(0, 10);
