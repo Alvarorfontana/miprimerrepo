@@ -1,11 +1,54 @@
 {
- "actualizado": "2026-11-20",
- "total": 148,
- "alta": 55,
+ "actualizado": "2026-11-21",
+ "total": 152,
+ "alta": 59,
  "media": 93,
  "alertas": [
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
+   "provincia": "Córdoba",
+   "nivel": "alta",
+   "tema": "Plantas",
+   "ambito": "Córdoba",
+   "variable": "despidos",
+   "periodo": "2026-08-06",
+   "valor": 225,
+   "titulo": "Metalfor · Marcos Juárez: despidos (225 trabajadores)",
+   "detalle": "Recorte anunciado: salida de 225 de los 375 trabajadores directos de Marcos Juárez (60%).",
+   "fuente": "iProfesional",
+   "url": "https://www.iprofesional.com/negocios/461705-gigante-del-agro-metalfor-recortara-mas-de-200-empleos-por-el-derrumbe-de-las-ventas",
+   "planta": "metalfor-marcos-juarez"
+  },
+  {
+   "fecha": "2026-11-21",
+   "provincia": "Tierra del Fuego",
+   "nivel": "alta",
+   "tema": "Plantas",
+   "ambito": "Tierra del Fuego",
+   "variable": "despidos",
+   "periodo": "2026-08-10",
+   "valor": 300,
+   "titulo": "Mirgor · Río Grande: despidos (300 trabajadores)",
+   "detalle": "Desvinculaciones en IATEC, FAMAR, Brightstar y Mirgor (Letra P habla de 296). Tierra del Fuego dictó conciliación obligatoria por 15 días.",
+   "fuente": "Infobae",
+   "url": "https://www.infobae.com/economia/2026/08/10/mirgor-desvinculo-a-300-empleados-por-paros-gremiales-y-el-gobierno-de-tierra-del-fuego-dispuso-la-conciliacion-obligatoria/",
+   "planta": "mirgor-rio-grande"
+  },
+  {
+   "fecha": "2026-11-21",
+   "provincia": "Tierra del Fuego",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "Tierra del Fuego",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 68,
+   "titulo": "Tierra del Fuego: índice de riesgo 68/100",
+   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Índice de riesgo",
@@ -18,7 +61,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Índice de riesgo",
@@ -31,7 +74,20 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
+   "provincia": "Córdoba",
+   "nivel": "alta",
+   "tema": "Índice de riesgo",
+   "ambito": "Córdoba",
+   "variable": "Índice ponderado",
+   "periodo": "2026T1",
+   "valor": 61,
+   "titulo": "Córdoba: índice de riesgo 61/100",
+   "detalle": "Pesa sobre todo: despidos, suspensiones y cierres en planta y peso de ramas cuya producción cae.",
+   "fuente": "MIDTM (ponderado)"
+  },
+  {
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Índice de riesgo",
@@ -44,7 +100,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Índice de riesgo",
@@ -57,7 +113,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -70,7 +126,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -83,7 +139,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -96,7 +152,7 @@
    "fuente": "INDEC + OEDE"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -109,7 +165,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Producción",
@@ -122,7 +178,7 @@
    "fuente": "INDEC + OEDE"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Corrientes",
    "nivel": "alta",
    "tema": "Empresas",
@@ -135,7 +191,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Santa Cruz",
    "nivel": "alta",
    "tema": "Empresas",
@@ -148,7 +204,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empresas",
@@ -161,7 +217,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chaco",
    "nivel": "alta",
    "tema": "Empresas",
@@ -174,7 +230,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empresas",
@@ -187,7 +243,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empresas",
@@ -200,7 +256,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -213,7 +269,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -226,7 +282,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -239,7 +295,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -252,7 +308,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Jujuy",
    "nivel": "alta",
    "tema": "Empleo",
@@ -265,7 +321,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Corrientes",
    "nivel": "alta",
    "tema": "Empleo",
@@ -278,7 +334,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Salta",
    "nivel": "alta",
    "tema": "Empleo",
@@ -291,7 +347,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Jujuy",
    "nivel": "alta",
    "tema": "Empleo",
@@ -304,7 +360,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -317,7 +373,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -330,7 +386,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo",
@@ -343,7 +399,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empleo",
@@ -356,7 +412,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo",
@@ -369,7 +425,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -382,7 +438,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo",
@@ -395,7 +451,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -408,7 +464,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "alta",
    "tema": "Empleo",
@@ -421,7 +477,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -434,7 +490,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -447,7 +503,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "alta",
    "tema": "Empleo",
@@ -460,7 +516,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "alta",
    "tema": "Empleo",
@@ -473,7 +529,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo",
@@ -486,7 +542,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo",
@@ -499,7 +555,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo",
@@ -512,7 +568,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Pampa",
    "nivel": "alta",
    "tema": "Empleo",
@@ -525,7 +581,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "alta",
    "tema": "Empleo",
@@ -538,7 +594,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Río Negro",
    "nivel": "alta",
    "tema": "Empleo",
@@ -551,7 +607,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -564,7 +620,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -577,7 +633,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -590,7 +646,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Pampa",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -603,7 +659,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -616,7 +672,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -629,7 +685,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -642,7 +698,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -655,7 +711,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Rioja",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -668,7 +724,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -681,7 +737,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -694,7 +750,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -707,7 +763,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "alta",
    "tema": "Empleo industrial por partido",
@@ -720,7 +776,37 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
+   "provincia": "Córdoba",
+   "nivel": "media",
+   "tema": "Plantas",
+   "ambito": "Córdoba",
+   "variable": "retiros",
+   "periodo": "2026-11-12",
+   "valor": null,
+   "titulo": "Pauny · Las Varillas: retiros",
+   "detalle": "La empresa faltó a la audiencia en Trabajo y propuso un plan de retiros voluntarios. La planta sigue tomada.",
+   "fuente": "Bichos de Campo",
+   "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
+   "planta": "pauny-las-varillas"
+  },
+  {
+   "fecha": "2026-11-21",
+   "provincia": "Córdoba",
+   "nivel": "media",
+   "tema": "Plantas",
+   "ambito": "Córdoba",
+   "variable": "conflicto",
+   "periodo": "2026-11-03",
+   "valor": 450,
+   "titulo": "Pauny · Las Varillas: conflicto (450 trabajadores)",
+   "detalle": "Toma de la planta tras tres quincenas de salarios adeudados. La medida se extendió a la planta de La Banda (Santiago del Estero).",
+   "fuente": "Bichos de Campo",
+   "url": "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas/",
+   "planta": "pauny-las-varillas"
+  },
+  {
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -733,20 +819,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
-   "provincia": "Tierra del Fuego",
-   "nivel": "media",
-   "tema": "Índice de riesgo",
-   "ambito": "Tierra del Fuego",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 52,
-   "titulo": "Tierra del Fuego: índice de riesgo 52/100",
-   "detalle": "Pesa sobre todo: caída del empleo en el último año y pérdida de empleo desde fines de 2023.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -759,20 +832,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
-   "provincia": "Córdoba",
-   "nivel": "media",
-   "tema": "Índice de riesgo",
-   "ambito": "Córdoba",
-   "variable": "Índice ponderado",
-   "periodo": "2026T1",
-   "valor": 46,
-   "titulo": "Córdoba: índice de riesgo 46/100",
-   "detalle": "Pesa sobre todo: peso de ramas cuya producción cae y caída del empleo en el último año.",
-   "fuente": "MIDTM (ponderado)"
-  },
-  {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Río Negro",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -785,7 +845,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -798,7 +858,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Jujuy",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -811,7 +871,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Pampa",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -824,7 +884,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -837,7 +897,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Índice de riesgo",
@@ -850,7 +910,7 @@
    "fuente": "MIDTM (ponderado)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Producción",
@@ -863,7 +923,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Producción",
@@ -876,7 +936,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Producción",
@@ -889,7 +949,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Entre Ríos",
    "nivel": "media",
    "tema": "Producción",
@@ -902,7 +962,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Producción",
@@ -911,11 +971,11 @@
    "periodo": "2026-09",
    "valor": -3.3,
    "titulo": "Actividad metalúrgica: -3,3% interanual",
-   "detalle": "4 meses relevados seguidos en baja.",
+   "detalle": "7 meses relevados seguidos en baja.",
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Pampa",
    "nivel": "media",
    "tema": "Empresas",
@@ -928,7 +988,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empresas",
@@ -941,7 +1001,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empresas",
@@ -954,7 +1014,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Santa Fe",
    "nivel": "media",
    "tema": "Empresas",
@@ -967,7 +1027,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empresas",
@@ -980,7 +1040,7 @@
    "fuente": "OEDE–SIPA (empresas)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
@@ -993,7 +1053,7 @@
    "fuente": "ADIMRA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
@@ -1006,7 +1066,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Capacidad instalada",
@@ -1019,7 +1079,7 @@
    "fuente": "INDEC"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tierra del Fuego",
    "nivel": "media",
    "tema": "Empleo",
@@ -1032,7 +1092,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Río Negro",
    "nivel": "media",
    "tema": "Empleo",
@@ -1045,7 +1105,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1058,7 +1118,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo",
@@ -1071,7 +1131,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo",
@@ -1084,7 +1144,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1097,7 +1157,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1110,7 +1170,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo",
@@ -1123,7 +1183,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo",
@@ -1136,7 +1196,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1149,7 +1209,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1162,7 +1222,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1175,7 +1235,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Santa Fe",
    "nivel": "media",
    "tema": "Empleo",
@@ -1188,7 +1248,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1201,7 +1261,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1214,7 +1274,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1227,7 +1287,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1240,7 +1300,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1253,7 +1313,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1266,7 +1326,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1279,7 +1339,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1292,7 +1352,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1305,7 +1365,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": null,
    "nivel": "media",
    "tema": "Empleo",
@@ -1318,7 +1378,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1331,7 +1391,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo",
@@ -1344,7 +1404,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "CABA",
    "nivel": "media",
    "tema": "Empleo",
@@ -1357,7 +1417,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo",
@@ -1370,7 +1430,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empleo",
@@ -1383,7 +1443,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo",
@@ -1396,7 +1456,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "La Pampa",
    "nivel": "media",
    "tema": "Empleo",
@@ -1409,7 +1469,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo",
@@ -1422,7 +1482,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "media",
    "tema": "Empleo",
@@ -1435,7 +1495,7 @@
    "fuente": "OEDE–SIPA"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Santiago del Estero",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1448,7 +1508,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1461,7 +1521,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1474,7 +1534,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1487,7 +1547,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1500,7 +1560,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1513,7 +1573,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1526,7 +1586,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1539,7 +1599,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1552,7 +1612,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1565,7 +1625,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1578,7 +1638,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Catamarca",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1591,7 +1651,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1604,7 +1664,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Juan",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1617,7 +1677,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1630,7 +1690,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Chubut",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1643,7 +1703,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Tucumán",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1656,7 +1716,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1669,7 +1729,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1682,7 +1742,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1695,7 +1755,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1708,7 +1768,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Córdoba",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1721,7 +1781,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1734,7 +1794,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Luis",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1747,7 +1807,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1760,7 +1820,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "San Juan",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1773,7 +1833,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1786,7 +1846,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1799,7 +1859,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1812,7 +1872,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Corrientes",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1825,7 +1885,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1838,7 +1898,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Salta",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1851,7 +1911,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Jujuy",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1864,7 +1924,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1877,7 +1937,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Misiones",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1890,7 +1950,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Buenos Aires",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1903,7 +1963,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Jujuy",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1916,7 +1976,7 @@
    "fuente": "OEDE–SIPA (por departamento)"
   },
   {
-   "fecha": "2026-11-20",
+   "fecha": "2026-11-21",
    "provincia": "Mendoza",
    "nivel": "media",
    "tema": "Empleo industrial por partido",
@@ -1930,6 +1990,43 @@
   }
  ],
  "indice": [
+  {
+   "area": "Tierra del Fuego",
+   "provincia": "Tierra del Fuego",
+   "puntaje": 68,
+   "nivel": "alta",
+   "empleo": 5418,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -18.5,
+     "puntos": 100
+    },
+    "empleo_acumulado": {
+     "valor": -41.8,
+     "puntos": 100
+    },
+    "tendencia": {
+     "valor": 2,
+     "puntos": 50
+    },
+    "exposicion_ramas": {
+     "valor": 0,
+     "puntos": 0
+    },
+    "hechos_planta": {
+     "valor": 1,
+     "puntos": 100
+    },
+    "actividad_adimra": {
+     "valor": null,
+     "puntos": null
+    },
+    "cierre_empresas": {
+     "valor": 0,
+     "puntos": 14
+    }
+   }
+  },
   {
    "area": "San Luis",
    "provincia": "San Luis",
@@ -2001,6 +2098,43 @@
     "cierre_empresas": {
      "valor": -2.7,
      "puntos": 53
+    }
+   }
+  },
+  {
+   "area": "Córdoba",
+   "provincia": "Córdoba",
+   "puntaje": 61,
+   "nivel": "alta",
+   "empleo": 33130,
+   "componentes": {
+    "empleo_interanual": {
+     "valor": -2.3,
+     "puntos": 36
+    },
+    "empleo_acumulado": {
+     "valor": -7.9,
+     "puntos": 58
+    },
+    "tendencia": {
+     "valor": 2,
+     "puntos": 50
+    },
+    "exposicion_ramas": {
+     "valor": 10.9,
+     "puntos": 73
+    },
+    "hechos_planta": {
+     "valor": 5,
+     "puntos": 100
+    },
+    "actividad_adimra": {
+     "valor": -4.6,
+     "puntos": 66
+    },
+    "cierre_empresas": {
+     "valor": -2.8,
+     "puntos": 54
     }
    }
   },
@@ -2116,43 +2250,6 @@
    }
   },
   {
-   "area": "Tierra del Fuego",
-   "provincia": "Tierra del Fuego",
-   "puntaje": 52,
-   "nivel": "media",
-   "empleo": 5418,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -18.5,
-     "puntos": 100
-    },
-    "empleo_acumulado": {
-     "valor": -41.8,
-     "puntos": 100
-    },
-    "tendencia": {
-     "valor": 2,
-     "puntos": 50
-    },
-    "exposicion_ramas": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": null,
-     "puntos": null
-    },
-    "cierre_empresas": {
-     "valor": 0,
-     "puntos": 14
-    }
-   }
-  },
-  {
    "area": "Resto de Buenos Aires",
    "provincia": "Buenos Aires",
    "puntaje": 51,
@@ -2186,43 +2283,6 @@
     "cierre_empresas": {
      "valor": -2.1,
      "puntos": 44
-    }
-   }
-  },
-  {
-   "area": "Córdoba",
-   "provincia": "Córdoba",
-   "puntaje": 46,
-   "nivel": "media",
-   "empleo": 33130,
-   "componentes": {
-    "empleo_interanual": {
-     "valor": -2.3,
-     "puntos": 36
-    },
-    "empleo_acumulado": {
-     "valor": -7.9,
-     "puntos": 58
-    },
-    "tendencia": {
-     "valor": 2,
-     "puntos": 50
-    },
-    "exposicion_ramas": {
-     "valor": 10.9,
-     "puntos": 73
-    },
-    "hechos_planta": {
-     "valor": 0,
-     "puntos": 0
-    },
-    "actividad_adimra": {
-     "valor": -4.6,
-     "puntos": 66
-    },
-    "cierre_empresas": {
-     "valor": -2.8,
-     "puntos": 54
     }
    }
   },
@@ -2472,7 +2532,7 @@
      "puntos": 74
     },
     "hechos_planta": {
-     "valor": 0,
+     "valor": 1,
      "puntos": 0
     },
     "actividad_adimra": {
