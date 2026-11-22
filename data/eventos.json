@@ -2,6 +2,18 @@
  "actualizado": "2026-11-22",
  "eventos": [
   {
+   "id": "prensa-oYVdSUFVRP29jPTU",
+   "plantaId": "tenaris-siat-valentin-alsina",
+   "fecha": "2026-11-21",
+   "tipo": "conflicto",
+   "cantidad": 150,
+   "fuente": "Diario EL SOL",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE95LWFEbzFHZFZfMnJ1QVV5SVlYbDVRelhXczJaUHJ0a213dFFmbmlPSDFpMEIzUFVVZ2lWT3FmQzZ6RzluSUZ6SUtibnhsUEhiel9hZHEtV2UzZS1QRDNMODZVQmFER1dienV6b0s3czE5LUc2WmVhaWRPUQ?oc=5",
+   "nota": "Tenaris SIAT despedirá a 150 trabajadores en su planta de Lanús",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
    "id": "prensa-5GSlNIWko_b2M9NQ",
    "plantaId": "pauny-las-varillas",
    "fecha": "2026-11-19",
@@ -71,6 +83,11 @@
     {
      "fuente": "Infocampo",
      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOGFiZWNTU3VhOVc4ZTdNaTl4VW04R1UzaUpXXzUyemJkMGRyUXRkZXFQYUpGeTMtd3ZwT2hJQnZhOUJLV1Q0c1ljRjREYkZFMDBKY0dENkVNRFU5ZmduUFp5VFd4QnNvODJ0bkhJWE9UcXdCN3hNakhCc1cydWV3X1Y5eVBfYVVQQ2pCR21WYXJmV2lzN20zNHRTTExfdU5Fb29QTmFnSm9PRmF0TGg5cjFKWVBJRDlFN0cwaDdsa2t2amxmcDlHcw?oc=5",
+     "fecha": "2026-11-20"
+    },
+    {
+     "fuente": "FM Identidad",
+     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd3ozVGZ5dE12bTFPRjcxa3pkRGNHNnlrZnphcXhQWTZ4cDJjR0JfZlUyNDBKVFVLTDRGWEEyZW1TZS0weVR4M2NqWWpPQXo2b0ZOTDBxQ09DNG9YTGZEaVA2SVpYNVJWaWU0OEZUVEs3V3oyQjdJdktZajhEeV9YVDgwR1lFdDhQVXpFNUdvRWxYVDRuejQ0RklsSEp2LWF0aXpCbEdKOFNnTXFfZFk2cENRZWphelNwUmQyOVV0WEdoSEtGQWF6SnI4MUw3eW8?oc=5",
      "fecha": "2026-11-20"
     }
    ]

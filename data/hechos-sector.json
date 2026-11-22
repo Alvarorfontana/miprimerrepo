@@ -1,6 +1,39 @@
 {
  "hechos": [
   {
+   "id": "prensa-GUlBVMHBOP29jPTU",
+   "fecha": "2026-11-21",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Notitdf",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVHBMNmFUcV9TQkV6bW1rZWZkblFaRkhZZVQ0VDRUSDYwZ1BHNDY5SjNMa2g3S29BeE91VVN0RmU5Vm9WMGVpaUpPSmxmZ2JtZTVwcFloU2VKZnNjQ1N4WF84Y2NNWElzd2hIVFZ0aFA2eVFRU0tvRnZzSWFaTzZTb1hzTFhaT0ROLWY1aFVqbzlkVkdjeElCekhFMmZkSHBMekhqM3JwLXhIMG5MMmlEb1M0a3FnMkQ4VC03Q1lPb0NDSFRPU0pN?oc=5",
+   "nota": "La UOM se moviliza hoy en Río Grande “Bajo la consigna de defender la industria y los puestos de trabajo”",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-MmxKVUc1cD9vYz01",
+   "fecha": "2026-11-21",
+   "tipo": "despidos",
+   "cantidad": 24,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
+   "nota": "BGH despidió a 24 trabajadores en Río Grande y la UOM alerta que otros 500 empleos podrían quedar comprometidos",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-lWEpYV2xFP29jPTU",
+   "fecha": "2026-11-21",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQMGE4SjZxcGttWktKQS1WWC1FbDNsUlBXV2l0TUJMX2VEd01MdFFDMjdKeTAzWlI3U19wYkR2WkhkcEZCdHVYU0Y0d21PN3JZNFBfdFFrZ2h2Y1hJSWFhbVpkUVd1LUthUHJzMjBOckluaXU5MHZSUXJwNGd3eDdtRzh2enBNV3prVmY3VXh2VU12aS1jN2tuUjJpd0tSTFM4Ul9UNC1kSmlIVWJTNjdpZDYyRS1HMEU0TXVtMEhrT2w2bzRZd3hOU052QjdtNlF6YVJQVkxGQ1pWbVFQS0M3VDkycFp3UWpQTGZKaEcyc0N2eXJXWlE?oc=5",
+   "nota": "Depofer SA, la metalúrgica de Quilmes investigada por presunto vaciamiento y el robo de caños del GNEA, entró en concurso preventivo",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
    "id": "prensa-GZEdGaFFRP29jPTU",
    "fecha": "2026-11-20",
    "tipo": "despidos",

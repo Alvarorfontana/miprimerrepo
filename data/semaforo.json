@@ -57,6 +57,17 @@
    ]
   },
   {
+   "plantaId": "tenaris-siat-valentin-alsina",
+   "planta": "Tenaris Siat · Valentín Alsina",
+   "provincia": "Buenos Aires",
+   "rama": "Tubos",
+   "puntos": 15,
+   "color": "verde",
+   "motivos": [
+    "2026-11-21 · conflicto (150) · Diario EL SOL"
+   ]
+  },
+  {
    "plantaId": "ternium-san-nicolas",
    "planta": "Ternium · Planta General Savio (Ramallo)",
    "provincia": "Buenos Aires",
@@ -104,15 +115,6 @@
   {
    "plantaId": "tenaris-siderca-campana",
    "planta": "Tenaris Siderca · Campana",
-   "provincia": "Buenos Aires",
-   "rama": "Tubos",
-   "puntos": 0,
-   "color": "verde",
-   "motivos": []
-  },
-  {
-   "plantaId": "tenaris-siat-valentin-alsina",
-   "planta": "Tenaris Siat · Valentín Alsina",
    "provincia": "Buenos Aires",
    "rama": "Tubos",
    "puntos": 0,
