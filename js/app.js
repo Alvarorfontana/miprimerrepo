@@ -340,22 +340,21 @@ function tab(t) { S.tab = t; for (const n of ["informe", "plantas", "ramas", "vi
 /* ---------- Vigilancia: lo que juntan los gestores automáticos (solo sector metalúrgico) ---------- */
 async function vigilancia() {
   const el = $("p-vigilancia");
-  if (!S.vig) { el.innerHTML = `<p class="muted small">Cargando…</p>`; const [sem, bo, bc, pr, ppc] = await Promise.all(["semaforo", "boletin-oficial", "bcra-empresas", "prensa-pendientes", "ppc"].map(n => getJSON(`data/${n}.json`, null))); S.vig = { sem, bo, bc, pr, ppc }; }
+  if (!S.vig) { el.innerHTML = `<p class="muted small">Cargando…</p>`; const [sem, bo, bc, pr, ppc] = await Promise.all(["semaforo", "boletin-oficial", "bcra-empresas", "hechos-sector", "ppc"].map(n => getJSON(`data/${n}.json`, null))); S.vig = { sem, bo, bc, pr, ppc }; }
   const { sem, bo, bc, pr, ppc } = S.vig, COL = { rojo: "var(--bad)", amarillo: "var(--warn)", verde: "var(--ok)" };
   const dot = c => `<span aria-hidden="true" style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${COL[c] || "var(--nodata)"};margin-right:6px"></span>`;
   const link = (u, t) => u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
-  const repo = "https://github.com/Alvarorfontana/miprimerrepo/issues?q=is%3Aopen+label%3A%22a+revisar%22";
-  let h = `<p class="small muted">Datos que juntan solos, todos los días, los gestores del observatorio. Solo sector metalúrgico. Cada dato tiene su fuente.</p>`;
+    let h = `<p class="small muted">Datos que juntan solos, todos los días, los gestores del observatorio. Solo sector metalúrgico. Cada dato tiene su fuente.</p>`;
   // semáforo
   const pls = (sem?.plantas || []).filter(x => x.color !== "verde");
   h += `<h3>Semáforo de plantas <span class="badge auto">${esc(sem?.actualizado || "sin datos")}</span></h3>`;
   h += pls.length ? `<ul style="list-style:none;padding:0;margin:0">${pls.map(x => `<li style="padding:8px 0;border-bottom:1px solid var(--line)"><b>${dot(x.color)}${esc(x.planta)}</b> <span class="muted small">${esc(x.provincia || "")} · ${x.puntos} puntos</span><div class="small">${x.motivos.map(esc).join("<br>")}</div></li>`).join("")}</ul>`
     : `<p class="small">Todas las plantas seguidas en verde.</p>`;
   h += `<p class="small muted">${esc(sem?.nota || "")}</p>`;
-  // prensa a revisar
-  const pend = (pr?.pendientes || []).filter(x => x.estado === "a revisar").sort((a, b) => b.fecha.localeCompare(a.fecha));
-  h += `<h3>Prensa a revisar <span class="badge manual">${pend.length}</span></h3><p class="small muted">No cuentan en el semáforo ni en los informes hasta aprobarlos. Para aprobar: abrí el <a href="${repo}" target="_blank" rel="noopener">listado en GitHub</a> y ponele la etiqueta "aprobado".</p>`;
-  h += pend.length ? `<table><thead><tr><th>Fecha</th><th>Planta</th><th>Hecho</th><th>Nota</th></tr></thead><tbody>${pend.slice(0, 40).map(x => `<tr><td>${x.fecha}</td><td>${esc((S.plantas.find(p => p.id === x.plantaId) || {}).nombre || "No seguida")}</td><td>${esc(x.tipo)}${x.cantidad ? ` · ${x.cantidad}` : ""}</td><td class="small">${link(x.url, x.titulo)}${(x.otras || []).length ? ` <span class="muted">(+${x.otras.length} notas)</span>` : ""}</td></tr>`).join("")}</tbody></table>` : `<p class="small">Nada pendiente.</p>`;
+  // hechos de prensa: una fuente más del observatorio
+  const hs = (pr?.hechos || []).slice(0, 30);
+  h += `<h3>Hechos del sector en la prensa <span class="badge auto">${hs.length}</span></h3><p class="small muted">Empresas metalúrgicas que todavía no están en el mapa de plantas. Los hechos de las plantas seguidas se suman directo a cada planta y al semáforo.</p>`;
+  h += hs.length ? `<table><thead><tr><th>Fecha</th><th>Hecho</th><th>Nota</th></tr></thead><tbody>${hs.map(x => `<tr><td>${x.fecha}</td><td>${esc(x.tipo)}${x.cantidad ? ` · ${x.cantidad}` : ""}</td><td class="small">${link(x.url, x.nota)} <span class="muted">· ${esc(x.fuente)}${(x.otras || []).length ? ` y ${x.otras.length} medios más` : ""}</span></td></tr>`).join("")}</tbody></table>` : `<p class="small">Sin hechos nuevos.</p>`;
   // boletín oficial
   const ac = bo?.acuerdos || [];
   h += `<h3>Boletín Oficial: acuerdos con la UOM y ASIMRA <span class="badge auto">${ac.length}</span></h3><p class="small muted">Suspensiones y acuerdos homologados por la Secretaría de Trabajo. Si la empresa figura solo en el anexo, se indica.</p>`;

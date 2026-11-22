@@ -27,7 +27,6 @@ jobs:
       - name: Lector de prensa
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DIAS: ${{ github.event_name == 'push' && '14' || '2' }}
         run: node scripts/gestores/prensa.mjs
       - name: Analista

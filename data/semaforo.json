@@ -1,19 +1,34 @@
 {
- "actualizado": "2026-11-21",
+ "actualizado": "2026-11-22",
  "sector": "metalúrgico",
- "nota": "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
+ "nota": "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Fuentes: oficiales, Boletín Oficial, Banco Central y prensa. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
  "suspensionesHomologadasPorMes": {
   "2026-09": 1
  },
  "plantas": [
   {
+   "plantaId": "mirgor-rio-grande",
+   "planta": "Mirgor · Río Grande",
+   "provincia": "Tierra del Fuego",
+   "rama": "Electrónica",
+   "puntos": 80,
+   "color": "rojo",
+   "motivos": [
+    "2026-11-17 · suspensiones · DeGremiales.com",
+    "2026-11-12 · despidos (16) · La 97 Radio Fueguina",
+    "2026-08-10 · despidos (300) · Infobae"
+   ]
+  },
+  {
    "plantaId": "pauny-las-varillas",
    "planta": "Pauny · Las Varillas",
    "provincia": "Córdoba",
    "rama": "Maquinaria agrícola",
-   "puntos": 30,
-   "color": "amarillo",
+   "puntos": 65,
+   "color": "rojo",
    "motivos": [
+    "2026-11-19 · suspensiones · eccos multimedios -",
+    "2026-11-16 · conflicto · MONTE MAIZ MIRA",
     "2026-11-12 · retiros · Bichos de Campo",
     "2026-11-03 · conflicto (450) · Bichos de Campo"
    ]
@@ -23,21 +38,22 @@
    "planta": "Metalfor · Marcos Juárez",
    "provincia": "Córdoba",
    "rama": "Maquinaria agrícola",
-   "puntos": 30,
+   "puntos": 45,
    "color": "amarillo",
    "motivos": [
+    "2026-11-18 · conflicto · iProfesional",
     "2026-08-06 · despidos (225) · iProfesional"
    ]
   },
   {
-   "plantaId": "mirgor-rio-grande",
-   "planta": "Mirgor · Río Grande",
-   "provincia": "Tierra del Fuego",
-   "rama": "Electrónica",
-   "puntos": 30,
-   "color": "amarillo",
+   "plantaId": "acindar-villa-constitucion",
+   "planta": "Acindar · Villa Constitución",
+   "provincia": "Santa Fe",
+   "rama": "Siderurgia",
+   "puntos": 15,
+   "color": "verde",
    "motivos": [
-    "2026-08-10 · despidos (300) · Infobae"
+    "2026-11-15 · conflicto · DeGremiales.com"
    ]
   },
   {
@@ -62,15 +78,6 @@
    "plantaId": "ternium-canning",
    "planta": "Ternium · Planta Canning",
    "provincia": "Buenos Aires",
-   "rama": "Siderurgia",
-   "puntos": 0,
-   "color": "verde",
-   "motivos": []
-  },
-  {
-   "plantaId": "acindar-villa-constitucion",
-   "planta": "Acindar · Villa Constitución",
-   "provincia": "Santa Fe",
    "rama": "Siderurgia",
    "puntos": 0,
    "color": "verde",

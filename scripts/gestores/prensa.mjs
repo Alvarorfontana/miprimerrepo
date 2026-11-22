@@ -1,7 +1,7 @@
 // Gestor 3 · Lector de prensa. Solo sector metalúrgico.
 // Busca en Google Noticias (RSS gratis) el nombre de cada planta seguida junto a palabras de conflicto laboral,
 // y búsquedas generales del sector (UOM, ASIMRA, metalúrgica). No carga nada directo: deja cada hecho
-// en data/prensa-pendientes.json y abre un issue "a revisar" en GitHub. Álvaro lo aprueba poniéndole la etiqueta "aprobado".
+// directo en los datos (data/eventos.json para plantas seguidas, data/hechos-sector.json para el resto), con medio y link.
 import { readFile, writeFile } from "node:fs/promises";
 const leer = async (f, fb) => { try { return JSON.parse(await readFile(f, "utf8")); } catch { return fb; } };
 const norm = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -26,7 +26,7 @@ const consultas = [
 // el título tiene que hablar de trabajo o crisis, y no de otro país
 const LABORAL = /despid|despide|suspend|suspensi|cierr|cerr[oó]|cesant|toma\b|tomaron|paro\b|retiros|quiebra|concurso|preventivo de crisis|uom\b|asimra|trabajadores|operarios|obreros|salarios adeudados|desvincul|conciliaci/i;
 const AFUERA = /nuevo le[oó]n|\bnl\b|uanl|monterrey|m[eé]xico|brasil|colombia|guatemala|chile\b|per[uú]\b|estados unidos|jalisco|puebla|amurrio|espa[ñn]a|valencia|casa blanca|precio objetivo|tradingview|acciones de/i;
-const tipoDe = t => /quiebra|concurso preventivo/i.test(t) ? "conflicto" : /cierr|cerr[oó]/i.test(t) ? "cierre" : /despid|cesant|desvincul/i.test(t) ? "despidos"
+const tipoDe = t => /quiebra|concurso preventivo/i.test(t) ? "conflicto" : /cerr[oó](?=[\s.,]|$)|cierra\b|cerrar[aá]|cierre definitivo|baja la persiana/i.test(t) ? "cierre" : /despid|cesant|desvincul/i.test(t) ? "despidos"
   : /suspend|suspensi/i.test(t) ? "suspensiones" : /retiros/i.test(t) ? "retiros" : /reincorpor/i.test(t) ? "reincorporacion" : "conflicto";
 const cantidadDe = t => { const m = t.match(/(\d{1,3}(?:\.\d{3})*|\d+)\s+(?:trabajadores|operarios|empleados|obreros|despidos|suspendidos|puestos)/i); return m ? +m[1].replace(/\./g, "") : null; };
 const desde = new Date(); desde.setDate(desde.getDate() - +(process.env.DIAS || 7));
@@ -60,16 +60,7 @@ for (const n of nuevos.sort((a, b) => a.fecha.localeCompare(b.fecha))) {
 }
 for (const g of grupos) delete g._base;
 nuevos.length = 0; nuevos.push(...grupos);
-pend.pendientes.push(...nuevos); pend.actualizado = new Date().toISOString().slice(0, 10);
-pend.nota = "Hechos del sector metalúrgico detectados en prensa. No cuentan en informes hasta que se aprueban.";
-await writeFile("data/prensa-pendientes.json", JSON.stringify(pend, null, 1) + "\n");
-console.log("nuevos a revisar:", nuevos.length);
-
-// un issue por hecho, para aprobar con la etiqueta "aprobado"
-const TOKEN = process.env.GITHUB_TOKEN, REPO = process.env.GITHUB_REPOSITORY;
-if (TOKEN && REPO) for (const n of nuevos.slice(0, 25)) {
-  const p = plantas.find(x => x.id === n.plantaId);
-  const body = `**${n.titulo}**\n\n- Planta: ${p ? p.nombre : "⚠️ empresa no seguida todavía"}\n- Hecho: ${n.tipo}${n.cantidad ? ` · ${n.cantidad} trabajadores` : ""}\n- Fecha: ${n.fecha}\n- Fuente: [${n.fuente}](${n.url})${(n.otras || []).length ? `\n- También: ${n.otras.slice(0, 6).map(o => `[${o.fuente}](${o.url})`).join(", ")}` : ""}\n\nPara cargarlo: poné la etiqueta **aprobado**. Para descartarlo: cerrá el issue.\n\n<!-- hecho ${JSON.stringify(n)} -->`;
-  await fetch(`https://api.github.com/repos/${REPO}/issues`, { method: "POST", headers: { Authorization: `Bearer ${TOKEN}`, Accept: "application/vnd.github+json" },
-    body: JSON.stringify({ title: `A revisar: ${n.tipo} · ${p ? p.nombre : n.fuente}`.slice(0, 120), body, labels: ["a revisar", "prensa"] }) }).catch(e => console.log("issue", e.message));
-}
+// Las notas periodísticas son una fuente más del observatorio: entran directo a los datos, con medio y link.
+const { incorporar } = await import("./incorporar.mjs");
+const r = await incorporar(nuevos);
+console.log(`prensa: ${r.nuevosEv} hechos nuevos en plantas seguidas, ${r.nuevosSec} del resto del sector, ${r.repetidos} notas sobre hechos ya registrados`);

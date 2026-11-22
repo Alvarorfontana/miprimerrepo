@@ -1,6 +1,6 @@
 // Supervisor: revisa que cada gestor haya actualizado sus datos a tiempo. Si alguno se atrasó, abre un issue.
 import { readFile } from "node:fs/promises";
-const MAX = { "boletin-oficial.json": 5, "prensa-pendientes.json": 3, "semaforo.json": 3, "bcra-empresas.json": 35, "energia.json": 35,
+const MAX = { "boletin-oficial.json": 5, "hechos-sector.json": 3, "semaforo.json": 3, "bcra-empresas.json": 35, "energia.json": 35,
   "indicadores-auto.json": 20, "establecimientos.json": 20, "empleo-oede.json": 20, "acero-caa.json": 20 };
 const atrasados = [];
 for (const [f, dias] of Object.entries(MAX)) {
