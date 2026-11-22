@@ -32,6 +32,6 @@ salida.sort((a, b) => b.puntos - a.puntos);
 // resumen sectorial: acuerdos de suspensión UOM/ASIMRA homologados por mes (todas las empresas metalúrgicas)
 const porMes = {}; for (const a of bo.acuerdos.filter(a => a.tipo === "suspensiones")) porMes[a.fecha.slice(0, 7)] = (porMes[a.fecha.slice(0, 7)] || 0) + 1;
 await writeFile("data/semaforo.json", JSON.stringify({ actualizado: hoy.toISOString().slice(0, 10), sector: "metalúrgico",
-  nota: "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
+  nota: "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Fuentes: oficiales, Boletín Oficial, Banco Central y prensa. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
   suspensionesHomologadasPorMes: porMes, plantas: salida }, null, 1) + "\n");
 console.log(salida.filter(s => s.color !== "verde").map(s => `${s.color.toUpperCase()} ${s.planta}: ${s.motivos.join("; ")}`).join("\n") || "Todo en verde.");

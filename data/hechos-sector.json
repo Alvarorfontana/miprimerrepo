@@ -1,0 +1,203 @@
+{
+ "hechos": [
+  {
+   "id": "prensa-GZEdGaFFRP29jPTU",
+   "fecha": "2026-11-20",
+   "tipo": "despidos",
+   "cantidad": 40,
+   "fuente": "Canal Doce Misiones",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV3U3Y1l5MnZOMmFvQTI1UnFkSG1qb3FPUUluMFd5dDZ3UGI3STlVaUowNnpGMkJtSlIzRno5LVdRd1ZMZFR5aFEzekpub2xCZlVXOHU2Wm1ReEZxMlp5NVlLZlI5NzJ6TXduOHBQTEFfYnljTzFFbVJZOXcwQ1NFdGFhQQ?oc=5",
+   "nota": "Crisis en el sector autopartista: trabajadores ocuparon la planta de Taranto en Córdoba tras más de 40 despidos",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-CWkZSU1p3P29jPTU",
+   "fecha": "2026-11-20",
+   "tipo": "despidos",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPek9VWDNrUjVYeHowVDZGLVBMb0Q0bUN3bXl1aDFYbDgtNDVGN2VuYlVZNUtKM0hmQmRyTDlqb1Jyb2ZENF9RX0hEeHpxcXJQc1pqclQzcXF2LXZDaVJkQk5nZnVYajRRVTd5NW1RaGxUejlqUGtnUS1MR2NzOFVwdTE2Mzh0RWNEUWZab0JaemdiQXRMRWlRVHlfd3VIbkppd25LSnNiRHBPLXFvdzJ0SV90d3F2MjhJV1FpTzJya3lNZHg2YXVjRVhPcXFIeHZnVUpranN0OUtCWGRvblBDeFJBZFRSZw?oc=5",
+   "nota": "Se profundiza la crisis autopartista: operarios ocuparon la planta de Taranto en Córdoba por más de 40 nuevos despidos",
+   "origen": "prensa",
+   "otras": [
+    {
+     "fuente": "Huella del Sur",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcTRwM3ZRWEVpLUtPRTU1YlpYWFFJdUhaQVBhcjgyeFBoOEY1Xy1VLW40akp3TDVjalJkQ1VGWERCR19tQ3daRkxwTnhwXzgtWHFKOU80OEEwRlBiQWs2TUJxUjQ4eGtJSzktbmMzTlFsZllqQ04tZzJDZ0NXX3pnSS10cGlvaEdpTU9QNy1Vd0FSMzVrd2Jvd2xMSVd6N2NZTnkya0lwSnRHYy05R3Z0YnZmMml5U1JZMTJTZ0RsQWZxVlFVQzVkMmtvOThDaTduVUNkUmY1SC1GSWtKUFV2YjQ2TzN5MVdV?oc=5"
+    },
+    {
+     "fuente": "Huella del Sur",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcTRwM3ZRWEVpLUtPRTU1YlpYWFFJdUhaQVBhcjgyeFBoOEY1Xy1VLW40akp3TDVjalJkQ1VGWERCR19tQ3daRkxwTnhwXzgtWHFKOU80OEEwRlBiQWs2TUJxUjQ4eGtJSzktbmMzTlFsZllqQ04tZzJDZ0NXX3pnSS10cGlvaEdpTU9QNy1Vd0FSMzVrd2Jvd2xMSVd6N2NZTnkya0lwSnRHYy05R3Z0YnZmMml5U1JZMTJTZ0RsQWZxVlFVQzVkMmtvOThDaTduVUNkUmY1SC1GSWtKUFV2YjQ2TzN5MVdV?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "id": "prensa-VDNkaWRHYz9vYz01",
+   "fecha": "2026-11-19",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMlhZVl9vclhZblZKZzdKZ2lzQWxuQUlrZ1FQSEw2ZGlwY183YVBCTEVwdVdiOGVpREROZE8ta3M1blV3LWVRLUR0ZkpQbi1qTV9CNkFYOFY2Ny1UTF8tTnIzMXZuRHdlV3hQOHQteTZEdk5Yb04xaGNxNkxDSmZzWThvb25JeGhjbWZ0RlNhUnZGNTZRSUF3QVoyd2tZbER5bTdFZnVma1BPdVZ1VG9TMWZLY2hTT1BSZHN4eG1iQmw3TTRCZmhXUVRFX180M0hQZGdUSmxDUTdjT3didGc?oc=5",
+   "nota": "Tras un paro por tiempo indeterminado, la UOM logró un bono de casi $1,3 millones para los trabajadores de Acerbrag",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-UVVFME9UZz9vYz01",
+   "fecha": "2026-11-19",
+   "tipo": "cierre",
+   "cantidad": null,
+   "fuente": "Página|12",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQmp6RmVvUnRWdGFjNDdFNDVCZy1fdFdsdGU1dTFOeUlvXzRLdTNTWFB0bm1NSUF4QXpIbHAxZE9mb05FWVhRZTE4ZTIyZzRJOWM0aE1heGMtUjc4c2owb0NqUVc2MV9BWTNlTFNZbThreFdsLWlXNmRHREYxaTlpMnU3VXZndGliMWkySEVXWFNlZE1kNDcyMU1talJxYS1GSHA2eTQ2VnJPNUZzNXVNcEZsRTV2aENTVE41ai1DQUE0OTg?oc=5",
+   "nota": "En el país del agro, la producción de maquinaria agrícola se paraliza, cierra o despide",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-GWlJOekU0P29jPTU",
+   "fecha": "2026-11-19",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVHFXMHlMaGJuM2lxVzVZSmk4VExUWG9MRzFHbldHX3Ywb21yemN0NV9jZDB2SUVhaEEtVnVrcHFCSU01cUFfV1c3d0tHVjdhZ3VOcl9BR3Rld1FEdkZ2bnJzRjczeDZLN0g0Y1JqOU1EVU4zaUl4NTY4NUtMR3NKa2h1SDBZZmJiaEdrbXZFcHRVTUlPRnU2R1FlVGlNT1Z1RHo4SWdEazFxa1FjZG9mSmZiUHduTVZhaXpSM09vaUVfcFZRNzE4?oc=5",
+   "nota": "La caída industrial no cede y otra empresa de maquinaria agrícola entró en concurso preventivo",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-5MVNSV1IzP29jPTU",
+   "fecha": "2026-11-18",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPUXZodFl1TXRja0JxMkF5dDFjTEVDeGNsUEpZX3NaWTVKaGFTclg2b2NIRVlCM0c0c19rVkFvZmhxakU4TEV5aEp0LU01cUFRV0doUHJqTHIwS29CclZZcjVyZ1h6NU5PaTNSWnp5NlNhdS1WUUM4aVU3b1hkYXBDaDZOUnYzOHpJZC1wNW02Y1lSSTVZbGxwY1doMkl5b2xyMG1KejVsSHVHbUk5bTFycEFDMlQ1OUVyRkwyOUZIUUszZzBrMHMxRXdhMGV0bjlOMnI2d2FWdVFVLURpQy1SRWR3?oc=5",
+   "nota": "Bonetti pidió normalizar la UOM y advirtió por el vencimiento de un convenio colectivo que considera desactualizado",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-YWtwWGNrRT9vYz01",
+   "fecha": "2026-11-18",
+   "tipo": "despidos",
+   "cantidad": 90,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxQTHhxQ013OWJobzE3WkdKSVBiOW1NckxUUUozbkpLMm15dDFMVFNPaEp1NGdBX3cwdXZibGZBZWR4NXdTVG5EWWFjWGlHemJHMGlYVjZfZUpldk4wWGJoQk8xcTNHRmdBY2V0VGZhMi0wYzl2aEZTdzl5RGZGS2ExVGxqWnIyUzBXOTFNamNrOUZxZTc4RzU5ZlhHX3lzRUU0c2hjUzI4X0t6TC1mNF94WTNCVnctSHVRcFdPY0JXQWVoTmtGazk5NG1mNzZaQk5wZko0aW5rajBYWUlNaldLbDBpaUx5bF9YRVVySmhLdmdGaGFtbXRYVFZVYU5rTUxLczFiak9mS0VDcWRleU1pemhHd1Zlc0xtRkN0aDZYQlBBakpXckE?oc=5",
+   "nota": "Trabajadores de fábrica de maquinaria agrícola Plantium reclaman frente a la planta en Villa Constitución por el cierre, los 90 despidos y meses de atrasos salariales",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-VdHJOVjluP29jPTU",
+   "fecha": "2026-11-18",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Hoy Día Córdoba",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sLXZFWFltUHdzb3RZSjY3c3JXQURfZ3lNRUx2SWZuLVBHanN4R3VCVXEzWXFyb0MxRGsyc1ZSSFRqd2E3NzF3VlNFT1hYXzJhajFYb1UzOElGd2Q3d3NJd0xtM1XSAWpBVV95cUxOZjlpTzFvazF4Q0JlbXB5Vi16S0pZR2R6NjlSQTF1TV9aQ05xVFVWRVk5TnZPMThoeXBfVXptVnZ4U3U3Z0FuYS1nUnhtNl9iVzJNVnJCVTJKWnQ2SnZqSjhTVjJMVUtrNV9n?oc=5",
+   "nota": "Otro revés para la maquinaria agrícola: Agro de Souza pidió el concurso preventivo | 18 de noviembre de 2026",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-ITkpOalZ4P29jPTU",
+   "fecha": "2026-11-18",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Cuestión Entrerriana",
+   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPS0ZRVmVQdGtjNzIyeUNnd3RjM2kwWjFfMjFGX1JmMXd1bXN4MV9hVWtPanNJWnhaeXlEYXVSNFNQM0VWSThaLVZEUkFlb0hSVTdqbE1tVTdaR21KeFhkOGlGRDRWUFhEbWJsZXlkM0ctb1pJUXpZazFJNm9KYmZDMzNxbEVVRUpQaFVxbUV1OHota29ZQnNwcFhDSHFudEdNUmE3OUNVQmtVQlFUQ0hfWTJ5bHdGdkFYczdJR2s0S3JwWVozcDNCaGRkbkVkckhKczhUcDdEaWdmaVRMcHJGRjBuWFBudDBKSEo3bFBGUHNJNjVx?oc=5",
+   "nota": "Crisis de maquinaria agrícola: concurso de Agro de Souza",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-lbFJSY1ZFP29jPTU",
+   "fecha": "2026-11-18",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPd0VUT09SRF9pZzJmSEwyMld1WDJBM3JVUTRDeUltQlkwLV9iamhZcmhWd3lVTENkaTdmTm9uTlNCbndRNlJSNHRzNE9LX0ZRS0NkZ0J5bnRVTnJrS0xzVjJONlVIMUt0eUxaY3U3U2tqUGJ0dFRidTltWENsazk3TVlkLXFGdjhhRk82X2dlVXhtWVp6V3ctRHdCWlZVdjFmMXMzNk1sQnpseUtMWGswVC1hd1hHMW5WRWEzNkxHeHNBZzJIRUZWYjFCQ29kelRRcVE?oc=5",
+   "nota": "La UOM volvió a la mesa paritaria en medio de la crisis industrial y la presión por recomponer salarios",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-FUTFRMmR3P29jPTU",
+   "fecha": "2026-11-14",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdkNaam5yTi16OGhQcHY3UU9Bei16d0xyd0hDQmRreTVSNk9Cc3diVVNMXy1RTW5mQktRR3lRNU9yZllOZEZWa0NxejdwZkNva1ptbjhUV3BtUmpUQURIT1NMYkNBZTNUR2NMcTIzTjVzMnhZTU1ZVEw4NEhGeFVsazVqQ0Y3NTl1ZXBwTnB0Zkx4YVg4SnliYjNVUmVReEtJanhRU2FZMDZMMVZaRER1U1Ztc2NmMXZ2b1VqLUljSXVmRVhXQk1SQ0I4cXF3WGpTU3VSdTdHVEVrdk11dVk1SXc4WjIxNV9oZmtEQ1Q2dw?oc=5",
+   "nota": "La paritaria siderúrgica de la UOM entra en su tramo final entre tensiones internas y amenaza de huelga en Villa Constitución",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-NGMzUkxadz9vYz01",
+   "fecha": "2026-11-13",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Cuestión Entrerriana",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYWlHSDdWMS1WLWJkUkQ5TDBTZk1JeEVHd0M5SE1icklmT0xURTVDUk1UVjR1NVp6YWFabnlmYUszbkF2MjhnbGptWXVCeEw1YUM4cEVxNnJCUmxkUXRIelMyaXlvc2VjekFTbDZNUHRCNFBjVXBrZFhkODhYOVBVc3pSNnZyVV9VRWs0RmY3bEM4TExOaEdvQk4yUk12c0MtcW5NRF96YlVPc01uV01HcGUyZFRwcG5FcWprYTZXbVhUc2N4N0REb2h4c3RLZw?oc=5",
+   "nota": "Crisis en la industria metalúrgica: Promettom entró en concurso tras perder a su principal cliente",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-VzV3ZURVMz9vYz01",
+   "fecha": "2026-11-13",
+   "tipo": "despidos",
+   "cantidad": null,
+   "fuente": "Urgente24",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeUpmWkFlMWdKY2NWOXpVcm14dFNrb3VpS0RQY3lWeW9EMEJnVUFYTVhrTzUtNTJLYlNRaGNWVm1YWUNsOV9DMmxKWHltRGxHNVpWZmpmeUxUS2FUald4dXMwLWN2RE9lakFNMlE1TUp4OUFrd1pNRFhQODNTN0lIVzJIdERMRS1xcm1GMGRGbDVteUNOdXpkS19tRdIBoAFBVV95cUxPbWMxa2ZmcGdoUGxUQnNYLTdzMzJiUmRaVXdtSGpnU05FNUprZVZJR2FlZXd6X3puRnh4VVpzSjlHbUhiU1ZaUnI0WTVaOW1faC1NbzhJbWhROWZZTndhREpYUGI5MnFmek14aERuay1RSXhkYVcwOXJnMTJkZXp4RlJYNjhXTV83R0Z3TlJnQTdvYjJOakpaekdsdW5weDU3?oc=5",
+   "nota": "Incertidumbre en una empresa de maquinaria agrícola tras ola de despidos",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-JZFVONFVRP29jPTU",
+   "fecha": "2026-11-11",
+   "tipo": "cierre",
+   "cantidad": null,
+   "fuente": "La Gaceta",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOZ29qY0pPZzM4ZHNxc2JjMDFqanVXRkNMc1NLUkRQam16U1EtT3ZXRTBiaUJXRmgwak5ZZ1RoWlgtbG05cjZmeVJscWlMTU9jbGoyM1ZSSkxsYzNXcmRKR2lwVWtRX2JMUldwT2R6VlFKdXZuVHVoejNITGd3R2YtaGd4T3ktT2ZkOVp4LVRsYWd2RVVmR0tPVTlKS0dCb3VRdkZzMW5IYVh1U0k1ckRQdlRaZFp0X3VNMU5iSS1Zc295RjdvNFRNVTRlbUQ1WlhwVkpuVHln0gHbAUFVX3lxTE02UTg2b2QwUl9OckRoOTJta2ZJcjlQdmE3MlpGY3lpTXkzSDRuQURmRnp0d1ZvV2Z1cmhXWUpPTjRhUmRyNHNSSFNnczBoZTVfXzU0M3ZfZzZyRUtrYnZETXN2ODRnUUJxaHBZMmpLUFBic1NSeU9oU0RhUWszTVNvTkVBUEM5WDJWVEV0Wjh1M0N3cWR1NUs4eUNFRE1nUExOdE5VOFdTVGV6SmVFWjZuV3Z2UTNwSU5HbHRsUW1DUkx2NVpyemYtMXoxTmo5NzdqbEVWa0dIdUN4UQ?oc=5",
+   "nota": "Córdoba: una autopartista que fabrica asientos para Renault cerrará su planta y hay temor por los despidos",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-NGVteHdWQT9vYz01",
+   "fecha": "2026-11-11",
+   "tipo": "despidos",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQLU5pUGc0Rk9OeEdqZ3FsSXpTNG9oQ3MzZHQwT0hFNkExRUF2RVlyVW95NHhrQWRkMk1XeGNQTkYwNThoeGhVZWp2ZXF5eEg4NGlsaTdfRnVnSkVvQktSZ3RKZy14X3VuWVlFS2ZzMkI2bGlFd2NodDl6dmZQNk9uSHBGLTZoMUtjYl83RHliVnhPSlJVbXpUQVRnNVdzbjliLXNvbjBqcTdWUEZUb2Y4dG56MnN5SFBoRVpNUWFaOGwya2JMaGk1UzJZMG8xWW51dFItclR0SFZaXzE4emxwVA?oc=5",
+   "nota": "La autopartista multinacional Magna abandona sus operaciones en Córdoba, habrá despidos y la producción quedará en manos de Renault",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-elJFUVc1Mz9vYz01",
+   "fecha": "2026-11-11",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "InfoGremiales",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSVhTNjNZVVpSbENPT1NEYmt4b1lKbkNELUNYUXVRZ3J3dEJqd0wtTHhERGpEY2swcmt1TmIzZUc3enlkd0E2bDJfeFZPQURwMlgwdVUxQnpFbWR2REdUMV96U1pPYjZBaWRCZnZyOTAxdi02QW5hNVF5WFUwQXNnVFJpdXh1Vk81Q19Odnh1bWkyend2cnhoeENlNmZNT2tlWERhdmd1OEI3SmZRTjlZclFISFRvWVdBcHpra01xNTlVMUE4cDdkNURCV0hOQ1h2TkFFcHJUTlNCcl83WVd3YlllN2RVM0xZNzREQW53?oc=5",
+   "nota": "Acuerdo entre la UOM Jujuy-Salta y la siderúrgica Zapla: deuda salarial en 20 cuotas y un aumento acumulado que supera el 80%",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-eloxSnROZz9vYz01",
+   "fecha": "2026-11-10",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "El Submarino Jujuy",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaXlUMVVUUm9mU1JUSk5EdG5oM0FEV0FIajZLeGR0MFZCd293aDEyUkV4R1BxRVU5VGZlUFp2bVBuVUVFSjRkYzdSanpGYkNQaUxvMk5nUko3eXZkMkRTTndxUGMwUDE0eUx1RzJwOUx5SkR2UUFFUUJHck92bzVGVENBcWxGcm5TLW5JOUxDdk5vVlZxaE9Vc0dEQlZqdURJYlNnbWo3djh0bU5LcUtB0gG0AUFVX3lxTE9QT2hqamllT1NQbmJiWWlEbjVfUnRkQXV4dHRlOGlEYy14aS1KajdCN1BDSnNST3h1SkNOR2hhNWFVaUFtVmVUWTQ5RkV2ZnNwQzJYUGpTdERodTJjRGRWODE3c2xwcW5JWHVIUURjUFl0VXdvTTdoZldmQ3ZnSng0N1Z5dENOYWlPYWtqWnFzMzRDNjZ0MUdOdmVzZ0twVk5nVGhhYzBmVDBoeEh3d1UzZ1JtNg?oc=5",
+   "nota": "Acuerdo UOM-Zapla: Pago en cuotas de la deuda y aumento salarial de más del 80%",
+   "origen": "prensa",
+   "otras": []
+  }
+ ],
+ "actualizado": "2026-11-22",
+ "nota": "Hechos del sector metalúrgico en empresas que todavía no están en el mapa de plantas, relevados de la prensa. Cada uno con su medio y su link."
+}

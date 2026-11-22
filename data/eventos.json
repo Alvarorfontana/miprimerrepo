@@ -1,6 +1,92 @@
 {
- "actualizado": "2026-11-20",
+ "actualizado": "2026-11-22",
  "eventos": [
+  {
+   "id": "prensa-5GSlNIWko_b2M9NQ",
+   "plantaId": "pauny-las-varillas",
+   "fecha": "2026-11-19",
+   "tipo": "suspensiones",
+   "cantidad": null,
+   "fuente": "eccos multimedios -",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWWtpb2V3eGJzX3RjeGR5RDBSdWMzQ2p6c2F1dXFKdXRKSEpUOEd2MjVPdWJjQ1htTU1Rdjl1N2dISS1oSmxpX1hZZHBpR0pZRDRGYTlud01BbGZ4emRGQ2tMMjVTZTRHWjUtU3diNm0yRGtFN1RIclMyZUh0UWJVWTAyNEgybG1kVTJiZy1TOWFFUnFJSHZJ?oc=5",
+   "nota": "Crisis en Pauny: la empresa propone reactivar la fábrica, pero plantea suspensiones y reducir su personal - eccos multimedios -",
+   "origen": "prensa",
+   "otras": [
+    {
+     "fuente": "InfoGremiales",
+     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNmlnRHBWSFFMb1lxc0hfOUxGWUN2SkdEQXJKU0x0YlVhX0JVU2Jhekl3NFM0aHoxN19VUGRVU2ZOMGF5X1dJd1pkTGoxUWZNNGhLNEM5Y2FGR3N4WWhvM2ZFakFkelVMMXNsSzVyb3RWUnNPS3IwaXVKTnc1all1Q2YzRXNYcEFJdlZkc24zM05ZQmw1cS1tQjRNMjI0SWY1X2hwVTZJcXNoOUgwVlQ4R1lrQnNITm5UUGZCb0hyUzZzVzJ1cURDS01tYmcybFA2THRxQ0NSaVVlTGZkM2pGRjJWODRMUklWdjBhQldqZGl5bDR1bW8xa0R1ZGFoWkRvME56cEFn?oc=5"
+    },
+    {
+     "fuente": "InfoGremiales",
+     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQNmlnRHBWSFFMb1lxc0hfOUxGWUN2SkdEQXJKU0x0YlVhX0JVU2Jhekl3NFM0aHoxN19VUGRVU2ZOMGF5X1dJd1pkTGoxUWZNNGhLNEM5Y2FGR3N4WWhvM2ZFakFkelVMMXNsSzVyb3RWUnNPS3IwaXVKTnc1all1Q2YzRXNYcEFJdlZkc24zM05ZQmw1cS1tQjRNMjI0SWY1X2hwVTZJcXNoOUgwVlQ4R1lrQnNITm5UUGZCb0hyUzZzVzJ1cURDS01tYmcybFA2THRxQ0NSaVVlTGZkM2pGRjJWODRMUklWdjBhQldqZGl5bDR1bW8xa0R1ZGFoWkRvME56cEFn?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "id": "prensa-5iSGd5WXc_b2M9NQ",
+   "plantaId": "metalfor-marcos-juarez",
+   "fecha": "2026-11-18",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "iProfesional",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOHFfLVp2VG82QnZZTk96bU9zWURfeHNud2lYWXU2UnVQS3dRdlhaN1paeldnS1FrYjJjQXNUSExnN1pZdDVjTEUxLUhSVHc1ZDRLSXBHQXVlT3RJclpyOTA0N0MzVDhnNEUxMTlvX3RvcjY5dkh2TmtJemZPTmttQkEtSTQxa1ljVnBYR3hTUWNfX09MQmJxSXkxRTlTcHZUcHh0dUZ5QlR4aDRHUjdNbHgyY9IBswFBVV95cUxQOHFfLVp2VG82QnZZTk96bU9zWURfeHNud2lYWXU2UnVQS3dRdlhaN1paeldnS1FrYjJjQXNUSExnN1pZdDVjTEUxLUhSVHc1ZDRLSXBHQXVlT3RJclpyOTA0N0MzVDhnNEUxMTlvX3RvcjY5dkh2TmtJemZPTmttQkEtSTQxa1ljVnBYR3hTUWNfX09MQmJxSXkxRTlTcHZUcHh0dUZ5QlR4aDRHUjdNbHgyYw?oc=5",
+   "nota": "Concurso preventivo: Agro de Souza se suma a Los Grobo y Metalfor",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-5sZldWTjM_b2M9NQ",
+   "plantaId": "mirgor-rio-grande",
+   "fecha": "2026-11-17",
+   "tipo": "suspensiones",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPSUFQU1k2eXdyQVlKNUVBLUV1UmltT0dSMUhRV2xCMEhmSzduSGNwMm1ZRjY5MkItcHBPV01DZ2k5UFQtZUZnQVBXbzluQW9KZHVYNGlSRDBrNmc5MmNwbGRNVHJiSE9JNWRHWVAtbkk4cWx0VUgtTFRNN0hWcFRMV01DZVJ1dXV0eDhWcURkOUxoM0RyZVNHaEtITEVlR3UzbDZFTjdzRHNTT0JLYm9wMVBiTGprRGtTT1RjV1JGNjdPaWJQb1dKM3I3dE1CN21nM0V5YzRCYi1SenJITU5XVjgxTUJ3cDlZdHhvOExyUXo5cWtRZnlfWVN3?oc=5",
+   "nota": "Ajuste en Tierra del Fuego: un acuerdo entre la UOM y Mirgor habilita suspensiones con quitas salariales y limita la actividad gremial",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-ZqRk9lSGc_b2M9NQ",
+   "plantaId": "pauny-las-varillas",
+   "fecha": "2026-11-16",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "MONTE MAIZ MIRA",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWE54WHhtNUkyUWVwY0xWcFZJaEx1MTFRRkw1SDIyemkzRjg3ZS1sTkY4NnpnRlhBaTRmOWpuY05hdE9yRVYxcU0zeTBIOXg5SUVZRWdHelBDWWh5ZlRnN0o4N2U4WmZ5c1dQTUxySnZyT0UyMGloMHdhelgwN2Y5YUhIQkVMNk1ScC1NVjFOeHg?oc=5",
+   "nota": "EL CIERRE DE PAUNY PONE EN JAQUE A LAS VARILLAS",
+   "origen": "prensa",
+   "otras": [
+    {
+     "fuente": "Bichos de Campo",
+     "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOUm5fTHE5RmZXWFBfMGpjZVRaNDQ5XzhjM0NnSjlFOXpRNE8wSjhaTVNrQmNjdFJ6a0Vvc2hGeEh6RndfbVl1WWNxWkhRWTRKRDJFVjFNNTZKWldHT1FoUUFHUEJNY0RPdVhRVTBORzNHc0VPOU0zUkY5Q1ZTNTN2SF9keVcxWkVXTHMzRE0wUWJxdDhoTUl0ajk0azJ0YWptRExyQW9wdHkydno1MUwwWTVrUDBabzBxeHdDWW9WLUV6aGJzRjhDdDgwa2hOWlViR3hnVHZORzlCT0pqdm9DeFVxLUloYm96ZkhIaFRIalVFbU92b0RLM3VIel83bnY4MUR0bDNTdFA3Q05vdksyQzJrNA?oc=5",
+     "fecha": "2026-11-19"
+    },
+    {
+     "fuente": "Hoy Día Córdoba",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3dTYW05Z1BOekZObG5iSzdKc0J3NHV5VFZvbWlmejJ0S2g3U2gySWY4Q1Jub1VyTElfRDhJY1FwdXZMT1hqVXhuYzNsVTdscDVVc2ltSFEwdjhkdGdFLXcxRUtrYmxXSHQydXNzS21sR2Vrb1d4N0k4Q2NoT2RQTUhOUFhQTVFrSDJ4VENybkxjYk5ISUtSdERvMkhaa2V2d24xNm1QUlNfUjYzc1lEZjd3cHFLZndj0gG-AUFVX3lxTE91T01WeVp1WW1CMTFBbFlZLU9nbHRRYlk2aXZwT1p0MkYxVEJTM1drd2t5cjRDTlAyUkJpQTk1SlFHTE5XeHNZc3FBeUNfNUhqbVdJSEg4c1pqT1gxOUowWkU1SFdWWlhiaDZqOTQzVkhIN0hEX25ScXRBaVZmaGZBNTdhYnpzTldRc2pLU2otWkVjWEJ6WGNyVXAyVWZ2TFJnd3ZmQmFnUTdsRFVBY2FfVS1HVDZnOUJDeG5BN1E?oc=5",
+     "fecha": "2026-11-20"
+    },
+    {
+     "fuente": "Infocampo",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOGFiZWNTU3VhOVc4ZTdNaTl4VW04R1UzaUpXXzUyemJkMGRyUXRkZXFQYUpGeTMtd3ZwT2hJQnZhOUJLV1Q0c1ljRjREYkZFMDBKY0dENkVNRFU5ZmduUFp5VFd4QnNvODJ0bkhJWE9UcXdCN3hNakhCc1cydWV3X1Y5eVBfYVVQQ2pCR21WYXJmV2lzN20zNHRTTExfdU5Fb29QTmFnSm9PRmF0TGg5cjFKWVBJRDlFN0cwaDdsa2t2amxmcDlHcw?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "id": "prensa-tT0dkaldRP29jPTU",
+   "plantaId": "acindar-villa-constitucion",
+   "fecha": "2026-11-15",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZkc0RTRpcFIwMUJNRXhHN3NJM05jeTBNS29MbEx3QlRVckphNFJTUzU0ZHY3T3NIaFZPOEhsYVRPSWpYNHA1ZGVfNUJSMXRtU0xyYjdKbDYtUnZGVVJ0MW1HQUZJU0U1TW1WTDA5WmhyTGtCenNqSmE2ejZCTi12Wmlkcy1TczVFWGdNcUxkd0p4Ym1UcEJUMWZ6Tk52eXY0RldZY3FzWW9tRTE4bVh3bWRjejY3aDctdThmdXNoMG9xRTB5clNmOGdjWQ?oc=5",
+   "nota": "Crece la preocupación en Villa Constitución tras la quiebra de una contratista vinculada a Acindar",
+   "origen": "prensa",
+   "otras": []
+  },
   {
    "id": "pauny-2026-11-retiros",
    "plantaId": "pauny-las-varillas",
@@ -9,7 +95,70 @@
    "cantidad": null,
    "fuente": "Bichos de Campo",
    "url": "https://bichosdecampo.com/es-una-provocacion-y-una-humillacion-los-responsables-de-pauny-no-se-presentaron-a-una-audiencia-con-los-obreros-y-presentaron-un-plan-de-retiros-voluntarios/",
-   "nota": "La empresa faltó a la audiencia en Trabajo y propuso un plan de retiros voluntarios. La planta sigue tomada."
+   "nota": "La empresa faltó a la audiencia en Trabajo y propuso un plan de retiros voluntarios. La planta sigue tomada.",
+   "otras": [
+    {
+     "fuente": "Infocampo",
+     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQUllMZnFKUkwtLVV6NS1LdG9wak9LTkxKQi1fMWtWVXdQM0tEMTZvODhJSzktZ2xEc2puV0dSSk5YZFZzenNZZVBJZllxeWRiYjVHb1JwTFV2b3hnV1FxRXNpZS1feWEtNEM5ZVBzNWU0dXI5SlBOVkkyN1dlRkRIenk4UEhjRlptdmwxVjZoemZXaEpsUzhpWElDT2JKMXhVTDZWRU1xbUJGQzYwdXB3Mm1PNUNVamVUZkNxYTItR1Yyc2VMZ3BYU0hHREtqUXBFV3NuYVUtWl95RDh2YjdMa0h1YUI4cUt6Q0g4?oc=5",
+     "fecha": "2026-11-12"
+    },
+    {
+     "fuente": "Clarin.com",
+     "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPVFdZdTFMdV9kTEF2MU82b3VtVV9vSmZSTEwyeDZmeUljdXFXVFViemhwU0RBeGg2QUgxQXdxLTY1U3FHODJWSFpfWk54eFcwS0ZzNlduSmhqTHlGY3Q1bHRXelNpWjdHQVFXWnZxemphQ215ZWt2WHFsemM1QVAzeDI4WFktdEs5T25meWhYd0pOTkpieWZVdWpXZE1yMWFMNXRzNGVtSVgwVEQzR2RKRjRaTmVTTFpERG1YMTI4Mmtad3dYZEE5UWx1OTJyTktmb1F3ZEpobDZsQUNaOVo5Yl8zWDJ6cG9mTlZHYm1GVDFUSDBOTmwyTy02X0t6dXEzd2h5TlZaSU8?oc=5",
+     "fecha": "2026-11-12"
+    },
+    {
+     "fuente": "Radio Vive",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNRXhBX2JidGtsa250ZVVXYnZOYllMdXVkWEl4QVdxMlhHdm9ud0tEb1E5MkVST0NZMm54S29wNmVpeTBfaUhPQVByb3h5dDNiR1JjZzRFekhGX2NwYkRLZ0RnU0N3TnFTSmM3dEdKNDNBbTJsUGtqb08waUhmSmxodC1ydDFHUmxESElMRU44dExnNGNRQlhlT043X1NiNzMyaXpBaW5KYzk2TDVEUk1yVlMtcHl1Uzl6QUN6MkQ0VTJic3FNb0xIYjlPWkdRaU9CMlFKWnJEdlpPNDFNeldBOUs4SHc5Mk45ZVlyaVc4aml4Ri1ydVFSYzJsSEllZ9IB_gFBVV95cUxNRXhBX2JidGtsa250ZVVXYnZOYllMdXVkWEl4QVdxMlhHdm9ud0tEb1E5MkVST0NZMm54S29wNmVpeTBfaUhPQVByb3h5dDNiR1JjZzRFekhGX2NwYkRLZ0RnU0N3TnFTSmM3dEdKNDNBbTJsUGtqb08waUhmSmxodC1ydDFHUmxESElMRU44dExnNGNRQlhlT043X1NiNzMyaXpBaW5KYzk2TDVEUk1yVlMtcHl1Uzl6QUN6MkQ0VTJic3FNb0xIYjlPWkdRaU9CMlFKWnJEdlpPNDFNeldBOUs4SHc5Mk45ZVlyaVc4aml4Ri1ydVFSYzJsSEllZw?oc=5",
+     "fecha": "2026-11-19"
+    }
+   ]
+  },
+  {
+   "id": "prensa-GSnRRemxUP29jPTU",
+   "plantaId": "mirgor-rio-grande",
+   "fecha": "2026-11-12",
+   "tipo": "despidos",
+   "cantidad": 16,
+   "fuente": "La 97 Radio Fueguina",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVS0zcklhaDQzTnl0cEFib3UtclVUWUlUanpaMkEzOEpYQVVkVnk3Z290ZENyRTlHYUphcHowbWhNZlh5ZnYxYkh5ZmlmdW9hVE1Vd1ZKLXZIRzFlOE05VkgxQUN6bkJXaDBmOE56ZTlud0xnTEhLb2JINWZ2S2RCNWlUbkNYVktfd1U4eDBSRVh3Y19OVzR0aGhFWlI0Nm5vMW9QLVBubFJtQzlT?oc=5",
+   "nota": "«Un capricho» de la empresa: fuerte denuncia, tras los despidos en Mirgor",
+   "origen": "prensa",
+   "otras": [
+    {
+     "fuente": "19640 Noticias",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTWgycHZzbGVsWjBWNmhUUy1EbWJJOTNuQ2l5bmEtYTlocVByVkhHbVJvaDlRWWZPRWgyR0loLUVjMVdkc2Y4QUliYldCTTczR1cxazFRMmRnTnRPdnRoV2NxZVhhMmJFcEpUaU85S0duSUxzTkJiRUtUMWZ4YVBVU29DRUhldjBZUE9zd25yeHIzSDFTdE5idDVhak1JRm1NZWVGRUY0OG9Ua0hubWc?oc=5"
+    },
+    {
+     "fuente": "Mundo Gremial",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBzYXl1bHdmUWJNRXJpODVtdHI2MmdhQWFvajNZb0JoSVdBZkgtOE9iMFFHXzczZkhJY1AxcGZlM1hvQnhwV3hJNndhazA0M0NuTHBoVEtvVl96ZzVGdlRxa0tvTHlWUHJ0a0FUUXVKLWRjZ1g2dTdEMlRB?oc=5"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORm9oQTU3UnpoY05hdHhHWFBzb2Fnb3RuVkFwU3BWbXNHN3ZWbUFHamZNUHhvcHBERGRXRlZRdFJTYmttYUlMU0F0S0tZb2p3NFl4b0p0WUI5eTlyb3pJVzVRd1N6bXktQzVrdEhaTnU5UkJja0hiMGhScVpSaHl1eU80QThYMkI1dnBFQy1VU2JNTXB4ZXlfdENpaXM4YmpJMEJOeHFXamphOEVDTGYwTnBBeEoycERwTXVxcjNTUXNudDRrOUVIUjI4RVdBMmlEUFE?oc=5"
+    },
+    {
+     "fuente": "Minuto Fueguino",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBFeXc0LUhmY1gwaWptRmdXR0dqY1RPSXFmUGhVT0hzQ1kyc0VBQlp5R1Nqc0xzQ1NkbC0zam4yRXd5RmxzeHl6Sm4wUTJfb3dsbUlFSlRIenNCYlVFbjJZTlB3cWJMV3BCUEtfMmtTZk53Mi1wRld3SlIybXdHWmc?oc=5"
+    },
+    {
+     "fuente": "radiouniversidad.com.ar",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcGhDbHByLVVPbzJ6dmJKUUFHRGlab2JQOExJQjVpWXlrei1zVk9aYWljTlZWQnRZNEFSajhZb1IwMWx5Rm9QSEhzUXp6d1VvSG5hVEJ6dXZDV1daOURqOHEzMnlKZTZQQnlEd3ZqODhKTExEVm1ET3Bvek1RRGg4RTlReHJqcllmU1BYSjhQN2RjajNrYzVkc3l4c1h5RzQxd29xR3QtRjRLcDNFVkFnX1dyVUlWbDc3UHp3LVBTT2hXTVB3bmpFcy14UjJFTlF6b0dGb2UyZHFGQQ?oc=5"
+    },
+    {
+     "fuente": "Notitdf",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4wVlBubmRfNVJ3ZzdFOVQ3VXJPcWw1dElOMEpiNVl4dmtYdlg5ZUxvYUdiVzRMQ0lWYjI0dS11TUhjWENjZEY4bGdwbWIwdlVrQjdYdW1ueUtCVUdLMG5vYmdqZ0xzUDVTQ3FN?oc=5"
+    },
+    {
+     "fuente": "Minuto Fueguino",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONVdoWHE3eU5STkxYVTdBRjNhSFF0QXhLb0o5V1FHRmNiTmZ6bWxLRkFudW9KSTlJODRabVVob0p5a21STFc3UUVoZWJWWnJnT0NnWW43X0cyb1VRdUl4dS0xNXF3SjlqWl80SDFjRnpxS1VvdDVKeXY2WGxFVllLam9UZG1VN2RRa3cxQ09CcGFydE1RdjVoVUVZTXNpWVU?oc=5"
+    },
+    {
+     "fuente": "19640 Noticias",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTWgycHZzbGVsWjBWNmhUUy1EbWJJOTNuQ2l5bmEtYTlocVByVkhHbVJvaDlRWWZPRWgyR0loLUVjMVdkc2Y4QUliYldCTTczR1cxazFRMmRnTnRPdnRoV2NxZVhhMmJFcEpUaU85S0duSUxzTkJiRUtUMWZ4YVBVU29DRUhldjBZUE9zd25yeHIzSDFTdE5idDVhak1JRm1NZWVGRUY0OG9Ua0hubWc?oc=5",
+     "fecha": "2026-11-12"
+    }
+   ]
   },
   {
    "id": "pauny-2026-11-toma",
@@ -19,7 +168,19 @@
    "cantidad": 450,
    "fuente": "Bichos de Campo",
    "url": "https://bichosdecampo.com/volver-al-2001-los-trabajadores-de-pauny-tomaron-la-fabrica-y-la-historia-de-zanello-vuelve-a-sobrevolar-las-varillas/",
-   "nota": "Toma de la planta tras tres quincenas de salarios adeudados. La medida se extendió a la planta de La Banda (Santiago del Estero)."
+   "nota": "Toma de la planta tras tres quincenas de salarios adeudados. La medida se extendió a la planta de La Banda (Santiago del Estero).",
+   "otras": [
+    {
+     "fuente": "La Nación",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObmEzaXZWOUdHeG9PdGYzNEYwZU1MOHNYQU5pX25OOWRfZjRqb0pXbm01b1BaM0NBTXVpcHI3R0JwdmVTWHZTTlpzVlpEQmtjXzNfc0ZFOFgyVFc3c1pPQlNyXzJCZUJLSjlMdGNxa1ZPQjJSSjk3eTJIM2QxT19wU3J0dVRVaEpKRERFV05NSF8ySldKOFpzMnB6eVV6R09BZmppV3ZnRGRWaHVtbkhWV3A4ZXRRd2o4b2RMcjhwOWkwUmZfUUFxdUhkUnQ1eFRsQ2F2Uk4zMjN0cGVOcVRoQVlmckxzQQ?oc=5",
+     "fecha": "2026-11-09"
+    },
+    {
+     "fuente": "Up San Francisco",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNV1JucXZVczBQMktfSnZwb1BINEZfWkEtRGU0cWN1bTNucnl6bHE1TTJaMWtQanFtVGNkVnBqeXdBaW1DSDNTbXdBUEFvRVF3aTBhWXFwQ3RlQzN6N21QeVU1TVFXOTZiQ1J1elpNWE1nWmdMM3FsMTM3RnVYLW93c1VmN1RuT1JBVW5kbDRPTldUd3psdXpFa3MyX0d3Vm9wUXNyR21FTlhYeVBnR1pRaTZ1dmpFS25FTHFKRlBiaEwzMGxReGROYmJTSlNNeFpXUXEyZFVpWWt0ZklFcnZWMnJtNnc2UkZ3VkE?oc=5",
+     "fecha": "2026-11-09"
+    }
+   ]
   },
   {
    "id": "mirgor-rg-2026-08-despidos",
@@ -29,7 +190,14 @@
    "cantidad": 300,
    "fuente": "Infobae",
    "url": "https://www.infobae.com/economia/2026/08/10/mirgor-desvinculo-a-300-empleados-por-paros-gremiales-y-el-gobierno-de-tierra-del-fuego-dispuso-la-conciliacion-obligatoria/",
-   "nota": "Desvinculaciones en IATEC, FAMAR, Brightstar y Mirgor (Letra P habla de 296). Tierra del Fuego dictó conciliación obligatoria por 15 días."
+   "nota": "Desvinculaciones en IATEC, FAMAR, Brightstar y Mirgor (Letra P habla de 296). Tierra del Fuego dictó conciliación obligatoria por 15 días.",
+   "otras": [
+    {
+     "fuente": "radiouniversidad.com.ar",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNcGhDbHByLVVPbzJ6dmJKUUFHRGlab2JQOExJQjVpWXlrei1zVk9aYWljTlZWQnRZNEFSajhZb1IwMWx5Rm9QSEhzUXp6d1VvSG5hVEJ6dXZDV1daOURqOHEzMnlKZTZQQnlEd3ZqODhKTExEVm1ET3Bvek1RRGg4RTlReHJqcllmU1BYSjhQN2RjajNrYzVkc3l4c1h5RzQxd29xR3QtRjRLcDNFVkFnX1dyVUlWbDc3UHp3LVBTT2hXTVB3bmpFcy14UjJFTlF6b0dGb2UyZHFGQQ?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
   },
   {
    "id": "metalfor-2026-08-recorte",
@@ -49,7 +217,14 @@
    "cantidad": 35,
    "fuente": "Tiempo de San Juan",
    "url": "https://www.tiempodesanjuan.com/el-pais/metalfor-despidio-a-35-trabajadores-tras-liberar-al-personal-para-ver-a-la-seleccion_1783528397/amp",
-   "nota": "Despidos en la planta de Noetinger (misma empresa)."
+   "nota": "Despidos en la planta de Noetinger (misma empresa).",
+   "otras": [
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZmZpcWdjdkZZLVpWUWF1RmdtU1RYVHlTMzB2Nm5MTTdQWHBEZU0xQlc2NVlCckdIMzZBd2MxSmZPQy1kV3NrZENYNE9pbHowdVF3RzZsTlpKYTMwcFNnN3RjUEhaT045clVnekRmeGQ3cGplRUcxSFlXYWpzTEVYbXZRcDVBa0ROZFlKd0JsU3RFSVEwQ1BPYTVfZjJRTHdBNy1xNml3MWkxSnhnQXUxZU95cVRkS1BOUnRpUU85Q09uNUEzbFlnR0lHSGMyeFZs?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
   },
   {
    "id": "metalfor-2026-07-ppc",
@@ -69,7 +244,24 @@
    "cantidad": 150,
    "fuente": "iProfesional",
    "url": "https://iprofesional.com/management/458612-despidos-tenaris-golpe-empleo-lanus-vaca-muerta-junio-2026",
-   "nota": "La planta venía con suspensiones desde abril. Despidos de trabajadores con más de cuatro años de antigüedad, según el delegado UOM."
+   "nota": "La planta venía con suspensiones desde abril. Despidos de trabajadores con más de cuatro años de antigüedad, según el delegado UOM.",
+   "otras": [
+    {
+     "fuente": "Mundo Gremial",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNZUJyQW9iLWp4QlQwQlNvRHJPSGp2Z1UyZlJCQ0hWMkRrdXBITXZNenYyc1lyUUtJcnpHM1ZCSnNVSkJWN1lEdG9zZm5FTDlOQVJDVnVaajNEVm54ZktFN0ZiMEJSTVZWb0RPTkF1WHhHTzVCYllnWjdkMEE2eWtLMTNPdHZ5SzU1QjVubzM0WkJRdTJoUlVYdkNTX0hQYkRXWEd2SXBMempGWkJZLXNoY1MydFRseWlQWno3V3VrRERBSExYZEFYZjA0UW9CajhjMjV2Q2wwYjZYQQ?oc=5",
+     "fecha": "2026-11-19"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNa3VuYzJoOWxZQXk1TXBCQ0ZGMERidXBMQ2RCdk9KdDgwZkNfaUY2REprMEZiWGVRSzNyU2JxLVVlclpUbG9UYkdnYnpsWlZWaEJ3WEo3ZTBDOEptRDM3M2N6UkNjX09HZ09DUy1ybERpNnlJVUZBTV9rN1pZLXhpa3lZVDVpZ0w1NHRJWG82anA2OEJ0eEFIdEQxU2NMNUQtelJWRXoybUJEZFMzZFh3bFhveG9rR2hTcUhrRnZMWUwxRGpzM2c?oc=5",
+     "fecha": "2026-11-20"
+    },
+    {
+     "fuente": "Data Gremial",
+     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNclNKNlBfU2hvRUtsZ08xU0h5cUtBY0ZpdEdFanoxSHJ0ZWZ2d05vcXZaSFFMeXRTa0RQUjVBY2JrSjBSaWZhV2RFZXpoXzVoVG9DOVJTZFlRemswcjQwcllDZXRFNC1FQm8zWXBKN3REVHZxbzVmb0pzbENEaVhfeS1pelVMSUNVS0I2N1FGMTQxNmFKWFktQ2kzQ0ZEcHZ6dFRsTGttUlB1RnpjelBaVWVtS3gyT2R5MFRsZi11RlNCZTZlR081eERnVUpJdmEyaVNELVF0ckx5ZURwei1ORzVqQ2ZrYVU4TUxhMXBNbDlrLXdLNXlHcg?oc=5",
+     "fecha": "2026-11-20"
+    }
+   ]
   },
   {
    "id": "acindar-vc-2026-06-parada-hornos",
@@ -109,7 +301,14 @@
    "cantidad": 220,
    "fuente": "Diario de Cuyo",
    "url": "https://www.diariodecuyo.com.ar/argentina/whirlpool-cerro-su-planta-de-pilar-y-despidio-a-sus-220-trabajadores-1803145.html",
-   "nota": "Cierre definitivo de la planta de lavarropas inaugurada en 2022 (USD 52 millones). La empresa pasa a importar."
+   "nota": "Cierre definitivo de la planta de lavarropas inaugurada en 2022 (USD 52 millones). La empresa pasa a importar.",
+   "otras": [
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcEYtUldIMnJTSHdGandWdVYyNlRXUnNkQU1jc3JqWThDM3ViOUhfN2pwdVpNb0Yzc2tOdEUtNnVIbnUyR2JMWWtUWk1WRHZySVhYSlRPSkxJY2dFQWczLXNXLUcwdGZ6Qi1DNTVvYmdmWG1nY1VWUmxwUU13M0xPVDZLQzJwVnZDS1hUTldONGdDdjFsRjQ2Uk5iSmczQUw0THpVVmNSTTFyNXEyR05wMTBQVExXNDlNN0lmSWV4MHhSaW5kMlE?oc=5",
+     "fecha": "2026-11-19"
+    }
+   ]
   },
   {
    "id": "dana-san-luis-2025-11-cierre",
