@@ -1,6 +1,39 @@
 {
  "hechos": [
   {
+   "id": "prensa-XYVZsRVFRP29jPTU",
+   "fecha": "2026-11-23",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWURMYTk2SWdvY2c3bWVrMVJlYjdtWjZjVW5WS0ZibGpDemRySUczbGhnNVVjNDZUUkVSaHRpdk5kbUowWWt1UGEyOGJJNzdpVElPRFZPYTlLTEQ3NGprQkNwazhGa193WGl5MF94NUVVaktVSEJfOGdzTDQxRTBDMFllZmRDUW1NYUJpenZJQlZ4X3M3RUpmREt4Zy1fYjlmbm1VNkszTDlTTXg5dXdYSlVMX3lwQ2pUMExCQ3B6TVZ4cWEwTWV4OXRaRUNWMEQ2VnFCaXUxd0lVMnpLWDhmTDdWaVlEQQ?oc=5",
+   "nota": "La intervención judicial de la UOM paraliza una mejora salarial acordada y genera incertidumbre entre los metalúrgicos",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-VkhFeU5EZz9vYz01",
+   "fecha": "2026-11-23",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "DeGremiales.com",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWmJydDVuc3JuN19mVmZ2NVVMb0dLczJoZUVqNjlfTFhmbFBZbk1OQ0hnTHVFYmk3RTZpbEFNdU5LUm1ma1BGOTFCMkQ3YjRvQVpRZkFhZXBfQ1dpWm11eWxLQmdTNlBtZjhXY19URm5KVElBZlg4Sk50cE1EUm5LOVo1MEc1R2ZZVGp1RWFLZ1lFZGVJRkRfRGI1Z0xlRkhzMFdSVlp4d3U2RmxiYm4xaWpGWFY4WGctd0pyMEJkVHEyNDg?oc=5",
+   "nota": "La UOM busca reabrir las paritarias y recuperar la negociación salarial tras la intervención",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-NUMFpoZEE_b2M9NQ",
+   "fecha": "2026-11-23",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "106.5 La Plata",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSmMtNFpZY0M3em1HaHdxWk11Qlo3dzBQY1hIYjBoMFFQaXE0OEpjT2F2S05oMVhiTEJJYzFGaF9iZUQwMThobXFBR2haN3g0S2xUZ2N6dHlWOU9MeXV3ZWkwWUtZRmtXM0NCcHl4c2h5MkdTa0JHZVJrM2lYc3pRMGZ4cG45Yk1aRHgwYjNjRzdyNG95MHZ2QmdzaXo4V3VKT2J5N21UT3FZQnU1VFN2UnZVWDZBSUFuamI5TnY4VEFIOGVJdGM2U25jejjSAdABQVVfeXFMT2FUaXRWUmVuXzA0TjhiWTJOZHVkQ2hnY0dWSjdUaDU5SFZNaDlQcU1zVEVxNF8zUzVWdnFMNlM1OFNyQjNHb0RSN0FQckQ0a0hLdWdqWGZ2Y1hUM19FMFFtTXZQNGdKQkF2Q09rMkpuMUxOX0NHTkZBMnVzeFQ4ZkFuMXV0ckZUNnVLQTBBUDN2QmhLNjdYWXJOdDVvTHhiamZ2RHpQMWpYYjROMTUwdWdhaWtFSktkYVE5M3IydjFrclBVdDh1MjJUSE03T0ZhdA?oc=5",
+   "nota": "La concesionaria de maquinaria agrícola Agro de Souza pidió su concurso de acreedores",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
    "id": "prensa-GUlBVMHBOP29jPTU",
    "fecha": "2026-11-21",
    "tipo": "conflicto",
@@ -31,6 +64,11 @@
      "fuente": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
      "fecha": "2026-11-21"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
+     "fecha": "2026-11-23"
     }
    ]
   },
@@ -249,6 +287,6 @@
    "otras": []
   }
  ],
- "actualizado": "2026-11-22",
+ "actualizado": "2026-11-24",
  "nota": "Hechos del sector metalúrgico en empresas que todavía no están en el mapa de plantas, relevados de la prensa. Cada uno con su medio y su link."
 }
