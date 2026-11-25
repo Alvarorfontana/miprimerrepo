@@ -1,6 +1,17 @@
 {
  "acuerdos": [
   {
+   "fecha": "2026-11-25",
+   "norma": "Disposición 965/2026",
+   "empresa": "SIDERCA SOCIEDAD ANONIMA INDUSTRIAL Y COMERCIAL",
+   "cuit": "",
+   "gremio": "UOM",
+   "seccional": "",
+   "tipo": "acuerdo",
+   "enAnexo": false,
+   "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/350791/20261125"
+  },
+  {
    "fecha": "2026-10-28",
    "norma": "Disposición 768/2026",
    "empresa": "",
@@ -90,7 +101,7 @@
   }
  ],
  "menciones": [],
- "actualizado": "2026-11-24",
+ "actualizado": "2026-11-25",
  "fuente": "Boletín Oficial de la República Argentina (primera y segunda sección)",
  "nota": "Acuerdos homologados por la Secretaría de Trabajo donde firma la UOM o ASIMRA, y avisos de la segunda sección que nombran empresas seguidas. Cuando la empresa figura solo en el anexo, se marca enAnexo."
 }
