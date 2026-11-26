@@ -1,6 +1,28 @@
 {
  "hechos": [
   {
+   "id": "prensa-IyNTJkbWM_b2M9NQ",
+   "fecha": "2026-11-26",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Gestión Sindical",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR05BZWstUmZWcEwwNDB5YVBQd0IzNExDRFF1cEluUGt2SHduTmwyM1JzRkVjZW04ZkRjcGlEUVlHUHV5ZURPQmREemUzZC1iSmxpUkZ1bjVfcVN2dl9wc2hHOWpqOERWbjh2Z2FJUnVFYl9tRTJpTUhIQW5mdlkweWFuN2RBTWVmZGRCQkZCR1FtVjVZUnJ4N296Y1JpR252dmc?oc=5",
+   "nota": "El FreSU respaldó a Furlán y habló de persercución gremial ilegal en la UOM intervenida",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-T1UxU1V6UT9vYz01",
+   "fecha": "2026-11-26",
+   "tipo": "despidos",
+   "cantidad": 110,
+   "fuente": "Infobae",
+   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQdkoyaElCbVo0Sjk5THctQ3hqOTZ0YzVCTzdSZHdsUTc3UXBPajhlTTctSnFTUE9jSGZfMUdIQ2w5amROZ2VmNWNzSElyWnl4UTRvT2h2NW56SU9PS0NNMUlXRzBmMThEcGZtc3JBSjRKeTZvdDQ0eFpHTVFZYUpJMGxHTGVRdGFUV2dqZENNQ1pjaTF4anA1U1ktbHdPR2MxR3Q4cDVOTHdQZTZCWURJQW9BNGo2SDJWX3BBMXBIaXo5LVZ3X2tmTFJCQ1Z4WmxES2FCaTZTMGxraXdxd1dNYkxhT1AyWm40M3dhSEhRNGVBSjBs0gGPAkFVX3lxTE1hZFRhR2JBdzh6WFRwMkpJN1pGR3Fzak8yVEJGNl85NG9fcW56dGdzaTRMRTctaF96a3RSRENyRFNUN25NeWZma2V3OTBDZVJWcjlJQktDRDhMU2IwQnRoN1V5MzQxMVF1bm9LR3FmbzE1TGNRUEZwMWFtY1hCX0VrSE5EUzNnVFl6SkJycDJ1eUZNb1VXTDJVZjVFNmUtWXRZb2c3dmJyNXU4cnltNEQxdTc5dVJrYjNldEpXNGpmN3dFVkx3VHNOa01ibzRsYURTN1VOZzNSdUZLMTNhSEFDU1p6T2U2dTlWQW9yN3RDXzFEZDlHd3B6MndvX21vV0ZYTy1oSDV1b3BGOU1SUzQ?oc=5",
+   "nota": "Uno por uno, así repartían los telegramas de despido a 110 empleados de una fábrica de maquinaria agrícola de Santa Fe",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
    "id": "prensa-XYVZsRVFRP29jPTU",
    "fecha": "2026-11-23",
    "tipo": "conflicto",
@@ -80,6 +102,11 @@
      "fuente": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
      "fecha": "2026-11-24"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
+     "fecha": "2026-11-26"
     }
    ]
   },
@@ -298,6 +325,6 @@
    "otras": []
   }
  ],
- "actualizado": "2026-11-25",
+ "actualizado": "2026-11-26",
  "nota": "Hechos del sector metalúrgico en empresas que todavía no están en el mapa de plantas, relevados de la prensa. Cada uno con su medio y su link."
 }

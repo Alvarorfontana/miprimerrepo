@@ -1,6 +1,18 @@
 {
- "actualizado": "2026-11-25",
+ "actualizado": "2026-11-26",
  "eventos": [
+  {
+   "id": "prensa-tdFZSREF3P29jPTU",
+   "plantaId": "aluar-puerto-madryn",
+   "fecha": "2026-11-26",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Prensa Obrera.",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNay1ON3JDWnRrWFlsb080aWxGaGpsXzdZVmpValV2TTV3bzJTRC16NWVXYXJ0VXIyOHdIRmdha25DdWJ5b2VLaElBS09mWWlGc3BmQVV1cWJDTnp2NzlnSEM2S0ExV1VBX0ZEdXVxSlVRRVd0dHh4cUlHOXF3cWlJdTY4RVJEb3BhTXZBMFpuWkk0eFhwbHpFdkRwREdYYWNoeEhwQ2JvUXNVNno0Q1RlZEhsRHB6aG1leWNwM3o1VUFUWnJqUnBmdXNUVTRVWEZXNkNzTEoySWNMMzZkU3VRYnFjdlAwNmtVRDAw?oc=5",
+   "nota": "“Nos ponen una bomba en medio del barrio”: trabajadores de Fate y vecinos rechazan la planta de baterías de litio de Aluar",
+   "origen": "prensa",
+   "otras": []
+  },
   {
    "id": "prensa-oYVdSUFVRP29jPTU",
    "plantaId": "tenaris-siat-valentin-alsina",
@@ -123,6 +135,11 @@
     {
      "fuente": "Hoy Día Córdoba",
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1CdV8tdUY2aklIR3RpanA5VTh2cTNZUDNZcXRsMHRxM1RjS3YzU3dyMmhXZ0RFUXMtWlltQV9qZHdFS0pfcEZXVEh3UlJxb2l3WHEtNHFCbmRmT0ZHdUpaSmlYTDRZcFJHaDZHZDh30gFzQVVfeXFMTjAxcXl0c3BaTllNR3UxZTVvbXJDenBETzMyWHBzN3VadFpCUXk4UHZ5b3BqLVNzWjNRRXBzVjNJSVBGdU1qVzZHbVQ5ZFlrLXpXLU1PV3MxLU4yR2M0MGRNdkloX0NhNnpoR1Zpb0lLN0tEOA?oc=5",
+     "fecha": "2026-11-24"
+    },
+    {
+     "fuente": "Mundo Gremial",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5WVTlzbkkyUDRzXzFzdGFBc1p6NTVvejZfNlJLa1lSV2cydy1OTk1NeENuSFZyYTFxMVRSSDg4VlkzeXhPWGFMX3RmRmpKd25aa1BOZ3dCU2dsbHNBMERURVNveVZvSHVwOVRxd1N0dDJHQQ?oc=5",
      "fecha": "2026-11-24"
     }
    ]
@@ -268,6 +285,11 @@
      "fuente": "Notitdf",
      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4wVlBubmRfNVJ3ZzdFOVQ3VXJPcWw1dElOMEpiNVl4dmtYdlg5ZUxvYUdiVzRMQ0lWYjI0dS11TUhjWENjZEY4bGdwbWIwdlVrQjdYdW1ueUtCVUdLMG5vYmdqZ0xzUDVTQ3FN?oc=5",
      "fecha": "2026-11-24"
+    },
+    {
+     "fuente": "Minuto Fueguino",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBFeXc0LUhmY1gwaWptRmdXR0dqY1RPSXFmUGhVT0hzQ1kyc0VBQlp5R1Nqc0xzQ1NkbC0zam4yRXd5RmxzeHl6Sm4wUTJfb3dsbUlFSlRIenNCYlVFbjJZTlB3cWJMV3BCUEtfMmtTZk53Mi1wRld3SlIybXdHWmc?oc=5",
+     "fecha": "2026-11-25"
     }
    ]
   },

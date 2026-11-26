@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25",
+ "actualizado": "2026-11-26",
  "sector": "metalúrgico",
  "nota": "Rojo: 50 puntos o más. Amarillo: 20 a 49. Verde: menos de 20. Fuentes: oficiales, Boletín Oficial, Banco Central y prensa. Pesos: cierre 60, despidos 30, suspensiones 20, retiros y conflictos 15 (hechos de los últimos 120 días); quiebra 60 y concurso 35 en el Boletín Oficial; atrasos en el Banco Central 30, cheques sin pagar 25.",
  "suspensionesHomologadasPorMes": {
@@ -68,6 +68,17 @@
    ]
   },
   {
+   "plantaId": "aluar-puerto-madryn",
+   "planta": "Aluar · Puerto Madryn",
+   "provincia": "Chubut",
+   "rama": "Aluminio y no ferrosos",
+   "puntos": 15,
+   "color": "verde",
+   "motivos": [
+    "2026-11-26 · conflicto · Prensa Obrera."
+   ]
+  },
+  {
    "plantaId": "ternium-san-nicolas",
    "planta": "Ternium · Planta General Savio (Ramallo)",
    "provincia": "Buenos Aires",
@@ -126,15 +137,6 @@
    "planta": "Gerdau · Pérez",
    "provincia": "Santa Fe",
    "rama": "Siderurgia",
-   "puntos": 0,
-   "color": "verde",
-   "motivos": []
-  },
-  {
-   "plantaId": "aluar-puerto-madryn",
-   "planta": "Aluar · Puerto Madryn",
-   "provincia": "Chubut",
-   "rama": "Aluminio y no ferrosos",
    "puntos": 0,
    "color": "verde",
    "motivos": []
