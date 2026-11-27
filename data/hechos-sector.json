@@ -1,6 +1,50 @@
 {
  "hechos": [
   {
+   "id": "prensa-wVWtoM1RRP29jPTU",
+   "fecha": "2026-11-27",
+   "tipo": "despidos",
+   "cantidad": 110,
+   "fuente": "Canal26",
+   "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPREt2dnZPMHJpaDdfT1B0elFrVlUtLWI1Sml6YU53aHE1bWNpbU9tXzNBRzk4U0JDSDAtRWp6eTJLZjRDM2pRWG9IX09iVHJWcXAwdTZWSVB1VlUyMGNMTUhTbVJVeXBxb0xjNmljcU9yVEJCLWxlN2NyX3ZzQTJzaUV6UzgzeTBVRGNIR2FSOEF3X0pLNVdFbV8wX0FxSVkzVXdCbm9zMFdVellMdlNpY2xDcmI4WnpUWWppakFiUTBuU2VVS2Rwa3M4TVpTSnNHS1RuTGM2VkZpSHBiejdYdDZ3NElfakRfczNrSEwyWWtQMGlpOVdpZ1dSWUowazR6ci1NWG5lU2NxbkVhcjV0Ukh3TQ?oc=5",
+   "nota": "Crisis en Plantium: el momento en el que 110 trabajadores recibieron el telegrama de despido de la fábrica de maquinaria agrícola de Santa Fe",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-XeEllRlJCP29jPTU",
+   "fecha": "2026-11-27",
+   "tipo": "despidos",
+   "cantidad": 110,
+   "fuente": "El Ancasti",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTE9TcW0ycXh1aVpLUzMwSlh6VGV5YjZWZUJ6RGpwaVZFZnJwYUF1RjJjUVlwdmdmRTl6d3NnOV9SckVqZUFVRndZaXdDczhDX2RfVFlXSTlnV01Hb0lGdHJWTGhKTnNGWUptNEJXOUQ4VEpNc2t3MEUteE10TWdWZ3h0UV9WV1VuZXZzX2g2VkdJM1laTXZweEFNVFVjeDR0RE1pYWpaOHYxSWdzcTltNXlEYUrSAboBQVVfeXFMUFpxQjNaMVlPbnBYTlJ2TmVNSFEzTzBVV3JTQWJzbncwVS1WeHFCT21MRHhkNzJXY2ZPVUxuWU9IMzFOZ3FOUXZsc0RNMDU3MWdhdVA2SFlqZ2lDd2Q4VFdsUHhCeWFHZHZFNGl4dGZlbmdDYkxjQ3lnRW1lMDBTSkZKZ29YU1JFcFg5VkwwRUlIUFVlWDA2U2NvTkRnVnMwYWxXT0hZQzZSUF80QWtYU3lSZVNjZWxIeFRB?oc=5",
+   "nota": "Una fábrica de maquinaria agrícola despidió a 110 trabajadores",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-MWhaYWpsWj9vYz01",
+   "fecha": "2026-11-27",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Howl.Link",
+   "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1zaEFrN0tTb1h3dm1sbDZyUVY0LUV6dzRiOTEwWTYwbWdnZVBTTjAzZm1SRXRfb1hZajlZ?oc=5",
+   "nota": "Alarma por el empleo en Santa Fe: la crisis metalúrgica y siderúrgica golpea a miles de trabajadores",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-h6RmpMV2M_b2M9NQ",
+   "fecha": "2026-11-27",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "El Correo",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbE9YSzNzdWxpTzVJUGRDdkx5SnAxZGlpN1FpODdmd1pwSTA3a3RvaVllemFLYTI1aVozclhJZ0hINjF5WDlmbldESEZJd0lUc1BTSnQ0SW81LU9DZFlGM3F3MmRfcVpyaV8zcTNXNEtaZWdqMWVRV2RZVnVJNzc4MXV1Mm9PUG9ERW1vYnVkaVFydzByRnMza0FQbHVZSGl5Z2VCWjBkVkdGNTVqTE41bmVZZjdRMFIy0gG-AUFVX3lxTFBSdjJGZlRDenZDd0tlMHh5VVJRcWNUTVc0ZVcxdm5FQ3hEdVVhZUQ3SVNoZE1HQ0Nudko4dzFWaUtfNWEwdTFnbHFJUXNQcjl6a2l0SUdqcjhzLWJjVGcwNUUwQjNpMUJPR2ZUR0lFc3o4WkxsMVBMWVJMZnk3Vzk4azFOZkFHTThkTEZEMXNmZ0p6cXRSOEV3bVNKQTRQaloxMzdBTmw4V0dDU3puYy1qLWZUMDItLU5sXzFjLWc?oc=5",
+   "nota": "El gigante turco Tosyali emerge en el concurso de Tubos Reunidos con una oferta por todas las plantas",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
    "id": "prensa-IyNTJkbWM_b2M9NQ",
    "fecha": "2026-11-26",
    "tipo": "conflicto",
@@ -9,7 +53,13 @@
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR05BZWstUmZWcEwwNDB5YVBQd0IzNExDRFF1cEluUGt2SHduTmwyM1JzRkVjZW04ZkRjcGlEUVlHUHV5ZURPQmREemUzZC1iSmxpUkZ1bjVfcVN2dl9wc2hHOWpqOERWbjh2Z2FJUnVFYl9tRTJpTUhIQW5mdlkweWFuN2RBTWVmZGRCQkZCR1FtVjVZUnJ4N296Y1JpR252dmc?oc=5",
    "nota": "El FreSU respaldó a Furlán y habló de persercución gremial ilegal en la UOM intervenida",
    "origen": "prensa",
-   "otras": []
+   "otras": [
+    {
+     "fuente": "Gestión Sindical",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQR05BZWstUmZWcEwwNDB5YVBQd0IzNExDRFF1cEluUGt2SHduTmwyM1JzRkVjZW04ZkRjcGlEUVlHUHV5ZURPQmREemUzZC1iSmxpUkZ1bjVfcVN2dl9wc2hHOWpqOERWbjh2Z2FJUnVFYl9tRTJpTUhIQW5mdlkweWFuN2RBTWVmZGRCQkZCR1FtVjVZUnJ4N296Y1JpR252dmc?oc=5",
+     "fecha": "2026-11-26"
+    }
+   ]
   },
   {
    "id": "prensa-T1UxU1V6UT9vYz01",
@@ -19,6 +69,28 @@
    "fuente": "Infobae",
    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQdkoyaElCbVo0Sjk5THctQ3hqOTZ0YzVCTzdSZHdsUTc3UXBPajhlTTctSnFTUE9jSGZfMUdIQ2w5amROZ2VmNWNzSElyWnl4UTRvT2h2NW56SU9PS0NNMUlXRzBmMThEcGZtc3JBSjRKeTZvdDQ0eFpHTVFZYUpJMGxHTGVRdGFUV2dqZENNQ1pjaTF4anA1U1ktbHdPR2MxR3Q4cDVOTHdQZTZCWURJQW9BNGo2SDJWX3BBMXBIaXo5LVZ3X2tmTFJCQ1Z4WmxES2FCaTZTMGxraXdxd1dNYkxhT1AyWm40M3dhSEhRNGVBSjBs0gGPAkFVX3lxTE1hZFRhR2JBdzh6WFRwMkpJN1pGR3Fzak8yVEJGNl85NG9fcW56dGdzaTRMRTctaF96a3RSRENyRFNUN25NeWZma2V3OTBDZVJWcjlJQktDRDhMU2IwQnRoN1V5MzQxMVF1bm9LR3FmbzE1TGNRUEZwMWFtY1hCX0VrSE5EUzNnVFl6SkJycDJ1eUZNb1VXTDJVZjVFNmUtWXRZb2c3dmJyNXU4cnltNEQxdTc5dVJrYjNldEpXNGpmN3dFVkx3VHNOa01ibzRsYURTN1VOZzNSdUZLMTNhSEFDU1p6T2U2dTlWQW9yN3RDXzFEZDlHd3B6MndvX21vV0ZYTy1oSDV1b3BGOU1SUzQ?oc=5",
    "nota": "Uno por uno, así repartían los telegramas de despido a 110 empleados de una fábrica de maquinaria agrícola de Santa Fe",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-YMkV6ZVVVP29jPTU",
+   "fecha": "2026-11-26",
+   "tipo": "conflicto",
+   "cantidad": null,
+   "fuente": "Radio Gráfica",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQUVVqU3NFdk8yc1JDMUlPdnlTMDg1SVYwSXExdXphTXFLdGJkZndPdjVzQXd6ZDd5ODFEM3N6REUyZ09HaTF3eGZBcERpTEMwNV9HbzhJVEY3ZFJtNlJDMTZvb3EzNEN1ZWNUNWZWenpyWW5oRnpFRDdtRThrMHJzaUprbFNYLWJOSTFhamhoY2dPUUt2a2pTWXBUeGZiU1doMkdpMm1yTW5WQ1lBX054aktPOXBLMDBSNjJRdTlEYmVtblpoWUUwMFljM1lQbWpqVHVpMGlYX2EzeUU?oc=5",
+   "nota": "La Federación Gráfica le reclama a la CGT una “condena clara y contundente” por la intervención de la UOM",
+   "origen": "prensa",
+   "otras": []
+  },
+  {
+   "id": "prensa-UVU1c2EwRT9vYz01",
+   "fecha": "2026-11-26",
+   "tipo": "despidos",
+   "cantidad": 110,
+   "fuente": "Tiempo de San Juan",
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPQTVxbWJQVGVHbW1PNkllcm82TlBEMEJCM0M3VTB6QUNKd3VRWm5PODZwUVRCZ0ZHNkczSlZHdnRkNHZGNGJyOGJ1M05wNTE2UWItRHA4a3I3QmFnTlFTWnlnSUlkb3E5a0tFXzJEeWZnYkhJNGc3T3d5NUdBTXcyd3ZzaFRkTmpFaHkwdks3WXdkbUJ0VnphWXJfSVkxZDV3RHd1WmV0Q0staF9mVkx0RmZ0VEhhUUdQTlg4N3JfOHYwSUF3WlNDbjRBUGp6UHdVZWlDaFZrRWt6cVNYLXN0UnNQRklYR2dsdUEyN0lZSG11bm0zRnk1aEVxeTM2QU5sa0E?oc=5",
+   "nota": "\"Uno a uno\": el desgarrador momento en que 110 trabajadores recibieron su telegrama de despido en una fábrica metalmecánica",
    "origen": "prensa",
    "otras": []
   },
@@ -102,6 +174,11 @@
      "fuente": "DeGremiales.com",
      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
      "fecha": "2026-11-24"
+    },
+    {
+     "fuente": "DeGremiales.com",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYTY4dmZ6MmRiNUZhU05PdjFkWF9YbG10R1BmbDE4NkF5b0thbXBIenJ0WEpPb1VXUFFvT25HZVljNHdES2RYXzZTRDMzQkdaLV9OV0VIaElLTUE5UFhBRlBNWm9Hc3BadGpYMjJMN0Z5OURYS2pZX1lEQkw1Q2JCQ2tIczlCc3FRY1VJUWJZaTViOEMzNlpIUlpFNGV4alFVdTdMYml3RkNfek9ITTR2YU1vbjBScUpKdjRhNlU4RFBPdWdjUFp2MXAwamJ2WFFsTkdKaHhlU2lJUG5p?oc=5",
+     "fecha": "2026-11-26"
     },
     {
      "fuente": "DeGremiales.com",
@@ -325,6 +402,6 @@
    "otras": []
   }
  ],
- "actualizado": "2026-11-26",
+ "actualizado": "2026-11-27",
  "nota": "Hechos del sector metalúrgico en empresas que todavía no están en el mapa de plantas, relevados de la prensa. Cada uno con su medio y su link."
 }
